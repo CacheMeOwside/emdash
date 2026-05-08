@@ -1,4 +1,4 @@
-import { Button, Dialog, Input, InputArea } from "@cloudflare/kumo";
+import { Button, Dialog, Input, InputArea, Select } from "@cloudflare/kumo";
 import { useLingui } from "@lingui/react/macro";
 import {
 	TextT,
@@ -18,12 +18,13 @@ import {
 	Rows,
 	Plus,
 	Trash,
+	X,
 } from "@phosphor-icons/react";
-import { X } from "@phosphor-icons/react";
 import * as React from "react";
 
 import type { FieldType, CreateFieldInput, SchemaField } from "../lib/api";
 import { cn } from "../lib/utils";
+import { AllowedTypesEditor } from "./AllowedTypesEditor";
 
 // ============================================================================
 // Constants
@@ -75,6 +76,7 @@ interface FieldFormState {
 	subFields: RepeaterSubFieldState[];
 	minItems: string;
 	maxItems: string;
+	allowedMimeTypes: string[];
 }
 
 function getInitialFormState(field?: SchemaField): FieldFormState {
@@ -98,6 +100,7 @@ function getInitialFormState(field?: SchemaField): FieldFormState {
 				: [],
 			minItems: (field.validation as Record<string, unknown>)?.minItems?.toString() ?? "",
 			maxItems: (field.validation as Record<string, unknown>)?.maxItems?.toString() ?? "",
+			allowedMimeTypes: field.validation?.allowedMimeTypes ?? [],
 		};
 	}
 	return {
@@ -117,6 +120,7 @@ function getInitialFormState(field?: SchemaField): FieldFormState {
 		subFields: [],
 		minItems: "",
 		maxItems: "",
+		allowedMimeTypes: [],
 	};
 }
 
@@ -300,6 +304,13 @@ export function FieldEditor({ open, onOpenChange, field, onSave, isSaving }: Fie
 				(validation as Record<string, unknown>).maxItems = parseInt(formState.maxItems, 10);
 		}
 
+		if (
+			(selectedType === "file" || selectedType === "image") &&
+			formState.allowedMimeTypes.length > 0
+		) {
+			validation.allowedMimeTypes = formState.allowedMimeTypes;
+		}
+
 		// Only include searchable for text-based fields
 		const isSearchableType =
 			selectedType === "string" ||
@@ -315,7 +326,7 @@ export function FieldEditor({ open, onOpenChange, field, onSave, isSaving }: Fie
 			required,
 			unique,
 			searchable: isSearchableType ? searchable : undefined,
-			validation: Object.keys(validation).length > 0 ? validation : undefined,
+			validation: Object.keys(validation).length > 0 ? validation : null,
 		};
 
 		onSave(input);
@@ -568,25 +579,25 @@ export function FieldEditor({ open, onOpenChange, field, onSave, isSaving }: Fie
 													placeholder={t`Field label`}
 												/>
 												<div>
-													<label className="text-sm font-medium">{t`Type`}</label>
-													<select
-														className="w-full mt-1 rounded-md border px-3 py-2 text-sm"
+													<Select
+														label={t`Type`}
 														value={sf.type}
-														onChange={(e) => {
+														onValueChange={(v) => {
 															const updated = [...formState.subFields];
-															updated[i] = { ...sf, type: e.target.value };
+															updated[i] = { ...sf, type: v ?? "string" };
 															setFormState((prev) => ({ ...prev, subFields: updated }));
 														}}
-													>
-														<option value="string">{t`Short Text`}</option>
-														<option value="text">{t`Long Text`}</option>
-														<option value="number">{t`Number`}</option>
-														<option value="integer">{t`Integer`}</option>
-														<option value="boolean">{t`Boolean`}</option>
-														<option value="datetime">{t`Date & Time`}</option>
-														<option value="select">{t`Select`}</option>
-														<option value="url">{t`URL`}</option>
-													</select>
+														items={{
+															string: t`Short Text`,
+															text: t`Long Text`,
+															number: t`Number`,
+															integer: t`Integer`,
+															boolean: t`Boolean`,
+															datetime: t`Date & Time`,
+															select: t`Select`,
+															url: t`URL`,
+														}}
+													/>
 												</div>
 											</div>
 											<label className="flex items-center gap-2 text-sm">
@@ -635,6 +646,13 @@ export function FieldEditor({ open, onOpenChange, field, onSave, isSaving }: Fie
 									/>
 								</div>
 							</div>
+						)}
+
+						{(selectedType === "file" || selectedType === "image") && (
+							<AllowedTypesEditor
+								value={formState.allowedMimeTypes}
+								onChange={(next) => setField("allowedMimeTypes", next)}
+							/>
 						)}
 					</div>
 				)}
