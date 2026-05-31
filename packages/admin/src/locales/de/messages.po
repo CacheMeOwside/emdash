@@ -208,9 +208,6 @@ msgstr "{0} Elemente werden importiert"
 #: packages/admin/src/components/PluginManager.tsx:398
 msgid "{0} permission{1}"
 msgstr "{0} Berechtigungen"
-#: This implementation causes issues with languages like German -> the EN plural can come with the letter s added by {1} but e.g. German does not follow this logic.
-#: Temporary fix used above: Omit the {1} and use the plural directly
-#: Suggested fix: Use the ICU plural string for Permission/Permissions -> Berechtigung/Berechtigungen instead
 
 #. placeholder {0}: plugins?.length ?? 0
 #: packages/admin/src/components/PluginManager.tsx:169
@@ -408,7 +405,6 @@ msgstr "3. Scrolle zu \"Anwendungspasswörter\""
 #: packages/admin/src/components/WordPressImport.tsx:1118
 msgid "3. Select \"All content\""
 msgstr "3. Wähle \"Alle Inhalte\""
-#: TODO: Check WordPress sandbox for exact wording
 
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:33
 msgid "30 days"
@@ -529,7 +525,6 @@ msgstr "Aktiv"
 #: packages/admin/src/components/TaxonomySidebar.tsx:439
 msgid "Add"
 msgstr ""
-#: TODO: Translation causes issues, e.g. Hinzufügen will render the + Add Tag button to + Hinzufügen Tag
 
 #. placeholder {0}: field.item_label
 #: packages/admin/src/components/PortableTextEditor.tsx:1489
@@ -1436,7 +1431,6 @@ msgstr "Registrierung abschließen"
 #: packages/admin/src/components/Widgets.tsx:851
 msgid "Component"
 msgstr "Komponente"
-#: TODO: Anderes passendes Wort: Baustein
 
 #: packages/admin/src/components/FieldEditor.tsx:342
 msgid "Configure Field"
@@ -2349,7 +2343,6 @@ msgstr "z. B. MacBook Pro, iPhone"
 #: packages/admin/src/components/TranslationsPanel.tsx:88
 msgid "Edit"
 msgstr ""
-#: TODO: Translation causes issues, e.g. headline of the edit a tag modal
 
 #. placeholder {0}: collection.label
 #. placeholder {0}: domain.domain
@@ -2472,7 +2465,6 @@ msgstr "E-Mail-Adresse bestätigt!"
 #: packages/admin/src/components/PortableTextEditor.tsx:2019
 msgid "Embed a {0}"
 msgstr "{0} einbetten"
-#: Temporary fix: Removed the indefinite article "Ein" from the beginning of this string to avoid issues (it will differ based on the value of {0})
 
 #: packages/admin/src/components/PortableTextEditor.tsx:2022
 msgid "Embeds"
