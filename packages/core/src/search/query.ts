@@ -432,11 +432,19 @@ export async function getSuggestions(
 			continue;
 		}
 
-		// Suggestions are title-based (Suggestion.title is required and the
-		// query filters on `c.title IS NOT NULL`). Collections without a
-		// `title` field can't produce one, and selecting `c.title` would
-		// error, so skip them. See #1178.
-		if (!titleColumns.has(collection)) {
+		// Suggestions are title-based (Suggestion.title is required). A configured
+		// titleField (#1133) supplies it -- a validated existing column -- so it
+		// takes precedence and keeps autocomplete consistent with search results.
+		// Otherwise fall back to the optional `title` field; collections with
+		// neither can't produce a suggestion and are skipped (selecting a missing
+		// column would error -- see #1178).
+		let titleExpr;
+		if (config.titleField) {
+			validateIdentifier(config.titleField, "title field");
+			titleExpr = sql`c.${sql.ref(config.titleField)}`;
+		} else if (titleColumns.has(collection)) {
+			titleExpr = sql`c.title`;
+		} else {
 			continue;
 		}
 
@@ -460,16 +468,16 @@ export async function getSuggestions(
 				slug: string | null;
 				title: string;
 			}>`
-				SELECT 
+				SELECT
 					c.id,
 					c.slug,
-					c.title
+					${titleExpr} AS title
 				FROM "${sql.raw(ftsTable)}" f
 				JOIN "${sql.raw(contentTable)}" c ON f.id = c.id
 				WHERE "${sql.raw(ftsTable)}" MATCH ${prefixQuery}
 				AND c.status = 'published'
 				AND c.deleted_at IS NULL
-				AND c.title IS NOT NULL
+				AND ${titleExpr} IS NOT NULL
 				${locale ? sql`AND c.locale = ${locale}` : sql``}
 				ORDER BY bm25("${sql.raw(ftsTable)}")
 				LIMIT ${limit}

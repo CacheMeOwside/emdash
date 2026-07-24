@@ -305,19 +305,19 @@ export interface TrashedContentItem {
 
 /**
  * Resolve the columns a content-list search should match against. Always
- * includes `slug` (a standard column) and adds the `title`/`name` display
- * fields when the collection actually defines them, mirroring the admin's
- * item-title resolution (title -> name -> slug). Returning only existing
- * columns avoids "no such column" errors on collections without them.
+ * includes `slug` (a standard column) and adds the configured `titleField`
+ * plus the `title`/`name` display fields when the collection actually defines
+ * them, mirroring the admin's item-title resolution (titleField -> title ->
+ * name -> slug). Returning only existing columns avoids "no such column"
+ * errors on collections without them (#1133).
  */
 async function resolveSearchColumns(db: Kysely<Database>, collection: string): Promise<string[]> {
-	const columns = ["slug"];
 	const row = await db
 		.selectFrom("_emdash_collections")
-		.select("id")
+		.select(["id", "title_field"])
 		.where("slug", "=", collection)
 		.executeTakeFirst();
-	if (!row) return columns;
+	if (!row) return ["slug"];
 
 	const fields = await db
 		.selectFrom("_emdash_fields")
@@ -325,10 +325,15 @@ async function resolveSearchColumns(db: Kysely<Database>, collection: string): P
 		.where("collection_id", "=", row.id)
 		.execute();
 	const fieldSlugs = new Set(fields.map((f) => f.slug));
+
+	// A configured titleField takes precedence, then the conventional
+	// title/name fields. A null title_field falls through to those defaults.
+	const candidates = new Set<string>();
+	if (row.title_field && fieldSlugs.has(row.title_field)) candidates.add(row.title_field);
 	for (const candidate of ["title", "name"]) {
-		if (fieldSlugs.has(candidate)) columns.push(candidate);
+		if (fieldSlugs.has(candidate)) candidates.add(candidate);
 	}
-	return columns;
+	return ["slug", ...candidates];
 }
 
 /**
