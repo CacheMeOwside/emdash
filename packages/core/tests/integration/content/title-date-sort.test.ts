@@ -28,9 +28,24 @@ describeEachDialect("content list custom-field sort (#1133)", (dialect) => {
 		// of e1/e2/e3, so sorting by any one can't be confused with another:
 		//   createdAt desc: e1, e2, e3   event_date desc: e2, e3, e1   title asc: e3, e1, e2
 		const seed = [
-			{ slug: "e1", title: "Bravo", event_date: "2020-01-01T00:00:00.000Z", createdAt: "2025-06-01T00:00:00.000Z" },
-			{ slug: "e2", title: "Charlie", event_date: "2022-01-01T00:00:00.000Z", createdAt: "2024-06-01T00:00:00.000Z" },
-			{ slug: "e3", title: "Alpha", event_date: "2021-01-01T00:00:00.000Z", createdAt: "2023-06-01T00:00:00.000Z" },
+			{
+				slug: "e1",
+				title: "Bravo",
+				event_date: "2020-01-01T00:00:00.000Z",
+				createdAt: "2025-06-01T00:00:00.000Z",
+			},
+			{
+				slug: "e2",
+				title: "Charlie",
+				event_date: "2022-01-01T00:00:00.000Z",
+				createdAt: "2024-06-01T00:00:00.000Z",
+			},
+			{
+				slug: "e3",
+				title: "Alpha",
+				event_date: "2021-01-01T00:00:00.000Z",
+				createdAt: "2023-06-01T00:00:00.000Z",
+			},
 		];
 		for (const s of seed) {
 			const created = await handleContentCreate(ctx.db, "events", {
