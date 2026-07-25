@@ -45,7 +45,7 @@ const COLUMN_TYPE_TO_DATA_TYPE = {
 	JSON: "json",
 } satisfies Record<ColumnType, ColumnDataType>;
 
-/** Field types usable as a `titleField` (#1133) — plain text that reads well as a title. */
+/** Field types usable as a `titleField` — plain text that reads well as a title. */
 const TITLE_FIELD_TYPES: ReadonlySet<string> = new Set(["string", "text", "slug"]);
 
 /** Valid collection source prefixes/values */
@@ -771,7 +771,7 @@ export class SchemaRegistry {
 			}
 
 			// A same-column-type change can still break the titleField/dateField
-			// type invariants (#1133). Read the collection only when a type change
+			// type invariants. Read the collection only when a type change
 			// is actually requested, so the common path pays nothing.
 			const collection = await this.getCollection(collectionSlug);
 			if (collection?.titleField === fieldSlug && !TITLE_FIELD_TYPES.has(input.type)) {
@@ -929,7 +929,7 @@ export class SchemaRegistry {
 			);
 		}
 
-		// If this field powers the collection's titleField/dateField (#1133),
+		// If this field powers the collection's titleField/dateField,
 		// clear that reference in the same transaction — otherwise the metadata
 		// would point at a dropped column and later crash the content list sort.
 		const collection = await this.getCollection(collectionSlug);

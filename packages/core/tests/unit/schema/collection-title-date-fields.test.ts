@@ -1,5 +1,5 @@
 /**
- * #1133: a collection's `titleField`/`dateField` override the admin list's
+ * A collection's `titleField`/`dateField` override the admin list's
  * Title and Date columns. Update-only (fields must exist first), so
  * `updateCollection` validates: titleField = a real field, dateField = a
  * `datetime` field; `null`/`""` clears to default; unset stays undefined.
@@ -12,7 +12,7 @@ import { runMigrations } from "../../../src/database/migrations/runner.js";
 import type { Database as EmDashDatabase } from "../../../src/database/types.js";
 import { SchemaRegistry, SchemaError } from "../../../src/schema/registry.js";
 
-describe("collection titleField/dateField (#1133)", () => {
+describe("collection titleField/dateField", () => {
 	let db: Kysely<EmDashDatabase>;
 	let registry: SchemaRegistry;
 

@@ -338,7 +338,7 @@ function ContentListPage() {
 
 	// Controlled sort state — passed to the list, and included in the query
 	// key so changing direction invalidates the current cursor chain.
-	// Default sorts by the collection's dateField (#1133), else last-updated.
+	// Default sorts by the collection's dateField, else last-updated.
 	// `sortOverride` is the user's explicit choice (null until they click a
 	// column), keeping the default reactive as the manifest loads and per-collection.
 	const [sortOverride, setSortOverride] = React.useState<ContentListSort | null>(null);

@@ -9,11 +9,11 @@ import { searchWithDb } from "../../../src/search/query.js";
 import { setupTestDatabase, teardownTestDatabase } from "../../utils/test-db.js";
 
 /**
- * #1133: search results should show the same title as the content list. When a
+ * Search results should show the same title as the content list. When a
  * collection sets `titleField`, the result title comes from that field's
  * column, not the physical `title` column.
  */
-describe("search: titleField drives the result title (#1133)", () => {
+describe("search: titleField drives the result title", () => {
 	let db: Kysely<Database>;
 
 	beforeEach(async () => {

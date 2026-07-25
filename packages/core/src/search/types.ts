@@ -12,7 +12,7 @@ export interface SearchConfig {
 	enabled: boolean;
 	/** Field weights for ranking (higher = more important) */
 	weights?: Record<string, number>;
-	/** Field slug used as the result title, from the collection's titleField (#1133). */
+	/** Field slug used as the result title, from the collection's titleField. */
 	titleField?: string;
 }
 

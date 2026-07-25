@@ -9,11 +9,11 @@ import {
 	type DialectTestContext,
 } from "../../utils/test-db.js";
 
-// #1133: the server-side content-list `q` filter must match against a
+// The server-side content-list `q` filter must match against a
 // configured `titleField`, not just the conventional `title`/`name` fields.
 // Otherwise searching a collection whose title comes from e.g. `full_name`
 // can't find an entry by the title the admin actually renders.
-describeEachDialect("content list search honours a custom titleField (#1133)", (dialect) => {
+describeEachDialect("content list search honours a custom titleField", (dialect) => {
 	let ctx: DialectTestContext;
 
 	beforeEach(async () => {

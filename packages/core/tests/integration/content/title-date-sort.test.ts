@@ -9,10 +9,10 @@ import {
 	type DialectTestContext,
 } from "../../utils/test-db.js";
 
-// #1133: a collection's configured `dateField` drives the admin list's default
+// A collection's configured `dateField` drives the admin list's default
 // sort, and its titleField/dateField are the only non-system fields allowed
 // as `orderBy`: a closed, server-resolved set (no column enumeration).
-describeEachDialect("content list custom-field sort (#1133)", (dialect) => {
+describeEachDialect("content list custom-field sort", (dialect) => {
 	let ctx: DialectTestContext;
 
 	beforeEach(async () => {

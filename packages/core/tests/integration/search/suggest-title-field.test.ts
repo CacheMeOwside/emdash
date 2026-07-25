@@ -9,11 +9,11 @@ import { getSuggestions } from "../../../src/search/query.js";
 import { setupTestDatabase, teardownTestDatabase } from "../../utils/test-db.js";
 
 /**
- * #1133: autocomplete should stay consistent with search results. A collection
+ * Autocomplete should stay consistent with search results. A collection
  * with a configured `titleField` and no literal `title` field must still
  * produce suggestions, drawing the suggestion title from that field's column.
  */
-describe("getSuggestions: titleField drives the suggestion title (#1133)", () => {
+describe("getSuggestions: titleField drives the suggestion title", () => {
 	let db: Kysely<Database>;
 
 	beforeEach(async () => {

@@ -271,7 +271,7 @@ export async function applySeed(
 				fields,
 			);
 			// titleField/dateField reference existing fields, so set them after
-			// the schema exists (#1133).
+			// the schema exists.
 			await applyDisplayDateFields(registry, collection);
 			result.collections.created++;
 			result.fields.created += fields.length;

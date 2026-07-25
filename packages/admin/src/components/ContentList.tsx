@@ -39,7 +39,7 @@ import { RouterLinkButton } from "./RouterLinkButton.js";
 /**
  * Sortable content list columns. The named values map to the server's system
  * order fields; a collection's configured titleField/dateField slug is also
- * accepted (#1133), which the server validates against the collection.
+ * accepted, which the server validates against the collection.
  */
 export type ContentListSortField = "title" | "status" | "locale" | "updatedAt" | (string & {});
 export interface ContentListSort {
@@ -514,7 +514,7 @@ export function ContentList({
 										</th>
 									)}
 									{/* The Title/Date columns sort by the collection's configured
-									    titleField/dateField when set (#1133) */}
+									    titleField/dateField when set */}
 									<SortableTh
 										field={titleField ?? "title"}
 										sort={sort}

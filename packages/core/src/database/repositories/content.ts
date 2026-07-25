@@ -44,7 +44,7 @@ const DATE_FILTER_COLUMNS: Record<ContentDateField, "created_at" | "updated_at" 
 
 /**
  * Built-in sort fields → their physical columns. A closed set that blocks
- * sorting by arbitrary columns; per-collection fields (#1133) are allowed
+ * sorting by arbitrary columns; per-collection fields are allowed
  * separately via `mapOrderField`'s `sortableExtras`.
  */
 const ORDER_FIELD_COLUMNS: Record<string, string> = {
@@ -1709,7 +1709,7 @@ export class ContentRepository {
 		const mapped = ORDER_FIELD_COLUMNS[field];
 		if (mapped) return mapped;
 
-		// A collection's configured titleField/dateField (#1133) are allowed as
+		// A collection's configured titleField/dateField are allowed as
 		// sort columns. The caller passes the collection's *actual* values (resolved
 		// server-side, never client-supplied), so this stays a closed set per
 		// request and doesn't reopen the column-enumeration hole. The slug is a

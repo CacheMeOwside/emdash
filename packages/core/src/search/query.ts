@@ -276,7 +276,7 @@ async function searchSingleCollection(
 	// errors with "no such column: c.title" (#1178). Multi-collection callers
 	// precompute this in bulk and pass it in; single-collection callers fall
 	// back to the per-collection check.
-	// A configured titleField (#1133) drives the result title so search shows
+	// A configured titleField drives the result title so search shows
 	// the same value as the content list. It's a validated existing field, so
 	// the column exists; otherwise fall back to the optional `title` column.
 	let titleExpr;
@@ -434,7 +434,7 @@ export async function getSuggestions(
 		}
 
 		// Suggestions are title-based (Suggestion.title is required). A configured
-		// titleField (#1133) supplies it -- a validated existing column -- so it
+		// titleField supplies it -- a validated existing column -- so it
 		// takes precedence and keeps autocomplete consistent with search results.
 		// Otherwise fall back to the optional `title` field; collections with
 		// neither can't produce a suggestion and are skipped (selecting a missing

@@ -39,7 +39,7 @@ export function ContentPickerModal({ open, onOpenChange, onSelect }: ContentPick
 	});
 
 	// Reuse the cached manifest (same query key as the rest of the admin) to
-	// resolve the selected collection's titleField for entry titles (#1133).
+	// resolve the selected collection's titleField for entry titles.
 	const { data: manifest } = useQuery({
 		queryKey: ["manifest"],
 		queryFn: fetchManifest,

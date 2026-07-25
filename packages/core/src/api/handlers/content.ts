@@ -317,7 +317,7 @@ export interface TrashedContentItem {
  * plus the `title`/`name` display fields when the collection actually defines
  * them, mirroring the admin's item-title resolution (titleField -> title ->
  * name -> slug). Returning only existing columns avoids "no such column"
- * errors on collections without them (#1133).
+ * errors on collections without them.
  */
 async function resolveSearchColumns(db: Kysely<Database>, collection: string): Promise<string[]> {
 	const row = await db
@@ -460,8 +460,8 @@ export async function handleContentList(
 			where.useFts = await canUseFtsForListFilter(db, collection, where.searchColumns);
 		}
 
-		// Sorting by a non-system field (a collection's titleField/dateField,
-		// #1133) needs the collection's *actual* sort fields resolved server-side,
+		// Sorting by a non-system field (a collection's titleField/dateField)
+		// needs the collection's *actual* sort fields resolved server-side,
 		// so the orderBy set stays closed. Only query when it's not a system field.
 		let sortableExtras: string[] | undefined;
 		if (params.orderBy && !isSystemOrderField(params.orderBy)) {
