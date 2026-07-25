@@ -22,19 +22,20 @@ describeEachDialect("content list custom-field sort (#1133)", (dialect) => {
 		await registry.createField("events", { slug: "title", label: "Title", type: "string" });
 		await registry.createField("events", { slug: "event_date", label: "Date", type: "datetime" });
 		await registry.createField("events", { slug: "location", label: "Location", type: "string" });
-		await registry.updateCollection("events", { dateField: "event_date" });
+		await registry.updateCollection("events", { titleField: "title", dateField: "event_date" });
 
-		// createdAt order (e1 newest) is deliberately the reverse of event_date
-		// order, so sorting by event_date can't be confused with the default.
+		// Each ordering (createdAt, event_date, title) is a distinct permutation
+		// of e1/e2/e3, so sorting by any one can't be confused with another:
+		//   createdAt desc: e1, e2, e3   event_date desc: e2, e3, e1   title asc: e3, e1, e2
 		const seed = [
-			{ slug: "e1", event_date: "2020-01-01T00:00:00.000Z", createdAt: "2025-06-01T00:00:00.000Z" },
-			{ slug: "e2", event_date: "2022-01-01T00:00:00.000Z", createdAt: "2024-06-01T00:00:00.000Z" },
-			{ slug: "e3", event_date: "2021-01-01T00:00:00.000Z", createdAt: "2023-06-01T00:00:00.000Z" },
+			{ slug: "e1", title: "Bravo", event_date: "2020-01-01T00:00:00.000Z", createdAt: "2025-06-01T00:00:00.000Z" },
+			{ slug: "e2", title: "Charlie", event_date: "2022-01-01T00:00:00.000Z", createdAt: "2024-06-01T00:00:00.000Z" },
+			{ slug: "e3", title: "Alpha", event_date: "2021-01-01T00:00:00.000Z", createdAt: "2023-06-01T00:00:00.000Z" },
 		];
 		for (const s of seed) {
 			const created = await handleContentCreate(ctx.db, "events", {
 				slug: s.slug,
-				data: { title: s.slug, event_date: s.event_date, location: "HQ" },
+				data: { title: s.title, event_date: s.event_date, location: "HQ" },
 				createdAt: s.createdAt,
 			});
 			if (!created.success) throw new Error(`seed ${s.slug} failed`);
@@ -59,6 +60,14 @@ describeEachDialect("content list custom-field sort (#1133)", (dialect) => {
 
 		const asc = await handleContentList(ctx.db, "events", { orderBy: "event_date", order: "asc" });
 		expect(slugsOf(asc)).toEqual(["e1", "e3", "e2"]);
+	});
+
+	it("sorts by the configured titleField, distinct from createdAt and dateField", async () => {
+		const asc = await handleContentList(ctx.db, "events", { orderBy: "title", order: "asc" });
+		expect(slugsOf(asc)).toEqual(["e3", "e1", "e2"]); // Alpha, Bravo, Charlie
+
+		const desc = await handleContentList(ctx.db, "events", { orderBy: "title", order: "desc" });
+		expect(slugsOf(desc)).toEqual(["e2", "e1", "e3"]);
 	});
 
 	it("rejects ordering by a field that isn't titleField/dateField", async () => {
