@@ -438,7 +438,7 @@ export async function getSuggestions(
 		// takes precedence and keeps autocomplete consistent with search results.
 		// Otherwise fall back to the optional `title` field; collections with
 		// neither can't produce a suggestion and are skipped (selecting a missing
-		// column would error -- see #1178).
+		// column would error).
 		let titleExpr;
 		if (config.titleField) {
 			validateIdentifier(config.titleField, "title field");
