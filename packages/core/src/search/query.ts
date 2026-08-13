@@ -273,7 +273,7 @@ async function searchSingleCollection(
 
 	// `title` is an optional user-defined field, not a system column. Only
 	// select it when the collection actually has one; otherwise the query
-	// errors with "no such column: c.title" (#1178). Multi-collection callers
+	// errors with "no such column: c.title". Multi-collection callers
 	// precompute this in bulk and pass it in; single-collection callers fall
 	// back to the per-collection check.
 	// A configured titleField drives the result title so search shows

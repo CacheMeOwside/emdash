@@ -193,8 +193,11 @@ export async function applySeed(
 						labelSingular: collection.labelSingular,
 						description: collection.description,
 						icon: collection.icon,
+						admin: collection.admin,
 						supports: collection.supports || [],
 						urlPattern: collection.urlPattern,
+						hidden: collection.hidden,
+						sortOrder: collection.sortOrder,
 						commentsEnabled: collection.commentsEnabled,
 					});
 					result.collections.updated++;
@@ -209,6 +212,7 @@ export async function applySeed(
 								required: field.required || false,
 								unique: field.unique || false,
 								searchable: field.searchable || false,
+								indexed: field.indexed || false,
 								defaultValue: field.defaultValue,
 								validation: field.validation,
 								widget: field.widget,
@@ -223,6 +227,7 @@ export async function applySeed(
 								required: field.required || false,
 								unique: field.unique || false,
 								searchable: field.searchable || false,
+								indexed: field.indexed || false,
 								defaultValue: field.defaultValue,
 								validation: field.validation,
 								widget: field.widget,
@@ -250,6 +255,7 @@ export async function applySeed(
 				required: field.required || false,
 				unique: field.unique || false,
 				searchable: field.searchable || false,
+				indexed: field.indexed || false,
 				defaultValue: field.defaultValue,
 				validation: field.validation,
 				widget: field.widget,
@@ -264,8 +270,11 @@ export async function applySeed(
 					labelSingular: collection.labelSingular,
 					description: collection.description,
 					icon: collection.icon,
+					admin: collection.admin,
 					supports: collection.supports || [],
 					urlPattern: collection.urlPattern,
+					hidden: collection.hidden,
+					sortOrder: collection.sortOrder,
 					commentsEnabled: collection.commentsEnabled,
 				},
 				fields,
@@ -545,8 +554,24 @@ export async function applySeed(
 											entryId: existing.id,
 											data: resolvedData,
 										});
-										await trxContentRepo.setDraftRevision(collectionSlug, existing.id, draft.id);
-										await trxContentRepo.publish(collectionSlug, existing.id);
+										try {
+											await trxContentRepo.setDraftRevision(collectionSlug, existing.id, draft.id);
+											await trxContentRepo.publish(collectionSlug, existing.id);
+										} catch (error) {
+											try {
+												await trxRevisionRepo.deleteIfUnreferenced(
+													collectionSlug,
+													existing.id,
+													draft.id,
+												);
+											} catch (cleanupError) {
+												console.error(
+													`[seed] Failed to clean up unstaged revision ${draft.id}:`,
+													cleanupError,
+												);
+											}
+											throw error;
+										}
 									}
 								});
 							} catch (error) {

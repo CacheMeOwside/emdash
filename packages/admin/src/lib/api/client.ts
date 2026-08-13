@@ -95,6 +95,8 @@ export interface AdminManifest {
 			urlPattern?: string;
 			titleField?: string;
 			dateField?: string;
+			hidden?: boolean;
+			listColumns?: string[];
 			fields: Record<
 				string,
 				{

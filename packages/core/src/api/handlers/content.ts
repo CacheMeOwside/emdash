@@ -15,11 +15,14 @@ import { RevisionRepository } from "../../database/repositories/revision.js";
 import { SeoRepository } from "../../database/repositories/seo.js";
 import { TaxonomyRepository } from "../../database/repositories/taxonomy.js";
 import {
+	ContentCollectionNotFoundError,
+	ContentMutationConflictError,
 	EmDashValidationError,
 	ScheduledNotDueError,
 	InvalidCursorError,
 	type BylineSummary,
 	type ContentBylineCredit,
+	type ContentBylineFilter,
 	type ContentDateField,
 	type ContentItem,
 	type ContentSeo,
@@ -84,6 +87,19 @@ async function collectionHasSeo(db: Kysely<Database>, collection: string): Promi
 		.where("slug", "=", collection)
 		.executeTakeFirst();
 	return row?.has_seo === 1;
+}
+
+async function collectionSupportsRevisions(
+	db: Kysely<Database>,
+	collection: string,
+): Promise<boolean> {
+	const row = await db
+		.selectFrom("_emdash_collections")
+		.select("supports")
+		.where("slug", "=", collection)
+		.executeTakeFirst();
+	const supports: unknown = row?.supports ? JSON.parse(row.supports) : [];
+	return Array.isArray(supports) && supports.includes("revisions");
 }
 
 /**
@@ -313,11 +329,11 @@ export interface TrashedContentItem {
 
 /**
  * Resolve the columns a content-list search should match against. Always
- * includes `slug` (a standard column) and adds the configured `titleField`
- * plus the `title`/`name` display fields when the collection actually defines
- * them, mirroring the admin's item-title resolution (titleField -> title ->
- * name -> slug). Returning only existing columns avoids "no such column"
- * errors on collections without them.
+ * includes `slug` (a standard column), adds the configured `titleField` plus
+ * the `title`/`name` display fields when the collection actually defines them,
+ * mirroring the admin's item-title resolution (titleField -> title -> name ->
+ * slug), and includes every field explicitly marked searchable. Returning only
+ * schema-backed columns avoids "no such column" errors.
  */
 async function resolveSearchColumns(db: Kysely<Database>, collection: string): Promise<string[]> {
 	const row = await db
@@ -329,19 +345,23 @@ async function resolveSearchColumns(db: Kysely<Database>, collection: string): P
 
 	const fields = await db
 		.selectFrom("_emdash_fields")
-		.select("slug")
+		.select(["slug", "searchable"])
 		.where("collection_id", "=", row.id)
+		.orderBy("sort_order", "asc")
 		.execute();
+	const columns = new Set(["slug"]);
 	const fieldSlugs = new Set(fields.map((f) => f.slug));
 
 	// A configured titleField takes precedence, then the conventional
 	// title/name fields. A null title_field falls through to those defaults.
-	const candidates = new Set<string>();
-	if (row.title_field && fieldSlugs.has(row.title_field)) candidates.add(row.title_field);
+	if (row.title_field && fieldSlugs.has(row.title_field)) columns.add(row.title_field);
 	for (const candidate of ["title", "name"]) {
-		if (fieldSlugs.has(candidate)) candidates.add(candidate);
+		if (fieldSlugs.has(candidate)) columns.add(candidate);
 	}
-	return ["slug", ...candidates];
+	for (const field of fields) {
+		if (field.searchable === 1) columns.add(field.slug);
+	}
+	return [...columns];
 }
 
 /**
@@ -381,6 +401,15 @@ async function createSlugChangeRedirect(
 	newSlug: string,
 	contentId: string,
 ): Promise<void> {
+	// A URL pattern has no locale token, so every locale variant of an entry
+	// generates the same URL, and slugs are unique per (slug, locale) — a
+	// translation may still hold the old slug. Redirecting away from a URL
+	// another row still answers on would take that page down: the redirect
+	// middleware runs `order: "pre"`, so routing never gets a chance.
+	// Any surviving row counts, published or not: a draft that publishes later
+	// would otherwise be shadowed by the redirect.
+	if (await slugStillTaken(db, collection, oldSlug, contentId)) return;
+
 	const collectionRow = await db
 		.selectFrom("_emdash_collections")
 		.select("url_pattern")
@@ -396,6 +425,24 @@ async function createSlugChangeRedirect(
 		collectionRow?.url_pattern ?? null,
 	);
 	invalidateRedirectCache();
+}
+
+/** Whether a row other than `contentId` still holds `slug` in this collection. */
+async function slugStillTaken(
+	db: Kysely<Database>,
+	collection: string,
+	slug: string,
+	contentId: string,
+): Promise<boolean> {
+	validateIdentifier(collection, "collection slug");
+	const result = await sql<{ id: string }>`
+		SELECT id FROM ${sql.ref(`ec_${collection}`)}
+		WHERE slug = ${slug}
+		AND id != ${contentId}
+		AND deleted_at IS NULL
+		LIMIT 1
+	`.execute(db);
+	return result.rows.length > 0;
 }
 
 /** Matches a date-only `YYYY-MM-DD` bound (no time component). */
@@ -417,6 +464,27 @@ function normalizeDateBound(value: string | undefined, edge: "start" | "end"): s
 }
 
 /**
+ * Build the repository's byline filter from the wire params.
+ *
+ * `locale` is the locale the list is scoped to, which is the locale an
+ * inferred credit has to resolve at — the admin list is always scoped to the
+ * locale picked in its switcher.
+ */
+function resolveBylineFilter(
+	params: { bylines?: string[]; bylinesNone?: boolean; includeInferredBylines?: boolean },
+	locale: string | undefined,
+): ContentBylineFilter | undefined {
+	const includeInferred = params.includeInferredBylines === true;
+
+	if (params.bylinesNone) return { mode: "none", includeInferred, locale };
+
+	const bylineIds = params.bylines ?? [];
+	if (bylineIds.length === 0) return undefined;
+
+	return { mode: "any", bylineIds, includeInferred, locale };
+}
+
+/**
  * Create content list handler
  */
 export async function handleContentList(
@@ -434,14 +502,21 @@ export async function handleContentList(
 		dateField?: ContentDateField;
 		dateFrom?: string;
 		dateTo?: string;
+		bylines?: string[];
+		bylinesNone?: boolean;
+		includeInferredBylines?: boolean;
 	},
 ): Promise<ApiResult<ContentListResponse>> {
 	try {
 		const repo = new ContentRepository(db);
 		const where: FindManyOptions["where"] = {};
 		if (params.status) where.status = params.status;
-		if (params.locale) where.locale = resolveConfiguredLocale(params.locale);
+		const locale = params.locale ? resolveConfiguredLocale(params.locale) : undefined;
+		if (locale) where.locale = locale;
 		if (params.authorId) where.authorId = params.authorId;
+
+		const bylineFilter = resolveBylineFilter(params, locale);
+		if (bylineFilter) where.bylineFilter = bylineFilter;
 
 		// A date range requires a target column; ignore stray from/to without
 		// a field so a half-specified filter doesn't silently drop all rows.
@@ -505,7 +580,7 @@ export async function handleContentList(
 				error: { code: "INVALID_CURSOR", message: error.message },
 			};
 		}
-		if (isMissingTableError(error)) {
+		if (error instanceof ContentCollectionNotFoundError || isMissingTableError(error)) {
 			return {
 				success: false,
 				error: {
@@ -1471,20 +1546,24 @@ export async function handleContentUnschedule(
 /**
  * Publish content immediately.
  *
- * Wrapped in a transaction because publish performs multiple writes
- * (syncDataColumns, slug sync, status/revision update) that must
- * be atomic to prevent FTS shadow table corruption on crash.
+ * Publication is one atomic content-row statement. On databases that support
+ * transactions, the existing slug-redirect side write remains grouped with it.
  */
 export async function handleContentPublish(
 	db: Kysely<Database>,
 	collection: string,
 	id: string,
-	options: { publishedAt?: string; requireScheduledDue?: boolean } = {},
+	options: {
+		publishedAt?: string;
+		requireScheduledDue?: boolean;
+		expectedScheduledAt?: string;
+	} = {},
 ): Promise<ApiResult<ContentResponse>> {
 	try {
 		const item = await withTransaction(db, async (trx) => {
 			const repo = new ContentRepository(trx);
 			const resolvedId = (await resolveId(repo, collection, id)) ?? id;
+			const supportsRevisions = await collectionSupportsRevisions(trx, collection);
 
 			// Capture the pre-publish state. For revision-supporting collections a
 			// slug edit is staged as `_slug` in the draft revision and only lands
@@ -1498,6 +1577,8 @@ export async function handleContentPublish(
 				resolvedId,
 				options.publishedAt,
 				options.requireScheduledDue,
+				options.expectedScheduledAt,
+				supportsRevisions,
 			);
 
 			// Leave a 301 behind when publishing changed the slug of an entry that
@@ -1523,6 +1604,15 @@ export async function handleContentPublish(
 			data: { item },
 		};
 	} catch (error) {
+		if (error instanceof ContentMutationConflictError) {
+			return {
+				success: false,
+				error: {
+					code: "CONFLICT",
+					message: error.message,
+				},
+			};
+		}
 		// The scheduled sweep gates publish on the row still being due; a row
 		// unscheduled in the meantime is a silent skip, not a failure.
 		if (error instanceof ScheduledNotDueError) {
