@@ -954,7 +954,7 @@ msgstr "A relation defines how two content types link. Reference fields on eithe
 msgid "A relationship is required"
 msgstr "A relationship is required"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:183
+#: packages/admin/src/components/settings/GeneralSettings.tsx:272
 msgid "A short description of your site"
 msgstr "A short description of your site"
 
@@ -1533,9 +1533,9 @@ msgstr "An encrypted digital key you unlock using your fingerprint, face, PIN, o
 #: packages/admin/src/components/settings/BackupSettings.tsx:124
 #: packages/admin/src/components/settings/BackupSettings.tsx:167
 #: packages/admin/src/components/settings/EmailSettings.tsx:45
-#: packages/admin/src/components/settings/GeneralSettings.tsx:85
-#: packages/admin/src/components/settings/GeneralSettings.tsx:147
-#: packages/admin/src/components/settings/GeneralSettings.tsx:148
+#: packages/admin/src/components/settings/GeneralSettings.tsx:163
+#: packages/admin/src/components/settings/GeneralSettings.tsx:236
+#: packages/admin/src/components/settings/GeneralSettings.tsx:237
 #: packages/admin/src/components/settings/SecuritySettings.tsx:51
 #: packages/admin/src/components/settings/SecuritySettings.tsx:67
 #: packages/admin/src/components/settings/SecuritySettings.tsx:124
@@ -2355,7 +2355,7 @@ msgstr "Change"
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:287
+#: packages/admin/src/components/settings/GeneralSettings.tsx:376
 msgid "Change Favicon"
 msgstr "Change Favicon"
 
@@ -2363,7 +2363,7 @@ msgstr "Change Favicon"
 msgid "Change Image"
 msgstr "Change Image"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:227
+#: packages/admin/src/components/settings/GeneralSettings.tsx:316
 msgid "Change Logo"
 msgstr "Change Logo"
 
@@ -2510,6 +2510,10 @@ msgstr "Choose a new publication time for this draft."
 #: packages/admin/src/components/MediaDetailPanel.tsx:907
 msgid "Choose a non-empty {0} image."
 msgstr "Choose a non-empty {0} image."
+
+#: packages/admin/src/components/settings/GeneralSettings.tsx:443
+msgid "Choose a recognized timezone for reliable date display."
+msgstr "Choose a recognized timezone for reliable date display."
 
 #: packages/admin/src/components/BulkTagDialog.tsx:184
 msgid "Choose a term and enter between 1 and 50 posts."
@@ -3624,7 +3628,7 @@ msgstr "Date and time picker"
 msgid "Date field to filter on"
 msgstr "Date field to filter on"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:331
+#: packages/admin/src/components/settings/GeneralSettings.tsx:420
 msgid "Date Format"
 msgstr "Date Format"
 
@@ -4749,6 +4753,10 @@ msgstr "English is used because no content language is configured. Content langu
 msgid "Enter a name."
 msgstr "Enter a name."
 
+#: packages/admin/src/components/settings/GeneralSettings.tsx:447
+msgid "Enter a recognized timezone to save"
+msgstr "Enter a recognized timezone to save"
+
 #: packages/admin/src/components/MenuEditor.tsx:425
 #: packages/admin/src/components/MenuEditor.tsx:607
 msgid "Enter a URL (https://…) or a relative path (/…)"
@@ -4875,10 +4883,9 @@ msgstr "Every published release of this plugin has been withdrawn or could not b
 msgid "Every relationship this content type takes part in goes too:"
 msgstr "Every relationship this content type takes part in goes too:"
 
-#. placeholder {0}: formData.dateFormat ?? "MMMM d, yyyy"
-#: packages/admin/src/components/settings/GeneralSettings.tsx:334
-msgid "Example: {0} → January 23, 2026"
-msgstr "Example: {0} → January 23, 2026"
+#: packages/admin/src/components/settings/GeneralSettings.tsx:428
+msgid "Example: {pattern} → {preview}"
+msgstr "Example: {pattern} → {preview}"
 
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:294
 msgid "example.com"
@@ -5582,7 +5589,7 @@ msgid "Failed to save field"
 msgstr "Failed to save field"
 
 #: packages/admin/src/components/PluginSettings.tsx:74
-#: packages/admin/src/components/settings/GeneralSettings.tsx:84
+#: packages/admin/src/components/settings/GeneralSettings.tsx:162
 #: packages/admin/src/components/settings/SeoSettings.tsx:81
 #: packages/admin/src/components/settings/SocialSettings.tsx:66
 msgid "Failed to save settings"
@@ -5720,8 +5727,8 @@ msgid "FAQ"
 msgstr "FAQ"
 
 #: packages/admin/src/components/MediaUsedIn.tsx:45
-#: packages/admin/src/components/settings/GeneralSettings.tsx:258
-#: packages/admin/src/components/settings/GeneralSettings.tsx:265
+#: packages/admin/src/components/settings/GeneralSettings.tsx:347
+#: packages/admin/src/components/settings/GeneralSettings.tsx:354
 msgid "Favicon"
 msgstr "Favicon"
 
@@ -6001,7 +6008,7 @@ msgstr "Gallery settings"
 msgid "General"
 msgstr "General"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:125
+#: packages/admin/src/components/settings/GeneralSettings.tsx:214
 msgid "General Settings"
 msgstr "General Settings"
 
@@ -7178,6 +7185,10 @@ msgstr "Loading plugin panel"
 msgid "Loading plugins..."
 msgstr "Loading plugins..."
 
+#: packages/admin/src/components/settings/GeneralSettings.tsx:425
+msgid "Loading preview…"
+msgstr "Loading preview…"
+
 #: packages/admin/src/components/Redirects.tsx:473
 msgid "Loading redirects..."
 msgstr "Loading redirects..."
@@ -7197,7 +7208,7 @@ msgid "Loading sections..."
 msgstr "Loading sections..."
 
 #: packages/admin/src/components/PluginSettings.tsx:131
-#: packages/admin/src/components/settings/GeneralSettings.tsx:136
+#: packages/admin/src/components/settings/GeneralSettings.tsx:225
 #: packages/admin/src/components/settings/SeoSettings.tsx:133
 #: packages/admin/src/components/settings/SocialSettings.tsx:100
 msgid "Loading settings..."
@@ -7299,8 +7310,8 @@ msgid "Log out"
 msgstr "Log out"
 
 #: packages/admin/src/components/MediaUsedIn.tsx:44
-#: packages/admin/src/components/settings/GeneralSettings.tsx:198
-#: packages/admin/src/components/settings/GeneralSettings.tsx:205
+#: packages/admin/src/components/settings/GeneralSettings.tsx:287
+#: packages/admin/src/components/settings/GeneralSettings.tsx:294
 msgid "Logo"
 msgstr "Logo"
 
@@ -8323,6 +8334,10 @@ msgstr "No matching passkey found for this account."
 msgid "No matching tags"
 msgstr "No matching tags"
 
+#: packages/admin/src/components/settings/GeneralSettings.tsx:460
+msgid "No matching timezones"
+msgstr "No matching timezones"
+
 #: packages/admin/src/components/FieldEditor.tsx:880
 #: packages/admin/src/components/FieldEditor.tsx:910
 msgid "No maximum"
@@ -8518,7 +8533,7 @@ msgstr "Number"
 msgid "Number of posts"
 msgstr "Number of posts"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:326
+#: packages/admin/src/components/settings/GeneralSettings.tsx:415
 msgid "Number of posts to show per page on list views"
 msgstr "Number of posts to show per page on list views"
 
@@ -9162,7 +9177,7 @@ msgstr "Posts"
 msgid "Posts & Pages"
 msgstr "Posts & Pages"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:320
+#: packages/admin/src/components/settings/GeneralSettings.tsx:409
 msgid "Posts Per Page"
 msgstr "Posts Per Page"
 
@@ -9214,6 +9229,10 @@ msgstr "Preview draft"
 #: packages/admin/src/components/Sections.tsx:381
 msgid "Preview of {0}"
 msgstr "Preview of {0}"
+
+#: packages/admin/src/components/settings/GeneralSettings.tsx:427
+msgid "Preview unavailable for this format"
+msgstr "Preview unavailable for this format"
 
 #: packages/admin/src/components/ThemeMarketplaceDetail.tsx:308
 msgid "Previous"
@@ -9473,7 +9492,7 @@ msgstr "Read your taxonomies and terms"
 msgid "Read-only"
 msgstr "Read-only"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:317
+#: packages/admin/src/components/settings/GeneralSettings.tsx:406
 msgid "Reading"
 msgstr "Reading"
 
@@ -9588,7 +9607,7 @@ msgstr "Referenced collection"
 msgid "Referenced collection is required"
 msgstr "Referenced collection is required"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:276
+#: packages/admin/src/components/settings/GeneralSettings.tsx:365
 msgid "Referenced favicon unavailable."
 msgstr "Referenced favicon unavailable."
 
@@ -9681,8 +9700,8 @@ msgstr "Reloading the plan…"
 #: packages/admin/src/components/ImageFieldRenderer.tsx:439
 #: packages/admin/src/components/media/MediaBrowserItems.tsx:221
 #: packages/admin/src/components/PortableTextEditor.tsx:4862
-#: packages/admin/src/components/settings/GeneralSettings.tsx:236
-#: packages/admin/src/components/settings/GeneralSettings.tsx:296
+#: packages/admin/src/components/settings/GeneralSettings.tsx:325
+#: packages/admin/src/components/settings/GeneralSettings.tsx:385
 #: packages/admin/src/components/settings/PasskeyItem.tsx:160
 #: packages/admin/src/components/settings/PasskeyItem.tsx:182
 #: packages/admin/src/components/settings/SeoSettings.tsx:217
@@ -10607,6 +10626,10 @@ msgstr "Search folders"
 msgid "Search for a language…"
 msgstr "Search for a language…"
 
+#: packages/admin/src/components/settings/GeneralSettings.tsx:440
+msgid "Search for an IANA timezone (e.g., Europe/London)"
+msgstr "Search for an IANA timezone (e.g., Europe/London)"
+
 #: packages/admin/src/components/Widgets.tsx:152
 msgid "Search form"
 msgstr "Search form"
@@ -10663,6 +10686,10 @@ msgstr "Search themes"
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:89
 msgid "Search themes..."
 msgstr "Search themes..."
+
+#: packages/admin/src/components/settings/GeneralSettings.tsx:451
+msgid "Search timezones…"
+msgstr "Search timezones…"
 
 #: packages/admin/src/components/BylineFilter.tsx:169
 msgid "Search to narrow the list"
@@ -10866,11 +10893,11 @@ msgstr "Select dark mode variant for {label}"
 msgid "Select default social image"
 msgstr "Select default social image"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:371
+#: packages/admin/src/components/settings/GeneralSettings.tsx:490
 msgid "Select favicon"
 msgstr "Select favicon"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:308
+#: packages/admin/src/components/settings/GeneralSettings.tsx:397
 msgid "Select Favicon"
 msgstr "Select Favicon"
 
@@ -10893,11 +10920,11 @@ msgstr "Select image"
 msgid "Select Image"
 msgstr "Select Image"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:363
+#: packages/admin/src/components/settings/GeneralSettings.tsx:482
 msgid "Select logo"
 msgstr "Select logo"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:248
+#: packages/admin/src/components/settings/GeneralSettings.tsx:337
 msgid "Select Logo"
 msgstr "Select Logo"
 
@@ -11099,7 +11126,7 @@ msgid "Settings Read"
 msgstr "Settings Read"
 
 #: packages/admin/src/components/PluginSettings.tsx:68
-#: packages/admin/src/components/settings/GeneralSettings.tsx:77
+#: packages/admin/src/components/settings/GeneralSettings.tsx:155
 msgid "Settings saved successfully"
 msgstr "Settings saved successfully"
 
@@ -11254,7 +11281,7 @@ msgstr "Site Export"
 msgid "Site identity"
 msgstr "Site identity"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:169
+#: packages/admin/src/components/settings/GeneralSettings.tsx:258
 msgid "Site Identity"
 msgstr "Site Identity"
 
@@ -11263,7 +11290,7 @@ msgid "site identity applied (title, tagline, logo)"
 msgstr "site identity applied (title, tagline, logo)"
 
 #: packages/admin/src/components/Settings.tsx:55
-#: packages/admin/src/components/settings/GeneralSettings.tsx:126
+#: packages/admin/src/components/settings/GeneralSettings.tsx:215
 msgid "Site identity, logo, favicon, and reading preferences"
 msgstr "Site identity, logo, favicon, and reading preferences"
 
@@ -11289,7 +11316,7 @@ msgstr "Site Settings"
 msgid "Site title"
 msgstr "Site title"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:172
+#: packages/admin/src/components/settings/GeneralSettings.tsx:261
 #: packages/admin/src/components/SetupWizard.tsx:137
 msgid "Site Title"
 msgstr "Site Title"
@@ -11306,7 +11333,7 @@ msgstr "Site title is required"
 msgid "Site Transfer"
 msgstr "Site Transfer"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:188
+#: packages/admin/src/components/settings/GeneralSettings.tsx:277
 msgid "Site URL"
 msgstr "Site URL"
 
@@ -11674,7 +11701,7 @@ msgstr "Table size"
 msgid "Tables cannot be pasted inside lists or quotes. Paste the table into its own paragraph and try again."
 msgstr "Tables cannot be pasted inside lists or quotes. Paste the table into its own paragraph and try again."
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:180
+#: packages/admin/src/components/settings/GeneralSettings.tsx:269
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:375
 #: packages/admin/src/components/SetupWizard.tsx:148
 msgid "Tagline"
@@ -11972,7 +11999,7 @@ msgstr "The marketplace is empty. Check back later for new plugins."
 msgid "The menu has been deleted."
 msgstr "The menu has been deleted."
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:175
+#: packages/admin/src/components/settings/GeneralSettings.tsx:264
 msgid "The name of your site, used in the header and metadata"
 msgstr "The name of your site, used in the header and metadata"
 
@@ -12081,7 +12108,7 @@ msgstr "The plugin has not saved these changes. Review them before updating the 
 msgid "The plugin result is stale because the editor changed while it was working."
 msgstr "The plugin result is stale because the editor changed while it was working."
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:192
+#: packages/admin/src/components/settings/GeneralSettings.tsx:281
 msgid "The public URL of your site (used for canonical links and sitemaps)"
 msgstr "The public URL of your site (used for canonical links and sitemaps)"
 
@@ -12094,7 +12121,7 @@ msgstr "The publisher identity cannot be verified."
 msgid "The referenced image is no longer available. Pick a new one or remove the reference."
 msgstr "The referenced image is no longer available. Pick a new one or remove the reference."
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:216
+#: packages/admin/src/components/settings/GeneralSettings.tsx:305
 msgid "The referenced logo is no longer available. Pick a new one or remove the reference."
 msgstr "The referenced logo is no longer available. Pick a new one or remove the reference."
 
@@ -12453,6 +12480,10 @@ msgstr "This removes the relationship, every link stored under it, and the refer
 msgid "This removes the schedule and publishes immediately."
 msgstr "This removes the schedule and publishes immediately."
 
+#: packages/admin/src/components/settings/GeneralSettings.tsx:442
+msgid "This saved timezone isn't recognized. Choose a suggestion for reliable date display."
+msgstr "This saved timezone isn't recognized. Choose a suggestion for reliable date display."
+
 #: packages/admin/src/components/PortableTextEditor.tsx:3832
 msgid "This section contains table content that the editor cannot preserve. Update the section before inserting it."
 msgstr "This section contains table content that the editor cannot preserve. Update the section before inserting it."
@@ -12570,13 +12601,9 @@ msgid "Time"
 msgstr "Time"
 
 #: packages/admin/src/components/PublishingDateTimeEditor.tsx:252
-#: packages/admin/src/components/settings/GeneralSettings.tsx:339
+#: packages/admin/src/components/settings/GeneralSettings.tsx:434
 msgid "Timezone"
 msgstr "Timezone"
-
-#: packages/admin/src/components/settings/GeneralSettings.tsx:342
-msgid "Timezone for displaying dates (e.g., America/New_York)"
-msgstr "Timezone for displaying dates (e.g., America/New_York)"
 
 #: packages/admin/src/components/ContentList.tsx:663
 #: packages/admin/src/components/ContentList.tsx:824
