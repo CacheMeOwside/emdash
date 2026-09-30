@@ -34,7 +34,7 @@ msgstr "\"{0}\" {providerName} से हटा दिया जाएगा."
 #. placeholder {0}: item.filename
 #: packages/admin/src/components/MediaDetailPanel.tsx:1915
 msgid "\"{0}\" will be deleted from its media provider."
-msgstr "\"{0}\" अपने मीडिया प्रोवाइडर से हटा कर दिया जाएगा."
+msgstr "\"{0}\" अपने मीडिया प्रोवाइडर से हटा दिया जाएगा."
 
 #. placeholder {0}: item.filename
 #: packages/admin/src/components/MediaDetailPanel.tsx:1916
