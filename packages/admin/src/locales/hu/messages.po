@@ -5124,11 +5124,11 @@ msgstr "Nem sikerült tartalmat törölni"
 msgid "Failed to delete field"
 msgstr "Nem sikerült mezőt törölni"
 
-#: packages/admin/src/lib/api/media.ts:679
+#: packages/admin/src/lib/api/media.ts:681
 msgid "Failed to delete from provider"
 msgstr "Nem sikerült törölni a szolgáltatóból"
 
-#: packages/admin/src/lib/api/media.ts:539
+#: packages/admin/src/lib/api/media.ts:541
 msgid "Failed to delete media"
 msgstr "Nem sikerült médiát törölni"
 
@@ -5276,7 +5276,7 @@ msgstr ""
 msgid "Failed to fetch media item"
 msgstr "Nem sikerült médiaelemet lekérni"
 
-#: packages/admin/src/lib/api/media.ts:612
+#: packages/admin/src/lib/api/media.ts:614
 msgid "Failed to fetch media providers"
 msgstr "Nem sikerült médiaszolgáltatókat lekérni"
 
@@ -5297,7 +5297,7 @@ msgstr ""
 msgid "Failed to fetch plugins"
 msgstr "Nem sikerült plugineket lekérni"
 
-#: packages/admin/src/lib/api/media.ts:642
+#: packages/admin/src/lib/api/media.ts:644
 msgid "Failed to fetch provider media"
 msgstr "Nem sikerült szolgáltatói médiát lekérni"
 
@@ -5549,7 +5549,7 @@ msgstr "Nem sikerült átrendezni a mezőket"
 msgid "Failed to reorder widgets"
 msgstr "Nem sikerült átrendezni a widgeteket"
 
-#: packages/admin/src/lib/api/media.ts:527
+#: packages/admin/src/lib/api/media.ts:529
 msgid "Failed to replace media image"
 msgstr ""
 
@@ -5664,7 +5664,7 @@ msgstr "Nem sikerült a szerzői sor mezőjét frissíteni"
 msgid "Failed to update domain"
 msgstr "Domain frissítése nem sikerült"
 
-#: packages/admin/src/lib/api/media.ts:563
+#: packages/admin/src/lib/api/media.ts:565
 msgid "Failed to update media"
 msgstr "Nem sikerült a média frissítése"
 
@@ -5698,15 +5698,15 @@ msgstr "Nem sikerült frissíteni az állapotot"
 msgid "Failed to upload a package file"
 msgstr ""
 
-#: packages/admin/src/lib/api/media.ts:397
+#: packages/admin/src/lib/api/media.ts:399
 msgid "Failed to upload file"
 msgstr "Fájl feltöltése sikertelen"
 
-#: packages/admin/src/lib/api/media.ts:468
+#: packages/admin/src/lib/api/media.ts:470
 msgid "Failed to upload media"
 msgstr "Média feltöltése sikertelen"
 
-#: packages/admin/src/lib/api/media.ts:667
+#: packages/admin/src/lib/api/media.ts:669
 msgid "Failed to upload to provider"
 msgstr "Nem sikerült feltölteni a szolgáltatóhoz"
 

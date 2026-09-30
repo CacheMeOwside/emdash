@@ -5124,11 +5124,11 @@ msgstr "删除内容失败"
 msgid "Failed to delete field"
 msgstr "删除字段失败"
 
-#: packages/admin/src/lib/api/media.ts:679
+#: packages/admin/src/lib/api/media.ts:681
 msgid "Failed to delete from provider"
 msgstr "从提供商处删除失败"
 
-#: packages/admin/src/lib/api/media.ts:539
+#: packages/admin/src/lib/api/media.ts:541
 msgid "Failed to delete media"
 msgstr "删除媒体失败"
 
@@ -5276,7 +5276,7 @@ msgstr ""
 msgid "Failed to fetch media item"
 msgstr "获取媒体项失败"
 
-#: packages/admin/src/lib/api/media.ts:612
+#: packages/admin/src/lib/api/media.ts:614
 msgid "Failed to fetch media providers"
 msgstr "获取媒体提供者失败"
 
@@ -5297,7 +5297,7 @@ msgstr ""
 msgid "Failed to fetch plugins"
 msgstr "获取插件失败"
 
-#: packages/admin/src/lib/api/media.ts:642
+#: packages/admin/src/lib/api/media.ts:644
 msgid "Failed to fetch provider media"
 msgstr "获取提供者媒体失败"
 
@@ -5549,7 +5549,7 @@ msgstr "重新排序字段失败"
 msgid "Failed to reorder widgets"
 msgstr "重新排序小部件失败"
 
-#: packages/admin/src/lib/api/media.ts:527
+#: packages/admin/src/lib/api/media.ts:529
 msgid "Failed to replace media image"
 msgstr ""
 
@@ -5664,7 +5664,7 @@ msgstr "更新署名字段失败"
 msgid "Failed to update domain"
 msgstr "更新域名失败"
 
-#: packages/admin/src/lib/api/media.ts:563
+#: packages/admin/src/lib/api/media.ts:565
 msgid "Failed to update media"
 msgstr "更新媒体失败"
 
@@ -5698,15 +5698,15 @@ msgstr "更新状态失败"
 msgid "Failed to upload a package file"
 msgstr ""
 
-#: packages/admin/src/lib/api/media.ts:397
+#: packages/admin/src/lib/api/media.ts:399
 msgid "Failed to upload file"
 msgstr "上传文件失败"
 
-#: packages/admin/src/lib/api/media.ts:468
+#: packages/admin/src/lib/api/media.ts:470
 msgid "Failed to upload media"
 msgstr "上传媒体失败"
 
-#: packages/admin/src/lib/api/media.ts:667
+#: packages/admin/src/lib/api/media.ts:669
 msgid "Failed to upload to provider"
 msgstr "上传到提供者失败"
 

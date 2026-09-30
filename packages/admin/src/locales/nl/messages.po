@@ -5124,11 +5124,11 @@ msgstr "Verwijderen van content mislukt"
 msgid "Failed to delete field"
 msgstr "Verwijderen van veld mislukt"
 
-#: packages/admin/src/lib/api/media.ts:679
+#: packages/admin/src/lib/api/media.ts:681
 msgid "Failed to delete from provider"
 msgstr "Verwijderen bij provider mislukt"
 
-#: packages/admin/src/lib/api/media.ts:539
+#: packages/admin/src/lib/api/media.ts:541
 msgid "Failed to delete media"
 msgstr "Verwijderen van media mislukt"
 
@@ -5276,7 +5276,7 @@ msgstr ""
 msgid "Failed to fetch media item"
 msgstr "Ophalen van media-item mislukt"
 
-#: packages/admin/src/lib/api/media.ts:612
+#: packages/admin/src/lib/api/media.ts:614
 msgid "Failed to fetch media providers"
 msgstr "Ophalen van mediaproviders mislukt"
 
@@ -5297,7 +5297,7 @@ msgstr ""
 msgid "Failed to fetch plugins"
 msgstr "Ophalen van plugins mislukt"
 
-#: packages/admin/src/lib/api/media.ts:642
+#: packages/admin/src/lib/api/media.ts:644
 msgid "Failed to fetch provider media"
 msgstr "Ophalen van media van provider mislukt"
 
@@ -5549,7 +5549,7 @@ msgstr "Herschikken van velden mislukt"
 msgid "Failed to reorder widgets"
 msgstr "Herschikken van widgets mislukt"
 
-#: packages/admin/src/lib/api/media.ts:527
+#: packages/admin/src/lib/api/media.ts:529
 msgid "Failed to replace media image"
 msgstr ""
 
@@ -5664,7 +5664,7 @@ msgstr "Bijwerken van auteursvermeldingsveld mislukt"
 msgid "Failed to update domain"
 msgstr "Bijwerken van domein mislukt"
 
-#: packages/admin/src/lib/api/media.ts:563
+#: packages/admin/src/lib/api/media.ts:565
 msgid "Failed to update media"
 msgstr "Bijwerken van media mislukt"
 
@@ -5698,15 +5698,15 @@ msgstr "Bijwerken van status mislukt"
 msgid "Failed to upload a package file"
 msgstr ""
 
-#: packages/admin/src/lib/api/media.ts:397
+#: packages/admin/src/lib/api/media.ts:399
 msgid "Failed to upload file"
 msgstr "Uploaden van bestand mislukt"
 
-#: packages/admin/src/lib/api/media.ts:468
+#: packages/admin/src/lib/api/media.ts:470
 msgid "Failed to upload media"
 msgstr "Uploaden van media mislukt"
 
-#: packages/admin/src/lib/api/media.ts:667
+#: packages/admin/src/lib/api/media.ts:669
 msgid "Failed to upload to provider"
 msgstr "Uploaden naar provider mislukt"
 

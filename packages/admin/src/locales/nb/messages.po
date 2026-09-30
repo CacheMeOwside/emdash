@@ -5124,11 +5124,11 @@ msgstr "Kunne ikke slette innhold"
 msgid "Failed to delete field"
 msgstr "Kunne ikke slette felt"
 
-#: packages/admin/src/lib/api/media.ts:679
+#: packages/admin/src/lib/api/media.ts:681
 msgid "Failed to delete from provider"
 msgstr "Kunne ikke slette fra leverandør"
 
-#: packages/admin/src/lib/api/media.ts:539
+#: packages/admin/src/lib/api/media.ts:541
 msgid "Failed to delete media"
 msgstr "Kunne ikke slette medier"
 
@@ -5276,7 +5276,7 @@ msgstr ""
 msgid "Failed to fetch media item"
 msgstr ""
 
-#: packages/admin/src/lib/api/media.ts:612
+#: packages/admin/src/lib/api/media.ts:614
 msgid "Failed to fetch media providers"
 msgstr ""
 
@@ -5297,7 +5297,7 @@ msgstr ""
 msgid "Failed to fetch plugins"
 msgstr ""
 
-#: packages/admin/src/lib/api/media.ts:642
+#: packages/admin/src/lib/api/media.ts:644
 msgid "Failed to fetch provider media"
 msgstr ""
 
@@ -5549,7 +5549,7 @@ msgstr "Kunne ikke endre rekkefølge på felt"
 msgid "Failed to reorder widgets"
 msgstr "Kunne ikke endre rekkefølge på moduler"
 
-#: packages/admin/src/lib/api/media.ts:527
+#: packages/admin/src/lib/api/media.ts:529
 msgid "Failed to replace media image"
 msgstr ""
 
@@ -5664,7 +5664,7 @@ msgstr "Kunne ikke oppdatere byline-felt"
 msgid "Failed to update domain"
 msgstr "Kunne ikke oppdatere domene"
 
-#: packages/admin/src/lib/api/media.ts:563
+#: packages/admin/src/lib/api/media.ts:565
 msgid "Failed to update media"
 msgstr ""
 
@@ -5698,15 +5698,15 @@ msgstr "Kunne ikke oppdatere status"
 msgid "Failed to upload a package file"
 msgstr ""
 
-#: packages/admin/src/lib/api/media.ts:397
+#: packages/admin/src/lib/api/media.ts:399
 msgid "Failed to upload file"
 msgstr "Kunne ikke laste opp fil"
 
-#: packages/admin/src/lib/api/media.ts:468
+#: packages/admin/src/lib/api/media.ts:470
 msgid "Failed to upload media"
 msgstr ""
 
-#: packages/admin/src/lib/api/media.ts:667
+#: packages/admin/src/lib/api/media.ts:669
 msgid "Failed to upload to provider"
 msgstr ""
 

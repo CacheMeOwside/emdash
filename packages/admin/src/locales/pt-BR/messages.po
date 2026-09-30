@@ -5124,11 +5124,11 @@ msgstr "Falha ao excluir conteúdo"
 msgid "Failed to delete field"
 msgstr "Falha ao excluir campo"
 
-#: packages/admin/src/lib/api/media.ts:679
+#: packages/admin/src/lib/api/media.ts:681
 msgid "Failed to delete from provider"
 msgstr "Falha ao excluir do provedor"
 
-#: packages/admin/src/lib/api/media.ts:539
+#: packages/admin/src/lib/api/media.ts:541
 msgid "Failed to delete media"
 msgstr "Falha ao excluir mídia"
 
@@ -5276,7 +5276,7 @@ msgstr "Falha ao carregar pastas de mídia"
 msgid "Failed to fetch media item"
 msgstr "Falha ao carregar item de mídia"
 
-#: packages/admin/src/lib/api/media.ts:612
+#: packages/admin/src/lib/api/media.ts:614
 msgid "Failed to fetch media providers"
 msgstr "Falha ao carregar provedores de mídia"
 
@@ -5297,7 +5297,7 @@ msgstr "Falha ao carregar configurações do plugin"
 msgid "Failed to fetch plugins"
 msgstr "Falha ao carregar plugins"
 
-#: packages/admin/src/lib/api/media.ts:642
+#: packages/admin/src/lib/api/media.ts:644
 msgid "Failed to fetch provider media"
 msgstr "Falha ao carregar mídia do provedor"
 
@@ -5549,7 +5549,7 @@ msgstr "Falha ao reordenar campos"
 msgid "Failed to reorder widgets"
 msgstr "Falha ao reordenar widgets"
 
-#: packages/admin/src/lib/api/media.ts:527
+#: packages/admin/src/lib/api/media.ts:529
 msgid "Failed to replace media image"
 msgstr "Falha ao substituir imagem de mídia"
 
@@ -5664,7 +5664,7 @@ msgstr "Falha ao atualizar campo de crédito"
 msgid "Failed to update domain"
 msgstr "Falha ao atualizar domínio"
 
-#: packages/admin/src/lib/api/media.ts:563
+#: packages/admin/src/lib/api/media.ts:565
 msgid "Failed to update media"
 msgstr "Falha ao atualizar mídia"
 
@@ -5698,15 +5698,15 @@ msgstr "Falha ao atualizar status"
 msgid "Failed to upload a package file"
 msgstr ""
 
-#: packages/admin/src/lib/api/media.ts:397
+#: packages/admin/src/lib/api/media.ts:399
 msgid "Failed to upload file"
 msgstr "Falha ao enviar arquivo"
 
-#: packages/admin/src/lib/api/media.ts:468
+#: packages/admin/src/lib/api/media.ts:470
 msgid "Failed to upload media"
 msgstr "Falha ao enviar mídia"
 
-#: packages/admin/src/lib/api/media.ts:667
+#: packages/admin/src/lib/api/media.ts:669
 msgid "Failed to upload to provider"
 msgstr "Falha ao enviar para o provedor"
 

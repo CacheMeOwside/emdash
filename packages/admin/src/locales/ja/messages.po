@@ -5124,11 +5124,11 @@ msgstr "コンテンツの削除に失敗しました"
 msgid "Failed to delete field"
 msgstr "項目を削除できませんでした"
 
-#: packages/admin/src/lib/api/media.ts:679
+#: packages/admin/src/lib/api/media.ts:681
 msgid "Failed to delete from provider"
 msgstr "連携先からの削除に失敗しました"
 
-#: packages/admin/src/lib/api/media.ts:539
+#: packages/admin/src/lib/api/media.ts:541
 msgid "Failed to delete media"
 msgstr "メディアの削除に失敗しました"
 
@@ -5276,7 +5276,7 @@ msgstr "メディアフォルダーの一覧を取得できませんでした"
 msgid "Failed to fetch media item"
 msgstr "メディア項目の取得に失敗しました"
 
-#: packages/admin/src/lib/api/media.ts:612
+#: packages/admin/src/lib/api/media.ts:614
 msgid "Failed to fetch media providers"
 msgstr "メディア連携サービスの取得に失敗しました"
 
@@ -5297,7 +5297,7 @@ msgstr "プラグイン設定の取得に失敗しました"
 msgid "Failed to fetch plugins"
 msgstr "プラグイン一覧の取得に失敗しました"
 
-#: packages/admin/src/lib/api/media.ts:642
+#: packages/admin/src/lib/api/media.ts:644
 msgid "Failed to fetch provider media"
 msgstr "連携先のメディア取得に失敗しました"
 
@@ -5549,7 +5549,7 @@ msgstr "項目を並べ替えられませんでした"
 msgid "Failed to reorder widgets"
 msgstr "ウィジェットの並べ替えに失敗しました"
 
-#: packages/admin/src/lib/api/media.ts:527
+#: packages/admin/src/lib/api/media.ts:529
 msgid "Failed to replace media image"
 msgstr ""
 
@@ -5664,7 +5664,7 @@ msgstr "執筆者情報の項目の更新に失敗しました"
 msgid "Failed to update domain"
 msgstr "ドメインの設定を更新できませんでした"
 
-#: packages/admin/src/lib/api/media.ts:563
+#: packages/admin/src/lib/api/media.ts:565
 msgid "Failed to update media"
 msgstr "メディアの更新に失敗しました"
 
@@ -5698,15 +5698,15 @@ msgstr "ステータスの更新に失敗しました"
 msgid "Failed to upload a package file"
 msgstr ""
 
-#: packages/admin/src/lib/api/media.ts:397
+#: packages/admin/src/lib/api/media.ts:399
 msgid "Failed to upload file"
 msgstr "ファイルのアップロードに失敗しました"
 
-#: packages/admin/src/lib/api/media.ts:468
+#: packages/admin/src/lib/api/media.ts:470
 msgid "Failed to upload media"
 msgstr "メディアのアップロードに失敗しました"
 
-#: packages/admin/src/lib/api/media.ts:667
+#: packages/admin/src/lib/api/media.ts:669
 msgid "Failed to upload to provider"
 msgstr "連携先へのアップロードに失敗しました"
 

@@ -5124,11 +5124,11 @@ msgstr "सामग्री हटाने में विफल"
 msgid "Failed to delete field"
 msgstr "फ़ील्ड हटाने में विफल"
 
-#: packages/admin/src/lib/api/media.ts:679
+#: packages/admin/src/lib/api/media.ts:681
 msgid "Failed to delete from provider"
 msgstr "प्रदाता से हटाने में विफल"
 
-#: packages/admin/src/lib/api/media.ts:539
+#: packages/admin/src/lib/api/media.ts:541
 msgid "Failed to delete media"
 msgstr "मीडिया हटाने में विफल"
 
@@ -5276,7 +5276,7 @@ msgstr ""
 msgid "Failed to fetch media item"
 msgstr "मीडिया आइटम लाने में विफल"
 
-#: packages/admin/src/lib/api/media.ts:612
+#: packages/admin/src/lib/api/media.ts:614
 msgid "Failed to fetch media providers"
 msgstr "मीडिया प्रदाता लाने में विफल"
 
@@ -5297,7 +5297,7 @@ msgstr "प्लगइन सेटिंग लाने में विफ�
 msgid "Failed to fetch plugins"
 msgstr "प्लगइन्स लाने में विफल"
 
-#: packages/admin/src/lib/api/media.ts:642
+#: packages/admin/src/lib/api/media.ts:644
 msgid "Failed to fetch provider media"
 msgstr "प्रदाता मीडिया लाने में विफल"
 
@@ -5549,7 +5549,7 @@ msgstr "फ़ील्ड पुन: व्यवस्थित करने �
 msgid "Failed to reorder widgets"
 msgstr "विजेट्स को पुन: व्यवस्थित करने में विफल"
 
-#: packages/admin/src/lib/api/media.ts:527
+#: packages/admin/src/lib/api/media.ts:529
 msgid "Failed to replace media image"
 msgstr ""
 
@@ -5664,7 +5664,7 @@ msgstr "बायलाइन फ़ील्ड अपडेट करने �
 msgid "Failed to update domain"
 msgstr "डोमेन अद्यतन करने में विफल"
 
-#: packages/admin/src/lib/api/media.ts:563
+#: packages/admin/src/lib/api/media.ts:565
 msgid "Failed to update media"
 msgstr "मीडिया अपडेट करने में विफल"
 
@@ -5698,15 +5698,15 @@ msgstr "स्थिति अपडेट करने में विफल"
 msgid "Failed to upload a package file"
 msgstr ""
 
-#: packages/admin/src/lib/api/media.ts:397
+#: packages/admin/src/lib/api/media.ts:399
 msgid "Failed to upload file"
 msgstr "फ़ाइल अपलोड करने में विफल"
 
-#: packages/admin/src/lib/api/media.ts:468
+#: packages/admin/src/lib/api/media.ts:470
 msgid "Failed to upload media"
 msgstr "मीडिया अपलोड करने में विफल"
 
-#: packages/admin/src/lib/api/media.ts:667
+#: packages/admin/src/lib/api/media.ts:669
 msgid "Failed to upload to provider"
 msgstr "प्रदाता पर अपलोड करने में विफल"
 

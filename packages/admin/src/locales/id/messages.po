@@ -5124,11 +5124,11 @@ msgstr "Gagal menghapus konten"
 msgid "Failed to delete field"
 msgstr "Gagal menghapus bidang"
 
-#: packages/admin/src/lib/api/media.ts:679
+#: packages/admin/src/lib/api/media.ts:681
 msgid "Failed to delete from provider"
 msgstr "Gagal menghapus dari penyedia"
 
-#: packages/admin/src/lib/api/media.ts:539
+#: packages/admin/src/lib/api/media.ts:541
 msgid "Failed to delete media"
 msgstr "Gagal menghapus media"
 
@@ -5276,7 +5276,7 @@ msgstr ""
 msgid "Failed to fetch media item"
 msgstr "Gagal mengambil item media"
 
-#: packages/admin/src/lib/api/media.ts:612
+#: packages/admin/src/lib/api/media.ts:614
 msgid "Failed to fetch media providers"
 msgstr "Gagal mengambil penyedia media"
 
@@ -5297,7 +5297,7 @@ msgstr "Gagal mengambil pengaturan plugin"
 msgid "Failed to fetch plugins"
 msgstr "Gagal mengambil plugin"
 
-#: packages/admin/src/lib/api/media.ts:642
+#: packages/admin/src/lib/api/media.ts:644
 msgid "Failed to fetch provider media"
 msgstr "Gagal mengambil media penyedia"
 
@@ -5549,7 +5549,7 @@ msgstr "Gagal mengurutkan bidang"
 msgid "Failed to reorder widgets"
 msgstr "Gagal mengurutkan widget"
 
-#: packages/admin/src/lib/api/media.ts:527
+#: packages/admin/src/lib/api/media.ts:529
 msgid "Failed to replace media image"
 msgstr ""
 
@@ -5664,7 +5664,7 @@ msgstr "Gagal memperbarui bidang byline"
 msgid "Failed to update domain"
 msgstr "Gagal memperbarui domain"
 
-#: packages/admin/src/lib/api/media.ts:563
+#: packages/admin/src/lib/api/media.ts:565
 msgid "Failed to update media"
 msgstr "Gagal memperbarui media"
 
@@ -5698,15 +5698,15 @@ msgstr "Gagal memperbarui status"
 msgid "Failed to upload a package file"
 msgstr ""
 
-#: packages/admin/src/lib/api/media.ts:397
+#: packages/admin/src/lib/api/media.ts:399
 msgid "Failed to upload file"
 msgstr "Gagal mengunggah file"
 
-#: packages/admin/src/lib/api/media.ts:468
+#: packages/admin/src/lib/api/media.ts:470
 msgid "Failed to upload media"
 msgstr "Gagal mengunggah media"
 
-#: packages/admin/src/lib/api/media.ts:667
+#: packages/admin/src/lib/api/media.ts:669
 msgid "Failed to upload to provider"
 msgstr "Gagal mengunggah ke penyedia"
 
