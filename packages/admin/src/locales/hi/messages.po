@@ -632,7 +632,7 @@ msgstr "{minimum, plural, one {{name} में कम से कम # आइट
 
 #: packages/admin/src/lib/content-validation-errors.ts:76
 msgid "{name} does not match the required format."
-msgstr "{name} आवश्यक फॉर्मेट से नहीं मिलता"
+msgstr "{name} आवश्यक फॉर्मेट से नहीं मिलता।"
 
 #: packages/admin/src/lib/content-validation-errors.ts:73
 msgid "{name} has a value that is not one of its options."
