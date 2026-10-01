@@ -110,7 +110,7 @@ msgstr "{0, plural, other {# item konten diimpor}}"
 #. placeholder {0}: states.length
 #: packages/admin/src/components/calendar/CalendarMonth.tsx:455
 msgid "{0, plural, one {# entry} other {# entries}}"
-msgstr ""
+msgstr "{0, plural, other {# entri}}"
 
 #. placeholder {0}: uploadQueue.jobs.filter( (job) => job.status === "queued" || job.status === "uploading", ).length
 #: packages/admin/src/components/MediaPickerModal.tsx:1607
@@ -509,11 +509,11 @@ msgstr "{current} dari {total}"
 
 #: packages/admin/src/components/calendar/CalendarMonth.tsx:468
 msgid "{dayLabel}, {entries}"
-msgstr ""
+msgstr "{dayLabel}, {entries}"
 
 #: packages/admin/src/components/calendar/CalendarAgenda.tsx:120
 msgid "{earlierCount, plural, one {Show # earlier entry} other {Show # earlier entries}}"
-msgstr ""
+msgstr "{earlierCount, plural, other {Tampilkan # entri sebelumnya}}"
 
 #: packages/admin/src/components/MediaUploadDialog.tsx:198
 msgid "{failedCount, plural, one {# upload failed} other {# uploads failed}}"
@@ -531,11 +531,11 @@ msgstr "{filteredCount, plural, other {#{1} item}}"
 
 #: packages/admin/src/components/calendar/CalendarMonth.tsx:387
 msgid "{hidden, plural, one {# more entry on {date}} other {# more entries on {date}}}"
-msgstr ""
+msgstr "{hidden, plural, other {# entri lainnya pada {date}}}"
 
 #: packages/admin/src/components/calendar/CalendarMonth.tsx:394
 msgid "{hidden, plural, one {+# more} other {+# more}}"
-msgstr ""
+msgstr "{hidden, plural, other {+# lainnya}}"
 
 #: packages/admin/src/components/MediaImportSummary.tsx:9
 msgid "{importedFiles, plural, one {<count>#</count> file imported} other {<count>#</count> files imported}}"
@@ -570,7 +570,7 @@ msgstr "Opsi {label}"
 
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:361
 msgid "{lateness} late"
-msgstr ""
+msgstr "Terlambat {lateness}"
 
 #: packages/admin/src/components/ContentList.tsx:1263
 msgid "{matchCount, plural, one {# item matching \"{searchQuery}\"} other {# items matching \"{searchQuery}\"}}"
@@ -733,15 +733,15 @@ msgstr "{selectedCount, plural, other {Pindahkan # item ke tempat sampah? Anda d
 
 #: packages/admin/src/components/calendar/CalendarToolbar.tsx:53
 msgid "{siteZone} · Your time: {viewerZone}"
-msgstr ""
+msgstr "{siteZone} · Waktu Anda: {viewerZone}"
 
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:277
 msgid "{state} · {when}"
-msgstr ""
+msgstr "{state} · {when}"
 
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:339
 msgid "{state}, {time}:"
-msgstr ""
+msgstr "{state}, {time}:"
 
 #: packages/admin/src/lib/content-validation-errors.ts:57
 msgid "{subLabel} ({label}, item {position})"
@@ -749,15 +749,15 @@ msgstr "{subLabel} ({label}, item {position})"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:194
 msgid "{title} is a draft again."
-msgstr ""
+msgstr "{title} kembali menjadi draf."
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:180
 msgid "{title} is now live."
-msgstr ""
+msgstr "{title} sekarang ditayangkan."
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:206
 msgid "{title} now goes live {when}."
-msgstr ""
+msgstr "{title} akan ditayangkan {when}."
 
 #: packages/admin/src/components/ContentList.tsx:1269
 msgid "{total, plural, one {# item} other {# items}}"
@@ -1389,7 +1389,7 @@ msgstr "Setelah Anda secara eksplisit memanggil pengaya ini, itu dapat mengirimk
 
 #: packages/admin/src/routes/calendar.tsx:307
 msgid "Agenda"
-msgstr ""
+msgstr "Agenda"
 
 #: packages/admin/src/components/PluginManager.tsx:599
 msgid "Agent access"
@@ -2497,7 +2497,7 @@ msgstr "Periksa catatan peladen, lalu gunakan API pemulihan penggunaan media unt
 
 #: packages/admin/src/routes/calendar.tsx:268
 msgid "Check your connection and try again."
-msgstr ""
+msgstr "Periksa sambungan Anda dan coba lagi."
 
 #: packages/admin/src/components/LoginPage.tsx:102
 #: packages/admin/src/components/SignupPage.tsx:148
@@ -2580,7 +2580,7 @@ msgstr "Pilih gambar {0} yang tidak kosong."
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:443
 msgid "Choose a recognized timezone for reliable date display."
-msgstr ""
+msgstr "Pilih zona waktu yang dikenali untuk tampilan tanggal yang andal."
 
 #: packages/admin/src/components/BulkTagDialog.tsx:184
 msgid "Choose a term and enter between 1 and 50 posts."
@@ -3239,11 +3239,11 @@ msgstr "Tidak dapat memuat media."
 
 #: packages/admin/src/routes/calendar.tsx:340
 msgid "Could not load the calendar"
-msgstr ""
+msgstr "Tidak dapat memuat kalender"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:349
 msgid "Could not load this entry's details."
-msgstr ""
+msgstr "Tidak dapat memuat rincian entri ini."
 
 #: packages/admin/src/components/MediaPickerModal.tsx:1202
 msgid "Could not load this folder."
@@ -3251,11 +3251,11 @@ msgstr "Tidak dapat memuat map ini."
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:183
 msgid "Could not publish"
-msgstr ""
+msgstr "Tidak dapat memublikasikan"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:198
 msgid "Could not remove the schedule"
-msgstr ""
+msgstr "Tidak dapat menghapus jadwal"
 
 #: packages/admin/src/components/BulkTagDialog.tsx:194
 msgid "Could not review posts"
@@ -3644,7 +3644,7 @@ msgstr "CSS"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:56
 msgid "CSS code"
-msgstr ""
+msgstr "Kode CSS"
 
 #: packages/admin/src/components/TranslationsPanel.tsx:84
 msgid "current"
@@ -4845,7 +4845,7 @@ msgstr "Masukkan nama."
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:447
 msgid "Enter a recognized timezone to save"
-msgstr ""
+msgstr "Masukkan zona waktu yang dikenali untuk disimpan"
 
 #: packages/admin/src/components/MenuEditor.tsx:425
 #: packages/admin/src/components/MenuEditor.tsx:607
@@ -4971,7 +4971,7 @@ msgstr "Setiap relasi yang terkait dengan tipe konten ini juga akan hilang:"
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:428
 msgid "Example: {pattern} → {preview}"
-msgstr ""
+msgstr "Contoh: {pattern} → {preview}"
 
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:294
 msgid "example.com"
@@ -5553,7 +5553,7 @@ msgstr "Gagal memuat pengaturan"
 
 #: packages/admin/src/lib/api/calendar.ts:49
 msgid "Failed to load the calendar"
-msgstr ""
+msgstr "Gagal memuat kalender"
 
 #: packages/admin/src/components/ThemeMarketplaceDetail.tsx:89
 msgid "Failed to load theme"
@@ -5906,7 +5906,7 @@ msgstr "Berkas langsung diunggah setelah Anda menambahkannya."
 
 #: packages/admin/src/components/calendar/CalendarFilters.tsx:131
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: packages/admin/src/components/ContentList.tsx:981
 msgid "Filter by author"
@@ -5953,7 +5953,7 @@ msgstr "Filter tipe byline"
 
 #: packages/admin/src/components/calendar/CalendarFilters.tsx:129
 msgid "Filter: {activeCount} selected"
-msgstr ""
+msgstr "Filter: {activeCount} terpilih"
 
 #: packages/admin/src/components/settings/MediaUsageSettings.tsx:592
 msgid "Finish any current edits."
@@ -6140,7 +6140,7 @@ msgstr "Pergi"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:393
 msgid "Go live {countdown}"
-msgstr ""
+msgstr "Tayangkan {countdown}"
 
 #: packages/admin/src/components/WordPressImport.tsx:2438
 #: packages/admin/src/router.tsx:3168
@@ -6149,11 +6149,11 @@ msgstr "Pergi ke Dasbor"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:308
 msgid "Goes live"
-msgstr ""
+msgstr "Sudah tayang"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:375
 msgid "Goes live {countdown}"
-msgstr ""
+msgstr "Sudah tayang {countdown}"
 
 #: packages/admin/src/components/settings/SeoSettings.tsx:238
 #: packages/admin/src/components/settings/SeoSettings.tsx:244
@@ -6277,7 +6277,7 @@ msgstr "hero, spanduk, cta"
 
 #: packages/admin/src/components/calendar/CalendarAgenda.tsx:119
 msgid "Hide earlier entries"
-msgstr ""
+msgstr "Sembunyikan entri sebelumnya"
 
 #: packages/admin/src/components/ContentTypeEditor.tsx:582
 msgid "Hide from navigation"
@@ -6365,19 +6365,19 @@ msgstr "HTML"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:362
 msgid "HTML block options"
-msgstr ""
+msgstr "Opsi blok HTML"
 
 #: packages/admin/src/components/editor/HtmlBlockPreview.tsx:206
 msgid "HTML block preview"
-msgstr ""
+msgstr "Pratinjau blok HTML"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:49
 msgid "HTML code"
-msgstr ""
+msgstr "Kode HTML"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:387
 msgid "HTML only, cleaned, using your site's styles."
-msgstr ""
+msgstr "Hanya HTML, dibersihkan, menggunakan gaya situs Anda."
 
 #: packages/admin/src/components/MenuEditor.tsx:426
 msgid "https://example.com or /about"
@@ -6452,7 +6452,7 @@ msgstr "Tindakan gambar"
 
 #: packages/admin/src/components/PortableTextEditor.tsx:4654
 msgid "Image controls"
-msgstr ""
+msgstr "Kontrol gambar"
 
 #: packages/admin/src/components/FieldEditor.tsx:438
 msgid "Image from media library"
@@ -6691,11 +6691,11 @@ msgstr "Mengindeks konten yang ada"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:385
 msgid "Inline"
-msgstr ""
+msgstr "Inline"
 
 #: packages/admin/src/components/editor/HtmlBlockPreview.tsx:127
 msgid "Inline blocks use your site's styles. Your site removes scripts, style tags and style attributes, and empties iframes other than YouTube and Vimeo."
-msgstr ""
+msgstr "Blok inline menggunakan gaya situs Anda. Situs Anda menghapus skrip, tag gaya, dan atribut gaya, serta mengosongkan iframe selain YouTube dan Vimeo."
 
 #: packages/admin/src/components/PortableTextEditor.tsx:5212
 msgid "Inline Code"
@@ -6894,7 +6894,7 @@ msgstr "Panggil hanya alat MCP yang diaktifkan pengaya ini"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:377
 msgid "Isolated frame"
-msgstr ""
+msgstr "Bingkai terisolasi"
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:507
 msgid "It is stored by the authenticator or credential manager you selected in the secure system prompt."
@@ -6947,7 +6947,7 @@ msgstr "JavaScript"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:63
 msgid "JavaScript code"
-msgstr ""
+msgstr "Kode JavaScript"
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:235
 msgid "Job title"
@@ -6959,7 +6959,7 @@ msgstr "jabatan"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:62
 msgid "JS"
-msgstr ""
+msgstr "JS"
 
 #: packages/admin/src/components/editor/codeBlockLanguages.ts:41
 #: packages/admin/src/components/FieldEditor.tsx:455
@@ -7063,7 +7063,7 @@ msgstr "Judul bagian besar"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:343
 msgid "Last edited"
-msgstr ""
+msgstr "Terakhir disunting"
 
 #: packages/admin/src/components/PluginManager.tsx:664
 msgid "Last enabled:"
@@ -7102,7 +7102,7 @@ msgstr "Terakhir digunakan {0}"
 
 #: packages/admin/src/components/calendar/CalendarAgenda.tsx:147
 msgid "Later entries weren't loaded. The range has more entries than the calendar can show."
-msgstr ""
+msgstr "Entri selanjutnya tidak dimuat. Rentang ini memiliki lebih banyak entri daripada yang dapat ditampilkan kalender."
 
 #: packages/admin/src/components/PluginManager.tsx:81
 msgid "Learn how to install plugins in the <0>documentation<1/></0>."
@@ -7347,7 +7347,7 @@ msgstr "Memuat pengaya..."
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:425
 msgid "Loading preview…"
-msgstr ""
+msgstr "Memuat pratinjau"
 
 #: packages/admin/src/components/Redirects.tsx:473
 msgid "Loading redirects..."
@@ -7876,7 +7876,7 @@ msgstr "Ubah skema koleksi"
 
 #: packages/admin/src/routes/calendar.tsx:293
 msgid "Month"
-msgstr ""
+msgstr "Bulan"
 
 #: packages/admin/src/components/Widgets.tsx:163
 msgid "Monthly"
@@ -8248,7 +8248,7 @@ msgstr "Selanjutnya"
 
 #: packages/admin/src/components/calendar/CalendarToolbar.tsx:77
 msgid "Next month"
-msgstr ""
+msgstr "Bulan selanjutnya"
 
 #: packages/admin/src/components/comments/CommentInbox.tsx:396
 #: packages/admin/src/components/ContentList.tsx:799
@@ -8387,7 +8387,7 @@ msgstr "Belum ada kolom kustom"
 
 #: packages/admin/src/components/PortableTextEditor.tsx:4744
 msgid "No description yet"
-msgstr ""
+msgstr "Belum ada deskripsi"
 
 #: packages/admin/src/components/MarketplacePluginDetail.tsx:285
 msgid "No detailed description available."
@@ -8416,7 +8416,7 @@ msgstr "Tidak ada pengguna EmDash yang ditemukan"
 #: packages/admin/src/components/calendar/CalendarAgenda.tsx:66
 #: packages/admin/src/components/calendar/CalendarMonth.tsx:100
 msgid "No entries match these filters"
-msgstr ""
+msgstr "Tidak ada entri yang cocok filter ini"
 
 #: packages/admin/src/components/BulkTagDialog.tsx:465
 msgid "No exact match on this site"
@@ -8479,7 +8479,7 @@ msgstr "Tidak ada pengguna tertaut"
 #: packages/admin/src/components/calendar/CalendarAgenda.tsx:63
 #: packages/admin/src/components/calendar/CalendarMonth.tsx:100
 msgid "No loaded entries match these filters"
-msgstr ""
+msgstr "Tidak ada entri yang dimuat cocok filter ini"
 
 #: packages/admin/src/components/editor/CodeBlockNode.tsx:314
 msgid "No matches"
@@ -8520,7 +8520,7 @@ msgstr "Tidak ada tag yang cocok"
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:460
 msgid "No matching timezones"
-msgstr ""
+msgstr "Tidak ada zona waktu yang cocok"
 
 #: packages/admin/src/components/FieldEditor.tsx:880
 #: packages/admin/src/components/FieldEditor.tsx:910
@@ -8698,7 +8698,7 @@ msgstr "Tidak kompatibel dengan lingkungan ini"
 
 #: packages/admin/src/components/calendar/CalendarMonth.tsx:277
 msgid "Not loaded"
-msgstr ""
+msgstr "Tidak dimuat"
 
 #: packages/admin/src/components/BulkTagDialog.tsx:71
 msgid "Not matched"
@@ -8711,11 +8711,11 @@ msgstr "Belum diatur"
 
 #: packages/admin/src/components/calendar/CalendarAgenda.tsx:143
 msgid "Nothing else is scheduled this month."
-msgstr ""
+msgstr "Tidak ada jadwal lain bulan ini."
 
 #: packages/admin/src/components/calendar/CalendarMonth.tsx:599
 msgid "Nothing on this day."
-msgstr ""
+msgstr "Tidak ada di hari ini."
 
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:520
 msgid "Nothing on this site changed."
@@ -8723,16 +8723,16 @@ msgstr "Tidak ada di situs ini berubah."
 
 #: packages/admin/src/components/calendar/CalendarAgenda.tsx:67
 msgid "Nothing published or scheduled in {monthTitle}"
-msgstr ""
+msgstr "Tidak ada yang dipublikasikan atau dijadwalkan pada {monthTitle}"
 
 #: packages/admin/src/components/editor/HtmlBlockPreview.tsx:109
 msgid "Nothing to preview yet."
-msgstr ""
+msgstr "Belum ada yang dipratinjau."
 
 #: packages/admin/src/components/calendar/CalendarAgenda.tsx:104
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:414
 msgid "Now · {time}"
-msgstr ""
+msgstr "Sekarang · {time}"
 
 #: packages/admin/src/components/FieldEditor.tsx:395
 #: packages/admin/src/components/FieldEditor.tsx:1234
@@ -8768,7 +8768,7 @@ msgstr "Gambar OG"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:370
 msgid "On the site"
-msgstr ""
+msgstr "Pada situs ini"
 
 #: packages/admin/src/components/SetupWizard.tsx:179
 msgid "Once setup is done, upload a .emdash package exported from another EmDash site."
@@ -8831,7 +8831,7 @@ msgstr "visualEditing.openInAdmin"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:439
 msgid "Open in editor"
-msgstr ""
+msgstr "Buka di penyunting"
 
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:554
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:575
@@ -8969,11 +8969,11 @@ msgstr "Ukuran luaran"
 
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:46
 msgid "Overdue"
-msgstr ""
+msgstr "Terlambat"
 
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:155
 msgid "Overdue · {lateness}"
-msgstr ""
+msgstr "Terlambat · {lateness}"
 
 #: packages/admin/src/components/SeoPanel.tsx:174
 msgid "Overrides the page title in search engine results"
@@ -9431,7 +9431,7 @@ msgstr "Mempersiapkan..."
 
 #: packages/admin/src/components/editor/CodeEditor.tsx:159
 msgid "Press Escape to leave the code editor."
-msgstr ""
+msgstr "Tekan Escape untuk meninggalkan penyunting kode."
 
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:179
 msgid "Press Space to pick up an image. Use the Arrow keys to move it, then press Space to drop it."
@@ -9448,7 +9448,7 @@ msgstr "Pratinjau"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:448
 msgid "Preview changes"
-msgstr ""
+msgstr "Pratinjau perubahan"
 
 #: packages/admin/src/components/ContentTypeEditor.tsx:103
 msgid "Preview content before publishing"
@@ -9465,7 +9465,7 @@ msgstr "Pratinjau dari {0}"
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:427
 msgid "Preview unavailable for this format"
-msgstr ""
+msgstr "Pratinjau tidak tersedia untuk format ini"
 
 #: packages/admin/src/components/ThemeMarketplaceDetail.tsx:308
 msgid "Previous"
@@ -9473,7 +9473,7 @@ msgstr "Sebelumnya"
 
 #: packages/admin/src/components/calendar/CalendarToolbar.tsx:64
 msgid "Previous month"
-msgstr ""
+msgstr "Bulan sebelumnya"
 
 #: packages/admin/src/components/comments/CommentInbox.tsx:377
 #: packages/admin/src/components/ContentList.tsx:787
@@ -9596,7 +9596,7 @@ msgstr "Dipublikasikan {0}"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:387
 msgid "Published {liveSince}"
-msgstr ""
+msgstr "Dipublikasikan {liveSince}"
 
 #: packages/admin/src/router.tsx:609
 msgid "Published {total} items"
@@ -9604,7 +9604,7 @@ msgstr "{total} item dipublikasikan"
 
 #: packages/admin/src/routes/calendar.tsx:277
 msgid "Published and scheduled entries across collections, in the site's time zone."
-msgstr ""
+msgstr "Entri yang dipublikasikan dan dijadwalkan di semua koleksi, dalam zona waktu situs."
 
 #: packages/admin/src/components/ContentTypeEditor.tsx:156
 msgid "Published At"
@@ -9632,7 +9632,7 @@ msgstr "Kebijakan rilis penerbit"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:355
 msgid "Publishing"
-msgstr ""
+msgstr "Memublikasikan"
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:907
 msgid "Publishing summary"
@@ -9934,7 +9934,7 @@ msgstr "Muat ulang setelah memperbarui EmDash sebelum mencoba lagi."
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:141
 msgid "Reload page"
-msgstr ""
+msgstr "Muat ulang halaman"
 
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:489
 msgid "Reloading the plan…"
@@ -10221,11 +10221,11 @@ msgstr "Memerlukan EmDash {0}"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:417
 msgid "Reschedule"
-msgstr ""
+msgstr "Jadwalkan ulang"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:206
 msgid "Rescheduled"
-msgstr ""
+msgstr "Dijadwalkan ulang"
 
 #: packages/admin/src/components/SignupPage.tsx:171
 msgid "Resend email"
@@ -10570,11 +10570,11 @@ msgstr "Ruby"
 
 #: packages/admin/src/components/editor/HtmlBlockPreview.tsx:119
 msgid "Run preview"
-msgstr ""
+msgstr "Jalankan pratinjau"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:379
 msgid "Runs HTML, CSS and JavaScript in a sandbox."
-msgstr ""
+msgstr "Menjalankan HTML, CSS dan JavaScript di dalam sandbox."
 
 #: packages/admin/src/components/editor/codeBlockLanguages.ts:50
 msgid "Rust"
@@ -10729,7 +10729,7 @@ msgstr "Publikasi jadwal"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:190
 msgid "Schedule removed"
-msgstr ""
+msgstr "Jadwal dihapus"
 
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:44
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:374
@@ -10741,11 +10741,11 @@ msgstr "Dijadwalkan"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:392
 msgid "Scheduled changes"
-msgstr ""
+msgstr "Perubahan yang dijadwalkan"
 
 #: packages/admin/src/components/calendar/CalendarAgenda.tsx:74
 msgid "Scheduled entries appear here with their publish time."
-msgstr ""
+msgstr "Entri terjadwal muncul di sini dengan waktu publikasinya."
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:141
 msgid "Scheduled for {formattedSchedule}"
@@ -10915,7 +10915,7 @@ msgstr "Cari bahasa…"
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:440
 msgid "Search for an IANA timezone (e.g., Europe/London)"
-msgstr ""
+msgstr "Cari untuk zona waktu IANA (cth. Asia/Jakarta)"
 
 #: packages/admin/src/components/Widgets.tsx:152
 msgid "Search form"
@@ -10976,7 +10976,7 @@ msgstr "Cari tema..."
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:451
 msgid "Search timezones…"
-msgstr ""
+msgstr "Cari zona waktu…"
 
 #: packages/admin/src/components/BylineFilter.tsx:169
 msgid "Search to narrow the list"
@@ -11859,7 +11859,7 @@ msgstr "Memulai…"
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:294
 #: packages/admin/src/components/calendar/CalendarFilters.tsx:100
 msgid "State"
-msgstr ""
+msgstr "Status"
 
 #: packages/admin/src/components/ContentList.tsx:678
 #: packages/admin/src/components/ContentTypeEditor.tsx:138
@@ -12131,7 +12131,7 @@ msgstr "kolom {0} di {1}, yang memilih entri yang ditautkannya"
 
 #: packages/admin/src/components/editor/HtmlBlockPreview.tsx:214
 msgid "The admin's security policy blocked some resources this block loads, such as external scripts, fonts or frames. Your site may still load them."
-msgstr ""
+msgstr "Kebijakan keamanan admin memblokir beberapa sumber daya yang dimuat blok ini, seperti skrip eksternal, font atau bingkai. Situs Anda mungkin masih memuat mereka."
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:200
 msgid "the Android passkey prompt"
@@ -12159,15 +12159,15 @@ msgstr "Bukti build cocok rilis ini dan paketnya."
 
 #: packages/admin/src/routes/calendar.tsx:355
 msgid "The calendar shows the first {maxEntries}, which end on {cutOffDay}."
-msgstr ""
+msgstr "Kalender menampilkan {maxEntries} pertama, yang berakhir pada {cutOffDay}."
 
 #: packages/admin/src/routes/calendar.tsx:356
 msgid "The calendar shows the first {maxEntries}."
-msgstr ""
+msgstr "Kalender menampilkan {maxEntries} pertama."
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:139
 msgid "The code editor couldn't load. Save your work, then reload the page."
-msgstr ""
+msgstr "Penyunting kode tidak dapat dimuat. Simpan pekerjaan Anda, lalu muat ulang halaman."
 
 #: packages/admin/src/components/RelationForm.tsx:338
 msgid "The content types and slug cannot be changed after a relation is created."
@@ -12223,7 +12223,7 @@ msgstr "Tabel berikut berisi konten tetapi tidak terdaftar sebagai koleksi. Daft
 
 #: packages/admin/src/components/editor/ImageUploadExtension.ts:184
 msgid "The image is in the Media Library, but this entry is now read-only."
-msgstr ""
+msgstr "Gambar ada di Pustaka Media, tetapi entri ini sekarang hanya dapat dibaca."
 
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:439
 msgid "The import can go ahead, but check these first."
@@ -12427,7 +12427,7 @@ msgstr "Identitas penerbit tidak dapat diverifikasi."
 
 #: packages/admin/src/components/calendar/CalendarAgenda.tsx:71
 msgid "The range has more entries than the calendar can show."
-msgstr ""
+msgstr "Rentang memiliki lebih banyak entri dari yang dapat ditampilkan kalender."
 
 #: packages/admin/src/components/settings/SeoSettings.tsx:197
 msgid "The referenced image is no longer available. Pick a new one or remove the reference."
@@ -12452,7 +12452,7 @@ msgstr "Konten sampel yang ditambahkan sejauh ini disimpan. Lanjutkan untuk mena
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:193
 msgid "The scheduled changes to {title} stay as a draft."
-msgstr ""
+msgstr "Perubahan terjadwal ke {title} tetap menjadi draf."
 
 #: packages/admin/src/components/MediaDetailPanel.tsx:817
 msgid "The selected folder no longer exists. Choose another location and save again."
@@ -12541,7 +12541,7 @@ msgstr "Blok ini tidak dapat disunting karena definisi tersimpannya tidak tersed
 
 #: packages/admin/src/components/editor/HtmlBlockPreview.tsx:112
 msgid "This block runs JavaScript."
-msgstr ""
+msgstr "Blok ini menjalankan JavaScript."
 
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:225
 msgid "This browser keeps the whole package in memory until the download finishes. For an export this size, use a Chromium-based browser, which saves straight to disk, or run emdash site export from the CLI."
@@ -12575,7 +12575,7 @@ msgstr "Konten ini akan langsung terlihat di situs."
 
 #: packages/admin/src/components/calendar/CalendarMonth.tsx:598
 msgid "This day wasn't loaded. The range has more entries than the calendar can show."
-msgstr ""
+msgstr "Hari ini tidak dimuat. Rentang memiliki lebih banyak entri dari yang dapat ditampilkan kalender."
 
 #: packages/admin/src/components/DeviceAuthorizePage.tsx:370
 msgid "This device is requesting permission to use:"
@@ -12608,7 +12608,7 @@ msgstr "Entri ini hanya dapat dibaca karena skemanya menggunakan tipe kolom yang
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:363
 msgid "This entry was due {lateness} but hasn't published. Scheduled publishing may not be running."
-msgstr ""
+msgstr "Entri ini telah tenggat {lateness} tetapi belum dipublikasikan. Publikasi terjadwal mungkin tidak berjalan."
 
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:224
 msgid "This export is large"
@@ -12729,7 +12729,7 @@ msgstr "Item media ini tidak ada lagi."
 
 #: packages/admin/src/components/calendar/CalendarAgenda.tsx:64
 msgid "This month wasn't loaded"
-msgstr ""
+msgstr "Bulan ini tidak dimuat"
 
 #: packages/admin/src/components/settings/transfer/labels.ts:193
 msgid "This operation expired. Start again."
@@ -12794,7 +12794,7 @@ msgstr "Handle penerbit ini tidak dapat dipecahkan kembali ke identitasnya. Pema
 
 #: packages/admin/src/routes/calendar.tsx:352
 msgid "This range has more than {maxEntries} entries"
-msgstr ""
+msgstr "Rentang ini memiliki lebih dari {maxEntries} entri"
 
 #: packages/admin/src/components/Redirects.tsx:611
 msgid "This redirect rule will be permanently removed."
@@ -12818,7 +12818,7 @@ msgstr "Ini menghapus jadwal dan menerbitkan segera."
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:442
 msgid "This saved timezone isn't recognized. Choose a suggestion for reliable date display."
-msgstr ""
+msgstr "Zona waktu yang tersimpan ini tidak dikenali. Pilih saran untuk tampilan tanggal yang andal."
 
 #: packages/admin/src/components/PortableTextEditor.tsx:3943
 msgid "This section contains table content that the editor cannot preserve. Update the section before inserting it."
@@ -12938,11 +12938,11 @@ msgstr "Waktu"
 
 #: packages/admin/src/components/calendar/CalendarToolbar.tsx:41
 msgid "Times are in {zoneName}."
-msgstr ""
+msgstr "Waktu berada di {zoneName}."
 
 #: packages/admin/src/components/calendar/CalendarToolbar.tsx:40
 msgid "Times are in {zoneName}. Your browser uses {viewerZoneName}."
-msgstr ""
+msgstr "Waktu berada di {zoneName}. Peramban Anda menggunakan {viewerZoneName}."
 
 #: packages/admin/src/components/PublishingDateTimeEditor.tsx:252
 #: packages/admin/src/components/settings/GeneralSettings.tsx:434
@@ -12981,7 +12981,7 @@ msgstr "untuk memilih"
 #: packages/admin/src/components/calendar/CalendarMonth.tsx:569
 #: packages/admin/src/components/calendar/CalendarToolbar.tsx:71
 msgid "Today"
-msgstr ""
+msgstr "Hari ini"
 
 #: packages/admin/src/components/TaxonomySidebar.tsx:600
 msgid "Toggle"
@@ -13015,7 +13015,7 @@ msgstr "TOML"
 
 #: packages/admin/src/components/calendar/CalendarAgenda.tsx:193
 msgid "Tomorrow"
-msgstr ""
+msgstr "Besok"
 
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:535
 msgid "Tooltip text"
@@ -13080,7 +13080,7 @@ msgstr "Terjemahan"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:327
 msgid "Translations:"
-msgstr ""
+msgstr "Terjemahan:"
 
 #: packages/admin/src/components/comments/CommentDetail.tsx:198
 msgid "trash"
@@ -13216,7 +13216,7 @@ msgstr "Tipe"
 
 #: packages/admin/src/components/editor/ImageNode.tsx:303
 msgid "Type caption for image (optional)"
-msgstr ""
+msgstr "Tuliskan takarir untuk gambar (opsional)"
 
 #. placeholder {0}: status.existingType
 #: packages/admin/src/components/WordPressImport.tsx:2038
@@ -13376,7 +13376,7 @@ msgstr "Perbarui Kolom"
 
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:45
 msgid "Update scheduled"
-msgstr ""
+msgstr "Pembaruan dijadwalkan"
 
 #. placeholder {0}: editingDomain?.domain
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:333
@@ -13796,7 +13796,7 @@ msgstr "Lihat status penyedia surel dan kirimkan surel uji"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:458
 msgid "View live"
-msgstr ""
+msgstr "Lihat tayangan"
 
 #: packages/admin/src/components/MediaLibrary.tsx:932
 #: packages/admin/src/components/MediaPickerModal.tsx:1215
@@ -13868,7 +13868,7 @@ msgstr "Peringatan"
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:307
 msgid "Was due"
-msgstr ""
+msgstr "Telah tenggat"
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:588
 msgid "We checked before opening the browser's passkey prompt so you can choose what happens next."
@@ -14125,19 +14125,19 @@ msgstr "Mengerjakan…"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:57
 msgid "Write CSS…"
-msgstr ""
+msgstr "Tulis CSS…"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:71
 msgid "Write HTML, or paste a snippet with its styles and scripts…"
-msgstr ""
+msgstr "Tulis HTML, atau tempel cuplikan dengan gaya dan skripnya…"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:50
 msgid "Write HTML…"
-msgstr ""
+msgstr "Tulis HTML…"
 
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:64
 msgid "Write JavaScript…"
-msgstr ""
+msgstr "Tulis JavaScript…"
 
 #: packages/admin/src/components/Widgets.tsx:906
 msgid "Write widget content..."
@@ -14217,7 +14217,7 @@ msgstr "Anda tidak memiliki izin untuk memindahkan berkas ini."
 
 #: packages/admin/src/routes/calendar.tsx:266
 msgid "You don't have permission to view the calendar."
-msgstr ""
+msgstr "Anda tidak memiliki izin untuk melihat kalender."
 
 #: packages/admin/src/components/WelcomeModal.tsx:47
 msgid "You have full access to manage this site, including users, settings, and all content."
@@ -14375,7 +14375,7 @@ msgstr "Situs Anda mengharuskan rilis berusia setidaknya {0} sebelum dapat dipas
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:279
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:315
 msgid "Your time: {viewerTime}"
-msgstr ""
+msgstr "Waktu Anda: {viewerTime}"
 
 #: packages/admin/src/components/settings/SocialSettings.tsx:142
 msgid "Your Twitter/X handle (e.g., @username)"
