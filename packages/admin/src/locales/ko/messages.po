@@ -4684,7 +4684,10 @@ msgid ""
 "Editor\n"
 "Reporter\n"
 "Photographer"
-msgstr "편집자\n기자\n사진가"
+msgstr ""
+"편집자\n"
+"기자\n"
+"사진가"
 
 #: packages/admin/src/components/FieldEditor.tsx:1305
 msgid "Editors can select a second image that the site shows in dark mode."
