@@ -469,7 +469,7 @@ msgid "{added} updated · {0} failed"
 msgstr "حُدّث {added} · فشل {0}"
 
 #. placeholder {0}: allowedHosts.join(", ")
-#: packages/admin/src/lib/api/marketplace.ts:466
+#: packages/admin/src/lib/api/marketplace.ts:474
 msgid "{base} to: {0}"
 msgstr "{base} إلى: {0}"
 
@@ -1064,8 +1064,8 @@ msgstr "تم رفض الوصول"
 msgid "Access Denied"
 msgstr "الوصول مرفوض"
 
-#: packages/admin/src/lib/api/marketplace.ts:433
-#: packages/admin/src/lib/api/marketplace.ts:443
+#: packages/admin/src/lib/api/marketplace.ts:434
+#: packages/admin/src/lib/api/marketplace.ts:448
 msgid "Access your media library"
 msgstr "الوصول إلى مكتبة الوسائط"
 
@@ -1293,6 +1293,11 @@ msgstr "إضافة صف أعلاه"
 #: packages/admin/src/components/PortableTextEditor.tsx:4436
 msgid "Add row below"
 msgstr "إضافة صف أدناه"
+
+#: packages/admin/src/lib/api/marketplace.ts:444
+#: packages/admin/src/lib/api/marketplace.ts:455
+msgid "Add scripts and styles to your site's pages"
+msgstr ""
 
 #: packages/admin/src/components/ContentPickerModal.tsx:390
 msgid "Add selected"
@@ -1713,7 +1718,7 @@ msgstr "طلبات الموافقة"
 msgid "Approve"
 msgstr "موافقة"
 
-#: packages/admin/src/lib/api/marketplace.ts:423
+#: packages/admin/src/lib/api/marketplace.ts:424
 msgid "Approve comments and mark them as pending or spam"
 msgstr "الموافقة على التعليقات ووضع علامة عليها كمعلّقة أو غير مرغوب فيها"
 
@@ -2443,7 +2448,7 @@ msgstr "تغيير تاريخ النشر: {formattedValue}"
 msgid "Change schedule"
 msgstr "تغيير الجدول الزمني"
 
-#: packages/admin/src/lib/api/marketplace.ts:432
+#: packages/admin/src/lib/api/marketplace.ts:433
 msgid "Change where visitors are sent"
 msgstr "تغيير وجهة توجيه الزوار"
 
@@ -2964,13 +2969,13 @@ msgstr "الاتصال والتحليل"
 msgid "Connect to {0}"
 msgstr "الاتصال بـ {0}"
 
-#: packages/admin/src/lib/api/marketplace.ts:439
-#: packages/admin/src/lib/api/marketplace.ts:447
+#: packages/admin/src/lib/api/marketplace.ts:440
+#: packages/admin/src/lib/api/marketplace.ts:452
 msgid "Connect to any network host and load external plugin admin images (unrestricted)"
 msgstr "الاتصال بأي مضيف على الشبكة وتحميل صور خارجية لإدارة الإضافة (غير مقيد)"
 
-#: packages/admin/src/lib/api/marketplace.ts:438
-#: packages/admin/src/lib/api/marketplace.ts:446
+#: packages/admin/src/lib/api/marketplace.ts:439
+#: packages/admin/src/lib/api/marketplace.ts:451
 msgid "Connect to network hosts and load external plugin admin images"
 msgstr "الاتصال بمضيفين على الشبكة وتحميل صور خارجية لإدارة الإضافة"
 
@@ -3514,7 +3519,7 @@ msgstr "قم بإنشاء أقسام في مكتبة الأقسام لاستخد
 msgid "Create Taxonomy"
 msgstr "إنشاء تصنيف"
 
-#: packages/admin/src/lib/api/marketplace.ts:429
+#: packages/admin/src/lib/api/marketplace.ts:430
 msgid "Create taxonomy terms and change content classifications"
 msgstr "إنشاء مصطلحات التصنيف وتغيير تصنيفات المحتوى"
 
@@ -3547,8 +3552,8 @@ msgstr "قم بإنشاء أول واحد خاص بك"
 msgid "Create your first reusable content section to get started."
 msgstr "أنشئ أول قسم محتوى قابل لإعادة الاستخدام خاص بك للبدء."
 
-#: packages/admin/src/lib/api/marketplace.ts:419
-#: packages/admin/src/lib/api/marketplace.ts:442
+#: packages/admin/src/lib/api/marketplace.ts:420
+#: packages/admin/src/lib/api/marketplace.ts:447
 msgid "Create, update, and delete content"
 msgstr "إنشاء المحتوى وتعديله وحذفه"
 
@@ -4022,6 +4027,11 @@ msgstr "جاري الحذف..."
 #: packages/admin/src/routes/byline-schema.tsx:379
 msgid "Deleting…"
 msgstr "جارٍ الحذف…"
+
+#: packages/admin/src/lib/api/marketplace.ts:443
+#: packages/admin/src/lib/api/marketplace.ts:454
+msgid "Deliver all email your site sends"
+msgstr ""
 
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:254
 #: packages/admin/src/components/ThemeMarketplaceDetail.tsx:147
@@ -4613,7 +4623,7 @@ msgstr "تعديل الرابط"
 msgid "Edit locking"
 msgstr "قفل التعديل"
 
-#: packages/admin/src/lib/api/marketplace.ts:435
+#: packages/admin/src/lib/api/marketplace.ts:436
 msgid "Edit media alt text, captions, and focal points"
 msgstr "تعديل النص البديل للوسائط والتعليقات التوضيحية ونقاط التركيز"
 
@@ -9550,7 +9560,7 @@ msgstr "التقدم"
 msgid "Progress stopped"
 msgstr "توقف التقدم"
 
-#: packages/admin/src/lib/api/marketplace.ts:426
+#: packages/admin/src/lib/api/marketplace.ts:427
 msgid "Propose unsaved changes to selected editor fields for your review"
 msgstr "اقتراح تغييرات غير محفوظة على حقول المحرر المحددة لمراجعتها"
 
@@ -9614,7 +9624,7 @@ msgstr "نشر الآن"
 msgid "Publish now?"
 msgstr "النشر الآن؟"
 
-#: packages/admin/src/lib/api/marketplace.ts:420
+#: packages/admin/src/lib/api/marketplace.ts:421
 msgid "Publish, unpublish, schedule, and unschedule content"
 msgstr "نشر المحتوى وإلغاء نشره وجدولته وإلغاء جدولته"
 
@@ -9712,11 +9722,16 @@ msgstr "إقتباس"
 msgid "Raw meta"
 msgstr "البيانات الوصفية الخام"
 
-#: packages/admin/src/lib/api/marketplace.ts:421
+#: packages/admin/src/lib/api/marketplace.ts:442
+#: packages/admin/src/lib/api/marketplace.ts:453
+msgid "Read and change email your site sends"
+msgstr ""
+
+#: packages/admin/src/lib/api/marketplace.ts:422
 msgid "Read and restore trashed content"
 msgstr "قراءة المحتوى المحذوف واستعادته"
 
-#: packages/admin/src/lib/api/marketplace.ts:424
+#: packages/admin/src/lib/api/marketplace.ts:425
 msgid "Read collection and field definitions"
 msgstr "قراءة تعريفات المجموعات والحقول"
 
@@ -9724,7 +9739,7 @@ msgstr "قراءة تعريفات المجموعات والحقول"
 msgid "Read collection schemas"
 msgstr "قراءة مخططات المجموعات"
 
-#: packages/admin/src/lib/api/marketplace.ts:422
+#: packages/admin/src/lib/api/marketplace.ts:423
 msgid "Read comment bodies, author email addresses, pseudonymous IP hashes, user agents, and moderation metadata"
 msgstr "قراءة نصوص التعليقات، وعناوين البريد الإلكتروني للمؤلفين، وتجزئات عناوين IP المستعارة، ووكلاء المستخدم، وبيانات الإشراف الوصفية"
 
@@ -9732,7 +9747,7 @@ msgstr "قراءة نصوص التعليقات، وعناوين البريد ا�
 msgid "Read content entries"
 msgstr "قراءة مدخلات المحتوى"
 
-#: packages/admin/src/lib/api/marketplace.ts:434
+#: packages/admin/src/lib/api/marketplace.ts:435
 msgid "Read media file contents"
 msgstr "قراءة محتويات ملفات الوسائط"
 
@@ -9740,19 +9755,19 @@ msgstr "قراءة محتويات ملفات الوسائط"
 msgid "Read media files"
 msgstr "قراءة ملفات الوسائط"
 
-#: packages/admin/src/lib/api/marketplace.ts:430
+#: packages/admin/src/lib/api/marketplace.ts:431
 msgid "Read public byline profiles and content credits"
 msgstr "قراءة الملفات الشخصية العامة للكُتّاب وإسنادات المحتوى"
 
-#: packages/admin/src/lib/api/marketplace.ts:431
+#: packages/admin/src/lib/api/marketplace.ts:432
 msgid "Read redirect rules"
 msgstr "قراءة قواعد إعادة التوجيه"
 
-#: packages/admin/src/lib/api/marketplace.ts:418
+#: packages/admin/src/lib/api/marketplace.ts:419
 msgid "Read retained content revision history"
 msgstr "قراءة سجل مراجعات المحتوى المحتفظ به"
 
-#: packages/admin/src/lib/api/marketplace.ts:425
+#: packages/admin/src/lib/api/marketplace.ts:426
 msgid "Read selected unsaved editor content after you explicitly invoke the plugin"
 msgstr "قراءة محتوى المحرر المحدد غير المحفوظ بعد أن تستدعي الإضافة صراحةً"
 
@@ -9760,17 +9775,17 @@ msgstr "قراءة محتوى المحرر المحدد غير المحفوظ ب
 msgid "Read site settings"
 msgstr "قراءة إعدادات الموقع"
 
-#: packages/admin/src/lib/api/marketplace.ts:437
-#: packages/admin/src/lib/api/marketplace.ts:445
+#: packages/admin/src/lib/api/marketplace.ts:438
+#: packages/admin/src/lib/api/marketplace.ts:450
 msgid "Read user accounts"
 msgstr "قراءة حسابات المستخدمين"
 
-#: packages/admin/src/lib/api/marketplace.ts:417
-#: packages/admin/src/lib/api/marketplace.ts:441
+#: packages/admin/src/lib/api/marketplace.ts:418
+#: packages/admin/src/lib/api/marketplace.ts:446
 msgid "Read your content"
 msgstr "قراءة المحتوى"
 
-#: packages/admin/src/lib/api/marketplace.ts:428
+#: packages/admin/src/lib/api/marketplace.ts:429
 msgid "Read your taxonomies and terms"
 msgstr "قراءة التصنيفات والمصطلحات الخاصة بك"
 
@@ -10455,7 +10470,7 @@ msgstr "تمت الإعادة إلى النسخة المنشورة"
 msgid "Review"
 msgstr "مراجعة"
 
-#: packages/admin/src/lib/api/marketplace.ts:427
+#: packages/admin/src/lib/api/marketplace.ts:428
 msgid "Review and block publishing, scheduling, and unpublishing content"
 msgstr "مراجعة نشر المحتوى وجدولته وإلغاء نشره ومنعها"
 
@@ -11322,6 +11337,10 @@ msgstr "أرسل بريدًا إلكترونيًا تجريبيًا عبر ال�
 #: packages/admin/src/components/users/InviteUserModal.tsx:84
 msgid "Send an invitation email to a new team member."
 msgstr "أرسل بريدًا إلكترونيًا دعوةً لعضو فريق جديد."
+
+#: packages/admin/src/lib/api/marketplace.ts:441
+msgid "Send email through your site"
+msgstr ""
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
 msgid "Send Invite"
@@ -13501,8 +13520,8 @@ msgstr "ارفع صورة للبدء"
 msgid "Upload and delete media"
 msgstr "رفع وحذف الوسائط"
 
-#: packages/admin/src/lib/api/marketplace.ts:436
-#: packages/admin/src/lib/api/marketplace.ts:444
+#: packages/admin/src/lib/api/marketplace.ts:437
+#: packages/admin/src/lib/api/marketplace.ts:449
 msgid "Upload and manage media"
 msgstr "رفع الوسائط وإدارتها"
 

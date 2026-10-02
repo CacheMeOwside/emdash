@@ -469,7 +469,7 @@ msgid "{added} updated · {0} failed"
 msgstr "{added} updated · {0} failed"
 
 #. placeholder {0}: allowedHosts.join(", ")
-#: packages/admin/src/lib/api/marketplace.ts:466
+#: packages/admin/src/lib/api/marketplace.ts:474
 msgid "{base} to: {0}"
 msgstr "{base} to: {0}"
 
@@ -1064,8 +1064,8 @@ msgstr "Access denied"
 msgid "Access Denied"
 msgstr "Access Denied"
 
-#: packages/admin/src/lib/api/marketplace.ts:433
-#: packages/admin/src/lib/api/marketplace.ts:443
+#: packages/admin/src/lib/api/marketplace.ts:434
+#: packages/admin/src/lib/api/marketplace.ts:448
 msgid "Access your media library"
 msgstr "Access your media library"
 
@@ -1293,6 +1293,11 @@ msgstr "Add row above"
 #: packages/admin/src/components/PortableTextEditor.tsx:4436
 msgid "Add row below"
 msgstr "Add row below"
+
+#: packages/admin/src/lib/api/marketplace.ts:444
+#: packages/admin/src/lib/api/marketplace.ts:455
+msgid "Add scripts and styles to your site's pages"
+msgstr "Add scripts and styles to your site's pages"
 
 #: packages/admin/src/components/ContentPickerModal.tsx:390
 msgid "Add selected"
@@ -1713,7 +1718,7 @@ msgstr "Approval requests"
 msgid "Approve"
 msgstr "Approve"
 
-#: packages/admin/src/lib/api/marketplace.ts:423
+#: packages/admin/src/lib/api/marketplace.ts:424
 msgid "Approve comments and mark them as pending or spam"
 msgstr "Approve comments and mark them as pending or spam"
 
@@ -2443,7 +2448,7 @@ msgstr "Change publication date: {formattedValue}"
 msgid "Change schedule"
 msgstr "Change schedule"
 
-#: packages/admin/src/lib/api/marketplace.ts:432
+#: packages/admin/src/lib/api/marketplace.ts:433
 msgid "Change where visitors are sent"
 msgstr "Change where visitors are sent"
 
@@ -2964,13 +2969,13 @@ msgstr "Connect & Analyze"
 msgid "Connect to {0}"
 msgstr "Connect to {0}"
 
-#: packages/admin/src/lib/api/marketplace.ts:439
-#: packages/admin/src/lib/api/marketplace.ts:447
+#: packages/admin/src/lib/api/marketplace.ts:440
+#: packages/admin/src/lib/api/marketplace.ts:452
 msgid "Connect to any network host and load external plugin admin images (unrestricted)"
 msgstr "Connect to any network host and load external plugin admin images (unrestricted)"
 
-#: packages/admin/src/lib/api/marketplace.ts:438
-#: packages/admin/src/lib/api/marketplace.ts:446
+#: packages/admin/src/lib/api/marketplace.ts:439
+#: packages/admin/src/lib/api/marketplace.ts:451
 msgid "Connect to network hosts and load external plugin admin images"
 msgstr "Connect to network hosts and load external plugin admin images"
 
@@ -3514,7 +3519,7 @@ msgstr "Create sections in the Sections library to use them here"
 msgid "Create Taxonomy"
 msgstr "Create Taxonomy"
 
-#: packages/admin/src/lib/api/marketplace.ts:429
+#: packages/admin/src/lib/api/marketplace.ts:430
 msgid "Create taxonomy terms and change content classifications"
 msgstr "Create taxonomy terms and change content classifications"
 
@@ -3547,8 +3552,8 @@ msgstr "Create your first one"
 msgid "Create your first reusable content section to get started."
 msgstr "Create your first reusable content section to get started."
 
-#: packages/admin/src/lib/api/marketplace.ts:419
-#: packages/admin/src/lib/api/marketplace.ts:442
+#: packages/admin/src/lib/api/marketplace.ts:420
+#: packages/admin/src/lib/api/marketplace.ts:447
 msgid "Create, update, and delete content"
 msgstr "Create, update, and delete content"
 
@@ -4022,6 +4027,11 @@ msgstr "Deleting..."
 #: packages/admin/src/routes/byline-schema.tsx:379
 msgid "Deleting…"
 msgstr "Deleting…"
+
+#: packages/admin/src/lib/api/marketplace.ts:443
+#: packages/admin/src/lib/api/marketplace.ts:454
+msgid "Deliver all email your site sends"
+msgstr "Deliver all email your site sends"
 
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:254
 #: packages/admin/src/components/ThemeMarketplaceDetail.tsx:147
@@ -4613,7 +4623,7 @@ msgstr "Edit link"
 msgid "Edit locking"
 msgstr "Edit locking"
 
-#: packages/admin/src/lib/api/marketplace.ts:435
+#: packages/admin/src/lib/api/marketplace.ts:436
 msgid "Edit media alt text, captions, and focal points"
 msgstr "Edit media alt text, captions, and focal points"
 
@@ -9550,7 +9560,7 @@ msgstr "Progress"
 msgid "Progress stopped"
 msgstr "Progress stopped"
 
-#: packages/admin/src/lib/api/marketplace.ts:426
+#: packages/admin/src/lib/api/marketplace.ts:427
 msgid "Propose unsaved changes to selected editor fields for your review"
 msgstr "Propose unsaved changes to selected editor fields for your review"
 
@@ -9614,7 +9624,7 @@ msgstr "Publish now"
 msgid "Publish now?"
 msgstr "Publish now?"
 
-#: packages/admin/src/lib/api/marketplace.ts:420
+#: packages/admin/src/lib/api/marketplace.ts:421
 msgid "Publish, unpublish, schedule, and unschedule content"
 msgstr "Publish, unpublish, schedule, and unschedule content"
 
@@ -9712,11 +9722,16 @@ msgstr "Quote"
 msgid "Raw meta"
 msgstr "Raw meta"
 
-#: packages/admin/src/lib/api/marketplace.ts:421
+#: packages/admin/src/lib/api/marketplace.ts:442
+#: packages/admin/src/lib/api/marketplace.ts:453
+msgid "Read and change email your site sends"
+msgstr "Read and change email your site sends"
+
+#: packages/admin/src/lib/api/marketplace.ts:422
 msgid "Read and restore trashed content"
 msgstr "Read and restore trashed content"
 
-#: packages/admin/src/lib/api/marketplace.ts:424
+#: packages/admin/src/lib/api/marketplace.ts:425
 msgid "Read collection and field definitions"
 msgstr "Read collection and field definitions"
 
@@ -9724,7 +9739,7 @@ msgstr "Read collection and field definitions"
 msgid "Read collection schemas"
 msgstr "Read collection schemas"
 
-#: packages/admin/src/lib/api/marketplace.ts:422
+#: packages/admin/src/lib/api/marketplace.ts:423
 msgid "Read comment bodies, author email addresses, pseudonymous IP hashes, user agents, and moderation metadata"
 msgstr "Read comment bodies, author email addresses, pseudonymous IP hashes, user agents, and moderation metadata"
 
@@ -9732,7 +9747,7 @@ msgstr "Read comment bodies, author email addresses, pseudonymous IP hashes, use
 msgid "Read content entries"
 msgstr "Read content entries"
 
-#: packages/admin/src/lib/api/marketplace.ts:434
+#: packages/admin/src/lib/api/marketplace.ts:435
 msgid "Read media file contents"
 msgstr "Read media file contents"
 
@@ -9740,19 +9755,19 @@ msgstr "Read media file contents"
 msgid "Read media files"
 msgstr "Read media files"
 
-#: packages/admin/src/lib/api/marketplace.ts:430
+#: packages/admin/src/lib/api/marketplace.ts:431
 msgid "Read public byline profiles and content credits"
 msgstr "Read public byline profiles and content credits"
 
-#: packages/admin/src/lib/api/marketplace.ts:431
+#: packages/admin/src/lib/api/marketplace.ts:432
 msgid "Read redirect rules"
 msgstr "Read redirect rules"
 
-#: packages/admin/src/lib/api/marketplace.ts:418
+#: packages/admin/src/lib/api/marketplace.ts:419
 msgid "Read retained content revision history"
 msgstr "Read retained content revision history"
 
-#: packages/admin/src/lib/api/marketplace.ts:425
+#: packages/admin/src/lib/api/marketplace.ts:426
 msgid "Read selected unsaved editor content after you explicitly invoke the plugin"
 msgstr "Read selected unsaved editor content after you explicitly invoke the plugin"
 
@@ -9760,17 +9775,17 @@ msgstr "Read selected unsaved editor content after you explicitly invoke the plu
 msgid "Read site settings"
 msgstr "Read site settings"
 
-#: packages/admin/src/lib/api/marketplace.ts:437
-#: packages/admin/src/lib/api/marketplace.ts:445
+#: packages/admin/src/lib/api/marketplace.ts:438
+#: packages/admin/src/lib/api/marketplace.ts:450
 msgid "Read user accounts"
 msgstr "Read user accounts"
 
-#: packages/admin/src/lib/api/marketplace.ts:417
-#: packages/admin/src/lib/api/marketplace.ts:441
+#: packages/admin/src/lib/api/marketplace.ts:418
+#: packages/admin/src/lib/api/marketplace.ts:446
 msgid "Read your content"
 msgstr "Read your content"
 
-#: packages/admin/src/lib/api/marketplace.ts:428
+#: packages/admin/src/lib/api/marketplace.ts:429
 msgid "Read your taxonomies and terms"
 msgstr "Read your taxonomies and terms"
 
@@ -10455,7 +10470,7 @@ msgstr "Reverted to published version"
 msgid "Review"
 msgstr "Review"
 
-#: packages/admin/src/lib/api/marketplace.ts:427
+#: packages/admin/src/lib/api/marketplace.ts:428
 msgid "Review and block publishing, scheduling, and unpublishing content"
 msgstr "Review and block publishing, scheduling, and unpublishing content"
 
@@ -11322,6 +11337,10 @@ msgstr "Send a test email through the full pipeline to verify your email configu
 #: packages/admin/src/components/users/InviteUserModal.tsx:84
 msgid "Send an invitation email to a new team member."
 msgstr "Send an invitation email to a new team member."
+
+#: packages/admin/src/lib/api/marketplace.ts:441
+msgid "Send email through your site"
+msgstr "Send email through your site"
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
 msgid "Send Invite"
@@ -13501,8 +13520,8 @@ msgstr "Upload an image to get started"
 msgid "Upload and delete media"
 msgstr "Upload and delete media"
 
-#: packages/admin/src/lib/api/marketplace.ts:436
-#: packages/admin/src/lib/api/marketplace.ts:444
+#: packages/admin/src/lib/api/marketplace.ts:437
+#: packages/admin/src/lib/api/marketplace.ts:449
 msgid "Upload and manage media"
 msgstr "Upload and manage media"
 

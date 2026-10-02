@@ -469,7 +469,7 @@ msgid "{added} updated · {0} failed"
 msgstr ""
 
 #. placeholder {0}: allowedHosts.join(", ")
-#: packages/admin/src/lib/api/marketplace.ts:466
+#: packages/admin/src/lib/api/marketplace.ts:474
 msgid "{base} to: {0}"
 msgstr "{base} → {0}"
 
@@ -1064,8 +1064,8 @@ msgstr "წვდომა აკრძალულია"
 msgid "Access Denied"
 msgstr "წვდომა აკრძალულია"
 
-#: packages/admin/src/lib/api/marketplace.ts:433
-#: packages/admin/src/lib/api/marketplace.ts:443
+#: packages/admin/src/lib/api/marketplace.ts:434
+#: packages/admin/src/lib/api/marketplace.ts:448
 msgid "Access your media library"
 msgstr "მედია ბიბლიოთეკაზე წვდომა"
 
@@ -1293,6 +1293,11 @@ msgstr "მწკრივის დამატება ზემოთ"
 #: packages/admin/src/components/PortableTextEditor.tsx:4436
 msgid "Add row below"
 msgstr "მწკრივის დამატება ქვემოთ"
+
+#: packages/admin/src/lib/api/marketplace.ts:444
+#: packages/admin/src/lib/api/marketplace.ts:455
+msgid "Add scripts and styles to your site's pages"
+msgstr ""
 
 #: packages/admin/src/components/ContentPickerModal.tsx:390
 msgid "Add selected"
@@ -1713,7 +1718,7 @@ msgstr ""
 msgid "Approve"
 msgstr "დამტკიცება"
 
-#: packages/admin/src/lib/api/marketplace.ts:423
+#: packages/admin/src/lib/api/marketplace.ts:424
 msgid "Approve comments and mark them as pending or spam"
 msgstr "კომენტარების დამტკიცება და მათი მონიშვნა მოლოდინში ან სპამად"
 
@@ -2443,7 +2448,7 @@ msgstr "გამოქვეყნების თარიღის შეც�
 msgid "Change schedule"
 msgstr "განრიგის შეცვლა"
 
-#: packages/admin/src/lib/api/marketplace.ts:432
+#: packages/admin/src/lib/api/marketplace.ts:433
 msgid "Change where visitors are sent"
 msgstr "ვიზიტორების გადამისამართების სამიზნის შეცვლა"
 
@@ -2964,13 +2969,13 @@ msgstr "დაკავშირება და ანალიზი"
 msgid "Connect to {0}"
 msgstr "დაკავშირება {0}-თან"
 
-#: packages/admin/src/lib/api/marketplace.ts:439
-#: packages/admin/src/lib/api/marketplace.ts:447
+#: packages/admin/src/lib/api/marketplace.ts:440
+#: packages/admin/src/lib/api/marketplace.ts:452
 msgid "Connect to any network host and load external plugin admin images (unrestricted)"
 msgstr "ნებისმიერ ქსელურ ჰოსტთან დაკავშირება და გარე პლაგინის ადმინის სურათების ჩატვირთვა (შეზღუდვების გარეშე)"
 
-#: packages/admin/src/lib/api/marketplace.ts:438
-#: packages/admin/src/lib/api/marketplace.ts:446
+#: packages/admin/src/lib/api/marketplace.ts:439
+#: packages/admin/src/lib/api/marketplace.ts:451
 msgid "Connect to network hosts and load external plugin admin images"
 msgstr "ქსელურ ჰოსტებთან დაკავშირება და გარე პლაგინის ადმინის სურათების ჩატვირთვა"
 
@@ -3514,7 +3519,7 @@ msgstr "შექმენით სექციები სექციებ�
 msgid "Create Taxonomy"
 msgstr "ტაქსონომიის შექმნა"
 
-#: packages/admin/src/lib/api/marketplace.ts:429
+#: packages/admin/src/lib/api/marketplace.ts:430
 msgid "Create taxonomy terms and change content classifications"
 msgstr "ტაქსონომიის ტერმინების შექმნა და შიგთავსის კლასიფიკაციის შეცვლა"
 
@@ -3547,8 +3552,8 @@ msgstr "შექმენით პირველი"
 msgid "Create your first reusable content section to get started."
 msgstr "დასაწყებად შექმენით პირველი ხელახლა გამოსაყენებელი შიგთავსის სექცია."
 
-#: packages/admin/src/lib/api/marketplace.ts:419
-#: packages/admin/src/lib/api/marketplace.ts:442
+#: packages/admin/src/lib/api/marketplace.ts:420
+#: packages/admin/src/lib/api/marketplace.ts:447
 msgid "Create, update, and delete content"
 msgstr "შიგთავსის შექმნა, განახლება და წაშლა"
 
@@ -4022,6 +4027,11 @@ msgstr "იშლება..."
 #: packages/admin/src/routes/byline-schema.tsx:379
 msgid "Deleting…"
 msgstr "იშლება…"
+
+#: packages/admin/src/lib/api/marketplace.ts:443
+#: packages/admin/src/lib/api/marketplace.ts:454
+msgid "Deliver all email your site sends"
+msgstr ""
 
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:254
 #: packages/admin/src/components/ThemeMarketplaceDetail.tsx:147
@@ -4613,7 +4623,7 @@ msgstr "ბმულის რედაქტირება"
 msgid "Edit locking"
 msgstr "რედაქტირების ჩაკეტვა"
 
-#: packages/admin/src/lib/api/marketplace.ts:435
+#: packages/admin/src/lib/api/marketplace.ts:436
 msgid "Edit media alt text, captions, and focal points"
 msgstr "მედიის ალტ-ტექსტის, წარწერებისა და ფოკუსის წერტილების რედაქტირება"
 
@@ -9550,7 +9560,7 @@ msgstr ""
 msgid "Progress stopped"
 msgstr ""
 
-#: packages/admin/src/lib/api/marketplace.ts:426
+#: packages/admin/src/lib/api/marketplace.ts:427
 msgid "Propose unsaved changes to selected editor fields for your review"
 msgstr ""
 
@@ -9614,7 +9624,7 @@ msgstr "ახლავე გამოქვეყნება"
 msgid "Publish now?"
 msgstr "გამოვაქვეყნოთ ახლავე?"
 
-#: packages/admin/src/lib/api/marketplace.ts:420
+#: packages/admin/src/lib/api/marketplace.ts:421
 msgid "Publish, unpublish, schedule, and unschedule content"
 msgstr "შიგთავსის გამოქვეყნება, გამოქვეყნების გაუქმება, დაგეგმვა და დაგეგმვის გაუქმება"
 
@@ -9712,11 +9722,16 @@ msgstr "ციტატა"
 msgid "Raw meta"
 msgstr "ნედლი მეტამონაცემები"
 
-#: packages/admin/src/lib/api/marketplace.ts:421
+#: packages/admin/src/lib/api/marketplace.ts:442
+#: packages/admin/src/lib/api/marketplace.ts:453
+msgid "Read and change email your site sends"
+msgstr ""
+
+#: packages/admin/src/lib/api/marketplace.ts:422
 msgid "Read and restore trashed content"
 msgstr "ნაგავში გადატანილი შიგთავსის წაკითხვა და აღდგენა"
 
-#: packages/admin/src/lib/api/marketplace.ts:424
+#: packages/admin/src/lib/api/marketplace.ts:425
 msgid "Read collection and field definitions"
 msgstr "კოლექციებისა და ველების განსაზღვრებების წაკითხვა"
 
@@ -9724,7 +9739,7 @@ msgstr "კოლექციებისა და ველების გა
 msgid "Read collection schemas"
 msgstr "კოლექციების სქემების წაკითხვა"
 
-#: packages/admin/src/lib/api/marketplace.ts:422
+#: packages/admin/src/lib/api/marketplace.ts:423
 msgid "Read comment bodies, author email addresses, pseudonymous IP hashes, user agents, and moderation metadata"
 msgstr "კომენტარების ტექსტის, ავტორების ელფოსტის მისამართების, ფსევდონიმული IP ჰეშების, user agent-ებისა და მოდერაციის მეტამონაცემების წაკითხვა"
 
@@ -9732,7 +9747,7 @@ msgstr "კომენტარების ტექსტის, ავტო
 msgid "Read content entries"
 msgstr "შიგთავსის ჩანაწერების წაკითხვა"
 
-#: packages/admin/src/lib/api/marketplace.ts:434
+#: packages/admin/src/lib/api/marketplace.ts:435
 msgid "Read media file contents"
 msgstr "მედია ფაილების შიგთავსის წაკითხვა"
 
@@ -9740,19 +9755,19 @@ msgstr "მედია ფაილების შიგთავსის წ
 msgid "Read media files"
 msgstr "მედია ფაილების წაკითხვა"
 
-#: packages/admin/src/lib/api/marketplace.ts:430
+#: packages/admin/src/lib/api/marketplace.ts:431
 msgid "Read public byline profiles and content credits"
 msgstr ""
 
-#: packages/admin/src/lib/api/marketplace.ts:431
+#: packages/admin/src/lib/api/marketplace.ts:432
 msgid "Read redirect rules"
 msgstr "გადამისამართების წესების წაკითხვა"
 
-#: packages/admin/src/lib/api/marketplace.ts:418
+#: packages/admin/src/lib/api/marketplace.ts:419
 msgid "Read retained content revision history"
 msgstr "შენახული შიგთავსის რევიზიების ისტორიის წაკითხვა"
 
-#: packages/admin/src/lib/api/marketplace.ts:425
+#: packages/admin/src/lib/api/marketplace.ts:426
 msgid "Read selected unsaved editor content after you explicitly invoke the plugin"
 msgstr ""
 
@@ -9760,17 +9775,17 @@ msgstr ""
 msgid "Read site settings"
 msgstr "საიტის პარამეტრების წაკითხვა"
 
-#: packages/admin/src/lib/api/marketplace.ts:437
-#: packages/admin/src/lib/api/marketplace.ts:445
+#: packages/admin/src/lib/api/marketplace.ts:438
+#: packages/admin/src/lib/api/marketplace.ts:450
 msgid "Read user accounts"
 msgstr "მომხმარებლის ანგარიშების წაკითხვა"
 
-#: packages/admin/src/lib/api/marketplace.ts:417
-#: packages/admin/src/lib/api/marketplace.ts:441
+#: packages/admin/src/lib/api/marketplace.ts:418
+#: packages/admin/src/lib/api/marketplace.ts:446
 msgid "Read your content"
 msgstr "საკუთარი შიგთავსის წაკითხვა"
 
-#: packages/admin/src/lib/api/marketplace.ts:428
+#: packages/admin/src/lib/api/marketplace.ts:429
 msgid "Read your taxonomies and terms"
 msgstr "საკუთარი ტაქსონომიებისა და ტერმინების წაკითხვა"
 
@@ -10455,7 +10470,7 @@ msgstr "დაბრუნდა გამოქვეყნებულ ვე�
 msgid "Review"
 msgstr "გადახედვა"
 
-#: packages/admin/src/lib/api/marketplace.ts:427
+#: packages/admin/src/lib/api/marketplace.ts:428
 msgid "Review and block publishing, scheduling, and unpublishing content"
 msgstr "შიგთავსის გამოქვეყნების, დაგეგმვისა და გამოქვეყნების გაუქმების გადახედვა და დაბლოკვა"
 
@@ -11322,6 +11337,10 @@ msgstr "გაგზავნეთ სატესტო ელფოსტა 
 #: packages/admin/src/components/users/InviteUserModal.tsx:84
 msgid "Send an invitation email to a new team member."
 msgstr "გაუგზავნეთ მოწვევის ელფოსტა გუნდის ახალ წევრს."
+
+#: packages/admin/src/lib/api/marketplace.ts:441
+msgid "Send email through your site"
+msgstr ""
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
 msgid "Send Invite"
@@ -13501,8 +13520,8 @@ msgstr "დასაწყებად ატვირთეთ სურათ�
 msgid "Upload and delete media"
 msgstr "მედიის ატვირთვა და წაშლა"
 
-#: packages/admin/src/lib/api/marketplace.ts:436
-#: packages/admin/src/lib/api/marketplace.ts:444
+#: packages/admin/src/lib/api/marketplace.ts:437
+#: packages/admin/src/lib/api/marketplace.ts:449
 msgid "Upload and manage media"
 msgstr "მედიის ატვირთვა და მართვა"
 

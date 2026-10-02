@@ -469,7 +469,7 @@ msgid "{added} updated · {0} failed"
 msgstr "{added} diperbarui · {0} gagal"
 
 #. placeholder {0}: allowedHosts.join(", ")
-#: packages/admin/src/lib/api/marketplace.ts:466
+#: packages/admin/src/lib/api/marketplace.ts:474
 msgid "{base} to: {0}"
 msgstr "{base} ke: {0}"
 
@@ -1064,8 +1064,8 @@ msgstr "Akses ditolak"
 msgid "Access Denied"
 msgstr "Akses Ditolak"
 
-#: packages/admin/src/lib/api/marketplace.ts:433
-#: packages/admin/src/lib/api/marketplace.ts:443
+#: packages/admin/src/lib/api/marketplace.ts:434
+#: packages/admin/src/lib/api/marketplace.ts:448
 msgid "Access your media library"
 msgstr "Akses pustaka media Anda"
 
@@ -1293,6 +1293,11 @@ msgstr "Tambahkan baris di atas"
 #: packages/admin/src/components/PortableTextEditor.tsx:4436
 msgid "Add row below"
 msgstr "Tambahkan baris di bawah"
+
+#: packages/admin/src/lib/api/marketplace.ts:444
+#: packages/admin/src/lib/api/marketplace.ts:455
+msgid "Add scripts and styles to your site's pages"
+msgstr ""
 
 #: packages/admin/src/components/ContentPickerModal.tsx:390
 msgid "Add selected"
@@ -1713,7 +1718,7 @@ msgstr "Permintaan persetujuan"
 msgid "Approve"
 msgstr "Setujui"
 
-#: packages/admin/src/lib/api/marketplace.ts:423
+#: packages/admin/src/lib/api/marketplace.ts:424
 msgid "Approve comments and mark them as pending or spam"
 msgstr "Setujui komentar dan tandai mereka sebagai tertunda atau spam"
 
@@ -2443,7 +2448,7 @@ msgstr "Ubah tanggal publikasi: {formattedValue}"
 msgid "Change schedule"
 msgstr "Ubah jadwal"
 
-#: packages/admin/src/lib/api/marketplace.ts:432
+#: packages/admin/src/lib/api/marketplace.ts:433
 msgid "Change where visitors are sent"
 msgstr "Ubah di mana pengunjung diarahkan"
 
@@ -2964,13 +2969,13 @@ msgstr "Sambungkan & Analisa"
 msgid "Connect to {0}"
 msgstr "Sambungkan ke {0}"
 
-#: packages/admin/src/lib/api/marketplace.ts:439
-#: packages/admin/src/lib/api/marketplace.ts:447
+#: packages/admin/src/lib/api/marketplace.ts:440
+#: packages/admin/src/lib/api/marketplace.ts:452
 msgid "Connect to any network host and load external plugin admin images (unrestricted)"
 msgstr "Sambungkan ke host jaringan mana pun dan muat gambar admin pengaya eksternal (tanpa batasan)"
 
-#: packages/admin/src/lib/api/marketplace.ts:438
-#: packages/admin/src/lib/api/marketplace.ts:446
+#: packages/admin/src/lib/api/marketplace.ts:439
+#: packages/admin/src/lib/api/marketplace.ts:451
 msgid "Connect to network hosts and load external plugin admin images"
 msgstr "Sambungkan ke host jaringan dan muat gambar admin pengaya eksternal"
 
@@ -3514,7 +3519,7 @@ msgstr "Buat bagian di pustaka Bagian untuk digunakan di sini"
 msgid "Create Taxonomy"
 msgstr "Buat Taksonomi"
 
-#: packages/admin/src/lib/api/marketplace.ts:429
+#: packages/admin/src/lib/api/marketplace.ts:430
 msgid "Create taxonomy terms and change content classifications"
 msgstr "Buat istilah taksonomi dan ubah klasifikasi konten"
 
@@ -3547,8 +3552,8 @@ msgstr "Buat yang pertama Anda"
 msgid "Create your first reusable content section to get started."
 msgstr "Buat bagian konten pertama yang dapat digunakan kembali untuk memulai."
 
-#: packages/admin/src/lib/api/marketplace.ts:419
-#: packages/admin/src/lib/api/marketplace.ts:442
+#: packages/admin/src/lib/api/marketplace.ts:420
+#: packages/admin/src/lib/api/marketplace.ts:447
 msgid "Create, update, and delete content"
 msgstr "Buat, perbarui, dan hapus konten"
 
@@ -4022,6 +4027,11 @@ msgstr "Menghapus..."
 #: packages/admin/src/routes/byline-schema.tsx:379
 msgid "Deleting…"
 msgstr "Menghapus..."
+
+#: packages/admin/src/lib/api/marketplace.ts:443
+#: packages/admin/src/lib/api/marketplace.ts:454
+msgid "Deliver all email your site sends"
+msgstr ""
 
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:254
 #: packages/admin/src/components/ThemeMarketplaceDetail.tsx:147
@@ -4613,7 +4623,7 @@ msgstr "Sunting tautan"
 msgid "Edit locking"
 msgstr "Sunting penguncian"
 
-#: packages/admin/src/lib/api/marketplace.ts:435
+#: packages/admin/src/lib/api/marketplace.ts:436
 msgid "Edit media alt text, captions, and focal points"
 msgstr "Sunting teks alt, keterangan, dan titik fokus media"
 
@@ -9550,7 +9560,7 @@ msgstr "Progres"
 msgid "Progress stopped"
 msgstr "Progres terhenti"
 
-#: packages/admin/src/lib/api/marketplace.ts:426
+#: packages/admin/src/lib/api/marketplace.ts:427
 msgid "Propose unsaved changes to selected editor fields for your review"
 msgstr "Usulkan perubahan tidak tersimpan ke kolom penyunting terpilih untuk tinjauan Anda"
 
@@ -9614,7 +9624,7 @@ msgstr "Publikasikan sekarang"
 msgid "Publish now?"
 msgstr "Publikasikan sekarang?"
 
-#: packages/admin/src/lib/api/marketplace.ts:420
+#: packages/admin/src/lib/api/marketplace.ts:421
 msgid "Publish, unpublish, schedule, and unschedule content"
 msgstr "Publikasikan, batalkan publikasi, jadwalkan, dan hapus jadwal konten"
 
@@ -9712,11 +9722,16 @@ msgstr "Kutipan"
 msgid "Raw meta"
 msgstr "Meta mentah"
 
-#: packages/admin/src/lib/api/marketplace.ts:421
+#: packages/admin/src/lib/api/marketplace.ts:442
+#: packages/admin/src/lib/api/marketplace.ts:453
+msgid "Read and change email your site sends"
+msgstr ""
+
+#: packages/admin/src/lib/api/marketplace.ts:422
 msgid "Read and restore trashed content"
 msgstr "Baca dan pulihkan konten yang dihapus"
 
-#: packages/admin/src/lib/api/marketplace.ts:424
+#: packages/admin/src/lib/api/marketplace.ts:425
 msgid "Read collection and field definitions"
 msgstr "Baca definisi koleksi dan kolom"
 
@@ -9724,7 +9739,7 @@ msgstr "Baca definisi koleksi dan kolom"
 msgid "Read collection schemas"
 msgstr "Baca skema koleksi"
 
-#: packages/admin/src/lib/api/marketplace.ts:422
+#: packages/admin/src/lib/api/marketplace.ts:423
 msgid "Read comment bodies, author email addresses, pseudonymous IP hashes, user agents, and moderation metadata"
 msgstr "Baca isi komentar, alamat surel penulis, hash IP semu, agen pengguna, dan metadata moderasi"
 
@@ -9732,7 +9747,7 @@ msgstr "Baca isi komentar, alamat surel penulis, hash IP semu, agen pengguna, da
 msgid "Read content entries"
 msgstr "Baca entri konten"
 
-#: packages/admin/src/lib/api/marketplace.ts:434
+#: packages/admin/src/lib/api/marketplace.ts:435
 msgid "Read media file contents"
 msgstr "Baca isi berkas media"
 
@@ -9740,19 +9755,19 @@ msgstr "Baca isi berkas media"
 msgid "Read media files"
 msgstr "Baca berkas media"
 
-#: packages/admin/src/lib/api/marketplace.ts:430
+#: packages/admin/src/lib/api/marketplace.ts:431
 msgid "Read public byline profiles and content credits"
 msgstr "Baca profil byline publik dan kredit konten"
 
-#: packages/admin/src/lib/api/marketplace.ts:431
+#: packages/admin/src/lib/api/marketplace.ts:432
 msgid "Read redirect rules"
 msgstr "Baca aturan pengalihan"
 
-#: packages/admin/src/lib/api/marketplace.ts:418
+#: packages/admin/src/lib/api/marketplace.ts:419
 msgid "Read retained content revision history"
 msgstr "Baca riwayat revisi konten yang dipertahankan"
 
-#: packages/admin/src/lib/api/marketplace.ts:425
+#: packages/admin/src/lib/api/marketplace.ts:426
 msgid "Read selected unsaved editor content after you explicitly invoke the plugin"
 msgstr "Baca konten penyunting yang belum disimpan yang dipilih setelah Anda secara eksplisit memanggil pengaya"
 
@@ -9760,17 +9775,17 @@ msgstr "Baca konten penyunting yang belum disimpan yang dipilih setelah Anda sec
 msgid "Read site settings"
 msgstr "Baca pengaturan situs"
 
-#: packages/admin/src/lib/api/marketplace.ts:437
-#: packages/admin/src/lib/api/marketplace.ts:445
+#: packages/admin/src/lib/api/marketplace.ts:438
+#: packages/admin/src/lib/api/marketplace.ts:450
 msgid "Read user accounts"
 msgstr "Baca akun pengguna"
 
-#: packages/admin/src/lib/api/marketplace.ts:417
-#: packages/admin/src/lib/api/marketplace.ts:441
+#: packages/admin/src/lib/api/marketplace.ts:418
+#: packages/admin/src/lib/api/marketplace.ts:446
 msgid "Read your content"
 msgstr "Baca konten Anda"
 
-#: packages/admin/src/lib/api/marketplace.ts:428
+#: packages/admin/src/lib/api/marketplace.ts:429
 msgid "Read your taxonomies and terms"
 msgstr "Baca taksonomi dan istilah Anda"
 
@@ -10455,7 +10470,7 @@ msgstr "Dikembalikan ke versi terbit"
 msgid "Review"
 msgstr "Tinjau"
 
-#: packages/admin/src/lib/api/marketplace.ts:427
+#: packages/admin/src/lib/api/marketplace.ts:428
 msgid "Review and block publishing, scheduling, and unpublishing content"
 msgstr "Tinjau dan blokir publikasi, penjadwalan, dan pembatalan publikasi konten"
 
@@ -11322,6 +11337,10 @@ msgstr "Kirimkan surel uji melalui pipeline penuh untuk memverifikasi konfiguras
 #: packages/admin/src/components/users/InviteUserModal.tsx:84
 msgid "Send an invitation email to a new team member."
 msgstr "Kirimkan surel undangan kepada anggota tim baru."
+
+#: packages/admin/src/lib/api/marketplace.ts:441
+msgid "Send email through your site"
+msgstr ""
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
 msgid "Send Invite"
@@ -13501,8 +13520,8 @@ msgstr "Unggah gambar untuk memulai"
 msgid "Upload and delete media"
 msgstr "Unggah dan hapus media"
 
-#: packages/admin/src/lib/api/marketplace.ts:436
-#: packages/admin/src/lib/api/marketplace.ts:444
+#: packages/admin/src/lib/api/marketplace.ts:437
+#: packages/admin/src/lib/api/marketplace.ts:449
 msgid "Upload and manage media"
 msgstr "Unggah dan kelola media"
 

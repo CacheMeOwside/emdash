@@ -469,7 +469,7 @@ msgid "{added} updated · {0} failed"
 msgstr "{added} aktualisiert · {0} fehlgeschlagen"
 
 #. placeholder {0}: allowedHosts.join(", ")
-#: packages/admin/src/lib/api/marketplace.ts:466
+#: packages/admin/src/lib/api/marketplace.ts:474
 msgid "{base} to: {0}"
 msgstr "{base} (erlaubte Hosts: {0})"
 
@@ -1064,8 +1064,8 @@ msgstr "Zugriff verweigert"
 msgid "Access Denied"
 msgstr "Zugriff verweigert"
 
-#: packages/admin/src/lib/api/marketplace.ts:433
-#: packages/admin/src/lib/api/marketplace.ts:443
+#: packages/admin/src/lib/api/marketplace.ts:434
+#: packages/admin/src/lib/api/marketplace.ts:448
 msgid "Access your media library"
 msgstr "Auf deine Medienbibliothek zugreifen"
 
@@ -1293,6 +1293,11 @@ msgstr "Zeile darüber einfügen"
 #: packages/admin/src/components/PortableTextEditor.tsx:4436
 msgid "Add row below"
 msgstr "Zeile darunter einfügen"
+
+#: packages/admin/src/lib/api/marketplace.ts:444
+#: packages/admin/src/lib/api/marketplace.ts:455
+msgid "Add scripts and styles to your site's pages"
+msgstr ""
 
 #: packages/admin/src/components/ContentPickerModal.tsx:390
 msgid "Add selected"
@@ -1713,7 +1718,7 @@ msgstr "Freigabeanfragen"
 msgid "Approve"
 msgstr "Freigeben"
 
-#: packages/admin/src/lib/api/marketplace.ts:423
+#: packages/admin/src/lib/api/marketplace.ts:424
 msgid "Approve comments and mark them as pending or spam"
 msgstr "Kommentare freigeben und als ausstehend oder Spam markieren"
 
@@ -2443,7 +2448,7 @@ msgstr "Veröffentlichungsdatum ändern: {formattedValue}"
 msgid "Change schedule"
 msgstr "Planung ändern"
 
-#: packages/admin/src/lib/api/marketplace.ts:432
+#: packages/admin/src/lib/api/marketplace.ts:433
 msgid "Change where visitors are sent"
 msgstr "Ändern, wohin Besucher weitergeleitet werden"
 
@@ -2964,13 +2969,13 @@ msgstr "Verbinden & analysieren"
 msgid "Connect to {0}"
 msgstr "Mit {0} verbinden"
 
-#: packages/admin/src/lib/api/marketplace.ts:439
-#: packages/admin/src/lib/api/marketplace.ts:447
+#: packages/admin/src/lib/api/marketplace.ts:440
+#: packages/admin/src/lib/api/marketplace.ts:452
 msgid "Connect to any network host and load external plugin admin images (unrestricted)"
 msgstr "Verbindung zu einem beliebigen Host herstellen und externe Bilder des Plugins im Adminbereich laden (unbeschränkt)"
 
-#: packages/admin/src/lib/api/marketplace.ts:438
-#: packages/admin/src/lib/api/marketplace.ts:446
+#: packages/admin/src/lib/api/marketplace.ts:439
+#: packages/admin/src/lib/api/marketplace.ts:451
 msgid "Connect to network hosts and load external plugin admin images"
 msgstr "Verbindung zu Hosts herstellen und externe Bilder des Plugins im Adminbereich laden"
 
@@ -3514,7 +3519,7 @@ msgstr "Erstelle Abschnitte in der Abschnittsbibliothek, um sie hier zu nutzen"
 msgid "Create Taxonomy"
 msgstr "Taxonomie erstellen"
 
-#: packages/admin/src/lib/api/marketplace.ts:429
+#: packages/admin/src/lib/api/marketplace.ts:430
 msgid "Create taxonomy terms and change content classifications"
 msgstr "Taxonomie-Begriffe erstellen und die Klassifizierung von Inhalten ändern"
 
@@ -3547,8 +3552,8 @@ msgstr "Erstelle deinen ersten Eintrag"
 msgid "Create your first reusable content section to get started."
 msgstr "Erstelle deinen ersten wiederverwendbaren Inhaltsabschnitt, um zu beginnen."
 
-#: packages/admin/src/lib/api/marketplace.ts:419
-#: packages/admin/src/lib/api/marketplace.ts:442
+#: packages/admin/src/lib/api/marketplace.ts:420
+#: packages/admin/src/lib/api/marketplace.ts:447
 msgid "Create, update, and delete content"
 msgstr "Inhalte erstellen, aktualisieren und löschen"
 
@@ -4022,6 +4027,11 @@ msgstr "Wird gelöscht..."
 #: packages/admin/src/routes/byline-schema.tsx:379
 msgid "Deleting…"
 msgstr "Wird gelöscht…"
+
+#: packages/admin/src/lib/api/marketplace.ts:443
+#: packages/admin/src/lib/api/marketplace.ts:454
+msgid "Deliver all email your site sends"
+msgstr ""
 
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:254
 #: packages/admin/src/components/ThemeMarketplaceDetail.tsx:147
@@ -4613,7 +4623,7 @@ msgstr "Link bearbeiten"
 msgid "Edit locking"
 msgstr "Bearbeitungssperre"
 
-#: packages/admin/src/lib/api/marketplace.ts:435
+#: packages/admin/src/lib/api/marketplace.ts:436
 msgid "Edit media alt text, captions, and focal points"
 msgstr "Alt-Text, Bildunterschriften und Fokuspunkte von Medien bearbeiten"
 
@@ -9550,7 +9560,7 @@ msgstr "Fortschritt"
 msgid "Progress stopped"
 msgstr "Vorgang unterbrochen"
 
-#: packages/admin/src/lib/api/marketplace.ts:426
+#: packages/admin/src/lib/api/marketplace.ts:427
 msgid "Propose unsaved changes to selected editor fields for your review"
 msgstr "Ungespeicherte Änderungen an ausgewählten Feldern im Editor zur Prüfung vorschlagen"
 
@@ -9614,7 +9624,7 @@ msgstr "Jetzt veröffentlichen"
 msgid "Publish now?"
 msgstr "Jetzt veröffentlichen?"
 
-#: packages/admin/src/lib/api/marketplace.ts:420
+#: packages/admin/src/lib/api/marketplace.ts:421
 msgid "Publish, unpublish, schedule, and unschedule content"
 msgstr "Inhalte veröffentlichen und zurückziehen, planen und die Planung aufheben"
 
@@ -9712,11 +9722,16 @@ msgstr "Zitat"
 msgid "Raw meta"
 msgstr "Rohe Metadaten"
 
-#: packages/admin/src/lib/api/marketplace.ts:421
+#: packages/admin/src/lib/api/marketplace.ts:442
+#: packages/admin/src/lib/api/marketplace.ts:453
+msgid "Read and change email your site sends"
+msgstr ""
+
+#: packages/admin/src/lib/api/marketplace.ts:422
 msgid "Read and restore trashed content"
 msgstr "Inhalte im Papierkorb lesen und wiederherstellen"
 
-#: packages/admin/src/lib/api/marketplace.ts:424
+#: packages/admin/src/lib/api/marketplace.ts:425
 msgid "Read collection and field definitions"
 msgstr "Sammlungs- und Felddefinitionen lesen"
 
@@ -9724,7 +9739,7 @@ msgstr "Sammlungs- und Felddefinitionen lesen"
 msgid "Read collection schemas"
 msgstr "Sammlungsschemata lesen"
 
-#: packages/admin/src/lib/api/marketplace.ts:422
+#: packages/admin/src/lib/api/marketplace.ts:423
 msgid "Read comment bodies, author email addresses, pseudonymous IP hashes, user agents, and moderation metadata"
 msgstr "Kommentartexte, E-Mail-Adressen der Verfasser, pseudonymisierte IP-Hashes, User-Agents und Moderationsmetadaten lesen"
 
@@ -9732,7 +9747,7 @@ msgstr "Kommentartexte, E-Mail-Adressen der Verfasser, pseudonymisierte IP-Hashe
 msgid "Read content entries"
 msgstr "Inhaltseinträge lesen"
 
-#: packages/admin/src/lib/api/marketplace.ts:434
+#: packages/admin/src/lib/api/marketplace.ts:435
 msgid "Read media file contents"
 msgstr "Inhalte von Mediendateien lesen"
 
@@ -9740,19 +9755,19 @@ msgstr "Inhalte von Mediendateien lesen"
 msgid "Read media files"
 msgstr "Mediendateien lesen"
 
-#: packages/admin/src/lib/api/marketplace.ts:430
+#: packages/admin/src/lib/api/marketplace.ts:431
 msgid "Read public byline profiles and content credits"
 msgstr "Öffentliche Autorenangaben und ihre Zuordnungen zu Inhalten lesen"
 
-#: packages/admin/src/lib/api/marketplace.ts:431
+#: packages/admin/src/lib/api/marketplace.ts:432
 msgid "Read redirect rules"
 msgstr "Weiterleitungsregeln lesen"
 
-#: packages/admin/src/lib/api/marketplace.ts:418
+#: packages/admin/src/lib/api/marketplace.ts:419
 msgid "Read retained content revision history"
 msgstr "Aufbewahrte Revisionen von Inhalten lesen"
 
-#: packages/admin/src/lib/api/marketplace.ts:425
+#: packages/admin/src/lib/api/marketplace.ts:426
 msgid "Read selected unsaved editor content after you explicitly invoke the plugin"
 msgstr "Ausgewählte ungespeicherte Inhalte aus dem Editor lesen, wenn du das Plugin selbst ausführst"
 
@@ -9760,17 +9775,17 @@ msgstr "Ausgewählte ungespeicherte Inhalte aus dem Editor lesen, wenn du das Pl
 msgid "Read site settings"
 msgstr "Website-Einstellungen lesen"
 
-#: packages/admin/src/lib/api/marketplace.ts:437
-#: packages/admin/src/lib/api/marketplace.ts:445
+#: packages/admin/src/lib/api/marketplace.ts:438
+#: packages/admin/src/lib/api/marketplace.ts:450
 msgid "Read user accounts"
 msgstr "Benutzerkonten lesen"
 
-#: packages/admin/src/lib/api/marketplace.ts:417
-#: packages/admin/src/lib/api/marketplace.ts:441
+#: packages/admin/src/lib/api/marketplace.ts:418
+#: packages/admin/src/lib/api/marketplace.ts:446
 msgid "Read your content"
 msgstr "Deine Inhalte lesen"
 
-#: packages/admin/src/lib/api/marketplace.ts:428
+#: packages/admin/src/lib/api/marketplace.ts:429
 msgid "Read your taxonomies and terms"
 msgstr "Deine Taxonomien und Begriffe lesen"
 
@@ -10455,7 +10470,7 @@ msgstr "Zur veröffentlichten Version zurückgesetzt"
 msgid "Review"
 msgstr "Überprüfen"
 
-#: packages/admin/src/lib/api/marketplace.ts:427
+#: packages/admin/src/lib/api/marketplace.ts:428
 msgid "Review and block publishing, scheduling, and unpublishing content"
 msgstr "Das Veröffentlichen, Planen und Zurückziehen von Inhalten prüfen und blockieren"
 
@@ -11322,6 +11337,10 @@ msgstr "Sende eine Test-E-Mail über die gesamte Pipeline, um deine E-Mail-Konfi
 #: packages/admin/src/components/users/InviteUserModal.tsx:84
 msgid "Send an invitation email to a new team member."
 msgstr "Sende eine Einladung per E-Mail an ein neues Teammitglied."
+
+#: packages/admin/src/lib/api/marketplace.ts:441
+msgid "Send email through your site"
+msgstr ""
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
 msgid "Send Invite"
@@ -13501,8 +13520,8 @@ msgstr "Lade ein Bild hoch, um zu beginnen"
 msgid "Upload and delete media"
 msgstr "Mediendateien hochladen und löschen"
 
-#: packages/admin/src/lib/api/marketplace.ts:436
-#: packages/admin/src/lib/api/marketplace.ts:444
+#: packages/admin/src/lib/api/marketplace.ts:437
+#: packages/admin/src/lib/api/marketplace.ts:449
 msgid "Upload and manage media"
 msgstr "Medien hochladen und verwalten"
 
