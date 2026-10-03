@@ -1544,6 +1544,11 @@ msgstr ""
 msgid "Also requested, but not available to your role:"
 msgstr ""
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:65
+msgid "visualEditing.altText"
+msgstr ""
+
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:485
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:514
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:518
@@ -1960,6 +1965,11 @@ msgstr ""
 #: packages/admin/src/components/BylineAvatarField.tsx:46
 #: packages/admin/src/components/BylineAvatarField.tsx:71
 msgid "Avatar"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:74
+msgid "visualEditing.back"
 msgstr ""
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:628
@@ -4061,6 +4071,11 @@ msgstr ""
 msgid "Deny"
 msgstr "رد"
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:66
+msgid "visualEditing.altTextPlaceholder"
+msgstr ""
+
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:521
 #: packages/admin/src/components/PortableTextEditor.tsx:4774
 msgid "Describe the image"
@@ -4388,6 +4403,11 @@ msgstr "در حال دریافت"
 msgid "Downloading the package"
 msgstr ""
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:53
+msgid "visualEditing.draft"
+msgstr ""
+
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:370
 #: packages/admin/src/components/ContentList.tsx:1021
 #: packages/admin/src/components/ContentStatusBadge.tsx:61
@@ -4642,7 +4662,7 @@ msgid "Edit menu items"
 msgstr "ویرایش آیتم‌های فهرست"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:30
+#: packages/admin/src/locales/server.ts:50
 msgid "visualEditing.editMode"
 msgstr ""
 
@@ -4686,7 +4706,7 @@ msgid "Editing on this site is paused until the import finishes."
 msgstr ""
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:21
+#: packages/admin/src/locales/server.ts:41
 msgid "visualEditing.sessionExpired"
 msgstr ""
 
@@ -5549,6 +5569,11 @@ msgstr ""
 msgid "Failed to load imports"
 msgstr ""
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:77
+msgid "visualEditing.mediaLoadFailed"
+msgstr ""
+
 #: packages/admin/src/components/settings/SecuritySettings.tsx:123
 msgid "Failed to load passkeys"
 msgstr "بارگذاری شاه‌کلیدها ناموفق بود"
@@ -6321,7 +6346,7 @@ msgid "Hide token"
 msgstr "مخفی‌کردن توکن"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:32
+#: packages/admin/src/locales/server.ts:52
 msgid "visualEditing.hideToolbar"
 msgstr ""
 
@@ -6462,6 +6487,11 @@ msgstr ""
 
 #: packages/admin/src/components/editor/IframeBlockNode.tsx:211
 msgid "Iframe block options"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:63
+msgid "visualEditing.image"
 msgstr ""
 
 #: packages/admin/src/components/FieldEditor.tsx:437
@@ -7464,6 +7494,11 @@ msgstr ""
 msgid "Loading..."
 msgstr "در حال بارگذاری..."
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:75
+msgid "visualEditing.loading"
+msgstr ""
+
 #: packages/admin/src/components/BylineFilter.tsx:147
 #: packages/admin/src/components/settings/transfer/ApprovalsSection.tsx:134
 msgid "Loading…"
@@ -7720,6 +7755,11 @@ msgstr "درون‌ریزی رسانه رد شد"
 
 #: packages/admin/src/components/MediaFolderDialog.tsx:183
 msgid "Media in this folder will return to Main library. No files will be deleted."
+msgstr ""
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:73
+msgid "visualEditing.mediaLibrary"
 msgstr ""
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:166
@@ -8493,6 +8533,16 @@ msgstr "سرتیتری در سند نیست"
 msgid "No iframe found in this code. For an embed that runs a script, use an HTML block."
 msgstr ""
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:64
+msgid "visualEditing.noImageSelected"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:76
+msgid "visualEditing.noImagesFound"
+msgstr ""
+
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:271
 msgid "No images in this gallery yet."
 msgstr ""
@@ -8873,7 +8923,7 @@ msgid "Open folder {0}"
 msgstr ""
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:31
+#: packages/admin/src/locales/server.ts:51
 msgid "visualEditing.openInAdmin"
 msgstr ""
 
@@ -9593,7 +9643,7 @@ msgid "Publication policy blocked scheduled content"
 msgstr ""
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:19
+#: packages/admin/src/locales/server.ts:39
 msgid "visualEditing.publish"
 msgstr ""
 
@@ -9612,7 +9662,7 @@ msgid "Publish changes?"
 msgstr ""
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:26
+#: packages/admin/src/locales/server.ts:46
 msgid "visualEditing.publishFailed"
 msgstr ""
 
@@ -9627,6 +9677,11 @@ msgstr ""
 
 #: packages/admin/src/lib/api/marketplace.ts:421
 msgid "Publish, unpublish, schedule, and unschedule content"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:54
+msgid "visualEditing.published"
 msgstr ""
 
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:43
@@ -9689,7 +9744,7 @@ msgid "Publishing summary"
 msgstr ""
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:20
+#: packages/admin/src/locales/server.ts:40
 msgid "visualEditing.publishing"
 msgstr ""
 
@@ -9914,7 +9969,7 @@ msgid "Referenced favicon unavailable."
 msgstr ""
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:25
+#: packages/admin/src/locales/server.ts:45
 msgid "visualEditing.refreshPage"
 msgstr ""
 
@@ -9993,6 +10048,11 @@ msgstr ""
 
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:489
 msgid "Reloading the plan…"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:72
+msgid "visualEditing.removeImage"
 msgstr ""
 
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:84
@@ -10158,6 +10218,11 @@ msgstr "تکرارشونده"
 #: packages/admin/src/components/FieldEditor.tsx:474
 msgid "Repeating group of fields"
 msgstr "گروه تکرارشونده فیلدها"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:70
+msgid "visualEditing.replaceImage"
+msgstr ""
 
 #: packages/admin/src/components/ContentEditor.tsx:3172
 #: packages/admin/src/components/ContentEditor.tsx:3209
@@ -10693,6 +10758,11 @@ msgstr "ذخیره محتوا به‌عنوان پیش‌نویس قبل از ا
 msgid "Save date"
 msgstr ""
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:62
+msgid "visualEditing.saveFailed"
+msgstr ""
+
 #: packages/admin/src/components/settings/PasskeyItem.tsx:112
 msgid "Save name"
 msgstr "ذخیره نام"
@@ -10713,6 +10783,11 @@ msgstr ""
 #: packages/admin/src/components/PluginSettings.tsx:209
 msgid "Save Settings"
 msgstr "ذخیره تنظیمات"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:61
+msgid "visualEditing.saved"
+msgstr ""
 
 #: packages/admin/src/components/SaveButton.tsx:34
 msgid "Saved"
@@ -10746,6 +10821,11 @@ msgstr ""
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
 msgstr "درحال ذخیره‌سازی …"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:60
+msgid "visualEditing.saving"
+msgstr ""
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:318
 msgid "Saving…"
@@ -13380,12 +13460,22 @@ msgstr ""
 msgid "Unpublished"
 msgstr ""
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:55
+msgid "visualEditing.unpublishedChanges"
+msgstr ""
+
 #: packages/admin/src/components/ContentTypeList.tsx:153
 msgid "Unregistered Content Tables Found"
 msgstr "جداول محتوای ثبت‌نشده یافت شد"
 
 #: packages/admin/src/components/TaxonomySidebar.tsx:844
 msgid "Unresolved assignment"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:59
+msgid "visualEditing.unsaved"
 msgstr ""
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:131
@@ -13505,6 +13595,11 @@ msgstr ""
 msgid "Updating..."
 msgstr "در حال به‌روزرسانی..."
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:71
+msgid "visualEditing.uploadImage"
+msgstr ""
+
 #: packages/admin/src/components/MediaLibrary.tsx:804
 msgid "Upload"
 msgstr "بارگذاری"
@@ -13596,6 +13691,11 @@ msgstr "بارگذاری‌شد:"
 #: packages/admin/src/components/WordPressImport.tsx:2150
 msgid "Uploading"
 msgstr "در حال آپلود"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:78
+msgid "visualEditing.uploadingFile"
+msgstr ""
 
 #: packages/admin/src/components/editor/ImageUploadExtension.ts:114
 #: packages/admin/src/components/media/ImageDropTarget.tsx:134

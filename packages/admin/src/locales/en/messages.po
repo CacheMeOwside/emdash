@@ -1542,6 +1542,11 @@ msgstr "Also match the byline linked to an entry's author when it has none assig
 msgid "Also requested, but not available to your role:"
 msgstr "Also requested, but not available to your role:"
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:65
+msgid "visualEditing.altText"
+msgstr "Alt text"
+
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:485
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:514
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:518
@@ -1959,6 +1964,11 @@ msgstr "Available Widgets"
 #: packages/admin/src/components/BylineAvatarField.tsx:71
 msgid "Avatar"
 msgstr "Avatar"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:74
+msgid "visualEditing.back"
+msgstr "Back"
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:628
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:665
@@ -4059,6 +4069,11 @@ msgstr "Demoting..."
 msgid "Deny"
 msgstr "Deny"
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:66
+msgid "visualEditing.altTextPlaceholder"
+msgstr "Describe the image"
+
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:521
 #: packages/admin/src/components/PortableTextEditor.tsx:4774
 msgid "Describe the image"
@@ -4386,6 +4401,11 @@ msgstr "Downloading"
 msgid "Downloading the package"
 msgstr "Downloading the package"
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:53
+msgid "visualEditing.draft"
+msgstr "Draft"
+
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:370
 #: packages/admin/src/components/ContentList.tsx:1021
 #: packages/admin/src/components/ContentStatusBadge.tsx:61
@@ -4640,7 +4660,7 @@ msgid "Edit menu items"
 msgstr "Edit menu items"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:30
+#: packages/admin/src/locales/server.ts:50
 msgid "visualEditing.editMode"
 msgstr "Edit mode"
 
@@ -4684,7 +4704,7 @@ msgid "Editing on this site is paused until the import finishes."
 msgstr "Editing on this site is paused until the import finishes."
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:21
+#: packages/admin/src/locales/server.ts:41
 msgid "visualEditing.sessionExpired"
 msgstr "Editing session expired. Refresh the page to continue."
 
@@ -5550,6 +5570,11 @@ msgstr "Failed to load import receipt"
 msgid "Failed to load imports"
 msgstr "Failed to load imports"
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:77
+msgid "visualEditing.mediaLoadFailed"
+msgstr "Failed to load media"
+
 #: packages/admin/src/components/settings/SecuritySettings.tsx:123
 msgid "Failed to load passkeys"
 msgstr "Failed to load passkeys"
@@ -6322,7 +6347,7 @@ msgid "Hide token"
 msgstr "Hide token"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:32
+#: packages/admin/src/locales/server.ts:52
 msgid "visualEditing.hideToolbar"
 msgstr "Hide toolbar"
 
@@ -6464,6 +6489,11 @@ msgstr "Iframe"
 #: packages/admin/src/components/editor/IframeBlockNode.tsx:211
 msgid "Iframe block options"
 msgstr "Iframe block options"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:63
+msgid "visualEditing.image"
+msgstr "Image"
 
 #: packages/admin/src/components/FieldEditor.tsx:437
 #: packages/admin/src/components/FieldEditor.tsx:1240
@@ -7465,6 +7495,11 @@ msgstr "Loading widgets..."
 msgid "Loading..."
 msgstr "Loading..."
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:75
+msgid "visualEditing.loading"
+msgstr "Loading…"
+
 #: packages/admin/src/components/BylineFilter.tsx:147
 #: packages/admin/src/components/settings/transfer/ApprovalsSection.tsx:134
 msgid "Loading…"
@@ -7722,6 +7757,11 @@ msgstr "Media import was skipped"
 #: packages/admin/src/components/MediaFolderDialog.tsx:183
 msgid "Media in this folder will return to Main library. No files will be deleted."
 msgstr "Media in this folder will return to Main library. No files will be deleted."
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:73
+msgid "visualEditing.mediaLibrary"
+msgstr "Media Library"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:166
 #: packages/admin/src/components/MediaLibrary.tsx:755
@@ -8494,6 +8534,16 @@ msgstr "No headings in document"
 msgid "No iframe found in this code. For an embed that runs a script, use an HTML block."
 msgstr "No iframe found in this code. For an embed that runs a script, use an HTML block."
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:64
+msgid "visualEditing.noImageSelected"
+msgstr "No image selected"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:76
+msgid "visualEditing.noImagesFound"
+msgstr "No images found"
+
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:271
 msgid "No images in this gallery yet."
 msgstr "No images in this gallery yet."
@@ -8874,7 +8924,7 @@ msgid "Open folder {0}"
 msgstr "Open folder {0}"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:31
+#: packages/admin/src/locales/server.ts:51
 msgid "visualEditing.openInAdmin"
 msgstr "Open in admin"
 
@@ -9597,7 +9647,7 @@ msgid "Publication policy blocked scheduled content"
 msgstr "Publication policy blocked scheduled content"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:19
+#: packages/admin/src/locales/server.ts:39
 msgid "visualEditing.publish"
 msgstr "Publish"
 
@@ -9616,7 +9666,7 @@ msgid "Publish changes?"
 msgstr "Publish changes?"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:26
+#: packages/admin/src/locales/server.ts:46
 msgid "visualEditing.publishFailed"
 msgstr "Publish failed. Check your permissions and try again."
 
@@ -9632,6 +9682,11 @@ msgstr "Publish now?"
 #: packages/admin/src/lib/api/marketplace.ts:421
 msgid "Publish, unpublish, schedule, and unschedule content"
 msgstr "Publish, unpublish, schedule, and unschedule content"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:54
+msgid "visualEditing.published"
+msgstr "Published"
 
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:43
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:180
@@ -9693,7 +9748,7 @@ msgid "Publishing summary"
 msgstr "Publishing summary"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:20
+#: packages/admin/src/locales/server.ts:40
 msgid "visualEditing.publishing"
 msgstr "Publishing…"
 
@@ -9918,7 +9973,7 @@ msgid "Referenced favicon unavailable."
 msgstr "Referenced favicon unavailable."
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:25
+#: packages/admin/src/locales/server.ts:45
 msgid "visualEditing.refreshPage"
 msgstr "Refresh page"
 
@@ -9998,6 +10053,11 @@ msgstr "Reload page"
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:489
 msgid "Reloading the plan…"
 msgstr "Reloading the plan…"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:72
+msgid "visualEditing.removeImage"
+msgstr "Remove"
 
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:84
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:115
@@ -10162,6 +10222,11 @@ msgstr "Repeater"
 #: packages/admin/src/components/FieldEditor.tsx:474
 msgid "Repeating group of fields"
 msgstr "Repeating group of fields"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:70
+msgid "visualEditing.replaceImage"
+msgstr "Replace"
 
 #: packages/admin/src/components/ContentEditor.tsx:3172
 #: packages/admin/src/components/ContentEditor.tsx:3209
@@ -10697,6 +10762,11 @@ msgstr "Save content as draft before publishing"
 msgid "Save date"
 msgstr "Save date"
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:62
+msgid "visualEditing.saveFailed"
+msgstr "Save failed"
+
 #: packages/admin/src/components/settings/PasskeyItem.tsx:112
 msgid "Save name"
 msgstr "Save name"
@@ -10717,6 +10787,11 @@ msgstr "Save schedule"
 #: packages/admin/src/components/PluginSettings.tsx:209
 msgid "Save Settings"
 msgstr "Save Settings"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:61
+msgid "visualEditing.saved"
+msgstr "Saved"
 
 #: packages/admin/src/components/SaveButton.tsx:34
 msgid "Saved"
@@ -10750,6 +10825,11 @@ msgstr "Saving a collection here turns this field into an entry picker. Its stor
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
 msgstr "Saving..."
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:60
+msgid "visualEditing.saving"
+msgstr "Saving…"
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:318
 msgid "Saving…"
@@ -13384,6 +13464,11 @@ msgstr "Unpublish {itemLabel}"
 msgid "Unpublished"
 msgstr "Unpublished"
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:55
+msgid "visualEditing.unpublishedChanges"
+msgstr "Unpublished changes"
+
 #: packages/admin/src/components/ContentTypeList.tsx:153
 msgid "Unregistered Content Tables Found"
 msgstr "Unregistered Content Tables Found"
@@ -13391,6 +13476,11 @@ msgstr "Unregistered Content Tables Found"
 #: packages/admin/src/components/TaxonomySidebar.tsx:844
 msgid "Unresolved assignment"
 msgstr "Unresolved assignment"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:59
+msgid "visualEditing.unsaved"
+msgstr "Unsaved"
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:131
 msgid "Unsaved content may leave your site"
@@ -13509,6 +13599,11 @@ msgstr "Updating usage"
 msgid "Updating..."
 msgstr "Updating..."
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:71
+msgid "visualEditing.uploadImage"
+msgstr "Upload"
+
 #: packages/admin/src/components/MediaLibrary.tsx:804
 msgid "Upload"
 msgstr "Upload"
@@ -13600,6 +13695,11 @@ msgstr "Uploaded:"
 #: packages/admin/src/components/WordPressImport.tsx:2150
 msgid "Uploading"
 msgstr "Uploading"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:78
+msgid "visualEditing.uploadingFile"
+msgstr "Uploading {filename}…"
 
 #: packages/admin/src/components/editor/ImageUploadExtension.ts:114
 #: packages/admin/src/components/media/ImageDropTarget.tsx:134

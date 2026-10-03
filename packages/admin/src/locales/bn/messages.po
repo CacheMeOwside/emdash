@@ -1542,6 +1542,11 @@ msgstr "কোনো এন্ট্রিতে বাইলাইন নির
 msgid "Also requested, but not available to your role:"
 msgstr ""
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:65
+msgid "visualEditing.altText"
+msgstr ""
+
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:485
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:514
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:518
@@ -1959,6 +1964,11 @@ msgstr "উপলব্ধ উইজেট"
 #: packages/admin/src/components/BylineAvatarField.tsx:71
 msgid "Avatar"
 msgstr "অবতার"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:74
+msgid "visualEditing.back"
+msgstr ""
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:628
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:665
@@ -4059,6 +4069,11 @@ msgstr "ভূমিকা নামানো হচ্ছে..."
 msgid "Deny"
 msgstr "অস্বীকার করুন"
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:66
+msgid "visualEditing.altTextPlaceholder"
+msgstr ""
+
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:521
 #: packages/admin/src/components/PortableTextEditor.tsx:4774
 msgid "Describe the image"
@@ -4386,6 +4401,11 @@ msgstr "ডাউনলোড হচ্ছে"
 msgid "Downloading the package"
 msgstr "প্যাকেজ ডাউনলোড হচ্ছে"
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:53
+msgid "visualEditing.draft"
+msgstr ""
+
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:370
 #: packages/admin/src/components/ContentList.tsx:1021
 #: packages/admin/src/components/ContentStatusBadge.tsx:61
@@ -4640,7 +4660,7 @@ msgid "Edit menu items"
 msgstr "মেনু আইটেম সম্পাদনা করুন"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:30
+#: packages/admin/src/locales/server.ts:50
 msgid "visualEditing.editMode"
 msgstr "সম্পাদনা মোড"
 
@@ -4684,7 +4704,7 @@ msgid "Editing on this site is paused until the import finishes."
 msgstr "ইমপোর্ট শেষ না হওয়া পর্যন্ত এই সাইটে সম্পাদনা স্থগিত থাকবে।"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:21
+#: packages/admin/src/locales/server.ts:41
 msgid "visualEditing.sessionExpired"
 msgstr "সম্পাদনার সেশনের মেয়াদ শেষ হয়েছে। চালিয়ে যেতে পেজটি রিফ্রেশ করুন।"
 
@@ -5550,6 +5570,11 @@ msgstr "ইমপোর্টের রসিদ লোড করতে ব্�
 msgid "Failed to load imports"
 msgstr "ইমপোর্টগুলো লোড করতে ব্যর্থ হয়েছে"
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:77
+msgid "visualEditing.mediaLoadFailed"
+msgstr ""
+
 #: packages/admin/src/components/settings/SecuritySettings.tsx:123
 msgid "Failed to load passkeys"
 msgstr "পাসকি লোড করতে ব্যর্থ হয়েছে"
@@ -6322,7 +6347,7 @@ msgid "Hide token"
 msgstr "টোকেন লুকান"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:32
+#: packages/admin/src/locales/server.ts:52
 msgid "visualEditing.hideToolbar"
 msgstr "টুলবার লুকান"
 
@@ -6463,6 +6488,11 @@ msgstr ""
 
 #: packages/admin/src/components/editor/IframeBlockNode.tsx:211
 msgid "Iframe block options"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:63
+msgid "visualEditing.image"
 msgstr ""
 
 #: packages/admin/src/components/FieldEditor.tsx:437
@@ -7465,6 +7495,11 @@ msgstr "উইজেট লোড হচ্ছে..."
 msgid "Loading..."
 msgstr "লোড হচ্ছে..."
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:75
+msgid "visualEditing.loading"
+msgstr ""
+
 #: packages/admin/src/components/BylineFilter.tsx:147
 #: packages/admin/src/components/settings/transfer/ApprovalsSection.tsx:134
 msgid "Loading…"
@@ -7722,6 +7757,11 @@ msgstr "মিডিয়া ইমপোর্ট এড়িয়ে যা
 #: packages/admin/src/components/MediaFolderDialog.tsx:183
 msgid "Media in this folder will return to Main library. No files will be deleted."
 msgstr "এই ফোল্ডারের মিডিয়া মূল লাইব্রেরিতে ফিরে যাবে। কোনো ফাইল মুছে ফেলা হবে না।"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:73
+msgid "visualEditing.mediaLibrary"
+msgstr ""
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:166
 #: packages/admin/src/components/MediaLibrary.tsx:755
@@ -8494,6 +8534,16 @@ msgstr "ডকুমেন্টে কোনো হেডিং নেই"
 msgid "No iframe found in this code. For an embed that runs a script, use an HTML block."
 msgstr ""
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:64
+msgid "visualEditing.noImageSelected"
+msgstr ""
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:76
+msgid "visualEditing.noImagesFound"
+msgstr ""
+
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:271
 msgid "No images in this gallery yet."
 msgstr "এই গ্যালারিতে এখনও কোনো ছবি নেই।"
@@ -8874,7 +8924,7 @@ msgid "Open folder {0}"
 msgstr "{0} ফোল্ডার খুলুন"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:31
+#: packages/admin/src/locales/server.ts:51
 msgid "visualEditing.openInAdmin"
 msgstr "অ্যাডমিনে খুলুন"
 
@@ -9597,7 +9647,7 @@ msgid "Publication policy blocked scheduled content"
 msgstr "প্রকাশনা নীতি নির্ধারিত কনটেন্ট আটকে দিয়েছে"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:19
+#: packages/admin/src/locales/server.ts:39
 msgid "visualEditing.publish"
 msgstr "প্রকাশ করুন"
 
@@ -9616,7 +9666,7 @@ msgid "Publish changes?"
 msgstr "পরিবর্তন প্রকাশ করবেন?"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:26
+#: packages/admin/src/locales/server.ts:46
 msgid "visualEditing.publishFailed"
 msgstr "প্রকাশ করতে ব্যর্থ হয়েছে। আপনার অনুমতি পরীক্ষা করে আবার চেষ্টা করুন।"
 
@@ -9632,6 +9682,11 @@ msgstr "এখনই প্রকাশ করবেন?"
 #: packages/admin/src/lib/api/marketplace.ts:421
 msgid "Publish, unpublish, schedule, and unschedule content"
 msgstr "কনটেন্ট প্রকাশ, অপ্রকাশিত, সময় নির্ধারণ এবং নির্ধারিত সময় বাতিল করা"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:54
+msgid "visualEditing.published"
+msgstr ""
 
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:43
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:180
@@ -9693,7 +9748,7 @@ msgid "Publishing summary"
 msgstr "প্রকাশনার সারসংক্ষেপ"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:20
+#: packages/admin/src/locales/server.ts:40
 msgid "visualEditing.publishing"
 msgstr "প্রকাশ করা হচ্ছে…"
 
@@ -9918,7 +9973,7 @@ msgid "Referenced favicon unavailable."
 msgstr "উল্লিখিত ফেভিকন উপলব্ধ নয়।"
 
 #. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:25
+#: packages/admin/src/locales/server.ts:45
 msgid "visualEditing.refreshPage"
 msgstr "পেজ রিফ্রেশ করুন"
 
@@ -9998,6 +10053,11 @@ msgstr ""
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:489
 msgid "Reloading the plan…"
 msgstr "প্ল্যান রিলোড করা হচ্ছে…"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:72
+msgid "visualEditing.removeImage"
+msgstr ""
 
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:84
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:115
@@ -10162,6 +10222,11 @@ msgstr "রিপিটার"
 #: packages/admin/src/components/FieldEditor.tsx:474
 msgid "Repeating group of fields"
 msgstr "পুনরাবৃত্ত ফিল্ডের গ্রুপ"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:70
+msgid "visualEditing.replaceImage"
+msgstr ""
 
 #: packages/admin/src/components/ContentEditor.tsx:3172
 #: packages/admin/src/components/ContentEditor.tsx:3209
@@ -10697,6 +10762,11 @@ msgstr "প্রকাশের আগে কনটেন্ট খসড়া
 msgid "Save date"
 msgstr "তারিখ সংরক্ষণ করুন"
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:62
+msgid "visualEditing.saveFailed"
+msgstr ""
+
 #: packages/admin/src/components/settings/PasskeyItem.tsx:112
 msgid "Save name"
 msgstr "নাম সংরক্ষণ করুন"
@@ -10717,6 +10787,11 @@ msgstr "নির্ধারিত সময় সংরক্ষণ করু
 #: packages/admin/src/components/PluginSettings.tsx:209
 msgid "Save Settings"
 msgstr "সেটিংস সংরক্ষণ করুন"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:61
+msgid "visualEditing.saved"
+msgstr ""
 
 #: packages/admin/src/components/SaveButton.tsx:34
 msgid "Saved"
@@ -10750,6 +10825,11 @@ msgstr ""
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
 msgstr "সংরক্ষণ করা হচ্ছে..."
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:60
+msgid "visualEditing.saving"
+msgstr ""
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:318
 msgid "Saving…"
@@ -13384,6 +13464,11 @@ msgstr "{itemLabel} অপ্রকাশিত করুন"
 msgid "Unpublished"
 msgstr "অপ্রকাশিত"
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:55
+msgid "visualEditing.unpublishedChanges"
+msgstr ""
+
 #: packages/admin/src/components/ContentTypeList.tsx:153
 msgid "Unregistered Content Tables Found"
 msgstr "অনিবন্ধিত কনটেন্ট টেবিল পাওয়া গেছে"
@@ -13391,6 +13476,11 @@ msgstr "অনিবন্ধিত কনটেন্ট টেবিল পা
 #: packages/admin/src/components/TaxonomySidebar.tsx:844
 msgid "Unresolved assignment"
 msgstr "অমীমাংসিত অ্যাসাইনমেন্ট"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:59
+msgid "visualEditing.unsaved"
+msgstr ""
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:131
 msgid "Unsaved content may leave your site"
@@ -13509,6 +13599,11 @@ msgstr "ব্যবহারের তথ্য আপডেট করা হ�
 msgid "Updating..."
 msgstr "আপডেট করা হচ্ছে..."
 
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:71
+msgid "visualEditing.uploadImage"
+msgstr ""
+
 #: packages/admin/src/components/MediaLibrary.tsx:804
 msgid "Upload"
 msgstr "আপলোড করুন"
@@ -13600,6 +13695,11 @@ msgstr "আপলোড করা হয়েছে:"
 #: packages/admin/src/components/WordPressImport.tsx:2150
 msgid "Uploading"
 msgstr "আপলোড হচ্ছে"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:78
+msgid "visualEditing.uploadingFile"
+msgstr ""
 
 #: packages/admin/src/components/editor/ImageUploadExtension.ts:114
 #: packages/admin/src/components/media/ImageDropTarget.tsx:134
