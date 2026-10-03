@@ -519,6 +519,10 @@ msgstr ""
 msgid "{earlierCount, plural, one {Show # earlier entry} other {Show # earlier entries}}"
 msgstr ""
 
+#: packages/admin/src/components/settings/GeneralSettings.tsx:218
+msgid "{failed, plural, one {# email could not be sent. Check the email provider.} other {# emails could not be sent. Check the email provider.}}"
+msgstr ""
+
 #: packages/admin/src/components/MediaUploadDialog.tsx:198
 msgid "{failedCount, plural, one {# upload failed} other {# uploads failed}}"
 msgstr "{failedCount, plural, one {#件のアップロードに失敗} other {#件のアップロードに失敗}}"
@@ -734,6 +738,18 @@ msgstr "{selectedCount, plural, one {#件を選択中} other {#件を選択中}}
 #: packages/admin/src/components/ContentList.tsx:648
 msgid "{selectedCount, plural, one {Move # item to trash? You can restore it later.} other {Move # items to trash? You can restore them later.}}"
 msgstr "{selectedCount, plural, one {#件のコンテンツをゴミ箱に移動しますか？後で復元できます。} other {#件のコンテンツをゴミ箱に移動しますか？後で復元できます。}}"
+
+#: packages/admin/src/components/settings/GeneralSettings.tsx:215
+msgid "{sent, plural, one {Emailed # user} other {Emailed # users}}"
+msgstr ""
+
+#: packages/admin/src/locales/emails.ts:71
+msgid "{siteName} has moved to {siteHost}"
+msgstr ""
+
+#: packages/admin/src/locales/emails.ts:72
+msgid "{siteName} is now at {siteHost}. Sign in there from now on."
+msgstr ""
 
 #: packages/admin/src/components/calendar/CalendarToolbar.tsx:53
 msgid "{siteZone} · Your time: {viewerZone}"
@@ -1007,7 +1023,7 @@ msgstr ""
 msgid "A relationship is required"
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:273
+#: packages/admin/src/components/settings/GeneralSettings.tsx:347
 msgid "A short description of your site"
 msgstr "サイトの概要"
 
@@ -1054,7 +1070,7 @@ msgid "Accept & Update"
 msgstr "承認して更新"
 
 #: packages/admin/src/components/InviteAcceptPage.tsx:239
-#: packages/admin/src/locales/emails.ts:48
+#: packages/admin/src/locales/emails.ts:57
 msgid "Accept Invite"
 msgstr "招待を承諾"
 
@@ -1150,9 +1166,14 @@ msgstr ""
 msgid "Add {singularLower} to posts"
 msgstr ""
 
-#: packages/admin/src/components/settings/SecuritySettings.tsx:160
+#: packages/admin/src/components/settings/SecuritySettings.tsx:165
 msgid "Add a new passkey"
 msgstr "新しいパスキーを追加"
+
+#. placeholder {0}: window.location.host
+#: packages/admin/src/components/settings/SecuritySettings.tsx:171
+msgid "Add a passkey for {0}"
+msgstr ""
 
 #: packages/admin/src/routes/bylines.tsx:700
 msgid "Add a person or team to credit on your content."
@@ -1276,7 +1297,7 @@ msgstr "新しいフォルダーを追加"
 msgid "Add noindex meta tag"
 msgstr "noindexメタタグを追加"
 
-#: packages/admin/src/components/settings/SecuritySettings.tsx:187
+#: packages/admin/src/components/settings/SecuritySettings.tsx:198
 msgid "Add Passkey"
 msgstr "パスキーを追加"
 
@@ -1603,12 +1624,13 @@ msgstr ""
 #: packages/admin/src/components/settings/BackupSettings.tsx:124
 #: packages/admin/src/components/settings/BackupSettings.tsx:167
 #: packages/admin/src/components/settings/EmailSettings.tsx:45
-#: packages/admin/src/components/settings/GeneralSettings.tsx:164
-#: packages/admin/src/components/settings/GeneralSettings.tsx:237
-#: packages/admin/src/components/settings/GeneralSettings.tsx:238
-#: packages/admin/src/components/settings/SecuritySettings.tsx:51
-#: packages/admin/src/components/settings/SecuritySettings.tsx:67
-#: packages/admin/src/components/settings/SecuritySettings.tsx:124
+#: packages/admin/src/components/settings/GeneralSettings.tsx:190
+#: packages/admin/src/components/settings/GeneralSettings.tsx:203
+#: packages/admin/src/components/settings/GeneralSettings.tsx:311
+#: packages/admin/src/components/settings/GeneralSettings.tsx:312
+#: packages/admin/src/components/settings/SecuritySettings.tsx:56
+#: packages/admin/src/components/settings/SecuritySettings.tsx:72
+#: packages/admin/src/components/settings/SecuritySettings.tsx:129
 #: packages/admin/src/components/settings/SeoSettings.tsx:82
 #: packages/admin/src/components/settings/SeoSettings.tsx:144
 #: packages/admin/src/components/settings/SeoSettings.tsx:145
@@ -1636,7 +1658,7 @@ msgstr ""
 #: packages/admin/src/router.tsx:2231
 #: packages/admin/src/router.tsx:2247
 #: packages/admin/src/router.tsx:2272
-#: packages/admin/src/router.tsx:2865
+#: packages/admin/src/router.tsx:2874
 #: packages/admin/src/routes/byline-schema.tsx:103
 #: packages/admin/src/routes/byline-schema.tsx:123
 #: packages/admin/src/routes/byline-schema.tsx:139
@@ -1849,7 +1871,7 @@ msgid "Authentication failed"
 msgstr "認証に失敗しました"
 
 #. placeholder {0}: manifest?.authMode
-#: packages/admin/src/components/settings/SecuritySettings.tsx:111
+#: packages/admin/src/components/settings/SecuritySettings.tsx:116
 msgid "Authentication is managed by an external provider ({0}). Passkey settings are not available when using external authentication."
 msgstr "認証は外部認証サービス（{0}）で管理されています。そのため、パスキーは設定できません。"
 
@@ -2318,7 +2340,8 @@ msgstr "コンテンツを閲覧できます"
 #: packages/admin/src/components/Sections.tsx:231
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:216
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:249
-#: packages/admin/src/components/settings/SecuritySettings.tsx:166
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:147
+#: packages/admin/src/components/settings/SecuritySettings.tsx:177
 #: packages/admin/src/components/TaxonomyManager.tsx:581
 #: packages/admin/src/components/TaxonomyManager.tsx:881
 #: packages/admin/src/components/TaxonomyManager.tsx:1099
@@ -2437,7 +2460,12 @@ msgstr "変更"
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "<0>{0}</0>を<1>{1}</1>から<2>{2}</2>に変更しますか？上位レベルの機能にアクセスできなくなります。"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:377
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:79
+#: packages/admin/src/components/settings/GeneralSettings.tsx:373
+msgid "Change domain"
+msgstr ""
+
+#: packages/admin/src/components/settings/GeneralSettings.tsx:509
 msgid "Change Favicon"
 msgstr "ファビコンを変更"
 
@@ -2445,7 +2473,7 @@ msgstr "ファビコンを変更"
 msgid "Change Image"
 msgstr "画像を変更"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:317
+#: packages/admin/src/components/settings/GeneralSettings.tsx:449
 msgid "Change Logo"
 msgstr "ロゴを変更"
 
@@ -2485,6 +2513,10 @@ msgstr ""
 #: packages/admin/src/components/settings/SeoSettings.tsx:172
 msgid "Character between page title and site name (e.g., \"My Post | My Site\")"
 msgstr "ページタイトルとサイト名の間に表示する文字（例：「記事タイトル | サイト名」）"
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:155
+msgid "Check and switch"
+msgstr ""
 
 #: packages/admin/src/components/PluginManager.tsx:205
 msgid "Check for updates"
@@ -2569,6 +2601,10 @@ msgstr ""
 msgid "Checking this site"
 msgstr ""
 
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:155
+msgid "Checking…"
+msgstr ""
+
 #: packages/admin/src/components/TaxonomySidebar.tsx:395
 #: packages/admin/src/components/TaxonomySidebar.tsx:396
 #: packages/admin/src/components/TaxonomySidebar.tsx:489
@@ -2597,7 +2633,7 @@ msgstr ""
 msgid "Choose a non-empty {0} image."
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:444
+#: packages/admin/src/components/settings/GeneralSettings.tsx:576
 msgid "Choose a recognized timezone for reliable date display."
 msgstr ""
 
@@ -2697,11 +2733,11 @@ msgstr "保存済みの値をクリア"
 msgid "Clear stored value for {fieldKey}"
 msgstr "{fieldKey}の保存済みの値をクリア"
 
-#: packages/admin/src/locales/emails.ts:47
+#: packages/admin/src/locales/emails.ts:56
 msgid "Click the button below to create your account:"
 msgstr ""
 
-#: packages/admin/src/locales/emails.ts:55
+#: packages/admin/src/locales/emails.ts:64
 msgid "Click the button below to sign in:"
 msgstr ""
 
@@ -2713,11 +2749,11 @@ msgstr "メール内のリンクをクリックしてアカウントの設定を
 msgid "Click the link in the email to sign in."
 msgstr "メール内のリンクをクリックしてログインしてください。"
 
-#: packages/admin/src/locales/emails.ts:46
+#: packages/admin/src/locales/emails.ts:55
 msgid "Click this link to create your account:"
 msgstr ""
 
-#: packages/admin/src/locales/emails.ts:54
+#: packages/admin/src/locales/emails.ts:63
 msgid "Click this link to sign in to {siteName}:"
 msgstr ""
 
@@ -3139,6 +3175,10 @@ msgstr "インポートを続行"
 #: packages/admin/src/components/PortableTextEditor.tsx:5337
 msgid "Continue numbering"
 msgstr "番号を継続"
+
+#: packages/admin/src/components/settings/GeneralSettings.tsx:390
+msgid "Continue on {handoverHost}"
+msgstr ""
 
 #: packages/admin/src/components/MagicLinkConfirmPage.tsx:72
 msgid "Continue to finish signing in. The link works only once."
@@ -3741,7 +3781,7 @@ msgstr "日付と時刻を選択"
 msgid "Date field to filter on"
 msgstr "絞り込み対象の日付"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:421
+#: packages/admin/src/components/settings/GeneralSettings.tsx:553
 msgid "Date Format"
 msgstr "日付形式"
 
@@ -4314,6 +4354,10 @@ msgstr "ドメイン"
 msgid "Domain added successfully"
 msgstr "ドメインを追加しました"
 
+#: packages/admin/src/components/settings/GeneralSettings.tsx:274
+msgid "Domain changed to {url}"
+msgstr ""
+
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:120
 msgid "Domain removed"
 msgstr "ドメインを削除しました"
@@ -4744,6 +4788,14 @@ msgstr "メール"
 msgid "Email address"
 msgstr "メールアドレス"
 
+#: packages/admin/src/components/settings/GeneralSettings.tsx:640
+msgid "Email all users?"
+msgstr ""
+
+#: packages/admin/src/components/settings/GeneralSettings.tsx:402
+msgid "Email every other user a link to the sign-in page at {siteHost}."
+msgstr ""
+
 #: packages/admin/src/components/SetupWizard.tsx:242
 #: packages/admin/src/components/SignupPage.tsx:67
 msgid "Email is required"
@@ -4765,6 +4817,10 @@ msgstr "メール送信サービスは有効です"
 #: packages/admin/src/components/settings/EmailSettings.tsx:58
 msgid "Email Settings"
 msgstr "メール設定"
+
+#: packages/admin/src/components/settings/GeneralSettings.tsx:412
+msgid "Email users"
+msgstr ""
 
 #: packages/admin/src/components/users/UserDetail.tsx:235
 msgid "Email verified"
@@ -4890,7 +4946,7 @@ msgstr ""
 msgid "Enter a name."
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:448
+#: packages/admin/src/components/settings/GeneralSettings.tsx:580
 msgid "Enter a recognized timezone to save"
 msgstr ""
 
@@ -4926,6 +4982,10 @@ msgstr "名前を入力"
 #: packages/admin/src/components/DeviceAuthorizePage.tsx:209
 msgid "Enter the code from your terminal"
 msgstr "ターミナルに表示されたコードを入力"
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:91
+msgid "Enter the domain below. EmDash checks that it serves this site before switching."
+msgstr ""
 
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:123
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:132
@@ -4973,7 +5033,7 @@ msgstr ""
 #: packages/admin/src/components/SetupWizard.tsx:606
 #: packages/admin/src/components/TaxonomyManager.tsx:1207
 #: packages/admin/src/components/Widgets.tsx:771
-#: packages/admin/src/router.tsx:3140
+#: packages/admin/src/router.tsx:3149
 msgid "Error"
 msgstr "エラー"
 
@@ -5001,6 +5061,10 @@ msgstr ""
 msgid "Every imported record and media file was read back and matched the package. Keep this receipt as a record of the transfer."
 msgstr ""
 
+#: packages/admin/src/components/settings/GeneralSettings.tsx:641
+msgid "Every other user with an active account gets an email saying the site is now at {siteHost}, with a link to sign in there. Passkeys from another address don't work at {siteHost}, so users sign in with an email link and add a new passkey."
+msgstr ""
+
 #: packages/admin/src/components/MediaDetailPanel.tsx:1986
 msgid "Every place using this image will update to the cropped version."
 msgstr ""
@@ -5017,11 +5081,12 @@ msgstr "このプラグインのリリースはすべて撤回されたか、確
 msgid "Every relationship this content type takes part in goes too:"
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:429
+#: packages/admin/src/components/settings/GeneralSettings.tsx:561
 msgid "Example: {pattern} → {preview}"
 msgstr ""
 
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:294
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:97
 msgid "example.com"
 msgstr "example.com"
 
@@ -5138,7 +5203,7 @@ msgstr ""
 msgid "Failed to add domain"
 msgstr "ドメインを追加できませんでした"
 
-#: packages/admin/src/components/settings/SecuritySettings.tsx:175
+#: packages/admin/src/components/settings/SecuritySettings.tsx:186
 msgid "Failed to add passkey"
 msgstr "パスキーを追加できませんでした"
 
@@ -5156,6 +5221,10 @@ msgstr ""
 
 #: packages/admin/src/lib/api/transfer.ts:482
 msgid "Failed to cancel import"
+msgstr ""
+
+#: packages/admin/src/lib/api/settings.ts:118
+msgid "Failed to change the domain"
 msgstr ""
 
 #: packages/admin/src/components/SandboxedPluginPage.tsx:74
@@ -5177,6 +5246,11 @@ msgstr ""
 #. placeholder {0}: failedLabels.join(", ")
 #: packages/admin/src/components/TaxonomySidebar.tsx:753
 msgid "Failed to create {0}"
+msgstr ""
+
+#: packages/admin/src/components/settings/GeneralSettings.tsx:202
+#: packages/admin/src/lib/api/settings.ts:95
+msgid "Failed to create a sign-in link"
 msgstr ""
 
 #: packages/admin/src/components/SetupWizard.tsx:560
@@ -5348,6 +5422,10 @@ msgstr ""
 msgid "Failed to duplicate"
 msgstr "複製に失敗しました"
 
+#: packages/admin/src/lib/api/settings.ts:105
+msgid "Failed to email users"
+msgstr ""
+
 #: packages/admin/src/components/PluginManager.tsx:135
 #: packages/admin/src/lib/api/plugins.ts:146
 msgid "Failed to enable plugin"
@@ -5459,6 +5537,10 @@ msgstr "セットアップ状態の取得に失敗しました"
 #: packages/admin/src/components/TaxonomySidebar.tsx:144
 msgid "Failed to fetch terms"
 msgstr "分類項目の取得に失敗しました"
+
+#: packages/admin/src/lib/api/settings.ts:87
+msgid "Failed to fetch the site domain"
+msgstr ""
 
 #: packages/admin/src/lib/api/core-update.ts:29
 msgid "Failed to fetch update status"
@@ -5575,7 +5657,7 @@ msgstr ""
 msgid "visualEditing.mediaLoadFailed"
 msgstr ""
 
-#: packages/admin/src/components/settings/SecuritySettings.tsx:123
+#: packages/admin/src/components/settings/SecuritySettings.tsx:128
 msgid "Failed to load passkeys"
 msgstr "パスキーを読み込めませんでした"
 
@@ -5663,7 +5745,7 @@ msgid "Failed to remove domain"
 msgstr "ドメインを削除できませんでした"
 
 #: packages/admin/src/components/settings/PasskeyItem.tsx:73
-#: packages/admin/src/components/settings/SecuritySettings.tsx:66
+#: packages/admin/src/components/settings/SecuritySettings.tsx:71
 msgid "Failed to remove passkey"
 msgstr "パスキーを削除できませんでした"
 
@@ -5671,7 +5753,7 @@ msgstr "パスキーを削除できませんでした"
 msgid "Failed to rename media folder"
 msgstr "メディアフォルダーの名前を変更できませんでした"
 
-#: packages/admin/src/components/settings/SecuritySettings.tsx:50
+#: packages/admin/src/components/settings/SecuritySettings.tsx:55
 msgid "Failed to rename passkey"
 msgstr "パスキーの名前を変更できませんでした"
 
@@ -5719,7 +5801,7 @@ msgstr "URLの書き換えに失敗しました"
 
 #: packages/admin/src/router.tsx:809
 #: packages/admin/src/router.tsx:1180
-#: packages/admin/src/router.tsx:2864
+#: packages/admin/src/router.tsx:2873
 msgid "Failed to save"
 msgstr "保存に失敗しました"
 
@@ -5732,7 +5814,7 @@ msgid "Failed to save field"
 msgstr "項目を保存できませんでした"
 
 #: packages/admin/src/components/PluginSettings.tsx:74
-#: packages/admin/src/components/settings/GeneralSettings.tsx:163
+#: packages/admin/src/components/settings/GeneralSettings.tsx:189
 #: packages/admin/src/components/settings/SeoSettings.tsx:81
 #: packages/admin/src/components/settings/SocialSettings.tsx:66
 msgid "Failed to save settings"
@@ -5870,8 +5952,8 @@ msgid "FAQ"
 msgstr "よくある質問"
 
 #: packages/admin/src/components/MediaUsedIn.tsx:45
-#: packages/admin/src/components/settings/GeneralSettings.tsx:348
-#: packages/admin/src/components/settings/GeneralSettings.tsx:355
+#: packages/admin/src/components/settings/GeneralSettings.tsx:480
+#: packages/admin/src/components/settings/GeneralSettings.tsx:487
 msgid "Favicon"
 msgstr "ファビコン"
 
@@ -6159,7 +6241,7 @@ msgstr "ギャラリー設定"
 msgid "General"
 msgstr "一般"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:215
+#: packages/admin/src/components/settings/GeneralSettings.tsx:289
 msgid "General Settings"
 msgstr "一般設定"
 
@@ -6196,9 +6278,13 @@ msgid "Go live {countdown}"
 msgstr ""
 
 #: packages/admin/src/components/WordPressImport.tsx:2441
-#: packages/admin/src/router.tsx:3160
+#: packages/admin/src/router.tsx:3169
 msgid "Go to Dashboard"
 msgstr "ダッシュボードへ"
+
+#: packages/admin/src/locales/emails.ts:74
+msgid "Go to sign-in"
+msgstr ""
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:308
 msgid "Goes live"
@@ -6478,7 +6564,11 @@ msgstr "ID"
 msgid "If an account exists for <0>{email}</0>, we've sent a sign-in link."
 msgstr "<0>{email}</0>のアカウントが存在する場合、ログインリンクを送信しました。"
 
-#: packages/admin/src/locales/emails.ts:58
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:123
+msgid "If the site can't be reached from the internet yet, for example on localhost or behind a login, you can use the address without the check."
+msgstr ""
+
+#: packages/admin/src/locales/emails.ts:67
 msgid "If you didn't request this, you can safely ignore this email."
 msgstr ""
 
@@ -7273,6 +7363,15 @@ msgstr "リンク"
 msgid "Links from"
 msgstr ""
 
+#. placeholder {0}: siteDomain.configuredUrl
+#: packages/admin/src/components/settings/GeneralSettings.tsx:359
+msgid "Links in emails and plugins use {0}, set by the deployment configuration."
+msgstr ""
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:84
+msgid "Links in emails and plugins, sitemaps, and absolute URLs in search and social metadata will use the new domain."
+msgstr ""
+
 #: packages/admin/src/components/RelationForm.tsx:279
 msgid "Links to"
 msgstr ""
@@ -7331,7 +7430,7 @@ msgid "Load preview"
 msgstr ""
 
 #: packages/admin/src/components/calendar/CalendarToolbar.tsx:59
-#: packages/admin/src/router.tsx:3115
+#: packages/admin/src/router.tsx:3124
 msgid "Loading"
 msgstr "読み込み中"
 
@@ -7360,8 +7459,8 @@ msgstr "コンテンツタイプを読み込み中…"
 msgid "Loading comments..."
 msgstr "コメントを読み込み中…"
 
-#: packages/admin/src/router.tsx:3117
-#: packages/admin/src/router.tsx:3129
+#: packages/admin/src/router.tsx:3126
+#: packages/admin/src/router.tsx:3138
 msgid "Loading configuration..."
 msgstr "設定を読み込み中…"
 
@@ -7415,7 +7514,7 @@ msgstr ""
 msgid "Loading plugins..."
 msgstr "プラグインを読み込み中…"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:426
+#: packages/admin/src/components/settings/GeneralSettings.tsx:558
 msgid "Loading preview…"
 msgstr ""
 
@@ -7438,7 +7537,7 @@ msgid "Loading sections..."
 msgstr "セクションを読み込み中…"
 
 #: packages/admin/src/components/PluginSettings.tsx:131
-#: packages/admin/src/components/settings/GeneralSettings.tsx:226
+#: packages/admin/src/components/settings/GeneralSettings.tsx:300
 #: packages/admin/src/components/settings/SeoSettings.tsx:133
 #: packages/admin/src/components/settings/SocialSettings.tsx:100
 msgid "Loading settings..."
@@ -7484,7 +7583,7 @@ msgstr "ウィジェットを読み込み中…"
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:221
 #: packages/admin/src/components/settings/BackupSettings.tsx:155
 #: packages/admin/src/components/settings/EmailSettings.tsx:69
-#: packages/admin/src/components/settings/SecuritySettings.tsx:99
+#: packages/admin/src/components/settings/SecuritySettings.tsx:104
 #: packages/admin/src/components/settings/TransferSettings.tsx:57
 #: packages/admin/src/components/TaxonomyManager.tsx:1274
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:170
@@ -7547,8 +7646,8 @@ msgid "Log out"
 msgstr "ログアウト"
 
 #: packages/admin/src/components/MediaUsedIn.tsx:44
-#: packages/admin/src/components/settings/GeneralSettings.tsx:288
-#: packages/admin/src/components/settings/GeneralSettings.tsx:295
+#: packages/admin/src/components/settings/GeneralSettings.tsx:420
+#: packages/admin/src/components/settings/GeneralSettings.tsx:427
 msgid "Logo"
 msgstr "ロゴ"
 
@@ -7625,7 +7724,7 @@ msgid "Manage URL redirects and view 404 errors."
 msgstr "URLリダイレクトの管理と404エラーの確認"
 
 #: packages/admin/src/components/Settings.tsx:88
-#: packages/admin/src/components/settings/SecuritySettings.tsx:89
+#: packages/admin/src/components/settings/SecuritySettings.tsx:94
 msgid "Manage your passkeys and authentication"
 msgstr "パスキーと認証の管理"
 
@@ -7672,11 +7771,11 @@ msgstr "Markdown"
 msgid "Marketplace"
 msgstr "マーケットプレイス"
 
-#: packages/admin/src/router.tsx:2525
+#: packages/admin/src/router.tsx:2534
 msgid "Marketplace browsing is no longer available."
 msgstr ""
 
-#: packages/admin/src/router.tsx:2500
+#: packages/admin/src/router.tsx:2509
 msgid "Marketplace browsing is no longer available. Manage installed plugins from Plugins."
 msgstr ""
 
@@ -8258,6 +8357,10 @@ msgstr "新しいコンテンツタイプ"
 msgid "New Content Type"
 msgstr "コンテンツタイプを作成"
 
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:96
+msgid "New domain"
+msgstr ""
+
 #: packages/admin/src/routes/byline-schema.tsx:224
 msgid "New field"
 msgstr "項目を追加"
@@ -8612,7 +8715,7 @@ msgstr "このアカウントに一致するパスキーが見つかりません
 msgid "No matching tags"
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:461
+#: packages/admin/src/components/settings/GeneralSettings.tsx:593
 msgid "No matching timezones"
 msgstr ""
 
@@ -8655,7 +8758,7 @@ msgstr "親なし（最上位）"
 msgid "No passkeys registered"
 msgstr "パスキーは登録されていません"
 
-#: packages/admin/src/components/settings/SecuritySettings.tsx:154
+#: packages/admin/src/components/settings/SecuritySettings.tsx:159
 msgid "No passkeys registered yet."
 msgstr "パスキーはまだ登録されていません。"
 
@@ -8800,6 +8903,7 @@ msgstr ""
 
 #: packages/admin/src/components/ContentList.tsx:1568
 #: packages/admin/src/components/PluginSettings.tsx:341
+#: packages/admin/src/components/settings/GeneralSettings.tsx:365
 msgid "Not set"
 msgstr "未設定"
 
@@ -8838,7 +8942,7 @@ msgstr "数値"
 msgid "Number of posts"
 msgstr "表示する投稿数"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:416
+#: packages/admin/src/components/settings/GeneralSettings.tsx:548
 msgid "Number of posts to show per page on list views"
 msgstr "一覧表示でページあたりに表示する投稿数"
 
@@ -8955,6 +9059,10 @@ msgstr "設定を開始"
 #: packages/admin/src/components/SetupWizard.tsx:355
 #: packages/admin/src/components/SignupPage.tsx:237
 msgid "Open the dashboard"
+msgstr ""
+
+#: packages/admin/src/locales/emails.ts:73
+msgid "Open the sign-in page at the new address:"
 msgstr ""
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:545
@@ -9097,7 +9205,7 @@ msgstr ""
 msgid "Package downloaded"
 msgstr ""
 
-#: packages/admin/src/router.tsx:3155
+#: packages/admin/src/router.tsx:3164
 msgid "Page Not Found"
 msgstr "ページが見つかりません"
 
@@ -9146,7 +9254,7 @@ msgstr "一部対応"
 msgid "Pass"
 msgstr "合格"
 
-#: packages/admin/src/components/settings/SecuritySettings.tsx:85
+#: packages/admin/src/components/settings/SecuritySettings.tsx:90
 msgid "Passkey added successfully"
 msgstr "パスキーを追加しました"
 
@@ -9167,15 +9275,15 @@ msgstr "パスキー名（任意）"
 msgid "Passkey registered successfully!"
 msgstr "パスキーを登録しました。"
 
-#: packages/admin/src/components/settings/SecuritySettings.tsx:62
+#: packages/admin/src/components/settings/SecuritySettings.tsx:67
 msgid "Passkey removed"
 msgstr "パスキーを削除しました"
 
-#: packages/admin/src/components/settings/SecuritySettings.tsx:46
+#: packages/admin/src/components/settings/SecuritySettings.tsx:51
 msgid "Passkey renamed"
 msgstr "パスキーの名前を変更しました"
 
-#: packages/admin/src/components/settings/SecuritySettings.tsx:135
+#: packages/admin/src/components/settings/SecuritySettings.tsx:140
 #: packages/admin/src/components/users/UserList.tsx:103
 msgid "Passkeys"
 msgstr "パスキー"
@@ -9185,14 +9293,34 @@ msgstr "パスキー"
 msgid "Passkeys ({0})"
 msgstr "パスキー（{0}）"
 
-#: packages/admin/src/components/settings/SecuritySettings.tsx:136
+#: packages/admin/src/components/settings/SecuritySettings.tsx:141
 msgid "Passkeys are a secure, passwordless way to sign in to your account. You can register multiple passkeys for different devices."
 msgstr "パスキーは安全なパスワードレスのログイン方法です。複数のパスキーを異なるデバイス用に登録することができます。"
+
+#: packages/admin/src/locales/emails.ts:75
+msgid "Passkeys from the old address don't work there. Sign in with an email link, then add a passkey in Security settings."
+msgstr ""
 
 #: packages/admin/src/components/auth/PasskeyLogin.tsx:297
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:475
 msgid "Passkeys Not Available Here"
 msgstr "この環境ではパスキーを利用できません"
+
+#: packages/admin/src/components/settings/GeneralSettings.tsx:275
+msgid "Passkeys only work at the address where they were created."
+msgstr ""
+
+#: packages/admin/src/components/settings/SecuritySettings.tsx:172
+msgid "Passkeys only work at the address where they were created. Add one here so you can sign in at this address next time."
+msgstr ""
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:113
+msgid "Passkeys only work at the address where they were created. After switching, keep signing in at the current address, or use an email sign-in link at the new one."
+msgstr ""
+
+#: packages/admin/src/components/settings/GeneralSettings.tsx:381
+msgid "Passkeys only work at the address where they were created. Continue on {handoverHost} to sign in there without a passkey, then add one for that address."
+msgstr ""
 
 #: packages/admin/src/components/auth/PasskeyContextMessage.tsx:5
 msgid "Passkeys require a <0>secure context</0>: use <1>HTTPS</1>, or open the admin at <2>http://localhost</2> (with your dev port). Plain <3>http://</3> on a custom hostname is not treated as secure, even on loopback."
@@ -9430,8 +9558,8 @@ msgstr "プラグインレジストリ"
 msgid "Plugin registry configuration error"
 msgstr ""
 
-#: packages/admin/src/router.tsx:2460
-#: packages/admin/src/router.tsx:2491
+#: packages/admin/src/router.tsx:2469
+#: packages/admin/src/router.tsx:2500
 msgid "Plugin registry is not configured."
 msgstr ""
 
@@ -9472,6 +9600,10 @@ msgstr "プラグインウィジェットエラー"
 msgid "Plugins"
 msgstr "プラグイン"
 
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:89
+msgid "Point the domain at this site. On Cloudflare, open your Worker in Workers & Pages, go to the Domains tab, and add the domain."
+msgstr ""
+
 #: packages/admin/src/components/settings/BackupSettings.tsx:342
 msgid "Point-in-Time Restore"
 msgstr "指定した時点への復元"
@@ -9503,7 +9635,7 @@ msgstr "投稿"
 msgid "Posts & Pages"
 msgstr "投稿とページ"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:410
+#: packages/admin/src/components/settings/GeneralSettings.tsx:542
 msgid "Posts Per Page"
 msgstr "1ページあたりの投稿数"
 
@@ -9567,7 +9699,7 @@ msgstr "下書きをプレビュー"
 msgid "Preview of {0}"
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:428
+#: packages/admin/src/components/settings/GeneralSettings.tsx:560
 msgid "Preview unavailable for this format"
 msgstr ""
 
@@ -9853,7 +9985,7 @@ msgstr "分類グループと分類項目を読み取る"
 msgid "Read-only"
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:407
+#: packages/admin/src/components/settings/GeneralSettings.tsx:539
 msgid "Reading"
 msgstr "表示設定"
 
@@ -9968,7 +10100,7 @@ msgstr ""
 msgid "Referenced collection is required"
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:366
+#: packages/admin/src/components/settings/GeneralSettings.tsx:498
 msgid "Referenced favicon unavailable."
 msgstr "参照先のファビコンを利用できません。"
 
@@ -9994,7 +10126,7 @@ msgid "Register"
 msgstr "登録"
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:273
-#: packages/admin/src/components/settings/SecuritySettings.tsx:182
+#: packages/admin/src/components/settings/SecuritySettings.tsx:193
 msgid "Register Passkey"
 msgstr "パスキーを登録"
 
@@ -10070,8 +10202,8 @@ msgstr ""
 #: packages/admin/src/components/ImageFieldRenderer.tsx:439
 #: packages/admin/src/components/media/MediaBrowserItems.tsx:220
 #: packages/admin/src/components/PortableTextEditor.tsx:5486
-#: packages/admin/src/components/settings/GeneralSettings.tsx:326
-#: packages/admin/src/components/settings/GeneralSettings.tsx:386
+#: packages/admin/src/components/settings/GeneralSettings.tsx:458
+#: packages/admin/src/components/settings/GeneralSettings.tsx:518
 #: packages/admin/src/components/settings/PasskeyItem.tsx:160
 #: packages/admin/src/components/settings/PasskeyItem.tsx:182
 #: packages/admin/src/components/settings/SeoSettings.tsx:217
@@ -10481,7 +10613,7 @@ msgstr ""
 #: packages/admin/src/components/Sections.tsx:281
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:122
 #: packages/admin/src/lib/content-editor-panels.tsx:201
-#: packages/admin/src/router.tsx:3143
+#: packages/admin/src/router.tsx:3152
 #: packages/admin/src/routes/byline-schema.tsx:280
 #: packages/admin/src/routes/calendar.tsx:344
 msgid "Retry"
@@ -11052,7 +11184,7 @@ msgstr "フォルダーを検索"
 msgid "Search for a language…"
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:441
+#: packages/admin/src/components/settings/GeneralSettings.tsx:573
 msgid "Search for an IANA timezone (e.g., Europe/London)"
 msgstr ""
 
@@ -11113,7 +11245,7 @@ msgstr "テーマを検索"
 msgid "Search themes..."
 msgstr "テーマを検索…"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:452
+#: packages/admin/src/components/settings/GeneralSettings.tsx:584
 msgid "Search timezones…"
 msgstr ""
 
@@ -11229,8 +11361,8 @@ msgstr "セキュリティ上の問題が発生しました。セキュアな接
 #: packages/admin/src/components/AdminCommandPalette.tsx:263
 #: packages/admin/src/components/Header.tsx:94
 #: packages/admin/src/components/Settings.tsx:83
-#: packages/admin/src/components/settings/SecuritySettings.tsx:88
-#: packages/admin/src/components/settings/SecuritySettings.tsx:110
+#: packages/admin/src/components/settings/SecuritySettings.tsx:93
+#: packages/admin/src/components/settings/SecuritySettings.tsx:115
 msgid "Security Settings"
 msgstr "セキュリティ設定"
 
@@ -11319,11 +11451,11 @@ msgstr ""
 msgid "Select default social image"
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:491
+#: packages/admin/src/components/settings/GeneralSettings.tsx:623
 msgid "Select favicon"
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:398
+#: packages/admin/src/components/settings/GeneralSettings.tsx:530
 msgid "Select Favicon"
 msgstr "ファビコンを選択"
 
@@ -11346,11 +11478,11 @@ msgstr "画像を選択"
 msgid "Select Image"
 msgstr "画像を選択"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:483
+#: packages/admin/src/components/settings/GeneralSettings.tsx:615
 msgid "Select logo"
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:338
+#: packages/admin/src/components/settings/GeneralSettings.tsx:470
 msgid "Select Logo"
 msgstr "ロゴを選択"
 
@@ -11427,6 +11559,10 @@ msgstr "新しいチームメンバーに招待メールを送信します。"
 msgid "Send email through your site"
 msgstr ""
 
+#: packages/admin/src/components/settings/GeneralSettings.tsx:642
+msgid "Send emails"
+msgstr ""
+
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
 msgid "Send Invite"
 msgstr "招待を送信"
@@ -11449,6 +11585,7 @@ msgstr "テストメールを送信"
 
 #: packages/admin/src/components/LoginPage.tsx:150
 #: packages/admin/src/components/settings/EmailSettings.tsx:122
+#: packages/admin/src/components/settings/GeneralSettings.tsx:643
 #: packages/admin/src/components/SignupPage.tsx:106
 #: packages/admin/src/components/SignupPage.tsx:168
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
@@ -11513,6 +11650,10 @@ msgstr "0に設定すると、コメントを自動的に閉じません。"
 msgid "Set to draft"
 msgstr "下書きに設定"
 
+#: packages/admin/src/components/settings/GeneralSettings.tsx:401
+msgid "Set up an email provider in Email settings to email users."
+msgstr ""
+
 #: packages/admin/src/components/MediaLibrary.tsx:815
 msgid "Set up media usage tracking"
 msgstr "メディアの使用状況を設定"
@@ -11556,7 +11697,7 @@ msgid "Settings Read"
 msgstr "設定の参照"
 
 #: packages/admin/src/components/PluginSettings.tsx:68
-#: packages/admin/src/components/settings/GeneralSettings.tsx:156
+#: packages/admin/src/components/settings/GeneralSettings.tsx:182
 msgid "Settings saved successfully"
 msgstr "設定を保存しました"
 
@@ -11635,7 +11776,7 @@ msgid "Shows a button for creating a new entry"
 msgstr ""
 
 #: packages/admin/src/components/SignupPage.tsx:457
-#: packages/admin/src/locales/emails.ts:56
+#: packages/admin/src/locales/emails.ts:65
 msgid "Sign in"
 msgstr "ログイン"
 
@@ -11648,7 +11789,7 @@ msgstr "ログイン"
 msgid "Sign in instead"
 msgstr "ログインする"
 
-#: packages/admin/src/locales/emails.ts:53
+#: packages/admin/src/locales/emails.ts:62
 msgid "Sign in to {siteName}"
 msgstr ""
 
@@ -11711,7 +11852,7 @@ msgstr ""
 msgid "Site identity"
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:259
+#: packages/admin/src/components/settings/GeneralSettings.tsx:333
 msgid "Site Identity"
 msgstr "サイト情報"
 
@@ -11720,7 +11861,7 @@ msgid "site identity applied (title, tagline, logo)"
 msgstr "サイト情報を適用しました（タイトル、タグライン、ロゴ）"
 
 #: packages/admin/src/components/Settings.tsx:55
-#: packages/admin/src/components/settings/GeneralSettings.tsx:216
+#: packages/admin/src/components/settings/GeneralSettings.tsx:290
 msgid "Site identity, logo, favicon, and reading preferences"
 msgstr "サイト情報、ロゴ、ファビコン、閲覧設定"
 
@@ -11746,7 +11887,7 @@ msgstr "サイト設定"
 msgid "Site title"
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:262
+#: packages/admin/src/components/settings/GeneralSettings.tsx:336
 #: packages/admin/src/components/SetupWizard.tsx:137
 msgid "Site Title"
 msgstr "サイトタイトル"
@@ -11763,9 +11904,17 @@ msgstr "サイトタイトルは必須です"
 msgid "Site Transfer"
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:278
+#: packages/admin/src/components/settings/GeneralSettings.tsx:353
 msgid "Site URL"
 msgstr "サイトURL"
+
+#: packages/admin/src/components/settings/GeneralSettings.tsx:274
+msgid "Site URL set to {url}"
+msgstr ""
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:83
+msgid "Sitemaps and absolute URLs in search and social metadata will use the new domain. Links in emails and plugins keep using {configuredUrl}, set by the deployment configuration."
+msgstr ""
 
 #: packages/admin/src/components/settings/BackupSettings.tsx:345
 msgid "Sites on Cloudflare D1 can additionally restore the database to any minute within the last 30 days using D1 Time Travel — always on, no setup required."
@@ -12136,7 +12285,7 @@ msgstr ""
 msgid "Tables cannot be pasted inside lists or quotes. Paste the table into its own paragraph and try again."
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:270
+#: packages/admin/src/components/settings/GeneralSettings.tsx:344
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:375
 #: packages/admin/src/components/SetupWizard.tsx:148
 msgid "Tagline"
@@ -12216,6 +12365,10 @@ msgstr ""
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:172
 msgid "Technical verification details"
+msgstr ""
+
+#: packages/admin/src/components/settings/GeneralSettings.tsx:398
+msgid "Tell users where to sign in"
 msgstr ""
 
 #: packages/admin/src/components/SetupWizard.tsx:218
@@ -12450,7 +12603,7 @@ msgstr "マーケットプレイスは空です。新しいプラグインが追
 msgid "The menu has been deleted."
 msgstr "メニューを削除しました。"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:265
+#: packages/admin/src/components/settings/GeneralSettings.tsx:339
 msgid "The name of your site, used in the header and metadata"
 msgstr "サイトの名前。ヘッダーとメタデータに使用されます"
 
@@ -12534,7 +12687,7 @@ msgstr ""
 msgid "The package’s file index is not valid."
 msgstr ""
 
-#: packages/admin/src/router.tsx:3157
+#: packages/admin/src/router.tsx:3166
 msgid "The page you're looking for doesn't exist."
 msgstr "お探しのページは存在しません。"
 
@@ -12559,9 +12712,9 @@ msgstr ""
 msgid "The plugin result is stale because the editor changed while it was working."
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:282
-msgid "The public URL of your site (used for canonical links and sitemaps)"
-msgstr "サイトの公開URL（正規リンクとサイトマップに使用）"
+#: packages/admin/src/components/settings/GeneralSettings.tsx:355
+msgid "The public address of your site, used for links in emails and plugins, sitemaps, and absolute URLs in search and social metadata"
+msgstr ""
 
 #: packages/admin/src/components/RegistryBrowse.tsx:219
 #: packages/admin/src/components/RegistryPluginDetail.tsx:543
@@ -12576,7 +12729,7 @@ msgstr ""
 msgid "The referenced image is no longer available. Pick a new one or remove the reference."
 msgstr "設定されている画像は利用できません。別の画像を選択するか、現在の設定を解除してください。"
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:306
+#: packages/admin/src/components/settings/GeneralSettings.tsx:438
 msgid "The referenced logo is no longer available. Pick a new one or remove the reference."
 msgstr "参照先のロゴは利用できなくなりました。新しいロゴを選択するか、参照を削除してください。"
 
@@ -12850,7 +13003,7 @@ msgstr "WordPressサイトを確認しました。"
 msgid "This is not the package the import was started with. Choose the same file again."
 msgstr ""
 
-#: packages/admin/src/locales/emails.ts:57
+#: packages/admin/src/locales/emails.ts:66
 msgid "This link expires in 15 minutes."
 msgstr ""
 
@@ -12858,7 +13011,7 @@ msgstr ""
 msgid "This link expires in 7 days and can only be used once."
 msgstr "このリンクは7日間有効で、1回のみ使用できます。"
 
-#: packages/admin/src/locales/emails.ts:49
+#: packages/admin/src/locales/emails.ts:58
 msgid "This link expires in 7 days."
 msgstr ""
 
@@ -12964,7 +13117,7 @@ msgstr ""
 msgid "This removes the schedule and publishes immediately."
 msgstr ""
 
-#: packages/admin/src/components/settings/GeneralSettings.tsx:443
+#: packages/admin/src/components/settings/GeneralSettings.tsx:575
 msgid "This saved timezone isn't recognized. Choose a suggestion for reliable date display."
 msgstr ""
 
@@ -13093,7 +13246,7 @@ msgid "Times are in {zoneName}. Your browser uses {viewerZoneName}."
 msgstr ""
 
 #: packages/admin/src/components/PublishingDateTimeEditor.tsx:252
-#: packages/admin/src/components/settings/GeneralSettings.tsx:435
+#: packages/admin/src/components/settings/GeneralSettings.tsx:567
 msgid "Timezone"
 msgstr "タイムゾーン"
 
@@ -13777,6 +13930,10 @@ msgstr "使用状況が最新でない可能性があります。"
 msgid "Use [param] or [...rest] in paths for pattern matching."
 msgstr "パスのパターンには[param]や[...rest]を使用できます。"
 
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:133
+msgid "Use {fallbackUrl} anyway"
+msgstr ""
+
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:623
 msgid "Use a security key"
 msgstr ""
@@ -14441,15 +14598,20 @@ msgstr "WordPressに移動して接続を承認します。"
 msgid "You'll be signing up as <0>{roleName}</0>"
 msgstr "<0>{roleName}</0>として登録します"
 
+#. placeholder {0}: window.location.host
+#: packages/admin/src/components/settings/GeneralSettings.tsx:380
+msgid "You're signed in at {0}"
+msgstr ""
+
 #: packages/admin/src/components/SetupWizard.tsx:631
 msgid "You're signed in via Cloudflare Access"
 msgstr "Cloudflare Accessでログイン中です"
 
-#: packages/admin/src/locales/emails.ts:44
+#: packages/admin/src/locales/emails.ts:53
 msgid "You've been invited to {siteName}"
 msgstr ""
 
-#: packages/admin/src/locales/emails.ts:45
+#: packages/admin/src/locales/emails.ts:54
 msgid "You've been invited to join {siteName}."
 msgstr ""
 
@@ -14537,6 +14699,10 @@ msgstr "あなたの権限"
 
 #: packages/admin/src/components/DeviceAuthorizePage.tsx:375
 msgid "Your role does not permit any of the permissions this device requested."
+msgstr ""
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:81
+msgid "Your site is currently at {currentUrl}."
 msgstr ""
 
 #. placeholder {0}: formatHoldback(config.policy?.minimumReleaseAgeSeconds ?? 0)
