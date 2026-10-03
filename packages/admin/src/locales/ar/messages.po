@@ -1362,12 +1362,12 @@ msgid "admin"
 msgstr "مسؤول"
 
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:117
-#: packages/admin/src/components/Sidebar.tsx:614
+#: packages/admin/src/components/Sidebar.tsx:629
 #: packages/admin/src/components/users/roleDefinitions.ts:42
 msgid "Admin"
 msgstr "مسؤول"
 
-#: packages/admin/src/components/Sidebar.tsx:556
+#: packages/admin/src/components/Sidebar.tsx:571
 msgid "Admin navigation"
 msgstr "تنقل لوحة الإدارة"
 
@@ -2219,7 +2219,7 @@ msgstr "حقول الكاتب"
 msgid "Byline schema"
 msgstr "مخطط الكاتب"
 
-#: packages/admin/src/components/Sidebar.tsx:463
+#: packages/admin/src/components/Sidebar.tsx:478
 msgid "Byline Schema"
 msgstr "مخطط الكاتب"
 
@@ -2233,7 +2233,7 @@ msgstr "حُدّث الكاتب"
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1092
 #: packages/admin/src/components/settings/transfer/labels.ts:19
 #: packages/admin/src/components/settings/transfer/labels.ts:79
-#: packages/admin/src/components/Sidebar.tsx:433
+#: packages/admin/src/components/Sidebar.tsx:448
 #: packages/admin/src/routes/bylines.tsx:472
 msgid "Bylines"
 msgstr "الكُتّاب"
@@ -2252,7 +2252,7 @@ msgstr "C++"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:142
 #: packages/admin/src/components/ContentTypeEditor.tsx:558
-#: packages/admin/src/components/Sidebar.tsx:588
+#: packages/admin/src/components/Sidebar.tsx:603
 #: packages/admin/src/routes/calendar.tsx:276
 msgid "Calendar"
 msgstr "التقويم"
@@ -2915,7 +2915,7 @@ msgstr "تفاعلات التعليقات"
 #: packages/admin/src/components/ContentTypeEditor.tsx:650
 #: packages/admin/src/components/settings/transfer/labels.ts:34
 #: packages/admin/src/components/settings/transfer/labels.ts:88
-#: packages/admin/src/components/Sidebar.tsx:419
+#: packages/admin/src/components/Sidebar.tsx:434
 msgid "Comments"
 msgstr "التعليقات"
 
@@ -3006,7 +3006,7 @@ msgstr "المحتوى"
 #: packages/admin/src/components/Dashboard.tsx:479
 #: packages/admin/src/components/PortableTextEditor.tsx:3247
 #: packages/admin/src/components/SectionEditor.tsx:215
-#: packages/admin/src/components/Sidebar.tsx:598
+#: packages/admin/src/components/Sidebar.tsx:613
 #: packages/admin/src/components/Widgets.tsx:901
 msgid "Content"
 msgstr "محتوى"
@@ -3091,7 +3091,7 @@ msgstr "أنواع المحتوى"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:197
 #: packages/admin/src/components/ContentTypeList.tsx:131
-#: packages/admin/src/components/Sidebar.tsx:459
+#: packages/admin/src/components/Sidebar.tsx:474
 msgid "Content Types"
 msgstr "أنواع المحتوى"
 
@@ -3704,8 +3704,8 @@ msgstr "نسخة الوضع الداكن"
 #: packages/admin/src/components/AdminCommandPalette.tsx:135
 #: packages/admin/src/components/ContentTypeList.tsx:390
 #: packages/admin/src/components/Dashboard.tsx:71
-#: packages/admin/src/components/Sidebar.tsx:397
-#: packages/admin/src/components/Sidebar.tsx:583
+#: packages/admin/src/components/Sidebar.tsx:412
+#: packages/admin/src/components/Sidebar.tsx:598
 msgid "Dashboard"
 msgstr "لوحة المعلومات"
 
@@ -6541,7 +6541,7 @@ msgstr "الصور"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:239
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:210
-#: packages/admin/src/components/Sidebar.tsx:485
+#: packages/admin/src/components/Sidebar.tsx:500
 #: packages/admin/src/components/WordPressImport.tsx:758
 msgid "Import"
 msgstr "استيراد"
@@ -7555,7 +7555,7 @@ msgstr "المكتبة الرئيسية"
 msgid "Main Sidebar"
 msgstr "الشريط الجانبي الرئيسي"
 
-#: packages/admin/src/components/Sidebar.tsx:606
+#: packages/admin/src/components/Sidebar.tsx:621
 msgid "Manage"
 msgstr "إدارة"
 
@@ -7686,7 +7686,7 @@ msgstr "MDX"
 #: packages/admin/src/components/Settings.tsx:72
 #: packages/admin/src/components/settings/transfer/labels.ts:17
 #: packages/admin/src/components/settings/transfer/labels.ts:84
-#: packages/admin/src/components/Sidebar.tsx:410
+#: packages/admin/src/components/Sidebar.tsx:425
 #: packages/admin/src/components/WordPressImport.tsx:772
 #: packages/admin/src/components/WordPressImport.tsx:1170
 #: packages/admin/src/components/WordPressImport.tsx:1357
@@ -7831,7 +7831,7 @@ msgstr "تم تحديث ترتيب القائمة."
 #: packages/admin/src/components/AdminCommandPalette.tsx:173
 #: packages/admin/src/components/MenuList.tsx:101
 #: packages/admin/src/components/settings/transfer/labels.ts:28
-#: packages/admin/src/components/Sidebar.tsx:424
+#: packages/admin/src/components/Sidebar.tsx:439
 #: packages/admin/src/components/WordPressImport.tsx:1174
 msgid "Menus"
 msgstr "القوائم"
@@ -9417,8 +9417,8 @@ msgstr "خطأ في عنصر واجهة الإضافة"
 #: packages/admin/src/components/PluginManager.tsx:173
 #: packages/admin/src/components/PluginManager.tsx:182
 #: packages/admin/src/components/PluginManager.tsx:192
-#: packages/admin/src/components/Sidebar.tsx:467
-#: packages/admin/src/components/Sidebar.tsx:622
+#: packages/admin/src/components/Sidebar.tsx:482
+#: packages/admin/src/components/Sidebar.tsx:637
 msgid "Plugins"
 msgstr "الإضافات"
 
@@ -9884,7 +9884,7 @@ msgstr "جاري إعادة التوجيه إلى تسجيل الدخول..."
 #: packages/admin/src/components/Redirects.tsx:416
 #: packages/admin/src/components/settings/transfer/labels.ts:33
 #: packages/admin/src/components/settings/transfer/labels.ts:90
-#: packages/admin/src/components/Sidebar.tsx:427
+#: packages/admin/src/components/Sidebar.tsx:442
 msgid "Redirects"
 msgstr "إعادات التوجيه"
 
@@ -9957,7 +9957,7 @@ msgstr "تم إلغاء التسجيل أو انتهت مهلته. يرجى ال
 
 #: packages/admin/src/components/PluginManager.tsx:210
 #: packages/admin/src/components/PluginManager.tsx:447
-#: packages/admin/src/components/Sidebar.tsx:476
+#: packages/admin/src/components/Sidebar.tsx:491
 msgid "Registry"
 msgstr "السجل"
 
@@ -11096,7 +11096,7 @@ msgstr "عنوان القسم"
 #: packages/admin/src/components/Sections.tsx:150
 #: packages/admin/src/components/settings/transfer/labels.ts:32
 #: packages/admin/src/components/settings/transfer/labels.ts:93
-#: packages/admin/src/components/Sidebar.tsx:432
+#: packages/admin/src/components/Sidebar.tsx:447
 msgid "Sections"
 msgstr "أقسام"
 
@@ -11462,7 +11462,7 @@ msgstr "جاري الإعداد..."
 #: packages/admin/src/components/Header.tsx:102
 #: packages/admin/src/components/PluginManager.tsx:530
 #: packages/admin/src/components/Settings.tsx:46
-#: packages/admin/src/components/Sidebar.tsx:489
+#: packages/admin/src/components/Sidebar.tsx:504
 #: packages/admin/src/components/WordPressImport.tsx:1834
 msgid "Settings"
 msgstr "الإعدادات"
@@ -13769,7 +13769,7 @@ msgid "User not found"
 msgstr "لم يتم العثور على المستخدم"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:223
-#: packages/admin/src/components/Sidebar.tsx:464
+#: packages/admin/src/components/Sidebar.tsx:479
 #: packages/admin/src/components/users/UserList.tsx:55
 msgid "Users"
 msgstr "المستخدمون"
@@ -14140,7 +14140,7 @@ msgstr "تم تحديث عنصر الواجهة"
 #: packages/admin/src/components/PluginManager.tsx:478
 #: packages/admin/src/components/settings/transfer/labels.ts:31
 #: packages/admin/src/components/settings/transfer/labels.ts:91
-#: packages/admin/src/components/Sidebar.tsx:431
+#: packages/admin/src/components/Sidebar.tsx:446
 #: packages/admin/src/components/Widgets.tsx:388
 #: packages/admin/src/components/WordPressImport.tsx:1182
 msgid "Widgets"
