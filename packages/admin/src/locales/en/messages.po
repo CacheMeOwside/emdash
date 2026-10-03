@@ -9683,11 +9683,6 @@ msgstr "Publish now?"
 msgid "Publish, unpublish, schedule, and unschedule content"
 msgstr "Publish, unpublish, schedule, and unschedule content"
 
-#. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:54
-msgid "visualEditing.published"
-msgstr "Published"
-
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:43
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:180
 #: packages/admin/src/components/ContentList.tsx:1020
@@ -9696,6 +9691,11 @@ msgstr "Published"
 #: packages/admin/src/components/Dashboard.tsx:507
 #: packages/admin/src/router.tsx:1311
 msgid "Published"
+msgstr "Published"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:54
+msgid "visualEditing.published"
 msgstr "Published"
 
 #. placeholder {0}: new Date(latest.publishedAt).toLocaleDateString()
