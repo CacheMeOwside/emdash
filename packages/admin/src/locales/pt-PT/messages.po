@@ -142,7 +142,7 @@ msgid "{0, plural, one {# link} other {# links}}"
 msgstr "{0, plural, one {# ligação} other {# ligações}}"
 
 #. placeholder {0}: tagMatches?.matchCount ?? 0
-#: packages/admin/src/components/TaxonomyManager.tsx:1389
+#: packages/admin/src/components/TaxonomyManager.tsx:1388
 msgid "{0, plural, one {# matching tag} other {# matching tags}}"
 msgstr "{0, plural, one {# etiqueta correspondente} other {# etiquetas correspondentes}}"
 
@@ -263,7 +263,7 @@ msgid "{0, plural, one {Column deleted} other {# columns deleted}}"
 msgstr "{0, plural, one {Coluna eliminada} other {# colunas eliminadas}}"
 
 #. placeholder {0}: fields.length
-#: packages/admin/src/components/ContentTypeEditor.tsx:750
+#: packages/admin/src/components/ContentTypeEditor.tsx:747
 msgid "{0, plural, one {field} other {fields}}"
 msgstr "{0, plural, one {campo} other {campos}}"
 
@@ -310,7 +310,7 @@ msgid "{0} banner"
 msgstr "Banner de {0}"
 
 #. placeholder {0}: term.label
-#: packages/admin/src/components/TaxonomyManager.tsx:440
+#: packages/admin/src/components/TaxonomyManager.tsx:438
 msgid "{0} can't be moved here — its parent has no translation in this locale, so this list isn't the group it belongs to."
 msgstr "{0} não pode ser movido para aqui: o termo superior não tem tradução neste idioma, por isso esta lista não é o grupo a que pertence."
 
@@ -434,8 +434,8 @@ msgstr "Crédito de {0} removido deste artigo."
 
 #. placeholder {0}: SYSTEM_FIELDS.length
 #. placeholder {1}: fields.length
-#. placeholder {2}: import { Badge, Button, Checkbox, Input, InputArea, Label, Select, Switch } from "@cloudflare/kumo"; import { DndContext, closestCenter, type DragEndEvent, KeyboardSensor, PointerSensor, useSensor, useSensors, } from "@dnd-kit/core"; import { arrayMove, SortableContext, sortableKeyboardCoordinates, useSortable, verticalListSortingStrategy, } from "@dnd-kit/sortable"; import { CSS } from "@dnd-kit/utilities"; import type { MessageDescriptor } from "@lingui/core"; import { msg, plural } from "@lingui/core/macro"; import { Trans, useLingui } from "@lingui/react/macro"; import { Plus, DotsSixVertical, Pencil, Trash, Database, FileText } from "@phosphor-icons/react"; import { useQuery } from "@tanstack/react-query"; import { useNavigate } from "@tanstack/react-router"; import * as React from "react"; import { fetchCollections, fetchRelations } from "../lib/api"; import type { SchemaCollectionWithFields, SchemaField, CreateFieldInput, CreateCollectionInput, UpdateCollectionInput, } from "../lib/api"; import type { CreateRelationInput, RelationDef, UpdateRelationInput, } from "../lib/api/relations.js"; import { cn } from "../lib/utils"; import { ArrowPrev } from "./ArrowIcons.js"; import { ConfirmDialog } from "./ConfirmDialog"; import { EditorHeader } from "./EditorHeader"; import { FieldEditor } from "./FieldEditor"; import { RelationImpact } from "./RelationImpact.js"; import { RelationsPanel } from "./RelationsPanel.js"; import { RouterLinkButton } from "./RouterLinkButton.js"; import { SaveButton } from "./SaveButton"; // Regex patterns for slug generation const SLUG_INVALID_CHARS_PATTERN = /[^a-z0-9]+/g; const SLUG_LEADING_TRAILING_PATTERN = /^_|_$/g; const MULTIPLE_PLACEHOLDERS_IN_SEGMENT = /\{\w+\}[^/]*\{\w+\}/; export interface ContentTypeEditorProps { collection?: SchemaCollectionWithFields; isNew?: boolean; isSaving?: boolean; onSave: (input: CreateCollectionInput | UpdateCollectionInput) => void; onAddField?: (input: CreateFieldInput) => void; onUpdateField?: (fieldSlug: string, input: CreateFieldInput) => void; /** `deleteRelation` also removes the relationship a reference field views, * its links, and the field on the other end. */ onDeleteField?: (fieldSlug: string, options?: { deleteRelation?: boolean }) => void; onReorderFields?: (fieldSlugs: string[]) => void; /** Resolves with the new relation; rejects with the server's message. */ onCreateRelation?: (input: CreateRelationInput) => Promise<RelationDef>; /** Resolves once the relation is saved; rejects with the server's message. */ onUpdateRelation?: (id: string, input: UpdateRelationInput) => Promise<unknown>; /** Also removes the relation's links and the reference fields bound to it. */ onDeleteRelation?: (id: string) => Promise<unknown>; isDeletingRelation?: boolean; deleteRelationError?: unknown; } interface SupportOptionDef { value: string; label: MessageDescriptor; description: MessageDescriptor; } const MODERATION_OPTIONS: Record<"all" | "first_time" | "none", MessageDescriptor> = { all: msg`All comments require approval`, first_time: msg`First-time commenters only`, none: msg`No moderation (auto-approve all)`, }; const SUPPORT_OPTIONS: SupportOptionDef[] = [ { value: "drafts", label: msg`Drafts`, description: msg`Save content as draft before publishing`, }, { value: "revisions", label: msg`Revisions`, description: msg`Track content history`, }, { value: "preview", label: msg`Preview`, description: msg`Preview content before publishing`, }, { value: "search", label: msg`Search`, description: msg`Enable full-text search on this collection`, }, ]; /** * System fields that exist on every collection * These are created automatically and cannot be modified */ interface SystemFieldDef { slug: string; label: MessageDescriptor; type: string; description: MessageDescriptor; } const SYSTEM_FIELDS: SystemFieldDef[] = [ { slug: "id", label: msg`ID`, type: "text", description: msg`Unique identifier (ULID)`, }, { slug: "slug", label: msg`Slug`, type: "text", description: msg`URL-friendly identifier`, }, { slug: "status", label: msg`Status`, type: "text", description: msg`draft, published, or archived`, }, { slug: "created_at", label: msg`Created At`, type: "datetime", description: msg`When the entry was created`, }, { slug: "updated_at", label: msg`Updated At`, type: "datetime", description: msg`When the entry was last modified`, }, { slug: "published_at", label: msg`Published At`, type: "datetime", description: msg`When the entry was published`, }, ]; /** * Content Type editor for creating/editing collections */ export function ContentTypeEditor({ collection, isNew, isSaving, onSave, onAddField, onUpdateField, onDeleteField, onReorderFields, onCreateRelation, onUpdateRelation, onDeleteRelation, isDeletingRelation, deleteRelationError, }: ContentTypeEditorProps) { const { t } = useLingui(); const _navigate = useNavigate(); // Form state const [slug, setSlug] = React.useState(collection?.slug ?? ""); const [label, setLabel] = React.useState(collection?.label ?? ""); const [labelSingular, setLabelSingular] = React.useState(collection?.labelSingular ?? ""); const [description, setDescription] = React.useState(collection?.description ?? ""); const [urlPattern, setUrlPattern] = React.useState(collection?.urlPattern ?? ""); const [routable, setRoutable] = React.useState(collection?.routable ?? true); const [editLocking, setEditLocking] = React.useState(collection?.editLocking ?? true); const [icon, setIcon] = React.useState(collection?.icon ?? ""); const [group, setGroup] = React.useState(collection?.group ?? ""); const [hidden, setHidden] = React.useState(collection?.hidden ?? false); const [quickCreate, setQuickCreate] = React.useState(collection?.admin?.quickCreate ?? true); // SEO is managed via the separate `hasSeo` field; strip any legacy "seo" entry // so it isn't sent back on save (the API enum rejects it). const [supports, setSupports] = React.useState<string[]>( (collection?.supports ?? ["drafts", "revisions"]).filter((s) => s !== "seo"), ); // SEO state const [hasSeo, setHasSeo] = React.useState(collection?.hasSeo ?? false); // Comment settings state const [commentsEnabled, setCommentsEnabled] = React.useState( collection?.commentsEnabled ?? false, ); const [commentsModeration, setCommentsModeration] = React.useState<"all" | "first_time" | "none">( collection?.commentsModeration ?? "first_time", ); const [commentsClosedAfterDays, setCommentsClosedAfterDays] = React.useState( collection?.commentsClosedAfterDays ?? 90, ); const [commentsAutoApproveUsers, setCommentsAutoApproveUsers] = React.useState( collection?.commentsAutoApproveUsers ?? true, ); // Field editor state const [fieldEditorOpen, setFieldEditorOpen] = React.useState(false); const [editingField, setEditingField] = React.useState<SchemaField | undefined>(); const [fieldSaving, setFieldSaving] = React.useState(false); const [deleteFieldTarget, setDeleteFieldTarget] = React.useState<SchemaField | null>(null); // Checked by default: deleting a reference field almost always means the // relationship it views is finished too. const [deleteFieldRelation, setDeleteFieldRelation] = React.useState(true); const urlPatternChanged = urlPattern !== (collection?.urlPattern ?? ""); const urlPatternSharesSegment = urlPatternChanged && MULTIPLE_PLACEHOLDERS_IN_SEGMENT.test(urlPattern); const urlPatternValid = !urlPattern || (urlPattern.includes("{slug}") && !urlPatternSharesSegment); // Track whether form has unsaved changes const hasChanges = React.useMemo(() => { if (isNew) return slug && label; if (!collection) return false; return ( label !== collection.label || labelSingular !== (collection.labelSingular ?? "") || description !== (collection.description ?? "") || urlPattern !== (collection.urlPattern ?? "") || routable !== (collection.routable ?? true) || editLocking !== (collection.editLocking ?? true) || icon !== (collection.icon ?? "") || group !== (collection.group ?? "") || hidden !== (collection.hidden ?? false) || quickCreate !== (collection.admin?.quickCreate ?? true) || JSON.stringify([...supports].toSorted()) !== JSON.stringify(collection.supports.filter((s) => s !== "seo").toSorted()) || hasSeo !== collection.hasSeo || commentsEnabled !== collection.commentsEnabled || commentsModeration !== collection.commentsModeration || commentsClosedAfterDays !== collection.commentsClosedAfterDays || commentsAutoApproveUsers !== collection.commentsAutoApproveUsers ); }, [ isNew, collection, slug, label, labelSingular, description, urlPattern, routable, editLocking, icon, group, hidden, quickCreate, supports, hasSeo, commentsEnabled, commentsModeration, commentsClosedAfterDays, commentsAutoApproveUsers, ]); // Auto-generate slug from plural label const handleLabelChange = (value: string) => { setLabel(value); if (isNew) { setSlug( value .toLowerCase() .replace(SLUG_INVALID_CHARS_PATTERN, "_") .replace(SLUG_LEADING_TRAILING_PATTERN, ""), ); } }; // Auto-generate plural label (and slug) from singular label const handleSingularLabelChange = (value: string) => { setLabelSingular(value); if (isNew) { const pluralLabel = value ? `${value}s` : ""; handleLabelChange(pluralLabel); } }; const handleSupportToggle = (value: string) => { setSupports((prev) => prev.includes(value) ? prev.filter((s) => s !== value) : [...prev, value], ); }; const handleSubmit = (e: React.FormEvent) => { e.preventDefault(); if (isNew) { onSave({ slug, label, labelSingular: labelSingular || undefined, description: description || undefined, urlPattern: urlPattern || undefined, routable, editLocking, icon: icon.trim() || undefined, group: group.trim() || undefined, hidden, admin: quickCreate ? undefined : { quickCreate: false }, supports, hasSeo, }); } else { onSave({ label, labelSingular: labelSingular || undefined, description: description || undefined, urlPattern: urlPattern || undefined, routable, editLocking, icon: icon.trim(), group: group.trim() || null, hidden, admin: quickCreate !== (collection?.admin?.quickCreate ?? true) ? { ...collection?.admin, quickCreate: quickCreate ? undefined : false } : undefined, supports, hasSeo, commentsEnabled, commentsModeration, commentsClosedAfterDays, commentsAutoApproveUsers, }); } }; const handleFieldSave = async (input: CreateFieldInput) => { setFieldSaving(true); try { if (editingField) { onUpdateField?.(editingField.slug, input); } else { onAddField?.(input); } setFieldEditorOpen(false); setEditingField(undefined); } finally { setFieldSaving(false); } }; const requestDeleteField = (field: SchemaField) => { setDeleteFieldRelation(true); setDeleteFieldTarget(field); }; const handleEditField = (field: SchemaField) => { if (field.unsupportedType) return; setEditingField(field); setFieldEditorOpen(true); }; const handleAddField = () => { setEditingField(undefined); setFieldEditorOpen(true); }; const isFromCode = collection?.source === "code"; const fields = collection?.fields ?? []; const { data: relations = [], isLoading: relationsLoading } = useQuery({ queryKey: ["relations"], queryFn: () => fetchRelations(), }); const { data: allCollections = [] } = useQuery({ queryKey: ["schema", "collections"], queryFn: fetchCollections, }); const targetRelationSlug = deleteFieldTarget?.validation?.relation; const targetRelation = relations.find((rel) => rel.slug === targetRelationSlug); const sensors = useSensors( useSensor(PointerSensor, { activationConstraint: { distance: 8 } }), useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }), ); const handleDragEnd = (event: DragEndEvent) => { const { active, over } = event; if (!over || active.id === over.id) return; const oldIndex = fields.findIndex((f) => f.id === active.id); const newIndex = fields.findIndex((f) => f.id === over.id); if (oldIndex === -1 || newIndex === -1) return; const reordered = arrayMove(fields, oldIndex, newIndex); onReorderFields?.(reordered.map((f) => f.slug)); }; return ( <div className="space-y-6"> <EditorHeader leading={ <RouterLinkButton to="/content-types" aria-label={t`Back to Content Types`} variant="ghost" shape="square" icon={<ArrowPrev />} /> } actions={ !isFromCode && !isNew ? ( <SaveButton type="submit" form="content-type-editor-form" isDirty={!!hasChanges} isSaving={!!isSaving} disabled={!urlPatternValid} /> ) : null } > <h1 className="truncate text-2xl font-semibold"> {isNew ? t`New Content Type` : collection?.label} </h1> {!isNew && ( <p className="text-kumo-subtle text-sm"> <code className="bg-kumo-tint px-1.5 py-0.5 rounded">{collection?.slug}</code> {isFromCode && <span className="ms-2 text-kumo-info">{t`Defined in code`}</span>} </p> )} </EditorHeader> {isFromCode && ( <div className="rounded-lg border border-kumo-info/50 bg-kumo-info-tint p-4"> <div className="flex items-center space-x-2"> <FileText className="h-5 w-5 text-kumo-info" /> <p className="text-sm text-kumo-subtle"> {t`This collection is defined in code. Some settings cannot be changed here. Edit your live.config.ts file to modify the schema.`} </p> </div> </div> )} <div className="grid grid-cols-1 lg:grid-cols-3 gap-6"> {/* Settings form */} <div className="lg:col-span-1"> <form id="content-type-editor-form" onSubmit={handleSubmit} className="space-y-4"> <div className="rounded-lg border bg-kumo-base p-4 space-y-4"> <h2 className="font-semibold">{t`Settings`}</h2> <Input label={t`Label (Singular)`} value={labelSingular} onChange={(e) => handleSingularLabelChange(e.target.value)} placeholder={t`Post`} disabled={isFromCode} /> <Input label={t`Label (Plural)`} value={label} onChange={(e) => handleLabelChange(e.target.value)} placeholder={t`Posts`} disabled={isFromCode} /> {isNew && ( <div> <Input label={t`Slug`} value={slug} onChange={(e) => setSlug(e.target.value)} placeholder="posts" disabled={!isNew} /> <p className="text-xs text-kumo-subtle mt-2">{t`Used in URLs and API endpoints`}</p> </div> )} <InputArea label={t`Description`} value={description} onChange={(e) => setDescription(e.target.value)} placeholder={t`A brief description of this content type`} rows={3} disabled={isFromCode} /> <Switch checked={routable} onCheckedChange={setRoutable} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Routable`}</span> <p className="text-xs text-kumo-subtle"> {t`Require a slug before content can be published`} </p> </div> } /> <Switch checked={editLocking} onCheckedChange={setEditLocking} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Edit locking`}</span> <p className="text-xs text-kumo-subtle"> {t`Hold an entry while someone is editing it, and refuse other writers`} </p> </div> } /> <div> <Input label={t`URL Pattern`} value={urlPattern} onChange={(e) => setUrlPattern(e.target.value)} placeholder={`/${slug === "pages" ? "" : `${slug}/`}{slug}`} disabled={isFromCode} /> {urlPattern && !urlPattern.includes("{slug}") && ( <p className="text-xs text-kumo-danger mt-2"> {t`Pattern must include a ${"{slug}"} placeholder`} </p> )} {urlPatternSharesSegment && ( <p className="text-xs text-kumo-danger mt-2"> {t`Each path segment can contain at most one placeholder, e.g. ${"/{year}/{slug}"}`} </p> )} <p className="text-xs text-kumo-subtle mt-1"> {t`Pattern for generating URLs, e.g. /blog/${"{slug}"}. Tokens: ${"{slug}"}, ${"{id}"}, and date tokens ${"{year}"}/${"{month}"}/${"{day}"} (also ${"{hour}"}/${"{minute}"}/${"{second}"}) from the publish date — e.g. ${"/{year}/{month}/{day}/{slug}.html"} for WordPress-style permalinks.`} </p> </div> <div className="space-y-3"> <Label>{t`Navigation`}</Label> <div> <Input label={t`Group`} value={group} onChange={(e) => setGroup(e.target.value)} placeholder={t`Calendar`} disabled={isFromCode} /> <p className="text-xs text-kumo-subtle mt-1"> {t`Content types with the same group share a collapsible folder in the sidebar`} </p> </div> <div> <Input label={t`Icon`} value={icon} onChange={(e) => setIcon(e.target.value)} disabled={isFromCode} /> <p className="text-xs text-kumo-subtle mt-1"> {t`Phosphor icon name, e.g. calendar-blank or trophy`} </p> </div> <Switch checked={hidden} onCheckedChange={setHidden} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Hide from navigation`}</span> <p className="text-xs text-kumo-subtle"> {t`Removes the sidebar entry, command palette link, and dashboard quick action; entries stay reachable by URL, API, and plugins`} </p> </div> } /> <Switch checked={quickCreate} onCheckedChange={setQuickCreate} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Quick action on the dashboard`}</span> <p className="text-xs text-kumo-subtle"> {t`Shows a button for creating a new entry`} </p> </div> } /> </div> <div className="space-y-3"> <Label>{t`Features`}</Label> {SUPPORT_OPTIONS.map((option) => ( <div key={option.value} className={cn( "p-2 rounded-md hover:bg-kumo-tint/50", isFromCode && "opacity-60", )} > <Checkbox checked={supports.includes(option.value)} onCheckedChange={() => handleSupportToggle(option.value)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t(option.label)}</span> <p className="text-xs text-kumo-subtle">{t(option.description)}</p> </div> } /> </div> ))} </div> {/* SEO toggle */} <div className="pt-2 border-t"> <Switch checked={hasSeo} onCheckedChange={(checked) => setHasSeo(checked)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`SEO`}</span> <p className="text-xs text-kumo-subtle"> {t`Add SEO metadata fields (title, description, image) and include in sitemap`} </p> </div> } /> </div> </div> {/* Comments settings — only for existing collections */} {!isNew && ( <div className="rounded-lg border bg-kumo-base p-4 space-y-4"> <h2 className="font-semibold">{t`Comments`}</h2> <Switch checked={commentsEnabled} onCheckedChange={(checked) => setCommentsEnabled(checked)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Enable comments`}</span> <p className="text-xs text-kumo-subtle"> {t`Allow visitors to leave comments on this collection's content`} </p> </div> } /> {commentsEnabled && ( <> <Select label={t`Moderation`} value={commentsModeration} onValueChange={(v) => setCommentsModeration((v as "all" | "first_time" | "none") ?? "first_time") } items={{ all: t(MODERATION_OPTIONS.all), first_time: t(MODERATION_OPTIONS.first_time), none: t(MODERATION_OPTIONS.none), }} disabled={isFromCode} /> <Input label={t`Close comments after (days)`} type="number" min={0} value={String(commentsClosedAfterDays)} onChange={(e) => { const parsed = Number.parseInt(e.target.value, 10); setCommentsClosedAfterDays(Number.isNaN(parsed) ? 0 : Math.max(0, parsed)); }} disabled={isFromCode} /> <p className="text-xs text-kumo-subtle -mt-2"> {t`Set to 0 to never close comments automatically.`} </p> <Switch checked={commentsAutoApproveUsers} onCheckedChange={(checked) => setCommentsAutoApproveUsers(checked)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium"> {t`Auto-approve authenticated users`} </span> <p className="text-xs text-kumo-subtle"> {t`Comments from logged-in CMS users are approved automatically`} </p> </div> } /> </> )} </div> )} {!isFromCode && (isNew ? ( <Button type="submit" disabled={!hasChanges || !urlPatternValid} loading={isSaving} className="w-full justify-center" > {t`Create Content Type`} </Button> ) : ( <SaveButton type="submit" isDirty={!!hasChanges} isSaving={!!isSaving} announce={false} disabled={!urlPatternValid} className="w-full justify-center" /> ))} </form> </div> {/* Fields and relations - only shown for existing collections */} {!isNew && ( <div className="lg:col-span-2 space-y-6"> <div className="rounded-lg border bg-kumo-base"> <div className="flex items-center justify-between p-4 border-b"> <div> <h2 className="font-semibold">{t`Fields`}</h2> <p className="text-sm text-kumo-subtle"> <Trans> {SYSTEM_FIELDS.length} system + {fields.length} custom{" "} {plural(fields.length, { one: "field", other: "fields" })} </Trans> </p> </div> {!isFromCode && ( <Button icon={<Plus />} onClick={handleAddField}> {t`Add Field`} </Button> )} </div> {/* System fields - always shown */} <div> <div className="px-4 py-2 text-xs font-medium text-kumo-subtle uppercase tracking-wider bg-kumo-tint/50 border-b"> {t`System Fields`} </div> <div className="divide-y divide-kumo-line/50 border-b"> {SYSTEM_FIELDS.map((field) => ( <SystemFieldRow key={field.slug} field={field} /> ))} </div> </div> {/* Custom fields */} {fields.length === 0 ? ( <div className="p-8 text-center text-kumo-subtle"> <Database className="mx-auto h-12 w-12 mb-4 opacity-50" /> <p className="font-medium">{t`No custom fields yet`}</p> <p className="text-sm">{t`Add fields to define the structure of your content`}</p> {!isFromCode && ( <Button className="mt-4" icon={<Plus />} onClick={handleAddField}> {t`Add First Field`} </Button> )} </div> ) : ( <> <div className="px-4 py-2 text-xs font-medium text-kumo-subtle uppercase tracking-wider bg-kumo-tint/50 border-b"> {t`Custom Fields`} </div> <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd} > <SortableContext items={fields.map((f) => f.id)} strategy={verticalListSortingStrategy} > <div className="divide-y"> {fields.map((field) => ( <FieldRow key={field.id} field={field} isFromCode={isFromCode} onEdit={() => handleEditField(field)} onDelete={() => requestDeleteField(field)} /> ))} </div> </SortableContext> </DndContext> </> )} </div> {collection && ( <RelationsPanel collectionSlug={collection.slug} relations={relations} collections={allCollections} isLoading={relationsLoading} onCreateRelation={onCreateRelation} onUpdateRelation={onUpdateRelation} onDeleteRelation={onDeleteRelation} isDeletingRelation={isDeletingRelation} deleteRelationError={deleteRelationError} /> )} </div> )} </div> {/* Field editor dialog */} <FieldEditor open={fieldEditorOpen} onOpenChange={setFieldEditorOpen} field={editingField} onSave={handleFieldSave} isSaving={fieldSaving} collectionSlug={collection?.slug} onCreateRelation={onCreateRelation} /> <ConfirmDialog open={!!deleteFieldTarget} onClose={() => setDeleteFieldTarget(null)} title={t`Delete Field?`} description={ deleteFieldTarget ? t`Are you sure you want to delete the "${deleteFieldTarget.label}" field?` : "" } confirmLabel={t`Delete`} pendingLabel={t`Deleting...`} isPending={false} error={null} onConfirm={() => { if (deleteFieldTarget) { onDeleteField?.( deleteFieldTarget.slug, targetRelation ? { deleteRelation: deleteFieldRelation } : undefined, ); setDeleteFieldTarget(null); } }} > {targetRelation && ( <div className="mt-4 space-y-3"> <Checkbox checked={deleteFieldRelation} onCheckedChange={(checked) => setDeleteFieldRelation(checked === true)} label={t`Also delete the relationship this field uses`} /> {deleteFieldRelation && collection && ( <div className="rounded-md border border-kumo-danger/50 bg-kumo-danger-tint p-3"> <p className="text-sm font-medium">{t`This also removes:`}</p> <RelationImpact relations={[targetRelation]} excludeField={{ collectionSlug: collection.slug, fieldSlug: deleteFieldTarget?.slug ?? "", }} /> </div> )} </div> )} </ConfirmDialog> </div> ); } interface FieldRowProps { field: SchemaField; isFromCode?: boolean; onEdit: () => void; onDelete: () => void; } function FieldRow({ field, isFromCode, onEdit, onDelete }: FieldRowProps) { const { t } = useLingui(); const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: field.id, disabled: isFromCode, }); const style = { transform: CSS.Transform.toString(transform), transition }; return ( <div ref={setNodeRef} style={style} className={cn( "flex items-center px-4 py-3 hover:bg-kumo-tint/25", isDragging && "opacity-50", )} > {!isFromCode && ( <button {...attributes} {...listeners} className="cursor-grab active:cursor-grabbing me-3" aria-label={t`Drag to reorder ${field.label}`} > <DotsSixVertical className="h-5 w-5 text-kumo-subtle" /> </button> )} <div className="flex-1 min-w-0"> <div className="flex items-center space-x-2"> <span className="font-medium">{field.label}</span> <code className="text-xs bg-kumo-tint px-1.5 py-0.5 rounded text-kumo-subtle"> {field.slug} </code> </div> <div className="flex items-center space-x-2 mt-1"> <span className={cn("text-xs text-kumo-subtle", !field.unsupportedType && "capitalize")}> {field.unsupportedType?.type ?? field.type} </span> {field.unsupportedType && <Badge variant="secondary">{t`Unsupported`}</Badge>} {field.required && <Badge variant="secondary">{t`Required`}</Badge>} {field.unique && <Badge variant="secondary">{t`Unique`}</Badge>} {field.searchable && <Badge variant="secondary">{t`Searchable`}</Badge>} </div> </div> {!isFromCode && ( <div className="flex items-center space-x-1"> <Button variant="ghost" shape="square" onClick={onEdit} disabled={Boolean(field.unsupportedType)} aria-label={t`Edit ${field.label} field`} > <Pencil className="h-4 w-4" /> </Button> <Button variant="ghost" shape="square" onClick={onDelete} aria-label={t`Delete ${field.label} field`} > <Trash className="h-4 w-4 text-kumo-danger" /> </Button> </div> )} </div> ); } interface SystemFieldInfo { slug: string; label: MessageDescriptor; type: string; description: MessageDescriptor; } function SystemFieldRow({ field }: { field: SystemFieldInfo }) { const { t } = useLingui(); return ( <div className="flex items-center px-4 py-2 opacity-75"> <div className="w-8" /> {/* Spacer for alignment with draggable fields */} <div className="flex-1 min-w-0"> <div className="flex items-center space-x-2"> <span className="font-medium text-sm">{t(field.label)}</span> <code className="text-xs bg-kumo-tint px-1.5 py-0.5 rounded text-kumo-subtle"> {field.slug} </code> <Badge variant="secondary">{t`System`}</Badge> </div> <p className="text-xs text-kumo-subtle mt-0.5">{t(field.description)}</p> </div> </div> ); } 
-#: packages/admin/src/components/ContentTypeEditor.tsx:748
+#. placeholder {2}: import { Badge, Button, Checkbox, Input, InputArea, Label, Select, Switch } from "@cloudflare/kumo"; import { DndContext, closestCenter, type DragEndEvent, KeyboardSensor, PointerSensor, useSensor, useSensors, } from "@dnd-kit/core"; import { arrayMove, SortableContext, sortableKeyboardCoordinates, useSortable, verticalListSortingStrategy, } from "@dnd-kit/sortable"; import { CSS } from "@dnd-kit/utilities"; import type { MessageDescriptor } from "@lingui/core"; import { msg, plural } from "@lingui/core/macro"; import { Trans, useLingui } from "@lingui/react/macro"; import { Plus, DotsSixVertical, Pencil, Trash, Database, FileText } from "@phosphor-icons/react"; import { useQuery } from "@tanstack/react-query"; import { useNavigate } from "@tanstack/react-router"; import * as React from "react"; import { fetchCollections, fetchRelations } from "../lib/api"; import type { SchemaCollectionWithFields, SchemaField, CreateFieldInput, CreateCollectionInput, UpdateCollectionInput, } from "../lib/api"; import type { CreateRelationInput, RelationDef, UpdateRelationInput, } from "../lib/api/relations.js"; import { cn, slugifyIdentifier } from "../lib/utils"; import { ArrowPrev } from "./ArrowIcons.js"; import { ConfirmDialog } from "./ConfirmDialog"; import { EditorHeader } from "./EditorHeader"; import { FieldEditor } from "./FieldEditor"; import { RelationImpact } from "./RelationImpact.js"; import { RelationsPanel } from "./RelationsPanel.js"; import { RouterLinkButton } from "./RouterLinkButton.js"; import { SaveButton } from "./SaveButton"; const MULTIPLE_PLACEHOLDERS_IN_SEGMENT = /\{\w+\}[^/]*\{\w+\}/; export interface ContentTypeEditorProps { collection?: SchemaCollectionWithFields; isNew?: boolean; isSaving?: boolean; onSave: (input: CreateCollectionInput | UpdateCollectionInput) => void; onAddField?: (input: CreateFieldInput) => void; onUpdateField?: (fieldSlug: string, input: CreateFieldInput) => void; /** `deleteRelation` also removes the relationship a reference field views, * its links, and the field on the other end. */ onDeleteField?: (fieldSlug: string, options?: { deleteRelation?: boolean }) => void; onReorderFields?: (fieldSlugs: string[]) => void; /** Resolves with the new relation; rejects with the server's message. */ onCreateRelation?: (input: CreateRelationInput) => Promise<RelationDef>; /** Resolves once the relation is saved; rejects with the server's message. */ onUpdateRelation?: (id: string, input: UpdateRelationInput) => Promise<unknown>; /** Also removes the relation's links and the reference fields bound to it. */ onDeleteRelation?: (id: string) => Promise<unknown>; isDeletingRelation?: boolean; deleteRelationError?: unknown; } interface SupportOptionDef { value: string; label: MessageDescriptor; description: MessageDescriptor; } const MODERATION_OPTIONS: Record<"all" | "first_time" | "none", MessageDescriptor> = { all: msg`All comments require approval`, first_time: msg`First-time commenters only`, none: msg`No moderation (auto-approve all)`, }; const SUPPORT_OPTIONS: SupportOptionDef[] = [ { value: "drafts", label: msg`Drafts`, description: msg`Save content as draft before publishing`, }, { value: "revisions", label: msg`Revisions`, description: msg`Track content history`, }, { value: "preview", label: msg`Preview`, description: msg`Preview content before publishing`, }, { value: "search", label: msg`Search`, description: msg`Enable full-text search on this collection`, }, ]; /** * System fields that exist on every collection * These are created automatically and cannot be modified */ interface SystemFieldDef { slug: string; label: MessageDescriptor; type: string; description: MessageDescriptor; } const SYSTEM_FIELDS: SystemFieldDef[] = [ { slug: "id", label: msg`ID`, type: "text", description: msg`Unique identifier (ULID)`, }, { slug: "slug", label: msg`Slug`, type: "text", description: msg`URL-friendly identifier`, }, { slug: "status", label: msg`Status`, type: "text", description: msg`draft, published, or archived`, }, { slug: "created_at", label: msg`Created At`, type: "datetime", description: msg`When the entry was created`, }, { slug: "updated_at", label: msg`Updated At`, type: "datetime", description: msg`When the entry was last modified`, }, { slug: "published_at", label: msg`Published At`, type: "datetime", description: msg`When the entry was published`, }, ]; /** * Content Type editor for creating/editing collections */ export function ContentTypeEditor({ collection, isNew, isSaving, onSave, onAddField, onUpdateField, onDeleteField, onReorderFields, onCreateRelation, onUpdateRelation, onDeleteRelation, isDeletingRelation, deleteRelationError, }: ContentTypeEditorProps) { const { t } = useLingui(); const _navigate = useNavigate(); // Form state const [slug, setSlug] = React.useState(collection?.slug ?? ""); const [label, setLabel] = React.useState(collection?.label ?? ""); const [labelSingular, setLabelSingular] = React.useState(collection?.labelSingular ?? ""); const [description, setDescription] = React.useState(collection?.description ?? ""); const [urlPattern, setUrlPattern] = React.useState(collection?.urlPattern ?? ""); const [routable, setRoutable] = React.useState(collection?.routable ?? true); const [editLocking, setEditLocking] = React.useState(collection?.editLocking ?? true); const [icon, setIcon] = React.useState(collection?.icon ?? ""); const [group, setGroup] = React.useState(collection?.group ?? ""); const [hidden, setHidden] = React.useState(collection?.hidden ?? false); const [quickCreate, setQuickCreate] = React.useState(collection?.admin?.quickCreate ?? true); // SEO is managed via the separate `hasSeo` field; strip any legacy "seo" entry // so it isn't sent back on save (the API enum rejects it). const [supports, setSupports] = React.useState<string[]>( (collection?.supports ?? ["drafts", "revisions"]).filter((s) => s !== "seo"), ); // SEO state const [hasSeo, setHasSeo] = React.useState(collection?.hasSeo ?? false); // Comment settings state const [commentsEnabled, setCommentsEnabled] = React.useState( collection?.commentsEnabled ?? false, ); const [commentsModeration, setCommentsModeration] = React.useState<"all" | "first_time" | "none">( collection?.commentsModeration ?? "first_time", ); const [commentsClosedAfterDays, setCommentsClosedAfterDays] = React.useState( collection?.commentsClosedAfterDays ?? 90, ); const [commentsAutoApproveUsers, setCommentsAutoApproveUsers] = React.useState( collection?.commentsAutoApproveUsers ?? true, ); // Field editor state const [fieldEditorOpen, setFieldEditorOpen] = React.useState(false); const [editingField, setEditingField] = React.useState<SchemaField | undefined>(); const [fieldSaving, setFieldSaving] = React.useState(false); const [deleteFieldTarget, setDeleteFieldTarget] = React.useState<SchemaField | null>(null); // Checked by default: deleting a reference field almost always means the // relationship it views is finished too. const [deleteFieldRelation, setDeleteFieldRelation] = React.useState(true); const urlPatternChanged = urlPattern !== (collection?.urlPattern ?? ""); const urlPatternSharesSegment = urlPatternChanged && MULTIPLE_PLACEHOLDERS_IN_SEGMENT.test(urlPattern); const urlPatternValid = !urlPattern || (urlPattern.includes("{slug}") && !urlPatternSharesSegment); const slugError = isNew && !slug && label.trim().length > 0 ? t`A slug cannot be generated from this label. Type one manually using lowercase letters, numbers, and underscores.` : undefined; // Track whether form has unsaved changes const hasChanges = React.useMemo(() => { if (isNew) return slug && label; if (!collection) return false; return ( label !== collection.label || labelSingular !== (collection.labelSingular ?? "") || description !== (collection.description ?? "") || urlPattern !== (collection.urlPattern ?? "") || routable !== (collection.routable ?? true) || editLocking !== (collection.editLocking ?? true) || icon !== (collection.icon ?? "") || group !== (collection.group ?? "") || hidden !== (collection.hidden ?? false) || quickCreate !== (collection.admin?.quickCreate ?? true) || JSON.stringify([...supports].toSorted()) !== JSON.stringify(collection.supports.filter((s) => s !== "seo").toSorted()) || hasSeo !== collection.hasSeo || commentsEnabled !== collection.commentsEnabled || commentsModeration !== collection.commentsModeration || commentsClosedAfterDays !== collection.commentsClosedAfterDays || commentsAutoApproveUsers !== collection.commentsAutoApproveUsers ); }, [ isNew, collection, slug, label, labelSingular, description, urlPattern, routable, editLocking, icon, group, hidden, quickCreate, supports, hasSeo, commentsEnabled, commentsModeration, commentsClosedAfterDays, commentsAutoApproveUsers, ]); // Auto-generate slug from plural label const handleLabelChange = (value: string) => { setLabel(value); if (isNew) { setSlug(slugifyIdentifier(value)); } }; // Auto-generate plural label (and slug) from singular label const handleSingularLabelChange = (value: string) => { setLabelSingular(value); if (isNew) { const pluralLabel = value ? `${value}s` : ""; handleLabelChange(pluralLabel); } }; const handleSupportToggle = (value: string) => { setSupports((prev) => prev.includes(value) ? prev.filter((s) => s !== value) : [...prev, value], ); }; const handleSubmit = (e: React.FormEvent) => { e.preventDefault(); if (isNew) { onSave({ slug, label, labelSingular: labelSingular || undefined, description: description || undefined, urlPattern: urlPattern || undefined, routable, editLocking, icon: icon.trim() || undefined, group: group.trim() || undefined, hidden, admin: quickCreate ? undefined : { quickCreate: false }, supports, hasSeo, }); } else { onSave({ label, labelSingular: labelSingular || undefined, description: description || undefined, urlPattern: urlPattern || undefined, routable, editLocking, icon: icon.trim(), group: group.trim() || null, hidden, admin: quickCreate !== (collection?.admin?.quickCreate ?? true) ? { ...collection?.admin, quickCreate: quickCreate ? undefined : false } : undefined, supports, hasSeo, commentsEnabled, commentsModeration, commentsClosedAfterDays, commentsAutoApproveUsers, }); } }; const handleFieldSave = async (input: CreateFieldInput) => { setFieldSaving(true); try { if (editingField) { onUpdateField?.(editingField.slug, input); } else { onAddField?.(input); } setFieldEditorOpen(false); setEditingField(undefined); } finally { setFieldSaving(false); } }; const requestDeleteField = (field: SchemaField) => { setDeleteFieldRelation(true); setDeleteFieldTarget(field); }; const handleEditField = (field: SchemaField) => { if (field.unsupportedType) return; setEditingField(field); setFieldEditorOpen(true); }; const handleAddField = () => { setEditingField(undefined); setFieldEditorOpen(true); }; const isFromCode = collection?.source === "code"; const fields = collection?.fields ?? []; const { data: relations = [], isLoading: relationsLoading } = useQuery({ queryKey: ["relations"], queryFn: () => fetchRelations(), }); const { data: allCollections = [] } = useQuery({ queryKey: ["schema", "collections"], queryFn: fetchCollections, }); const targetRelationSlug = deleteFieldTarget?.validation?.relation; const targetRelation = relations.find((rel) => rel.slug === targetRelationSlug); const sensors = useSensors( useSensor(PointerSensor, { activationConstraint: { distance: 8 } }), useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }), ); const handleDragEnd = (event: DragEndEvent) => { const { active, over } = event; if (!over || active.id === over.id) return; const oldIndex = fields.findIndex((f) => f.id === active.id); const newIndex = fields.findIndex((f) => f.id === over.id); if (oldIndex === -1 || newIndex === -1) return; const reordered = arrayMove(fields, oldIndex, newIndex); onReorderFields?.(reordered.map((f) => f.slug)); }; return ( <div className="space-y-6"> <EditorHeader leading={ <RouterLinkButton to="/content-types" aria-label={t`Back to Content Types`} variant="ghost" shape="square" icon={<ArrowPrev />} /> } actions={ !isFromCode && !isNew ? ( <SaveButton type="submit" form="content-type-editor-form" isDirty={!!hasChanges} isSaving={!!isSaving} disabled={!urlPatternValid} /> ) : null } > <h1 className="truncate text-2xl font-semibold"> {isNew ? t`New Content Type` : collection?.label} </h1> {!isNew && ( <p className="text-kumo-subtle text-sm"> <code className="bg-kumo-tint px-1.5 py-0.5 rounded">{collection?.slug}</code> {isFromCode && <span className="ms-2 text-kumo-info">{t`Defined in code`}</span>} </p> )} </EditorHeader> {isFromCode && ( <div className="rounded-lg border border-kumo-info/50 bg-kumo-info-tint p-4"> <div className="flex items-center space-x-2"> <FileText className="h-5 w-5 text-kumo-info" /> <p className="text-sm text-kumo-subtle"> {t`This collection is defined in code. Some settings cannot be changed here. Edit your live.config.ts file to modify the schema.`} </p> </div> </div> )} <div className="grid grid-cols-1 lg:grid-cols-3 gap-6"> {/* Settings form */} <div className="lg:col-span-1"> <form id="content-type-editor-form" onSubmit={handleSubmit} className="space-y-4"> <div className="rounded-lg border bg-kumo-base p-4 space-y-4"> <h2 className="font-semibold">{t`Settings`}</h2> <Input label={t`Label (Singular)`} value={labelSingular} onChange={(e) => handleSingularLabelChange(e.target.value)} placeholder={t`Post`} disabled={isFromCode} /> <Input label={t`Label (Plural)`} value={label} onChange={(e) => handleLabelChange(e.target.value)} placeholder={t`Posts`} disabled={isFromCode} /> {isNew && ( <div> <Input label={t`Slug`} value={slug} onChange={(e) => setSlug(e.target.value)} placeholder="posts" disabled={!isNew} error={slugError} /> <p className="text-xs text-kumo-subtle mt-2">{t`Used in URLs and API endpoints`}</p> </div> )} <InputArea label={t`Description`} value={description} onChange={(e) => setDescription(e.target.value)} placeholder={t`A brief description of this content type`} rows={3} disabled={isFromCode} /> <Switch checked={routable} onCheckedChange={setRoutable} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Routable`}</span> <p className="text-xs text-kumo-subtle"> {t`Require a slug before content can be published`} </p> </div> } /> <Switch checked={editLocking} onCheckedChange={setEditLocking} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Edit locking`}</span> <p className="text-xs text-kumo-subtle"> {t`Hold an entry while someone is editing it, and refuse other writers`} </p> </div> } /> <div> <Input label={t`URL Pattern`} value={urlPattern} onChange={(e) => setUrlPattern(e.target.value)} placeholder={`/${slug === "pages" ? "" : `${slug}/`}{slug}`} disabled={isFromCode} /> {urlPattern && !urlPattern.includes("{slug}") && ( <p className="text-xs text-kumo-danger mt-2"> {t`Pattern must include a ${"{slug}"} placeholder`} </p> )} {urlPatternSharesSegment && ( <p className="text-xs text-kumo-danger mt-2"> {t`Each path segment can contain at most one placeholder, e.g. ${"/{year}/{slug}"}`} </p> )} <p className="text-xs text-kumo-subtle mt-1"> {t`Pattern for generating URLs, e.g. /blog/${"{slug}"}. Tokens: ${"{slug}"}, ${"{id}"}, and date tokens ${"{year}"}/${"{month}"}/${"{day}"} (also ${"{hour}"}/${"{minute}"}/${"{second}"}) from the publish date — e.g. ${"/{year}/{month}/{day}/{slug}.html"} for WordPress-style permalinks.`} </p> </div> <div className="space-y-3"> <Label>{t`Navigation`}</Label> <div> <Input label={t`Group`} value={group} onChange={(e) => setGroup(e.target.value)} placeholder={t`Calendar`} disabled={isFromCode} /> <p className="text-xs text-kumo-subtle mt-1"> {t`Content types with the same group share a collapsible folder in the sidebar`} </p> </div> <div> <Input label={t`Icon`} value={icon} onChange={(e) => setIcon(e.target.value)} disabled={isFromCode} /> <p className="text-xs text-kumo-subtle mt-1"> {t`Phosphor icon name, e.g. calendar-blank or trophy`} </p> </div> <Switch checked={hidden} onCheckedChange={setHidden} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Hide from navigation`}</span> <p className="text-xs text-kumo-subtle"> {t`Removes the sidebar entry, command palette link, and dashboard quick action; entries stay reachable by URL, API, and plugins`} </p> </div> } /> <Switch checked={quickCreate} onCheckedChange={setQuickCreate} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Quick action on the dashboard`}</span> <p className="text-xs text-kumo-subtle"> {t`Shows a button for creating a new entry`} </p> </div> } /> </div> <div className="space-y-3"> <Label>{t`Features`}</Label> {SUPPORT_OPTIONS.map((option) => ( <div key={option.value} className={cn( "p-2 rounded-md hover:bg-kumo-tint/50", isFromCode && "opacity-60", )} > <Checkbox checked={supports.includes(option.value)} onCheckedChange={() => handleSupportToggle(option.value)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t(option.label)}</span> <p className="text-xs text-kumo-subtle">{t(option.description)}</p> </div> } /> </div> ))} </div> {/* SEO toggle */} <div className="pt-2 border-t"> <Switch checked={hasSeo} onCheckedChange={(checked) => setHasSeo(checked)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`SEO`}</span> <p className="text-xs text-kumo-subtle"> {t`Add SEO metadata fields (title, description, image) and include in sitemap`} </p> </div> } /> </div> </div> {/* Comments settings — only for existing collections */} {!isNew && ( <div className="rounded-lg border bg-kumo-base p-4 space-y-4"> <h2 className="font-semibold">{t`Comments`}</h2> <Switch checked={commentsEnabled} onCheckedChange={(checked) => setCommentsEnabled(checked)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Enable comments`}</span> <p className="text-xs text-kumo-subtle"> {t`Allow visitors to leave comments on this collection's content`} </p> </div> } /> {commentsEnabled && ( <> <Select label={t`Moderation`} value={commentsModeration} onValueChange={(v) => setCommentsModeration((v as "all" | "first_time" | "none") ?? "first_time") } items={{ all: t(MODERATION_OPTIONS.all), first_time: t(MODERATION_OPTIONS.first_time), none: t(MODERATION_OPTIONS.none), }} disabled={isFromCode} /> <Input label={t`Close comments after (days)`} type="number" min={0} value={String(commentsClosedAfterDays)} onChange={(e) => { const parsed = Number.parseInt(e.target.value, 10); setCommentsClosedAfterDays(Number.isNaN(parsed) ? 0 : Math.max(0, parsed)); }} disabled={isFromCode} /> <p className="text-xs text-kumo-subtle -mt-2"> {t`Set to 0 to never close comments automatically.`} </p> <Switch checked={commentsAutoApproveUsers} onCheckedChange={(checked) => setCommentsAutoApproveUsers(checked)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium"> {t`Auto-approve authenticated users`} </span> <p className="text-xs text-kumo-subtle"> {t`Comments from logged-in CMS users are approved automatically`} </p> </div> } /> </> )} </div> )} {!isFromCode && (isNew ? ( <Button type="submit" disabled={!hasChanges || !urlPatternValid} loading={isSaving} className="w-full justify-center" > {t`Create Content Type`} </Button> ) : ( <SaveButton type="submit" isDirty={!!hasChanges} isSaving={!!isSaving} announce={false} disabled={!urlPatternValid} className="w-full justify-center" /> ))} </form> </div> {/* Fields and relations - only shown for existing collections */} {!isNew && ( <div className="lg:col-span-2 space-y-6"> <div className="rounded-lg border bg-kumo-base"> <div className="flex items-center justify-between p-4 border-b"> <div> <h2 className="font-semibold">{t`Fields`}</h2> <p className="text-sm text-kumo-subtle"> <Trans> {SYSTEM_FIELDS.length} system + {fields.length} custom{" "} {plural(fields.length, { one: "field", other: "fields" })} </Trans> </p> </div> {!isFromCode && ( <Button icon={<Plus />} onClick={handleAddField}> {t`Add Field`} </Button> )} </div> {/* System fields - always shown */} <div> <div className="px-4 py-2 text-xs font-medium text-kumo-subtle uppercase tracking-wider bg-kumo-tint/50 border-b"> {t`System Fields`} </div> <div className="divide-y divide-kumo-line/50 border-b"> {SYSTEM_FIELDS.map((field) => ( <SystemFieldRow key={field.slug} field={field} /> ))} </div> </div> {/* Custom fields */} {fields.length === 0 ? ( <div className="p-8 text-center text-kumo-subtle"> <Database className="mx-auto h-12 w-12 mb-4 opacity-50" /> <p className="font-medium">{t`No custom fields yet`}</p> <p className="text-sm">{t`Add fields to define the structure of your content`}</p> {!isFromCode && ( <Button className="mt-4" icon={<Plus />} onClick={handleAddField}> {t`Add First Field`} </Button> )} </div> ) : ( <> <div className="px-4 py-2 text-xs font-medium text-kumo-subtle uppercase tracking-wider bg-kumo-tint/50 border-b"> {t`Custom Fields`} </div> <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd} > <SortableContext items={fields.map((f) => f.id)} strategy={verticalListSortingStrategy} > <div className="divide-y"> {fields.map((field) => ( <FieldRow key={field.id} field={field} isFromCode={isFromCode} onEdit={() => handleEditField(field)} onDelete={() => requestDeleteField(field)} /> ))} </div> </SortableContext> </DndContext> </> )} </div> {collection && ( <RelationsPanel collectionSlug={collection.slug} relations={relations} collections={allCollections} isLoading={relationsLoading} onCreateRelation={onCreateRelation} onUpdateRelation={onUpdateRelation} onDeleteRelation={onDeleteRelation} isDeletingRelation={isDeletingRelation} deleteRelationError={deleteRelationError} /> )} </div> )} </div> {/* Field editor dialog */} <FieldEditor open={fieldEditorOpen} onOpenChange={setFieldEditorOpen} field={editingField} onSave={handleFieldSave} isSaving={fieldSaving} collectionSlug={collection?.slug} onCreateRelation={onCreateRelation} /> <ConfirmDialog open={!!deleteFieldTarget} onClose={() => setDeleteFieldTarget(null)} title={t`Delete Field?`} description={ deleteFieldTarget ? t`Are you sure you want to delete the "${deleteFieldTarget.label}" field?` : "" } confirmLabel={t`Delete`} pendingLabel={t`Deleting...`} isPending={false} error={null} onConfirm={() => { if (deleteFieldTarget) { onDeleteField?.( deleteFieldTarget.slug, targetRelation ? { deleteRelation: deleteFieldRelation } : undefined, ); setDeleteFieldTarget(null); } }} > {targetRelation && ( <div className="mt-4 space-y-3"> <Checkbox checked={deleteFieldRelation} onCheckedChange={(checked) => setDeleteFieldRelation(checked === true)} label={t`Also delete the relationship this field uses`} /> {deleteFieldRelation && collection && ( <div className="rounded-md border border-kumo-danger/50 bg-kumo-danger-tint p-3"> <p className="text-sm font-medium">{t`This also removes:`}</p> <RelationImpact relations={[targetRelation]} excludeField={{ collectionSlug: collection.slug, fieldSlug: deleteFieldTarget?.slug ?? "", }} /> </div> )} </div> )} </ConfirmDialog> </div> ); } interface FieldRowProps { field: SchemaField; isFromCode?: boolean; onEdit: () => void; onDelete: () => void; } function FieldRow({ field, isFromCode, onEdit, onDelete }: FieldRowProps) { const { t } = useLingui(); const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: field.id, disabled: isFromCode, }); const style = { transform: CSS.Transform.toString(transform), transition }; return ( <div ref={setNodeRef} style={style} className={cn( "flex items-center px-4 py-3 hover:bg-kumo-tint/25", isDragging && "opacity-50", )} > {!isFromCode && ( <button {...attributes} {...listeners} className="cursor-grab active:cursor-grabbing me-3" aria-label={t`Drag to reorder ${field.label}`} > <DotsSixVertical className="h-5 w-5 text-kumo-subtle" /> </button> )} <div className="flex-1 min-w-0"> <div className="flex items-center space-x-2"> <span className="font-medium">{field.label}</span> <code className="text-xs bg-kumo-tint px-1.5 py-0.5 rounded text-kumo-subtle"> {field.slug} </code> </div> <div className="flex items-center space-x-2 mt-1"> <span className={cn("text-xs text-kumo-subtle", !field.unsupportedType && "capitalize")}> {field.unsupportedType?.type ?? field.type} </span> {field.unsupportedType && <Badge variant="secondary">{t`Unsupported`}</Badge>} {field.required && <Badge variant="secondary">{t`Required`}</Badge>} {field.unique && <Badge variant="secondary">{t`Unique`}</Badge>} {field.searchable && <Badge variant="secondary">{t`Searchable`}</Badge>} </div> </div> {!isFromCode && ( <div className="flex items-center space-x-1"> <Button variant="ghost" shape="square" onClick={onEdit} disabled={Boolean(field.unsupportedType)} aria-label={t`Edit ${field.label} field`} > <Pencil className="h-4 w-4" /> </Button> <Button variant="ghost" shape="square" onClick={onDelete} aria-label={t`Delete ${field.label} field`} > <Trash className="h-4 w-4 text-kumo-danger" /> </Button> </div> )} </div> ); } interface SystemFieldInfo { slug: string; label: MessageDescriptor; type: string; description: MessageDescriptor; } function SystemFieldRow({ field }: { field: SystemFieldInfo }) { const { t } = useLingui(); return ( <div className="flex items-center px-4 py-2 opacity-75"> <div className="w-8" /> {/* Spacer for alignment with draggable fields */} <div className="flex-1 min-w-0"> <div className="flex items-center space-x-2"> <span className="font-medium text-sm">{t(field.label)}</span> <code className="text-xs bg-kumo-tint px-1.5 py-0.5 rounded text-kumo-subtle"> {field.slug} </code> <Badge variant="secondary">{t`System`}</Badge> </div> <p className="text-xs text-kumo-subtle mt-0.5">{t(field.description)}</p> </div> </div> ); } 
+#: packages/admin/src/components/ContentTypeEditor.tsx:745
 msgid "{0} system + {1} custom {2}"
 msgstr ""
 
@@ -949,7 +949,7 @@ msgstr "7 dias"
 msgid "90 days"
 msgstr "90 dias"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:495
+#: packages/admin/src/components/ContentTypeEditor.tsx:492
 msgid "A brief description of this content type"
 msgstr "Uma breve descrição deste tipo de conteúdo"
 
@@ -985,6 +985,10 @@ msgstr "Falta um ficheiro multimédia no pacote"
 msgid "A media folder with this name already exists"
 msgstr "Já existe uma pasta multimédia com este nome"
 
+#: packages/admin/src/components/TaxonomyManager.tsx:962
+msgid "A name cannot be generated from this label. Type one manually using lowercase letters, numbers, and underscores."
+msgstr ""
+
 #: packages/admin/src/components/settings/transfer/labels.ts:137
 msgid "A number is too large for this site’s database"
 msgstr "Um número é demasiado grande para a base de dados deste site"
@@ -1019,13 +1023,27 @@ msgstr "Um registo refere-se a algo que não está no pacote"
 msgid "A relation defines how two content types link. Reference fields on either side then pick entries through it."
 msgstr "Uma relação define como dois tipos de conteúdo se ligam. Os campos de referência de cada lado escolhem depois entradas através dela."
 
-#: packages/admin/src/components/FieldEditor.tsx:763
+#: packages/admin/src/components/FieldEditor.tsx:773
 msgid "A relationship is required"
 msgstr "É obrigatória uma relação"
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:348
 msgid "A short description of your site"
 msgstr "Uma breve descrição do site"
+
+#: packages/admin/src/components/RelationForm.tsx:249
+msgid "A slug cannot be generated from these role names. Type one manually using lowercase letters, numbers, and underscores."
+msgstr ""
+
+#: packages/admin/src/components/BylineFieldEditor.tsx:195
+#: packages/admin/src/components/ContentTypeEditor.tsx:231
+#: packages/admin/src/components/FieldEditor.tsx:645
+msgid "A slug cannot be generated from this label. Type one manually using lowercase letters, numbers, and underscores."
+msgstr ""
+
+#: packages/admin/src/components/FieldEditor.tsx:1223
+msgid "A slug cannot be generated from this label. Type one manually."
+msgstr ""
 
 #: packages/admin/src/components/TaxonomySidebar.tsx:762
 msgid "A source and target locale are required"
@@ -1114,8 +1132,8 @@ msgstr "Campos ACF"
 #: packages/admin/src/components/ContentList.tsx:918
 #: packages/admin/src/components/ContentTypeList.tsx:210
 #: packages/admin/src/components/RelationList.tsx:102
-#: packages/admin/src/components/TaxonomyManager.tsx:1410
-#: packages/admin/src/components/TaxonomyManager.tsx:1464
+#: packages/admin/src/components/TaxonomyManager.tsx:1409
+#: packages/admin/src/components/TaxonomyManager.tsx:1463
 #: packages/admin/src/routes/byline-schema.tsx:249
 #: packages/admin/src/routes/bylines.tsx:535
 msgid "Actions"
@@ -1133,7 +1151,7 @@ msgstr "Ativo"
 #. placeholder {0}: blockType.currentVersion
 #. placeholder {0}: version.version
 #: packages/admin/src/components/BlockTypeList.tsx:32
-#: packages/admin/src/components/FieldEditor.tsx:1140
+#: packages/admin/src/components/FieldEditor.tsx:1151
 msgid "Active v{0}"
 msgstr "v{0} ativa"
 
@@ -1149,8 +1167,8 @@ msgstr "Adicionar"
 #: packages/admin/src/components/BylineCreditsEditor.tsx:503
 #: packages/admin/src/components/ContentList.tsx:621
 #: packages/admin/src/components/PortableTextEditor.tsx:2575
-#: packages/admin/src/components/TaxonomyManager.tsx:756
-#: packages/admin/src/components/TaxonomyManager.tsx:1330
+#: packages/admin/src/components/TaxonomyManager.tsx:754
+#: packages/admin/src/components/TaxonomyManager.tsx:1329
 msgid "Add {0}"
 msgstr "Adicionar {0}"
 
@@ -1187,7 +1205,7 @@ msgstr "Adicionar outro crédito"
 msgid "Add at least {minItems} blocks."
 msgstr "Adicione pelo menos {minItems} blocos."
 
-#: packages/admin/src/components/FieldEditor.tsx:1197
+#: packages/admin/src/components/FieldEditor.tsx:1215
 msgid "Add at least one sub-field to define the repeater structure."
 msgstr "Adicione pelo menos um subcampo para definir a estrutura do repetidor."
 
@@ -1228,9 +1246,9 @@ msgstr "Adicionar variante para modo escuro"
 msgid "Add Domain"
 msgstr "Adicionar domínio"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:756
-#: packages/admin/src/components/FieldEditor.tsx:673
-#: packages/admin/src/components/FieldEditor.tsx:1329
+#: packages/admin/src/components/ContentTypeEditor.tsx:753
+#: packages/admin/src/components/FieldEditor.tsx:683
+#: packages/admin/src/components/FieldEditor.tsx:1373
 msgid "Add Field"
 msgstr "Adicionar campo"
 
@@ -1242,11 +1260,11 @@ msgstr "Adicionar campos"
 msgid "Add fields like \"Job title\" or \"Pronouns\" to enrich every byline."
 msgstr "Adicione campos como \"Cargo\" ou \"Pronomes\" para enriquecer todos os créditos."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:778
+#: packages/admin/src/components/ContentTypeEditor.tsx:775
 msgid "Add fields to define the structure of your content"
 msgstr "Adicione campos para definir a estrutura do conteúdo"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:781
+#: packages/admin/src/components/ContentTypeEditor.tsx:778
 msgid "Add First Field"
 msgstr "Adicionar primeiro campo"
 
@@ -1328,15 +1346,15 @@ msgstr "Adicionar scripts e estilos às páginas do site"
 msgid "Add selected"
 msgstr "Adicionar selecionados"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:639
+#: packages/admin/src/components/ContentTypeEditor.tsx:636
 msgid "Add SEO metadata fields (title, description, image) and include in sitemap"
 msgstr "Adicionar campos de metadados de SEO (título, descrição, imagem) e incluir no sitemap"
 
-#: packages/admin/src/components/FieldEditor.tsx:1191
+#: packages/admin/src/components/FieldEditor.tsx:1209
 msgid "Add Sub-Field"
 msgstr "Adicionar subcampo"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1314
+#: packages/admin/src/components/TaxonomyManager.tsx:1313
 msgid "Add tag"
 msgstr "Adicionar etiqueta"
 
@@ -1344,8 +1362,8 @@ msgstr "Adicionar etiqueta"
 msgid "Add term"
 msgstr "Adicionar termo"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1321
-#: packages/admin/src/components/TaxonomyManager.tsx:1337
+#: packages/admin/src/components/TaxonomyManager.tsx:1320
+#: packages/admin/src/components/TaxonomyManager.tsx:1336
 msgid "Add to posts"
 msgstr "Adicionar a artigos"
 
@@ -1474,7 +1492,7 @@ msgstr "Todas as capacidades"
 msgid "All collections"
 msgstr "Todas as coleções"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:84
+#: packages/admin/src/components/ContentTypeEditor.tsx:80
 msgid "All comments require approval"
 msgstr "Todos os comentários exigem aprovação"
 
@@ -1514,7 +1532,7 @@ msgstr "Todos os carregamentos terminaram"
 msgid "Allow MCP tokens with plugin-tool scope to invoke these routes."
 msgstr "Permitir que tokens MCP com o âmbito plugin-tool invoquem estas rotas."
 
-#: packages/admin/src/components/FieldEditor.tsx:1025
+#: packages/admin/src/components/FieldEditor.tsx:1036
 msgid "Allow multiple references"
 msgstr "Permitir várias referências"
 
@@ -1523,11 +1541,11 @@ msgstr "Permitir várias referências"
 msgid "Allow users from specific domains to sign up"
 msgstr "Permitir que utilizadores de domínios específicos se registem"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:660
+#: packages/admin/src/components/ContentTypeEditor.tsx:657
 msgid "Allow visitors to leave comments on this collection's content"
 msgstr "Permitir que os visitantes deixem comentários no conteúdo desta coleção"
 
-#: packages/admin/src/components/FieldEditor.tsx:1053
+#: packages/admin/src/components/FieldEditor.tsx:1064
 msgid "Allowed block types"
 msgstr "Tipos de bloco permitidos"
 
@@ -1551,7 +1569,7 @@ msgstr "Já tem conta?"
 msgid "Also delete plugin storage data"
 msgstr "Eliminar também os dados de armazenamento do plugin"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:872
+#: packages/admin/src/components/ContentTypeEditor.tsx:869
 msgid "Also delete the relationship this field uses"
 msgstr "Eliminar também a relação usada por este campo"
 
@@ -1702,8 +1720,8 @@ msgstr "Outra importação já está a utilizar este pacote."
 msgid "Any media type allowed (subject to global limits)."
 msgstr "É permitido qualquer tipo de multimédia (sujeito aos limites globais)."
 
-#: packages/admin/src/components/RelationForm.tsx:354
-#: packages/admin/src/components/RelationForm.tsx:363
+#: packages/admin/src/components/RelationForm.tsx:351
+#: packages/admin/src/components/RelationForm.tsx:360
 msgid "Any number"
 msgstr "Qualquer número"
 
@@ -1777,7 +1795,7 @@ msgstr "Aprovados"
 msgid "Approving…"
 msgstr "A aprovar…"
 
-#: packages/admin/src/components/FieldEditor.tsx:456
+#: packages/admin/src/components/FieldEditor.tsx:451
 msgid "Arbitrary JSON data"
 msgstr "Dados JSON arbitrários"
 
@@ -1802,7 +1820,7 @@ msgid "Are you sure you want to delete \"{0}\"? This will also delete all conten
 msgstr "Tem a certeza de que pretende eliminar \"{0}\"? Isto irá também eliminar todo o conteúdo desta coleção."
 
 #. placeholder {0}: deleteFieldTarget.label
-#: packages/admin/src/components/ContentTypeEditor.tsx:850
+#: packages/admin/src/components/ContentTypeEditor.tsx:847
 msgid "Are you sure you want to delete the \"{0}\" field?"
 msgstr "Tem a certeza de que pretende eliminar o campo \"{0}\"?"
 
@@ -1842,7 +1860,7 @@ msgstr "No mínimo {min}"
 msgid "At most {max}"
 msgstr "No máximo {max}"
 
-#: packages/admin/src/components/RelationForm.tsx:410
+#: packages/admin/src/components/RelationForm.tsx:407
 msgid "At most…"
 msgstr "No máximo…"
 
@@ -1882,7 +1900,7 @@ msgstr "A autenticação foi cancelada ou expirou. Tente novamente."
 #: packages/admin/src/components/comments/CommentDetail.tsx:77
 #: packages/admin/src/components/comments/CommentInbox.tsx:325
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1351
-#: packages/admin/src/components/RelationForm.tsx:319
+#: packages/admin/src/components/RelationForm.tsx:315
 #: packages/admin/src/components/users/roleDefinitions.ts:30
 #: packages/admin/src/components/WelcomeModal.tsx:27
 msgid "Author"
@@ -1917,7 +1935,7 @@ msgid "Authorizing..."
 msgstr "A autorizar..."
 
 #: packages/admin/src/components/RegistryPluginDetail.tsx:764
-#: packages/admin/src/components/RelationForm.tsx:313
+#: packages/admin/src/components/RelationForm.tsx:309
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:306
 #: packages/admin/src/components/settings/transfer/labels.ts:8
 msgid "Authors"
@@ -1935,11 +1953,11 @@ msgstr "automático"
 msgid "Auto (slug change)"
 msgstr "Automático (alteração de slug)"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:704
+#: packages/admin/src/components/ContentTypeEditor.tsx:701
 msgid "Auto-approve authenticated users"
 msgstr "Aprovar automaticamente utilizadores autenticados"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:792
+#: packages/admin/src/components/TaxonomyManager.tsx:790
 msgid "Auto-generated from name (you can edit)"
 msgstr "Gerado automaticamente a partir do nome (pode editá-lo)"
 
@@ -1998,7 +2016,7 @@ msgstr ""
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:748
 #: packages/admin/src/components/BulkTagDialog.tsx:499
 #: packages/admin/src/components/editor/BlockMenu.tsx:266
-#: packages/admin/src/components/FieldEditor.tsx:651
+#: packages/admin/src/components/FieldEditor.tsx:661
 #: packages/admin/src/components/MediaDetailPanel.tsx:1805
 #: packages/admin/src/components/MediaLibrary.tsx:747
 #: packages/admin/src/components/MenuEditor.tsx:367
@@ -2011,7 +2029,7 @@ msgstr "Voltar"
 msgid "Back to {collectionLabel} list"
 msgstr "Voltar à lista de {collectionLabel}"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:415
+#: packages/admin/src/components/ContentTypeEditor.tsx:411
 #: packages/admin/src/components/RelationList.tsx:62
 msgid "Back to Content Types"
 msgstr "Voltar aos tipos de conteúdo"
@@ -2135,7 +2153,7 @@ msgstr "Versões de tipos de bloco"
 msgid "Block types"
 msgstr "Tipos de bloco"
 
-#: packages/admin/src/components/FieldEditor.tsx:1062
+#: packages/admin/src/components/FieldEditor.tsx:1073
 msgid "Block types could not be loaded."
 msgstr "Não foi possível carregar os tipos de bloco."
 
@@ -2143,7 +2161,7 @@ msgstr "Não foi possível carregar os tipos de bloco."
 msgid "Blockers"
 msgstr "Bloqueios"
 
-#: packages/admin/src/components/FieldEditor.tsx:479
+#: packages/admin/src/components/FieldEditor.tsx:474
 msgid "Blocks"
 msgstr "Blocos"
 
@@ -2152,13 +2170,13 @@ msgstr "Blocos"
 msgid "Bold"
 msgstr "Negrito"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:55
-#: packages/admin/src/components/FieldEditor.tsx:407
-#: packages/admin/src/components/FieldEditor.tsx:1236
+#: packages/admin/src/components/BylineFieldEditor.tsx:50
+#: packages/admin/src/components/FieldEditor.tsx:402
+#: packages/admin/src/components/FieldEditor.tsx:1274
 msgid "Boolean"
 msgstr "Booleano"
 
-#: packages/admin/src/components/RelationForm.tsx:347
+#: packages/admin/src/components/RelationForm.tsx:344
 msgid "Both reference fields bound to this relation share these limits, so the two sides cannot disagree about the same links."
 msgstr "Os dois campos de referência associados a esta relação partilham estes limites, para que os dois lados não possam divergir sobre as mesmas ligações."
 
@@ -2283,7 +2301,7 @@ msgid "C++"
 msgstr "C++"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:142
-#: packages/admin/src/components/ContentTypeEditor.tsx:558
+#: packages/admin/src/components/ContentTypeEditor.tsx:555
 #: packages/admin/src/components/Sidebar.tsx:603
 #: packages/admin/src/routes/calendar.tsx:276
 msgid "Calendar"
@@ -2308,7 +2326,7 @@ msgstr "Pode ver conteúdo"
 #: packages/admin/src/components/BulkTagDialog.tsx:324
 #: packages/admin/src/components/BulkTagDialog.tsx:504
 #: packages/admin/src/components/BylineCreditsEditor.tsx:1021
-#: packages/admin/src/components/BylineFieldEditor.tsx:315
+#: packages/admin/src/components/BylineFieldEditor.tsx:310
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:348
 #: packages/admin/src/components/ConfirmDialog.tsx:102
 #: packages/admin/src/components/ContentList.tsx:657
@@ -2322,7 +2340,7 @@ msgstr "Pode ver conteúdo"
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:817
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:411
 #: packages/admin/src/components/EditorDraftPatchPreview.tsx:78
-#: packages/admin/src/components/FieldEditor.tsx:1315
+#: packages/admin/src/components/FieldEditor.tsx:1358
 #: packages/admin/src/components/MediaDetailPanel.tsx:1847
 #: packages/admin/src/components/MediaFolderDialog.tsx:152
 #: packages/admin/src/components/MediaPickerModal.tsx:1588
@@ -2342,9 +2360,9 @@ msgstr "Pode ver conteúdo"
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:249
 #: packages/admin/src/components/settings/ChangeDomainDialog.tsx:147
 #: packages/admin/src/components/settings/SecuritySettings.tsx:177
-#: packages/admin/src/components/TaxonomyManager.tsx:581
-#: packages/admin/src/components/TaxonomyManager.tsx:881
-#: packages/admin/src/components/TaxonomyManager.tsx:1099
+#: packages/admin/src/components/TaxonomyManager.tsx:579
+#: packages/admin/src/components/TaxonomyManager.tsx:879
+#: packages/admin/src/components/TaxonomyManager.tsx:1098
 #: packages/admin/src/components/users/InviteUserModal.tsx:198
 #: packages/admin/src/components/Widgets.tsx:452
 #: packages/admin/src/components/WordPressImport.tsx:1940
@@ -2448,7 +2466,7 @@ msgstr "Centro"
 
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:76
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:107
-#: packages/admin/src/components/FieldEditor.tsx:736
+#: packages/admin/src/components/FieldEditor.tsx:746
 #: packages/admin/src/components/SeoImageField.tsx:58
 msgid "Change"
 msgstr "Alterar"
@@ -2721,7 +2739,7 @@ msgstr "Limpar filtros"
 
 #: packages/admin/src/components/MediaLibrary.tsx:1020
 #: packages/admin/src/components/MediaLibrary.tsx:1055
-#: packages/admin/src/components/TaxonomyManager.tsx:1433
+#: packages/admin/src/components/TaxonomyManager.tsx:1432
 msgid "Clear search"
 msgstr "Limpar pesquisa"
 
@@ -2758,9 +2776,9 @@ msgid "Click this link to sign in to {siteName}:"
 msgstr "Clique nesta ligação para iniciar sessão em {siteName}:"
 
 #: packages/admin/src/components/BulkTagDialog.tsx:274
+#: packages/admin/src/components/BylineFieldEditor.tsx:206
 #: packages/admin/src/components/BylineFieldEditor.tsx:212
-#: packages/admin/src/components/BylineFieldEditor.tsx:218
-#: packages/admin/src/components/BylineFieldEditor.tsx:222
+#: packages/admin/src/components/BylineFieldEditor.tsx:216
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:278
 #: packages/admin/src/components/comments/CommentDetail.tsx:59
 #: packages/admin/src/components/ContentPickerModal.tsx:225
@@ -2768,10 +2786,10 @@ msgstr "Clique nesta ligação para iniciar sessão em {siteName}:"
 #: packages/admin/src/components/ContentPickerModal.tsx:235
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:624
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:626
-#: packages/admin/src/components/FieldEditor.tsx:656
-#: packages/admin/src/components/FieldEditor.tsx:676
-#: packages/admin/src/components/FieldEditor.tsx:682
+#: packages/admin/src/components/FieldEditor.tsx:666
 #: packages/admin/src/components/FieldEditor.tsx:686
+#: packages/admin/src/components/FieldEditor.tsx:692
+#: packages/admin/src/components/FieldEditor.tsx:696
 #: packages/admin/src/components/MarketplacePluginDetail.tsx:461
 #: packages/admin/src/components/MediaDetailPanel.tsx:1116
 #: packages/admin/src/components/MediaDetailPanel.tsx:1847
@@ -2799,11 +2817,11 @@ msgstr "Clique nesta ligação para iniciar sessão em {siteName}:"
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:337
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:343
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:347
-#: packages/admin/src/components/TaxonomyManager.tsx:558
-#: packages/admin/src/components/TaxonomyManager.tsx:765
-#: packages/admin/src/components/TaxonomyManager.tsx:773
-#: packages/admin/src/components/TaxonomyManager.tsx:1020
-#: packages/admin/src/components/TaxonomyManager.tsx:1028
+#: packages/admin/src/components/TaxonomyManager.tsx:556
+#: packages/admin/src/components/TaxonomyManager.tsx:763
+#: packages/admin/src/components/TaxonomyManager.tsx:771
+#: packages/admin/src/components/TaxonomyManager.tsx:1018
+#: packages/admin/src/components/TaxonomyManager.tsx:1026
 #: packages/admin/src/components/TaxonomySidebar.tsx:606
 #: packages/admin/src/components/ThemeMarketplaceDetail.tsx:298
 #: packages/admin/src/components/users/InviteUserModal.tsx:88
@@ -2822,7 +2840,7 @@ msgstr "Fechar"
 msgid "Close byline search"
 msgstr "Fechar pesquisa de créditos"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:683
+#: packages/admin/src/components/ContentTypeEditor.tsx:680
 msgid "Close comments after (days)"
 msgstr "Fechar comentários após (dias)"
 
@@ -2892,7 +2910,7 @@ msgid "Collection:"
 msgstr "Coleção:"
 
 #: packages/admin/src/components/settings/transfer/labels.ts:11
-#: packages/admin/src/components/TaxonomyManager.tsx:1069
+#: packages/admin/src/components/TaxonomyManager.tsx:1068
 msgid "Collections"
 msgstr "Coleções"
 
@@ -2958,14 +2976,14 @@ msgid "Comment reactions"
 msgstr "Reações a comentários"
 
 #: packages/admin/src/components/comments/CommentInbox.tsx:162
-#: packages/admin/src/components/ContentTypeEditor.tsx:650
+#: packages/admin/src/components/ContentTypeEditor.tsx:647
 #: packages/admin/src/components/settings/transfer/labels.ts:34
 #: packages/admin/src/components/settings/transfer/labels.ts:88
 #: packages/admin/src/components/Sidebar.tsx:434
 msgid "Comments"
 msgstr "Comentários"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:707
+#: packages/admin/src/components/ContentTypeEditor.tsx:704
 msgid "Comments from logged-in CMS users are approved automatically"
 msgstr "Os comentários de utilizadores com sessão iniciada no CMS são aprovados automaticamente"
 
@@ -2985,7 +3003,7 @@ msgstr "Concluir registo"
 msgid "Component"
 msgstr "Componente"
 
-#: packages/admin/src/components/FieldEditor.tsx:673
+#: packages/admin/src/components/FieldEditor.tsx:683
 msgid "Configure Field"
 msgstr "Configurar campo"
 
@@ -3131,7 +3149,7 @@ msgstr "Instantâneo do conteúdo:"
 msgid "Content to Import"
 msgstr "Conteúdo a importar"
 
-#: packages/admin/src/components/RelationForm.tsx:265
+#: packages/admin/src/components/RelationForm.tsx:261
 msgid "Content types"
 msgstr "Tipos de conteúdo"
 
@@ -3141,7 +3159,7 @@ msgstr "Tipos de conteúdo"
 msgid "Content Types"
 msgstr "Tipos de conteúdo"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:562
+#: packages/admin/src/components/ContentTypeEditor.tsx:559
 msgid "Content types with the same group share a collapsible folder in the sidebar"
 msgstr "Os tipos de conteúdo do mesmo grupo partilham uma pasta recolhível na barra lateral"
 
@@ -3406,8 +3424,8 @@ msgstr "Não foi possível atualizar o pedido"
 msgid "Couldn't verify how many values reference \"{0}\". Deleting will still remove every stored value for this field — but the count above could not be checked."
 msgstr "Não foi possível verificar quantos valores fazem referência a \"{0}\". A eliminação continuará a remover todos os valores guardados deste campo, mas não foi possível confirmar a contagem acima."
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1408
-#: packages/admin/src/components/TaxonomyManager.tsx:1463
+#: packages/admin/src/components/TaxonomyManager.tsx:1407
+#: packages/admin/src/components/TaxonomyManager.tsx:1462
 msgid "Count"
 msgstr "Contagem"
 
@@ -3415,7 +3433,7 @@ msgstr "Contagem"
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
 #: packages/admin/src/components/MenuList.tsx:185
 #: packages/admin/src/components/Redirects.tsx:194
-#: packages/admin/src/components/TaxonomyManager.tsx:892
+#: packages/admin/src/components/TaxonomyManager.tsx:890
 #: packages/admin/src/components/Widgets.tsx:455
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Create"
@@ -3444,7 +3462,7 @@ msgstr "Criar tradução em {0}"
 msgid "Create {singularLower}"
 msgstr "Criar {singularLower}"
 
-#: packages/admin/src/components/FieldEditor.tsx:1066
+#: packages/admin/src/components/FieldEditor.tsx:1077
 msgid "Create a block type before adding a blocks field."
 msgstr "Crie um tipo de bloco antes de adicionar um campo de blocos."
 
@@ -3453,7 +3471,7 @@ msgid "Create a bullet list"
 msgstr "Criar uma lista com marcas"
 
 #. placeholder {0}: inlineLabel(taxonomyDef.labelSingular || t`Term`, lingui.locale)
-#: packages/admin/src/components/TaxonomyManager.tsx:761
+#: packages/admin/src/components/TaxonomyManager.tsx:759
 msgid "Create a new {0}"
 msgstr "Criar {0}"
 
@@ -3485,7 +3503,7 @@ msgstr "Criar e adicionar"
 msgid "Create byline"
 msgstr "Criar crédito"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:725
+#: packages/admin/src/components/ContentTypeEditor.tsx:722
 msgid "Create Content Type"
 msgstr "Criar tipo de conteúdo"
 
@@ -3493,7 +3511,7 @@ msgstr "Criar tipo de conteúdo"
 msgid "Create cropped copy"
 msgstr "Criar cópia recortada"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:318
+#: packages/admin/src/components/BylineFieldEditor.tsx:313
 msgid "Create field"
 msgstr "Criar campo"
 
@@ -3546,7 +3564,7 @@ msgstr "Criar redirecionamento para este caminho"
 msgid "Create redirect rules to manage URL changes."
 msgstr "Crie regras de redirecionamento para gerir alterações de URL."
 
-#: packages/admin/src/components/FieldEditor.tsx:759
+#: packages/admin/src/components/FieldEditor.tsx:769
 msgid "Create relation"
 msgstr "Criar relação"
 
@@ -3568,8 +3586,8 @@ msgstr "Criar secção"
 msgid "Create sections in the Sections library to use them here"
 msgstr "Crie secções na biblioteca de secções para as utilizar aqui"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1014
-#: packages/admin/src/components/TaxonomyManager.tsx:1102
+#: packages/admin/src/components/TaxonomyManager.tsx:1012
+#: packages/admin/src/components/TaxonomyManager.tsx:1101
 msgid "Create Taxonomy"
 msgstr "Criar taxonomia"
 
@@ -3649,7 +3667,7 @@ msgstr "Tradução {0} criada"
 msgid "Created and updated"
 msgstr "Criado e atualizado"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:144
+#: packages/admin/src/components/ContentTypeEditor.tsx:140
 msgid "Created At"
 msgstr "Criado em"
 
@@ -3670,7 +3688,7 @@ msgstr "A criar cópia recortada..."
 #: packages/admin/src/components/RelationFormPanel.tsx:109
 #: packages/admin/src/components/Sections.tsx:234
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:555
-#: packages/admin/src/components/TaxonomyManager.tsx:1102
+#: packages/admin/src/components/TaxonomyManager.tsx:1101
 msgid "Creating..."
 msgstr "A criar..."
 
@@ -3726,7 +3744,7 @@ msgstr "Já definido: introduza um novo valor para o substituir"
 msgid "Custom"
 msgstr "Personalizada"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:788
+#: packages/admin/src/components/ContentTypeEditor.tsx:785
 msgid "Custom Fields"
 msgstr "Campos personalizados"
 
@@ -3746,7 +3764,7 @@ msgstr "Taxonomias personalizadas"
 msgid "Daily automatic backups"
 msgstr "Cópias de segurança automáticas diárias"
 
-#: packages/admin/src/components/FieldEditor.tsx:1302
+#: packages/admin/src/components/FieldEditor.tsx:1345
 #: packages/admin/src/components/ImageFieldRenderer.tsx:396
 msgid "Dark mode variant"
 msgstr "Variante para modo escuro"
@@ -3768,12 +3786,12 @@ msgstr "Definições guardadas na base de dados, disponíveis para campos de blo
 msgid "Date"
 msgstr "Data"
 
-#: packages/admin/src/components/FieldEditor.tsx:413
-#: packages/admin/src/components/FieldEditor.tsx:1237
+#: packages/admin/src/components/FieldEditor.tsx:408
+#: packages/admin/src/components/FieldEditor.tsx:1275
 msgid "Date & Time"
 msgstr "Data e hora"
 
-#: packages/admin/src/components/FieldEditor.tsx:414
+#: packages/admin/src/components/FieldEditor.tsx:409
 msgid "Date and time picker"
 msgstr "Seletor de data e hora"
 
@@ -3789,7 +3807,7 @@ msgstr "Formato de data"
 msgid "Date range"
 msgstr "Intervalo de datas"
 
-#: packages/admin/src/components/FieldEditor.tsx:396
+#: packages/admin/src/components/FieldEditor.tsx:391
 msgid "Decimal number"
 msgstr "Número decimal"
 
@@ -3819,7 +3837,7 @@ msgstr "Imagem social predefinida"
 msgid "Default Social Image"
 msgstr "Imagem social predefinida"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1016
+#: packages/admin/src/components/TaxonomyManager.tsx:1014
 msgid "Define a new taxonomy for classifying content"
 msgstr "Defina uma nova taxonomia para classificar conteúdo"
 
@@ -3835,13 +3853,13 @@ msgstr "Defina como os tipos de conteúdo se ligam entre si"
 msgid "Define the structure of your content"
 msgstr "Defina a estrutura do seu conteúdo"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:439
+#: packages/admin/src/components/ContentTypeEditor.tsx:435
 msgid "Defined in code"
 msgstr "Definido no código"
 
 #: packages/admin/src/components/comments/CommentInbox.tsx:300
 #: packages/admin/src/components/comments/CommentInbox.tsx:432
-#: packages/admin/src/components/ContentTypeEditor.tsx:853
+#: packages/admin/src/components/ContentTypeEditor.tsx:850
 #: packages/admin/src/components/ContentTypeList.tsx:256
 #: packages/admin/src/components/editor/BlockMenu.tsx:318
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:383
@@ -3853,8 +3871,8 @@ msgstr "Definido no código"
 #: packages/admin/src/components/RelationDeleteDialog.tsx:40
 #: packages/admin/src/components/Sections.tsx:349
 #: packages/admin/src/components/settings/BackupSettings.tsx:367
-#: packages/admin/src/components/TaxonomyManager.tsx:1535
-#: packages/admin/src/components/TaxonomyManager.tsx:1551
+#: packages/admin/src/components/TaxonomyManager.tsx:1534
+#: packages/admin/src/components/TaxonomyManager.tsx:1550
 #: packages/admin/src/components/Widgets.tsx:719
 #: packages/admin/src/routes/byline-schema.tsx:378
 #: packages/admin/src/routes/bylines.tsx:847
@@ -3880,14 +3898,14 @@ msgstr "Eliminar “{0}”?"
 #: packages/admin/src/components/Sections.tsx:465
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:275
 #: packages/admin/src/components/settings/BackupSettings.tsx:327
-#: packages/admin/src/components/TaxonomyManager.tsx:492
+#: packages/admin/src/components/TaxonomyManager.tsx:490
 #: packages/admin/src/components/Widgets.tsx:820
 #: packages/admin/src/routes/byline-schema.tsx:458
 msgid "Delete {0}"
 msgstr "Eliminar {0}"
 
 #. placeholder {0}: field.label
-#: packages/admin/src/components/ContentTypeEditor.tsx:959
+#: packages/admin/src/components/ContentTypeEditor.tsx:956
 msgid "Delete {0} field"
 msgstr "Eliminar o campo {0}"
 
@@ -3903,7 +3921,7 @@ msgstr "Eliminar área de widgets {0}"
 
 #. placeholder {0}: deleteTarget?.displayName ?? t`byline`
 #. placeholder {0}: taxonomyDef.labelSingular || t`Term`
-#: packages/admin/src/components/TaxonomyManager.tsx:1531
+#: packages/admin/src/components/TaxonomyManager.tsx:1530
 #: packages/admin/src/routes/bylines.tsx:874
 msgid "Delete {0}?"
 msgstr "Eliminar {0}?"
@@ -3951,7 +3969,7 @@ msgstr "Eliminar tipo de conteúdo?"
 msgid "Delete embed"
 msgstr "Eliminar incorporação"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:847
+#: packages/admin/src/components/ContentTypeEditor.tsx:844
 msgid "Delete Field?"
 msgstr "Eliminar campo?"
 
@@ -4024,20 +4042,20 @@ msgstr "Eliminar secção?"
 msgid "Delete table"
 msgstr "Eliminar tabela"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:366
+#: packages/admin/src/components/TaxonomyManager.tsx:364
 msgid "Delete tag"
 msgstr "Eliminar etiqueta"
 
 #. placeholder {0}: term.label
-#: packages/admin/src/components/TaxonomyManager.tsx:363
+#: packages/admin/src/components/TaxonomyManager.tsx:361
 msgid "Delete tag {0}"
 msgstr "Eliminar etiqueta {0}"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1370
+#: packages/admin/src/components/TaxonomyManager.tsx:1369
 msgid "Delete taxonomy"
 msgstr "Eliminar taxonomia"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1549
+#: packages/admin/src/components/TaxonomyManager.tsx:1548
 msgid "Delete Taxonomy"
 msgstr "Eliminar taxonomia"
 
@@ -4050,7 +4068,7 @@ msgid "Deleted"
 msgstr "Eliminado"
 
 #. placeholder {0}: taxonomyDef.label
-#: packages/admin/src/components/TaxonomyManager.tsx:1550
+#: packages/admin/src/components/TaxonomyManager.tsx:1549
 msgid "Deleting \"{0}\" also deletes every term in it, in all languages, and removes those terms from the content filed under them. The entries themselves are kept. This cannot be undone."
 msgstr "Eliminar \"{0}\" elimina também todos os termos que contém, em todos os idiomas, e remove esses termos do conteúdo a que estão associados. As entradas propriamente ditas são mantidas. Esta ação não pode ser anulada."
 
@@ -4061,7 +4079,7 @@ msgid "Deleting \"{0}\" will also remove {1, plural, one {# stored value} other 
 msgstr "Eliminar \"{0}\" também remove {1, plural, one {# valor guardado} other {# valores guardados}} em todos os créditos. Esta ação não pode ser anulada."
 
 #: packages/admin/src/components/comments/CommentInbox.tsx:433
-#: packages/admin/src/components/ContentTypeEditor.tsx:854
+#: packages/admin/src/components/ContentTypeEditor.tsx:851
 #: packages/admin/src/components/ContentTypeList.tsx:257
 #: packages/admin/src/components/MediaDetailPanel.tsx:1816
 #: packages/admin/src/components/MediaDetailPanel.tsx:1921
@@ -4071,8 +4089,8 @@ msgstr "Eliminar \"{0}\" também remove {1, plural, one {# valor guardado} other
 #: packages/admin/src/components/RelationDeleteDialog.tsx:41
 #: packages/admin/src/components/Sections.tsx:350
 #: packages/admin/src/components/settings/BackupSettings.tsx:368
-#: packages/admin/src/components/TaxonomyManager.tsx:1536
-#: packages/admin/src/components/TaxonomyManager.tsx:1552
+#: packages/admin/src/components/TaxonomyManager.tsx:1535
+#: packages/admin/src/components/TaxonomyManager.tsx:1551
 #: packages/admin/src/components/Widgets.tsx:720
 #: packages/admin/src/routes/bylines.tsx:877
 msgid "Deleting..."
@@ -4136,7 +4154,7 @@ msgstr "Descreva esta imagem para acessibilidade"
 msgid "Describe what this section is for..."
 msgstr "Descreva para que serve esta secção..."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:492
+#: packages/admin/src/components/ContentTypeEditor.tsx:489
 #: packages/admin/src/components/RegistryPluginDetail.tsx:893
 #: packages/admin/src/components/SectionEditor.tsx:295
 #: packages/admin/src/components/Sections.tsx:221
@@ -4144,7 +4162,7 @@ msgstr "Descreva para que serve esta secção..."
 msgid "Description"
 msgstr "Descrição"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:843
+#: packages/admin/src/components/TaxonomyManager.tsx:841
 msgid "Description (optional)"
 msgstr "Descrição (opcional)"
 
@@ -4465,11 +4483,11 @@ msgstr "Alterações do rascunho"
 msgid "Draft version"
 msgstr "Versão de rascunho"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:140
+#: packages/admin/src/components/ContentTypeEditor.tsx:136
 msgid "draft, published, or archived"
 msgstr "rascunho, publicado ou arquivado"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:92
+#: packages/admin/src/components/ContentTypeEditor.tsx:88
 #: packages/admin/src/components/Dashboard.tsx:513
 msgid "Drafts"
 msgstr "Rascunhos"
@@ -4496,7 +4514,7 @@ msgstr "Arraste para reordenar"
 
 #. placeholder {0}: field.label
 #. placeholder {0}: widget.title ?? t`widget`
-#: packages/admin/src/components/ContentTypeEditor.tsx:922
+#: packages/admin/src/components/ContentTypeEditor.tsx:919
 #: packages/admin/src/components/Widgets.tsx:805
 msgid "Drag to reorder {0}"
 msgstr "Arraste para reordenar {0}"
@@ -4574,16 +4592,16 @@ msgstr "ex.: Pipeline de CI/CD"
 msgid "e.g., MacBook Pro, iPhone"
 msgstr "ex.: MacBook Pro, iPhone"
 
-#: packages/admin/src/components/RelationForm.tsx:361
+#: packages/admin/src/components/RelationForm.tsx:358
 msgid "Each {linkedSideName} is linked from"
 msgstr "Cada {linkedSideName} recebe ligações de"
 
-#: packages/admin/src/components/RelationForm.tsx:352
+#: packages/admin/src/components/RelationForm.tsx:349
 msgid "Each {linkingSideName} links to"
 msgstr "Cada {linkingSideName} liga a"
 
 #. placeholder {0}: "/{year}/{slug}"
-#: packages/admin/src/components/ContentTypeEditor.tsx:543
+#: packages/admin/src/components/ContentTypeEditor.tsx:540
 msgid "Each path segment can contain at most one placeholder, e.g. {0}"
 msgstr "Cada segmento do caminho pode conter no máximo um marcador, p. ex. {0}"
 
@@ -4607,16 +4625,16 @@ msgstr "Editar"
 #: packages/admin/src/components/RelationsPanel.tsx:201
 #: packages/admin/src/components/Sections.tsx:437
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:263
-#: packages/admin/src/components/TaxonomyManager.tsx:311
-#: packages/admin/src/components/TaxonomyManager.tsx:484
-#: packages/admin/src/components/TaxonomyManager.tsx:755
+#: packages/admin/src/components/TaxonomyManager.tsx:309
+#: packages/admin/src/components/TaxonomyManager.tsx:482
+#: packages/admin/src/components/TaxonomyManager.tsx:753
 #: packages/admin/src/routes/byline-schema.tsx:449
 #: packages/admin/src/routes/bylines.tsx:588
 msgid "Edit {0}"
 msgstr "Editar {0}"
 
 #. placeholder {0}: field.label
-#: packages/admin/src/components/ContentTypeEditor.tsx:951
+#: packages/admin/src/components/ContentTypeEditor.tsx:948
 msgid "Edit {0} field"
 msgstr "Editar o campo {0}"
 
@@ -4646,7 +4664,7 @@ msgstr "Editar recurso"
 msgid "Edit byline"
 msgstr "Editar crédito"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:209
+#: packages/admin/src/components/BylineFieldEditor.tsx:203
 msgid "Edit byline field"
 msgstr "Editar campo do crédito"
 
@@ -4658,7 +4676,7 @@ msgstr "Editar recurso do modo escuro"
 msgid "Edit Domain"
 msgstr "Editar domínio"
 
-#: packages/admin/src/components/FieldEditor.tsx:673
+#: packages/admin/src/components/FieldEditor.tsx:683
 msgid "Edit Field"
 msgstr "Editar campo"
 
@@ -4687,7 +4705,7 @@ msgstr "Editar imagem {0}"
 msgid "Edit link"
 msgstr "Editar ligação"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:520
+#: packages/admin/src/components/ContentTypeEditor.tsx:517
 msgid "Edit locking"
 msgstr "Bloqueio de edição"
 
@@ -4757,7 +4775,7 @@ msgstr "A sessão de edição expirou. Atualize a página para continuar."
 msgid "Editor"
 msgstr "Editor"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:305
+#: packages/admin/src/components/BylineFieldEditor.tsx:300
 msgid ""
 "Editor\n"
 "Reporter\n"
@@ -4767,7 +4785,7 @@ msgstr ""
 "Repórter\n"
 "Fotógrafo"
 
-#: packages/admin/src/components/FieldEditor.tsx:1305
+#: packages/admin/src/components/FieldEditor.tsx:1348
 msgid "Editors can select a second image that the site shows in dark mode."
 msgstr "Os editores podem selecionar uma segunda imagem que o site mostra no modo escuro."
 
@@ -4905,11 +4923,11 @@ msgstr "Site vazio"
 msgid "Enable"
 msgstr "Ativar"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:658
+#: packages/admin/src/components/ContentTypeEditor.tsx:655
 msgid "Enable comments"
 msgstr "Ativar comentários"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:108
+#: packages/admin/src/components/ContentTypeEditor.tsx:104
 msgid "Enable full-text search on this collection"
 msgstr "Ativar pesquisa de texto integral nesta coleção"
 
@@ -5009,21 +5027,21 @@ msgstr "Introduza o URL do seu site WordPress"
 msgid "Entries"
 msgstr "Entradas"
 
-#: packages/admin/src/components/FieldEditor.tsx:785
-#: packages/admin/src/components/FieldEditor.tsx:990
+#: packages/admin/src/components/FieldEditor.tsx:795
+#: packages/admin/src/components/FieldEditor.tsx:1001
 msgid "Entries that link to this one"
 msgstr "Entradas que ligam a esta"
 
-#: packages/admin/src/components/FieldEditor.tsx:784
-#: packages/admin/src/components/FieldEditor.tsx:989
+#: packages/admin/src/components/FieldEditor.tsx:794
+#: packages/admin/src/components/FieldEditor.tsx:1000
 msgid "Entries this one links to"
 msgstr "Entradas a que esta liga"
 
-#: packages/admin/src/components/RelationForm.tsx:259
+#: packages/admin/src/components/RelationForm.tsx:255
 msgid "entry on the linked side"
 msgstr "entrada do lado de destino"
 
-#: packages/admin/src/components/RelationForm.tsx:258
+#: packages/admin/src/components/RelationForm.tsx:254
 msgid "entry on the linking side"
 msgstr "entrada do lado de origem"
 
@@ -5031,7 +5049,7 @@ msgstr "entrada do lado de origem"
 #: packages/admin/src/components/MenuEditor.tsx:194
 #: packages/admin/src/components/MenuEditor.tsx:234
 #: packages/admin/src/components/SetupWizard.tsx:606
-#: packages/admin/src/components/TaxonomyManager.tsx:1207
+#: packages/admin/src/components/TaxonomyManager.tsx:1206
 #: packages/admin/src/components/Widgets.tsx:772
 #: packages/admin/src/router.tsx:3149
 msgid "Error"
@@ -5965,7 +5983,7 @@ msgstr "Funcionalidade"
 msgid "Featured Images"
 msgstr "Imagens de destaque"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:605
+#: packages/admin/src/components/ContentTypeEditor.tsx:602
 #: packages/admin/src/components/ContentTypeList.tsx:207
 msgid "Features"
 msgstr "Funcionalidades"
@@ -5982,19 +6000,19 @@ msgstr "Campo criado"
 msgid "Field deleted"
 msgstr "Campo eliminado"
 
-#: packages/admin/src/components/FieldEditor.tsx:1220
+#: packages/admin/src/components/FieldEditor.tsx:1243
 msgid "Field label"
 msgstr "Rótulo do campo"
 
-#: packages/admin/src/components/FieldEditor.tsx:811
+#: packages/admin/src/components/FieldEditor.tsx:821
 msgid "Field Label"
 msgstr "Rótulo do campo"
 
-#: packages/admin/src/components/FieldEditor.tsx:823
+#: packages/admin/src/components/FieldEditor.tsx:834
 msgid "Field slugs cannot be changed after creation"
 msgstr "Os slugs dos campos não podem ser alterados após a criação"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:268
+#: packages/admin/src/components/BylineFieldEditor.tsx:263
 msgid "Field type cannot be changed after creation."
 msgstr "Não é possível alterar o tipo do campo depois de criado."
 
@@ -6002,7 +6020,11 @@ msgstr "Não é possível alterar o tipo do campo depois de criado."
 msgid "Field updated"
 msgstr "Campo atualizado"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:746
+#: packages/admin/src/components/FieldEditor.tsx:1258
+msgid "field_slug"
+msgstr ""
+
+#: packages/admin/src/components/ContentTypeEditor.tsx:743
 #: packages/admin/src/components/RelationList.tsx:96
 #: packages/admin/src/components/settings/transfer/labels.ts:12
 msgid "Fields"
@@ -6012,7 +6034,7 @@ msgstr "Campos"
 msgid "Fields created:"
 msgstr "Campos criados:"
 
-#: packages/admin/src/components/FieldEditor.tsx:443
+#: packages/admin/src/components/FieldEditor.tsx:438
 msgid "File"
 msgstr "Ficheiro"
 
@@ -6021,7 +6043,7 @@ msgstr "Ficheiro"
 msgid "File {0}"
 msgstr "Ficheiro {0}"
 
-#: packages/admin/src/components/FieldEditor.tsx:444
+#: packages/admin/src/components/FieldEditor.tsx:439
 msgid "File from media library"
 msgstr "Ficheiro da biblioteca multimédia"
 
@@ -6103,7 +6125,7 @@ msgstr "Primeira página"
 msgid "First publication"
 msgstr "Primeira publicação"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:85
+#: packages/admin/src/components/ContentTypeEditor.tsx:81
 msgid "First-time commenters only"
 msgstr "Apenas quem comenta pela primeira vez"
 
@@ -6249,7 +6271,7 @@ msgstr "Definições gerais"
 msgid "Generated automatically."
 msgstr "Gerado automaticamente."
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1039
+#: packages/admin/src/components/TaxonomyManager.tsx:1037
 msgid "Genres"
 msgstr "Géneros"
 
@@ -6308,7 +6330,7 @@ msgstr "GraphQL"
 msgid "Grid view"
 msgstr "Vista em grelha"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:555
+#: packages/admin/src/components/ContentTypeEditor.tsx:552
 msgid "Group"
 msgstr "Grupo"
 
@@ -6418,7 +6440,7 @@ msgstr "hero, banner, cta"
 msgid "Hide earlier entries"
 msgstr "Ocultar entradas anteriores"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:582
+#: packages/admin/src/components/ContentTypeEditor.tsx:579
 msgid "Hide from navigation"
 msgstr "Ocultar da navegação"
 
@@ -6441,7 +6463,7 @@ msgstr "Ocultar barra de ferramentas"
 msgid "Hide toolbar"
 msgstr "Ocultar barra de ferramentas"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1062
+#: packages/admin/src/components/TaxonomyManager.tsx:1061
 msgid "Hierarchical (like categories, with parent/child relationships)"
 msgstr "Hierárquica (como as categorias, com relações pai/filho)"
 
@@ -6450,7 +6472,7 @@ msgstr "Hierárquica (como as categorias, com relações pai/filho)"
 msgid "Hits"
 msgstr "Ocorrências"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:522
+#: packages/admin/src/components/ContentTypeEditor.tsx:519
 msgid "Hold an entry while someone is editing it, and refuse other writers"
 msgstr "Reservar uma entrada enquanto alguém a está a editar e impedir que outros a alterem"
 
@@ -6484,11 +6506,11 @@ msgstr "Hora"
 msgid "How do you want to start?"
 msgstr "Como pretende começar?"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:794
+#: packages/admin/src/components/TaxonomyManager.tsx:792
 msgid "How is the slug generated?"
 msgstr "Como é gerado o slug?"
 
-#: packages/admin/src/components/RelationForm.tsx:344
+#: packages/admin/src/components/RelationForm.tsx:341
 msgid "How many"
 msgstr "Quantidade"
 
@@ -6547,7 +6569,7 @@ msgstr "Concluí estes passos e compreendo que a monitorização não pode ser d
 msgid "I've set it up — check again"
 msgstr "Já configurei, verificar novamente"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:567
+#: packages/admin/src/components/ContentTypeEditor.tsx:564
 msgid "Icon"
 msgstr "Ícone"
 
@@ -6556,7 +6578,7 @@ msgstr "Ícone"
 msgid "Icon blurred due to image audit"
 msgstr "Ícone desfocado devido à auditoria de imagem"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:126
+#: packages/admin/src/components/ContentTypeEditor.tsx:122
 msgid "ID"
 msgstr "ID"
 
@@ -6585,8 +6607,8 @@ msgstr "Opções do bloco iframe"
 msgid "visualEditing.image"
 msgstr ""
 
-#: packages/admin/src/components/FieldEditor.tsx:437
-#: packages/admin/src/components/FieldEditor.tsx:1240
+#: packages/admin/src/components/FieldEditor.tsx:432
+#: packages/admin/src/components/FieldEditor.tsx:1278
 #: packages/admin/src/components/PortableTextEditor.tsx:3213
 msgid "Image"
 msgstr "Imagem"
@@ -6610,7 +6632,7 @@ msgstr "Ações da imagem"
 msgid "Image controls"
 msgstr "Controlos da imagem"
 
-#: packages/admin/src/components/FieldEditor.tsx:438
+#: packages/admin/src/components/FieldEditor.tsx:433
 msgid "Image from media library"
 msgstr "Imagem da biblioteca multimédia"
 
@@ -6832,7 +6854,7 @@ msgstr "Aumentar largura da coluna"
 msgid "Index existing content and keep Used in results up to date."
 msgstr "Indexe o conteúdo existente e mantenha atualizados os resultados de Utilizado em."
 
-#: packages/admin/src/components/FieldEditor.tsx:856
+#: packages/admin/src/components/FieldEditor.tsx:867
 #: packages/admin/src/components/RegistryPluginDetail.tsx:585
 msgid "Indexed"
 msgstr "Indexado"
@@ -6994,8 +7016,8 @@ msgstr "Instalado:"
 msgid "Installing..."
 msgstr "A instalar..."
 
-#: packages/admin/src/components/FieldEditor.tsx:401
-#: packages/admin/src/components/FieldEditor.tsx:1235
+#: packages/admin/src/components/FieldEditor.tsx:396
+#: packages/admin/src/components/FieldEditor.tsx:1273
 msgid "Integer"
 msgstr "Inteiro"
 
@@ -7105,11 +7127,11 @@ msgstr "JavaScript"
 msgid "JavaScript code"
 msgstr "Código JavaScript"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:235
+#: packages/admin/src/components/BylineFieldEditor.tsx:229
 msgid "Job title"
 msgstr "Cargo"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:246
+#: packages/admin/src/components/BylineFieldEditor.tsx:240
 msgid "job_title"
 msgstr "job_title"
 
@@ -7118,7 +7140,7 @@ msgid "JS"
 msgstr "JS"
 
 #: packages/admin/src/components/editor/codeBlockLanguages.ts:41
-#: packages/admin/src/components/FieldEditor.tsx:455
+#: packages/admin/src/components/FieldEditor.tsx:450
 msgid "JSON"
 msgstr "JSON"
 
@@ -7181,23 +7203,23 @@ msgstr "Palavras-chave"
 msgid "Kotlin"
 msgstr "Kotlin"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:232
-#: packages/admin/src/components/FieldEditor.tsx:808
-#: packages/admin/src/components/FieldEditor.tsx:1206
+#: packages/admin/src/components/BylineFieldEditor.tsx:226
+#: packages/admin/src/components/FieldEditor.tsx:818
+#: packages/admin/src/components/FieldEditor.tsx:1230
 #: packages/admin/src/components/MenuEditor.tsx:418
 #: packages/admin/src/components/MenuEditor.tsx:599
 #: packages/admin/src/components/MenuList.tsx:153
-#: packages/admin/src/components/TaxonomyManager.tsx:1036
+#: packages/admin/src/components/TaxonomyManager.tsx:1034
 #: packages/admin/src/components/Widgets.tsx:437
 #: packages/admin/src/routes/byline-schema.tsx:234
 msgid "Label"
 msgstr "Rótulo"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:471
+#: packages/admin/src/components/ContentTypeEditor.tsx:467
 msgid "Label (Plural)"
 msgstr "Rótulo (plural)"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:463
+#: packages/admin/src/components/ContentTypeEditor.tsx:459
 msgid "Label (Singular)"
 msgstr "Rótulo (singular)"
 
@@ -7306,7 +7328,7 @@ msgstr "Ligação expirada"
 msgid "Link this byline to a user or mark it as a guest profile."
 msgstr "Associe este crédito a um utilizador ou marque-o como perfil de convidado."
 
-#: packages/admin/src/components/FieldEditor.tsx:450
+#: packages/admin/src/components/FieldEditor.tsx:445
 msgid "Link to another content item"
 msgstr "Ligação a outro item de conteúdo"
 
@@ -7325,11 +7347,11 @@ msgstr "Contas associadas ({0})"
 msgid "Linked from {0}"
 msgstr "Recebe ligações de {0}"
 
-#: packages/admin/src/components/RelationForm.tsx:310
+#: packages/admin/src/components/RelationForm.tsx:306
 msgid "Linked side (plural)"
 msgstr "Lado de destino (plural)"
 
-#: packages/admin/src/components/RelationForm.tsx:316
+#: packages/admin/src/components/RelationForm.tsx:312
 msgid "Linked side (singular)"
 msgstr "Lado de destino (singular)"
 
@@ -7346,11 +7368,11 @@ msgstr "LinkedIn"
 msgid "Linking content"
 msgstr "A ligar conteúdo"
 
-#: packages/admin/src/components/RelationForm.tsx:298
+#: packages/admin/src/components/RelationForm.tsx:294
 msgid "Linking side (plural)"
 msgstr "Lado de origem (plural)"
 
-#: packages/admin/src/components/RelationForm.tsx:304
+#: packages/admin/src/components/RelationForm.tsx:300
 msgid "Linking side (singular)"
 msgstr "Lado de origem (singular)"
 
@@ -7359,7 +7381,7 @@ msgstr "Lado de origem (singular)"
 msgid "Links"
 msgstr "Ligações"
 
-#: packages/admin/src/components/RelationForm.tsx:270
+#: packages/admin/src/components/RelationForm.tsx:266
 msgid "Links from"
 msgstr "Ligações de"
 
@@ -7372,7 +7394,7 @@ msgstr ""
 msgid "Links in emails and plugins, sitemaps, and absolute URLs in search and social metadata will use the new domain."
 msgstr ""
 
-#: packages/admin/src/components/RelationForm.tsx:279
+#: packages/admin/src/components/RelationForm.tsx:275
 msgid "Links to"
 msgstr "Ligações para"
 
@@ -7443,7 +7465,7 @@ msgid "Loading approval requests…"
 msgstr "A carregar pedidos de aprovação…"
 
 #: packages/admin/src/components/BlockTypeList.tsx:22
-#: packages/admin/src/components/FieldEditor.tsx:1059
+#: packages/admin/src/components/FieldEditor.tsx:1070
 msgid "Loading block types…"
 msgstr "A carregar tipos de bloco…"
 
@@ -7547,8 +7569,8 @@ msgstr "A carregar definições..."
 msgid "Loading setup..."
 msgstr "A carregar a configuração..."
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1396
-#: packages/admin/src/components/TaxonomyManager.tsx:1468
+#: packages/admin/src/components/TaxonomyManager.tsx:1395
+#: packages/admin/src/components/TaxonomyManager.tsx:1467
 msgid "Loading terms..."
 msgstr "A carregar termos..."
 
@@ -7586,7 +7608,7 @@ msgstr "A carregar widgets..."
 #: packages/admin/src/components/settings/EmailSettings.tsx:69
 #: packages/admin/src/components/settings/SecuritySettings.tsx:104
 #: packages/admin/src/components/settings/TransferSettings.tsx:57
-#: packages/admin/src/components/TaxonomyManager.tsx:1274
+#: packages/admin/src/components/TaxonomyManager.tsx:1273
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:170
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:244
 #: packages/admin/src/components/ThemeMarketplaceDetail.tsx:143
@@ -7638,7 +7660,7 @@ msgstr "Localização indisponível"
 msgid "Lock aspect ratio"
 msgstr "Bloquear proporção"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:291
+#: packages/admin/src/components/BylineFieldEditor.tsx:286
 msgid "Locked because this field has stored values. Delete the values (or the field) to change this."
 msgstr "Bloqueado porque este campo tem valores guardados. Elimine os valores (ou o campo) para alterar esta opção."
 
@@ -7656,16 +7678,16 @@ msgstr "Logótipo"
 msgid "Logo & favicon"
 msgstr "Logótipo e favicon"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:53
+#: packages/admin/src/components/BylineFieldEditor.tsx:48
 msgid "Long text"
 msgstr "Texto longo"
 
-#: packages/admin/src/components/FieldEditor.tsx:389
-#: packages/admin/src/components/FieldEditor.tsx:1233
+#: packages/admin/src/components/FieldEditor.tsx:384
+#: packages/admin/src/components/FieldEditor.tsx:1271
 msgid "Long Text"
 msgstr "Texto longo"
 
-#: packages/admin/src/components/RelationForm.tsx:337
+#: packages/admin/src/components/RelationForm.tsx:334
 msgid "Lowercase letters, numbers and underscores. Reference fields store this."
 msgstr "Letras minúsculas, números e sublinhados. Os campos de referência guardam este valor."
 
@@ -7673,7 +7695,7 @@ msgstr "Letras minúsculas, números e sublinhados. Os campos de referência gua
 msgid "Lowercase letters, numbers, and hyphens only"
 msgstr "Apenas letras minúsculas, números e hífenes"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1054
+#: packages/admin/src/components/TaxonomyManager.tsx:1052
 msgid "Lowercase letters, numbers, and underscores only, starting with a letter"
 msgstr "Apenas letras minúsculas, números e sublinhados, a começar por uma letra"
 
@@ -7696,7 +7718,7 @@ msgstr "Gestão"
 
 #. placeholder {0}: inlineLabel(taxonomyDef.label, lingui.locale)
 #. placeholder {1}: taxonomyDef.collections.join(", ")
-#: packages/admin/src/components/TaxonomyManager.tsx:1291
+#: packages/admin/src/components/TaxonomyManager.tsx:1290
 msgid "Manage {0} for {1}"
 msgstr "Gerir {0} para {1}"
 
@@ -7788,23 +7810,23 @@ msgstr "A configuração do marketplace foi descontinuada"
 msgid "Matched by email"
 msgstr "Associado por email"
 
-#: packages/admin/src/components/FieldEditor.tsx:1280
+#: packages/admin/src/components/FieldEditor.tsx:1323
 msgid "Max Items"
 msgstr "Máximo de itens"
 
-#: packages/admin/src/components/FieldEditor.tsx:876
+#: packages/admin/src/components/FieldEditor.tsx:887
 msgid "Max Length"
 msgstr "Comprimento máximo"
 
-#: packages/admin/src/components/FieldEditor.tsx:906
+#: packages/admin/src/components/FieldEditor.tsx:917
 msgid "Max Value"
 msgstr "Valor máximo"
 
-#: packages/admin/src/components/RelationForm.tsx:416
+#: packages/admin/src/components/RelationForm.tsx:413
 msgid "Maximum"
 msgstr "Máximo"
 
-#: packages/admin/src/components/FieldEditor.tsx:1161
+#: packages/admin/src/components/FieldEditor.tsx:1172
 msgid "Maximum blocks"
 msgstr "Máximo de blocos"
 
@@ -8014,19 +8036,19 @@ msgstr "Guia de migração"
 msgid "Migration key"
 msgstr "Chave de migração"
 
-#: packages/admin/src/components/FieldEditor.tsx:1273
+#: packages/admin/src/components/FieldEditor.tsx:1316
 msgid "Min Items"
 msgstr "Mínimo de itens"
 
-#: packages/admin/src/components/FieldEditor.tsx:869
+#: packages/admin/src/components/FieldEditor.tsx:880
 msgid "Min Length"
 msgstr "Comprimento mínimo"
 
-#: packages/admin/src/components/FieldEditor.tsx:899
+#: packages/admin/src/components/FieldEditor.tsx:910
 msgid "Min Value"
 msgstr "Valor mínimo"
 
-#: packages/admin/src/components/FieldEditor.tsx:1153
+#: packages/admin/src/components/FieldEditor.tsx:1164
 msgid "Minimum blocks"
 msgstr "Mínimo de blocos"
 
@@ -8042,7 +8064,7 @@ msgstr "Minuto"
 msgid "Mixed"
 msgstr "Misto"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:669
+#: packages/admin/src/components/ContentTypeEditor.tsx:666
 msgid "Moderation"
 msgstr "Moderação"
 
@@ -8071,8 +8093,8 @@ msgstr "Arquivos mensais/anuais"
 #. placeholder {0}: section.title
 #: packages/admin/src/components/BylineCreditsEditor.tsx:862
 #: packages/admin/src/components/Sections.tsx:450
-#: packages/admin/src/components/TaxonomyManager.tsx:323
-#: packages/admin/src/components/TaxonomyManager.tsx:1349
+#: packages/admin/src/components/TaxonomyManager.tsx:321
+#: packages/admin/src/components/TaxonomyManager.tsx:1348
 #: packages/admin/src/routes/bylines.tsx:600
 msgid "More actions for {0}"
 msgstr "Mais ações para {0}"
@@ -8123,13 +8145,13 @@ msgstr "Mover \"{title}\" para o lixo? Pode restaurá-lo mais tarde."
 #. placeholder {0}: referenceRowLabel(row)
 #. placeholder {0}: term.label
 #: packages/admin/src/components/ContentEditor.tsx:2763
-#: packages/admin/src/components/FieldEditor.tsx:1129
-#: packages/admin/src/components/TaxonomyManager.tsx:463
+#: packages/admin/src/components/FieldEditor.tsx:1140
+#: packages/admin/src/components/TaxonomyManager.tsx:461
 msgid "Move {0} down"
 msgstr "Mover {0} para baixo"
 
 #. placeholder {0}: term.label
-#: packages/admin/src/components/TaxonomyManager.tsx:462
+#: packages/admin/src/components/TaxonomyManager.tsx:460
 msgid "Move {0} down — unavailable, its parent has no translation in this locale"
 msgstr "Mover {0} para baixo: indisponível, o termo superior não tem tradução neste idioma"
 
@@ -8147,13 +8169,13 @@ msgstr "Mover {0} para a frente"
 #. placeholder {0}: referenceRowLabel(row)
 #. placeholder {0}: term.label
 #: packages/admin/src/components/ContentEditor.tsx:2752
-#: packages/admin/src/components/FieldEditor.tsx:1112
-#: packages/admin/src/components/TaxonomyManager.tsx:450
+#: packages/admin/src/components/FieldEditor.tsx:1123
+#: packages/admin/src/components/TaxonomyManager.tsx:448
 msgid "Move {0} up"
 msgstr "Mover {0} para cima"
 
 #. placeholder {0}: term.label
-#: packages/admin/src/components/TaxonomyManager.tsx:449
+#: packages/admin/src/components/TaxonomyManager.tsx:447
 msgid "Move {0} up — unavailable, its parent has no translation in this locale"
 msgstr "Mover {0} para cima: indisponível, o termo superior não tem tradução neste idioma"
 
@@ -8162,12 +8184,12 @@ msgid "Move {title} to trash"
 msgstr "Mover {title} para o lixo"
 
 #: packages/admin/src/components/MenuEditor.tsx:543
-#: packages/admin/src/components/TaxonomyManager.tsx:347
+#: packages/admin/src/components/TaxonomyManager.tsx:345
 msgid "Move down"
 msgstr "Mover para baixo"
 
 #. placeholder {0}: term.label
-#: packages/admin/src/components/TaxonomyManager.tsx:343
+#: packages/admin/src/components/TaxonomyManager.tsx:341
 msgid "Move down {0}"
 msgstr "Mover {0} para baixo"
 
@@ -8205,12 +8227,12 @@ msgid "Move to Trash?"
 msgstr "Mover para o lixo?"
 
 #: packages/admin/src/components/MenuEditor.tsx:534
-#: packages/admin/src/components/TaxonomyManager.tsx:339
+#: packages/admin/src/components/TaxonomyManager.tsx:337
 msgid "Move up"
 msgstr "Mover para cima"
 
 #. placeholder {0}: term.label
-#: packages/admin/src/components/TaxonomyManager.tsx:335
+#: packages/admin/src/components/TaxonomyManager.tsx:333
 msgid "Move up {0}"
 msgstr "Mover {0} para cima"
 
@@ -8255,15 +8277,15 @@ msgstr "A movimentação de {label} foi cancelada."
 msgid "Moving from another EmDash site?"
 msgstr "Vem de outro site EmDash?"
 
-#: packages/admin/src/components/FieldEditor.tsx:425
+#: packages/admin/src/components/FieldEditor.tsx:420
 msgid "Multi Select"
 msgstr "Seleção múltipla"
 
-#: packages/admin/src/components/FieldEditor.tsx:390
+#: packages/admin/src/components/FieldEditor.tsx:385
 msgid "Multi-line plain text"
 msgstr "Texto simples com várias linhas"
 
-#: packages/admin/src/components/FieldEditor.tsx:426
+#: packages/admin/src/components/FieldEditor.tsx:421
 msgid "Multiple choices from options"
 msgstr "Escolha múltipla entre opções"
 
@@ -8276,21 +8298,21 @@ msgstr "O meu blogue fantástico"
 #: packages/admin/src/components/MarketplaceBrowse.tsx:45
 #: packages/admin/src/components/MediaFolderDialog.tsx:131
 #: packages/admin/src/components/MenuList.tsx:162
-#: packages/admin/src/components/TaxonomyManager.tsx:781
-#: packages/admin/src/components/TaxonomyManager.tsx:1045
-#: packages/admin/src/components/TaxonomyManager.tsx:1407
-#: packages/admin/src/components/TaxonomyManager.tsx:1462
+#: packages/admin/src/components/TaxonomyManager.tsx:779
+#: packages/admin/src/components/TaxonomyManager.tsx:1043
+#: packages/admin/src/components/TaxonomyManager.tsx:1406
+#: packages/admin/src/components/TaxonomyManager.tsx:1461
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
 #: packages/admin/src/components/users/UserDetail.tsx:148
 #: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "Nome"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:972
+#: packages/admin/src/components/TaxonomyManager.tsx:970
 msgid "Name and label are required"
 msgstr "O nome e o rótulo são obrigatórios"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:978
+#: packages/admin/src/components/TaxonomyManager.tsx:976
 msgid "Name must start with a letter and contain only lowercase letters, numbers, and underscores"
 msgstr "O nome tem de começar por uma letra e conter apenas letras minúsculas, números e sublinhados"
 
@@ -8303,7 +8325,7 @@ msgid "Navigate"
 msgstr "Navegar"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:362
-#: packages/admin/src/components/ContentTypeEditor.tsx:552
+#: packages/admin/src/components/ContentTypeEditor.tsx:549
 msgid "Navigation"
 msgstr "Navegação"
 
@@ -8345,7 +8367,7 @@ msgstr "Nome ({singularLower})"
 msgid "New byline"
 msgstr "Novo crédito"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:209
+#: packages/admin/src/components/BylineFieldEditor.tsx:203
 msgid "New byline field"
 msgstr "Novo campo de crédito"
 
@@ -8353,7 +8375,7 @@ msgstr "Novo campo de crédito"
 msgid "New collection"
 msgstr "Nova coleção"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:434
+#: packages/admin/src/components/ContentTypeEditor.tsx:430
 #: packages/admin/src/components/ContentTypeList.tsx:141
 msgid "New Content Type"
 msgstr "Novo tipo de conteúdo"
@@ -8401,11 +8423,11 @@ msgstr "Nova secção"
 msgid "new tab"
 msgstr "novo separador"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1360
+#: packages/admin/src/components/TaxonomyManager.tsx:1359
 msgid "New taxonomy"
 msgstr "Nova taxonomia"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1327
+#: packages/admin/src/components/TaxonomyManager.tsx:1326
 msgid "New Taxonomy"
 msgstr "Nova taxonomia"
 
@@ -8421,11 +8443,11 @@ msgstr "Nova janela"
 msgid "Newest"
 msgstr "Mais recentes"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:784
+#: packages/admin/src/components/TaxonomyManager.tsx:782
 msgid "News"
 msgstr "Notícias"
 
-#: packages/admin/src/components/FieldEditor.tsx:1318
+#: packages/admin/src/components/FieldEditor.tsx:1361
 #: packages/admin/src/components/ThemeMarketplaceDetail.tsx:315
 msgid "Next"
 msgstr "Seguinte"
@@ -8471,8 +8493,8 @@ msgid "No {0} yet."
 msgstr "Ainda não há {0}."
 
 #. placeholder {0}: inlineLabel(taxonomyDef.label, lingui.locale)
-#: packages/admin/src/components/TaxonomyManager.tsx:1399
-#: packages/admin/src/components/TaxonomyManager.tsx:1471
+#: packages/admin/src/components/TaxonomyManager.tsx:1398
+#: packages/admin/src/components/TaxonomyManager.tsx:1470
 msgid "No {0} yet. Create one to get started."
 msgstr "Ainda não há {0}. Adicione um item para começar."
 
@@ -8565,7 +8587,7 @@ msgstr "Não há conteúdo nesta coleção"
 msgid "No content types yet."
 msgstr "Ainda não há tipos de conteúdo."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:777
+#: packages/admin/src/components/ContentTypeEditor.tsx:774
 msgid "No custom fields yet"
 msgstr "Ainda não há campos personalizados"
 
@@ -8666,7 +8688,7 @@ msgstr "Nenhum token de convite fornecido"
 msgid "No items yet"
 msgstr "Ainda não há itens"
 
-#: packages/admin/src/components/FieldEditor.tsx:1284
+#: packages/admin/src/components/FieldEditor.tsx:1327
 msgid "No limit"
 msgstr "Sem limite"
 
@@ -8712,7 +8734,7 @@ msgstr "Nenhum ficheiro multimédia correspondente"
 msgid "No matching passkey found for this account."
 msgstr "Não foi encontrada nenhuma chave de acesso correspondente para esta conta."
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1424
+#: packages/admin/src/components/TaxonomyManager.tsx:1423
 msgid "No matching tags"
 msgstr "Nenhuma etiqueta correspondente"
 
@@ -8720,8 +8742,8 @@ msgstr "Nenhuma etiqueta correspondente"
 msgid "No matching timezones"
 msgstr "Nenhum fuso horário corresponde"
 
-#: packages/admin/src/components/FieldEditor.tsx:880
-#: packages/admin/src/components/FieldEditor.tsx:910
+#: packages/admin/src/components/FieldEditor.tsx:891
+#: packages/admin/src/components/FieldEditor.tsx:921
 msgid "No maximum"
 msgstr "Sem máximo"
 
@@ -8742,12 +8764,12 @@ msgstr "Ainda não há itens no menu"
 msgid "No menus yet"
 msgstr "Ainda não há menus"
 
-#: packages/admin/src/components/FieldEditor.tsx:873
-#: packages/admin/src/components/FieldEditor.tsx:903
+#: packages/admin/src/components/FieldEditor.tsx:884
+#: packages/admin/src/components/FieldEditor.tsx:914
 msgid "No minimum"
 msgstr "Sem mínimo"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:86
+#: packages/admin/src/components/ContentTypeEditor.tsx:82
 msgid "No moderation (auto-approve all)"
 msgstr "Sem moderação (aprovar tudo automaticamente)"
 
@@ -8885,8 +8907,8 @@ msgstr "Não convidados"
 msgid "None"
 msgstr "Nenhum"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:821
-#: packages/admin/src/components/TaxonomyManager.tsx:830
+#: packages/admin/src/components/TaxonomyManager.tsx:819
+#: packages/admin/src/components/TaxonomyManager.tsx:828
 msgid "None (top level)"
 msgstr "Nenhum (nível superior)"
 
@@ -8934,8 +8956,8 @@ msgstr "Ainda não há nada para pré-visualizar."
 msgid "Now · {time}"
 msgstr "Agora · {time}"
 
-#: packages/admin/src/components/FieldEditor.tsx:395
-#: packages/admin/src/components/FieldEditor.tsx:1234
+#: packages/admin/src/components/FieldEditor.tsx:390
+#: packages/admin/src/components/FieldEditor.tsx:1272
 msgid "Number"
 msgstr "Número"
 
@@ -8974,8 +8996,8 @@ msgstr "No site"
 msgid "Once setup is done, upload a .emdash package exported from another EmDash site."
 msgstr "Depois de concluir a configuração, carregue um pacote .emdash exportado de outro site EmDash."
 
-#: packages/admin/src/components/RelationForm.tsx:353
-#: packages/admin/src/components/RelationForm.tsx:362
+#: packages/admin/src/components/RelationForm.tsx:350
+#: packages/admin/src/components/RelationForm.tsx:359
 msgid "One"
 msgstr "Um"
 
@@ -9074,7 +9096,7 @@ msgstr "Abrir as definições do Windows"
 msgid "Open WordPress Profile"
 msgstr "Abrir perfil do WordPress"
 
-#: packages/admin/src/components/FieldEditor.tsx:921
+#: packages/admin/src/components/FieldEditor.tsx:932
 msgid ""
 "Option 1\n"
 "Option 2\n"
@@ -9097,7 +9119,7 @@ msgstr "Legenda opcional mostrada por baixo da imagem"
 msgid "Optional caption for display"
 msgstr "Legenda opcional a mostrar"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:846
+#: packages/admin/src/components/TaxonomyManager.tsx:844
 msgid "Optional description"
 msgstr "Descrição opcional"
 
@@ -9109,8 +9131,8 @@ msgstr "Texto opcional ao passar o rato"
 msgid "Optional tooltip on hover"
 msgstr "Dica opcional ao passar o rato"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:302
-#: packages/admin/src/components/FieldEditor.tsx:918
+#: packages/admin/src/components/BylineFieldEditor.tsx:297
+#: packages/admin/src/components/FieldEditor.tsx:929
 msgid "Options (one per line)"
 msgstr "Opções (uma por linha)"
 
@@ -9144,7 +9166,7 @@ msgstr "ou carregue diretamente"
 msgid "Order saved"
 msgstr "Ordem guardada"
 
-#: packages/admin/src/components/FieldEditor.tsx:480
+#: packages/admin/src/components/FieldEditor.tsx:475
 msgid "Ordered page-building blocks"
 msgstr "Blocos ordenados para construir páginas"
 
@@ -9238,7 +9260,7 @@ msgid "Paragraph inserted before table"
 msgstr "Parágrafo inserido antes da tabela"
 
 #: packages/admin/src/components/MenuEditor.tsx:621
-#: packages/admin/src/components/TaxonomyManager.tsx:817
+#: packages/admin/src/components/TaxonomyManager.tsx:815
 msgid "Parent"
 msgstr "Item superior"
 
@@ -9343,7 +9365,7 @@ msgstr "Cole a sua chave de migração"
 msgid "Path"
 msgstr "Caminho"
 
-#: packages/admin/src/components/FieldEditor.tsx:885
+#: packages/admin/src/components/FieldEditor.tsx:896
 msgid "Pattern (Regex)"
 msgstr "Padrão (Regex)"
 
@@ -9357,12 +9379,12 @@ msgstr "Padrão (Regex)"
 #. placeholder {7}: "{minute}"
 #. placeholder {8}: "{second}"
 #. placeholder {9}: "/{year}/{month}/{day}/{slug}.html"
-#: packages/admin/src/components/ContentTypeEditor.tsx:547
+#: packages/admin/src/components/ContentTypeEditor.tsx:544
 msgid "Pattern for generating URLs, e.g. /blog/{0}. Tokens: {1}, {2}, and date tokens {3}/{4}/{5} (also {6}/{7}/{8}) from the publish date — e.g. {9} for WordPress-style permalinks."
 msgstr "Padrão para gerar URLs, p. ex. /blog/{0}. Tokens: {1}, {2} e tokens de data {3}/{4}/{5} (também {6}/{7}/{8}) a partir da data de publicação; p. ex. {9} para ligações permanentes ao estilo do WordPress."
 
 #. placeholder {0}: "{slug}"
-#: packages/admin/src/components/ContentTypeEditor.tsx:538
+#: packages/admin/src/components/ContentTypeEditor.tsx:535
 msgid "Pattern must include a {0} placeholder"
 msgstr "O padrão tem de incluir o marcador {0}"
 
@@ -9410,7 +9432,7 @@ msgstr "Eliminar {title} permanentemente"
 msgid "Permissions"
 msgstr "Permissões"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:573
+#: packages/admin/src/components/ContentTypeEditor.tsx:570
 msgid "Phosphor icon name, e.g. calendar-blank or trophy"
 msgstr "Nome do ícone Phosphor, p. ex. calendar-blank ou trophy"
 
@@ -9422,7 +9444,7 @@ msgstr "PHP"
 msgid "Picked up {label}."
 msgstr "{label} selecionada."
 
-#: packages/admin/src/components/FieldEditor.tsx:1384
+#: packages/admin/src/components/FieldEditor.tsx:1428
 msgid "Picking entries this one links to lets editors drag them into an order. The other direction lists whatever points at the entry and cannot be reordered."
 msgstr "Selecionar as entradas a que esta liga permite aos editores arrastá-las para as ordenar. O sentido inverso lista tudo o que aponta para a entrada e não pode ser reordenado."
 
@@ -9617,8 +9639,8 @@ msgstr "Indica aos motores de pesquisa a versão original desta página, caso se
 msgid "Portrait"
 msgstr "Retrato"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:466
-#: packages/admin/src/components/RelationForm.tsx:307
+#: packages/admin/src/components/ContentTypeEditor.tsx:462
+#: packages/admin/src/components/RelationForm.tsx:303
 msgid "Post"
 msgstr "Artigo"
 
@@ -9626,8 +9648,8 @@ msgstr "Artigo"
 msgid "Post URLs (one per line)"
 msgstr "URLs dos artigos (um por linha)"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:474
-#: packages/admin/src/components/RelationForm.tsx:301
+#: packages/admin/src/components/ContentTypeEditor.tsx:470
+#: packages/admin/src/components/RelationForm.tsx:297
 #: packages/admin/src/components/WordPressImport.tsx:1345
 msgid "Posts"
 msgstr "Artigos"
@@ -9675,7 +9697,7 @@ msgstr "Prima Espaço para pegar numa imagem. Utilize as teclas de seta para a m
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:448
 #: packages/admin/src/components/ContentSettingsPanel.tsx:389
-#: packages/admin/src/components/ContentTypeEditor.tsx:102
+#: packages/admin/src/components/ContentTypeEditor.tsx:98
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:37
 #: packages/admin/src/components/editor/IframeBlockNode.tsx:41
 #: packages/admin/src/components/MediaDetailPanel.tsx:1688
@@ -9687,7 +9709,7 @@ msgstr "Pré-visualizar"
 msgid "Preview changes"
 msgstr "Pré-visualizar alterações"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:103
+#: packages/admin/src/components/ContentTypeEditor.tsx:99
 msgid "Preview content before publishing"
 msgstr "Pré-visualizar o conteúdo antes de publicar"
 
@@ -9848,7 +9870,7 @@ msgstr "{total} itens publicados"
 msgid "Published and scheduled entries across collections, in the site's time zone."
 msgstr "Entradas publicadas e agendadas em todas as coleções, no fuso horário do site."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:156
+#: packages/admin/src/components/ContentTypeEditor.tsx:152
 msgid "Published At"
 msgstr "Publicado em"
 
@@ -9893,15 +9915,15 @@ msgstr "Python"
 msgid "Queued"
 msgstr "Em fila"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:595
+#: packages/admin/src/components/ContentTypeEditor.tsx:592
 msgid "Quick action on the dashboard"
 msgstr "Ação rápida no painel"
 
-#: packages/admin/src/components/FieldEditor.tsx:963
+#: packages/admin/src/components/FieldEditor.tsx:974
 msgid "Quick create a relationship"
 msgstr "Criar rapidamente uma relação"
 
-#: packages/admin/src/components/FieldEditor.tsx:1028
+#: packages/admin/src/components/FieldEditor.tsx:1039
 msgid "Quick create names the relationship after this field and this collection, takes how many entries it holds from the switch above, and puts no limit on how many entries link back the other way. <0>Create the relationship yourself</0> to set its slug, the name each side goes by, and both limits, then pick it above."
 msgstr "A criação rápida dá à relação o nome deste campo e desta coleção, define quantas entradas contém a partir do interruptor acima e não impõe limite ao número de entradas que ligam de volta no sentido inverso. <0>Crie a relação manualmente</0> para definir o slug, o nome de cada lado e ambos os limites e, depois, selecione-a acima."
 
@@ -10084,20 +10106,20 @@ msgstr "Os redirecionamentos em ciclo serão importados desativados"
 msgid "Redo"
 msgstr "Refazer"
 
-#: packages/admin/src/components/FieldEditor.tsx:449
-#: packages/admin/src/components/FieldEditor.tsx:747
-#: packages/admin/src/components/FieldEditor.tsx:928
+#: packages/admin/src/components/FieldEditor.tsx:444
+#: packages/admin/src/components/FieldEditor.tsx:757
+#: packages/admin/src/components/FieldEditor.tsx:939
 msgid "Reference"
 msgstr "Referência"
 
-#: packages/admin/src/components/FieldEditor.tsx:769
-#: packages/admin/src/components/FieldEditor.tsx:942
-#: packages/admin/src/components/FieldEditor.tsx:974
-#: packages/admin/src/components/FieldEditor.tsx:1007
+#: packages/admin/src/components/FieldEditor.tsx:779
+#: packages/admin/src/components/FieldEditor.tsx:953
+#: packages/admin/src/components/FieldEditor.tsx:985
+#: packages/admin/src/components/FieldEditor.tsx:1018
 msgid "Referenced collection"
 msgstr "Coleção referenciada"
 
-#: packages/admin/src/components/FieldEditor.tsx:1015
+#: packages/admin/src/components/FieldEditor.tsx:1026
 msgid "Referenced collection is required"
 msgstr "A coleção referenciada é obrigatória"
 
@@ -10157,9 +10179,9 @@ msgstr "Registo"
 msgid "Relations"
 msgstr "Relações"
 
-#: packages/admin/src/components/FieldEditor.tsx:750
-#: packages/admin/src/components/FieldEditor.tsx:933
-#: packages/admin/src/components/FieldEditor.tsx:959
+#: packages/admin/src/components/FieldEditor.tsx:760
+#: packages/admin/src/components/FieldEditor.tsx:944
+#: packages/admin/src/components/FieldEditor.tsx:970
 msgid "Relationship"
 msgstr "Relação"
 
@@ -10295,7 +10317,7 @@ msgstr "Remover chave de acesso?"
 msgid "Remove schedule"
 msgstr "Remover agendamento"
 
-#: packages/admin/src/components/FieldEditor.tsx:1264
+#: packages/admin/src/components/FieldEditor.tsx:1306
 msgid "Remove sub-field"
 msgstr "Remover subcampo"
 
@@ -10308,7 +10330,7 @@ msgstr "Remover esta imagem do documento?"
 msgid "Removed {0} from selection."
 msgstr "{0} removido da seleção."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:584
+#: packages/admin/src/components/ContentTypeEditor.tsx:581
 msgid "Removes the sidebar entry, command palette link, and dashboard quick action; entries stay reachable by URL, API, and plugins"
 msgstr "Remove a entrada da barra lateral, a ligação na paleta de comandos e a ação rápida do painel; as entradas continuam acessíveis por URL, API e plugins"
 
@@ -10348,11 +10370,11 @@ msgstr "Reordenar"
 msgid "Reorder {0}"
 msgstr "Reordenar {0}"
 
-#: packages/admin/src/components/FieldEditor.tsx:473
+#: packages/admin/src/components/FieldEditor.tsx:468
 msgid "Repeater"
 msgstr "Repetidor"
 
-#: packages/admin/src/components/FieldEditor.tsx:474
+#: packages/admin/src/components/FieldEditor.tsx:469
 msgid "Repeating group of fields"
 msgstr "Grupo de campos repetível"
 
@@ -10451,14 +10473,14 @@ msgstr "Pedir uma nova ligação"
 msgid "Request failed"
 msgstr "O pedido falhou"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:508
+#: packages/admin/src/components/ContentTypeEditor.tsx:505
 msgid "Require a slug before content can be published"
 msgstr "Exigir um slug antes de o conteúdo poder ser publicado"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:280
-#: packages/admin/src/components/ContentTypeEditor.tsx:939
-#: packages/admin/src/components/FieldEditor.tsx:836
-#: packages/admin/src/components/FieldEditor.tsx:1246
+#: packages/admin/src/components/BylineFieldEditor.tsx:275
+#: packages/admin/src/components/ContentTypeEditor.tsx:936
+#: packages/admin/src/components/FieldEditor.tsx:847
+#: packages/admin/src/components/FieldEditor.tsx:1288
 #: packages/admin/src/routes/byline-schema.tsx:246
 msgid "Required"
 msgstr "Obrigatório"
@@ -10593,7 +10615,7 @@ msgid "Results"
 msgstr "Resultados"
 
 #: packages/admin/src/components/BlocksField.tsx:360
-#: packages/admin/src/components/FieldEditor.tsx:1096
+#: packages/admin/src/components/FieldEditor.tsx:1107
 msgid "Retired"
 msgstr "Descontinuado"
 
@@ -10719,7 +10741,7 @@ msgid "Revision restored"
 msgstr "Revisão restaurada"
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1267
-#: packages/admin/src/components/ContentTypeEditor.tsx:97
+#: packages/admin/src/components/ContentTypeEditor.tsx:93
 #: packages/admin/src/components/RevisionHistory.tsx:168
 #: packages/admin/src/components/settings/transfer/labels.ts:22
 #: packages/admin/src/components/settings/transfer/labels.ts:86
@@ -10745,7 +10767,7 @@ msgstr "Revogar?"
 msgid "Revoking..."
 msgstr "A revogar..."
 
-#: packages/admin/src/components/FieldEditor.tsx:431
+#: packages/admin/src/components/FieldEditor.tsx:426
 msgid "Rich Text"
 msgstr "Texto formatado"
 
@@ -10753,7 +10775,7 @@ msgstr "Texto formatado"
 msgid "Rich text content"
 msgstr "Conteúdo em texto formatado"
 
-#: packages/admin/src/components/FieldEditor.tsx:432
+#: packages/admin/src/components/FieldEditor.tsx:427
 msgid "Rich text editor"
 msgstr "Editor de texto formatado"
 
@@ -10792,11 +10814,11 @@ msgstr "Função neste artigo (opcional)"
 msgid "Role updated for {0}."
 msgstr "Função de {0} atualizada."
 
-#: packages/admin/src/components/RelationForm.tsx:291
+#: packages/admin/src/components/RelationForm.tsx:287
 msgid "Roles"
 msgstr "Funções"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:506
+#: packages/admin/src/components/ContentTypeEditor.tsx:503
 msgid "Routable"
 msgstr "Com rota própria"
 
@@ -10874,7 +10896,7 @@ msgid "Save anyway"
 msgstr "Guardar mesmo assim"
 
 #: packages/admin/src/components/BylineCreditsEditor.tsx:1024
-#: packages/admin/src/components/BylineFieldEditor.tsx:318
+#: packages/admin/src/components/BylineFieldEditor.tsx:313
 msgid "Save changes"
 msgstr "Guardar alterações"
 
@@ -10887,7 +10909,7 @@ msgstr "Guardar alterações"
 msgid "Save changes before running plugin actions"
 msgstr "Guarde as alterações antes de executar ações do plugin"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:93
+#: packages/admin/src/components/ContentTypeEditor.tsx:89
 msgid "Save content as draft before publishing"
 msgstr "Guardar o conteúdo como rascunho antes de publicar"
 
@@ -10939,11 +10961,11 @@ msgstr "\"{0}\" guardado."
 msgid "Saved immediately; term changes do not wait for Publish changes."
 msgstr "Guardado de imediato; as alterações aos termos não aguardam pela publicação das alterações."
 
-#: packages/admin/src/components/FieldEditor.tsx:1019
+#: packages/admin/src/components/FieldEditor.tsx:1030
 msgid "Saving a collection here turns this field into an entry picker. Its stored entry IDs move to the relationship, and the field can no longer be searched or filtered on."
 msgstr "Ao guardar uma coleção aqui, este campo passa a ser um seletor de entradas. Os IDs de entradas guardados passam para a relação e o campo deixa de poder ser usado em pesquisas ou filtros."
 
-#: packages/admin/src/components/FieldEditor.tsx:1329
+#: packages/admin/src/components/FieldEditor.tsx:1373
 #: packages/admin/src/components/MediaDetailPanel.tsx:1878
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
 #: packages/admin/src/components/MenuEditor.tsx:632
@@ -10952,7 +10974,7 @@ msgstr "Ao guardar uma coleção aqui, este campo passa a ser um seletor de entr
 #: packages/admin/src/components/Redirects.tsx:190
 #: packages/admin/src/components/RelationFormPanel.tsx:112
 #: packages/admin/src/components/SaveButton.tsx:33
-#: packages/admin/src/components/TaxonomyManager.tsx:889
+#: packages/admin/src/components/TaxonomyManager.tsx:887
 #: packages/admin/src/components/users/UserDetail.tsx:311
 #: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
@@ -10964,7 +10986,7 @@ msgstr "A guardar..."
 msgid "visualEditing.saving"
 msgstr ""
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:318
+#: packages/admin/src/components/BylineFieldEditor.tsx:313
 msgid "Saving…"
 msgstr "A guardar…"
 
@@ -11090,7 +11112,7 @@ msgstr "Desloque para rever tudo"
 msgid "SCSS"
 msgstr "SCSS"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:107
+#: packages/admin/src/components/ContentTypeEditor.tsx:103
 #: packages/admin/src/components/Settings.tsx:165
 #: packages/admin/src/components/Settings.tsx:165
 #: packages/admin/src/components/Widgets.tsx:152
@@ -11230,11 +11252,11 @@ msgstr "Pesquisar secções..."
 msgid "Search source or destination..."
 msgstr "Pesquisar origem ou destino..."
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1383
+#: packages/admin/src/components/TaxonomyManager.tsx:1382
 msgid "Search tags"
 msgstr "Pesquisar etiquetas"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1382
+#: packages/admin/src/components/TaxonomyManager.tsx:1381
 msgid "Search tags…"
 msgstr "Pesquisar etiquetas…"
 
@@ -11267,8 +11289,8 @@ msgstr "A pesquisa será desativada em algumas coleções"
 msgid "Search..."
 msgstr "Pesquisar..."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:941
-#: packages/admin/src/components/FieldEditor.tsx:849
+#: packages/admin/src/components/ContentTypeEditor.tsx:938
+#: packages/admin/src/components/FieldEditor.tsx:860
 msgid "Searchable"
 msgstr "Pesquisável"
 
@@ -11371,9 +11393,9 @@ msgstr "Definições de segurança"
 msgid "See where this file is used."
 msgstr "Veja onde este ficheiro é utilizado."
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:56
-#: packages/admin/src/components/FieldEditor.tsx:419
-#: packages/admin/src/components/FieldEditor.tsx:1238
+#: packages/admin/src/components/BylineFieldEditor.tsx:51
+#: packages/admin/src/components/FieldEditor.tsx:414
+#: packages/admin/src/components/FieldEditor.tsx:1276
 #: packages/admin/src/components/MediaPickerModal.tsx:860
 #: packages/admin/src/components/Settings.tsx:159
 msgid "Select"
@@ -11390,7 +11412,7 @@ msgstr "Selecionar {label}"
 msgid "Select {title}"
 msgstr "Selecionar {title}"
 
-#: packages/admin/src/components/FieldEditor.tsx:1014
+#: packages/admin/src/components/FieldEditor.tsx:1025
 msgid "Select a collection"
 msgstr "Selecione uma coleção"
 
@@ -11398,8 +11420,8 @@ msgstr "Selecione uma coleção"
 msgid "Select a component..."
 msgstr "Selecione um componente..."
 
-#: packages/admin/src/components/RelationForm.tsx:275
-#: packages/admin/src/components/RelationForm.tsx:284
+#: packages/admin/src/components/RelationForm.tsx:271
+#: packages/admin/src/components/RelationForm.tsx:280
 msgid "Select a content type"
 msgstr "Selecione um tipo de conteúdo"
 
@@ -11411,7 +11433,7 @@ msgstr "Selecionar uma localização"
 msgid "Select a menu..."
 msgstr "Selecione um menu..."
 
-#: packages/admin/src/components/FieldEditor.tsx:762
+#: packages/admin/src/components/FieldEditor.tsx:772
 msgid "Select a relationship"
 msgstr "Selecione uma relação"
 
@@ -11596,7 +11618,7 @@ msgstr "A enviar..."
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1172
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1175
-#: packages/admin/src/components/ContentTypeEditor.tsx:637
+#: packages/admin/src/components/ContentTypeEditor.tsx:634
 #: packages/admin/src/components/Settings.tsx:66
 msgid "SEO"
 msgstr "SEO"
@@ -11643,7 +11665,7 @@ msgstr "Definir linguagem (atual: {label})"
 msgid "Set role"
 msgstr "Definir função"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:694
+#: packages/admin/src/components/ContentTypeEditor.tsx:691
 msgid "Set to 0 to never close comments automatically."
 msgstr "Defina 0 para nunca fechar os comentários automaticamente."
 
@@ -11680,7 +11702,7 @@ msgstr "A configurar..."
 #: packages/admin/src/components/AdminCommandPalette.tsx:247
 #: packages/admin/src/components/ContentEditor.tsx:1729
 #: packages/admin/src/components/ContentEditor.tsx:2043
-#: packages/admin/src/components/ContentTypeEditor.tsx:460
+#: packages/admin/src/components/ContentTypeEditor.tsx:456
 #: packages/admin/src/components/Header.tsx:102
 #: packages/admin/src/components/PluginManager.tsx:530
 #: packages/admin/src/components/Settings.tsx:46
@@ -11715,16 +11737,16 @@ msgstr "Falha na configuração"
 msgid "Share this link with the invited user"
 msgstr "Partilhe esta ligação com o utilizador convidado"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:294
+#: packages/admin/src/components/BylineFieldEditor.tsx:289
 msgid "Shared across all translations of the same byline."
 msgstr "Partilhado por todas as traduções do mesmo crédito."
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:52
+#: packages/admin/src/components/BylineFieldEditor.tsx:47
 msgid "Short text"
 msgstr "Texto curto"
 
-#: packages/admin/src/components/FieldEditor.tsx:383
-#: packages/admin/src/components/FieldEditor.tsx:1232
+#: packages/admin/src/components/FieldEditor.tsx:378
+#: packages/admin/src/components/FieldEditor.tsx:1270
 msgid "Short Text"
 msgstr "Texto curto"
 
@@ -11772,7 +11794,7 @@ msgstr "Mostrados aos leitores por esta ordem."
 msgid "Shown when hovering over the image."
 msgstr "Mostrado ao passar o rato sobre a imagem."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:597
+#: packages/admin/src/components/ContentTypeEditor.tsx:594
 msgid "Shows a button for creating a new entry"
 msgstr "Mostra um botão para criar uma nova entrada"
 
@@ -11832,11 +11854,11 @@ msgstr "Versão assinada verificada"
 msgid "Signing in failed. Please try again."
 msgstr "Não foi possível iniciar sessão. Tente novamente."
 
-#: packages/admin/src/components/FieldEditor.tsx:420
+#: packages/admin/src/components/FieldEditor.tsx:415
 msgid "Single choice from options"
 msgstr "Escolha única entre opções"
 
-#: packages/admin/src/components/FieldEditor.tsx:384
+#: packages/admin/src/components/FieldEditor.tsx:379
 msgid "Single line text input"
 msgstr "Campo de texto de uma linha"
 
@@ -11942,19 +11964,20 @@ msgstr "Saltar importação de multimédia"
 msgid "Skipped"
 msgstr "Ignorado"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:239
+#: packages/admin/src/components/BylineFieldEditor.tsx:233
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1030
-#: packages/admin/src/components/ContentTypeEditor.tsx:132
-#: packages/admin/src/components/ContentTypeEditor.tsx:481
+#: packages/admin/src/components/ContentTypeEditor.tsx:128
+#: packages/admin/src/components/ContentTypeEditor.tsx:477
 #: packages/admin/src/components/ContentTypeList.tsx:201
-#: packages/admin/src/components/FieldEditor.tsx:461
-#: packages/admin/src/components/FieldEditor.tsx:815
-#: packages/admin/src/components/RelationForm.tsx:326
+#: packages/admin/src/components/FieldEditor.tsx:456
+#: packages/admin/src/components/FieldEditor.tsx:825
+#: packages/admin/src/components/FieldEditor.tsx:1246
+#: packages/admin/src/components/RelationForm.tsx:322
 #: packages/admin/src/components/RelationList.tsx:90
 #: packages/admin/src/components/SectionEditor.tsx:280
 #: packages/admin/src/components/Sections.tsx:204
-#: packages/admin/src/components/TaxonomyManager.tsx:799
-#: packages/admin/src/components/TaxonomyManager.tsx:803
+#: packages/admin/src/components/TaxonomyManager.tsx:797
+#: packages/admin/src/components/TaxonomyManager.tsx:801
 #: packages/admin/src/routes/byline-schema.tsx:237
 #: packages/admin/src/routes/bylines.tsx:730
 msgid "Slug"
@@ -11964,7 +11987,7 @@ msgstr "Slug"
 msgid "Slug copied to clipboard"
 msgstr "Slug copiado para a área de transferência"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:251
+#: packages/admin/src/components/BylineFieldEditor.tsx:246
 msgid "Slugs cannot be changed after the field is created."
 msgstr "Não é possível alterar os slugs depois de o campo ser criado."
 
@@ -12155,7 +12178,7 @@ msgid "State"
 msgstr "Estado"
 
 #: packages/admin/src/components/ContentList.tsx:749
-#: packages/admin/src/components/ContentTypeEditor.tsx:138
+#: packages/admin/src/components/ContentTypeEditor.tsx:134
 #: packages/admin/src/components/Redirects.tsx:489
 #: packages/admin/src/components/settings/MediaUsageSettings.tsx:382
 #: packages/admin/src/components/settings/MediaUsageSettings.tsx:615
@@ -12189,7 +12212,7 @@ msgstr "Guardar uma cópia de segurança diária no bucket de armazenamento do s
 msgid "Stored Backups"
 msgstr "Cópias de segurança guardadas"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:293
+#: packages/admin/src/components/BylineFieldEditor.tsx:288
 msgid "Stored per locale — each translation of a byline gets its own value."
 msgstr "Guardado por idioma: cada tradução de um crédito tem o seu próprio valor."
 
@@ -12206,7 +12229,15 @@ msgstr "Estrutura"
 msgid "Structured"
 msgstr "Estruturado"
 
-#: packages/admin/src/components/FieldEditor.tsx:1176
+#: packages/admin/src/components/FieldEditor.tsx:1284
+msgid "Sub-field slugs cannot be changed after creation."
+msgstr ""
+
+#: packages/admin/src/components/FieldEditor.tsx:1221
+msgid "Sub-field slugs must be unique."
+msgstr ""
+
+#: packages/admin/src/components/FieldEditor.tsx:1187
 msgid "Sub-Fields"
 msgstr "Subcampos"
 
@@ -12247,11 +12278,11 @@ msgstr "Sincronizada"
 msgid "Synced passkey"
 msgstr "Chave de acesso sincronizada"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:987
+#: packages/admin/src/components/ContentTypeEditor.tsx:984
 msgid "System"
 msgstr "Sistema"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:764
+#: packages/admin/src/components/ContentTypeEditor.tsx:761
 msgid "System Fields"
 msgstr "Campos de sistema"
 
@@ -12317,7 +12348,7 @@ msgstr "A assumir o controlo..."
 msgid "Target"
 msgstr "Abrir em"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:566
+#: packages/admin/src/components/TaxonomyManager.tsx:564
 msgid "Target locale"
 msgstr "Idioma de destino"
 
@@ -12340,11 +12371,11 @@ msgstr "Taxonomia"
 msgid "Taxonomy “{0}” is used by content on this site"
 msgstr "A taxonomia “{0}” é utilizada por conteúdo deste site"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1563
+#: packages/admin/src/components/TaxonomyManager.tsx:1562
 msgid "Taxonomy created"
 msgstr "Taxonomia criada"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1194
+#: packages/admin/src/components/TaxonomyManager.tsx:1193
 msgid "Taxonomy deleted"
 msgstr "Taxonomia eliminada"
 
@@ -12356,7 +12387,7 @@ msgstr "Taxonomia não encontrada: {taxonomyName}"
 msgid "Taxonomy terms"
 msgstr "Termos de taxonomia"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:553
+#: packages/admin/src/components/TaxonomyManager.tsx:551
 msgid "Taxonomy: {taxonomyName}"
 msgstr "Taxonomia: {taxonomyName}"
 
@@ -12377,18 +12408,18 @@ msgid "Template:"
 msgstr "Modelo:"
 
 #: packages/admin/src/components/BulkTagDialog.tsx:110
-#: packages/admin/src/components/TaxonomyManager.tsx:755
-#: packages/admin/src/components/TaxonomyManager.tsx:756
-#: packages/admin/src/components/TaxonomyManager.tsx:760
-#: packages/admin/src/components/TaxonomyManager.tsx:761
-#: packages/admin/src/components/TaxonomyManager.tsx:1330
-#: packages/admin/src/components/TaxonomyManager.tsx:1531
+#: packages/admin/src/components/TaxonomyManager.tsx:753
+#: packages/admin/src/components/TaxonomyManager.tsx:754
+#: packages/admin/src/components/TaxonomyManager.tsx:758
+#: packages/admin/src/components/TaxonomyManager.tsx:759
+#: packages/admin/src/components/TaxonomyManager.tsx:1329
+#: packages/admin/src/components/TaxonomyManager.tsx:1530
 msgid "Term"
 msgstr "Termo"
 
 #. placeholder {0}: term.label
 #. placeholder {1}: term.locale.toUpperCase()
-#: packages/admin/src/components/TaxonomyManager.tsx:1254
+#: packages/admin/src/components/TaxonomyManager.tsx:1253
 msgid "Term \"{0}\" created in {1}."
 msgstr "Termo \"{0}\" criado em {1}."
 
@@ -12397,7 +12428,7 @@ msgstr "Termo \"{0}\" criado em {1}."
 msgid "Term assignments"
 msgstr "Atribuições de termos"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1172
+#: packages/admin/src/components/TaxonomyManager.tsx:1171
 msgid "Term deleted"
 msgstr "Termo eliminado"
 
@@ -12466,7 +12497,7 @@ msgstr "O calendário mostra as primeiras {maxEntries}."
 msgid "The code editor couldn't load. Save your work, then reload the page."
 msgstr "Não foi possível carregar o editor de código. Guarde o seu trabalho e recarregue a página."
 
-#: packages/admin/src/components/RelationForm.tsx:338
+#: packages/admin/src/components/RelationForm.tsx:335
 msgid "The content types and slug cannot be changed after a relation is created."
 msgstr "Os tipos de conteúdo e o slug não podem ser alterados depois de a relação ser criada."
 
@@ -12608,7 +12639,7 @@ msgstr "O menu foi eliminado."
 msgid "The name of your site, used in the header and metadata"
 msgstr "O nome do site, utilizado no cabeçalho e nos metadados"
 
-#: packages/admin/src/components/FieldEditor.tsx:1055
+#: packages/admin/src/components/FieldEditor.tsx:1066
 msgid "The order controls how block types appear in the picker."
 msgstr "A ordem define como os tipos de bloco aparecem no seletor."
 
@@ -12734,12 +12765,12 @@ msgstr "A imagem referenciada já não está disponível. Escolha uma nova ou re
 msgid "The referenced logo is no longer available. Pick a new one or remove the reference."
 msgstr "O logótipo referenciado já não está disponível. Escolha um novo ou remova a referência."
 
-#: packages/admin/src/components/FieldEditor.tsx:953
+#: packages/admin/src/components/FieldEditor.tsx:964
 msgid "The relationship and the referenced collection cannot be changed after creation. How many entries this field accepts is set on the relationship."
 msgstr "A relação e a coleção referenciada não podem ser alteradas após a criação. O número de entradas que este campo aceita é definido na relação."
 
-#: packages/admin/src/components/FieldEditor.tsx:796
-#: packages/admin/src/components/FieldEditor.tsx:1001
+#: packages/admin/src/components/FieldEditor.tsx:806
+#: packages/admin/src/components/FieldEditor.tsx:1012
 msgid "The relationship decides the referenced collection and how many entries this field accepts."
 msgstr "A relação determina a coleção referenciada e quantas entradas este campo aceita."
 
@@ -12828,7 +12859,7 @@ msgstr "Há demasiados redirecionamentos para verificar se existem ciclos antes 
 msgid "These tools remain disabled after installation until you explicitly enable agent access."
 msgstr "Estas ferramentas permanecem desativadas após a instalação até ativar explicitamente o acesso de agentes."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:876
+#: packages/admin/src/components/ContentTypeEditor.tsx:873
 msgid "This also removes:"
 msgstr "Isto também remove:"
 
@@ -12863,7 +12894,7 @@ msgstr "Este código expirou. Inicie sessão novamente a partir do terminal para
 msgid "This code is invalid or has already been used."
 msgstr "Este código é inválido ou já foi utilizado."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:449
+#: packages/admin/src/components/ContentTypeEditor.tsx:445
 msgid "This collection is defined in code. Some settings cannot be changed here. Edit your live.config.ts file to modify the schema."
 msgstr "Esta coleção está definida no código. Algumas definições não podem ser alteradas aqui. Edite o ficheiro live.config.ts para modificar o esquema."
 
@@ -12946,25 +12977,25 @@ msgstr "Este campo espera uma lista. O valor guardado mantém-se inalterado até
 msgid "This field is required"
 msgstr "Este campo é obrigatório"
 
-#: packages/admin/src/components/FieldEditor.tsx:1352
+#: packages/admin/src/components/FieldEditor.tsx:1396
 msgid "This field lists entries that link to this one."
 msgstr "Este campo lista as entradas que ligam a esta."
 
-#: packages/admin/src/components/FieldEditor.tsx:778
-#: packages/admin/src/components/FieldEditor.tsx:983
+#: packages/admin/src/components/FieldEditor.tsx:788
+#: packages/admin/src/components/FieldEditor.tsx:994
 msgid "This field picks"
 msgstr "Este campo seleciona"
 
-#: packages/admin/src/components/FieldEditor.tsx:1351
+#: packages/admin/src/components/FieldEditor.tsx:1395
 msgid "This field picks entries this one links to."
 msgstr "Este campo seleciona as entradas a que esta liga."
 
 #. placeholder {0}: relation.childLabel
-#: packages/admin/src/components/FieldEditor.tsx:1363
+#: packages/admin/src/components/FieldEditor.tsx:1407
 msgid "This field will show the <0>{0}</0> this {linkingSide} links to"
 msgstr "Este campo irá mostrar as entradas de <0>{0}</0> a que esta entrada de {linkingSide} liga"
 
-#: packages/admin/src/components/FieldEditor.tsx:1368
+#: packages/admin/src/components/FieldEditor.tsx:1412
 msgid "This field will show the <0>{linkingSide}</0> linking to this {linkedSide}"
 msgstr "Este campo irá mostrar a entrada de <0>{linkingSide}</0> que liga a esta entrada de {linkedSide}"
 
@@ -13209,7 +13240,7 @@ msgid "This will move the item to trash. You can restore it later from the trash
 msgstr "Isto irá mover o item para o lixo. Pode restaurá-lo mais tarde a partir do lixo."
 
 #. placeholder {0}: deleteTarget?.label
-#: packages/admin/src/components/TaxonomyManager.tsx:1533
+#: packages/admin/src/components/TaxonomyManager.tsx:1532
 msgid "This will permanently delete \"{0}\" and remove it from all content."
 msgstr "Isto irá eliminar permanentemente \"{0}\" e removê-lo de todo o conteúdo."
 
@@ -13323,7 +13354,7 @@ msgstr "Amanhã"
 msgid "Tooltip text"
 msgstr "Texto da dica"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:98
+#: packages/admin/src/components/ContentTypeEditor.tsx:94
 msgid "Track content history"
 msgstr "Registar o histórico do conteúdo"
 
@@ -13341,35 +13372,35 @@ msgstr "Monitorize onde a multimédia é utilizada no conteúdo."
 msgid "Transfer"
 msgstr "Migração"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:287
+#: packages/admin/src/components/BylineFieldEditor.tsx:282
 #: packages/admin/src/routes/byline-schema.tsx:243
 msgid "Translatable"
 msgstr "Traduzível"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:357
-#: packages/admin/src/components/TaxonomyManager.tsx:478
-#: packages/admin/src/components/TaxonomyManager.tsx:588
+#: packages/admin/src/components/TaxonomyManager.tsx:355
+#: packages/admin/src/components/TaxonomyManager.tsx:476
+#: packages/admin/src/components/TaxonomyManager.tsx:586
 #: packages/admin/src/components/TranslationsPanel.tsx:106
 msgid "Translate"
 msgstr "Traduzir"
 
 #. placeholder {0}: term.label
-#: packages/admin/src/components/TaxonomyManager.tsx:550
+#: packages/admin/src/components/TaxonomyManager.tsx:548
 msgid "Translate \"{0}\""
 msgstr "Traduzir \"{0}\""
 
 #. placeholder {0}: term.label
-#: packages/admin/src/components/TaxonomyManager.tsx:475
+#: packages/admin/src/components/TaxonomyManager.tsx:473
 msgid "Translate {0}"
 msgstr "Traduzir {0}"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:588
+#: packages/admin/src/components/TaxonomyManager.tsx:586
 #: packages/admin/src/components/TranslationsPanel.tsx:106
 msgid "Translating..."
 msgstr "A traduzir..."
 
 #: packages/admin/src/components/MenuEditor.tsx:144
-#: packages/admin/src/components/TaxonomyManager.tsx:1253
+#: packages/admin/src/components/TaxonomyManager.tsx:1252
 #: packages/admin/src/components/TaxonomySidebar.tsx:778
 #: packages/admin/src/router.tsx:1466
 msgid "Translation created"
@@ -13408,7 +13439,7 @@ msgstr "O lixo está vazio."
 msgid "Trash pagination"
 msgstr "Paginação do lixo"
 
-#: packages/admin/src/components/FieldEditor.tsx:408
+#: packages/admin/src/components/FieldEditor.tsx:403
 msgid "True/false toggle"
 msgstr "Interruptor verdadeiro/falso"
 
@@ -13512,8 +13543,8 @@ msgstr "Dois autores com créditos no mesmo idioma estão associados ao mesmo ut
 msgid "Two records have the same value where it must be unique"
 msgstr "Dois registos têm o mesmo valor num campo que tem de ser único"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:260
-#: packages/admin/src/components/FieldEditor.tsx:1224
+#: packages/admin/src/components/BylineFieldEditor.tsx:255
+#: packages/admin/src/components/FieldEditor.tsx:1262
 #: packages/admin/src/components/MediaLibrary.tsx:1142
 #: packages/admin/src/routes/byline-schema.tsx:240
 #: packages/admin/src/routes/bylines.tsx:530
@@ -13578,12 +13609,12 @@ msgstr "Confirmação de desinstalação"
 msgid "Uninstalling..."
 msgstr "A desinstalar..."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:940
-#: packages/admin/src/components/FieldEditor.tsx:841
+#: packages/admin/src/components/ContentTypeEditor.tsx:937
+#: packages/admin/src/components/FieldEditor.tsx:852
 msgid "Unique"
 msgstr "Único"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:128
+#: packages/admin/src/components/ContentTypeEditor.tsx:124
 msgid "Unique identifier (ULID)"
 msgstr "Identificador único (ULID)"
 
@@ -13645,7 +13676,7 @@ msgid "Unscheduled"
 msgstr "Agendamento cancelado"
 
 #: packages/admin/src/components/BlocksField.tsx:361
-#: packages/admin/src/components/ContentTypeEditor.tsx:938
+#: packages/admin/src/components/ContentTypeEditor.tsx:935
 msgid "Unsupported"
 msgstr "Não suportado"
 
@@ -13682,11 +13713,11 @@ msgid "Up to {MAX_SELECTED} bylines can be selected"
 msgstr "Pode selecionar até {MAX_SELECTED} créditos"
 
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:157
-#: packages/admin/src/components/TaxonomyManager.tsx:891
+#: packages/admin/src/components/TaxonomyManager.tsx:889
 msgid "Update"
 msgstr "Atualizar"
 
-#: packages/admin/src/components/FieldEditor.tsx:1329
+#: packages/admin/src/components/FieldEditor.tsx:1373
 msgid "Update Field"
 msgstr "Atualizar campo"
 
@@ -13704,7 +13735,7 @@ msgid "Update site settings"
 msgstr "Atualizar definições do site"
 
 #. placeholder {0}: inlineLabel(taxonomyDef.labelSingular || t`Term`, lingui.locale)
-#: packages/admin/src/components/TaxonomyManager.tsx:760
+#: packages/admin/src/components/TaxonomyManager.tsx:758
 msgid "Update the {0} details"
 msgstr "Atualize os detalhes de {0}"
 
@@ -13732,7 +13763,7 @@ msgstr "Atualizar para v{0}"
 msgid "Updated"
 msgstr "Atualizado"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:150
+#: packages/admin/src/components/ContentTypeEditor.tsx:146
 msgid "Updated At"
 msgstr "Atualizado em"
 
@@ -13869,9 +13900,9 @@ msgstr "A carregar a imagem…"
 msgid "Uploading the package"
 msgstr "A carregar o pacote"
 
-#: packages/admin/src/components/BylineFieldEditor.tsx:54
-#: packages/admin/src/components/FieldEditor.tsx:467
-#: packages/admin/src/components/FieldEditor.tsx:1239
+#: packages/admin/src/components/BylineFieldEditor.tsx:49
+#: packages/admin/src/components/FieldEditor.tsx:462
+#: packages/admin/src/components/FieldEditor.tsx:1277
 #: packages/admin/src/components/MenuEditor.tsx:420
 #: packages/admin/src/components/MenuEditor.tsx:602
 msgid "URL"
@@ -13882,7 +13913,7 @@ msgstr "URL"
 msgid "URL & language"
 msgstr "URL e idioma"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:530
+#: packages/admin/src/components/ContentTypeEditor.tsx:527
 msgid "URL Pattern"
 msgstr "Padrão de URL"
 
@@ -13894,8 +13925,8 @@ msgstr "Slug do URL"
 msgid "URL template (e.g. /blog/:slug)"
 msgstr ""
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:134
-#: packages/admin/src/components/FieldEditor.tsx:462
+#: packages/admin/src/components/ContentTypeEditor.tsx:130
+#: packages/admin/src/components/FieldEditor.tsx:457
 msgid "URL-friendly identifier"
 msgstr "Identificador adequado a URLs"
 
@@ -13979,7 +14010,7 @@ msgstr "Utilize a sua chave de acesso registada para iniciar sessão em seguran�
 msgid "Used as the fallback Open Graph image when a page has none. Recommended size: 1200×630."
 msgstr "Utilizada como imagem Open Graph alternativa quando uma página não tem nenhuma. Tamanho recomendado: 1200×630."
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1057
+#: packages/admin/src/components/TaxonomyManager.tsx:1056
 msgid "Used as the identifier. Lowercase letters, numbers, and underscores only."
 msgstr "Utilizado como identificador. Apenas letras minúsculas, números e sublinhados."
 
@@ -13997,7 +14028,7 @@ msgstr "Utilizado por leitores de ecrã e quando a imagem não carrega"
 msgid "Used in"
 msgstr "Utilizado em"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:487
+#: packages/admin/src/components/ContentTypeEditor.tsx:484
 msgid "Used in URLs and API endpoints"
 msgstr "Usado em URLs e endpoints da API"
 
@@ -14053,7 +14084,7 @@ msgid "Users with email addresses from these domains can sign up without an invi
 msgstr "Os utilizadores com endereços de email destes domínios podem registar-se sem convite. É-lhes atribuída automaticamente a função especificada."
 
 #. placeholder {0}: version.version
-#: packages/admin/src/components/FieldEditor.tsx:1141
+#: packages/admin/src/components/FieldEditor.tsx:1152
 msgid "v{0}"
 msgstr "v{0}"
 
@@ -14066,8 +14097,8 @@ msgstr "v{0} disponível"
 msgid "Validating the package"
 msgstr "A validar o pacote"
 
-#: packages/admin/src/components/FieldEditor.tsx:866
-#: packages/admin/src/components/FieldEditor.tsx:896
+#: packages/admin/src/components/FieldEditor.tsx:877
+#: packages/admin/src/components/FieldEditor.tsx:907
 msgid "Validation"
 msgstr "Validação"
 
@@ -14229,7 +14260,7 @@ msgstr "Vamos enviar-lhe uma ligação para iniciar sessão sem palavra-passe."
 msgid "We've sent a verification link to <0>{email}</0>"
 msgstr "Enviámos uma ligação de verificação para <0>{email}</0>"
 
-#: packages/admin/src/components/FieldEditor.tsx:468
+#: packages/admin/src/components/FieldEditor.tsx:463
 msgid "Web address"
 msgstr "Endereço web"
 
@@ -14256,7 +14287,7 @@ msgstr "Boas-vindas ao EmDash, {firstName}!"
 msgid "Welcome to EmDash!"
 msgstr "Boas-vindas ao EmDash!"
 
-#: packages/admin/src/components/RelationForm.tsx:293
+#: packages/admin/src/components/RelationForm.tsx:289
 msgid "What each side is called. These name the fields bound to this relationship."
 msgstr "O nome de cada lado. Estes nomes identificam os campos associados a esta relação."
 
@@ -14276,7 +14307,7 @@ msgstr "O que é uma chave de acesso?"
 msgid "What it leaves out"
 msgstr "O que fica de fora"
 
-#: packages/admin/src/components/FieldEditor.tsx:1397
+#: packages/admin/src/components/FieldEditor.tsx:1441
 msgid "What the direction changes"
 msgstr "O que muda com o sentido"
 
@@ -14305,15 +14336,15 @@ msgstr "O que é registado"
 msgid "When set, the image becomes a clickable link to this URL."
 msgstr "Quando definido, a imagem torna-se uma ligação clicável para este URL."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:146
+#: packages/admin/src/components/ContentTypeEditor.tsx:142
 msgid "When the entry was created"
 msgstr "Quando a entrada foi criada"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:152
+#: packages/admin/src/components/ContentTypeEditor.tsx:148
 msgid "When the entry was last modified"
 msgstr "Quando a entrada foi modificada pela última vez"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:158
+#: packages/admin/src/components/ContentTypeEditor.tsx:154
 msgid "When the entry was published"
 msgstr "Quando a entrada foi publicada"
 
@@ -14321,11 +14352,11 @@ msgstr "Quando a entrada foi publicada"
 msgid "Where is it saved?"
 msgstr "Onde fica guardada?"
 
-#: packages/admin/src/components/TaxonomyManager.tsx:1071
+#: packages/admin/src/components/TaxonomyManager.tsx:1070
 msgid "Which content types can use this taxonomy"
 msgstr "Tipos de conteúdo que podem utilizar esta taxonomia"
 
-#: packages/admin/src/components/FieldEditor.tsx:402
+#: packages/admin/src/components/FieldEditor.tsx:397
 msgid "Whole number"
 msgstr "Número inteiro"
 
