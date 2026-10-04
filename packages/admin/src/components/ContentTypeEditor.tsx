@@ -40,6 +40,7 @@ import type {
 import { cn, slugifyIdentifier } from "../lib/utils";
 import { ArrowPrev } from "./ArrowIcons.js";
 import { ConfirmDialog } from "./ConfirmDialog";
+import { getMutationError } from "./DialogError";
 import { EditorHeader } from "./EditorHeader";
 import { FieldEditor } from "./FieldEditor";
 import { RelationImpact } from "./RelationImpact.js";
@@ -54,8 +55,10 @@ export interface ContentTypeEditorProps {
 	isNew?: boolean;
 	isSaving?: boolean;
 	onSave: (input: CreateCollectionInput | UpdateCollectionInput) => void;
-	onAddField?: (input: CreateFieldInput) => void;
-	onUpdateField?: (fieldSlug: string, input: CreateFieldInput) => void;
+	/** Resolves once the field is saved; rejects with the server's message. */
+	onAddField?: (input: CreateFieldInput) => Promise<unknown>;
+	/** Resolves once the field is saved; rejects with the server's message. */
+	onUpdateField?: (fieldSlug: string, input: CreateFieldInput) => Promise<unknown>;
 	/** `deleteRelation` also removes the relationship a reference field views,
 	 * its links, and the field on the other end. */
 	onDeleteField?: (fieldSlug: string, options?: { deleteRelation?: boolean }) => void;
@@ -215,6 +218,7 @@ export function ContentTypeEditor({
 	const [fieldEditorOpen, setFieldEditorOpen] = React.useState(false);
 	const [editingField, setEditingField] = React.useState<SchemaField | undefined>();
 	const [fieldSaving, setFieldSaving] = React.useState(false);
+	const [fieldSaveError, setFieldSaveError] = React.useState<string | null>(null);
 	const [deleteFieldTarget, setDeleteFieldTarget] = React.useState<SchemaField | null>(null);
 	// Checked by default: deleting a reference field almost always means the
 	// relationship it views is finished too.
@@ -344,14 +348,17 @@ export function ContentTypeEditor({
 
 	const handleFieldSave = async (input: CreateFieldInput) => {
 		setFieldSaving(true);
+		setFieldSaveError(null);
 		try {
 			if (editingField) {
-				onUpdateField?.(editingField.slug, input);
+				await onUpdateField?.(editingField.slug, input);
 			} else {
-				onAddField?.(input);
+				await onAddField?.(input);
 			}
 			setFieldEditorOpen(false);
 			setEditingField(undefined);
+		} catch (err) {
+			setFieldSaveError(getMutationError(err));
 		} finally {
 			setFieldSaving(false);
 		}
@@ -365,11 +372,13 @@ export function ContentTypeEditor({
 	const handleEditField = (field: SchemaField) => {
 		if (field.unsupportedType) return;
 		setEditingField(field);
+		setFieldSaveError(null);
 		setFieldEditorOpen(true);
 	};
 
 	const handleAddField = () => {
 		setEditingField(undefined);
+		setFieldSaveError(null);
 		setFieldEditorOpen(true);
 	};
 
@@ -830,10 +839,14 @@ export function ContentTypeEditor({
 			{/* Field editor dialog */}
 			<FieldEditor
 				open={fieldEditorOpen}
-				onOpenChange={setFieldEditorOpen}
+				onOpenChange={(nextOpen) => {
+					setFieldEditorOpen(nextOpen);
+					if (!nextOpen) setFieldSaveError(null);
+				}}
 				field={editingField}
 				onSave={handleFieldSave}
 				isSaving={fieldSaving}
+				saveError={fieldSaveError}
 				collectionSlug={collection?.slug}
 				onCreateRelation={onCreateRelation}
 			/>
