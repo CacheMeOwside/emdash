@@ -1349,7 +1349,7 @@ msgstr "Dodaj termin"
 msgid "Add to posts"
 msgstr "Dodaj na objave"
 
-#: packages/admin/src/components/Widgets.tsx:403
+#: packages/admin/src/components/Widgets.tsx:404
 msgid "Add Widget Area"
 msgstr "Dodaj oblast vidžeta"
 
@@ -1714,7 +1714,7 @@ msgstr "Bilo koji broj"
 msgid "API Tokens"
 msgstr "API tokeni"
 
-#: packages/admin/src/components/Widgets.tsx:440
+#: packages/admin/src/components/Widgets.tsx:441
 msgid "Appears on posts and pages"
 msgstr "Pojavljuje se na objavama i stranicama"
 
@@ -1787,7 +1787,7 @@ msgid "Archived"
 msgstr "Arhivirano"
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:68
-#: packages/admin/src/components/Widgets.tsx:158
+#: packages/admin/src/components/Widgets.tsx:159
 msgid "Archives"
 msgstr "Arhive"
 
@@ -1978,7 +1978,7 @@ msgstr "Dostupno u {0}"
 msgid "Available Providers"
 msgstr "Dostupni provajderi"
 
-#: packages/admin/src/components/Widgets.tsx:467
+#: packages/admin/src/components/Widgets.tsx:468
 msgid "Available Widgets"
 msgstr "Dostupni vidžeti"
 
@@ -2346,7 +2346,7 @@ msgstr "Može pregledati sadržaj"
 #: packages/admin/src/components/TaxonomyManager.tsx:881
 #: packages/admin/src/components/TaxonomyManager.tsx:1099
 #: packages/admin/src/components/users/InviteUserModal.tsx:198
-#: packages/admin/src/components/Widgets.tsx:451
+#: packages/admin/src/components/Widgets.tsx:452
 #: packages/admin/src/components/WordPressImport.tsx:1940
 #: packages/admin/src/routes/bylines.tsx:852
 msgid "Cancel"
@@ -2416,7 +2416,7 @@ msgid "Capture is being prepared. Keep editing paused until setup is complete."
 msgstr "Snimanje se priprema. Zadrži uređivanje pauzirano dok se podešavanje ne završi."
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:205
-#: packages/admin/src/components/Widgets.tsx:135
+#: packages/admin/src/components/Widgets.tsx:136
 msgid "Categories"
 msgstr "Kategorije"
 
@@ -2810,9 +2810,9 @@ msgstr "Klikni na ovaj link da se prijaviš na {siteName}:"
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
 #: packages/admin/src/components/WelcomeModal.tsx:60
-#: packages/admin/src/components/Widgets.tsx:413
-#: packages/admin/src/components/Widgets.tsx:419
-#: packages/admin/src/components/Widgets.tsx:423
+#: packages/admin/src/components/Widgets.tsx:414
+#: packages/admin/src/components/Widgets.tsx:420
+#: packages/admin/src/components/Widgets.tsx:424
 #: packages/admin/src/routes/bylines.tsx:704
 #: packages/admin/src/routes/bylines.tsx:712
 msgid "Close"
@@ -2981,7 +2981,7 @@ msgstr "Završeno"
 msgid "Complete signup"
 msgstr "Završi registraciju"
 
-#: packages/admin/src/components/Widgets.tsx:933
+#: packages/admin/src/components/Widgets.tsx:934
 msgid "Component"
 msgstr "Komponenta"
 
@@ -3053,7 +3053,7 @@ msgstr "sadržaj"
 #: packages/admin/src/components/PortableTextEditor.tsx:3247
 #: packages/admin/src/components/SectionEditor.tsx:215
 #: packages/admin/src/components/Sidebar.tsx:613
-#: packages/admin/src/components/Widgets.tsx:901
+#: packages/admin/src/components/Widgets.tsx:902
 msgid "Content"
 msgstr "Sadržaj"
 
@@ -3416,7 +3416,7 @@ msgstr "Broj"
 #: packages/admin/src/components/MenuList.tsx:185
 #: packages/admin/src/components/Redirects.tsx:194
 #: packages/admin/src/components/TaxonomyManager.tsx:892
-#: packages/admin/src/components/Widgets.tsx:454
+#: packages/admin/src/components/Widgets.tsx:455
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Create"
 msgstr "Kreiraj"
@@ -3582,7 +3582,7 @@ msgstr "Napravi pojmove taksonomije i menjaj klasifikacije sadržaja"
 msgid "Create Token"
 msgstr "Kreiraj token"
 
-#: packages/admin/src/components/Widgets.tsx:410
+#: packages/admin/src/components/Widgets.tsx:411
 msgid "Create Widget Area"
 msgstr "Kreiraj oblast vidžeta"
 
@@ -3855,7 +3855,7 @@ msgstr "Definisano u kodu"
 #: packages/admin/src/components/settings/BackupSettings.tsx:367
 #: packages/admin/src/components/TaxonomyManager.tsx:1535
 #: packages/admin/src/components/TaxonomyManager.tsx:1551
-#: packages/admin/src/components/Widgets.tsx:718
+#: packages/admin/src/components/Widgets.tsx:719
 #: packages/admin/src/routes/byline-schema.tsx:378
 #: packages/admin/src/routes/bylines.tsx:847
 msgid "Delete"
@@ -3881,7 +3881,7 @@ msgstr "Obrisati “{0}”?"
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:275
 #: packages/admin/src/components/settings/BackupSettings.tsx:327
 #: packages/admin/src/components/TaxonomyManager.tsx:492
-#: packages/admin/src/components/Widgets.tsx:819
+#: packages/admin/src/components/Widgets.tsx:820
 #: packages/admin/src/routes/byline-schema.tsx:458
 msgid "Delete {0}"
 msgstr "Obriši {0}"
@@ -3897,7 +3897,7 @@ msgid "Delete {0} menu"
 msgstr "Obriši meni {0}"
 
 #. placeholder {0}: area.label
-#: packages/admin/src/components/Widgets.tsx:666
+#: packages/admin/src/components/Widgets.tsx:667
 msgid "Delete {0} widget area"
 msgstr "Obriši oblast vidžeta {0}"
 
@@ -4041,7 +4041,7 @@ msgstr "Obriši taksonomiju"
 msgid "Delete Taxonomy"
 msgstr "Obriši taksonomiju"
 
-#: packages/admin/src/components/Widgets.tsx:716
+#: packages/admin/src/components/Widgets.tsx:717
 msgid "Delete Widget Area?"
 msgstr "Obrisati oblast vidžeta?"
 
@@ -4073,7 +4073,7 @@ msgstr "Brisanje \"{0}\" će takođe ukloniti {1, plural, one {# sačuvanu vredn
 #: packages/admin/src/components/settings/BackupSettings.tsx:368
 #: packages/admin/src/components/TaxonomyManager.tsx:1536
 #: packages/admin/src/components/TaxonomyManager.tsx:1552
-#: packages/admin/src/components/Widgets.tsx:719
+#: packages/admin/src/components/Widgets.tsx:720
 #: packages/admin/src/routes/bylines.tsx:877
 msgid "Deleting..."
 msgstr "Brisanje..."
@@ -4140,7 +4140,7 @@ msgstr "Opiši čemu ova sekcija služi..."
 #: packages/admin/src/components/RegistryPluginDetail.tsx:893
 #: packages/admin/src/components/SectionEditor.tsx:295
 #: packages/admin/src/components/Sections.tsx:221
-#: packages/admin/src/components/Widgets.tsx:438
+#: packages/admin/src/components/Widgets.tsx:439
 msgid "Description"
 msgstr "Opis"
 
@@ -4295,7 +4295,7 @@ msgstr "Prikaži listu nedavnih objava"
 msgid "Display a navigation menu"
 msgstr "Prikaži navigacioni meni"
 
-#: packages/admin/src/components/Widgets.tsx:136
+#: packages/admin/src/components/Widgets.tsx:137
 msgid "Display category list"
 msgstr "Prikaži listu kategorija"
 
@@ -4312,7 +4312,7 @@ msgstr "Veličina prikaza"
 msgid "Display Size"
 msgstr "Veličina prikaza"
 
-#: packages/admin/src/components/Widgets.tsx:144
+#: packages/admin/src/components/Widgets.tsx:145
 msgid "Display tag cloud"
 msgstr "Prikaži oblak tagova"
 
@@ -4486,7 +4486,7 @@ msgstr "Prevuci fajlove ovde"
 msgid "Drag and drop or click to browse (.xml)"
 msgstr "Prevuci i otpusti ili klikni za pregled (.xml)"
 
-#: packages/admin/src/components/Widgets.tsx:702
+#: packages/admin/src/components/Widgets.tsx:703
 msgid "Drag here to add"
 msgstr "Prevuci ovde da dodaš"
 
@@ -4497,7 +4497,7 @@ msgstr "Prevuci za promenu redosleda"
 #. placeholder {0}: field.label
 #. placeholder {0}: widget.title ?? t`widget`
 #: packages/admin/src/components/ContentTypeEditor.tsx:922
-#: packages/admin/src/components/Widgets.tsx:804
+#: packages/admin/src/components/Widgets.tsx:805
 msgid "Drag to reorder {0}"
 msgstr "Prevuci za promenu redosleda {0}"
 
@@ -4510,11 +4510,11 @@ msgstr "Prevuci za promenu redosleda {label}"
 msgid "Drag to reorder block"
 msgstr "Prevuci za promenu redosleda bloka"
 
-#: packages/admin/src/components/Widgets.tsx:706
+#: packages/admin/src/components/Widgets.tsx:707
 msgid "Drag widgets here to add them"
 msgstr "Prevuci vidžete ovde da ih dodaš"
 
-#: packages/admin/src/components/Widgets.tsx:468
+#: packages/admin/src/components/Widgets.tsx:469
 msgid "Drag widgets into an area to add them"
 msgstr "Prevuci vidžete u oblast da ih dodaš"
 
@@ -4534,7 +4534,7 @@ msgstr "Prevuci fajlove za otpremanje"
 msgid "Drop one image at a time."
 msgstr "Prevuci jednu sliku odjednom."
 
-#: packages/admin/src/components/Widgets.tsx:702
+#: packages/admin/src/components/Widgets.tsx:703
 msgid "Drop to add widget"
 msgstr "Otpusti da dodaš vidžet"
 
@@ -5032,16 +5032,16 @@ msgstr "unos na strani koja povezuje"
 #: packages/admin/src/components/MenuEditor.tsx:234
 #: packages/admin/src/components/SetupWizard.tsx:606
 #: packages/admin/src/components/TaxonomyManager.tsx:1207
-#: packages/admin/src/components/Widgets.tsx:771
+#: packages/admin/src/components/Widgets.tsx:772
 #: packages/admin/src/router.tsx:3149
 msgid "Error"
 msgstr "Greška"
 
-#: packages/admin/src/components/Widgets.tsx:236
+#: packages/admin/src/components/Widgets.tsx:237
 msgid "Error adding widget"
 msgstr "Greška pri dodavanju vidžeta"
 
-#: packages/admin/src/components/Widgets.tsx:297
+#: packages/admin/src/components/Widgets.tsx:298
 msgid "Error reordering widgets"
 msgstr "Greška pri promeni redosleda vidžeta"
 
@@ -5049,7 +5049,7 @@ msgstr "Greška pri promeni redosleda vidžeta"
 msgid "Error saving section"
 msgstr "Greška pri čuvanju sekcije"
 
-#: packages/admin/src/components/Widgets.tsx:786
+#: packages/admin/src/components/Widgets.tsx:787
 msgid "Error updating widget"
 msgstr "Greška pri ažuriranju vidžeta"
 
@@ -6316,7 +6316,7 @@ msgstr "Grupa"
 msgid "Group (optional)"
 msgstr "Grupa (opciono)"
 
-#: packages/admin/src/components/Widgets.tsx:162
+#: packages/admin/src/components/Widgets.tsx:163
 msgid "Group by"
 msgstr "Grupiši po"
 
@@ -7188,7 +7188,7 @@ msgstr "Kotlin"
 #: packages/admin/src/components/MenuEditor.tsx:599
 #: packages/admin/src/components/MenuList.tsx:153
 #: packages/admin/src/components/TaxonomyManager.tsx:1036
-#: packages/admin/src/components/Widgets.tsx:436
+#: packages/admin/src/components/Widgets.tsx:437
 #: packages/admin/src/routes/byline-schema.tsx:234
 msgid "Label"
 msgstr "Oznaka"
@@ -7290,7 +7290,7 @@ msgstr "Biblioteka"
 msgid "License"
 msgstr "Licenca"
 
-#: packages/admin/src/components/Widgets.tsx:165
+#: packages/admin/src/components/Widgets.tsx:166
 msgid "Limit"
 msgstr "Limit"
 
@@ -7560,7 +7560,7 @@ msgstr "Učitavanje plana uvoza…"
 msgid "Loading usage"
 msgstr "Učitavanje korišćenja"
 
-#: packages/admin/src/components/Widgets.tsx:372
+#: packages/admin/src/components/Widgets.tsx:373
 msgid "Loading widgets..."
 msgstr "Učitavanje vidžeta..."
 
@@ -7686,7 +7686,7 @@ msgstr "Lua"
 msgid "Main library"
 msgstr "Glavna biblioteka"
 
-#: packages/admin/src/components/Widgets.tsx:436
+#: packages/admin/src/components/Widgets.tsx:437
 msgid "Main Sidebar"
 msgstr "Glavna bočna traka"
 
@@ -7704,7 +7704,7 @@ msgstr "Upravljaj {0} za {1}"
 msgid "Manage bylines in {entryLocale}"
 msgstr "Upravljaj potpisima autora na {entryLocale}"
 
-#: packages/admin/src/components/Widgets.tsx:390
+#: packages/admin/src/components/Widgets.tsx:391
 msgid "Manage content widgets in your widget areas"
 msgstr "Upravljaj vidžetima sadržaja u oblastima za vidžete"
 
@@ -7808,7 +7808,7 @@ msgstr "Maksimum"
 msgid "Maximum blocks"
 msgstr "Maksimum blokova"
 
-#: packages/admin/src/components/Widgets.tsx:147
+#: packages/admin/src/components/Widgets.tsx:148
 msgid "Maximum tags"
 msgstr "Maksimalno oznaka"
 
@@ -7920,7 +7920,7 @@ msgid "Medium section heading"
 msgstr "Srednji naslov sekcije"
 
 #: packages/admin/src/components/Widgets.tsx:104
-#: packages/admin/src/components/Widgets.tsx:916
+#: packages/admin/src/components/Widgets.tsx:917
 msgid "Menu"
 msgstr "Meni"
 
@@ -8058,11 +8058,11 @@ msgstr "Menjaj šeme kolekcija"
 msgid "Month"
 msgstr "Mesec"
 
-#: packages/admin/src/components/Widgets.tsx:163
+#: packages/admin/src/components/Widgets.tsx:164
 msgid "Monthly"
 msgstr "Mesečno"
 
-#: packages/admin/src/components/Widgets.tsx:159
+#: packages/admin/src/components/Widgets.tsx:160
 msgid "Monthly/yearly archives"
 msgstr "Mesečni/godišnji arhivi"
 
@@ -8282,7 +8282,7 @@ msgstr "Moj sjajan blog"
 #: packages/admin/src/components/TaxonomyManager.tsx:1462
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
 #: packages/admin/src/components/users/UserDetail.tsx:148
-#: packages/admin/src/components/Widgets.tsx:430
+#: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "Naziv"
 
@@ -8868,7 +8868,7 @@ msgstr "Nema korisnika koji odgovaraju filterima."
 msgid "No users yet."
 msgstr "Još nema korisnika."
 
-#: packages/admin/src/components/Widgets.tsx:505
+#: packages/admin/src/components/Widgets.tsx:506
 msgid "No widget areas yet. Create one to get started."
 msgstr "Još nema oblasti za vidžete. Kreiraj jednu da počneš."
 
@@ -9433,7 +9433,7 @@ msgstr "Ako birate unose na koje ovaj upućuje, urednici mogu da ih prevlače u 
 msgid "picks {0}"
 msgstr "bira {0}"
 
-#: packages/admin/src/components/Widgets.tsx:154
+#: packages/admin/src/components/Widgets.tsx:155
 msgid "Placeholder text"
 msgstr "Tekst placeholder-a"
 
@@ -10856,7 +10856,7 @@ msgstr "Primer sadržaja"
 #: packages/admin/src/components/MenuEditor.tsx:632
 #: packages/admin/src/components/Redirects.tsx:193
 #: packages/admin/src/components/SaveButton.tsx:32
-#: packages/admin/src/components/Widgets.tsx:985
+#: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Save"
 msgstr "Sačuvaj"
@@ -10954,7 +10954,7 @@ msgstr "Čuvanjem kolekcije ovde ovo polje postaje birač unosa. Sačuvani ID-ov
 #: packages/admin/src/components/SaveButton.tsx:33
 #: packages/admin/src/components/TaxonomyManager.tsx:889
 #: packages/admin/src/components/users/UserDetail.tsx:311
-#: packages/admin/src/components/Widgets.tsx:985
+#: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
 msgstr "Čuvanje..."
@@ -11093,7 +11093,7 @@ msgstr "SCSS"
 #: packages/admin/src/components/ContentTypeEditor.tsx:107
 #: packages/admin/src/components/Settings.tsx:165
 #: packages/admin/src/components/Settings.tsx:165
-#: packages/admin/src/components/Widgets.tsx:151
+#: packages/admin/src/components/Widgets.tsx:152
 msgid "Search"
 msgstr "Pretraži"
 
@@ -11189,7 +11189,7 @@ msgstr "Pretraži jezik…"
 msgid "Search for an IANA timezone (e.g., Europe/London)"
 msgstr "Pretraži IANA vremensku zonu (npr. Europe/London)"
 
-#: packages/admin/src/components/Widgets.tsx:152
+#: packages/admin/src/components/Widgets.tsx:153
 msgid "Search form"
 msgstr "Obrazac za pretragu"
 
@@ -11394,7 +11394,7 @@ msgstr "Izaberi {title}"
 msgid "Select a collection"
 msgstr "Izaberi kolekciju"
 
-#: packages/admin/src/components/Widgets.tsx:958
+#: packages/admin/src/components/Widgets.tsx:959
 msgid "Select a component..."
 msgstr "Izaberi komponentu..."
 
@@ -11407,7 +11407,7 @@ msgstr "Izaberi tip sadržaja"
 msgid "Select a location"
 msgstr "Izaberi lokaciju"
 
-#: packages/admin/src/components/Widgets.tsx:921
+#: packages/admin/src/components/Widgets.tsx:922
 msgid "Select a menu..."
 msgstr "Izaberi meni..."
 
@@ -11728,7 +11728,7 @@ msgstr "Kratak tekst"
 msgid "Short Text"
 msgstr "Kratak tekst"
 
-#: packages/admin/src/components/Widgets.tsx:146
+#: packages/admin/src/components/Widgets.tsx:147
 msgid "Show count"
 msgstr "Prikaži broj"
 
@@ -11736,11 +11736,11 @@ msgstr "Prikaži broj"
 msgid "Show date"
 msgstr "Prikaži datum"
 
-#: packages/admin/src/components/Widgets.tsx:139
+#: packages/admin/src/components/Widgets.tsx:140
 msgid "Show hierarchy"
 msgstr "Prikaži hijerarhiju"
 
-#: packages/admin/src/components/Widgets.tsx:138
+#: packages/admin/src/components/Widgets.tsx:139
 msgid "Show post count"
 msgstr "Prikaži broj objava"
 
@@ -12293,7 +12293,7 @@ msgid "Tagline"
 msgstr "Slogan"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:214
-#: packages/admin/src/components/Widgets.tsx:143
+#: packages/admin/src/components/Widgets.tsx:144
 msgid "Tags"
 msgstr "Oznake"
 
@@ -13200,7 +13200,7 @@ msgstr "Ovo ažuriranje izlaže sledeće rute bez autentifikacije:"
 msgid "This version is not visible on the site"
 msgstr "Ova verzija nije vidljiva na sajtu"
 
-#: packages/admin/src/components/Widgets.tsx:717
+#: packages/admin/src/components/Widgets.tsx:718
 msgid "This will delete the widget area and all its widgets. This action cannot be undone."
 msgstr "Ovo će obrisati oblast vidžeta i sve njegove vidžete. Ova radnja se ne može poništiti."
 
@@ -13255,7 +13255,7 @@ msgstr "Vremenska zona"
 #: packages/admin/src/components/ContentList.tsx:907
 #: packages/admin/src/components/SectionEditor.tsx:272
 #: packages/admin/src/components/Sections.tsx:192
-#: packages/admin/src/components/Widgets.tsx:893
+#: packages/admin/src/components/Widgets.tsx:894
 msgid "Title"
 msgstr "Naslov"
 
@@ -13668,8 +13668,8 @@ msgstr "Bez naslova"
 msgid "Untitled file"
 msgstr "Fajl bez naslova"
 
-#: packages/admin/src/components/Widgets.tsx:538
-#: packages/admin/src/components/Widgets.tsx:811
+#: packages/admin/src/components/Widgets.tsx:539
+#: packages/admin/src/components/Widgets.tsx:812
 msgid "Untitled Widget"
 msgstr "Vidžet bez naslova"
 
@@ -13889,6 +13889,10 @@ msgstr "URL šablon"
 #: packages/admin/src/components/BylineCreditsEditor.tsx:1001
 msgid "URL slug"
 msgstr "URL slug"
+
+#: packages/admin/src/components/Widgets.tsx:132
+msgid "URL template (e.g. /blog/:slug)"
+msgstr ""
 
 #: packages/admin/src/components/ContentTypeEditor.tsx:134
 #: packages/admin/src/components/FieldEditor.tsx:462
@@ -14365,20 +14369,20 @@ msgstr "Zašto je ovo važno?"
 msgid "Wide"
 msgstr "Široko"
 
-#: packages/admin/src/components/Widgets.tsx:804
-#: packages/admin/src/components/Widgets.tsx:819
+#: packages/admin/src/components/Widgets.tsx:805
+#: packages/admin/src/components/Widgets.tsx:820
 msgid "widget"
 msgstr "vidžet"
 
-#: packages/admin/src/components/Widgets.tsx:232
+#: packages/admin/src/components/Widgets.tsx:233
 msgid "Widget added"
 msgstr "Vidžet dodat"
 
-#: packages/admin/src/components/Widgets.tsx:220
+#: packages/admin/src/components/Widgets.tsx:221
 msgid "Widget area created"
 msgstr "Oblast vidžeta kreirana"
 
-#: packages/admin/src/components/Widgets.tsx:647
+#: packages/admin/src/components/Widgets.tsx:648
 msgid "Widget area deleted"
 msgstr "Oblast vidžeta obrisana"
 
@@ -14386,15 +14390,15 @@ msgstr "Oblast vidžeta obrisana"
 msgid "Widget areas"
 msgstr "Oblasti za vidžete"
 
-#: packages/admin/src/components/Widgets.tsx:767
+#: packages/admin/src/components/Widgets.tsx:768
 msgid "Widget deleted"
 msgstr "Vidžet obrisan"
 
-#: packages/admin/src/components/Widgets.tsx:896
+#: packages/admin/src/components/Widgets.tsx:897
 msgid "Widget title"
 msgstr "Naslov vidžeta"
 
-#: packages/admin/src/components/Widgets.tsx:782
+#: packages/admin/src/components/Widgets.tsx:783
 msgid "Widget updated"
 msgstr "Vidžet ažuriran"
 
@@ -14403,7 +14407,7 @@ msgstr "Vidžet ažuriran"
 #: packages/admin/src/components/settings/transfer/labels.ts:31
 #: packages/admin/src/components/settings/transfer/labels.ts:91
 #: packages/admin/src/components/Sidebar.tsx:446
-#: packages/admin/src/components/Widgets.tsx:388
+#: packages/admin/src/components/Widgets.tsx:389
 #: packages/admin/src/components/WordPressImport.tsx:1182
 msgid "Widgets"
 msgstr "Vidžeti"
@@ -14473,7 +14477,7 @@ msgstr "Napiši HTML…"
 msgid "Write JavaScript…"
 msgstr "Napiši JavaScript…"
 
-#: packages/admin/src/components/Widgets.tsx:906
+#: packages/admin/src/components/Widgets.tsx:907
 msgid "Write widget content..."
 msgstr "Napiši sadržaj vidžeta..."
 
@@ -14497,7 +14501,7 @@ msgstr "xxxx xxxx xxxx xxxx xxxx xxxx"
 msgid "YAML"
 msgstr "YAML"
 
-#: packages/admin/src/components/Widgets.tsx:163
+#: packages/admin/src/components/Widgets.tsx:164
 msgid "Yearly"
 msgstr "Godišnje"
 

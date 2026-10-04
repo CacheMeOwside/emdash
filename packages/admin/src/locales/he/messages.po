@@ -1350,7 +1350,7 @@ msgstr "הוספת מונח"
 msgid "Add to posts"
 msgstr "הוספה לפוסטים"
 
-#: packages/admin/src/components/Widgets.tsx:403
+#: packages/admin/src/components/Widgets.tsx:404
 msgid "Add Widget Area"
 msgstr "הוספת אזור וידג׳טים"
 
@@ -1715,7 +1715,7 @@ msgstr "כל מספר"
 msgid "API Tokens"
 msgstr "אסימוני API"
 
-#: packages/admin/src/components/Widgets.tsx:440
+#: packages/admin/src/components/Widgets.tsx:441
 msgid "Appears on posts and pages"
 msgstr "מופיע בפוסטים ובעמודים"
 
@@ -1788,7 +1788,7 @@ msgid "Archived"
 msgstr "בארכיון"
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:68
-#: packages/admin/src/components/Widgets.tsx:158
+#: packages/admin/src/components/Widgets.tsx:159
 msgid "Archives"
 msgstr "ארכיונים"
 
@@ -1979,7 +1979,7 @@ msgstr "זמין ב-{0}"
 msgid "Available Providers"
 msgstr "ספקים זמינים"
 
-#: packages/admin/src/components/Widgets.tsx:467
+#: packages/admin/src/components/Widgets.tsx:468
 msgid "Available Widgets"
 msgstr "וידג׳טים זמינים"
 
@@ -2347,7 +2347,7 @@ msgstr "יכול/ה להציג תוכן"
 #: packages/admin/src/components/TaxonomyManager.tsx:881
 #: packages/admin/src/components/TaxonomyManager.tsx:1099
 #: packages/admin/src/components/users/InviteUserModal.tsx:198
-#: packages/admin/src/components/Widgets.tsx:451
+#: packages/admin/src/components/Widgets.tsx:452
 #: packages/admin/src/components/WordPressImport.tsx:1940
 #: packages/admin/src/routes/bylines.tsx:852
 msgid "Cancel"
@@ -2417,7 +2417,7 @@ msgid "Capture is being prepared. Keep editing paused until setup is complete."
 msgstr "הצילום מוכן. השאירו את העריכה מושהית עד להשלמת ההגדרה."
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:205
-#: packages/admin/src/components/Widgets.tsx:135
+#: packages/admin/src/components/Widgets.tsx:136
 msgid "Categories"
 msgstr "קטגוריות"
 
@@ -2811,9 +2811,9 @@ msgstr "לחצו על הקישור הזה כדי להתחבר אל {siteName}:"
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
 #: packages/admin/src/components/WelcomeModal.tsx:60
-#: packages/admin/src/components/Widgets.tsx:413
-#: packages/admin/src/components/Widgets.tsx:419
-#: packages/admin/src/components/Widgets.tsx:423
+#: packages/admin/src/components/Widgets.tsx:414
+#: packages/admin/src/components/Widgets.tsx:420
+#: packages/admin/src/components/Widgets.tsx:424
 #: packages/admin/src/routes/bylines.tsx:704
 #: packages/admin/src/routes/bylines.tsx:712
 msgid "Close"
@@ -2982,7 +2982,7 @@ msgstr "השלמה"
 msgid "Complete signup"
 msgstr "השלמת הרשמה"
 
-#: packages/admin/src/components/Widgets.tsx:933
+#: packages/admin/src/components/Widgets.tsx:934
 msgid "Component"
 msgstr "רכיב"
 
@@ -3054,7 +3054,7 @@ msgstr "תוכן"
 #: packages/admin/src/components/PortableTextEditor.tsx:3247
 #: packages/admin/src/components/SectionEditor.tsx:215
 #: packages/admin/src/components/Sidebar.tsx:613
-#: packages/admin/src/components/Widgets.tsx:901
+#: packages/admin/src/components/Widgets.tsx:902
 msgid "Content"
 msgstr "תוכן"
 
@@ -3417,7 +3417,7 @@ msgstr "ספירה"
 #: packages/admin/src/components/MenuList.tsx:185
 #: packages/admin/src/components/Redirects.tsx:194
 #: packages/admin/src/components/TaxonomyManager.tsx:892
-#: packages/admin/src/components/Widgets.tsx:454
+#: packages/admin/src/components/Widgets.tsx:455
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Create"
 msgstr "יצירה"
@@ -3583,7 +3583,7 @@ msgstr "יצירת מונחי טקסונומיה ושינוי סיווגי תו�
 msgid "Create Token"
 msgstr "יצירת אסימון"
 
-#: packages/admin/src/components/Widgets.tsx:410
+#: packages/admin/src/components/Widgets.tsx:411
 msgid "Create Widget Area"
 msgstr "יצירת אזור וידג׳טים"
 
@@ -3856,7 +3856,7 @@ msgstr "מוגדר בקוד"
 #: packages/admin/src/components/settings/BackupSettings.tsx:367
 #: packages/admin/src/components/TaxonomyManager.tsx:1535
 #: packages/admin/src/components/TaxonomyManager.tsx:1551
-#: packages/admin/src/components/Widgets.tsx:718
+#: packages/admin/src/components/Widgets.tsx:719
 #: packages/admin/src/routes/byline-schema.tsx:378
 #: packages/admin/src/routes/bylines.tsx:847
 msgid "Delete"
@@ -3882,7 +3882,7 @@ msgstr "למחוק את „{0}“?"
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:275
 #: packages/admin/src/components/settings/BackupSettings.tsx:327
 #: packages/admin/src/components/TaxonomyManager.tsx:492
-#: packages/admin/src/components/Widgets.tsx:819
+#: packages/admin/src/components/Widgets.tsx:820
 #: packages/admin/src/routes/byline-schema.tsx:458
 msgid "Delete {0}"
 msgstr "מחיקת {0}"
@@ -3898,7 +3898,7 @@ msgid "Delete {0} menu"
 msgstr "מחיקת תפריט {0}"
 
 #. placeholder {0}: area.label
-#: packages/admin/src/components/Widgets.tsx:666
+#: packages/admin/src/components/Widgets.tsx:667
 msgid "Delete {0} widget area"
 msgstr "מחיקת אזור וידג׳טים {0}"
 
@@ -4042,7 +4042,7 @@ msgstr "מחיקת טקסונומיה"
 msgid "Delete Taxonomy"
 msgstr "מחיקת טקסונומיה"
 
-#: packages/admin/src/components/Widgets.tsx:716
+#: packages/admin/src/components/Widgets.tsx:717
 msgid "Delete Widget Area?"
 msgstr "למחוק אזור וידג׳טים?"
 
@@ -4074,7 +4074,7 @@ msgstr "מחיקת \"{0}\" תסיר גם {1, plural, one {ערך שמור אחד
 #: packages/admin/src/components/settings/BackupSettings.tsx:368
 #: packages/admin/src/components/TaxonomyManager.tsx:1536
 #: packages/admin/src/components/TaxonomyManager.tsx:1552
-#: packages/admin/src/components/Widgets.tsx:719
+#: packages/admin/src/components/Widgets.tsx:720
 #: packages/admin/src/routes/bylines.tsx:877
 msgid "Deleting..."
 msgstr "במחיקה..."
@@ -4141,7 +4141,7 @@ msgstr "תארו למה משמש המקטע הזה..."
 #: packages/admin/src/components/RegistryPluginDetail.tsx:893
 #: packages/admin/src/components/SectionEditor.tsx:295
 #: packages/admin/src/components/Sections.tsx:221
-#: packages/admin/src/components/Widgets.tsx:438
+#: packages/admin/src/components/Widgets.tsx:439
 msgid "Description"
 msgstr "תיאור"
 
@@ -4296,7 +4296,7 @@ msgstr "הצגת רשימת פוסטים אחרונים"
 msgid "Display a navigation menu"
 msgstr "הצגת תפריט ניווט"
 
-#: packages/admin/src/components/Widgets.tsx:136
+#: packages/admin/src/components/Widgets.tsx:137
 msgid "Display category list"
 msgstr "הצגת רשימת קטגוריות"
 
@@ -4313,7 +4313,7 @@ msgstr "גודל תצוגה"
 msgid "Display Size"
 msgstr "גודל תצוגה"
 
-#: packages/admin/src/components/Widgets.tsx:144
+#: packages/admin/src/components/Widgets.tsx:145
 msgid "Display tag cloud"
 msgstr "הצגת ענן תגיות"
 
@@ -4487,7 +4487,7 @@ msgstr "גררו ושחררו קבצים כאן"
 msgid "Drag and drop or click to browse (.xml)"
 msgstr "גררו ושחררו או לחצו לעיון (.xml)"
 
-#: packages/admin/src/components/Widgets.tsx:702
+#: packages/admin/src/components/Widgets.tsx:703
 msgid "Drag here to add"
 msgstr "גררו לכאן להוספה"
 
@@ -4498,7 +4498,7 @@ msgstr "גררו לשינוי סדר"
 #. placeholder {0}: field.label
 #. placeholder {0}: widget.title ?? t`widget`
 #: packages/admin/src/components/ContentTypeEditor.tsx:922
-#: packages/admin/src/components/Widgets.tsx:804
+#: packages/admin/src/components/Widgets.tsx:805
 msgid "Drag to reorder {0}"
 msgstr "גררו לשינוי סדר של {0}"
 
@@ -4511,11 +4511,11 @@ msgstr "גררו לשינוי סדר של {label}"
 msgid "Drag to reorder block"
 msgstr "גררו לשינוי סדר של בלוק"
 
-#: packages/admin/src/components/Widgets.tsx:706
+#: packages/admin/src/components/Widgets.tsx:707
 msgid "Drag widgets here to add them"
 msgstr "גררו וידג׳טים לכאן כדי להוסיף אותם"
 
-#: packages/admin/src/components/Widgets.tsx:468
+#: packages/admin/src/components/Widgets.tsx:469
 msgid "Drag widgets into an area to add them"
 msgstr "גררו וידג׳טים לאזור כדי להוסיף אותם"
 
@@ -4535,7 +4535,7 @@ msgstr "שחררו קבצים להעלאה"
 msgid "Drop one image at a time."
 msgstr "שחררו תמונה אחת בכל פעם."
 
-#: packages/admin/src/components/Widgets.tsx:702
+#: packages/admin/src/components/Widgets.tsx:703
 msgid "Drop to add widget"
 msgstr "שחררו להוספת וידג׳ט"
 
@@ -5033,16 +5033,16 @@ msgstr "פריט בצד המקשר"
 #: packages/admin/src/components/MenuEditor.tsx:234
 #: packages/admin/src/components/SetupWizard.tsx:606
 #: packages/admin/src/components/TaxonomyManager.tsx:1207
-#: packages/admin/src/components/Widgets.tsx:771
+#: packages/admin/src/components/Widgets.tsx:772
 #: packages/admin/src/router.tsx:3149
 msgid "Error"
 msgstr "שגיאה"
 
-#: packages/admin/src/components/Widgets.tsx:236
+#: packages/admin/src/components/Widgets.tsx:237
 msgid "Error adding widget"
 msgstr "שגיאה בהוספת וידג׳ט"
 
-#: packages/admin/src/components/Widgets.tsx:297
+#: packages/admin/src/components/Widgets.tsx:298
 msgid "Error reordering widgets"
 msgstr "שגיאה בשינוי סדר וידג׳טים"
 
@@ -5050,7 +5050,7 @@ msgstr "שגיאה בשינוי סדר וידג׳טים"
 msgid "Error saving section"
 msgstr "שגיאה בשמירת מקטע"
 
-#: packages/admin/src/components/Widgets.tsx:786
+#: packages/admin/src/components/Widgets.tsx:787
 msgid "Error updating widget"
 msgstr "שגיאה בעדכון וידג׳ט"
 
@@ -6317,7 +6317,7 @@ msgstr "קבוצה"
 msgid "Group (optional)"
 msgstr "קבוצה (אופציונלי)"
 
-#: packages/admin/src/components/Widgets.tsx:162
+#: packages/admin/src/components/Widgets.tsx:163
 msgid "Group by"
 msgstr "קיבוץ לפי"
 
@@ -7189,7 +7189,7 @@ msgstr "שפת Kotlin"
 #: packages/admin/src/components/MenuEditor.tsx:599
 #: packages/admin/src/components/MenuList.tsx:153
 #: packages/admin/src/components/TaxonomyManager.tsx:1036
-#: packages/admin/src/components/Widgets.tsx:436
+#: packages/admin/src/components/Widgets.tsx:437
 #: packages/admin/src/routes/byline-schema.tsx:234
 msgid "Label"
 msgstr "תווית"
@@ -7291,7 +7291,7 @@ msgstr "ספרייה"
 msgid "License"
 msgstr "רישיון"
 
-#: packages/admin/src/components/Widgets.tsx:165
+#: packages/admin/src/components/Widgets.tsx:166
 msgid "Limit"
 msgstr "מגבלה"
 
@@ -7561,7 +7561,7 @@ msgstr "מתבצעת טעינת תוכנית הייבוא…"
 msgid "Loading usage"
 msgstr "מתבצעת טעינת שימוש"
 
-#: packages/admin/src/components/Widgets.tsx:372
+#: packages/admin/src/components/Widgets.tsx:373
 msgid "Loading widgets..."
 msgstr "מתבצעת טעינת וידג׳טים..."
 
@@ -7687,7 +7687,7 @@ msgstr "שפת Lua"
 msgid "Main library"
 msgstr "ספרייה ראשית"
 
-#: packages/admin/src/components/Widgets.tsx:436
+#: packages/admin/src/components/Widgets.tsx:437
 msgid "Main Sidebar"
 msgstr "סרגל צד ראשי"
 
@@ -7705,7 +7705,7 @@ msgstr "ניהול {0} עבור {1}"
 msgid "Manage bylines in {entryLocale}"
 msgstr "ניהול קרדיטים ב-{entryLocale}"
 
-#: packages/admin/src/components/Widgets.tsx:390
+#: packages/admin/src/components/Widgets.tsx:391
 msgid "Manage content widgets in your widget areas"
 msgstr "ניהול וידג׳טי תוכן באזורי הווידג׳טים שלכם"
 
@@ -7809,7 +7809,7 @@ msgstr "מקסימום"
 msgid "Maximum blocks"
 msgstr "מקסימום בלוקים"
 
-#: packages/admin/src/components/Widgets.tsx:147
+#: packages/admin/src/components/Widgets.tsx:148
 msgid "Maximum tags"
 msgstr "מספר תגיות מרבי"
 
@@ -7921,7 +7921,7 @@ msgid "Medium section heading"
 msgstr "כותרת מקטע בינונית"
 
 #: packages/admin/src/components/Widgets.tsx:104
-#: packages/admin/src/components/Widgets.tsx:916
+#: packages/admin/src/components/Widgets.tsx:917
 msgid "Menu"
 msgstr "תפריט"
 
@@ -8059,11 +8059,11 @@ msgstr "שינוי סכמות אוספים"
 msgid "Month"
 msgstr "חודש"
 
-#: packages/admin/src/components/Widgets.tsx:163
+#: packages/admin/src/components/Widgets.tsx:164
 msgid "Monthly"
 msgstr "חודשי"
 
-#: packages/admin/src/components/Widgets.tsx:159
+#: packages/admin/src/components/Widgets.tsx:160
 msgid "Monthly/yearly archives"
 msgstr "ארכיונים חודשיים/שנתיים"
 
@@ -8283,7 +8283,7 @@ msgstr "הבלוג הנהדר שלי"
 #: packages/admin/src/components/TaxonomyManager.tsx:1462
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
 #: packages/admin/src/components/users/UserDetail.tsx:148
-#: packages/admin/src/components/Widgets.tsx:430
+#: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "שם"
 
@@ -8869,7 +8869,7 @@ msgstr "לא נמצאו משתמשים התואמים למסננים שלכם."
 msgid "No users yet."
 msgstr "עדיין אין משתמשים."
 
-#: packages/admin/src/components/Widgets.tsx:505
+#: packages/admin/src/components/Widgets.tsx:506
 msgid "No widget areas yet. Create one to get started."
 msgstr "עדיין אין אזורי וידג׳טים. צרו אחד כדי להתחיל."
 
@@ -9434,7 +9434,7 @@ msgstr "בחירת הפריטים שהפריט הזה מקשר אליהם מאפ
 msgid "picks {0}"
 msgstr "בוחר {0}"
 
-#: packages/admin/src/components/Widgets.tsx:154
+#: packages/admin/src/components/Widgets.tsx:155
 msgid "Placeholder text"
 msgstr "טקסט מציין מקום"
 
@@ -10857,7 +10857,7 @@ msgstr "תוכן לדוגמה"
 #: packages/admin/src/components/MenuEditor.tsx:632
 #: packages/admin/src/components/Redirects.tsx:193
 #: packages/admin/src/components/SaveButton.tsx:32
-#: packages/admin/src/components/Widgets.tsx:985
+#: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Save"
 msgstr "שמירה"
@@ -10955,7 +10955,7 @@ msgstr "שמירת אוסף כאן הופכת את השדה הזה לבורר פ
 #: packages/admin/src/components/SaveButton.tsx:33
 #: packages/admin/src/components/TaxonomyManager.tsx:889
 #: packages/admin/src/components/users/UserDetail.tsx:311
-#: packages/admin/src/components/Widgets.tsx:985
+#: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
 msgstr "בשמירה..."
@@ -11094,7 +11094,7 @@ msgstr "סגנונות SCSS"
 #: packages/admin/src/components/ContentTypeEditor.tsx:107
 #: packages/admin/src/components/Settings.tsx:165
 #: packages/admin/src/components/Settings.tsx:165
-#: packages/admin/src/components/Widgets.tsx:151
+#: packages/admin/src/components/Widgets.tsx:152
 msgid "Search"
 msgstr "חיפוש"
 
@@ -11190,7 +11190,7 @@ msgstr "חיפוש שפה…"
 msgid "Search for an IANA timezone (e.g., Europe/London)"
 msgstr "חיפוש אזור זמן IANA (למשל Asia/Jerusalem)"
 
-#: packages/admin/src/components/Widgets.tsx:152
+#: packages/admin/src/components/Widgets.tsx:153
 msgid "Search form"
 msgstr "טופס חיפוש"
 
@@ -11395,7 +11395,7 @@ msgstr "בחירת {title}"
 msgid "Select a collection"
 msgstr "בחרו אוסף"
 
-#: packages/admin/src/components/Widgets.tsx:958
+#: packages/admin/src/components/Widgets.tsx:959
 msgid "Select a component..."
 msgstr "בחרו רכיב..."
 
@@ -11408,7 +11408,7 @@ msgstr "בחרו סוג תוכן"
 msgid "Select a location"
 msgstr "בחרו מיקום"
 
-#: packages/admin/src/components/Widgets.tsx:921
+#: packages/admin/src/components/Widgets.tsx:922
 msgid "Select a menu..."
 msgstr "בחרו תפריט..."
 
@@ -11729,7 +11729,7 @@ msgstr "טקסט קצר"
 msgid "Short Text"
 msgstr "טקסט קצר"
 
-#: packages/admin/src/components/Widgets.tsx:146
+#: packages/admin/src/components/Widgets.tsx:147
 msgid "Show count"
 msgstr "הצגת ספירה"
 
@@ -11737,11 +11737,11 @@ msgstr "הצגת ספירה"
 msgid "Show date"
 msgstr "הצגת תאריך"
 
-#: packages/admin/src/components/Widgets.tsx:139
+#: packages/admin/src/components/Widgets.tsx:140
 msgid "Show hierarchy"
 msgstr "הצגת היררכיה"
 
-#: packages/admin/src/components/Widgets.tsx:138
+#: packages/admin/src/components/Widgets.tsx:139
 msgid "Show post count"
 msgstr "הצגת מספר פוסטים"
 
@@ -12294,7 +12294,7 @@ msgid "Tagline"
 msgstr "סלוגן"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:214
-#: packages/admin/src/components/Widgets.tsx:143
+#: packages/admin/src/components/Widgets.tsx:144
 msgid "Tags"
 msgstr "תגיות"
 
@@ -13201,7 +13201,7 @@ msgstr "עדכון זה חושף את הנתיבים הבאים ללא אימו�
 msgid "This version is not visible on the site"
 msgstr "גרסה זו אינה גלויה באתר"
 
-#: packages/admin/src/components/Widgets.tsx:717
+#: packages/admin/src/components/Widgets.tsx:718
 msgid "This will delete the widget area and all its widgets. This action cannot be undone."
 msgstr "פעולה זו תמחק את אזור הווידג׳טים ואת כל הווידג׳טים שבו. לא ניתן לבטל פעולה זו."
 
@@ -13256,7 +13256,7 @@ msgstr "אזור זמן"
 #: packages/admin/src/components/ContentList.tsx:907
 #: packages/admin/src/components/SectionEditor.tsx:272
 #: packages/admin/src/components/Sections.tsx:192
-#: packages/admin/src/components/Widgets.tsx:893
+#: packages/admin/src/components/Widgets.tsx:894
 msgid "Title"
 msgstr "כותרת"
 
@@ -13669,8 +13669,8 @@ msgstr "ללא כותרת"
 msgid "Untitled file"
 msgstr "קובץ ללא שם"
 
-#: packages/admin/src/components/Widgets.tsx:538
-#: packages/admin/src/components/Widgets.tsx:811
+#: packages/admin/src/components/Widgets.tsx:539
+#: packages/admin/src/components/Widgets.tsx:812
 msgid "Untitled Widget"
 msgstr "וידג׳ט ללא כותרת"
 
@@ -13890,6 +13890,10 @@ msgstr "תבנית URL"
 #: packages/admin/src/components/BylineCreditsEditor.tsx:1001
 msgid "URL slug"
 msgstr "slug של URL"
+
+#: packages/admin/src/components/Widgets.tsx:132
+msgid "URL template (e.g. /blog/:slug)"
+msgstr ""
 
 #: packages/admin/src/components/ContentTypeEditor.tsx:134
 #: packages/admin/src/components/FieldEditor.tsx:462
@@ -14366,20 +14370,20 @@ msgstr "מדוע זה חשוב?"
 msgid "Wide"
 msgstr "רחב"
 
-#: packages/admin/src/components/Widgets.tsx:804
-#: packages/admin/src/components/Widgets.tsx:819
+#: packages/admin/src/components/Widgets.tsx:805
+#: packages/admin/src/components/Widgets.tsx:820
 msgid "widget"
 msgstr "וידג׳ט"
 
-#: packages/admin/src/components/Widgets.tsx:232
+#: packages/admin/src/components/Widgets.tsx:233
 msgid "Widget added"
 msgstr "הווידג׳ט נוסף"
 
-#: packages/admin/src/components/Widgets.tsx:220
+#: packages/admin/src/components/Widgets.tsx:221
 msgid "Widget area created"
 msgstr "אזור הווידג׳טים נוצר"
 
-#: packages/admin/src/components/Widgets.tsx:647
+#: packages/admin/src/components/Widgets.tsx:648
 msgid "Widget area deleted"
 msgstr "אזור הווידג׳טים נמחק"
 
@@ -14387,15 +14391,15 @@ msgstr "אזור הווידג׳טים נמחק"
 msgid "Widget areas"
 msgstr "אזורי וידג׳טים"
 
-#: packages/admin/src/components/Widgets.tsx:767
+#: packages/admin/src/components/Widgets.tsx:768
 msgid "Widget deleted"
 msgstr "הווידג׳ט נמחק"
 
-#: packages/admin/src/components/Widgets.tsx:896
+#: packages/admin/src/components/Widgets.tsx:897
 msgid "Widget title"
 msgstr "כותרת וידג׳ט"
 
-#: packages/admin/src/components/Widgets.tsx:782
+#: packages/admin/src/components/Widgets.tsx:783
 msgid "Widget updated"
 msgstr "הווידג׳ט עודכן"
 
@@ -14404,7 +14408,7 @@ msgstr "הווידג׳ט עודכן"
 #: packages/admin/src/components/settings/transfer/labels.ts:31
 #: packages/admin/src/components/settings/transfer/labels.ts:91
 #: packages/admin/src/components/Sidebar.tsx:446
-#: packages/admin/src/components/Widgets.tsx:388
+#: packages/admin/src/components/Widgets.tsx:389
 #: packages/admin/src/components/WordPressImport.tsx:1182
 msgid "Widgets"
 msgstr "וידג׳טים"
@@ -14474,7 +14478,7 @@ msgstr "כתבו HTML…"
 msgid "Write JavaScript…"
 msgstr "כתבו JavaScript…"
 
-#: packages/admin/src/components/Widgets.tsx:906
+#: packages/admin/src/components/Widgets.tsx:907
 msgid "Write widget content..."
 msgstr "כתיבת תוכן וידג׳ט..."
 
@@ -14498,7 +14502,7 @@ msgstr "קוד לדוגמה: xxxx xxxx xxxx xxxx xxxx xxxx"
 msgid "YAML"
 msgstr "קובץ YAML"
 
-#: packages/admin/src/components/Widgets.tsx:163
+#: packages/admin/src/components/Widgets.tsx:164
 msgid "Yearly"
 msgstr "שנתי"
 

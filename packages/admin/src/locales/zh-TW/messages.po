@@ -1349,7 +1349,7 @@ msgstr ""
 msgid "Add to posts"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:403
+#: packages/admin/src/components/Widgets.tsx:404
 msgid "Add Widget Area"
 msgstr "新增小工具區域"
 
@@ -1714,7 +1714,7 @@ msgstr ""
 msgid "API Tokens"
 msgstr "API 權杖"
 
-#: packages/admin/src/components/Widgets.tsx:440
+#: packages/admin/src/components/Widgets.tsx:441
 msgid "Appears on posts and pages"
 msgstr "顯示於文章及頁面"
 
@@ -1787,7 +1787,7 @@ msgid "Archived"
 msgstr "已封存"
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:68
-#: packages/admin/src/components/Widgets.tsx:158
+#: packages/admin/src/components/Widgets.tsx:159
 msgid "Archives"
 msgstr "彙整"
 
@@ -1978,7 +1978,7 @@ msgstr ""
 msgid "Available Providers"
 msgstr "可用的服務提供者"
 
-#: packages/admin/src/components/Widgets.tsx:467
+#: packages/admin/src/components/Widgets.tsx:468
 msgid "Available Widgets"
 msgstr "可用的小工具"
 
@@ -2346,7 +2346,7 @@ msgstr "可以檢視內容"
 #: packages/admin/src/components/TaxonomyManager.tsx:881
 #: packages/admin/src/components/TaxonomyManager.tsx:1099
 #: packages/admin/src/components/users/InviteUserModal.tsx:198
-#: packages/admin/src/components/Widgets.tsx:451
+#: packages/admin/src/components/Widgets.tsx:452
 #: packages/admin/src/components/WordPressImport.tsx:1940
 #: packages/admin/src/routes/bylines.tsx:852
 msgid "Cancel"
@@ -2416,7 +2416,7 @@ msgid "Capture is being prepared. Keep editing paused until setup is complete."
 msgstr ""
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:205
-#: packages/admin/src/components/Widgets.tsx:135
+#: packages/admin/src/components/Widgets.tsx:136
 msgid "Categories"
 msgstr "分類"
 
@@ -2810,9 +2810,9 @@ msgstr ""
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
 #: packages/admin/src/components/WelcomeModal.tsx:60
-#: packages/admin/src/components/Widgets.tsx:413
-#: packages/admin/src/components/Widgets.tsx:419
-#: packages/admin/src/components/Widgets.tsx:423
+#: packages/admin/src/components/Widgets.tsx:414
+#: packages/admin/src/components/Widgets.tsx:420
+#: packages/admin/src/components/Widgets.tsx:424
 #: packages/admin/src/routes/bylines.tsx:704
 #: packages/admin/src/routes/bylines.tsx:712
 msgid "Close"
@@ -2981,7 +2981,7 @@ msgstr ""
 msgid "Complete signup"
 msgstr "完成註冊"
 
-#: packages/admin/src/components/Widgets.tsx:933
+#: packages/admin/src/components/Widgets.tsx:934
 msgid "Component"
 msgstr "元件"
 
@@ -3053,7 +3053,7 @@ msgstr "內容"
 #: packages/admin/src/components/PortableTextEditor.tsx:3247
 #: packages/admin/src/components/SectionEditor.tsx:215
 #: packages/admin/src/components/Sidebar.tsx:613
-#: packages/admin/src/components/Widgets.tsx:901
+#: packages/admin/src/components/Widgets.tsx:902
 msgid "Content"
 msgstr "內容"
 
@@ -3416,7 +3416,7 @@ msgstr "數量"
 #: packages/admin/src/components/MenuList.tsx:185
 #: packages/admin/src/components/Redirects.tsx:194
 #: packages/admin/src/components/TaxonomyManager.tsx:892
-#: packages/admin/src/components/Widgets.tsx:454
+#: packages/admin/src/components/Widgets.tsx:455
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Create"
 msgstr "建立"
@@ -3582,7 +3582,7 @@ msgstr ""
 msgid "Create Token"
 msgstr "建立權杖"
 
-#: packages/admin/src/components/Widgets.tsx:410
+#: packages/admin/src/components/Widgets.tsx:411
 msgid "Create Widget Area"
 msgstr "建立小工具區域"
 
@@ -3855,7 +3855,7 @@ msgstr "在程式碼中定義"
 #: packages/admin/src/components/settings/BackupSettings.tsx:367
 #: packages/admin/src/components/TaxonomyManager.tsx:1535
 #: packages/admin/src/components/TaxonomyManager.tsx:1551
-#: packages/admin/src/components/Widgets.tsx:718
+#: packages/admin/src/components/Widgets.tsx:719
 #: packages/admin/src/routes/byline-schema.tsx:378
 #: packages/admin/src/routes/bylines.tsx:847
 msgid "Delete"
@@ -3881,7 +3881,7 @@ msgstr ""
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:275
 #: packages/admin/src/components/settings/BackupSettings.tsx:327
 #: packages/admin/src/components/TaxonomyManager.tsx:492
-#: packages/admin/src/components/Widgets.tsx:819
+#: packages/admin/src/components/Widgets.tsx:820
 #: packages/admin/src/routes/byline-schema.tsx:458
 msgid "Delete {0}"
 msgstr "刪除 {0}"
@@ -3897,7 +3897,7 @@ msgid "Delete {0} menu"
 msgstr "刪除 {0} 選單"
 
 #. placeholder {0}: area.label
-#: packages/admin/src/components/Widgets.tsx:666
+#: packages/admin/src/components/Widgets.tsx:667
 msgid "Delete {0} widget area"
 msgstr "刪除 {0} 小工具區域"
 
@@ -4041,7 +4041,7 @@ msgstr ""
 msgid "Delete Taxonomy"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:716
+#: packages/admin/src/components/Widgets.tsx:717
 msgid "Delete Widget Area?"
 msgstr "要刪除小工具區域嗎？"
 
@@ -4073,7 +4073,7 @@ msgstr "刪除「{0}」也會移除所有署名資料中的 {1, plural, one {# �
 #: packages/admin/src/components/settings/BackupSettings.tsx:368
 #: packages/admin/src/components/TaxonomyManager.tsx:1536
 #: packages/admin/src/components/TaxonomyManager.tsx:1552
-#: packages/admin/src/components/Widgets.tsx:719
+#: packages/admin/src/components/Widgets.tsx:720
 #: packages/admin/src/routes/bylines.tsx:877
 msgid "Deleting..."
 msgstr "正在刪除..."
@@ -4140,7 +4140,7 @@ msgstr "說明此區段的用途…"
 #: packages/admin/src/components/RegistryPluginDetail.tsx:893
 #: packages/admin/src/components/SectionEditor.tsx:295
 #: packages/admin/src/components/Sections.tsx:221
-#: packages/admin/src/components/Widgets.tsx:438
+#: packages/admin/src/components/Widgets.tsx:439
 msgid "Description"
 msgstr "說明"
 
@@ -4295,7 +4295,7 @@ msgstr "顯示近期文章清單"
 msgid "Display a navigation menu"
 msgstr "顯示導覽選單"
 
-#: packages/admin/src/components/Widgets.tsx:136
+#: packages/admin/src/components/Widgets.tsx:137
 msgid "Display category list"
 msgstr "顯示分類清單"
 
@@ -4312,7 +4312,7 @@ msgstr ""
 msgid "Display Size"
 msgstr "顯示尺寸"
 
-#: packages/admin/src/components/Widgets.tsx:144
+#: packages/admin/src/components/Widgets.tsx:145
 msgid "Display tag cloud"
 msgstr "顯示標籤雲"
 
@@ -4486,7 +4486,7 @@ msgstr ""
 msgid "Drag and drop or click to browse (.xml)"
 msgstr "拖放或按一下以瀏覽 (.xml)"
 
-#: packages/admin/src/components/Widgets.tsx:702
+#: packages/admin/src/components/Widgets.tsx:703
 msgid "Drag here to add"
 msgstr "拖曳至此處以新增"
 
@@ -4497,7 +4497,7 @@ msgstr "拖曳以重新排序"
 #. placeholder {0}: field.label
 #. placeholder {0}: widget.title ?? t`widget`
 #: packages/admin/src/components/ContentTypeEditor.tsx:922
-#: packages/admin/src/components/Widgets.tsx:804
+#: packages/admin/src/components/Widgets.tsx:805
 msgid "Drag to reorder {0}"
 msgstr "拖曳以重新排序 {0}"
 
@@ -4510,11 +4510,11 @@ msgstr ""
 msgid "Drag to reorder block"
 msgstr "拖曳以重新排序區塊"
 
-#: packages/admin/src/components/Widgets.tsx:706
+#: packages/admin/src/components/Widgets.tsx:707
 msgid "Drag widgets here to add them"
 msgstr "將小工具拖曳至此處即可新增"
 
-#: packages/admin/src/components/Widgets.tsx:468
+#: packages/admin/src/components/Widgets.tsx:469
 msgid "Drag widgets into an area to add them"
 msgstr "將小工具拖曳至區域即可新增"
 
@@ -4534,7 +4534,7 @@ msgstr ""
 msgid "Drop one image at a time."
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:702
+#: packages/admin/src/components/Widgets.tsx:703
 msgid "Drop to add widget"
 msgstr "放開以新增小工具"
 
@@ -5032,16 +5032,16 @@ msgstr ""
 #: packages/admin/src/components/MenuEditor.tsx:234
 #: packages/admin/src/components/SetupWizard.tsx:606
 #: packages/admin/src/components/TaxonomyManager.tsx:1207
-#: packages/admin/src/components/Widgets.tsx:771
+#: packages/admin/src/components/Widgets.tsx:772
 #: packages/admin/src/router.tsx:3149
 msgid "Error"
 msgstr "錯誤"
 
-#: packages/admin/src/components/Widgets.tsx:236
+#: packages/admin/src/components/Widgets.tsx:237
 msgid "Error adding widget"
 msgstr "新增小工具時發生錯誤"
 
-#: packages/admin/src/components/Widgets.tsx:297
+#: packages/admin/src/components/Widgets.tsx:298
 msgid "Error reordering widgets"
 msgstr "重新排序小工具時發生錯誤"
 
@@ -5049,7 +5049,7 @@ msgstr "重新排序小工具時發生錯誤"
 msgid "Error saving section"
 msgstr "儲存區段時發生錯誤"
 
-#: packages/admin/src/components/Widgets.tsx:786
+#: packages/admin/src/components/Widgets.tsx:787
 msgid "Error updating widget"
 msgstr "更新小工具時發生錯誤"
 
@@ -6316,7 +6316,7 @@ msgstr ""
 msgid "Group (optional)"
 msgstr "群組 (選填)"
 
-#: packages/admin/src/components/Widgets.tsx:162
+#: packages/admin/src/components/Widgets.tsx:163
 msgid "Group by"
 msgstr "分組依據"
 
@@ -7188,7 +7188,7 @@ msgstr "Kotlin"
 #: packages/admin/src/components/MenuEditor.tsx:599
 #: packages/admin/src/components/MenuList.tsx:153
 #: packages/admin/src/components/TaxonomyManager.tsx:1036
-#: packages/admin/src/components/Widgets.tsx:436
+#: packages/admin/src/components/Widgets.tsx:437
 #: packages/admin/src/routes/byline-schema.tsx:234
 msgid "Label"
 msgstr "標籤"
@@ -7290,7 +7290,7 @@ msgstr "媒體庫"
 msgid "License"
 msgstr "授權"
 
-#: packages/admin/src/components/Widgets.tsx:165
+#: packages/admin/src/components/Widgets.tsx:166
 msgid "Limit"
 msgstr "限制"
 
@@ -7560,7 +7560,7 @@ msgstr ""
 msgid "Loading usage"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:372
+#: packages/admin/src/components/Widgets.tsx:373
 msgid "Loading widgets..."
 msgstr "正在載入小工具…"
 
@@ -7686,7 +7686,7 @@ msgstr ""
 msgid "Main library"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:436
+#: packages/admin/src/components/Widgets.tsx:437
 msgid "Main Sidebar"
 msgstr "主要側邊欄"
 
@@ -7704,7 +7704,7 @@ msgstr "管理 {1} 的 {0}"
 msgid "Manage bylines in {entryLocale}"
 msgstr "管理 {entryLocale} 的署名"
 
-#: packages/admin/src/components/Widgets.tsx:390
+#: packages/admin/src/components/Widgets.tsx:391
 msgid "Manage content widgets in your widget areas"
 msgstr "管理小工具區域中的內容小工具"
 
@@ -7808,7 +7808,7 @@ msgstr ""
 msgid "Maximum blocks"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:147
+#: packages/admin/src/components/Widgets.tsx:148
 msgid "Maximum tags"
 msgstr "標籤數上限"
 
@@ -7920,7 +7920,7 @@ msgid "Medium section heading"
 msgstr "中型區段標題"
 
 #: packages/admin/src/components/Widgets.tsx:104
-#: packages/admin/src/components/Widgets.tsx:916
+#: packages/admin/src/components/Widgets.tsx:917
 msgid "Menu"
 msgstr "選單"
 
@@ -8058,11 +8058,11 @@ msgstr "修改內容集合結構描述"
 msgid "Month"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:163
+#: packages/admin/src/components/Widgets.tsx:164
 msgid "Monthly"
 msgstr "每月"
 
-#: packages/admin/src/components/Widgets.tsx:159
+#: packages/admin/src/components/Widgets.tsx:160
 msgid "Monthly/yearly archives"
 msgstr "每月/每年彙整"
 
@@ -8282,7 +8282,7 @@ msgstr "我的精彩網誌"
 #: packages/admin/src/components/TaxonomyManager.tsx:1462
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
 #: packages/admin/src/components/users/UserDetail.tsx:148
-#: packages/admin/src/components/Widgets.tsx:430
+#: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "名稱"
 
@@ -8868,7 +8868,7 @@ msgstr "找不到符合篩選條件的使用者。"
 msgid "No users yet."
 msgstr "目前沒有使用者。"
 
-#: packages/admin/src/components/Widgets.tsx:505
+#: packages/admin/src/components/Widgets.tsx:506
 msgid "No widget areas yet. Create one to get started."
 msgstr "目前沒有小工具區域。請先建立一個。"
 
@@ -9433,7 +9433,7 @@ msgstr ""
 msgid "picks {0}"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:154
+#: packages/admin/src/components/Widgets.tsx:155
 msgid "Placeholder text"
 msgstr "預留位置文字"
 
@@ -10856,7 +10856,7 @@ msgstr ""
 #: packages/admin/src/components/MenuEditor.tsx:632
 #: packages/admin/src/components/Redirects.tsx:193
 #: packages/admin/src/components/SaveButton.tsx:32
-#: packages/admin/src/components/Widgets.tsx:985
+#: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Save"
 msgstr "儲存"
@@ -10954,7 +10954,7 @@ msgstr ""
 #: packages/admin/src/components/SaveButton.tsx:33
 #: packages/admin/src/components/TaxonomyManager.tsx:889
 #: packages/admin/src/components/users/UserDetail.tsx:311
-#: packages/admin/src/components/Widgets.tsx:985
+#: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
 msgstr "正在儲存…"
@@ -11093,7 +11093,7 @@ msgstr "SCSS"
 #: packages/admin/src/components/ContentTypeEditor.tsx:107
 #: packages/admin/src/components/Settings.tsx:165
 #: packages/admin/src/components/Settings.tsx:165
-#: packages/admin/src/components/Widgets.tsx:151
+#: packages/admin/src/components/Widgets.tsx:152
 msgid "Search"
 msgstr "搜尋"
 
@@ -11189,7 +11189,7 @@ msgstr ""
 msgid "Search for an IANA timezone (e.g., Europe/London)"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:152
+#: packages/admin/src/components/Widgets.tsx:153
 msgid "Search form"
 msgstr "搜尋表單"
 
@@ -11394,7 +11394,7 @@ msgstr "選取 {title}"
 msgid "Select a collection"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:958
+#: packages/admin/src/components/Widgets.tsx:959
 msgid "Select a component..."
 msgstr "選取元件..."
 
@@ -11407,7 +11407,7 @@ msgstr ""
 msgid "Select a location"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:921
+#: packages/admin/src/components/Widgets.tsx:922
 msgid "Select a menu..."
 msgstr "選取選單…"
 
@@ -11728,7 +11728,7 @@ msgstr "短文字"
 msgid "Short Text"
 msgstr "短文字"
 
-#: packages/admin/src/components/Widgets.tsx:146
+#: packages/admin/src/components/Widgets.tsx:147
 msgid "Show count"
 msgstr "顯示數量"
 
@@ -11736,11 +11736,11 @@ msgstr "顯示數量"
 msgid "Show date"
 msgstr "顯示日期"
 
-#: packages/admin/src/components/Widgets.tsx:139
+#: packages/admin/src/components/Widgets.tsx:140
 msgid "Show hierarchy"
 msgstr "顯示階層"
 
-#: packages/admin/src/components/Widgets.tsx:138
+#: packages/admin/src/components/Widgets.tsx:139
 msgid "Show post count"
 msgstr "顯示文章數量"
 
@@ -12293,7 +12293,7 @@ msgid "Tagline"
 msgstr "網站標語"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:214
-#: packages/admin/src/components/Widgets.tsx:143
+#: packages/admin/src/components/Widgets.tsx:144
 msgid "Tags"
 msgstr "標籤"
 
@@ -13200,7 +13200,7 @@ msgstr "此更新會開放下列路由，無須驗證即可存取:"
 msgid "This version is not visible on the site"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:717
+#: packages/admin/src/components/Widgets.tsx:718
 msgid "This will delete the widget area and all its widgets. This action cannot be undone."
 msgstr "這會刪除小工具區域及其中的所有小工具。此動作無法復原。"
 
@@ -13255,7 +13255,7 @@ msgstr "時區"
 #: packages/admin/src/components/ContentList.tsx:907
 #: packages/admin/src/components/SectionEditor.tsx:272
 #: packages/admin/src/components/Sections.tsx:192
-#: packages/admin/src/components/Widgets.tsx:893
+#: packages/admin/src/components/Widgets.tsx:894
 msgid "Title"
 msgstr "標題"
 
@@ -13668,8 +13668,8 @@ msgstr "未命名"
 msgid "Untitled file"
 msgstr "未命名檔案"
 
-#: packages/admin/src/components/Widgets.tsx:538
-#: packages/admin/src/components/Widgets.tsx:811
+#: packages/admin/src/components/Widgets.tsx:539
+#: packages/admin/src/components/Widgets.tsx:812
 msgid "Untitled Widget"
 msgstr "未命名小工具"
 
@@ -13888,6 +13888,10 @@ msgstr "網址模式"
 
 #: packages/admin/src/components/BylineCreditsEditor.tsx:1001
 msgid "URL slug"
+msgstr ""
+
+#: packages/admin/src/components/Widgets.tsx:132
+msgid "URL template (e.g. /blog/:slug)"
 msgstr ""
 
 #: packages/admin/src/components/ContentTypeEditor.tsx:134
@@ -14365,20 +14369,20 @@ msgstr "為什麼這很重要？"
 msgid "Wide"
 msgstr "寬幅"
 
-#: packages/admin/src/components/Widgets.tsx:804
-#: packages/admin/src/components/Widgets.tsx:819
+#: packages/admin/src/components/Widgets.tsx:805
+#: packages/admin/src/components/Widgets.tsx:820
 msgid "widget"
 msgstr "小工具"
 
-#: packages/admin/src/components/Widgets.tsx:232
+#: packages/admin/src/components/Widgets.tsx:233
 msgid "Widget added"
 msgstr "小工具已新增"
 
-#: packages/admin/src/components/Widgets.tsx:220
+#: packages/admin/src/components/Widgets.tsx:221
 msgid "Widget area created"
 msgstr "小工具區域已建立"
 
-#: packages/admin/src/components/Widgets.tsx:647
+#: packages/admin/src/components/Widgets.tsx:648
 msgid "Widget area deleted"
 msgstr "已刪除小工具區域"
 
@@ -14386,15 +14390,15 @@ msgstr "已刪除小工具區域"
 msgid "Widget areas"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:767
+#: packages/admin/src/components/Widgets.tsx:768
 msgid "Widget deleted"
 msgstr "小工具已刪除"
 
-#: packages/admin/src/components/Widgets.tsx:896
+#: packages/admin/src/components/Widgets.tsx:897
 msgid "Widget title"
 msgstr "小工具標題"
 
-#: packages/admin/src/components/Widgets.tsx:782
+#: packages/admin/src/components/Widgets.tsx:783
 msgid "Widget updated"
 msgstr "已更新小工具"
 
@@ -14403,7 +14407,7 @@ msgstr "已更新小工具"
 #: packages/admin/src/components/settings/transfer/labels.ts:31
 #: packages/admin/src/components/settings/transfer/labels.ts:91
 #: packages/admin/src/components/Sidebar.tsx:446
-#: packages/admin/src/components/Widgets.tsx:388
+#: packages/admin/src/components/Widgets.tsx:389
 #: packages/admin/src/components/WordPressImport.tsx:1182
 msgid "Widgets"
 msgstr "小工具"
@@ -14473,7 +14477,7 @@ msgstr ""
 msgid "Write JavaScript…"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:906
+#: packages/admin/src/components/Widgets.tsx:907
 msgid "Write widget content..."
 msgstr "撰寫小工具內容..."
 
@@ -14497,7 +14501,7 @@ msgstr "xxxx xxxx xxxx xxxx xxxx xxxx"
 msgid "YAML"
 msgstr "YAML"
 
-#: packages/admin/src/components/Widgets.tsx:163
+#: packages/admin/src/components/Widgets.tsx:164
 msgid "Yearly"
 msgstr "每年"
 

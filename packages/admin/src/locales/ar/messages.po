@@ -1349,7 +1349,7 @@ msgstr "إضافة مصطلح"
 msgid "Add to posts"
 msgstr "إضافة إلى المقالات"
 
-#: packages/admin/src/components/Widgets.tsx:403
+#: packages/admin/src/components/Widgets.tsx:404
 msgid "Add Widget Area"
 msgstr "إضافة منطقة عناصر الواجهة"
 
@@ -1714,7 +1714,7 @@ msgstr "أي رقم"
 msgid "API Tokens"
 msgstr "رموز API"
 
-#: packages/admin/src/components/Widgets.tsx:440
+#: packages/admin/src/components/Widgets.tsx:441
 msgid "Appears on posts and pages"
 msgstr "يظهر في المنشورات والصفحات"
 
@@ -1787,7 +1787,7 @@ msgid "Archived"
 msgstr "مؤرشف"
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:68
-#: packages/admin/src/components/Widgets.tsx:158
+#: packages/admin/src/components/Widgets.tsx:159
 msgid "Archives"
 msgstr "الأرشيف"
 
@@ -1978,7 +1978,7 @@ msgstr "متاح في {0}"
 msgid "Available Providers"
 msgstr "المزودون المتاحون"
 
-#: packages/admin/src/components/Widgets.tsx:467
+#: packages/admin/src/components/Widgets.tsx:468
 msgid "Available Widgets"
 msgstr "عناصر الواجهة المتاحة"
 
@@ -2346,7 +2346,7 @@ msgstr "يمكنه عرض المحتوى"
 #: packages/admin/src/components/TaxonomyManager.tsx:881
 #: packages/admin/src/components/TaxonomyManager.tsx:1099
 #: packages/admin/src/components/users/InviteUserModal.tsx:198
-#: packages/admin/src/components/Widgets.tsx:451
+#: packages/admin/src/components/Widgets.tsx:452
 #: packages/admin/src/components/WordPressImport.tsx:1940
 #: packages/admin/src/routes/bylines.tsx:852
 msgid "Cancel"
@@ -2416,7 +2416,7 @@ msgid "Capture is being prepared. Keep editing paused until setup is complete."
 msgstr "يجري تجهيز الالتقاط. أبقِ التعديل متوقفًا مؤقتًا حتى يكتمل الإعداد."
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:205
-#: packages/admin/src/components/Widgets.tsx:135
+#: packages/admin/src/components/Widgets.tsx:136
 msgid "Categories"
 msgstr "الفئات"
 
@@ -2810,9 +2810,9 @@ msgstr "انقر على هذا الرابط لتسجيل الدخول إلى {si
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
 #: packages/admin/src/components/WelcomeModal.tsx:60
-#: packages/admin/src/components/Widgets.tsx:413
-#: packages/admin/src/components/Widgets.tsx:419
-#: packages/admin/src/components/Widgets.tsx:423
+#: packages/admin/src/components/Widgets.tsx:414
+#: packages/admin/src/components/Widgets.tsx:420
+#: packages/admin/src/components/Widgets.tsx:424
 #: packages/admin/src/routes/bylines.tsx:704
 #: packages/admin/src/routes/bylines.tsx:712
 msgid "Close"
@@ -2981,7 +2981,7 @@ msgstr "مكتمل"
 msgid "Complete signup"
 msgstr "إكمال التسجيل"
 
-#: packages/admin/src/components/Widgets.tsx:933
+#: packages/admin/src/components/Widgets.tsx:934
 msgid "Component"
 msgstr "مكوّن"
 
@@ -3053,7 +3053,7 @@ msgstr "المحتوى"
 #: packages/admin/src/components/PortableTextEditor.tsx:3247
 #: packages/admin/src/components/SectionEditor.tsx:215
 #: packages/admin/src/components/Sidebar.tsx:613
-#: packages/admin/src/components/Widgets.tsx:901
+#: packages/admin/src/components/Widgets.tsx:902
 msgid "Content"
 msgstr "محتوى"
 
@@ -3416,7 +3416,7 @@ msgstr "العدد"
 #: packages/admin/src/components/MenuList.tsx:185
 #: packages/admin/src/components/Redirects.tsx:194
 #: packages/admin/src/components/TaxonomyManager.tsx:892
-#: packages/admin/src/components/Widgets.tsx:454
+#: packages/admin/src/components/Widgets.tsx:455
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Create"
 msgstr "إنشاء"
@@ -3582,7 +3582,7 @@ msgstr "إنشاء مصطلحات التصنيف وتغيير تصنيفات ا�
 msgid "Create Token"
 msgstr "إنشاء رمز"
 
-#: packages/admin/src/components/Widgets.tsx:410
+#: packages/admin/src/components/Widgets.tsx:411
 msgid "Create Widget Area"
 msgstr "إنشاء منطقة عناصر الواجهة"
 
@@ -3855,7 +3855,7 @@ msgstr "مُعرَّف في الكود"
 #: packages/admin/src/components/settings/BackupSettings.tsx:367
 #: packages/admin/src/components/TaxonomyManager.tsx:1535
 #: packages/admin/src/components/TaxonomyManager.tsx:1551
-#: packages/admin/src/components/Widgets.tsx:718
+#: packages/admin/src/components/Widgets.tsx:719
 #: packages/admin/src/routes/byline-schema.tsx:378
 #: packages/admin/src/routes/bylines.tsx:847
 msgid "Delete"
@@ -3881,7 +3881,7 @@ msgstr "حذف “{0}”؟"
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:275
 #: packages/admin/src/components/settings/BackupSettings.tsx:327
 #: packages/admin/src/components/TaxonomyManager.tsx:492
-#: packages/admin/src/components/Widgets.tsx:819
+#: packages/admin/src/components/Widgets.tsx:820
 #: packages/admin/src/routes/byline-schema.tsx:458
 msgid "Delete {0}"
 msgstr "حذف {0}"
@@ -3897,7 +3897,7 @@ msgid "Delete {0} menu"
 msgstr "حذف قائمة {0}"
 
 #. placeholder {0}: area.label
-#: packages/admin/src/components/Widgets.tsx:666
+#: packages/admin/src/components/Widgets.tsx:667
 msgid "Delete {0} widget area"
 msgstr "حذف منطقة عناصر الواجهة {0}"
 
@@ -4041,7 +4041,7 @@ msgstr "حذف التصنيف"
 msgid "Delete Taxonomy"
 msgstr "حذف التصنيف"
 
-#: packages/admin/src/components/Widgets.tsx:716
+#: packages/admin/src/components/Widgets.tsx:717
 msgid "Delete Widget Area?"
 msgstr "حذف منطقة عناصر الواجهة؟"
 
@@ -4073,7 +4073,7 @@ msgstr "سيؤدي حذف \"{0}\" أيضًا إلى إزالة {1, plural, one {
 #: packages/admin/src/components/settings/BackupSettings.tsx:368
 #: packages/admin/src/components/TaxonomyManager.tsx:1536
 #: packages/admin/src/components/TaxonomyManager.tsx:1552
-#: packages/admin/src/components/Widgets.tsx:719
+#: packages/admin/src/components/Widgets.tsx:720
 #: packages/admin/src/routes/bylines.tsx:877
 msgid "Deleting..."
 msgstr "جاري الحذف..."
@@ -4140,7 +4140,7 @@ msgstr "قم بوصف الغرض من هذا القسم..."
 #: packages/admin/src/components/RegistryPluginDetail.tsx:893
 #: packages/admin/src/components/SectionEditor.tsx:295
 #: packages/admin/src/components/Sections.tsx:221
-#: packages/admin/src/components/Widgets.tsx:438
+#: packages/admin/src/components/Widgets.tsx:439
 msgid "Description"
 msgstr "الوصف"
 
@@ -4295,7 +4295,7 @@ msgstr "عرض قائمة بأحدث المقالات"
 msgid "Display a navigation menu"
 msgstr "عرض قائمة تنقل"
 
-#: packages/admin/src/components/Widgets.tsx:136
+#: packages/admin/src/components/Widgets.tsx:137
 msgid "Display category list"
 msgstr "عرض قائمة التصنيفات"
 
@@ -4312,7 +4312,7 @@ msgstr "حجم العرض"
 msgid "Display Size"
 msgstr "حجم العرض"
 
-#: packages/admin/src/components/Widgets.tsx:144
+#: packages/admin/src/components/Widgets.tsx:145
 msgid "Display tag cloud"
 msgstr "عرض سحابة الوسوم"
 
@@ -4486,7 +4486,7 @@ msgstr "اسحب الملفات وأفلتها هنا"
 msgid "Drag and drop or click to browse (.xml)"
 msgstr "اسحب وأفلت أو اضغط للتصفح (.xml)"
 
-#: packages/admin/src/components/Widgets.tsx:702
+#: packages/admin/src/components/Widgets.tsx:703
 msgid "Drag here to add"
 msgstr "اسحب هنا للإضافة"
 
@@ -4497,7 +4497,7 @@ msgstr "اسحب لإعادة الترتيب"
 #. placeholder {0}: field.label
 #. placeholder {0}: widget.title ?? t`widget`
 #: packages/admin/src/components/ContentTypeEditor.tsx:922
-#: packages/admin/src/components/Widgets.tsx:804
+#: packages/admin/src/components/Widgets.tsx:805
 msgid "Drag to reorder {0}"
 msgstr "اسحب لإعادة ترتيب {0}"
 
@@ -4510,11 +4510,11 @@ msgstr "اسحب لإعادة ترتيب {label}"
 msgid "Drag to reorder block"
 msgstr "اسحب لإعادة ترتيب الكتلة"
 
-#: packages/admin/src/components/Widgets.tsx:706
+#: packages/admin/src/components/Widgets.tsx:707
 msgid "Drag widgets here to add them"
 msgstr "اسحب عناصر الواجهة هنا لإضافتها"
 
-#: packages/admin/src/components/Widgets.tsx:468
+#: packages/admin/src/components/Widgets.tsx:469
 msgid "Drag widgets into an area to add them"
 msgstr "اسحب عناصر الواجهة إلى منطقة لإضافتها"
 
@@ -4534,7 +4534,7 @@ msgstr "أفلت الملفات لرفعها"
 msgid "Drop one image at a time."
 msgstr "أفلت صورة واحدة في كل مرة."
 
-#: packages/admin/src/components/Widgets.tsx:702
+#: packages/admin/src/components/Widgets.tsx:703
 msgid "Drop to add widget"
 msgstr "أسقط هنا لإضافة عنصر واجهة"
 
@@ -5032,16 +5032,16 @@ msgstr "إدخال على الجانب الرابط"
 #: packages/admin/src/components/MenuEditor.tsx:234
 #: packages/admin/src/components/SetupWizard.tsx:606
 #: packages/admin/src/components/TaxonomyManager.tsx:1207
-#: packages/admin/src/components/Widgets.tsx:771
+#: packages/admin/src/components/Widgets.tsx:772
 #: packages/admin/src/router.tsx:3149
 msgid "Error"
 msgstr "خطأ"
 
-#: packages/admin/src/components/Widgets.tsx:236
+#: packages/admin/src/components/Widgets.tsx:237
 msgid "Error adding widget"
 msgstr "خطأ أثناء إضافة عنصر الواجهة"
 
-#: packages/admin/src/components/Widgets.tsx:297
+#: packages/admin/src/components/Widgets.tsx:298
 msgid "Error reordering widgets"
 msgstr "خطأ أثناء إعادة ترتيب عناصر الواجهة"
 
@@ -5049,7 +5049,7 @@ msgstr "خطأ أثناء إعادة ترتيب عناصر الواجهة"
 msgid "Error saving section"
 msgstr "خطأ في حفظ القسم"
 
-#: packages/admin/src/components/Widgets.tsx:786
+#: packages/admin/src/components/Widgets.tsx:787
 msgid "Error updating widget"
 msgstr "خطأ أثناء تحديث عنصر الواجهة"
 
@@ -6316,7 +6316,7 @@ msgstr "المجموعة"
 msgid "Group (optional)"
 msgstr "المجموعة (اختياري)"
 
-#: packages/admin/src/components/Widgets.tsx:162
+#: packages/admin/src/components/Widgets.tsx:163
 msgid "Group by"
 msgstr "التجميع حسب"
 
@@ -7188,7 +7188,7 @@ msgstr "Kotlin"
 #: packages/admin/src/components/MenuEditor.tsx:599
 #: packages/admin/src/components/MenuList.tsx:153
 #: packages/admin/src/components/TaxonomyManager.tsx:1036
-#: packages/admin/src/components/Widgets.tsx:436
+#: packages/admin/src/components/Widgets.tsx:437
 #: packages/admin/src/routes/byline-schema.tsx:234
 msgid "Label"
 msgstr "التسمية"
@@ -7290,7 +7290,7 @@ msgstr "المكتبة"
 msgid "License"
 msgstr "الترخيص"
 
-#: packages/admin/src/components/Widgets.tsx:165
+#: packages/admin/src/components/Widgets.tsx:166
 msgid "Limit"
 msgstr "الحد"
 
@@ -7560,7 +7560,7 @@ msgstr "جارٍ تحميل خطة الاستيراد…"
 msgid "Loading usage"
 msgstr "جارٍ تحميل الاستخدامات"
 
-#: packages/admin/src/components/Widgets.tsx:372
+#: packages/admin/src/components/Widgets.tsx:373
 msgid "Loading widgets..."
 msgstr "جارٍ تحميل عناصر الواجهة..."
 
@@ -7686,7 +7686,7 @@ msgstr "Lua"
 msgid "Main library"
 msgstr "المكتبة الرئيسية"
 
-#: packages/admin/src/components/Widgets.tsx:436
+#: packages/admin/src/components/Widgets.tsx:437
 msgid "Main Sidebar"
 msgstr "الشريط الجانبي الرئيسي"
 
@@ -7704,7 +7704,7 @@ msgstr "إدارة {0} لـ {1}"
 msgid "Manage bylines in {entryLocale}"
 msgstr "إدارة الكُتّاب في {entryLocale}"
 
-#: packages/admin/src/components/Widgets.tsx:390
+#: packages/admin/src/components/Widgets.tsx:391
 msgid "Manage content widgets in your widget areas"
 msgstr "إدارة عناصر واجهة المحتوى في مناطق الواجهة"
 
@@ -7808,7 +7808,7 @@ msgstr "الحد الأقصى"
 msgid "Maximum blocks"
 msgstr "الحد الأقصى للكتل"
 
-#: packages/admin/src/components/Widgets.tsx:147
+#: packages/admin/src/components/Widgets.tsx:148
 msgid "Maximum tags"
 msgstr "الحد الأقصى للوسوم"
 
@@ -7920,7 +7920,7 @@ msgid "Medium section heading"
 msgstr "عنوان قسم متوسط"
 
 #: packages/admin/src/components/Widgets.tsx:104
-#: packages/admin/src/components/Widgets.tsx:916
+#: packages/admin/src/components/Widgets.tsx:917
 msgid "Menu"
 msgstr "قائمة"
 
@@ -8058,11 +8058,11 @@ msgstr "تغيير مخططات المجموعات"
 msgid "Month"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:163
+#: packages/admin/src/components/Widgets.tsx:164
 msgid "Monthly"
 msgstr "شهري"
 
-#: packages/admin/src/components/Widgets.tsx:159
+#: packages/admin/src/components/Widgets.tsx:160
 msgid "Monthly/yearly archives"
 msgstr "الأرشيفات الشهرية/السنوية"
 
@@ -8282,7 +8282,7 @@ msgstr "مدونتي الرائعة"
 #: packages/admin/src/components/TaxonomyManager.tsx:1462
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
 #: packages/admin/src/components/users/UserDetail.tsx:148
-#: packages/admin/src/components/Widgets.tsx:430
+#: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "الاسم"
 
@@ -8868,7 +8868,7 @@ msgstr "لا يوجد مستخدمون يطابقون الفلاتر المحد�
 msgid "No users yet."
 msgstr "لا يوجد مستخدمون بعد."
 
-#: packages/admin/src/components/Widgets.tsx:505
+#: packages/admin/src/components/Widgets.tsx:506
 msgid "No widget areas yet. Create one to get started."
 msgstr "لا توجد مناطق عناصر واجهة بعد. أنشئ واحدة للبدء."
 
@@ -9433,7 +9433,7 @@ msgstr "يتيح اختيار الإدخالات التي يرتبط بها هذ
 msgid "picks {0}"
 msgstr "يختار {0}"
 
-#: packages/admin/src/components/Widgets.tsx:154
+#: packages/admin/src/components/Widgets.tsx:155
 msgid "Placeholder text"
 msgstr "نص العنصر النائب"
 
@@ -10856,7 +10856,7 @@ msgstr "محتوى نموذجي"
 #: packages/admin/src/components/MenuEditor.tsx:632
 #: packages/admin/src/components/Redirects.tsx:193
 #: packages/admin/src/components/SaveButton.tsx:32
-#: packages/admin/src/components/Widgets.tsx:985
+#: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Save"
 msgstr "حفظ"
@@ -10954,7 +10954,7 @@ msgstr "يؤدي حفظ مجموعة هنا إلى تحويل هذا الحقل 
 #: packages/admin/src/components/SaveButton.tsx:33
 #: packages/admin/src/components/TaxonomyManager.tsx:889
 #: packages/admin/src/components/users/UserDetail.tsx:311
-#: packages/admin/src/components/Widgets.tsx:985
+#: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
 msgstr "جاري الحفظ..."
@@ -11093,7 +11093,7 @@ msgstr "SCSS"
 #: packages/admin/src/components/ContentTypeEditor.tsx:107
 #: packages/admin/src/components/Settings.tsx:165
 #: packages/admin/src/components/Settings.tsx:165
-#: packages/admin/src/components/Widgets.tsx:151
+#: packages/admin/src/components/Widgets.tsx:152
 msgid "Search"
 msgstr "بحث"
 
@@ -11189,7 +11189,7 @@ msgstr "البحث عن لغة…"
 msgid "Search for an IANA timezone (e.g., Europe/London)"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:152
+#: packages/admin/src/components/Widgets.tsx:153
 msgid "Search form"
 msgstr "نموذج البحث"
 
@@ -11394,7 +11394,7 @@ msgstr "تحديد {title}"
 msgid "Select a collection"
 msgstr "اختر مجموعة"
 
-#: packages/admin/src/components/Widgets.tsx:958
+#: packages/admin/src/components/Widgets.tsx:959
 msgid "Select a component..."
 msgstr "اختر مكوّنًا..."
 
@@ -11407,7 +11407,7 @@ msgstr "اختر نوع محتوى"
 msgid "Select a location"
 msgstr "اختر موقعًا"
 
-#: packages/admin/src/components/Widgets.tsx:921
+#: packages/admin/src/components/Widgets.tsx:922
 msgid "Select a menu..."
 msgstr "اختر قائمة..."
 
@@ -11728,7 +11728,7 @@ msgstr "نص قصير"
 msgid "Short Text"
 msgstr "نص قصير"
 
-#: packages/admin/src/components/Widgets.tsx:146
+#: packages/admin/src/components/Widgets.tsx:147
 msgid "Show count"
 msgstr "عرض العدد"
 
@@ -11736,11 +11736,11 @@ msgstr "عرض العدد"
 msgid "Show date"
 msgstr "عرض التاريخ"
 
-#: packages/admin/src/components/Widgets.tsx:139
+#: packages/admin/src/components/Widgets.tsx:140
 msgid "Show hierarchy"
 msgstr "عرض التسلسل الهرمي"
 
-#: packages/admin/src/components/Widgets.tsx:138
+#: packages/admin/src/components/Widgets.tsx:139
 msgid "Show post count"
 msgstr "عرض عدد المقالات"
 
@@ -12293,7 +12293,7 @@ msgid "Tagline"
 msgstr "الشعار"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:214
-#: packages/admin/src/components/Widgets.tsx:143
+#: packages/admin/src/components/Widgets.tsx:144
 msgid "Tags"
 msgstr "الوسوم"
 
@@ -13200,7 +13200,7 @@ msgstr "يكشف هذا التحديث المسارات التالية بدون 
 msgid "This version is not visible on the site"
 msgstr "هذه النسخة غير ظاهرة على الموقع"
 
-#: packages/admin/src/components/Widgets.tsx:717
+#: packages/admin/src/components/Widgets.tsx:718
 msgid "This will delete the widget area and all its widgets. This action cannot be undone."
 msgstr "سيُحذف هذا منطقة عناصر الواجهة وجميع عناصرها. لا يمكن التراجع عن هذا الإجراء."
 
@@ -13255,7 +13255,7 @@ msgstr "المنطقة الزمنية"
 #: packages/admin/src/components/ContentList.tsx:907
 #: packages/admin/src/components/SectionEditor.tsx:272
 #: packages/admin/src/components/Sections.tsx:192
-#: packages/admin/src/components/Widgets.tsx:893
+#: packages/admin/src/components/Widgets.tsx:894
 msgid "Title"
 msgstr "العنوان"
 
@@ -13668,8 +13668,8 @@ msgstr "بدون عنوان"
 msgid "Untitled file"
 msgstr "ملف بلا عنوان"
 
-#: packages/admin/src/components/Widgets.tsx:538
-#: packages/admin/src/components/Widgets.tsx:811
+#: packages/admin/src/components/Widgets.tsx:539
+#: packages/admin/src/components/Widgets.tsx:812
 msgid "Untitled Widget"
 msgstr "عنصر واجهة بلا عنوان"
 
@@ -13889,6 +13889,10 @@ msgstr "نمط الرابط"
 #: packages/admin/src/components/BylineCreditsEditor.tsx:1001
 msgid "URL slug"
 msgstr "جزء الرابط في عنوان URL"
+
+#: packages/admin/src/components/Widgets.tsx:132
+msgid "URL template (e.g. /blog/:slug)"
+msgstr ""
 
 #: packages/admin/src/components/ContentTypeEditor.tsx:134
 #: packages/admin/src/components/FieldEditor.tsx:462
@@ -14365,20 +14369,20 @@ msgstr "لماذا يُعد هذا مهمًا؟"
 msgid "Wide"
 msgstr "عريض"
 
-#: packages/admin/src/components/Widgets.tsx:804
-#: packages/admin/src/components/Widgets.tsx:819
+#: packages/admin/src/components/Widgets.tsx:805
+#: packages/admin/src/components/Widgets.tsx:820
 msgid "widget"
 msgstr "عنصر واجهة"
 
-#: packages/admin/src/components/Widgets.tsx:232
+#: packages/admin/src/components/Widgets.tsx:233
 msgid "Widget added"
 msgstr "تمت إضافة عنصر الواجهة"
 
-#: packages/admin/src/components/Widgets.tsx:220
+#: packages/admin/src/components/Widgets.tsx:221
 msgid "Widget area created"
 msgstr "تم إنشاء منطقة عناصر الواجهة"
 
-#: packages/admin/src/components/Widgets.tsx:647
+#: packages/admin/src/components/Widgets.tsx:648
 msgid "Widget area deleted"
 msgstr "تم حذف منطقة عناصر الواجهة"
 
@@ -14386,15 +14390,15 @@ msgstr "تم حذف منطقة عناصر الواجهة"
 msgid "Widget areas"
 msgstr "مناطق عناصر واجهة المستخدم"
 
-#: packages/admin/src/components/Widgets.tsx:767
+#: packages/admin/src/components/Widgets.tsx:768
 msgid "Widget deleted"
 msgstr "تم حذف عنصر الواجهة"
 
-#: packages/admin/src/components/Widgets.tsx:896
+#: packages/admin/src/components/Widgets.tsx:897
 msgid "Widget title"
 msgstr "عنوان عنصر الواجهة"
 
-#: packages/admin/src/components/Widgets.tsx:782
+#: packages/admin/src/components/Widgets.tsx:783
 msgid "Widget updated"
 msgstr "تم تحديث عنصر الواجهة"
 
@@ -14403,7 +14407,7 @@ msgstr "تم تحديث عنصر الواجهة"
 #: packages/admin/src/components/settings/transfer/labels.ts:31
 #: packages/admin/src/components/settings/transfer/labels.ts:91
 #: packages/admin/src/components/Sidebar.tsx:446
-#: packages/admin/src/components/Widgets.tsx:388
+#: packages/admin/src/components/Widgets.tsx:389
 #: packages/admin/src/components/WordPressImport.tsx:1182
 msgid "Widgets"
 msgstr "عناصر واجهة المستخدم"
@@ -14473,7 +14477,7 @@ msgstr ""
 msgid "Write JavaScript…"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:906
+#: packages/admin/src/components/Widgets.tsx:907
 msgid "Write widget content..."
 msgstr "اكتب محتوى عنصر الواجهة..."
 
@@ -14497,7 +14501,7 @@ msgstr "xxxx xxxx xxxx xxxx xxxx xxxx"
 msgid "YAML"
 msgstr "YAML"
 
-#: packages/admin/src/components/Widgets.tsx:163
+#: packages/admin/src/components/Widgets.tsx:164
 msgid "Yearly"
 msgstr "سنوي"
 

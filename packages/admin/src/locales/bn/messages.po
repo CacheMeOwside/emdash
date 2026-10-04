@@ -1349,7 +1349,7 @@ msgstr ""
 msgid "Add to posts"
 msgstr "পোস্টে যোগ করুন"
 
-#: packages/admin/src/components/Widgets.tsx:403
+#: packages/admin/src/components/Widgets.tsx:404
 msgid "Add Widget Area"
 msgstr "উইজেট এরিয়া যোগ করুন"
 
@@ -1714,7 +1714,7 @@ msgstr ""
 msgid "API Tokens"
 msgstr "API টোকেন"
 
-#: packages/admin/src/components/Widgets.tsx:440
+#: packages/admin/src/components/Widgets.tsx:441
 msgid "Appears on posts and pages"
 msgstr "পোস্ট এবং পেজে দেখা যায়"
 
@@ -1787,7 +1787,7 @@ msgid "Archived"
 msgstr "আর্কাইভ করা"
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:68
-#: packages/admin/src/components/Widgets.tsx:158
+#: packages/admin/src/components/Widgets.tsx:159
 msgid "Archives"
 msgstr "আর্কাইভ"
 
@@ -1978,7 +1978,7 @@ msgstr "{0}-এ উপলব্ধ"
 msgid "Available Providers"
 msgstr "উপলব্ধ প্রোভাইডার"
 
-#: packages/admin/src/components/Widgets.tsx:467
+#: packages/admin/src/components/Widgets.tsx:468
 msgid "Available Widgets"
 msgstr "উপলব্ধ উইজেট"
 
@@ -2346,7 +2346,7 @@ msgstr "কনটেন্ট দেখতে পারেন"
 #: packages/admin/src/components/TaxonomyManager.tsx:881
 #: packages/admin/src/components/TaxonomyManager.tsx:1099
 #: packages/admin/src/components/users/InviteUserModal.tsx:198
-#: packages/admin/src/components/Widgets.tsx:451
+#: packages/admin/src/components/Widgets.tsx:452
 #: packages/admin/src/components/WordPressImport.tsx:1940
 #: packages/admin/src/routes/bylines.tsx:852
 msgid "Cancel"
@@ -2416,7 +2416,7 @@ msgid "Capture is being prepared. Keep editing paused until setup is complete."
 msgstr "ক্যাপচার প্রস্তুত করা হচ্ছে। সেটআপ সম্পূর্ণ না হওয়া পর্যন্ত সম্পাদনা স্থগিত রাখুন।"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:205
-#: packages/admin/src/components/Widgets.tsx:135
+#: packages/admin/src/components/Widgets.tsx:136
 msgid "Categories"
 msgstr "ক্যাটাগরি"
 
@@ -2810,9 +2810,9 @@ msgstr "{siteName}-এ সাইন ইন করতে এই লিঙ্ক�
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
 #: packages/admin/src/components/WelcomeModal.tsx:60
-#: packages/admin/src/components/Widgets.tsx:413
-#: packages/admin/src/components/Widgets.tsx:419
-#: packages/admin/src/components/Widgets.tsx:423
+#: packages/admin/src/components/Widgets.tsx:414
+#: packages/admin/src/components/Widgets.tsx:420
+#: packages/admin/src/components/Widgets.tsx:424
 #: packages/admin/src/routes/bylines.tsx:704
 #: packages/admin/src/routes/bylines.tsx:712
 msgid "Close"
@@ -2981,7 +2981,7 @@ msgstr "সম্পন্ন"
 msgid "Complete signup"
 msgstr "সাইন আপ সম্পন্ন করুন"
 
-#: packages/admin/src/components/Widgets.tsx:933
+#: packages/admin/src/components/Widgets.tsx:934
 msgid "Component"
 msgstr "কম্পোনেন্ট"
 
@@ -3053,7 +3053,7 @@ msgstr "কনটেন্ট"
 #: packages/admin/src/components/PortableTextEditor.tsx:3247
 #: packages/admin/src/components/SectionEditor.tsx:215
 #: packages/admin/src/components/Sidebar.tsx:613
-#: packages/admin/src/components/Widgets.tsx:901
+#: packages/admin/src/components/Widgets.tsx:902
 msgid "Content"
 msgstr "কনটেন্ট"
 
@@ -3416,7 +3416,7 @@ msgstr "সংখ্যা"
 #: packages/admin/src/components/MenuList.tsx:185
 #: packages/admin/src/components/Redirects.tsx:194
 #: packages/admin/src/components/TaxonomyManager.tsx:892
-#: packages/admin/src/components/Widgets.tsx:454
+#: packages/admin/src/components/Widgets.tsx:455
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Create"
 msgstr "তৈরি করুন"
@@ -3582,7 +3582,7 @@ msgstr "ট্যাক্সোনমি টার্ম তৈরি করা
 msgid "Create Token"
 msgstr "টোকেন তৈরি করুন"
 
-#: packages/admin/src/components/Widgets.tsx:410
+#: packages/admin/src/components/Widgets.tsx:411
 msgid "Create Widget Area"
 msgstr "উইজেট এরিয়া তৈরি করুন"
 
@@ -3855,7 +3855,7 @@ msgstr "কোডে নির্ধারিত"
 #: packages/admin/src/components/settings/BackupSettings.tsx:367
 #: packages/admin/src/components/TaxonomyManager.tsx:1535
 #: packages/admin/src/components/TaxonomyManager.tsx:1551
-#: packages/admin/src/components/Widgets.tsx:718
+#: packages/admin/src/components/Widgets.tsx:719
 #: packages/admin/src/routes/byline-schema.tsx:378
 #: packages/admin/src/routes/bylines.tsx:847
 msgid "Delete"
@@ -3881,7 +3881,7 @@ msgstr "“{0}” মুছবেন?"
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:275
 #: packages/admin/src/components/settings/BackupSettings.tsx:327
 #: packages/admin/src/components/TaxonomyManager.tsx:492
-#: packages/admin/src/components/Widgets.tsx:819
+#: packages/admin/src/components/Widgets.tsx:820
 #: packages/admin/src/routes/byline-schema.tsx:458
 msgid "Delete {0}"
 msgstr "{0} মুছুন"
@@ -3897,7 +3897,7 @@ msgid "Delete {0} menu"
 msgstr "{0} মেনু মুছুন"
 
 #. placeholder {0}: area.label
-#: packages/admin/src/components/Widgets.tsx:666
+#: packages/admin/src/components/Widgets.tsx:667
 msgid "Delete {0} widget area"
 msgstr "{0} উইজেট এরিয়া মুছুন"
 
@@ -4041,7 +4041,7 @@ msgstr "ট্যাক্সোনমি মুছুন"
 msgid "Delete Taxonomy"
 msgstr "ট্যাক্সোনমি মুছুন"
 
-#: packages/admin/src/components/Widgets.tsx:716
+#: packages/admin/src/components/Widgets.tsx:717
 msgid "Delete Widget Area?"
 msgstr "উইজেট এরিয়া মুছবেন?"
 
@@ -4073,7 +4073,7 @@ msgstr "\"{0}\" মুছলে সব বাইলাইন থেকে {1, pl
 #: packages/admin/src/components/settings/BackupSettings.tsx:368
 #: packages/admin/src/components/TaxonomyManager.tsx:1536
 #: packages/admin/src/components/TaxonomyManager.tsx:1552
-#: packages/admin/src/components/Widgets.tsx:719
+#: packages/admin/src/components/Widgets.tsx:720
 #: packages/admin/src/routes/bylines.tsx:877
 msgid "Deleting..."
 msgstr "মোছা হচ্ছে..."
@@ -4140,7 +4140,7 @@ msgstr "এই সেকশনটি কীসের জন্য তা বর�
 #: packages/admin/src/components/RegistryPluginDetail.tsx:893
 #: packages/admin/src/components/SectionEditor.tsx:295
 #: packages/admin/src/components/Sections.tsx:221
-#: packages/admin/src/components/Widgets.tsx:438
+#: packages/admin/src/components/Widgets.tsx:439
 msgid "Description"
 msgstr "বিবরণ"
 
@@ -4295,7 +4295,7 @@ msgstr "সাম্প্রতিক পোস্টের তালিকা 
 msgid "Display a navigation menu"
 msgstr "একটি নেভিগেশন মেনু দেখান"
 
-#: packages/admin/src/components/Widgets.tsx:136
+#: packages/admin/src/components/Widgets.tsx:137
 msgid "Display category list"
 msgstr "ক্যাটাগরির তালিকা দেখান"
 
@@ -4312,7 +4312,7 @@ msgstr "প্রদর্শনের আকার"
 msgid "Display Size"
 msgstr "প্রদর্শনের আকার"
 
-#: packages/admin/src/components/Widgets.tsx:144
+#: packages/admin/src/components/Widgets.tsx:145
 msgid "Display tag cloud"
 msgstr "ট্যাগ ক্লাউড দেখান"
 
@@ -4486,7 +4486,7 @@ msgstr "ফাইল এখানে টেনে এনে ছাড়ুন"
 msgid "Drag and drop or click to browse (.xml)"
 msgstr "টেনে এনে ছাড়ুন অথবা ব্রাউজ করতে ক্লিক করুন (.xml)"
 
-#: packages/admin/src/components/Widgets.tsx:702
+#: packages/admin/src/components/Widgets.tsx:703
 msgid "Drag here to add"
 msgstr "যোগ করতে এখানে টেনে আনুন"
 
@@ -4497,7 +4497,7 @@ msgstr "ক্রম পরিবর্তন করতে টানুন"
 #. placeholder {0}: field.label
 #. placeholder {0}: widget.title ?? t`widget`
 #: packages/admin/src/components/ContentTypeEditor.tsx:922
-#: packages/admin/src/components/Widgets.tsx:804
+#: packages/admin/src/components/Widgets.tsx:805
 msgid "Drag to reorder {0}"
 msgstr "{0}-এর ক্রম পরিবর্তন করতে টানুন"
 
@@ -4510,11 +4510,11 @@ msgstr "{label}-এর ক্রম পরিবর্তন করতে টা
 msgid "Drag to reorder block"
 msgstr "ব্লকের ক্রম পরিবর্তন করতে টানুন"
 
-#: packages/admin/src/components/Widgets.tsx:706
+#: packages/admin/src/components/Widgets.tsx:707
 msgid "Drag widgets here to add them"
 msgstr "উইজেট যোগ করতে এখানে টেনে আনুন"
 
-#: packages/admin/src/components/Widgets.tsx:468
+#: packages/admin/src/components/Widgets.tsx:469
 msgid "Drag widgets into an area to add them"
 msgstr "উইজেট যোগ করতে সেগুলো কোনো এরিয়ায় টেনে আনুন"
 
@@ -4534,7 +4534,7 @@ msgstr "আপলোড করতে ফাইল ছাড়ুন"
 msgid "Drop one image at a time."
 msgstr "একবারে একটি ছবি ছাড়ুন।"
 
-#: packages/admin/src/components/Widgets.tsx:702
+#: packages/admin/src/components/Widgets.tsx:703
 msgid "Drop to add widget"
 msgstr "উইজেট যোগ করতে ছাড়ুন"
 
@@ -5032,16 +5032,16 @@ msgstr ""
 #: packages/admin/src/components/MenuEditor.tsx:234
 #: packages/admin/src/components/SetupWizard.tsx:606
 #: packages/admin/src/components/TaxonomyManager.tsx:1207
-#: packages/admin/src/components/Widgets.tsx:771
+#: packages/admin/src/components/Widgets.tsx:772
 #: packages/admin/src/router.tsx:3149
 msgid "Error"
 msgstr "ত্রুটি"
 
-#: packages/admin/src/components/Widgets.tsx:236
+#: packages/admin/src/components/Widgets.tsx:237
 msgid "Error adding widget"
 msgstr "উইজেট যোগ করতে ত্রুটি হয়েছে"
 
-#: packages/admin/src/components/Widgets.tsx:297
+#: packages/admin/src/components/Widgets.tsx:298
 msgid "Error reordering widgets"
 msgstr "উইজেটের ক্রম পরিবর্তন করতে ত্রুটি হয়েছে"
 
@@ -5049,7 +5049,7 @@ msgstr "উইজেটের ক্রম পরিবর্তন করতে
 msgid "Error saving section"
 msgstr "সেকশন সংরক্ষণ করতে ত্রুটি হয়েছে"
 
-#: packages/admin/src/components/Widgets.tsx:786
+#: packages/admin/src/components/Widgets.tsx:787
 msgid "Error updating widget"
 msgstr "উইজেট আপডেট করতে ত্রুটি হয়েছে"
 
@@ -6316,7 +6316,7 @@ msgstr "গ্রুপ"
 msgid "Group (optional)"
 msgstr "গ্রুপ (ঐচ্ছিক)"
 
-#: packages/admin/src/components/Widgets.tsx:162
+#: packages/admin/src/components/Widgets.tsx:163
 msgid "Group by"
 msgstr "গ্রুপ করুন"
 
@@ -7188,7 +7188,7 @@ msgstr "Kotlin"
 #: packages/admin/src/components/MenuEditor.tsx:599
 #: packages/admin/src/components/MenuList.tsx:153
 #: packages/admin/src/components/TaxonomyManager.tsx:1036
-#: packages/admin/src/components/Widgets.tsx:436
+#: packages/admin/src/components/Widgets.tsx:437
 #: packages/admin/src/routes/byline-schema.tsx:234
 msgid "Label"
 msgstr "লেবেল"
@@ -7290,7 +7290,7 @@ msgstr "লাইব্রেরি"
 msgid "License"
 msgstr "লাইসেন্স"
 
-#: packages/admin/src/components/Widgets.tsx:165
+#: packages/admin/src/components/Widgets.tsx:166
 msgid "Limit"
 msgstr "সীমা"
 
@@ -7560,7 +7560,7 @@ msgstr "ইমপোর্ট পরিকল্পনা লোড হচ্ছ
 msgid "Loading usage"
 msgstr "ব্যবহার লোড হচ্ছে"
 
-#: packages/admin/src/components/Widgets.tsx:372
+#: packages/admin/src/components/Widgets.tsx:373
 msgid "Loading widgets..."
 msgstr "উইজেট লোড হচ্ছে..."
 
@@ -7686,7 +7686,7 @@ msgstr "Lua"
 msgid "Main library"
 msgstr "মূল লাইব্রেরি"
 
-#: packages/admin/src/components/Widgets.tsx:436
+#: packages/admin/src/components/Widgets.tsx:437
 msgid "Main Sidebar"
 msgstr "মূল সাইডবার"
 
@@ -7704,7 +7704,7 @@ msgstr "{1}-এর জন্য {0} পরিচালনা করুন"
 msgid "Manage bylines in {entryLocale}"
 msgstr "{entryLocale}-এ বাইলাইন পরিচালনা করুন"
 
-#: packages/admin/src/components/Widgets.tsx:390
+#: packages/admin/src/components/Widgets.tsx:391
 msgid "Manage content widgets in your widget areas"
 msgstr "আপনার উইজেট এলাকায় কনটেন্ট উইজেট পরিচালনা করুন"
 
@@ -7808,7 +7808,7 @@ msgstr ""
 msgid "Maximum blocks"
 msgstr "সর্বোচ্চ ব্লক"
 
-#: packages/admin/src/components/Widgets.tsx:147
+#: packages/admin/src/components/Widgets.tsx:148
 msgid "Maximum tags"
 msgstr "সর্বোচ্চ ট্যাগ"
 
@@ -7920,7 +7920,7 @@ msgid "Medium section heading"
 msgstr "মাঝারি সেকশন হেডিং"
 
 #: packages/admin/src/components/Widgets.tsx:104
-#: packages/admin/src/components/Widgets.tsx:916
+#: packages/admin/src/components/Widgets.tsx:917
 msgid "Menu"
 msgstr "মেনু"
 
@@ -8058,11 +8058,11 @@ msgstr "কালেকশন স্কিমা পরিবর্তন কর
 msgid "Month"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:163
+#: packages/admin/src/components/Widgets.tsx:164
 msgid "Monthly"
 msgstr "মাসিক"
 
-#: packages/admin/src/components/Widgets.tsx:159
+#: packages/admin/src/components/Widgets.tsx:160
 msgid "Monthly/yearly archives"
 msgstr "মাসিক/বার্ষিক আর্কাইভ"
 
@@ -8282,7 +8282,7 @@ msgstr "আমার দারুণ ব্লগ"
 #: packages/admin/src/components/TaxonomyManager.tsx:1462
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
 #: packages/admin/src/components/users/UserDetail.tsx:148
-#: packages/admin/src/components/Widgets.tsx:430
+#: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "নাম"
 
@@ -8868,7 +8868,7 @@ msgstr "আপনার ফিল্টারের সাথে মেলে �
 msgid "No users yet."
 msgstr "এখনও কোনো ব্যবহারকারী নেই।"
 
-#: packages/admin/src/components/Widgets.tsx:505
+#: packages/admin/src/components/Widgets.tsx:506
 msgid "No widget areas yet. Create one to get started."
 msgstr "এখনও কোনো উইজেট এলাকা নেই। শুরু করতে একটি তৈরি করুন।"
 
@@ -9433,7 +9433,7 @@ msgstr ""
 msgid "picks {0}"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:154
+#: packages/admin/src/components/Widgets.tsx:155
 msgid "Placeholder text"
 msgstr "প্লেসহোল্ডার টেক্সট"
 
@@ -10856,7 +10856,7 @@ msgstr "নমুনা কনটেন্ট"
 #: packages/admin/src/components/MenuEditor.tsx:632
 #: packages/admin/src/components/Redirects.tsx:193
 #: packages/admin/src/components/SaveButton.tsx:32
-#: packages/admin/src/components/Widgets.tsx:985
+#: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Save"
 msgstr "সংরক্ষণ করুন"
@@ -10954,7 +10954,7 @@ msgstr ""
 #: packages/admin/src/components/SaveButton.tsx:33
 #: packages/admin/src/components/TaxonomyManager.tsx:889
 #: packages/admin/src/components/users/UserDetail.tsx:311
-#: packages/admin/src/components/Widgets.tsx:985
+#: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
 msgstr "সংরক্ষণ করা হচ্ছে..."
@@ -11093,7 +11093,7 @@ msgstr "SCSS"
 #: packages/admin/src/components/ContentTypeEditor.tsx:107
 #: packages/admin/src/components/Settings.tsx:165
 #: packages/admin/src/components/Settings.tsx:165
-#: packages/admin/src/components/Widgets.tsx:151
+#: packages/admin/src/components/Widgets.tsx:152
 msgid "Search"
 msgstr "অনুসন্ধান"
 
@@ -11189,7 +11189,7 @@ msgstr "একটি ভাষা অনুসন্ধান করুন…"
 msgid "Search for an IANA timezone (e.g., Europe/London)"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:152
+#: packages/admin/src/components/Widgets.tsx:153
 msgid "Search form"
 msgstr "অনুসন্ধান ফর্ম"
 
@@ -11394,7 +11394,7 @@ msgstr "{title} নির্বাচন করুন"
 msgid "Select a collection"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:958
+#: packages/admin/src/components/Widgets.tsx:959
 msgid "Select a component..."
 msgstr "একটি কম্পোনেন্ট নির্বাচন করুন..."
 
@@ -11407,7 +11407,7 @@ msgstr ""
 msgid "Select a location"
 msgstr "একটি লোকেশন নির্বাচন করুন"
 
-#: packages/admin/src/components/Widgets.tsx:921
+#: packages/admin/src/components/Widgets.tsx:922
 msgid "Select a menu..."
 msgstr "একটি মেনু নির্বাচন করুন..."
 
@@ -11728,7 +11728,7 @@ msgstr "ছোট টেক্সট"
 msgid "Short Text"
 msgstr "ছোট টেক্সট"
 
-#: packages/admin/src/components/Widgets.tsx:146
+#: packages/admin/src/components/Widgets.tsx:147
 msgid "Show count"
 msgstr "সংখ্যা দেখান"
 
@@ -11736,11 +11736,11 @@ msgstr "সংখ্যা দেখান"
 msgid "Show date"
 msgstr "তারিখ দেখান"
 
-#: packages/admin/src/components/Widgets.tsx:139
+#: packages/admin/src/components/Widgets.tsx:140
 msgid "Show hierarchy"
 msgstr "স্তরবিন্যাস দেখান"
 
-#: packages/admin/src/components/Widgets.tsx:138
+#: packages/admin/src/components/Widgets.tsx:139
 msgid "Show post count"
 msgstr "পোস্টের সংখ্যা দেখান"
 
@@ -12293,7 +12293,7 @@ msgid "Tagline"
 msgstr "ট্যাগলাইন"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:214
-#: packages/admin/src/components/Widgets.tsx:143
+#: packages/admin/src/components/Widgets.tsx:144
 msgid "Tags"
 msgstr "ট্যাগ"
 
@@ -13200,7 +13200,7 @@ msgstr "এই আপডেটটি প্রমাণীকরণ ছাড়
 msgid "This version is not visible on the site"
 msgstr "এই সংস্করণটি সাইটে দৃশ্যমান নয়"
 
-#: packages/admin/src/components/Widgets.tsx:717
+#: packages/admin/src/components/Widgets.tsx:718
 msgid "This will delete the widget area and all its widgets. This action cannot be undone."
 msgstr "এটি উইজেট এরিয়া এবং এর সব উইজেট মুছে ফেলবে। এটি পূর্বাবস্থায় ফেরানো যাবে না।"
 
@@ -13255,7 +13255,7 @@ msgstr "টাইমজোন"
 #: packages/admin/src/components/ContentList.tsx:907
 #: packages/admin/src/components/SectionEditor.tsx:272
 #: packages/admin/src/components/Sections.tsx:192
-#: packages/admin/src/components/Widgets.tsx:893
+#: packages/admin/src/components/Widgets.tsx:894
 msgid "Title"
 msgstr "শিরোনাম"
 
@@ -13668,8 +13668,8 @@ msgstr "শিরোনামহীন"
 msgid "Untitled file"
 msgstr "শিরোনামহীন ফাইল"
 
-#: packages/admin/src/components/Widgets.tsx:538
-#: packages/admin/src/components/Widgets.tsx:811
+#: packages/admin/src/components/Widgets.tsx:539
+#: packages/admin/src/components/Widgets.tsx:812
 msgid "Untitled Widget"
 msgstr "শিরোনামহীন উইজেট"
 
@@ -13889,6 +13889,10 @@ msgstr "URL প্যাটার্ন"
 #: packages/admin/src/components/BylineCreditsEditor.tsx:1001
 msgid "URL slug"
 msgstr "URL স্লাগ"
+
+#: packages/admin/src/components/Widgets.tsx:132
+msgid "URL template (e.g. /blog/:slug)"
+msgstr ""
 
 #: packages/admin/src/components/ContentTypeEditor.tsx:134
 #: packages/admin/src/components/FieldEditor.tsx:462
@@ -14365,20 +14369,20 @@ msgstr "এটি কেন গুরুত্বপূর্ণ?"
 msgid "Wide"
 msgstr "প্রশস্ত"
 
-#: packages/admin/src/components/Widgets.tsx:804
-#: packages/admin/src/components/Widgets.tsx:819
+#: packages/admin/src/components/Widgets.tsx:805
+#: packages/admin/src/components/Widgets.tsx:820
 msgid "widget"
 msgstr "উইজেট"
 
-#: packages/admin/src/components/Widgets.tsx:232
+#: packages/admin/src/components/Widgets.tsx:233
 msgid "Widget added"
 msgstr "উইজেট যোগ করা হয়েছে"
 
-#: packages/admin/src/components/Widgets.tsx:220
+#: packages/admin/src/components/Widgets.tsx:221
 msgid "Widget area created"
 msgstr "উইজেট এরিয়া তৈরি হয়েছে"
 
-#: packages/admin/src/components/Widgets.tsx:647
+#: packages/admin/src/components/Widgets.tsx:648
 msgid "Widget area deleted"
 msgstr "উইজেট এরিয়া মুছে ফেলা হয়েছে"
 
@@ -14386,15 +14390,15 @@ msgstr "উইজেট এরিয়া মুছে ফেলা হয়�
 msgid "Widget areas"
 msgstr "উইজেট এরিয়া"
 
-#: packages/admin/src/components/Widgets.tsx:767
+#: packages/admin/src/components/Widgets.tsx:768
 msgid "Widget deleted"
 msgstr "উইজেট মুছে ফেলা হয়েছে"
 
-#: packages/admin/src/components/Widgets.tsx:896
+#: packages/admin/src/components/Widgets.tsx:897
 msgid "Widget title"
 msgstr "উইজেটের শিরোনাম"
 
-#: packages/admin/src/components/Widgets.tsx:782
+#: packages/admin/src/components/Widgets.tsx:783
 msgid "Widget updated"
 msgstr "উইজেট আপডেট করা হয়েছে"
 
@@ -14403,7 +14407,7 @@ msgstr "উইজেট আপডেট করা হয়েছে"
 #: packages/admin/src/components/settings/transfer/labels.ts:31
 #: packages/admin/src/components/settings/transfer/labels.ts:91
 #: packages/admin/src/components/Sidebar.tsx:446
-#: packages/admin/src/components/Widgets.tsx:388
+#: packages/admin/src/components/Widgets.tsx:389
 #: packages/admin/src/components/WordPressImport.tsx:1182
 msgid "Widgets"
 msgstr "উইজেট"
@@ -14473,7 +14477,7 @@ msgstr ""
 msgid "Write JavaScript…"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:906
+#: packages/admin/src/components/Widgets.tsx:907
 msgid "Write widget content..."
 msgstr "উইজেটের কনটেন্ট লিখুন..."
 
@@ -14497,7 +14501,7 @@ msgstr "xxxx xxxx xxxx xxxx xxxx xxxx"
 msgid "YAML"
 msgstr "YAML"
 
-#: packages/admin/src/components/Widgets.tsx:163
+#: packages/admin/src/components/Widgets.tsx:164
 msgid "Yearly"
 msgstr "বার্ষিক"
 

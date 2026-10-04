@@ -1349,7 +1349,7 @@ msgstr "분류 항목 추가"
 msgid "Add to posts"
 msgstr "게시물에 추가"
 
-#: packages/admin/src/components/Widgets.tsx:403
+#: packages/admin/src/components/Widgets.tsx:404
 msgid "Add Widget Area"
 msgstr "위젯 영역 추가"
 
@@ -1714,7 +1714,7 @@ msgstr "제한 없음"
 msgid "API Tokens"
 msgstr "API 토큰"
 
-#: packages/admin/src/components/Widgets.tsx:440
+#: packages/admin/src/components/Widgets.tsx:441
 msgid "Appears on posts and pages"
 msgstr "게시물과 페이지에 표시됩니다."
 
@@ -1787,7 +1787,7 @@ msgid "Archived"
 msgstr "보관됨"
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:68
-#: packages/admin/src/components/Widgets.tsx:158
+#: packages/admin/src/components/Widgets.tsx:159
 msgid "Archives"
 msgstr "아카이브"
 
@@ -1978,7 +1978,7 @@ msgstr "{0}에서 사용 가능"
 msgid "Available Providers"
 msgstr "이용 가능한 제공업체"
 
-#: packages/admin/src/components/Widgets.tsx:467
+#: packages/admin/src/components/Widgets.tsx:468
 msgid "Available Widgets"
 msgstr "추가 가능한 위젯"
 
@@ -2346,7 +2346,7 @@ msgstr "콘텐츠 조회 가능"
 #: packages/admin/src/components/TaxonomyManager.tsx:881
 #: packages/admin/src/components/TaxonomyManager.tsx:1099
 #: packages/admin/src/components/users/InviteUserModal.tsx:198
-#: packages/admin/src/components/Widgets.tsx:451
+#: packages/admin/src/components/Widgets.tsx:452
 #: packages/admin/src/components/WordPressImport.tsx:1940
 #: packages/admin/src/routes/bylines.tsx:852
 msgid "Cancel"
@@ -2416,7 +2416,7 @@ msgid "Capture is being prepared. Keep editing paused until setup is complete."
 msgstr "변경 사항 기록을 준비하고 있습니다. 설정이 완료될 때까지 편집을 중단하세요."
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:205
-#: packages/admin/src/components/Widgets.tsx:135
+#: packages/admin/src/components/Widgets.tsx:136
 msgid "Categories"
 msgstr "카테고리"
 
@@ -2810,9 +2810,9 @@ msgstr "{siteName}에 로그인하려면 이 링크를 클릭하세요:"
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
 #: packages/admin/src/components/WelcomeModal.tsx:60
-#: packages/admin/src/components/Widgets.tsx:413
-#: packages/admin/src/components/Widgets.tsx:419
-#: packages/admin/src/components/Widgets.tsx:423
+#: packages/admin/src/components/Widgets.tsx:414
+#: packages/admin/src/components/Widgets.tsx:420
+#: packages/admin/src/components/Widgets.tsx:424
 #: packages/admin/src/routes/bylines.tsx:704
 #: packages/admin/src/routes/bylines.tsx:712
 msgid "Close"
@@ -2981,7 +2981,7 @@ msgstr "완료"
 msgid "Complete signup"
 msgstr "회원가입 완료"
 
-#: packages/admin/src/components/Widgets.tsx:933
+#: packages/admin/src/components/Widgets.tsx:934
 msgid "Component"
 msgstr "컴포넌트"
 
@@ -3053,7 +3053,7 @@ msgstr "콘텐츠"
 #: packages/admin/src/components/PortableTextEditor.tsx:3247
 #: packages/admin/src/components/SectionEditor.tsx:215
 #: packages/admin/src/components/Sidebar.tsx:613
-#: packages/admin/src/components/Widgets.tsx:901
+#: packages/admin/src/components/Widgets.tsx:902
 msgid "Content"
 msgstr "콘텐츠"
 
@@ -3416,7 +3416,7 @@ msgstr "개수"
 #: packages/admin/src/components/MenuList.tsx:185
 #: packages/admin/src/components/Redirects.tsx:194
 #: packages/admin/src/components/TaxonomyManager.tsx:892
-#: packages/admin/src/components/Widgets.tsx:454
+#: packages/admin/src/components/Widgets.tsx:455
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Create"
 msgstr "생성"
@@ -3582,7 +3582,7 @@ msgstr "분류 항목을 만들고 콘텐츠 분류 변경"
 msgid "Create Token"
 msgstr "토큰 만들기"
 
-#: packages/admin/src/components/Widgets.tsx:410
+#: packages/admin/src/components/Widgets.tsx:411
 msgid "Create Widget Area"
 msgstr "위젯 영역 만들기"
 
@@ -3855,7 +3855,7 @@ msgstr "코드에 정의됨"
 #: packages/admin/src/components/settings/BackupSettings.tsx:367
 #: packages/admin/src/components/TaxonomyManager.tsx:1535
 #: packages/admin/src/components/TaxonomyManager.tsx:1551
-#: packages/admin/src/components/Widgets.tsx:718
+#: packages/admin/src/components/Widgets.tsx:719
 #: packages/admin/src/routes/byline-schema.tsx:378
 #: packages/admin/src/routes/bylines.tsx:847
 msgid "Delete"
@@ -3881,7 +3881,7 @@ msgstr "“{0}” 폴더를 삭제할까요?"
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:275
 #: packages/admin/src/components/settings/BackupSettings.tsx:327
 #: packages/admin/src/components/TaxonomyManager.tsx:492
-#: packages/admin/src/components/Widgets.tsx:819
+#: packages/admin/src/components/Widgets.tsx:820
 #: packages/admin/src/routes/byline-schema.tsx:458
 msgid "Delete {0}"
 msgstr "{0} 삭제"
@@ -3897,7 +3897,7 @@ msgid "Delete {0} menu"
 msgstr "{0} 메뉴 삭제"
 
 #. placeholder {0}: area.label
-#: packages/admin/src/components/Widgets.tsx:666
+#: packages/admin/src/components/Widgets.tsx:667
 msgid "Delete {0} widget area"
 msgstr "위젯 영역 {0} 삭제"
 
@@ -4041,7 +4041,7 @@ msgstr "분류 삭제"
 msgid "Delete Taxonomy"
 msgstr "분류 삭제"
 
-#: packages/admin/src/components/Widgets.tsx:716
+#: packages/admin/src/components/Widgets.tsx:717
 msgid "Delete Widget Area?"
 msgstr "위젯 영역을 삭제하시겠습니까?"
 
@@ -4073,7 +4073,7 @@ msgstr "\"{0}\"을(를) 삭제하면 모든 저자 정보에서 {1, plural, one 
 #: packages/admin/src/components/settings/BackupSettings.tsx:368
 #: packages/admin/src/components/TaxonomyManager.tsx:1536
 #: packages/admin/src/components/TaxonomyManager.tsx:1552
-#: packages/admin/src/components/Widgets.tsx:719
+#: packages/admin/src/components/Widgets.tsx:720
 #: packages/admin/src/routes/bylines.tsx:877
 msgid "Deleting..."
 msgstr "삭제 중..."
@@ -4140,7 +4140,7 @@ msgstr "이 섹션의 용도를 설명하세요."
 #: packages/admin/src/components/RegistryPluginDetail.tsx:893
 #: packages/admin/src/components/SectionEditor.tsx:295
 #: packages/admin/src/components/Sections.tsx:221
-#: packages/admin/src/components/Widgets.tsx:438
+#: packages/admin/src/components/Widgets.tsx:439
 msgid "Description"
 msgstr "설명"
 
@@ -4295,7 +4295,7 @@ msgstr "최근 게시물 목록 표시"
 msgid "Display a navigation menu"
 msgstr "탐색 메뉴 표시"
 
-#: packages/admin/src/components/Widgets.tsx:136
+#: packages/admin/src/components/Widgets.tsx:137
 msgid "Display category list"
 msgstr "카테고리 목록 표시"
 
@@ -4312,7 +4312,7 @@ msgstr "표시 크기"
 msgid "Display Size"
 msgstr "표시 크기"
 
-#: packages/admin/src/components/Widgets.tsx:144
+#: packages/admin/src/components/Widgets.tsx:145
 msgid "Display tag cloud"
 msgstr "태그 클라우드 표시"
 
@@ -4486,7 +4486,7 @@ msgstr "파일을 여기로 끌어다 놓으세요"
 msgid "Drag and drop or click to browse (.xml)"
 msgstr "끌어서 놓거나 클릭하여 찾아보세요(.xml)."
 
-#: packages/admin/src/components/Widgets.tsx:702
+#: packages/admin/src/components/Widgets.tsx:703
 msgid "Drag here to add"
 msgstr "여기로 드래그하여 추가하세요."
 
@@ -4497,7 +4497,7 @@ msgstr "드래그하여 순서 변경"
 #. placeholder {0}: field.label
 #. placeholder {0}: widget.title ?? t`widget`
 #: packages/admin/src/components/ContentTypeEditor.tsx:922
-#: packages/admin/src/components/Widgets.tsx:804
+#: packages/admin/src/components/Widgets.tsx:805
 msgid "Drag to reorder {0}"
 msgstr "드래그하여 {0} 순서 변경"
 
@@ -4510,11 +4510,11 @@ msgstr "{label} 항목을 드래그하여 순서 변경"
 msgid "Drag to reorder block"
 msgstr "블록을 드래그하여 순서 변경"
 
-#: packages/admin/src/components/Widgets.tsx:706
+#: packages/admin/src/components/Widgets.tsx:707
 msgid "Drag widgets here to add them"
 msgstr "위젯을 여기로 드래그하여 추가하세요."
 
-#: packages/admin/src/components/Widgets.tsx:468
+#: packages/admin/src/components/Widgets.tsx:469
 msgid "Drag widgets into an area to add them"
 msgstr "위젯을 영역으로 드래그하여 추가하세요."
 
@@ -4534,7 +4534,7 @@ msgstr "파일을 끌어다 놓아 업로드하세요"
 msgid "Drop one image at a time."
 msgstr "이미지는 한 번에 하나씩 놓으세요."
 
-#: packages/admin/src/components/Widgets.tsx:702
+#: packages/admin/src/components/Widgets.tsx:703
 msgid "Drop to add widget"
 msgstr "놓아서 위젯을 추가하세요."
 
@@ -5032,16 +5032,16 @@ msgstr "연결하는 쪽 항목"
 #: packages/admin/src/components/MenuEditor.tsx:234
 #: packages/admin/src/components/SetupWizard.tsx:606
 #: packages/admin/src/components/TaxonomyManager.tsx:1207
-#: packages/admin/src/components/Widgets.tsx:771
+#: packages/admin/src/components/Widgets.tsx:772
 #: packages/admin/src/router.tsx:3149
 msgid "Error"
 msgstr "오류"
 
-#: packages/admin/src/components/Widgets.tsx:236
+#: packages/admin/src/components/Widgets.tsx:237
 msgid "Error adding widget"
 msgstr "위젯을 추가하는 중에 오류가 발생했습니다."
 
-#: packages/admin/src/components/Widgets.tsx:297
+#: packages/admin/src/components/Widgets.tsx:298
 msgid "Error reordering widgets"
 msgstr "위젯 순서를 변경하는 중에 오류가 발생했습니다."
 
@@ -5049,7 +5049,7 @@ msgstr "위젯 순서를 변경하는 중에 오류가 발생했습니다."
 msgid "Error saving section"
 msgstr "섹션을 저장하는 중에 오류가 발생했습니다."
 
-#: packages/admin/src/components/Widgets.tsx:786
+#: packages/admin/src/components/Widgets.tsx:787
 msgid "Error updating widget"
 msgstr "위젯을 업데이트하는 중에 오류가 발생했습니다."
 
@@ -6316,7 +6316,7 @@ msgstr "그룹"
 msgid "Group (optional)"
 msgstr "그룹(선택 사항)"
 
-#: packages/admin/src/components/Widgets.tsx:162
+#: packages/admin/src/components/Widgets.tsx:163
 msgid "Group by"
 msgstr "묶음 기준"
 
@@ -7188,7 +7188,7 @@ msgstr "Kotlin"
 #: packages/admin/src/components/MenuEditor.tsx:599
 #: packages/admin/src/components/MenuList.tsx:153
 #: packages/admin/src/components/TaxonomyManager.tsx:1036
-#: packages/admin/src/components/Widgets.tsx:436
+#: packages/admin/src/components/Widgets.tsx:437
 #: packages/admin/src/routes/byline-schema.tsx:234
 msgid "Label"
 msgstr "라벨"
@@ -7290,7 +7290,7 @@ msgstr "라이브러리"
 msgid "License"
 msgstr "라이선스"
 
-#: packages/admin/src/components/Widgets.tsx:165
+#: packages/admin/src/components/Widgets.tsx:166
 msgid "Limit"
 msgstr "최대 표시 개수"
 
@@ -7560,7 +7560,7 @@ msgstr "가져오기 계획 불러오는 중…"
 msgid "Loading usage"
 msgstr "사용 현황을 불러오는 중"
 
-#: packages/admin/src/components/Widgets.tsx:372
+#: packages/admin/src/components/Widgets.tsx:373
 msgid "Loading widgets..."
 msgstr "위젯 로드 중..."
 
@@ -7686,7 +7686,7 @@ msgstr "Lua"
 msgid "Main library"
 msgstr "메인 라이브러리"
 
-#: packages/admin/src/components/Widgets.tsx:436
+#: packages/admin/src/components/Widgets.tsx:437
 msgid "Main Sidebar"
 msgstr "메인 사이드바"
 
@@ -7704,7 +7704,7 @@ msgstr "{1}에 대한 {0} 관리"
 msgid "Manage bylines in {entryLocale}"
 msgstr "{entryLocale} 저자 정보 관리"
 
-#: packages/admin/src/components/Widgets.tsx:390
+#: packages/admin/src/components/Widgets.tsx:391
 msgid "Manage content widgets in your widget areas"
 msgstr "위젯 영역에 배치할 콘텐츠 위젯을 관리합니다."
 
@@ -7808,7 +7808,7 @@ msgstr "최대 개수"
 msgid "Maximum blocks"
 msgstr "최대 블록 수"
 
-#: packages/admin/src/components/Widgets.tsx:147
+#: packages/admin/src/components/Widgets.tsx:148
 msgid "Maximum tags"
 msgstr "최대 태그 수"
 
@@ -7920,7 +7920,7 @@ msgid "Medium section heading"
 msgstr "중간 섹션 제목"
 
 #: packages/admin/src/components/Widgets.tsx:104
-#: packages/admin/src/components/Widgets.tsx:916
+#: packages/admin/src/components/Widgets.tsx:917
 msgid "Menu"
 msgstr "메뉴"
 
@@ -8058,11 +8058,11 @@ msgstr "컬렉션 스키마 수정"
 msgid "Month"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:163
+#: packages/admin/src/components/Widgets.tsx:164
 msgid "Monthly"
 msgstr "월별"
 
-#: packages/admin/src/components/Widgets.tsx:159
+#: packages/admin/src/components/Widgets.tsx:160
 msgid "Monthly/yearly archives"
 msgstr "월별·연도별 아카이브"
 
@@ -8282,7 +8282,7 @@ msgstr "내 멋진 블로그"
 #: packages/admin/src/components/TaxonomyManager.tsx:1462
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
 #: packages/admin/src/components/users/UserDetail.tsx:148
-#: packages/admin/src/components/Widgets.tsx:430
+#: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "이름"
 
@@ -8868,7 +8868,7 @@ msgstr "필터 조건에 맞는 사용자가 없습니다."
 msgid "No users yet."
 msgstr "아직 사용자가 없습니다."
 
-#: packages/admin/src/components/Widgets.tsx:505
+#: packages/admin/src/components/Widgets.tsx:506
 msgid "No widget areas yet. Create one to get started."
 msgstr "아직 위젯 영역이 없습니다. 시작하려면 영역을 만드세요."
 
@@ -9433,7 +9433,7 @@ msgstr "이 항목이 연결하는 항목을 선택하면 편집자가 드래그
 msgid "picks {0}"
 msgstr "{0} 항목 선택"
 
-#: packages/admin/src/components/Widgets.tsx:154
+#: packages/admin/src/components/Widgets.tsx:155
 msgid "Placeholder text"
 msgstr "플레이스홀더 텍스트"
 
@@ -10856,7 +10856,7 @@ msgstr "샘플 콘텐츠"
 #: packages/admin/src/components/MenuEditor.tsx:632
 #: packages/admin/src/components/Redirects.tsx:193
 #: packages/admin/src/components/SaveButton.tsx:32
-#: packages/admin/src/components/Widgets.tsx:985
+#: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Save"
 msgstr "저장"
@@ -10954,7 +10954,7 @@ msgstr "여기서 컬렉션을 선택하고 저장하면 이 필드가 항목 �
 #: packages/admin/src/components/SaveButton.tsx:33
 #: packages/admin/src/components/TaxonomyManager.tsx:889
 #: packages/admin/src/components/users/UserDetail.tsx:311
-#: packages/admin/src/components/Widgets.tsx:985
+#: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
 msgstr "저장 중..."
@@ -11093,7 +11093,7 @@ msgstr "SCSS"
 #: packages/admin/src/components/ContentTypeEditor.tsx:107
 #: packages/admin/src/components/Settings.tsx:165
 #: packages/admin/src/components/Settings.tsx:165
-#: packages/admin/src/components/Widgets.tsx:151
+#: packages/admin/src/components/Widgets.tsx:152
 msgid "Search"
 msgstr "검색"
 
@@ -11189,7 +11189,7 @@ msgstr "언어 검색…"
 msgid "Search for an IANA timezone (e.g., Europe/London)"
 msgstr "IANA 시간대를 검색하세요(예: Europe/London)"
 
-#: packages/admin/src/components/Widgets.tsx:152
+#: packages/admin/src/components/Widgets.tsx:153
 msgid "Search form"
 msgstr "검색 폼"
 
@@ -11394,7 +11394,7 @@ msgstr "{title} 선택"
 msgid "Select a collection"
 msgstr "컬렉션 선택"
 
-#: packages/admin/src/components/Widgets.tsx:958
+#: packages/admin/src/components/Widgets.tsx:959
 msgid "Select a component..."
 msgstr "컴포넌트를 선택하세요..."
 
@@ -11407,7 +11407,7 @@ msgstr "콘텐츠 유형 선택"
 msgid "Select a location"
 msgstr "저장 위치 선택"
 
-#: packages/admin/src/components/Widgets.tsx:921
+#: packages/admin/src/components/Widgets.tsx:922
 msgid "Select a menu..."
 msgstr "메뉴를 선택하세요..."
 
@@ -11728,7 +11728,7 @@ msgstr "짧은 텍스트"
 msgid "Short Text"
 msgstr "짧은 텍스트"
 
-#: packages/admin/src/components/Widgets.tsx:146
+#: packages/admin/src/components/Widgets.tsx:147
 msgid "Show count"
 msgstr "개수 표시"
 
@@ -11736,11 +11736,11 @@ msgstr "개수 표시"
 msgid "Show date"
 msgstr "날짜 표시"
 
-#: packages/admin/src/components/Widgets.tsx:139
+#: packages/admin/src/components/Widgets.tsx:140
 msgid "Show hierarchy"
 msgstr "계층 구조 표시"
 
-#: packages/admin/src/components/Widgets.tsx:138
+#: packages/admin/src/components/Widgets.tsx:139
 msgid "Show post count"
 msgstr "게시물 수 표시"
 
@@ -12293,7 +12293,7 @@ msgid "Tagline"
 msgstr "사이트 설명"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:214
-#: packages/admin/src/components/Widgets.tsx:143
+#: packages/admin/src/components/Widgets.tsx:144
 msgid "Tags"
 msgstr "태그"
 
@@ -13200,7 +13200,7 @@ msgstr "이 업데이트는 다음 라우트를 인증 없이 공개합니다:"
 msgid "This version is not visible on the site"
 msgstr "이 버전은 사이트에 표시되지 않습니다"
 
-#: packages/admin/src/components/Widgets.tsx:717
+#: packages/admin/src/components/Widgets.tsx:718
 msgid "This will delete the widget area and all its widgets. This action cannot be undone."
 msgstr "위젯 영역과 그 안의 모든 위젯이 삭제됩니다. 이 작업은 되돌릴 수 없습니다."
 
@@ -13255,7 +13255,7 @@ msgstr "시간대"
 #: packages/admin/src/components/ContentList.tsx:907
 #: packages/admin/src/components/SectionEditor.tsx:272
 #: packages/admin/src/components/Sections.tsx:192
-#: packages/admin/src/components/Widgets.tsx:893
+#: packages/admin/src/components/Widgets.tsx:894
 msgid "Title"
 msgstr "제목"
 
@@ -13668,8 +13668,8 @@ msgstr "제목 없음"
 msgid "Untitled file"
 msgstr "제목 없는 파일"
 
-#: packages/admin/src/components/Widgets.tsx:538
-#: packages/admin/src/components/Widgets.tsx:811
+#: packages/admin/src/components/Widgets.tsx:539
+#: packages/admin/src/components/Widgets.tsx:812
 msgid "Untitled Widget"
 msgstr "제목 없는 위젯"
 
@@ -13889,6 +13889,10 @@ msgstr "URL 패턴"
 #: packages/admin/src/components/BylineCreditsEditor.tsx:1001
 msgid "URL slug"
 msgstr "URL 슬러그"
+
+#: packages/admin/src/components/Widgets.tsx:132
+msgid "URL template (e.g. /blog/:slug)"
+msgstr ""
 
 #: packages/admin/src/components/ContentTypeEditor.tsx:134
 #: packages/admin/src/components/FieldEditor.tsx:462
@@ -14365,20 +14369,20 @@ msgstr "대체 텍스트가 중요한 이유"
 msgid "Wide"
 msgstr "넓게"
 
-#: packages/admin/src/components/Widgets.tsx:804
-#: packages/admin/src/components/Widgets.tsx:819
+#: packages/admin/src/components/Widgets.tsx:805
+#: packages/admin/src/components/Widgets.tsx:820
 msgid "widget"
 msgstr "위젯"
 
-#: packages/admin/src/components/Widgets.tsx:232
+#: packages/admin/src/components/Widgets.tsx:233
 msgid "Widget added"
 msgstr "위젯이 추가되었습니다."
 
-#: packages/admin/src/components/Widgets.tsx:220
+#: packages/admin/src/components/Widgets.tsx:221
 msgid "Widget area created"
 msgstr "위젯 영역이 생성되었습니다."
 
-#: packages/admin/src/components/Widgets.tsx:647
+#: packages/admin/src/components/Widgets.tsx:648
 msgid "Widget area deleted"
 msgstr "위젯 영역이 삭제되었습니다."
 
@@ -14386,15 +14390,15 @@ msgstr "위젯 영역이 삭제되었습니다."
 msgid "Widget areas"
 msgstr "위젯 영역"
 
-#: packages/admin/src/components/Widgets.tsx:767
+#: packages/admin/src/components/Widgets.tsx:768
 msgid "Widget deleted"
 msgstr "위젯이 삭제되었습니다."
 
-#: packages/admin/src/components/Widgets.tsx:896
+#: packages/admin/src/components/Widgets.tsx:897
 msgid "Widget title"
 msgstr "위젯 제목"
 
-#: packages/admin/src/components/Widgets.tsx:782
+#: packages/admin/src/components/Widgets.tsx:783
 msgid "Widget updated"
 msgstr "위젯이 업데이트되었습니다."
 
@@ -14403,7 +14407,7 @@ msgstr "위젯이 업데이트되었습니다."
 #: packages/admin/src/components/settings/transfer/labels.ts:31
 #: packages/admin/src/components/settings/transfer/labels.ts:91
 #: packages/admin/src/components/Sidebar.tsx:446
-#: packages/admin/src/components/Widgets.tsx:388
+#: packages/admin/src/components/Widgets.tsx:389
 #: packages/admin/src/components/WordPressImport.tsx:1182
 msgid "Widgets"
 msgstr "위젯"
@@ -14473,7 +14477,7 @@ msgstr ""
 msgid "Write JavaScript…"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:906
+#: packages/admin/src/components/Widgets.tsx:907
 msgid "Write widget content..."
 msgstr "위젯 콘텐츠를 입력하세요..."
 
@@ -14497,7 +14501,7 @@ msgstr "xxxx xxxx xxxx xxxx xxxx xxxx"
 msgid "YAML"
 msgstr "YAML"
 
-#: packages/admin/src/components/Widgets.tsx:163
+#: packages/admin/src/components/Widgets.tsx:164
 msgid "Yearly"
 msgstr "연도별"
 
