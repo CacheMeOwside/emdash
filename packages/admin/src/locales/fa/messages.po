@@ -63,12 +63,12 @@ msgid "{0, plural, one {(# item)} other {(# items)}}"
 msgstr "{0, plural, one {(# مورد)} other {(# مورد)}}"
 
 #. placeholder {0}: bounds.max
-#: packages/admin/src/components/ContentEditor.tsx:2875
+#: packages/admin/src/components/ContentEditor.tsx:2887
 msgid "{0, plural, one {{counted} of # character, at least {min}} other {{counted} of # characters, at least {min}}}"
 msgstr ""
 
 #. placeholder {0}: bounds.max
-#: packages/admin/src/components/ContentEditor.tsx:2880
+#: packages/admin/src/components/ContentEditor.tsx:2892
 msgid "{0, plural, one {{counted} of # character} other {{counted} of # characters}}"
 msgstr ""
 
@@ -255,7 +255,7 @@ msgid "{0, plural, one {Add # image} other {Add # images}}"
 msgstr ""
 
 #. placeholder {0}: bounds.min
-#: packages/admin/src/components/ContentEditor.tsx:2885
+#: packages/admin/src/components/ContentEditor.tsx:2897
 msgid "{0, plural, one {At least # character} other {At least # characters}}"
 msgstr ""
 
@@ -1005,7 +1005,7 @@ msgstr ""
 msgid "A publication time has not been selected"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:1200
+#: packages/admin/src/components/ContentEditor.tsx:1212
 msgid "A publishing action is already in progress"
 msgstr ""
 
@@ -1303,8 +1303,8 @@ msgstr "افزودن تگ متای noindex"
 msgid "Add Passkey"
 msgstr "افزودن شاه‌کلید"
 
-#: packages/admin/src/components/ContentEditor.tsx:2797
-#: packages/admin/src/components/ContentEditor.tsx:2797
+#: packages/admin/src/components/ContentEditor.tsx:2809
+#: packages/admin/src/components/ContentEditor.tsx:2809
 msgid "Add reference"
 msgstr ""
 
@@ -1836,11 +1836,11 @@ msgstr ""
 msgid "Astro"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:2908
+#: packages/admin/src/components/ContentEditor.tsx:2920
 msgid "At least {min}"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:2905
+#: packages/admin/src/components/ContentEditor.tsx:2917
 msgid "At most {max}"
 msgstr ""
 
@@ -2009,7 +2009,7 @@ msgstr ""
 msgid "Back"
 msgstr "بازگشت"
 
-#: packages/admin/src/components/ContentEditor.tsx:1441
+#: packages/admin/src/components/ContentEditor.tsx:1453
 msgid "Back to {collectionLabel} list"
 msgstr "بازگشت به لیست {collectionLabel}"
 
@@ -2101,7 +2101,7 @@ msgstr "قبل از ارسال:"
 msgid "Before you continue:"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:2902
+#: packages/admin/src/components/ContentEditor.tsx:2914
 msgid "Between {min} and {max}"
 msgstr ""
 
@@ -2840,7 +2840,7 @@ msgstr ""
 msgid "Close panel"
 msgstr "بستن پنل"
 
-#: packages/admin/src/components/ContentEditor.tsx:2045
+#: packages/admin/src/components/ContentEditor.tsx:2057
 msgid "Close settings"
 msgstr ""
 
@@ -3331,7 +3331,7 @@ msgstr ""
 msgid "Couldn't detect WordPress"
 msgstr "وردپرس شناسایی نشد"
 
-#: packages/admin/src/components/ContentEditor.tsx:2776
+#: packages/admin/src/components/ContentEditor.tsx:2788
 msgid "Couldn't load all references."
 msgstr ""
 
@@ -4322,7 +4322,7 @@ msgstr ""
 msgid "Displayed below the image as a visible caption."
 msgstr "به‌عنوان زیرنویس قابل مشاهده زیر تصویر نمایش داده می‌شود."
 
-#: packages/admin/src/components/ContentEditor.tsx:1536
+#: packages/admin/src/components/ContentEditor.tsx:1548
 msgid "Distraction-free mode (⌘⇧\\)"
 msgstr "حالت بدون حواس‌پرتی (⌘⇧\\)"
 
@@ -4622,7 +4622,7 @@ msgstr "ویرایش {0}"
 msgid "Edit {0} field"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:1448
+#: packages/admin/src/components/ContentEditor.tsx:1460
 msgid "Edit {itemLabel}"
 msgstr ""
 
@@ -4954,7 +4954,7 @@ msgstr ""
 msgid "Enter a URL (https://…) or a relative path (/…)"
 msgstr "یک آدرس (https://…) یا یک مسیر نسبی (/…) وارد کنید"
 
-#: packages/admin/src/components/ContentEditor.tsx:2950
+#: packages/admin/src/components/ContentEditor.tsx:2962
 msgid "Enter a valid URL (e.g. https://example.com)"
 msgstr "یک آدرس وب (URL) معتبر وارد کنید (مثلاً https://example.com)"
 
@@ -4962,7 +4962,7 @@ msgstr "یک آدرس وب (URL) معتبر وارد کنید (مثلاً https:
 msgid "Enter credentials manually"
 msgstr "اطلاعات ورود را به‌صورت دستی وارد کنید"
 
-#: packages/admin/src/components/ContentEditor.tsx:1535
+#: packages/admin/src/components/ContentEditor.tsx:1547
 msgid "Enter distraction-free mode"
 msgstr "ورود به حالت بدون حواس‌پرتی"
 
@@ -4970,7 +4970,7 @@ msgstr "ورود به حالت بدون حواس‌پرتی"
 msgid "Enter email"
 msgstr "ایمیل را وارد کنید"
 
-#: packages/admin/src/components/ContentEditor.tsx:2294
+#: packages/admin/src/components/ContentEditor.tsx:2306
 msgid "Enter markdown content..."
 msgstr "محتوای ی markdown را وارد کنید..."
 
@@ -5101,11 +5101,11 @@ msgstr ""
 msgid "Exists"
 msgstr "وجود دارد"
 
-#: packages/admin/src/components/ContentEditor.tsx:1610
+#: packages/admin/src/components/ContentEditor.tsx:1622
 msgid "Exit distraction-free mode"
 msgstr "خروج از حالت بدون حواس‌پرتی"
 
-#: packages/admin/src/components/ContentEditor.tsx:1611
+#: packages/admin/src/components/ContentEditor.tsx:1623
 msgid "Exit distraction-free mode (⌘⇧\\)"
 msgstr ""
 
@@ -5442,7 +5442,7 @@ msgstr ""
 msgid "Failed to execute import"
 msgstr ""
 
-#: packages/admin/src/lib/api/client.ts:366
+#: packages/admin/src/lib/api/client.ts:368
 msgid "Failed to fetch auth mode"
 msgstr ""
 
@@ -5467,7 +5467,7 @@ msgstr ""
 msgid "Failed to fetch entry terms"
 msgstr ""
 
-#: packages/admin/src/lib/api/client.ts:349
+#: packages/admin/src/lib/api/client.ts:351
 msgid "Failed to fetch manifest"
 msgstr ""
 
@@ -6106,11 +6106,11 @@ msgstr ""
 msgid "First-time commenters only"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:1260
+#: packages/admin/src/components/ContentEditor.tsx:1272
 msgid "Fix invalid fields before changing the publication date"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:1204
+#: packages/admin/src/components/ContentEditor.tsx:1216
 msgid "Fix invalid fields before changing the schedule"
 msgstr ""
 
@@ -6453,7 +6453,7 @@ msgstr "بازدید"
 msgid "Hold an entry while someone is editing it, and refuse other writers"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:2467
+#: packages/admin/src/components/ContentEditor.tsx:2479
 msgid "Holds an entry ID. Set a target collection under Content Types to pick entries instead."
 msgstr ""
 
@@ -7006,7 +7006,7 @@ msgstr ""
 msgid "Invalid invite link"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:3021
+#: packages/admin/src/components/ContentEditor.tsx:3033
 msgid "Invalid JSON"
 msgstr "JSON نامعتبر"
 
@@ -7393,8 +7393,8 @@ msgstr "نمای لیستی"
 msgid "Live version"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:1496
-#: packages/admin/src/components/ContentEditor.tsx:1560
+#: packages/admin/src/components/ContentEditor.tsx:1508
+#: packages/admin/src/components/ContentEditor.tsx:1572
 #: packages/admin/src/components/ContentSettingsPanel.tsx:647
 msgid "Live View"
 msgstr "نمای زنده"
@@ -7521,7 +7521,7 @@ msgstr ""
 msgid "Loading redirects..."
 msgstr "در حال بارگذاری    تغییر مسیر‌ها..."
 
-#: packages/admin/src/components/ContentEditor.tsx:2784
+#: packages/admin/src/components/ContentEditor.tsx:2796
 msgid "Loading references..."
 msgstr ""
 
@@ -8121,7 +8121,7 @@ msgstr "انتقال «{title}» به سطل زباله؟ می‌توانید ب
 #. placeholder {0}: blockType.label
 #. placeholder {0}: referenceRowLabel(row)
 #. placeholder {0}: term.label
-#: packages/admin/src/components/ContentEditor.tsx:2751
+#: packages/admin/src/components/ContentEditor.tsx:2763
 #: packages/admin/src/components/FieldEditor.tsx:1129
 #: packages/admin/src/components/TaxonomyManager.tsx:463
 msgid "Move {0} down"
@@ -8145,7 +8145,7 @@ msgstr ""
 #. placeholder {0}: blockType.label
 #. placeholder {0}: referenceRowLabel(row)
 #. placeholder {0}: term.label
-#: packages/admin/src/components/ContentEditor.tsx:2740
+#: packages/admin/src/components/ContentEditor.tsx:2752
 #: packages/admin/src/components/FieldEditor.tsx:1112
 #: packages/admin/src/components/TaxonomyManager.tsx:450
 msgid "Move {0} up"
@@ -8330,7 +8330,7 @@ msgstr ""
 msgid "NEW"
 msgstr "جدید"
 
-#: packages/admin/src/components/ContentEditor.tsx:1448
+#: packages/admin/src/components/ContentEditor.tsx:1460
 msgid "New {itemLabel}"
 msgstr ""
 
@@ -8794,7 +8794,7 @@ msgstr "فعالیت اخیری نیست"
 msgid "No redirects yet"
 msgstr "هنوز    تغییر مسیری نیست"
 
-#: packages/admin/src/components/ContentEditor.tsx:2696
+#: packages/admin/src/components/ContentEditor.tsx:2708
 msgid "No references selected."
 msgstr ""
 
@@ -9016,7 +9016,7 @@ msgid "Open"
 msgstr ""
 
 #. placeholder {0}: referenceRowLabel(row)
-#: packages/admin/src/components/ContentEditor.tsx:2729
+#: packages/admin/src/components/ContentEditor.tsx:2741
 msgid "Open {0} in a new tab"
 msgstr ""
 
@@ -9479,7 +9479,7 @@ msgstr ""
 msgid "Plugin actions"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:1628
+#: packages/admin/src/components/ContentEditor.tsx:1640
 msgid "Plugin changes were not applied"
 msgstr ""
 
@@ -10190,7 +10190,7 @@ msgstr ""
 
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:84
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:115
-#: packages/admin/src/components/ContentEditor.tsx:3182
+#: packages/admin/src/components/ContentEditor.tsx:3194
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:473
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:357
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:813
@@ -10210,7 +10210,7 @@ msgstr "حذف"
 #. placeholder {0}: job.file.name
 #. placeholder {0}: option.term.label
 #. placeholder {0}: passkey.name
-#: packages/admin/src/components/ContentEditor.tsx:2764
+#: packages/admin/src/components/ContentEditor.tsx:2776
 #: packages/admin/src/components/media/MediaBrowserItems.tsx:219
 #: packages/admin/src/components/MediaUploadDialog.tsx:144
 #: packages/admin/src/components/settings/PasskeyItem.tsx:161
@@ -10227,7 +10227,7 @@ msgstr ""
 msgid "Remove {entry}"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:3180
+#: packages/admin/src/components/ContentEditor.tsx:3192
 msgid "Remove {label}"
 msgstr ""
 
@@ -10357,8 +10357,8 @@ msgstr "گروه تکرارشونده فیلدها"
 msgid "visualEditing.replaceImage"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:3172
-#: packages/admin/src/components/ContentEditor.tsx:3209
+#: packages/admin/src/components/ContentEditor.tsx:3184
+#: packages/admin/src/components/ContentEditor.tsx:3221
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:449
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:506
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:298
@@ -10373,7 +10373,7 @@ msgstr ""
 msgid "Replace"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:3208
+#: packages/admin/src/components/ContentEditor.tsx:3220
 #: packages/admin/src/components/ImageFieldRenderer.tsx:577
 msgid "Replace {label}"
 msgstr ""
@@ -10408,7 +10408,7 @@ msgstr ""
 msgid "Replace original is available with the Original aspect ratio."
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:2797
+#: packages/admin/src/components/ContentEditor.tsx:2809
 msgid "Replace reference"
 msgstr ""
 
@@ -10443,7 +10443,7 @@ msgstr "مخزن"
 msgid "Request a new link"
 msgstr "درخواست لینک جدید"
 
-#: packages/admin/src/lib/api/client.ts:337
+#: packages/admin/src/lib/api/client.ts:339
 msgid "Request failed"
 msgstr ""
 
@@ -10538,7 +10538,7 @@ msgstr ""
 msgid "Resize crop from top-right corner. Use the Arrow keys to resize."
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:1867
+#: packages/admin/src/components/ContentEditor.tsx:1879
 msgid "Resize settings panel"
 msgstr ""
 
@@ -10594,7 +10594,7 @@ msgid "Retired"
 msgstr ""
 
 #: packages/admin/src/components/BylineCreditsEditor.tsx:475
-#: packages/admin/src/components/ContentEditor.tsx:2778
+#: packages/admin/src/components/ContentEditor.tsx:2790
 #: packages/admin/src/components/ContentPickerModal.tsx:278
 #: packages/admin/src/components/MarketplaceBrowse.tsx:143
 #: packages/admin/src/components/media/MediaBrowserItems.tsx:217
@@ -10865,7 +10865,7 @@ msgstr ""
 msgid "Save alt text"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:1654
+#: packages/admin/src/components/ContentEditor.tsx:1666
 msgid "Save anyway"
 msgstr ""
 
@@ -11376,8 +11376,8 @@ msgid "Select"
 msgstr "انتخاب"
 
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:140
-#: packages/admin/src/components/ContentEditor.tsx:3192
-#: packages/admin/src/components/ContentEditor.tsx:3208
+#: packages/admin/src/components/ContentEditor.tsx:3204
+#: packages/admin/src/components/ContentEditor.tsx:3220
 #: packages/admin/src/components/ImageFieldRenderer.tsx:578
 msgid "Select {label}"
 msgstr "انتخاب {label}"
@@ -11423,7 +11423,7 @@ msgstr "انتخاب همه"
 msgid "Select all on this page"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:2692
+#: packages/admin/src/components/ContentEditor.tsx:2704
 msgid "Select at least one entry."
 msgstr ""
 
@@ -11456,7 +11456,7 @@ msgstr ""
 msgid "Select Favicon"
 msgstr "انتخاب فاوآیکون"
 
-#: packages/admin/src/components/ContentEditor.tsx:3196
+#: packages/admin/src/components/ContentEditor.tsx:3208
 #: packages/admin/src/components/MediaPickerModal.tsx:228
 msgid "Select file"
 msgstr ""
@@ -11674,8 +11674,8 @@ msgid "Setting up..."
 msgstr "در حال راه‌اندازی..."
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:247
-#: packages/admin/src/components/ContentEditor.tsx:1717
-#: packages/admin/src/components/ContentEditor.tsx:2031
+#: packages/admin/src/components/ContentEditor.tsx:1729
+#: packages/admin/src/components/ContentEditor.tsx:2043
 #: packages/admin/src/components/ContentTypeEditor.tsx:460
 #: packages/admin/src/components/Header.tsx:102
 #: packages/admin/src/components/PluginManager.tsx:530
@@ -12122,7 +12122,7 @@ msgstr ""
 msgid "Start with the template’s example posts and pages. Recommended for new sites."
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:2258
+#: packages/admin/src/components/ContentEditor.tsx:2270
 #: packages/admin/src/components/PortableTextEditor.tsx:3046
 #: packages/admin/src/components/PortableTextEditor.tsx:3047
 msgid "Start writing, or type '/' for commands"
@@ -12704,8 +12704,8 @@ msgstr ""
 msgid "The plugin has not saved these changes. Review them before updating the editor."
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:927
-#: packages/admin/src/components/ContentEditor.tsx:943
+#: packages/admin/src/components/ContentEditor.tsx:939
+#: packages/admin/src/components/ContentEditor.tsx:955
 msgid "The plugin result is stale because the editor changed while it was working."
 msgstr ""
 
@@ -12883,11 +12883,11 @@ msgstr ""
 msgid "This doesn't look like a valid migration key. Generate a new one in the plugin and paste the full string starting with \"em1.\"."
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:1650
+#: packages/admin/src/components/ContentEditor.tsx:1662
 msgid "This entry changed somewhere else after you opened it."
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:1210
+#: packages/admin/src/components/ContentEditor.tsx:1222
 #: packages/admin/src/router.tsx:984
 msgid "This entry changed somewhere else. Save anyway, or reload to get the newer version."
 msgstr ""
@@ -12900,7 +12900,7 @@ msgstr ""
 msgid "This entry is open somewhere else"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:1637
+#: packages/admin/src/components/ContentEditor.tsx:1649
 msgid "This entry is read-only because its schema uses field types this version of EmDash does not support."
 msgstr ""
 
@@ -12912,7 +12912,7 @@ msgstr ""
 msgid "This export is large"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:2118
+#: packages/admin/src/components/ContentEditor.tsx:2130
 msgid "This field cannot be edited by this version of EmDash."
 msgstr ""
 
@@ -12937,7 +12937,7 @@ msgstr ""
 msgid "This field expects a list. The stored value stays unchanged until you replace it with an empty list, which deletes it. Copy anything you need from it first."
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:3212
+#: packages/admin/src/components/ContentEditor.tsx:3224
 #: packages/admin/src/components/ImageFieldRenderer.tsx:597
 msgid "This field is required"
 msgstr "این فیلد الزامی است"
@@ -13660,7 +13660,7 @@ msgstr ""
 msgid "Untitled"
 msgstr "بی‌نام"
 
-#: packages/admin/src/components/ContentEditor.tsx:3114
+#: packages/admin/src/components/ContentEditor.tsx:3126
 msgid "Untitled file"
 msgstr ""
 
@@ -13979,7 +13979,7 @@ msgstr ""
 msgid "Used as the identifier. Lowercase letters, numbers, and underscores only."
 msgstr "به‌عنوان شناسه استفاده می‌شود. فقط حروف کوچک، اعداد و زیرخط."
 
-#: packages/admin/src/components/ContentEditor.tsx:2378
+#: packages/admin/src/components/ContentEditor.tsx:2390
 msgid "Used as the main visual for this post on listing pages and at the top of the post"
 msgstr "به‌عنوان تصویر اصلی این نوشته در صفحات لیست و بالای نوشته استفاده می‌شود"
 
@@ -14288,7 +14288,7 @@ msgstr ""
 msgid "What will happen when you import"
 msgstr "هنگام درون‌ریزی چه اتفاقی خواهد افتاد"
 
-#: packages/admin/src/components/ContentEditor.tsx:1651
+#: packages/admin/src/components/ContentEditor.tsx:1663
 msgid "What you typed is still here. Saving replaces the newer version."
 msgstr ""
 
