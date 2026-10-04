@@ -5228,7 +5228,7 @@ msgstr "ביטול הייבוא נכשל"
 msgid "Failed to change the domain"
 msgstr "שינוי הדומיין נכשל"
 
-#: packages/admin/src/components/SandboxedPluginPage.tsx:74
+#: packages/admin/src/components/SandboxedPluginPage.tsx:78
 msgid "Failed to communicate with plugin"
 msgstr "התקשורת עם התוסף נכשלה"
 
@@ -5708,7 +5708,7 @@ msgstr "טעינת הגדרות ההעברה נכשלה"
 msgid "Failed to load users: {0}"
 msgstr "טעינת משתמשים נכשלה: {0}"
 
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:58
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:61
 msgid "Failed to load widget"
 msgstr "טעינת וידג׳ט נכשלה"
 
@@ -7580,6 +7580,7 @@ msgstr "מתבצעת טעינת וידג׳טים..."
 #: packages/admin/src/components/PortableTextEditor.tsx:2864
 #: packages/admin/src/components/Redirects.tsx:569
 #: packages/admin/src/components/RegistryBrowse.tsx:179
+#: packages/admin/src/components/SandboxedPluginPage.tsx:110
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:169
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:221
 #: packages/admin/src/components/settings/BackupSettings.tsx:155
@@ -8549,7 +8550,7 @@ msgstr "אין תגובות הממתינות לניהול."
 msgid "No comments match your filters."
 msgstr "אין תגובות שתואמות לסינון."
 
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:96
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:102
 msgid "No content"
 msgstr "אין תוכן"
 
@@ -9503,12 +9504,12 @@ msgstr "התוסף מושבת"
 msgid "Plugin enabled"
 msgstr "התוסף מופעל"
 
-#: packages/admin/src/components/SandboxedPluginPage.tsx:114
+#: packages/admin/src/components/SandboxedPluginPage.tsx:121
 msgid "Plugin Error"
 msgstr "שגיאת תוסף"
 
 #. placeholder {0}: response.status
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:48
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:51
 msgid "Plugin error ({0})"
 msgstr "שגיאת תוסף ({0})"
 
@@ -9565,7 +9566,7 @@ msgid "Plugin registry is not configured."
 msgstr "רישום התוספים אינו מוגדר."
 
 #. placeholder {0}: response.status
-#: packages/admin/src/components/SandboxedPluginPage.tsx:55
+#: packages/admin/src/components/SandboxedPluginPage.tsx:59
 msgid "Plugin responded with {0}: {text}"
 msgstr "התוסף השיב עם {0}: {text}"
 
@@ -13750,6 +13751,10 @@ msgstr "מתבצע עדכון שימוש"
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:353
 #: packages/admin/src/components/PluginManager.tsx:522
+#: packages/admin/src/components/SandboxedPluginPage.tsx:161
+#: packages/admin/src/components/SandboxedPluginPage.tsx:165
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:122
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:126
 msgid "Updating..."
 msgstr "בעדכון..."
 

@@ -5226,7 +5226,7 @@ msgstr ""
 msgid "Failed to change the domain"
 msgstr ""
 
-#: packages/admin/src/components/SandboxedPluginPage.tsx:74
+#: packages/admin/src/components/SandboxedPluginPage.tsx:78
 msgid "Failed to communicate with plugin"
 msgstr ""
 
@@ -5706,7 +5706,7 @@ msgstr ""
 msgid "Failed to load users: {0}"
 msgstr ""
 
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:58
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:61
 msgid "Failed to load widget"
 msgstr ""
 
@@ -7578,6 +7578,7 @@ msgstr ""
 #: packages/admin/src/components/PortableTextEditor.tsx:2864
 #: packages/admin/src/components/Redirects.tsx:569
 #: packages/admin/src/components/RegistryBrowse.tsx:179
+#: packages/admin/src/components/SandboxedPluginPage.tsx:110
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:169
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:221
 #: packages/admin/src/components/settings/BackupSettings.tsx:155
@@ -8547,7 +8548,7 @@ msgstr "هیچ دیدگاهی در انتظار تعدیل نیست."
 msgid "No comments match your filters."
 msgstr ""
 
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:96
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:102
 msgid "No content"
 msgstr ""
 
@@ -9498,12 +9499,12 @@ msgstr "افزونه غیرفعال شد"
 msgid "Plugin enabled"
 msgstr "افزونه فعال شد"
 
-#: packages/admin/src/components/SandboxedPluginPage.tsx:114
+#: packages/admin/src/components/SandboxedPluginPage.tsx:121
 msgid "Plugin Error"
 msgstr ""
 
 #. placeholder {0}: response.status
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:48
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:51
 msgid "Plugin error ({0})"
 msgstr ""
 
@@ -9560,7 +9561,7 @@ msgid "Plugin registry is not configured."
 msgstr ""
 
 #. placeholder {0}: response.status
-#: packages/admin/src/components/SandboxedPluginPage.tsx:55
+#: packages/admin/src/components/SandboxedPluginPage.tsx:59
 msgid "Plugin responded with {0}: {text}"
 msgstr ""
 
@@ -13745,6 +13746,10 @@ msgstr ""
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:353
 #: packages/admin/src/components/PluginManager.tsx:522
+#: packages/admin/src/components/SandboxedPluginPage.tsx:161
+#: packages/admin/src/components/SandboxedPluginPage.tsx:165
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:122
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:126
 msgid "Updating..."
 msgstr "در حال به‌روزرسانی..."
 

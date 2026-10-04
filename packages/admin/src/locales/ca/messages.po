@@ -5227,7 +5227,7 @@ msgstr "No s'ha pogut cancel·lar la importació"
 msgid "Failed to change the domain"
 msgstr "No s'ha pogut canviar el domini"
 
-#: packages/admin/src/components/SandboxedPluginPage.tsx:74
+#: packages/admin/src/components/SandboxedPluginPage.tsx:78
 msgid "Failed to communicate with plugin"
 msgstr "No s'ha pogut comunicar amb el connector"
 
@@ -5707,7 +5707,7 @@ msgstr "No s'ha pogut carregar la configuració de transferència"
 msgid "Failed to load users: {0}"
 msgstr "No s'han pogut carregar els usuaris: {0}"
 
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:58
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:61
 msgid "Failed to load widget"
 msgstr "No s'ha pogut carregar el giny"
 
@@ -7579,6 +7579,7 @@ msgstr "S'estan carregant els ginys..."
 #: packages/admin/src/components/PortableTextEditor.tsx:2864
 #: packages/admin/src/components/Redirects.tsx:569
 #: packages/admin/src/components/RegistryBrowse.tsx:179
+#: packages/admin/src/components/SandboxedPluginPage.tsx:110
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:169
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:221
 #: packages/admin/src/components/settings/BackupSettings.tsx:155
@@ -8548,7 +8549,7 @@ msgstr "No hi ha cap comentari pendent de moderació."
 msgid "No comments match your filters."
 msgstr "Cap comentari coincideix amb els teus filtres."
 
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:96
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:102
 msgid "No content"
 msgstr "Sense contingut"
 
@@ -9502,12 +9503,12 @@ msgstr "S'ha desactivat el connector"
 msgid "Plugin enabled"
 msgstr "S'ha activat el connector"
 
-#: packages/admin/src/components/SandboxedPluginPage.tsx:114
+#: packages/admin/src/components/SandboxedPluginPage.tsx:121
 msgid "Plugin Error"
 msgstr "Error del connector"
 
 #. placeholder {0}: response.status
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:48
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:51
 msgid "Plugin error ({0})"
 msgstr "Error del connector ({0})"
 
@@ -9564,7 +9565,7 @@ msgid "Plugin registry is not configured."
 msgstr "El registre de connectors no està configurat."
 
 #. placeholder {0}: response.status
-#: packages/admin/src/components/SandboxedPluginPage.tsx:55
+#: packages/admin/src/components/SandboxedPluginPage.tsx:59
 msgid "Plugin responded with {0}: {text}"
 msgstr "El connector ha respost amb {0}: {text}"
 
@@ -13749,6 +13750,10 @@ msgstr "S'està actualitzant l'ús"
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:353
 #: packages/admin/src/components/PluginManager.tsx:522
+#: packages/admin/src/components/SandboxedPluginPage.tsx:161
+#: packages/admin/src/components/SandboxedPluginPage.tsx:165
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:122
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:126
 msgid "Updating..."
 msgstr "S'està actualitzant..."
 

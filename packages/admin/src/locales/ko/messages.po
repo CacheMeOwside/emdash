@@ -5227,7 +5227,7 @@ msgstr "가져오기를 취소하지 못했습니다"
 msgid "Failed to change the domain"
 msgstr ""
 
-#: packages/admin/src/components/SandboxedPluginPage.tsx:74
+#: packages/admin/src/components/SandboxedPluginPage.tsx:78
 msgid "Failed to communicate with plugin"
 msgstr "플러그인과 통신하지 못했습니다."
 
@@ -5707,7 +5707,7 @@ msgstr "이전 설정을 로드하지 못했습니다."
 msgid "Failed to load users: {0}"
 msgstr "사용자 목록을 로드하지 못했습니다: {0}"
 
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:58
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:61
 msgid "Failed to load widget"
 msgstr "위젯을 로드하지 못했습니다."
 
@@ -7579,6 +7579,7 @@ msgstr "위젯 로드 중..."
 #: packages/admin/src/components/PortableTextEditor.tsx:2864
 #: packages/admin/src/components/Redirects.tsx:569
 #: packages/admin/src/components/RegistryBrowse.tsx:179
+#: packages/admin/src/components/SandboxedPluginPage.tsx:110
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:169
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:221
 #: packages/admin/src/components/settings/BackupSettings.tsx:155
@@ -8548,7 +8549,7 @@ msgstr "검토를 기다리는 댓글이 없습니다."
 msgid "No comments match your filters."
 msgstr "필터에 맞는 댓글이 없습니다."
 
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:96
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:102
 msgid "No content"
 msgstr "콘텐츠 없음"
 
@@ -9502,12 +9503,12 @@ msgstr "플러그인 비활성화됨"
 msgid "Plugin enabled"
 msgstr "플러그인 활성화됨"
 
-#: packages/admin/src/components/SandboxedPluginPage.tsx:114
+#: packages/admin/src/components/SandboxedPluginPage.tsx:121
 msgid "Plugin Error"
 msgstr "플러그인 오류"
 
 #. placeholder {0}: response.status
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:48
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:51
 msgid "Plugin error ({0})"
 msgstr "플러그인 오류({0})"
 
@@ -9564,7 +9565,7 @@ msgid "Plugin registry is not configured."
 msgstr "플러그인 레지스트리가 설정되지 않았습니다."
 
 #. placeholder {0}: response.status
-#: packages/admin/src/components/SandboxedPluginPage.tsx:55
+#: packages/admin/src/components/SandboxedPluginPage.tsx:59
 msgid "Plugin responded with {0}: {text}"
 msgstr "플러그인이 {0} 응답을 반환했습니다: {text}"
 
@@ -13749,6 +13750,10 @@ msgstr "사용 현황을 업데이트하는 중"
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:353
 #: packages/admin/src/components/PluginManager.tsx:522
+#: packages/admin/src/components/SandboxedPluginPage.tsx:161
+#: packages/admin/src/components/SandboxedPluginPage.tsx:165
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:122
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:126
 msgid "Updating..."
 msgstr "업데이트 중..."
 

@@ -5227,7 +5227,7 @@ msgstr "ইমপোর্ট বাতিল করতে ব্যর্থ �
 msgid "Failed to change the domain"
 msgstr ""
 
-#: packages/admin/src/components/SandboxedPluginPage.tsx:74
+#: packages/admin/src/components/SandboxedPluginPage.tsx:78
 msgid "Failed to communicate with plugin"
 msgstr "প্লাগইনের সাথে যোগাযোগ করতে ব্যর্থ হয়েছে"
 
@@ -5707,7 +5707,7 @@ msgstr "ট্রান্সফার সেটিংস লোড করতে
 msgid "Failed to load users: {0}"
 msgstr "ব্যবহারকারীদের লোড করতে ব্যর্থ হয়েছে: {0}"
 
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:58
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:61
 msgid "Failed to load widget"
 msgstr "উইজেট লোড করতে ব্যর্থ হয়েছে"
 
@@ -7579,6 +7579,7 @@ msgstr "উইজেট লোড হচ্ছে..."
 #: packages/admin/src/components/PortableTextEditor.tsx:2864
 #: packages/admin/src/components/Redirects.tsx:569
 #: packages/admin/src/components/RegistryBrowse.tsx:179
+#: packages/admin/src/components/SandboxedPluginPage.tsx:110
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:169
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:221
 #: packages/admin/src/components/settings/BackupSettings.tsx:155
@@ -8548,7 +8549,7 @@ msgstr "মডারেশনের অপেক্ষায় কোনো ম
 msgid "No comments match your filters."
 msgstr "আপনার ফিল্টারের সাথে কোনো মন্তব্য মেলেনি।"
 
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:96
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:102
 msgid "No content"
 msgstr "কোনো কনটেন্ট নেই"
 
@@ -9502,12 +9503,12 @@ msgstr "প্লাগইন বন্ধ করা হয়েছে"
 msgid "Plugin enabled"
 msgstr "প্লাগইন চালু করা হয়েছে"
 
-#: packages/admin/src/components/SandboxedPluginPage.tsx:114
+#: packages/admin/src/components/SandboxedPluginPage.tsx:121
 msgid "Plugin Error"
 msgstr "প্লাগইন ত্রুটি"
 
 #. placeholder {0}: response.status
-#: packages/admin/src/components/SandboxedPluginWidget.tsx:48
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:51
 msgid "Plugin error ({0})"
 msgstr "প্লাগইন ত্রুটি ({0})"
 
@@ -9564,7 +9565,7 @@ msgid "Plugin registry is not configured."
 msgstr "প্লাগইন রেজিস্ট্রি কনফিগার করা হয়নি।"
 
 #. placeholder {0}: response.status
-#: packages/admin/src/components/SandboxedPluginPage.tsx:55
+#: packages/admin/src/components/SandboxedPluginPage.tsx:59
 msgid "Plugin responded with {0}: {text}"
 msgstr "প্লাগইন {0} দিয়ে সাড়া দিয়েছে: {text}"
 
@@ -13749,6 +13750,10 @@ msgstr "ব্যবহারের তথ্য আপডেট করা হ�
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:353
 #: packages/admin/src/components/PluginManager.tsx:522
+#: packages/admin/src/components/SandboxedPluginPage.tsx:161
+#: packages/admin/src/components/SandboxedPluginPage.tsx:165
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:122
+#: packages/admin/src/components/SandboxedPluginWidget.tsx:126
 msgid "Updating..."
 msgstr "আপডেট করা হচ্ছে..."
 
