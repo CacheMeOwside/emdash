@@ -264,7 +264,7 @@ msgid "{0, plural, one {Column deleted} other {# columns deleted}}"
 msgstr "{0, plural, one {עמודה נמחקה} two {שתי עמודות נמחקו} other {# עמודות נמחקו}}"
 
 #. placeholder {0}: fields.length
-#: packages/admin/src/components/ContentTypeEditor.tsx:747
+#: packages/admin/src/components/ContentTypeEditor.tsx:756
 msgid "{0, plural, one {field} other {fields}}"
 msgstr "{0, plural, one {שדה} two {שני שדות} other {שדות}}"
 
@@ -435,8 +435,8 @@ msgstr "{0} הוסר מהפוסט הזה."
 
 #. placeholder {0}: SYSTEM_FIELDS.length
 #. placeholder {1}: fields.length
-#. placeholder {2}: import { Badge, Button, Checkbox, Input, InputArea, Label, Select, Switch } from "@cloudflare/kumo"; import { DndContext, closestCenter, type DragEndEvent, KeyboardSensor, PointerSensor, useSensor, useSensors, } from "@dnd-kit/core"; import { arrayMove, SortableContext, sortableKeyboardCoordinates, useSortable, verticalListSortingStrategy, } from "@dnd-kit/sortable"; import { CSS } from "@dnd-kit/utilities"; import type { MessageDescriptor } from "@lingui/core"; import { msg, plural } from "@lingui/core/macro"; import { Trans, useLingui } from "@lingui/react/macro"; import { Plus, DotsSixVertical, Pencil, Trash, Database, FileText } from "@phosphor-icons/react"; import { useQuery } from "@tanstack/react-query"; import { useNavigate } from "@tanstack/react-router"; import * as React from "react"; import { fetchCollections, fetchRelations } from "../lib/api"; import type { SchemaCollectionWithFields, SchemaField, CreateFieldInput, CreateCollectionInput, UpdateCollectionInput, } from "../lib/api"; import type { CreateRelationInput, RelationDef, UpdateRelationInput, } from "../lib/api/relations.js"; import { cn, slugifyIdentifier } from "../lib/utils"; import { ArrowPrev } from "./ArrowIcons.js"; import { ConfirmDialog } from "./ConfirmDialog"; import { EditorHeader } from "./EditorHeader"; import { FieldEditor } from "./FieldEditor"; import { RelationImpact } from "./RelationImpact.js"; import { RelationsPanel } from "./RelationsPanel.js"; import { RouterLinkButton } from "./RouterLinkButton.js"; import { SaveButton } from "./SaveButton"; const MULTIPLE_PLACEHOLDERS_IN_SEGMENT = /\{\w+\}[^/]*\{\w+\}/; export interface ContentTypeEditorProps { collection?: SchemaCollectionWithFields; isNew?: boolean; isSaving?: boolean; onSave: (input: CreateCollectionInput | UpdateCollectionInput) => void; onAddField?: (input: CreateFieldInput) => void; onUpdateField?: (fieldSlug: string, input: CreateFieldInput) => void; /** `deleteRelation` also removes the relationship a reference field views, * its links, and the field on the other end. */ onDeleteField?: (fieldSlug: string, options?: { deleteRelation?: boolean }) => void; onReorderFields?: (fieldSlugs: string[]) => void; /** Resolves with the new relation; rejects with the server's message. */ onCreateRelation?: (input: CreateRelationInput) => Promise<RelationDef>; /** Resolves once the relation is saved; rejects with the server's message. */ onUpdateRelation?: (id: string, input: UpdateRelationInput) => Promise<unknown>; /** Also removes the relation's links and the reference fields bound to it. */ onDeleteRelation?: (id: string) => Promise<unknown>; isDeletingRelation?: boolean; deleteRelationError?: unknown; } interface SupportOptionDef { value: string; label: MessageDescriptor; description: MessageDescriptor; } const MODERATION_OPTIONS: Record<"all" | "first_time" | "none", MessageDescriptor> = { all: msg`All comments require approval`, first_time: msg`First-time commenters only`, none: msg`No moderation (auto-approve all)`, }; const SUPPORT_OPTIONS: SupportOptionDef[] = [ { value: "drafts", label: msg`Drafts`, description: msg`Save content as draft before publishing`, }, { value: "revisions", label: msg`Revisions`, description: msg`Track content history`, }, { value: "preview", label: msg`Preview`, description: msg`Preview content before publishing`, }, { value: "search", label: msg`Search`, description: msg`Enable full-text search on this collection`, }, ]; /** * System fields that exist on every collection * These are created automatically and cannot be modified */ interface SystemFieldDef { slug: string; label: MessageDescriptor; type: string; description: MessageDescriptor; } const SYSTEM_FIELDS: SystemFieldDef[] = [ { slug: "id", label: msg`ID`, type: "text", description: msg`Unique identifier (ULID)`, }, { slug: "slug", label: msg`Slug`, type: "text", description: msg`URL-friendly identifier`, }, { slug: "status", label: msg`Status`, type: "text", description: msg`draft, published, or archived`, }, { slug: "created_at", label: msg`Created At`, type: "datetime", description: msg`When the entry was created`, }, { slug: "updated_at", label: msg`Updated At`, type: "datetime", description: msg`When the entry was last modified`, }, { slug: "published_at", label: msg`Published At`, type: "datetime", description: msg`When the entry was published`, }, ]; /** * Content Type editor for creating/editing collections */ export function ContentTypeEditor({ collection, isNew, isSaving, onSave, onAddField, onUpdateField, onDeleteField, onReorderFields, onCreateRelation, onUpdateRelation, onDeleteRelation, isDeletingRelation, deleteRelationError, }: ContentTypeEditorProps) { const { t } = useLingui(); const _navigate = useNavigate(); // Form state const [slug, setSlug] = React.useState(collection?.slug ?? ""); const [label, setLabel] = React.useState(collection?.label ?? ""); const [labelSingular, setLabelSingular] = React.useState(collection?.labelSingular ?? ""); const [description, setDescription] = React.useState(collection?.description ?? ""); const [urlPattern, setUrlPattern] = React.useState(collection?.urlPattern ?? ""); const [routable, setRoutable] = React.useState(collection?.routable ?? true); const [editLocking, setEditLocking] = React.useState(collection?.editLocking ?? true); const [icon, setIcon] = React.useState(collection?.icon ?? ""); const [group, setGroup] = React.useState(collection?.group ?? ""); const [hidden, setHidden] = React.useState(collection?.hidden ?? false); const [quickCreate, setQuickCreate] = React.useState(collection?.admin?.quickCreate ?? true); // SEO is managed via the separate `hasSeo` field; strip any legacy "seo" entry // so it isn't sent back on save (the API enum rejects it). const [supports, setSupports] = React.useState<string[]>( (collection?.supports ?? ["drafts", "revisions"]).filter((s) => s !== "seo"), ); // SEO state const [hasSeo, setHasSeo] = React.useState(collection?.hasSeo ?? false); // Comment settings state const [commentsEnabled, setCommentsEnabled] = React.useState( collection?.commentsEnabled ?? false, ); const [commentsModeration, setCommentsModeration] = React.useState<"all" | "first_time" | "none">( collection?.commentsModeration ?? "first_time", ); const [commentsClosedAfterDays, setCommentsClosedAfterDays] = React.useState( collection?.commentsClosedAfterDays ?? 90, ); const [commentsAutoApproveUsers, setCommentsAutoApproveUsers] = React.useState( collection?.commentsAutoApproveUsers ?? true, ); // Field editor state const [fieldEditorOpen, setFieldEditorOpen] = React.useState(false); const [editingField, setEditingField] = React.useState<SchemaField | undefined>(); const [fieldSaving, setFieldSaving] = React.useState(false); const [deleteFieldTarget, setDeleteFieldTarget] = React.useState<SchemaField | null>(null); // Checked by default: deleting a reference field almost always means the // relationship it views is finished too. const [deleteFieldRelation, setDeleteFieldRelation] = React.useState(true); const urlPatternChanged = urlPattern !== (collection?.urlPattern ?? ""); const urlPatternSharesSegment = urlPatternChanged && MULTIPLE_PLACEHOLDERS_IN_SEGMENT.test(urlPattern); const urlPatternValid = !urlPattern || (urlPattern.includes("{slug}") && !urlPatternSharesSegment); const slugError = isNew && !slug && label.trim().length > 0 ? t`A slug cannot be generated from this label. Type one manually using lowercase letters, numbers, and underscores.` : undefined; // Track whether form has unsaved changes const hasChanges = React.useMemo(() => { if (isNew) return slug && label; if (!collection) return false; return ( label !== collection.label || labelSingular !== (collection.labelSingular ?? "") || description !== (collection.description ?? "") || urlPattern !== (collection.urlPattern ?? "") || routable !== (collection.routable ?? true) || editLocking !== (collection.editLocking ?? true) || icon !== (collection.icon ?? "") || group !== (collection.group ?? "") || hidden !== (collection.hidden ?? false) || quickCreate !== (collection.admin?.quickCreate ?? true) || JSON.stringify([...supports].toSorted()) !== JSON.stringify(collection.supports.filter((s) => s !== "seo").toSorted()) || hasSeo !== collection.hasSeo || commentsEnabled !== collection.commentsEnabled || commentsModeration !== collection.commentsModeration || commentsClosedAfterDays !== collection.commentsClosedAfterDays || commentsAutoApproveUsers !== collection.commentsAutoApproveUsers ); }, [ isNew, collection, slug, label, labelSingular, description, urlPattern, routable, editLocking, icon, group, hidden, quickCreate, supports, hasSeo, commentsEnabled, commentsModeration, commentsClosedAfterDays, commentsAutoApproveUsers, ]); // Auto-generate slug from plural label const handleLabelChange = (value: string) => { setLabel(value); if (isNew) { setSlug(slugifyIdentifier(value)); } }; // Auto-generate plural label (and slug) from singular label const handleSingularLabelChange = (value: string) => { setLabelSingular(value); if (isNew) { const pluralLabel = value ? `${value}s` : ""; handleLabelChange(pluralLabel); } }; const handleSupportToggle = (value: string) => { setSupports((prev) => prev.includes(value) ? prev.filter((s) => s !== value) : [...prev, value], ); }; const handleSubmit = (e: React.FormEvent) => { e.preventDefault(); if (isNew) { onSave({ slug, label, labelSingular: labelSingular || undefined, description: description || undefined, urlPattern: urlPattern || undefined, routable, editLocking, icon: icon.trim() || undefined, group: group.trim() || undefined, hidden, admin: quickCreate ? undefined : { quickCreate: false }, supports, hasSeo, }); } else { onSave({ label, labelSingular: labelSingular || undefined, description: description || undefined, urlPattern: urlPattern || undefined, routable, editLocking, icon: icon.trim(), group: group.trim() || null, hidden, admin: quickCreate !== (collection?.admin?.quickCreate ?? true) ? { ...collection?.admin, quickCreate: quickCreate ? undefined : false } : undefined, supports, hasSeo, commentsEnabled, commentsModeration, commentsClosedAfterDays, commentsAutoApproveUsers, }); } }; const handleFieldSave = async (input: CreateFieldInput) => { setFieldSaving(true); try { if (editingField) { onUpdateField?.(editingField.slug, input); } else { onAddField?.(input); } setFieldEditorOpen(false); setEditingField(undefined); } finally { setFieldSaving(false); } }; const requestDeleteField = (field: SchemaField) => { setDeleteFieldRelation(true); setDeleteFieldTarget(field); }; const handleEditField = (field: SchemaField) => { if (field.unsupportedType) return; setEditingField(field); setFieldEditorOpen(true); }; const handleAddField = () => { setEditingField(undefined); setFieldEditorOpen(true); }; const isFromCode = collection?.source === "code"; const fields = collection?.fields ?? []; const { data: relations = [], isLoading: relationsLoading } = useQuery({ queryKey: ["relations"], queryFn: () => fetchRelations(), }); const { data: allCollections = [] } = useQuery({ queryKey: ["schema", "collections"], queryFn: fetchCollections, }); const targetRelationSlug = deleteFieldTarget?.validation?.relation; const targetRelation = relations.find((rel) => rel.slug === targetRelationSlug); const sensors = useSensors( useSensor(PointerSensor, { activationConstraint: { distance: 8 } }), useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }), ); const handleDragEnd = (event: DragEndEvent) => { const { active, over } = event; if (!over || active.id === over.id) return; const oldIndex = fields.findIndex((f) => f.id === active.id); const newIndex = fields.findIndex((f) => f.id === over.id); if (oldIndex === -1 || newIndex === -1) return; const reordered = arrayMove(fields, oldIndex, newIndex); onReorderFields?.(reordered.map((f) => f.slug)); }; return ( <div className="space-y-6"> <EditorHeader leading={ <RouterLinkButton to="/content-types" aria-label={t`Back to Content Types`} variant="ghost" shape="square" icon={<ArrowPrev />} /> } actions={ !isFromCode && !isNew ? ( <SaveButton type="submit" form="content-type-editor-form" isDirty={!!hasChanges} isSaving={!!isSaving} disabled={!urlPatternValid} /> ) : null } > <h1 className="truncate text-2xl font-semibold"> {isNew ? t`New Content Type` : collection?.label} </h1> {!isNew && ( <p className="text-kumo-subtle text-sm"> <code className="bg-kumo-tint px-1.5 py-0.5 rounded">{collection?.slug}</code> {isFromCode && <span className="ms-2 text-kumo-info">{t`Defined in code`}</span>} </p> )} </EditorHeader> {isFromCode && ( <div className="rounded-lg border border-kumo-info/50 bg-kumo-info-tint p-4"> <div className="flex items-center space-x-2"> <FileText className="h-5 w-5 text-kumo-info" /> <p className="text-sm text-kumo-subtle"> {t`This collection is defined in code. Some settings cannot be changed here. Edit your live.config.ts file to modify the schema.`} </p> </div> </div> )} <div className="grid grid-cols-1 lg:grid-cols-3 gap-6"> {/* Settings form */} <div className="lg:col-span-1"> <form id="content-type-editor-form" onSubmit={handleSubmit} className="space-y-4"> <div className="rounded-lg border bg-kumo-base p-4 space-y-4"> <h2 className="font-semibold">{t`Settings`}</h2> <Input label={t`Label (Singular)`} value={labelSingular} onChange={(e) => handleSingularLabelChange(e.target.value)} placeholder={t`Post`} disabled={isFromCode} /> <Input label={t`Label (Plural)`} value={label} onChange={(e) => handleLabelChange(e.target.value)} placeholder={t`Posts`} disabled={isFromCode} /> {isNew && ( <div> <Input label={t`Slug`} value={slug} onChange={(e) => setSlug(e.target.value)} placeholder="posts" disabled={!isNew} error={slugError} /> <p className="text-xs text-kumo-subtle mt-2">{t`Used in URLs and API endpoints`}</p> </div> )} <InputArea label={t`Description`} value={description} onChange={(e) => setDescription(e.target.value)} placeholder={t`A brief description of this content type`} rows={3} disabled={isFromCode} /> <Switch checked={routable} onCheckedChange={setRoutable} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Routable`}</span> <p className="text-xs text-kumo-subtle"> {t`Require a slug before content can be published`} </p> </div> } /> <Switch checked={editLocking} onCheckedChange={setEditLocking} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Edit locking`}</span> <p className="text-xs text-kumo-subtle"> {t`Hold an entry while someone is editing it, and refuse other writers`} </p> </div> } /> <div> <Input label={t`URL Pattern`} value={urlPattern} onChange={(e) => setUrlPattern(e.target.value)} placeholder={`/${slug === "pages" ? "" : `${slug}/`}{slug}`} disabled={isFromCode} /> {urlPattern && !urlPattern.includes("{slug}") && ( <p className="text-xs text-kumo-danger mt-2"> {t`Pattern must include a ${"{slug}"} placeholder`} </p> )} {urlPatternSharesSegment && ( <p className="text-xs text-kumo-danger mt-2"> {t`Each path segment can contain at most one placeholder, e.g. ${"/{year}/{slug}"}`} </p> )} <p className="text-xs text-kumo-subtle mt-1"> {t`Pattern for generating URLs, e.g. /blog/${"{slug}"}. Tokens: ${"{slug}"}, ${"{id}"}, and date tokens ${"{year}"}/${"{month}"}/${"{day}"} (also ${"{hour}"}/${"{minute}"}/${"{second}"}) from the publish date — e.g. ${"/{year}/{month}/{day}/{slug}.html"} for WordPress-style permalinks.`} </p> </div> <div className="space-y-3"> <Label>{t`Navigation`}</Label> <div> <Input label={t`Group`} value={group} onChange={(e) => setGroup(e.target.value)} placeholder={t`Calendar`} disabled={isFromCode} /> <p className="text-xs text-kumo-subtle mt-1"> {t`Content types with the same group share a collapsible folder in the sidebar`} </p> </div> <div> <Input label={t`Icon`} value={icon} onChange={(e) => setIcon(e.target.value)} disabled={isFromCode} /> <p className="text-xs text-kumo-subtle mt-1"> {t`Phosphor icon name, e.g. calendar-blank or trophy`} </p> </div> <Switch checked={hidden} onCheckedChange={setHidden} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Hide from navigation`}</span> <p className="text-xs text-kumo-subtle"> {t`Removes the sidebar entry, command palette link, and dashboard quick action; entries stay reachable by URL, API, and plugins`} </p> </div> } /> <Switch checked={quickCreate} onCheckedChange={setQuickCreate} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Quick action on the dashboard`}</span> <p className="text-xs text-kumo-subtle"> {t`Shows a button for creating a new entry`} </p> </div> } /> </div> <div className="space-y-3"> <Label>{t`Features`}</Label> {SUPPORT_OPTIONS.map((option) => ( <div key={option.value} className={cn( "p-2 rounded-md hover:bg-kumo-tint/50", isFromCode && "opacity-60", )} > <Checkbox checked={supports.includes(option.value)} onCheckedChange={() => handleSupportToggle(option.value)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t(option.label)}</span> <p className="text-xs text-kumo-subtle">{t(option.description)}</p> </div> } /> </div> ))} </div> {/* SEO toggle */} <div className="pt-2 border-t"> <Switch checked={hasSeo} onCheckedChange={(checked) => setHasSeo(checked)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`SEO`}</span> <p className="text-xs text-kumo-subtle"> {t`Add SEO metadata fields (title, description, image) and include in sitemap`} </p> </div> } /> </div> </div> {/* Comments settings — only for existing collections */} {!isNew && ( <div className="rounded-lg border bg-kumo-base p-4 space-y-4"> <h2 className="font-semibold">{t`Comments`}</h2> <Switch checked={commentsEnabled} onCheckedChange={(checked) => setCommentsEnabled(checked)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Enable comments`}</span> <p className="text-xs text-kumo-subtle"> {t`Allow visitors to leave comments on this collection's content`} </p> </div> } /> {commentsEnabled && ( <> <Select label={t`Moderation`} value={commentsModeration} onValueChange={(v) => setCommentsModeration((v as "all" | "first_time" | "none") ?? "first_time") } items={{ all: t(MODERATION_OPTIONS.all), first_time: t(MODERATION_OPTIONS.first_time), none: t(MODERATION_OPTIONS.none), }} disabled={isFromCode} /> <Input label={t`Close comments after (days)`} type="number" min={0} value={String(commentsClosedAfterDays)} onChange={(e) => { const parsed = Number.parseInt(e.target.value, 10); setCommentsClosedAfterDays(Number.isNaN(parsed) ? 0 : Math.max(0, parsed)); }} disabled={isFromCode} /> <p className="text-xs text-kumo-subtle -mt-2"> {t`Set to 0 to never close comments automatically.`} </p> <Switch checked={commentsAutoApproveUsers} onCheckedChange={(checked) => setCommentsAutoApproveUsers(checked)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium"> {t`Auto-approve authenticated users`} </span> <p className="text-xs text-kumo-subtle"> {t`Comments from logged-in CMS users are approved automatically`} </p> </div> } /> </> )} </div> )} {!isFromCode && (isNew ? ( <Button type="submit" disabled={!hasChanges || !urlPatternValid} loading={isSaving} className="w-full justify-center" > {t`Create Content Type`} </Button> ) : ( <SaveButton type="submit" isDirty={!!hasChanges} isSaving={!!isSaving} announce={false} disabled={!urlPatternValid} className="w-full justify-center" /> ))} </form> </div> {/* Fields and relations - only shown for existing collections */} {!isNew && ( <div className="lg:col-span-2 space-y-6"> <div className="rounded-lg border bg-kumo-base"> <div className="flex items-center justify-between p-4 border-b"> <div> <h2 className="font-semibold">{t`Fields`}</h2> <p className="text-sm text-kumo-subtle"> <Trans> {SYSTEM_FIELDS.length} system + {fields.length} custom{" "} {plural(fields.length, { one: "field", other: "fields" })} </Trans> </p> </div> {!isFromCode && ( <Button icon={<Plus />} onClick={handleAddField}> {t`Add Field`} </Button> )} </div> {/* System fields - always shown */} <div> <div className="px-4 py-2 text-xs font-medium text-kumo-subtle uppercase tracking-wider bg-kumo-tint/50 border-b"> {t`System Fields`} </div> <div className="divide-y divide-kumo-line/50 border-b"> {SYSTEM_FIELDS.map((field) => ( <SystemFieldRow key={field.slug} field={field} /> ))} </div> </div> {/* Custom fields */} {fields.length === 0 ? ( <div className="p-8 text-center text-kumo-subtle"> <Database className="mx-auto h-12 w-12 mb-4 opacity-50" /> <p className="font-medium">{t`No custom fields yet`}</p> <p className="text-sm">{t`Add fields to define the structure of your content`}</p> {!isFromCode && ( <Button className="mt-4" icon={<Plus />} onClick={handleAddField}> {t`Add First Field`} </Button> )} </div> ) : ( <> <div className="px-4 py-2 text-xs font-medium text-kumo-subtle uppercase tracking-wider bg-kumo-tint/50 border-b"> {t`Custom Fields`} </div> <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd} > <SortableContext items={fields.map((f) => f.id)} strategy={verticalListSortingStrategy} > <div className="divide-y"> {fields.map((field) => ( <FieldRow key={field.id} field={field} isFromCode={isFromCode} onEdit={() => handleEditField(field)} onDelete={() => requestDeleteField(field)} /> ))} </div> </SortableContext> </DndContext> </> )} </div> {collection && ( <RelationsPanel collectionSlug={collection.slug} relations={relations} collections={allCollections} isLoading={relationsLoading} onCreateRelation={onCreateRelation} onUpdateRelation={onUpdateRelation} onDeleteRelation={onDeleteRelation} isDeletingRelation={isDeletingRelation} deleteRelationError={deleteRelationError} /> )} </div> )} </div> {/* Field editor dialog */} <FieldEditor open={fieldEditorOpen} onOpenChange={setFieldEditorOpen} field={editingField} onSave={handleFieldSave} isSaving={fieldSaving} collectionSlug={collection?.slug} onCreateRelation={onCreateRelation} /> <ConfirmDialog open={!!deleteFieldTarget} onClose={() => setDeleteFieldTarget(null)} title={t`Delete Field?`} description={ deleteFieldTarget ? t`Are you sure you want to delete the "${deleteFieldTarget.label}" field?` : "" } confirmLabel={t`Delete`} pendingLabel={t`Deleting...`} isPending={false} error={null} onConfirm={() => { if (deleteFieldTarget) { onDeleteField?.( deleteFieldTarget.slug, targetRelation ? { deleteRelation: deleteFieldRelation } : undefined, ); setDeleteFieldTarget(null); } }} > {targetRelation && ( <div className="mt-4 space-y-3"> <Checkbox checked={deleteFieldRelation} onCheckedChange={(checked) => setDeleteFieldRelation(checked === true)} label={t`Also delete the relationship this field uses`} /> {deleteFieldRelation && collection && ( <div className="rounded-md border border-kumo-danger/50 bg-kumo-danger-tint p-3"> <p className="text-sm font-medium">{t`This also removes:`}</p> <RelationImpact relations={[targetRelation]} excludeField={{ collectionSlug: collection.slug, fieldSlug: deleteFieldTarget?.slug ?? "", }} /> </div> )} </div> )} </ConfirmDialog> </div> ); } interface FieldRowProps { field: SchemaField; isFromCode?: boolean; onEdit: () => void; onDelete: () => void; } function FieldRow({ field, isFromCode, onEdit, onDelete }: FieldRowProps) { const { t } = useLingui(); const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: field.id, disabled: isFromCode, }); const style = { transform: CSS.Transform.toString(transform), transition }; return ( <div ref={setNodeRef} style={style} className={cn( "flex items-center px-4 py-3 hover:bg-kumo-tint/25", isDragging && "opacity-50", )} > {!isFromCode && ( <button {...attributes} {...listeners} className="cursor-grab active:cursor-grabbing me-3" aria-label={t`Drag to reorder ${field.label}`} > <DotsSixVertical className="h-5 w-5 text-kumo-subtle" /> </button> )} <div className="flex-1 min-w-0"> <div className="flex items-center space-x-2"> <span className="font-medium">{field.label}</span> <code className="text-xs bg-kumo-tint px-1.5 py-0.5 rounded text-kumo-subtle"> {field.slug} </code> </div> <div className="flex items-center space-x-2 mt-1"> <span className={cn("text-xs text-kumo-subtle", !field.unsupportedType && "capitalize")}> {field.unsupportedType?.type ?? field.type} </span> {field.unsupportedType && <Badge variant="secondary">{t`Unsupported`}</Badge>} {field.required && <Badge variant="secondary">{t`Required`}</Badge>} {field.unique && <Badge variant="secondary">{t`Unique`}</Badge>} {field.searchable && <Badge variant="secondary">{t`Searchable`}</Badge>} </div> </div> {!isFromCode && ( <div className="flex items-center space-x-1"> <Button variant="ghost" shape="square" onClick={onEdit} disabled={Boolean(field.unsupportedType)} aria-label={t`Edit ${field.label} field`} > <Pencil className="h-4 w-4" /> </Button> <Button variant="ghost" shape="square" onClick={onDelete} aria-label={t`Delete ${field.label} field`} > <Trash className="h-4 w-4 text-kumo-danger" /> </Button> </div> )} </div> ); } interface SystemFieldInfo { slug: string; label: MessageDescriptor; type: string; description: MessageDescriptor; } function SystemFieldRow({ field }: { field: SystemFieldInfo }) { const { t } = useLingui(); return ( <div className="flex items-center px-4 py-2 opacity-75"> <div className="w-8" /> {/* Spacer for alignment with draggable fields */} <div className="flex-1 min-w-0"> <div className="flex items-center space-x-2"> <span className="font-medium text-sm">{t(field.label)}</span> <code className="text-xs bg-kumo-tint px-1.5 py-0.5 rounded text-kumo-subtle"> {field.slug} </code> <Badge variant="secondary">{t`System`}</Badge> </div> <p className="text-xs text-kumo-subtle mt-0.5">{t(field.description)}</p> </div> </div> ); } 
-#: packages/admin/src/components/ContentTypeEditor.tsx:745
+#. placeholder {2}: import { Badge, Button, Checkbox, Input, InputArea, Label, Select, Switch } from "@cloudflare/kumo"; import { DndContext, closestCenter, type DragEndEvent, KeyboardSensor, PointerSensor, useSensor, useSensors, } from "@dnd-kit/core"; import { arrayMove, SortableContext, sortableKeyboardCoordinates, useSortable, verticalListSortingStrategy, } from "@dnd-kit/sortable"; import { CSS } from "@dnd-kit/utilities"; import type { MessageDescriptor } from "@lingui/core"; import { msg, plural } from "@lingui/core/macro"; import { Trans, useLingui } from "@lingui/react/macro"; import { Plus, DotsSixVertical, Pencil, Trash, Database, FileText } from "@phosphor-icons/react"; import { useQuery } from "@tanstack/react-query"; import { useNavigate } from "@tanstack/react-router"; import * as React from "react"; import { fetchCollections, fetchRelations } from "../lib/api"; import type { SchemaCollectionWithFields, SchemaField, CreateFieldInput, CreateCollectionInput, UpdateCollectionInput, } from "../lib/api"; import type { CreateRelationInput, RelationDef, UpdateRelationInput, } from "../lib/api/relations.js"; import { cn, slugifyIdentifier } from "../lib/utils"; import { ArrowPrev } from "./ArrowIcons.js"; import { ConfirmDialog } from "./ConfirmDialog"; import { getMutationError } from "./DialogError"; import { EditorHeader } from "./EditorHeader"; import { FieldEditor } from "./FieldEditor"; import { RelationImpact } from "./RelationImpact.js"; import { RelationsPanel } from "./RelationsPanel.js"; import { RouterLinkButton } from "./RouterLinkButton.js"; import { SaveButton } from "./SaveButton"; const MULTIPLE_PLACEHOLDERS_IN_SEGMENT = /\{\w+\}[^/]*\{\w+\}/; export interface ContentTypeEditorProps { collection?: SchemaCollectionWithFields; isNew?: boolean; isSaving?: boolean; onSave: (input: CreateCollectionInput | UpdateCollectionInput) => void; /** Resolves once the field is saved; rejects with the server's message. */ onAddField?: (input: CreateFieldInput) => Promise<unknown>; /** Resolves once the field is saved; rejects with the server's message. */ onUpdateField?: (fieldSlug: string, input: CreateFieldInput) => Promise<unknown>; /** `deleteRelation` also removes the relationship a reference field views, * its links, and the field on the other end. */ onDeleteField?: (fieldSlug: string, options?: { deleteRelation?: boolean }) => void; onReorderFields?: (fieldSlugs: string[]) => void; /** Resolves with the new relation; rejects with the server's message. */ onCreateRelation?: (input: CreateRelationInput) => Promise<RelationDef>; /** Resolves once the relation is saved; rejects with the server's message. */ onUpdateRelation?: (id: string, input: UpdateRelationInput) => Promise<unknown>; /** Also removes the relation's links and the reference fields bound to it. */ onDeleteRelation?: (id: string) => Promise<unknown>; isDeletingRelation?: boolean; deleteRelationError?: unknown; } interface SupportOptionDef { value: string; label: MessageDescriptor; description: MessageDescriptor; } const MODERATION_OPTIONS: Record<"all" | "first_time" | "none", MessageDescriptor> = { all: msg`All comments require approval`, first_time: msg`First-time commenters only`, none: msg`No moderation (auto-approve all)`, }; const SUPPORT_OPTIONS: SupportOptionDef[] = [ { value: "drafts", label: msg`Drafts`, description: msg`Save content as draft before publishing`, }, { value: "revisions", label: msg`Revisions`, description: msg`Track content history`, }, { value: "preview", label: msg`Preview`, description: msg`Preview content before publishing`, }, { value: "search", label: msg`Search`, description: msg`Enable full-text search on this collection`, }, ]; /** * System fields that exist on every collection * These are created automatically and cannot be modified */ interface SystemFieldDef { slug: string; label: MessageDescriptor; type: string; description: MessageDescriptor; } const SYSTEM_FIELDS: SystemFieldDef[] = [ { slug: "id", label: msg`ID`, type: "text", description: msg`Unique identifier (ULID)`, }, { slug: "slug", label: msg`Slug`, type: "text", description: msg`URL-friendly identifier`, }, { slug: "status", label: msg`Status`, type: "text", description: msg`draft, published, or archived`, }, { slug: "created_at", label: msg`Created At`, type: "datetime", description: msg`When the entry was created`, }, { slug: "updated_at", label: msg`Updated At`, type: "datetime", description: msg`When the entry was last modified`, }, { slug: "published_at", label: msg`Published At`, type: "datetime", description: msg`When the entry was published`, }, ]; /** * Content Type editor for creating/editing collections */ export function ContentTypeEditor({ collection, isNew, isSaving, onSave, onAddField, onUpdateField, onDeleteField, onReorderFields, onCreateRelation, onUpdateRelation, onDeleteRelation, isDeletingRelation, deleteRelationError, }: ContentTypeEditorProps) { const { t } = useLingui(); const _navigate = useNavigate(); // Form state const [slug, setSlug] = React.useState(collection?.slug ?? ""); const [label, setLabel] = React.useState(collection?.label ?? ""); const [labelSingular, setLabelSingular] = React.useState(collection?.labelSingular ?? ""); const [description, setDescription] = React.useState(collection?.description ?? ""); const [urlPattern, setUrlPattern] = React.useState(collection?.urlPattern ?? ""); const [routable, setRoutable] = React.useState(collection?.routable ?? true); const [editLocking, setEditLocking] = React.useState(collection?.editLocking ?? true); const [icon, setIcon] = React.useState(collection?.icon ?? ""); const [group, setGroup] = React.useState(collection?.group ?? ""); const [hidden, setHidden] = React.useState(collection?.hidden ?? false); const [quickCreate, setQuickCreate] = React.useState(collection?.admin?.quickCreate ?? true); // SEO is managed via the separate `hasSeo` field; strip any legacy "seo" entry // so it isn't sent back on save (the API enum rejects it). const [supports, setSupports] = React.useState<string[]>( (collection?.supports ?? ["drafts", "revisions"]).filter((s) => s !== "seo"), ); // SEO state const [hasSeo, setHasSeo] = React.useState(collection?.hasSeo ?? false); // Comment settings state const [commentsEnabled, setCommentsEnabled] = React.useState( collection?.commentsEnabled ?? false, ); const [commentsModeration, setCommentsModeration] = React.useState<"all" | "first_time" | "none">( collection?.commentsModeration ?? "first_time", ); const [commentsClosedAfterDays, setCommentsClosedAfterDays] = React.useState( collection?.commentsClosedAfterDays ?? 90, ); const [commentsAutoApproveUsers, setCommentsAutoApproveUsers] = React.useState( collection?.commentsAutoApproveUsers ?? true, ); // Field editor state const [fieldEditorOpen, setFieldEditorOpen] = React.useState(false); const [editingField, setEditingField] = React.useState<SchemaField | undefined>(); const [fieldSaving, setFieldSaving] = React.useState(false); const [fieldSaveError, setFieldSaveError] = React.useState<string | null>(null); const [deleteFieldTarget, setDeleteFieldTarget] = React.useState<SchemaField | null>(null); // Checked by default: deleting a reference field almost always means the // relationship it views is finished too. const [deleteFieldRelation, setDeleteFieldRelation] = React.useState(true); const urlPatternChanged = urlPattern !== (collection?.urlPattern ?? ""); const urlPatternSharesSegment = urlPatternChanged && MULTIPLE_PLACEHOLDERS_IN_SEGMENT.test(urlPattern); const urlPatternValid = !urlPattern || (urlPattern.includes("{slug}") && !urlPatternSharesSegment); const slugError = isNew && !slug && label.trim().length > 0 ? t`A slug cannot be generated from this label. Type one manually using lowercase letters, numbers, and underscores.` : undefined; // Track whether form has unsaved changes const hasChanges = React.useMemo(() => { if (isNew) return slug && label; if (!collection) return false; return ( label !== collection.label || labelSingular !== (collection.labelSingular ?? "") || description !== (collection.description ?? "") || urlPattern !== (collection.urlPattern ?? "") || routable !== (collection.routable ?? true) || editLocking !== (collection.editLocking ?? true) || icon !== (collection.icon ?? "") || group !== (collection.group ?? "") || hidden !== (collection.hidden ?? false) || quickCreate !== (collection.admin?.quickCreate ?? true) || JSON.stringify([...supports].toSorted()) !== JSON.stringify(collection.supports.filter((s) => s !== "seo").toSorted()) || hasSeo !== collection.hasSeo || commentsEnabled !== collection.commentsEnabled || commentsModeration !== collection.commentsModeration || commentsClosedAfterDays !== collection.commentsClosedAfterDays || commentsAutoApproveUsers !== collection.commentsAutoApproveUsers ); }, [ isNew, collection, slug, label, labelSingular, description, urlPattern, routable, editLocking, icon, group, hidden, quickCreate, supports, hasSeo, commentsEnabled, commentsModeration, commentsClosedAfterDays, commentsAutoApproveUsers, ]); // Auto-generate slug from plural label const handleLabelChange = (value: string) => { setLabel(value); if (isNew) { setSlug(slugifyIdentifier(value)); } }; // Auto-generate plural label (and slug) from singular label const handleSingularLabelChange = (value: string) => { setLabelSingular(value); if (isNew) { const pluralLabel = value ? `${value}s` : ""; handleLabelChange(pluralLabel); } }; const handleSupportToggle = (value: string) => { setSupports((prev) => prev.includes(value) ? prev.filter((s) => s !== value) : [...prev, value], ); }; const handleSubmit = (e: React.FormEvent) => { e.preventDefault(); if (isNew) { onSave({ slug, label, labelSingular: labelSingular || undefined, description: description || undefined, urlPattern: urlPattern || undefined, routable, editLocking, icon: icon.trim() || undefined, group: group.trim() || undefined, hidden, admin: quickCreate ? undefined : { quickCreate: false }, supports, hasSeo, }); } else { onSave({ label, labelSingular: labelSingular || undefined, description: description || undefined, urlPattern: urlPattern || undefined, routable, editLocking, icon: icon.trim(), group: group.trim() || null, hidden, admin: quickCreate !== (collection?.admin?.quickCreate ?? true) ? { ...collection?.admin, quickCreate: quickCreate ? undefined : false } : undefined, supports, hasSeo, commentsEnabled, commentsModeration, commentsClosedAfterDays, commentsAutoApproveUsers, }); } }; const handleFieldSave = async (input: CreateFieldInput) => { setFieldSaving(true); setFieldSaveError(null); try { if (editingField) { await onUpdateField?.(editingField.slug, input); } else { await onAddField?.(input); } setFieldEditorOpen(false); setEditingField(undefined); } catch (err) { setFieldSaveError(getMutationError(err)); } finally { setFieldSaving(false); } }; const requestDeleteField = (field: SchemaField) => { setDeleteFieldRelation(true); setDeleteFieldTarget(field); }; const handleEditField = (field: SchemaField) => { if (field.unsupportedType) return; setEditingField(field); setFieldSaveError(null); setFieldEditorOpen(true); }; const handleAddField = () => { setEditingField(undefined); setFieldSaveError(null); setFieldEditorOpen(true); }; const isFromCode = collection?.source === "code"; const fields = collection?.fields ?? []; const { data: relations = [], isLoading: relationsLoading } = useQuery({ queryKey: ["relations"], queryFn: () => fetchRelations(), }); const { data: allCollections = [] } = useQuery({ queryKey: ["schema", "collections"], queryFn: fetchCollections, }); const targetRelationSlug = deleteFieldTarget?.validation?.relation; const targetRelation = relations.find((rel) => rel.slug === targetRelationSlug); const sensors = useSensors( useSensor(PointerSensor, { activationConstraint: { distance: 8 } }), useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }), ); const handleDragEnd = (event: DragEndEvent) => { const { active, over } = event; if (!over || active.id === over.id) return; const oldIndex = fields.findIndex((f) => f.id === active.id); const newIndex = fields.findIndex((f) => f.id === over.id); if (oldIndex === -1 || newIndex === -1) return; const reordered = arrayMove(fields, oldIndex, newIndex); onReorderFields?.(reordered.map((f) => f.slug)); }; return ( <div className="space-y-6"> <EditorHeader leading={ <RouterLinkButton to="/content-types" aria-label={t`Back to Content Types`} variant="ghost" shape="square" icon={<ArrowPrev />} /> } actions={ !isFromCode && !isNew ? ( <SaveButton type="submit" form="content-type-editor-form" isDirty={!!hasChanges} isSaving={!!isSaving} disabled={!urlPatternValid} /> ) : null } > <h1 className="truncate text-2xl font-semibold"> {isNew ? t`New Content Type` : collection?.label} </h1> {!isNew && ( <p className="text-kumo-subtle text-sm"> <code className="bg-kumo-tint px-1.5 py-0.5 rounded">{collection?.slug}</code> {isFromCode && <span className="ms-2 text-kumo-info">{t`Defined in code`}</span>} </p> )} </EditorHeader> {isFromCode && ( <div className="rounded-lg border border-kumo-info/50 bg-kumo-info-tint p-4"> <div className="flex items-center space-x-2"> <FileText className="h-5 w-5 text-kumo-info" /> <p className="text-sm text-kumo-subtle"> {t`This collection is defined in code. Some settings cannot be changed here. Edit your live.config.ts file to modify the schema.`} </p> </div> </div> )} <div className="grid grid-cols-1 lg:grid-cols-3 gap-6"> {/* Settings form */} <div className="lg:col-span-1"> <form id="content-type-editor-form" onSubmit={handleSubmit} className="space-y-4"> <div className="rounded-lg border bg-kumo-base p-4 space-y-4"> <h2 className="font-semibold">{t`Settings`}</h2> <Input label={t`Label (Singular)`} value={labelSingular} onChange={(e) => handleSingularLabelChange(e.target.value)} placeholder={t`Post`} disabled={isFromCode} /> <Input label={t`Label (Plural)`} value={label} onChange={(e) => handleLabelChange(e.target.value)} placeholder={t`Posts`} disabled={isFromCode} /> {isNew && ( <div> <Input label={t`Slug`} value={slug} onChange={(e) => setSlug(e.target.value)} placeholder="posts" disabled={!isNew} error={slugError} /> <p className="text-xs text-kumo-subtle mt-2">{t`Used in URLs and API endpoints`}</p> </div> )} <InputArea label={t`Description`} value={description} onChange={(e) => setDescription(e.target.value)} placeholder={t`A brief description of this content type`} rows={3} disabled={isFromCode} /> <Switch checked={routable} onCheckedChange={setRoutable} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Routable`}</span> <p className="text-xs text-kumo-subtle"> {t`Require a slug before content can be published`} </p> </div> } /> <Switch checked={editLocking} onCheckedChange={setEditLocking} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Edit locking`}</span> <p className="text-xs text-kumo-subtle"> {t`Hold an entry while someone is editing it, and refuse other writers`} </p> </div> } /> <div> <Input label={t`URL Pattern`} value={urlPattern} onChange={(e) => setUrlPattern(e.target.value)} placeholder={`/${slug === "pages" ? "" : `${slug}/`}{slug}`} disabled={isFromCode} /> {urlPattern && !urlPattern.includes("{slug}") && ( <p className="text-xs text-kumo-danger mt-2"> {t`Pattern must include a ${"{slug}"} placeholder`} </p> )} {urlPatternSharesSegment && ( <p className="text-xs text-kumo-danger mt-2"> {t`Each path segment can contain at most one placeholder, e.g. ${"/{year}/{slug}"}`} </p> )} <p className="text-xs text-kumo-subtle mt-1"> {t`Pattern for generating URLs, e.g. /blog/${"{slug}"}. Tokens: ${"{slug}"}, ${"{id}"}, and date tokens ${"{year}"}/${"{month}"}/${"{day}"} (also ${"{hour}"}/${"{minute}"}/${"{second}"}) from the publish date — e.g. ${"/{year}/{month}/{day}/{slug}.html"} for WordPress-style permalinks.`} </p> </div> <div className="space-y-3"> <Label>{t`Navigation`}</Label> <div> <Input label={t`Group`} value={group} onChange={(e) => setGroup(e.target.value)} placeholder={t`Calendar`} disabled={isFromCode} /> <p className="text-xs text-kumo-subtle mt-1"> {t`Content types with the same group share a collapsible folder in the sidebar`} </p> </div> <div> <Input label={t`Icon`} value={icon} onChange={(e) => setIcon(e.target.value)} disabled={isFromCode} /> <p className="text-xs text-kumo-subtle mt-1"> {t`Phosphor icon name, e.g. calendar-blank or trophy`} </p> </div> <Switch checked={hidden} onCheckedChange={setHidden} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Hide from navigation`}</span> <p className="text-xs text-kumo-subtle"> {t`Removes the sidebar entry, command palette link, and dashboard quick action; entries stay reachable by URL, API, and plugins`} </p> </div> } /> <Switch checked={quickCreate} onCheckedChange={setQuickCreate} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Quick action on the dashboard`}</span> <p className="text-xs text-kumo-subtle"> {t`Shows a button for creating a new entry`} </p> </div> } /> </div> <div className="space-y-3"> <Label>{t`Features`}</Label> {SUPPORT_OPTIONS.map((option) => ( <div key={option.value} className={cn( "p-2 rounded-md hover:bg-kumo-tint/50", isFromCode && "opacity-60", )} > <Checkbox checked={supports.includes(option.value)} onCheckedChange={() => handleSupportToggle(option.value)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t(option.label)}</span> <p className="text-xs text-kumo-subtle">{t(option.description)}</p> </div> } /> </div> ))} </div> {/* SEO toggle */} <div className="pt-2 border-t"> <Switch checked={hasSeo} onCheckedChange={(checked) => setHasSeo(checked)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`SEO`}</span> <p className="text-xs text-kumo-subtle"> {t`Add SEO metadata fields (title, description, image) and include in sitemap`} </p> </div> } /> </div> </div> {/* Comments settings — only for existing collections */} {!isNew && ( <div className="rounded-lg border bg-kumo-base p-4 space-y-4"> <h2 className="font-semibold">{t`Comments`}</h2> <Switch checked={commentsEnabled} onCheckedChange={(checked) => setCommentsEnabled(checked)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium">{t`Enable comments`}</span> <p className="text-xs text-kumo-subtle"> {t`Allow visitors to leave comments on this collection's content`} </p> </div> } /> {commentsEnabled && ( <> <Select label={t`Moderation`} value={commentsModeration} onValueChange={(v) => setCommentsModeration((v as "all" | "first_time" | "none") ?? "first_time") } items={{ all: t(MODERATION_OPTIONS.all), first_time: t(MODERATION_OPTIONS.first_time), none: t(MODERATION_OPTIONS.none), }} disabled={isFromCode} /> <Input label={t`Close comments after (days)`} type="number" min={0} value={String(commentsClosedAfterDays)} onChange={(e) => { const parsed = Number.parseInt(e.target.value, 10); setCommentsClosedAfterDays(Number.isNaN(parsed) ? 0 : Math.max(0, parsed)); }} disabled={isFromCode} /> <p className="text-xs text-kumo-subtle -mt-2"> {t`Set to 0 to never close comments automatically.`} </p> <Switch checked={commentsAutoApproveUsers} onCheckedChange={(checked) => setCommentsAutoApproveUsers(checked)} disabled={isFromCode} label={ <div> <span className="text-sm font-medium"> {t`Auto-approve authenticated users`} </span> <p className="text-xs text-kumo-subtle"> {t`Comments from logged-in CMS users are approved automatically`} </p> </div> } /> </> )} </div> )} {!isFromCode && (isNew ? ( <Button type="submit" disabled={!hasChanges || !urlPatternValid} loading={isSaving} className="w-full justify-center" > {t`Create Content Type`} </Button> ) : ( <SaveButton type="submit" isDirty={!!hasChanges} isSaving={!!isSaving} announce={false} disabled={!urlPatternValid} className="w-full justify-center" /> ))} </form> </div> {/* Fields and relations - only shown for existing collections */} {!isNew && ( <div className="lg:col-span-2 space-y-6"> <div className="rounded-lg border bg-kumo-base"> <div className="flex items-center justify-between p-4 border-b"> <div> <h2 className="font-semibold">{t`Fields`}</h2> <p className="text-sm text-kumo-subtle"> <Trans> {SYSTEM_FIELDS.length} system + {fields.length} custom{" "} {plural(fields.length, { one: "field", other: "fields" })} </Trans> </p> </div> {!isFromCode && ( <Button icon={<Plus />} onClick={handleAddField}> {t`Add Field`} </Button> )} </div> {/* System fields - always shown */} <div> <div className="px-4 py-2 text-xs font-medium text-kumo-subtle uppercase tracking-wider bg-kumo-tint/50 border-b"> {t`System Fields`} </div> <div className="divide-y divide-kumo-line/50 border-b"> {SYSTEM_FIELDS.map((field) => ( <SystemFieldRow key={field.slug} field={field} /> ))} </div> </div> {/* Custom fields */} {fields.length === 0 ? ( <div className="p-8 text-center text-kumo-subtle"> <Database className="mx-auto h-12 w-12 mb-4 opacity-50" /> <p className="font-medium">{t`No custom fields yet`}</p> <p className="text-sm">{t`Add fields to define the structure of your content`}</p> {!isFromCode && ( <Button className="mt-4" icon={<Plus />} onClick={handleAddField}> {t`Add First Field`} </Button> )} </div> ) : ( <> <div className="px-4 py-2 text-xs font-medium text-kumo-subtle uppercase tracking-wider bg-kumo-tint/50 border-b"> {t`Custom Fields`} </div> <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd} > <SortableContext items={fields.map((f) => f.id)} strategy={verticalListSortingStrategy} > <div className="divide-y"> {fields.map((field) => ( <FieldRow key={field.id} field={field} isFromCode={isFromCode} onEdit={() => handleEditField(field)} onDelete={() => requestDeleteField(field)} /> ))} </div> </SortableContext> </DndContext> </> )} </div> {collection && ( <RelationsPanel collectionSlug={collection.slug} relations={relations} collections={allCollections} isLoading={relationsLoading} onCreateRelation={onCreateRelation} onUpdateRelation={onUpdateRelation} onDeleteRelation={onDeleteRelation} isDeletingRelation={isDeletingRelation} deleteRelationError={deleteRelationError} /> )} </div> )} </div> {/* Field editor dialog */} <FieldEditor open={fieldEditorOpen} onOpenChange={(nextOpen) => { setFieldEditorOpen(nextOpen); if (!nextOpen) setFieldSaveError(null); }} field={editingField} onSave={handleFieldSave} isSaving={fieldSaving} saveError={fieldSaveError} collectionSlug={collection?.slug} onCreateRelation={onCreateRelation} /> <ConfirmDialog open={!!deleteFieldTarget} onClose={() => setDeleteFieldTarget(null)} title={t`Delete Field?`} description={ deleteFieldTarget ? t`Are you sure you want to delete the "${deleteFieldTarget.label}" field?` : "" } confirmLabel={t`Delete`} pendingLabel={t`Deleting...`} isPending={false} error={null} onConfirm={() => { if (deleteFieldTarget) { onDeleteField?.( deleteFieldTarget.slug, targetRelation ? { deleteRelation: deleteFieldRelation } : undefined, ); setDeleteFieldTarget(null); } }} > {targetRelation && ( <div className="mt-4 space-y-3"> <Checkbox checked={deleteFieldRelation} onCheckedChange={(checked) => setDeleteFieldRelation(checked === true)} label={t`Also delete the relationship this field uses`} /> {deleteFieldRelation && collection && ( <div className="rounded-md border border-kumo-danger/50 bg-kumo-danger-tint p-3"> <p className="text-sm font-medium">{t`This also removes:`}</p> <RelationImpact relations={[targetRelation]} excludeField={{ collectionSlug: collection.slug, fieldSlug: deleteFieldTarget?.slug ?? "", }} /> </div> )} </div> )} </ConfirmDialog> </div> ); } interface FieldRowProps { field: SchemaField; isFromCode?: boolean; onEdit: () => void; onDelete: () => void; } function FieldRow({ field, isFromCode, onEdit, onDelete }: FieldRowProps) { const { t } = useLingui(); const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: field.id, disabled: isFromCode, }); const style = { transform: CSS.Transform.toString(transform), transition }; return ( <div ref={setNodeRef} style={style} className={cn( "flex items-center px-4 py-3 hover:bg-kumo-tint/25", isDragging && "opacity-50", )} > {!isFromCode && ( <button {...attributes} {...listeners} className="cursor-grab active:cursor-grabbing me-3" aria-label={t`Drag to reorder ${field.label}`} > <DotsSixVertical className="h-5 w-5 text-kumo-subtle" /> </button> )} <div className="flex-1 min-w-0"> <div className="flex items-center space-x-2"> <span className="font-medium">{field.label}</span> <code className="text-xs bg-kumo-tint px-1.5 py-0.5 rounded text-kumo-subtle"> {field.slug} </code> </div> <div className="flex items-center space-x-2 mt-1"> <span className={cn("text-xs text-kumo-subtle", !field.unsupportedType && "capitalize")}> {field.unsupportedType?.type ?? field.type} </span> {field.unsupportedType && <Badge variant="secondary">{t`Unsupported`}</Badge>} {field.required && <Badge variant="secondary">{t`Required`}</Badge>} {field.unique && <Badge variant="secondary">{t`Unique`}</Badge>} {field.searchable && <Badge variant="secondary">{t`Searchable`}</Badge>} </div> </div> {!isFromCode && ( <div className="flex items-center space-x-1"> <Button variant="ghost" shape="square" onClick={onEdit} disabled={Boolean(field.unsupportedType)} aria-label={t`Edit ${field.label} field`} > <Pencil className="h-4 w-4" /> </Button> <Button variant="ghost" shape="square" onClick={onDelete} aria-label={t`Delete ${field.label} field`} > <Trash className="h-4 w-4 text-kumo-danger" /> </Button> </div> )} </div> ); } interface SystemFieldInfo { slug: string; label: MessageDescriptor; type: string; description: MessageDescriptor; } function SystemFieldRow({ field }: { field: SystemFieldInfo }) { const { t } = useLingui(); return ( <div className="flex items-center px-4 py-2 opacity-75"> <div className="w-8" /> {/* Spacer for alignment with draggable fields */} <div className="flex-1 min-w-0"> <div className="flex items-center space-x-2"> <span className="font-medium text-sm">{t(field.label)}</span> <code className="text-xs bg-kumo-tint px-1.5 py-0.5 rounded text-kumo-subtle"> {field.slug} </code> <Badge variant="secondary">{t`System`}</Badge> </div> <p className="text-xs text-kumo-subtle mt-0.5">{t(field.description)}</p> </div> </div> ); } 
+#: packages/admin/src/components/ContentTypeEditor.tsx:754
 msgid "{0} system + {1} custom {2}"
 msgstr "{0} מערכת + {1} מותאמים אישית {2}"
 
@@ -950,7 +950,7 @@ msgstr "7 ימים"
 msgid "90 days"
 msgstr "90 ימים"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:492
+#: packages/admin/src/components/ContentTypeEditor.tsx:501
 msgid "A brief description of this content type"
 msgstr "תיאור קצר של סוג התוכן הזה"
 
@@ -1024,7 +1024,7 @@ msgstr "רשומה מפנה למשהו שחסר בחבילה"
 msgid "A relation defines how two content types link. Reference fields on either side then pick entries through it."
 msgstr "קשר מגדיר איך שני סוגי תוכן מקושרים. שדות קישור בכל אחד מהצדדים בוחרים דרכו פריטים."
 
-#: packages/admin/src/components/FieldEditor.tsx:773
+#: packages/admin/src/components/FieldEditor.tsx:792
 msgid "A relationship is required"
 msgstr "נדרש קשר"
 
@@ -1037,12 +1037,12 @@ msgid "A slug cannot be generated from these role names. Type one manually using
 msgstr ""
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:195
-#: packages/admin/src/components/ContentTypeEditor.tsx:231
-#: packages/admin/src/components/FieldEditor.tsx:645
+#: packages/admin/src/components/ContentTypeEditor.tsx:235
+#: packages/admin/src/components/FieldEditor.tsx:657
 msgid "A slug cannot be generated from this label. Type one manually using lowercase letters, numbers, and underscores."
 msgstr ""
 
-#: packages/admin/src/components/FieldEditor.tsx:1223
+#: packages/admin/src/components/FieldEditor.tsx:1242
 msgid "A slug cannot be generated from this label. Type one manually."
 msgstr ""
 
@@ -1152,7 +1152,7 @@ msgstr "פעיל"
 #. placeholder {0}: blockType.currentVersion
 #. placeholder {0}: version.version
 #: packages/admin/src/components/BlockTypeList.tsx:32
-#: packages/admin/src/components/FieldEditor.tsx:1151
+#: packages/admin/src/components/FieldEditor.tsx:1170
 msgid "Active v{0}"
 msgstr "פעילה v{0}"
 
@@ -1206,7 +1206,7 @@ msgstr "הוספת קרדיט נוסף"
 msgid "Add at least {minItems} blocks."
 msgstr "הוסיפו לפחות {minItems} בלוקים."
 
-#: packages/admin/src/components/FieldEditor.tsx:1215
+#: packages/admin/src/components/FieldEditor.tsx:1234
 msgid "Add at least one sub-field to define the repeater structure."
 msgstr "הוסיפו לפחות שדה משנה אחד כדי להגדיר את מבנה הרשימה החוזרת."
 
@@ -1247,9 +1247,9 @@ msgstr "הוספת גרסה למצב כהה"
 msgid "Add Domain"
 msgstr "הוספת דומיין"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:753
-#: packages/admin/src/components/FieldEditor.tsx:683
-#: packages/admin/src/components/FieldEditor.tsx:1373
+#: packages/admin/src/components/ContentTypeEditor.tsx:762
+#: packages/admin/src/components/FieldEditor.tsx:701
+#: packages/admin/src/components/FieldEditor.tsx:1394
 msgid "Add Field"
 msgstr "הוספת שדה"
 
@@ -1261,11 +1261,11 @@ msgstr "הוספת שדות"
 msgid "Add fields like \"Job title\" or \"Pronouns\" to enrich every byline."
 msgstr "הוסיפו שדות כמו \"תפקיד\" או \"כינויי גוף\" כדי להעשיר כל קרדיט."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:775
+#: packages/admin/src/components/ContentTypeEditor.tsx:784
 msgid "Add fields to define the structure of your content"
 msgstr "הוספת שדות להגדרת מבנה התוכן שלכם"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:778
+#: packages/admin/src/components/ContentTypeEditor.tsx:787
 msgid "Add First Field"
 msgstr "הוספת השדה הראשון"
 
@@ -1347,11 +1347,11 @@ msgstr "הוספת סקריפטים וסגנונות לדפי האתר"
 msgid "Add selected"
 msgstr "הוספת הנבחרים"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:636
+#: packages/admin/src/components/ContentTypeEditor.tsx:645
 msgid "Add SEO metadata fields (title, description, image) and include in sitemap"
 msgstr "הוספת שדות מטא-נתונים של SEO (כותרת, תיאור, תמונה) והכללה במפת האתר"
 
-#: packages/admin/src/components/FieldEditor.tsx:1209
+#: packages/admin/src/components/FieldEditor.tsx:1228
 msgid "Add Sub-Field"
 msgstr "הוספת שדה משנה"
 
@@ -1493,7 +1493,7 @@ msgstr "כל ההרשאות"
 msgid "All collections"
 msgstr "כל האוספים"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:80
+#: packages/admin/src/components/ContentTypeEditor.tsx:83
 msgid "All comments require approval"
 msgstr "כל התגובות דורשות אישור"
 
@@ -1533,7 +1533,7 @@ msgstr "כל ההעלאות הסתיימו"
 msgid "Allow MCP tokens with plugin-tool scope to invoke these routes."
 msgstr "אפשרו לאסימוני MCP בהיקף plugin-tool לקרוא לנתיבים אלה."
 
-#: packages/admin/src/components/FieldEditor.tsx:1036
+#: packages/admin/src/components/FieldEditor.tsx:1055
 msgid "Allow multiple references"
 msgstr "אפשר קישורים מרובים"
 
@@ -1542,11 +1542,11 @@ msgstr "אפשר קישורים מרובים"
 msgid "Allow users from specific domains to sign up"
 msgstr "אפשרו למשתמשים מדומיינים מסוימים להירשם"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:657
+#: packages/admin/src/components/ContentTypeEditor.tsx:666
 msgid "Allow visitors to leave comments on this collection's content"
 msgstr "אפשרו למבקרים להשאיר תגובות על תוכן האוסף הזה"
 
-#: packages/admin/src/components/FieldEditor.tsx:1064
+#: packages/admin/src/components/FieldEditor.tsx:1083
 msgid "Allowed block types"
 msgstr "סוגי בלוקים מותרים"
 
@@ -1570,7 +1570,7 @@ msgstr "כבר יש לכם חשבון?"
 msgid "Also delete plugin storage data"
 msgstr "מחיקת נתוני אחסון התוסף גם כן"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:869
+#: packages/admin/src/components/ContentTypeEditor.tsx:882
 msgid "Also delete the relationship this field uses"
 msgstr "מחיקה גם של הקשר שהשדה הזה משתמש בו"
 
@@ -1796,7 +1796,7 @@ msgstr "אושר"
 msgid "Approving…"
 msgstr "באישור…"
 
-#: packages/admin/src/components/FieldEditor.tsx:451
+#: packages/admin/src/components/FieldEditor.tsx:463
 msgid "Arbitrary JSON data"
 msgstr "נתוני JSON שרירותיים"
 
@@ -1821,7 +1821,7 @@ msgid "Are you sure you want to delete \"{0}\"? This will also delete all conten
 msgstr "האם למחוק את \"{0}\"? פעולה זו תמחק גם את כל התוכן באוסף הזה."
 
 #. placeholder {0}: deleteFieldTarget.label
-#: packages/admin/src/components/ContentTypeEditor.tsx:847
+#: packages/admin/src/components/ContentTypeEditor.tsx:860
 msgid "Are you sure you want to delete the \"{0}\" field?"
 msgstr "האם למחוק את השדה \"{0}\"?"
 
@@ -1954,7 +1954,7 @@ msgstr "אוטומטי"
 msgid "Auto (slug change)"
 msgstr "אוטומטי (שינוי slug)"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:701
+#: packages/admin/src/components/ContentTypeEditor.tsx:710
 msgid "Auto-approve authenticated users"
 msgstr "אישור אוטומטי של משתמשים מאומתים"
 
@@ -2017,7 +2017,7 @@ msgstr "חזרה"
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:748
 #: packages/admin/src/components/BulkTagDialog.tsx:499
 #: packages/admin/src/components/editor/BlockMenu.tsx:266
-#: packages/admin/src/components/FieldEditor.tsx:661
+#: packages/admin/src/components/FieldEditor.tsx:673
 #: packages/admin/src/components/MediaDetailPanel.tsx:1805
 #: packages/admin/src/components/MediaLibrary.tsx:747
 #: packages/admin/src/components/MenuEditor.tsx:367
@@ -2030,7 +2030,7 @@ msgstr "חזרה"
 msgid "Back to {collectionLabel} list"
 msgstr "חזרה לרשימת {collectionLabel}"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:411
+#: packages/admin/src/components/ContentTypeEditor.tsx:420
 #: packages/admin/src/components/RelationList.tsx:62
 msgid "Back to Content Types"
 msgstr "חזרה לסוגי התוכן"
@@ -2154,7 +2154,7 @@ msgstr "גרסאות של סוגי בלוקים"
 msgid "Block types"
 msgstr "סוגי בלוקים"
 
-#: packages/admin/src/components/FieldEditor.tsx:1073
+#: packages/admin/src/components/FieldEditor.tsx:1092
 msgid "Block types could not be loaded."
 msgstr "לא ניתן לטעון את סוגי הבלוקים."
 
@@ -2162,7 +2162,7 @@ msgstr "לא ניתן לטעון את סוגי הבלוקים."
 msgid "Blockers"
 msgstr "חסמים"
 
-#: packages/admin/src/components/FieldEditor.tsx:474
+#: packages/admin/src/components/FieldEditor.tsx:486
 msgid "Blocks"
 msgstr "בלוקים"
 
@@ -2172,8 +2172,8 @@ msgid "Bold"
 msgstr "מודגש"
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:50
-#: packages/admin/src/components/FieldEditor.tsx:402
-#: packages/admin/src/components/FieldEditor.tsx:1274
+#: packages/admin/src/components/FieldEditor.tsx:414
+#: packages/admin/src/components/FieldEditor.tsx:1293
 msgid "Boolean"
 msgstr "בוליאני"
 
@@ -2302,7 +2302,7 @@ msgid "C++"
 msgstr "שפת C++"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:142
-#: packages/admin/src/components/ContentTypeEditor.tsx:555
+#: packages/admin/src/components/ContentTypeEditor.tsx:564
 #: packages/admin/src/components/Sidebar.tsx:603
 #: packages/admin/src/routes/calendar.tsx:276
 msgid "Calendar"
@@ -2341,7 +2341,7 @@ msgstr "יכול/ה להציג תוכן"
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:817
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:411
 #: packages/admin/src/components/EditorDraftPatchPreview.tsx:78
-#: packages/admin/src/components/FieldEditor.tsx:1358
+#: packages/admin/src/components/FieldEditor.tsx:1379
 #: packages/admin/src/components/MediaDetailPanel.tsx:1847
 #: packages/admin/src/components/MediaFolderDialog.tsx:152
 #: packages/admin/src/components/MediaPickerModal.tsx:1588
@@ -2467,7 +2467,7 @@ msgstr "מרכז"
 
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:76
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:107
-#: packages/admin/src/components/FieldEditor.tsx:746
+#: packages/admin/src/components/FieldEditor.tsx:765
 #: packages/admin/src/components/SeoImageField.tsx:58
 msgid "Change"
 msgstr "שינוי"
@@ -2787,10 +2787,10 @@ msgstr "לחצו על הקישור הזה כדי להתחבר אל {siteName}:"
 #: packages/admin/src/components/ContentPickerModal.tsx:235
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:624
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:626
-#: packages/admin/src/components/FieldEditor.tsx:666
-#: packages/admin/src/components/FieldEditor.tsx:686
-#: packages/admin/src/components/FieldEditor.tsx:692
-#: packages/admin/src/components/FieldEditor.tsx:696
+#: packages/admin/src/components/FieldEditor.tsx:682
+#: packages/admin/src/components/FieldEditor.tsx:704
+#: packages/admin/src/components/FieldEditor.tsx:710
+#: packages/admin/src/components/FieldEditor.tsx:715
 #: packages/admin/src/components/MarketplacePluginDetail.tsx:461
 #: packages/admin/src/components/MediaDetailPanel.tsx:1116
 #: packages/admin/src/components/MediaDetailPanel.tsx:1847
@@ -2841,7 +2841,7 @@ msgstr "סגירה"
 msgid "Close byline search"
 msgstr "סגירת חיפוש קרדיטים"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:680
+#: packages/admin/src/components/ContentTypeEditor.tsx:689
 msgid "Close comments after (days)"
 msgstr "סגירת תגובות לאחר (ימים)"
 
@@ -2977,14 +2977,14 @@ msgid "Comment reactions"
 msgstr "תגובות רגשיות לתגובות"
 
 #: packages/admin/src/components/comments/CommentInbox.tsx:162
-#: packages/admin/src/components/ContentTypeEditor.tsx:647
+#: packages/admin/src/components/ContentTypeEditor.tsx:656
 #: packages/admin/src/components/settings/transfer/labels.ts:34
 #: packages/admin/src/components/settings/transfer/labels.ts:88
 #: packages/admin/src/components/Sidebar.tsx:434
 msgid "Comments"
 msgstr "תגובות"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:704
+#: packages/admin/src/components/ContentTypeEditor.tsx:713
 msgid "Comments from logged-in CMS users are approved automatically"
 msgstr "תגובות ממשתמשי CMS מחוברים מאושרות אוטומטית"
 
@@ -3004,7 +3004,7 @@ msgstr "השלמת הרשמה"
 msgid "Component"
 msgstr "רכיב"
 
-#: packages/admin/src/components/FieldEditor.tsx:683
+#: packages/admin/src/components/FieldEditor.tsx:701
 msgid "Configure Field"
 msgstr "הגדרת שדה"
 
@@ -3160,7 +3160,7 @@ msgstr "סוגי תוכן"
 msgid "Content Types"
 msgstr "סוגי תוכן"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:559
+#: packages/admin/src/components/ContentTypeEditor.tsx:568
 msgid "Content types with the same group share a collapsible folder in the sidebar"
 msgstr "סוגי תוכן עם אותה קבוצה חולקים תיקייה שניתן לכווץ בסרגל הצד"
 
@@ -3463,7 +3463,7 @@ msgstr "יצירת תרגום {0}"
 msgid "Create {singularLower}"
 msgstr "יצירת {singularLower}"
 
-#: packages/admin/src/components/FieldEditor.tsx:1077
+#: packages/admin/src/components/FieldEditor.tsx:1096
 msgid "Create a block type before adding a blocks field."
 msgstr "צרו סוג בלוק לפני הוספת שדה בלוקים."
 
@@ -3504,7 +3504,7 @@ msgstr "יצירה והוספה"
 msgid "Create byline"
 msgstr "יצירת קרדיט"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:722
+#: packages/admin/src/components/ContentTypeEditor.tsx:731
 msgid "Create Content Type"
 msgstr "יצירת סוג תוכן"
 
@@ -3565,7 +3565,7 @@ msgstr "יצירת הפניה עבור נתיב זה"
 msgid "Create redirect rules to manage URL changes."
 msgstr "צרו כללי הפניה לניהול שינויי URL."
 
-#: packages/admin/src/components/FieldEditor.tsx:769
+#: packages/admin/src/components/FieldEditor.tsx:788
 msgid "Create relation"
 msgstr "הוספת קשר"
 
@@ -3668,7 +3668,7 @@ msgstr "נוצר תרגום {0}"
 msgid "Created and updated"
 msgstr "נוצרו ועודכנו"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:140
+#: packages/admin/src/components/ContentTypeEditor.tsx:143
 msgid "Created At"
 msgstr "נוצר בתאריך"
 
@@ -3745,7 +3745,7 @@ msgstr "מוגדר כעת — הזינו ערך חדש להחלפה"
 msgid "Custom"
 msgstr "מותאם אישית"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:785
+#: packages/admin/src/components/ContentTypeEditor.tsx:794
 msgid "Custom Fields"
 msgstr "שדות מותאמים אישית"
 
@@ -3765,7 +3765,7 @@ msgstr "טקסונומיות מותאמות אישית"
 msgid "Daily automatic backups"
 msgstr "גיבויים אוטומטיים יומיים"
 
-#: packages/admin/src/components/FieldEditor.tsx:1345
+#: packages/admin/src/components/FieldEditor.tsx:1364
 #: packages/admin/src/components/ImageFieldRenderer.tsx:396
 msgid "Dark mode variant"
 msgstr "גרסה למצב כהה"
@@ -3787,12 +3787,12 @@ msgstr "הגדרות ששמורות במסד הנתונים וזמינות לש�
 msgid "Date"
 msgstr "תאריך"
 
-#: packages/admin/src/components/FieldEditor.tsx:408
-#: packages/admin/src/components/FieldEditor.tsx:1275
+#: packages/admin/src/components/FieldEditor.tsx:420
+#: packages/admin/src/components/FieldEditor.tsx:1294
 msgid "Date & Time"
 msgstr "תאריך ושעה"
 
-#: packages/admin/src/components/FieldEditor.tsx:409
+#: packages/admin/src/components/FieldEditor.tsx:421
 msgid "Date and time picker"
 msgstr "בורר תאריך ושעה"
 
@@ -3808,7 +3808,7 @@ msgstr "תבנית תאריך"
 msgid "Date range"
 msgstr "טווח תאריכים"
 
-#: packages/admin/src/components/FieldEditor.tsx:391
+#: packages/admin/src/components/FieldEditor.tsx:403
 msgid "Decimal number"
 msgstr "מספר עשרוני"
 
@@ -3854,13 +3854,13 @@ msgstr "הגדרת האופן שבו סוגי תוכן מקושרים זה לז�
 msgid "Define the structure of your content"
 msgstr "הגדרת מבנה התוכן שלכם"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:435
+#: packages/admin/src/components/ContentTypeEditor.tsx:444
 msgid "Defined in code"
 msgstr "מוגדר בקוד"
 
 #: packages/admin/src/components/comments/CommentInbox.tsx:300
 #: packages/admin/src/components/comments/CommentInbox.tsx:432
-#: packages/admin/src/components/ContentTypeEditor.tsx:850
+#: packages/admin/src/components/ContentTypeEditor.tsx:863
 #: packages/admin/src/components/ContentTypeList.tsx:256
 #: packages/admin/src/components/editor/BlockMenu.tsx:318
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:383
@@ -3906,7 +3906,7 @@ msgid "Delete {0}"
 msgstr "מחיקת {0}"
 
 #. placeholder {0}: field.label
-#: packages/admin/src/components/ContentTypeEditor.tsx:956
+#: packages/admin/src/components/ContentTypeEditor.tsx:969
 msgid "Delete {0} field"
 msgstr "מחיקת שדה {0}"
 
@@ -3970,7 +3970,7 @@ msgstr "למחוק סוג תוכן?"
 msgid "Delete embed"
 msgstr "מחיקת הטמעה"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:844
+#: packages/admin/src/components/ContentTypeEditor.tsx:857
 msgid "Delete Field?"
 msgstr "למחוק שדה?"
 
@@ -4080,7 +4080,7 @@ msgid "Deleting \"{0}\" will also remove {1, plural, one {# stored value} other 
 msgstr "מחיקת \"{0}\" תסיר גם {1, plural, one {ערך שמור אחד} two {שני ערכים שמורים} other {# ערכים שמורים}} מכל הקרדיטים. לא ניתן לבטל פעולה זו."
 
 #: packages/admin/src/components/comments/CommentInbox.tsx:433
-#: packages/admin/src/components/ContentTypeEditor.tsx:851
+#: packages/admin/src/components/ContentTypeEditor.tsx:864
 #: packages/admin/src/components/ContentTypeList.tsx:257
 #: packages/admin/src/components/MediaDetailPanel.tsx:1816
 #: packages/admin/src/components/MediaDetailPanel.tsx:1921
@@ -4155,7 +4155,7 @@ msgstr "תיאור תמונה זו לנגישות"
 msgid "Describe what this section is for..."
 msgstr "תארו למה משמש המקטע הזה..."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:489
+#: packages/admin/src/components/ContentTypeEditor.tsx:498
 #: packages/admin/src/components/RegistryPluginDetail.tsx:893
 #: packages/admin/src/components/SectionEditor.tsx:295
 #: packages/admin/src/components/Sections.tsx:221
@@ -4484,11 +4484,11 @@ msgstr "שינויי טיוטה"
 msgid "Draft version"
 msgstr "גרסת טיוטה"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:136
+#: packages/admin/src/components/ContentTypeEditor.tsx:139
 msgid "draft, published, or archived"
 msgstr "טיוטה, פורסם או בארכיון"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:88
+#: packages/admin/src/components/ContentTypeEditor.tsx:91
 #: packages/admin/src/components/Dashboard.tsx:513
 msgid "Drafts"
 msgstr "טיוטות"
@@ -4515,7 +4515,7 @@ msgstr "גררו לשינוי סדר"
 
 #. placeholder {0}: field.label
 #. placeholder {0}: widget.title ?? t`widget`
-#: packages/admin/src/components/ContentTypeEditor.tsx:919
+#: packages/admin/src/components/ContentTypeEditor.tsx:932
 #: packages/admin/src/components/Widgets.tsx:805
 msgid "Drag to reorder {0}"
 msgstr "גררו לשינוי סדר של {0}"
@@ -4602,7 +4602,7 @@ msgid "Each {linkingSideName} links to"
 msgstr "כל {linkingSideName} מקשר/ת אל"
 
 #. placeholder {0}: "/{year}/{slug}"
-#: packages/admin/src/components/ContentTypeEditor.tsx:540
+#: packages/admin/src/components/ContentTypeEditor.tsx:549
 msgid "Each path segment can contain at most one placeholder, e.g. {0}"
 msgstr "כל מקטע בנתיב יכול להכיל מציין מיקום אחד לכל היותר, למשל {0}"
 
@@ -4635,7 +4635,7 @@ msgid "Edit {0}"
 msgstr "עריכת {0}"
 
 #. placeholder {0}: field.label
-#: packages/admin/src/components/ContentTypeEditor.tsx:948
+#: packages/admin/src/components/ContentTypeEditor.tsx:961
 msgid "Edit {0} field"
 msgstr "עריכת שדה {0}"
 
@@ -4677,7 +4677,7 @@ msgstr "עריכת נכס למצב כהה"
 msgid "Edit Domain"
 msgstr "עריכת דומיין"
 
-#: packages/admin/src/components/FieldEditor.tsx:683
+#: packages/admin/src/components/FieldEditor.tsx:701
 msgid "Edit Field"
 msgstr "עריכת שדה"
 
@@ -4706,7 +4706,7 @@ msgstr "עריכת תמונה {0}"
 msgid "Edit link"
 msgstr "עריכת קישור"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:517
+#: packages/admin/src/components/ContentTypeEditor.tsx:526
 msgid "Edit locking"
 msgstr "נעילת עריכה"
 
@@ -4786,7 +4786,7 @@ msgstr ""
 "מדווח/ת\n"
 "צלם/ת"
 
-#: packages/admin/src/components/FieldEditor.tsx:1348
+#: packages/admin/src/components/FieldEditor.tsx:1367
 msgid "Editors can select a second image that the site shows in dark mode."
 msgstr "עורכים/ות יכולים לבחור תמונה שנייה שהאתר יציג במצב כהה."
 
@@ -4924,11 +4924,11 @@ msgstr "אתר ריק"
 msgid "Enable"
 msgstr "הפעלה"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:655
+#: packages/admin/src/components/ContentTypeEditor.tsx:664
 msgid "Enable comments"
 msgstr "הפעלת תגובות"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:104
+#: packages/admin/src/components/ContentTypeEditor.tsx:107
 msgid "Enable full-text search on this collection"
 msgstr "הפעלת חיפוש טקסט מלא באוסף זה"
 
@@ -5028,13 +5028,13 @@ msgstr "הזינו את ה-URL של אתר ה-WordPress שלכם"
 msgid "Entries"
 msgstr "פריטים"
 
-#: packages/admin/src/components/FieldEditor.tsx:795
-#: packages/admin/src/components/FieldEditor.tsx:1001
+#: packages/admin/src/components/FieldEditor.tsx:814
+#: packages/admin/src/components/FieldEditor.tsx:1020
 msgid "Entries that link to this one"
 msgstr "פריטים שמקשרים לפריט הזה"
 
-#: packages/admin/src/components/FieldEditor.tsx:794
-#: packages/admin/src/components/FieldEditor.tsx:1000
+#: packages/admin/src/components/FieldEditor.tsx:813
+#: packages/admin/src/components/FieldEditor.tsx:1019
 msgid "Entries this one links to"
 msgstr "פריטים שהפריט הזה מקשר אליהם"
 
@@ -5984,7 +5984,7 @@ msgstr "תכונה"
 msgid "Featured Images"
 msgstr "תמונות ראשיות"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:602
+#: packages/admin/src/components/ContentTypeEditor.tsx:611
 #: packages/admin/src/components/ContentTypeList.tsx:207
 msgid "Features"
 msgstr "תכונות"
@@ -6001,15 +6001,15 @@ msgstr "השדה נוצר"
 msgid "Field deleted"
 msgstr "השדה נמחק"
 
-#: packages/admin/src/components/FieldEditor.tsx:1243
+#: packages/admin/src/components/FieldEditor.tsx:1262
 msgid "Field label"
 msgstr "תווית שדה"
 
-#: packages/admin/src/components/FieldEditor.tsx:821
+#: packages/admin/src/components/FieldEditor.tsx:840
 msgid "Field Label"
 msgstr "תווית שדה"
 
-#: packages/admin/src/components/FieldEditor.tsx:834
+#: packages/admin/src/components/FieldEditor.tsx:853
 msgid "Field slugs cannot be changed after creation"
 msgstr "לא ניתן לשנות slug של שדות לאחר היצירה"
 
@@ -6021,11 +6021,11 @@ msgstr "לא ניתן לשנות סוג שדה לאחר היצירה."
 msgid "Field updated"
 msgstr "השדה עודכן"
 
-#: packages/admin/src/components/FieldEditor.tsx:1258
+#: packages/admin/src/components/FieldEditor.tsx:1277
 msgid "field_slug"
 msgstr ""
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:743
+#: packages/admin/src/components/ContentTypeEditor.tsx:752
 #: packages/admin/src/components/RelationList.tsx:96
 #: packages/admin/src/components/settings/transfer/labels.ts:12
 msgid "Fields"
@@ -6035,7 +6035,7 @@ msgstr "שדות"
 msgid "Fields created:"
 msgstr "שדות שנוצרו:"
 
-#: packages/admin/src/components/FieldEditor.tsx:438
+#: packages/admin/src/components/FieldEditor.tsx:450
 msgid "File"
 msgstr "קובץ"
 
@@ -6044,7 +6044,7 @@ msgstr "קובץ"
 msgid "File {0}"
 msgstr "קובץ {0}"
 
-#: packages/admin/src/components/FieldEditor.tsx:439
+#: packages/admin/src/components/FieldEditor.tsx:451
 msgid "File from media library"
 msgstr "קובץ מספריית המדיה"
 
@@ -6126,7 +6126,7 @@ msgstr "עמוד ראשון"
 msgid "First publication"
 msgstr "פרסום ראשון"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:81
+#: packages/admin/src/components/ContentTypeEditor.tsx:84
 msgid "First-time commenters only"
 msgstr "מגיבים בפעם הראשונה בלבד"
 
@@ -6331,7 +6331,7 @@ msgstr "ממשק GraphQL"
 msgid "Grid view"
 msgstr "תצוגת רשת"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:552
+#: packages/admin/src/components/ContentTypeEditor.tsx:561
 msgid "Group"
 msgstr "קבוצה"
 
@@ -6441,7 +6441,7 @@ msgstr "גיבור, באנר, CTA"
 msgid "Hide earlier entries"
 msgstr "הסתרת פריטים מוקדמים"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:579
+#: packages/admin/src/components/ContentTypeEditor.tsx:588
 msgid "Hide from navigation"
 msgstr "הסתרה מהניווט"
 
@@ -6473,7 +6473,7 @@ msgstr "היררכי (כמו קטגוריות, עם יחסי הורה/צאצא)"
 msgid "Hits"
 msgstr "כניסות"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:519
+#: packages/admin/src/components/ContentTypeEditor.tsx:528
 msgid "Hold an entry while someone is editing it, and refuse other writers"
 msgstr "החזיקו פריט בזמן שמישהו עורך אותו ודחו כותבים/ות אחרים"
 
@@ -6570,7 +6570,7 @@ msgstr "השלמתי את השלבים האלה ואני מבין/ה שלא ני
 msgid "I've set it up — check again"
 msgstr "הגדרתי אותו — בדקו שוב"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:564
+#: packages/admin/src/components/ContentTypeEditor.tsx:573
 msgid "Icon"
 msgstr "סמל"
 
@@ -6579,7 +6579,7 @@ msgstr "סמל"
 msgid "Icon blurred due to image audit"
 msgstr "הסמל מטושטש עקב בדיקת תמונה"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:122
+#: packages/admin/src/components/ContentTypeEditor.tsx:125
 msgid "ID"
 msgstr "מזהה"
 
@@ -6608,8 +6608,8 @@ msgstr "אפשרויות בלוק Iframe"
 msgid "visualEditing.image"
 msgstr "תמונה"
 
-#: packages/admin/src/components/FieldEditor.tsx:432
-#: packages/admin/src/components/FieldEditor.tsx:1278
+#: packages/admin/src/components/FieldEditor.tsx:444
+#: packages/admin/src/components/FieldEditor.tsx:1297
 #: packages/admin/src/components/PortableTextEditor.tsx:3213
 msgid "Image"
 msgstr "תמונה"
@@ -6633,7 +6633,7 @@ msgstr "פעולות תמונה"
 msgid "Image controls"
 msgstr "פקדי תמונה"
 
-#: packages/admin/src/components/FieldEditor.tsx:433
+#: packages/admin/src/components/FieldEditor.tsx:445
 msgid "Image from media library"
 msgstr "תמונה מספריית המדיה"
 
@@ -6855,7 +6855,7 @@ msgstr "הגדלת רוחב עמודה"
 msgid "Index existing content and keep Used in results up to date."
 msgstr "אנדקסו תוכן קיים ושמרו את תוצאות השימוש במדיה מעודכנות."
 
-#: packages/admin/src/components/FieldEditor.tsx:867
+#: packages/admin/src/components/FieldEditor.tsx:886
 #: packages/admin/src/components/RegistryPluginDetail.tsx:585
 msgid "Indexed"
 msgstr "מאונדקס"
@@ -7017,8 +7017,8 @@ msgstr "מותקן:"
 msgid "Installing..."
 msgstr "בהתקנה..."
 
-#: packages/admin/src/components/FieldEditor.tsx:396
-#: packages/admin/src/components/FieldEditor.tsx:1273
+#: packages/admin/src/components/FieldEditor.tsx:408
+#: packages/admin/src/components/FieldEditor.tsx:1292
 msgid "Integer"
 msgstr "מספר שלם"
 
@@ -7141,7 +7141,7 @@ msgid "JS"
 msgstr "JS"
 
 #: packages/admin/src/components/editor/codeBlockLanguages.ts:41
-#: packages/admin/src/components/FieldEditor.tsx:450
+#: packages/admin/src/components/FieldEditor.tsx:462
 msgid "JSON"
 msgstr "JSON"
 
@@ -7205,8 +7205,8 @@ msgid "Kotlin"
 msgstr "שפת Kotlin"
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:226
-#: packages/admin/src/components/FieldEditor.tsx:818
-#: packages/admin/src/components/FieldEditor.tsx:1230
+#: packages/admin/src/components/FieldEditor.tsx:837
+#: packages/admin/src/components/FieldEditor.tsx:1249
 #: packages/admin/src/components/MenuEditor.tsx:418
 #: packages/admin/src/components/MenuEditor.tsx:599
 #: packages/admin/src/components/MenuList.tsx:153
@@ -7216,11 +7216,11 @@ msgstr "שפת Kotlin"
 msgid "Label"
 msgstr "תווית"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:467
+#: packages/admin/src/components/ContentTypeEditor.tsx:476
 msgid "Label (Plural)"
 msgstr "תווית (רבים)"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:459
+#: packages/admin/src/components/ContentTypeEditor.tsx:468
 msgid "Label (Singular)"
 msgstr "תווית (יחיד)"
 
@@ -7329,7 +7329,7 @@ msgstr "תוקף הקישור פג"
 msgid "Link this byline to a user or mark it as a guest profile."
 msgstr "קשרו את הקרדיט הזה למשתמש/ת או סמנו אותו כפרופיל אורח."
 
-#: packages/admin/src/components/FieldEditor.tsx:445
+#: packages/admin/src/components/FieldEditor.tsx:457
 msgid "Link to another content item"
 msgstr "קישור לפריט תוכן אחר"
 
@@ -7466,7 +7466,7 @@ msgid "Loading approval requests…"
 msgstr "מתבצעת טעינת בקשות אישור…"
 
 #: packages/admin/src/components/BlockTypeList.tsx:22
-#: packages/admin/src/components/FieldEditor.tsx:1070
+#: packages/admin/src/components/FieldEditor.tsx:1089
 msgid "Loading block types…"
 msgstr "טוענים סוגי בלוקים…"
 
@@ -7683,8 +7683,8 @@ msgstr "לוגו וסמל אתר"
 msgid "Long text"
 msgstr "טקסט ארוך"
 
-#: packages/admin/src/components/FieldEditor.tsx:384
-#: packages/admin/src/components/FieldEditor.tsx:1271
+#: packages/admin/src/components/FieldEditor.tsx:396
+#: packages/admin/src/components/FieldEditor.tsx:1290
 msgid "Long Text"
 msgstr "טקסט ארוך"
 
@@ -7811,15 +7811,15 @@ msgstr "תצורת חנות התוספים אינה נתמכת עוד"
 msgid "Matched by email"
 msgstr "הותאם לפי אימייל"
 
-#: packages/admin/src/components/FieldEditor.tsx:1323
+#: packages/admin/src/components/FieldEditor.tsx:1342
 msgid "Max Items"
 msgstr "מספר פריטים מרבי"
 
-#: packages/admin/src/components/FieldEditor.tsx:887
+#: packages/admin/src/components/FieldEditor.tsx:906
 msgid "Max Length"
 msgstr "אורך מרבי"
 
-#: packages/admin/src/components/FieldEditor.tsx:917
+#: packages/admin/src/components/FieldEditor.tsx:936
 msgid "Max Value"
 msgstr "ערך מרבי"
 
@@ -7827,7 +7827,7 @@ msgstr "ערך מרבי"
 msgid "Maximum"
 msgstr "מקסימום"
 
-#: packages/admin/src/components/FieldEditor.tsx:1172
+#: packages/admin/src/components/FieldEditor.tsx:1191
 msgid "Maximum blocks"
 msgstr "מקסימום בלוקים"
 
@@ -8037,19 +8037,19 @@ msgstr "מדריך העברה"
 msgid "Migration key"
 msgstr "מפתח העברה"
 
-#: packages/admin/src/components/FieldEditor.tsx:1316
+#: packages/admin/src/components/FieldEditor.tsx:1335
 msgid "Min Items"
 msgstr "מספר פריטים מזערי"
 
-#: packages/admin/src/components/FieldEditor.tsx:880
+#: packages/admin/src/components/FieldEditor.tsx:899
 msgid "Min Length"
 msgstr "אורך מזערי"
 
-#: packages/admin/src/components/FieldEditor.tsx:910
+#: packages/admin/src/components/FieldEditor.tsx:929
 msgid "Min Value"
 msgstr "ערך מזערי"
 
-#: packages/admin/src/components/FieldEditor.tsx:1164
+#: packages/admin/src/components/FieldEditor.tsx:1183
 msgid "Minimum blocks"
 msgstr "מינימום בלוקים"
 
@@ -8065,7 +8065,7 @@ msgstr "דקה"
 msgid "Mixed"
 msgstr "מעורב"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:666
+#: packages/admin/src/components/ContentTypeEditor.tsx:675
 msgid "Moderation"
 msgstr "ניהול תגובות"
 
@@ -8146,7 +8146,7 @@ msgstr "להעביר את \"{title}\" לפח? אפשר לשחזר אותו מא�
 #. placeholder {0}: referenceRowLabel(row)
 #. placeholder {0}: term.label
 #: packages/admin/src/components/ContentEditor.tsx:2763
-#: packages/admin/src/components/FieldEditor.tsx:1140
+#: packages/admin/src/components/FieldEditor.tsx:1159
 #: packages/admin/src/components/TaxonomyManager.tsx:461
 msgid "Move {0} down"
 msgstr "העברת {0} למטה"
@@ -8170,7 +8170,7 @@ msgstr "העברת {0} מאוחר יותר"
 #. placeholder {0}: referenceRowLabel(row)
 #. placeholder {0}: term.label
 #: packages/admin/src/components/ContentEditor.tsx:2752
-#: packages/admin/src/components/FieldEditor.tsx:1123
+#: packages/admin/src/components/FieldEditor.tsx:1142
 #: packages/admin/src/components/TaxonomyManager.tsx:448
 msgid "Move {0} up"
 msgstr "העברת {0} למעלה"
@@ -8278,15 +8278,15 @@ msgstr "העברת {label} בוטלה."
 msgid "Moving from another EmDash site?"
 msgstr "עוברים מאתר EmDash אחר?"
 
-#: packages/admin/src/components/FieldEditor.tsx:420
+#: packages/admin/src/components/FieldEditor.tsx:432
 msgid "Multi Select"
 msgstr "בחירה מרובה"
 
-#: packages/admin/src/components/FieldEditor.tsx:385
+#: packages/admin/src/components/FieldEditor.tsx:397
 msgid "Multi-line plain text"
 msgstr "טקסט פשוט מרובה שורות"
 
-#: packages/admin/src/components/FieldEditor.tsx:421
+#: packages/admin/src/components/FieldEditor.tsx:433
 msgid "Multiple choices from options"
 msgstr "בחירות מרובות מהאפשרויות"
 
@@ -8326,7 +8326,7 @@ msgid "Navigate"
 msgstr "ניווט"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:362
-#: packages/admin/src/components/ContentTypeEditor.tsx:549
+#: packages/admin/src/components/ContentTypeEditor.tsx:558
 msgid "Navigation"
 msgstr "ניווט"
 
@@ -8376,7 +8376,7 @@ msgstr "שדה קרדיט חדש"
 msgid "New collection"
 msgstr "אוסף חדש"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:430
+#: packages/admin/src/components/ContentTypeEditor.tsx:439
 #: packages/admin/src/components/ContentTypeList.tsx:141
 msgid "New Content Type"
 msgstr "סוג תוכן חדש"
@@ -8448,7 +8448,7 @@ msgstr "החדש ביותר"
 msgid "News"
 msgstr "חדשות"
 
-#: packages/admin/src/components/FieldEditor.tsx:1361
+#: packages/admin/src/components/FieldEditor.tsx:1382
 #: packages/admin/src/components/ThemeMarketplaceDetail.tsx:315
 msgid "Next"
 msgstr "הבא"
@@ -8588,7 +8588,7 @@ msgstr "אין תוכן באוסף זה"
 msgid "No content types yet."
 msgstr "עדיין אין סוגי תוכן."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:774
+#: packages/admin/src/components/ContentTypeEditor.tsx:783
 msgid "No custom fields yet"
 msgstr "עדיין אין שדות מותאמים אישית"
 
@@ -8689,7 +8689,7 @@ msgstr "לא סופק אסימון הזמנה"
 msgid "No items yet"
 msgstr "עדיין אין פריטים"
 
-#: packages/admin/src/components/FieldEditor.tsx:1327
+#: packages/admin/src/components/FieldEditor.tsx:1346
 msgid "No limit"
 msgstr "ללא מגבלה"
 
@@ -8743,8 +8743,8 @@ msgstr "אין תגיות תואמות"
 msgid "No matching timezones"
 msgstr "אין אזורי זמן תואמים"
 
-#: packages/admin/src/components/FieldEditor.tsx:891
-#: packages/admin/src/components/FieldEditor.tsx:921
+#: packages/admin/src/components/FieldEditor.tsx:910
+#: packages/admin/src/components/FieldEditor.tsx:940
 msgid "No maximum"
 msgstr "ללא מקסימום"
 
@@ -8765,12 +8765,12 @@ msgstr "עדיין אין פריטי תפריט"
 msgid "No menus yet"
 msgstr "עדיין אין תפריטים"
 
-#: packages/admin/src/components/FieldEditor.tsx:884
-#: packages/admin/src/components/FieldEditor.tsx:914
+#: packages/admin/src/components/FieldEditor.tsx:903
+#: packages/admin/src/components/FieldEditor.tsx:933
 msgid "No minimum"
 msgstr "ללא מינימום"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:82
+#: packages/admin/src/components/ContentTypeEditor.tsx:85
 msgid "No moderation (auto-approve all)"
 msgstr "ללא ניהול תגובות (אישור אוטומטי של הכול)"
 
@@ -8957,8 +8957,8 @@ msgstr "אין עדיין מה להציג."
 msgid "Now · {time}"
 msgstr "עכשיו · {time}"
 
-#: packages/admin/src/components/FieldEditor.tsx:390
-#: packages/admin/src/components/FieldEditor.tsx:1272
+#: packages/admin/src/components/FieldEditor.tsx:402
+#: packages/admin/src/components/FieldEditor.tsx:1291
 msgid "Number"
 msgstr "מספר"
 
@@ -9097,7 +9097,7 @@ msgstr "פתיחת הגדרות Windows"
 msgid "Open WordPress Profile"
 msgstr "פתיחת פרופיל WordPress"
 
-#: packages/admin/src/components/FieldEditor.tsx:932
+#: packages/admin/src/components/FieldEditor.tsx:951
 msgid ""
 "Option 1\n"
 "Option 2\n"
@@ -9133,7 +9133,7 @@ msgid "Optional tooltip on hover"
 msgstr "חלונית מידע אופציונלית במעבר עכבר"
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:297
-#: packages/admin/src/components/FieldEditor.tsx:929
+#: packages/admin/src/components/FieldEditor.tsx:948
 msgid "Options (one per line)"
 msgstr "אפשרויות (אחת בכל שורה)"
 
@@ -9167,7 +9167,7 @@ msgstr "או העלו ישירות"
 msgid "Order saved"
 msgstr "הסדר נשמר"
 
-#: packages/admin/src/components/FieldEditor.tsx:475
+#: packages/admin/src/components/FieldEditor.tsx:487
 msgid "Ordered page-building blocks"
 msgstr "בלוקים לבניית עמוד, לפי סדר"
 
@@ -9366,7 +9366,7 @@ msgstr "הדביקו את מפתח ההעברה שלכם"
 msgid "Path"
 msgstr "נתיב"
 
-#: packages/admin/src/components/FieldEditor.tsx:896
+#: packages/admin/src/components/FieldEditor.tsx:915
 msgid "Pattern (Regex)"
 msgstr "תבנית (Regex)"
 
@@ -9380,12 +9380,12 @@ msgstr "תבנית (Regex)"
 #. placeholder {7}: "{minute}"
 #. placeholder {8}: "{second}"
 #. placeholder {9}: "/{year}/{month}/{day}/{slug}.html"
-#: packages/admin/src/components/ContentTypeEditor.tsx:544
+#: packages/admin/src/components/ContentTypeEditor.tsx:553
 msgid "Pattern for generating URLs, e.g. /blog/{0}. Tokens: {1}, {2}, and date tokens {3}/{4}/{5} (also {6}/{7}/{8}) from the publish date — e.g. {9} for WordPress-style permalinks."
 msgstr "תבנית ליצירת כתובות URL, למשל /blog/{0}. אסימונים: {1}, {2} ואסימוני תאריך {3}/{4}/{5} (וגם {6}/{7}/{8}) מתאריך הפרסום — למשל {9} לקישורים קבועים בסגנון WordPress."
 
 #. placeholder {0}: "{slug}"
-#: packages/admin/src/components/ContentTypeEditor.tsx:535
+#: packages/admin/src/components/ContentTypeEditor.tsx:544
 msgid "Pattern must include a {0} placeholder"
 msgstr "התבנית חייבת לכלול מציין מקום {0}"
 
@@ -9433,7 +9433,7 @@ msgstr "מחיקה לצמיתות של {title}"
 msgid "Permissions"
 msgstr "הרשאות"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:570
+#: packages/admin/src/components/ContentTypeEditor.tsx:579
 msgid "Phosphor icon name, e.g. calendar-blank or trophy"
 msgstr "שם אייקון מ-Phosphor, למשל calendar-blank או trophy"
 
@@ -9445,7 +9445,7 @@ msgstr "שפת PHP"
 msgid "Picked up {label}."
 msgstr "{label} נאסף."
 
-#: packages/admin/src/components/FieldEditor.tsx:1428
+#: packages/admin/src/components/FieldEditor.tsx:1450
 msgid "Picking entries this one links to lets editors drag them into an order. The other direction lists whatever points at the entry and cannot be reordered."
 msgstr "בחירת הפריטים שהפריט הזה מקשר אליהם מאפשרת לעורכים לגרור אותם לסדר הרצוי. הכיוון השני מציג את כל מה שמצביע על הפריט, ואי אפשר לשנות את הסדר שלו."
 
@@ -9640,7 +9640,7 @@ msgstr "מפנה מנועי חיפוש לגרסה המקורית של עמוד �
 msgid "Portrait"
 msgstr "לאורך"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:462
+#: packages/admin/src/components/ContentTypeEditor.tsx:471
 #: packages/admin/src/components/RelationForm.tsx:303
 msgid "Post"
 msgstr "פוסט"
@@ -9649,7 +9649,7 @@ msgstr "פוסט"
 msgid "Post URLs (one per line)"
 msgstr "כתובות URL של פוסטים (אחת בכל שורה)"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:470
+#: packages/admin/src/components/ContentTypeEditor.tsx:479
 #: packages/admin/src/components/RelationForm.tsx:297
 #: packages/admin/src/components/WordPressImport.tsx:1345
 msgid "Posts"
@@ -9698,7 +9698,7 @@ msgstr "לחצו על רווח כדי לבחור תמונה. השתמשו במק
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:448
 #: packages/admin/src/components/ContentSettingsPanel.tsx:389
-#: packages/admin/src/components/ContentTypeEditor.tsx:98
+#: packages/admin/src/components/ContentTypeEditor.tsx:101
 #: packages/admin/src/components/editor/HtmlBlockNode.tsx:37
 #: packages/admin/src/components/editor/IframeBlockNode.tsx:41
 #: packages/admin/src/components/MediaDetailPanel.tsx:1688
@@ -9710,7 +9710,7 @@ msgstr "תצוגה מקדימה"
 msgid "Preview changes"
 msgstr "תצוגה מקדימה של השינויים"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:99
+#: packages/admin/src/components/ContentTypeEditor.tsx:102
 msgid "Preview content before publishing"
 msgstr "תצוגה מקדימה של תוכן לפני פרסום"
 
@@ -9871,7 +9871,7 @@ msgstr "פורסמו {total} פריטים"
 msgid "Published and scheduled entries across collections, in the site's time zone."
 msgstr "פריטים שפורסמו ופריטים מתוזמנים מכל האוספים, לפי אזור הזמן של האתר."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:152
+#: packages/admin/src/components/ContentTypeEditor.tsx:155
 msgid "Published At"
 msgstr "פורסם בתאריך"
 
@@ -9916,15 +9916,15 @@ msgstr "שפת Python"
 msgid "Queued"
 msgstr "בתור"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:592
+#: packages/admin/src/components/ContentTypeEditor.tsx:601
 msgid "Quick action on the dashboard"
 msgstr "פעולה מהירה בלוח הבקרה"
 
-#: packages/admin/src/components/FieldEditor.tsx:974
+#: packages/admin/src/components/FieldEditor.tsx:993
 msgid "Quick create a relationship"
 msgstr "יצירה מהירה של קשר"
 
-#: packages/admin/src/components/FieldEditor.tsx:1039
+#: packages/admin/src/components/FieldEditor.tsx:1058
 msgid "Quick create names the relationship after this field and this collection, takes how many entries it holds from the switch above, and puts no limit on how many entries link back the other way. <0>Create the relationship yourself</0> to set its slug, the name each side goes by, and both limits, then pick it above."
 msgstr "יצירה מהירה נותנת לקשר שם לפי השדה הזה והאוסף הזה, קובעת כמה פריטים הוא מכיל לפי המתג שלמעלה, ולא מגבילה כמה פריטים יקשרו בחזרה מהכיוון השני. <0>צרו את הקשר בעצמכם</0> כדי לקבוע את ה-slug שלו, את השם של כל צד ואת שתי המגבלות, ואז בחרו אותו למעלה."
 
@@ -10107,20 +10107,20 @@ msgstr "הפניות שיוצרות לולאה ייובאו כשהן מושבת�
 msgid "Redo"
 msgstr "ביצוע מחדש"
 
-#: packages/admin/src/components/FieldEditor.tsx:444
-#: packages/admin/src/components/FieldEditor.tsx:757
-#: packages/admin/src/components/FieldEditor.tsx:939
+#: packages/admin/src/components/FieldEditor.tsx:456
+#: packages/admin/src/components/FieldEditor.tsx:776
+#: packages/admin/src/components/FieldEditor.tsx:958
 msgid "Reference"
 msgstr "קישור"
 
-#: packages/admin/src/components/FieldEditor.tsx:779
-#: packages/admin/src/components/FieldEditor.tsx:953
-#: packages/admin/src/components/FieldEditor.tsx:985
-#: packages/admin/src/components/FieldEditor.tsx:1018
+#: packages/admin/src/components/FieldEditor.tsx:798
+#: packages/admin/src/components/FieldEditor.tsx:972
+#: packages/admin/src/components/FieldEditor.tsx:1004
+#: packages/admin/src/components/FieldEditor.tsx:1037
 msgid "Referenced collection"
 msgstr "האוסף המקושר"
 
-#: packages/admin/src/components/FieldEditor.tsx:1026
+#: packages/admin/src/components/FieldEditor.tsx:1045
 msgid "Referenced collection is required"
 msgstr "נדרש אוסף מקושר"
 
@@ -10180,9 +10180,9 @@ msgstr "רישום"
 msgid "Relations"
 msgstr "קשרים"
 
-#: packages/admin/src/components/FieldEditor.tsx:760
-#: packages/admin/src/components/FieldEditor.tsx:944
-#: packages/admin/src/components/FieldEditor.tsx:970
+#: packages/admin/src/components/FieldEditor.tsx:779
+#: packages/admin/src/components/FieldEditor.tsx:963
+#: packages/admin/src/components/FieldEditor.tsx:989
 msgid "Relationship"
 msgstr "קשר"
 
@@ -10318,7 +10318,7 @@ msgstr "להסיר מפתח גישה?"
 msgid "Remove schedule"
 msgstr "הסרת תזמון"
 
-#: packages/admin/src/components/FieldEditor.tsx:1306
+#: packages/admin/src/components/FieldEditor.tsx:1325
 msgid "Remove sub-field"
 msgstr "הסרת שדה משנה"
 
@@ -10331,7 +10331,7 @@ msgstr "להסיר תמונה זו מהמסמך?"
 msgid "Removed {0} from selection."
 msgstr "{0} הוסר מהבחירה."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:581
+#: packages/admin/src/components/ContentTypeEditor.tsx:590
 msgid "Removes the sidebar entry, command palette link, and dashboard quick action; entries stay reachable by URL, API, and plugins"
 msgstr "מסיר את הפריט בסרגל הצד, את הקישור בלוח הפקודות ואת הפעולה המהירה בלוח הבקרה; הפריטים נשארים נגישים דרך URL, API ותוספים"
 
@@ -10371,11 +10371,11 @@ msgstr "שינוי סדר"
 msgid "Reorder {0}"
 msgstr "שינוי סדר {0}"
 
-#: packages/admin/src/components/FieldEditor.tsx:468
+#: packages/admin/src/components/FieldEditor.tsx:480
 msgid "Repeater"
 msgstr "רשימה חוזרת"
 
-#: packages/admin/src/components/FieldEditor.tsx:469
+#: packages/admin/src/components/FieldEditor.tsx:481
 msgid "Repeating group of fields"
 msgstr "קבוצת שדות חוזרת"
 
@@ -10474,14 +10474,14 @@ msgstr "בקשת קישור חדש"
 msgid "Request failed"
 msgstr "הבקשה נכשלה"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:505
+#: packages/admin/src/components/ContentTypeEditor.tsx:514
 msgid "Require a slug before content can be published"
 msgstr "דרישת slug לפני שניתן לפרסם תוכן"
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:275
-#: packages/admin/src/components/ContentTypeEditor.tsx:936
-#: packages/admin/src/components/FieldEditor.tsx:847
-#: packages/admin/src/components/FieldEditor.tsx:1288
+#: packages/admin/src/components/ContentTypeEditor.tsx:949
+#: packages/admin/src/components/FieldEditor.tsx:866
+#: packages/admin/src/components/FieldEditor.tsx:1307
 #: packages/admin/src/routes/byline-schema.tsx:246
 msgid "Required"
 msgstr "נדרש"
@@ -10616,7 +10616,7 @@ msgid "Results"
 msgstr "תוצאות"
 
 #: packages/admin/src/components/BlocksField.tsx:360
-#: packages/admin/src/components/FieldEditor.tsx:1107
+#: packages/admin/src/components/FieldEditor.tsx:1126
 msgid "Retired"
 msgstr "הוצא משימוש"
 
@@ -10742,7 +10742,7 @@ msgid "Revision restored"
 msgstr "הגרסה שוחזרה"
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1267
-#: packages/admin/src/components/ContentTypeEditor.tsx:93
+#: packages/admin/src/components/ContentTypeEditor.tsx:96
 #: packages/admin/src/components/RevisionHistory.tsx:168
 #: packages/admin/src/components/settings/transfer/labels.ts:22
 #: packages/admin/src/components/settings/transfer/labels.ts:86
@@ -10768,7 +10768,7 @@ msgstr "לבטל?"
 msgid "Revoking..."
 msgstr "בביטול..."
 
-#: packages/admin/src/components/FieldEditor.tsx:426
+#: packages/admin/src/components/FieldEditor.tsx:438
 msgid "Rich Text"
 msgstr "טקסט עשיר"
 
@@ -10776,7 +10776,7 @@ msgstr "טקסט עשיר"
 msgid "Rich text content"
 msgstr "תוכן טקסט עשיר"
 
-#: packages/admin/src/components/FieldEditor.tsx:427
+#: packages/admin/src/components/FieldEditor.tsx:439
 msgid "Rich text editor"
 msgstr "עורך טקסט עשיר"
 
@@ -10819,7 +10819,7 @@ msgstr "התפקיד עבור {0} עודכן."
 msgid "Roles"
 msgstr "תפקידים"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:503
+#: packages/admin/src/components/ContentTypeEditor.tsx:512
 msgid "Routable"
 msgstr "ניתן לניתוב"
 
@@ -10910,7 +10910,7 @@ msgstr "שמירת שינויים"
 msgid "Save changes before running plugin actions"
 msgstr "שמרו שינויים לפני הפעלת פעולות תוסף"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:89
+#: packages/admin/src/components/ContentTypeEditor.tsx:92
 msgid "Save content as draft before publishing"
 msgstr "שמירת תוכן כטיוטה לפני פרסום"
 
@@ -10962,11 +10962,11 @@ msgstr "\"{0}\" נשמר."
 msgid "Saved immediately; term changes do not wait for Publish changes."
 msgstr "נשמר מיד; שינויים במונחים לא ממתינים ל\"פרסום שינויים\"."
 
-#: packages/admin/src/components/FieldEditor.tsx:1030
+#: packages/admin/src/components/FieldEditor.tsx:1049
 msgid "Saving a collection here turns this field into an entry picker. Its stored entry IDs move to the relationship, and the field can no longer be searched or filtered on."
 msgstr "שמירת אוסף כאן הופכת את השדה הזה לבורר פריטים. מזהי הפריטים השמורים בו עוברים לקשר, ולא ניתן עוד לחפש או לסנן לפי השדה."
 
-#: packages/admin/src/components/FieldEditor.tsx:1373
+#: packages/admin/src/components/FieldEditor.tsx:1394
 #: packages/admin/src/components/MediaDetailPanel.tsx:1878
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
 #: packages/admin/src/components/MenuEditor.tsx:632
@@ -11113,7 +11113,7 @@ msgstr "גללו כדי לראות את כולן"
 msgid "SCSS"
 msgstr "סגנונות SCSS"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:103
+#: packages/admin/src/components/ContentTypeEditor.tsx:106
 #: packages/admin/src/components/Settings.tsx:165
 #: packages/admin/src/components/Settings.tsx:165
 #: packages/admin/src/components/Widgets.tsx:152
@@ -11290,8 +11290,8 @@ msgstr "החיפוש יושבת בחלק מהאוספים"
 msgid "Search..."
 msgstr "חיפוש..."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:938
-#: packages/admin/src/components/FieldEditor.tsx:860
+#: packages/admin/src/components/ContentTypeEditor.tsx:951
+#: packages/admin/src/components/FieldEditor.tsx:879
 msgid "Searchable"
 msgstr "ניתן לחיפוש"
 
@@ -11395,8 +11395,8 @@ msgid "See where this file is used."
 msgstr "ראו היכן נעשה שימוש בקובץ זה."
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:51
-#: packages/admin/src/components/FieldEditor.tsx:414
-#: packages/admin/src/components/FieldEditor.tsx:1276
+#: packages/admin/src/components/FieldEditor.tsx:426
+#: packages/admin/src/components/FieldEditor.tsx:1295
 #: packages/admin/src/components/MediaPickerModal.tsx:860
 #: packages/admin/src/components/Settings.tsx:159
 msgid "Select"
@@ -11413,7 +11413,7 @@ msgstr "בחירת {label}"
 msgid "Select {title}"
 msgstr "בחירת {title}"
 
-#: packages/admin/src/components/FieldEditor.tsx:1025
+#: packages/admin/src/components/FieldEditor.tsx:1044
 msgid "Select a collection"
 msgstr "בחרו אוסף"
 
@@ -11434,7 +11434,7 @@ msgstr "בחרו מיקום"
 msgid "Select a menu..."
 msgstr "בחרו תפריט..."
 
-#: packages/admin/src/components/FieldEditor.tsx:772
+#: packages/admin/src/components/FieldEditor.tsx:791
 msgid "Select a relationship"
 msgstr "בחרו קשר"
 
@@ -11619,7 +11619,7 @@ msgstr "בשליחה..."
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1172
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1175
-#: packages/admin/src/components/ContentTypeEditor.tsx:634
+#: packages/admin/src/components/ContentTypeEditor.tsx:643
 #: packages/admin/src/components/Settings.tsx:66
 msgid "SEO"
 msgstr "SEO"
@@ -11666,7 +11666,7 @@ msgstr "הגדרת שפה (נוכחית: {label})"
 msgid "Set role"
 msgstr "הגדרת תפקיד"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:691
+#: packages/admin/src/components/ContentTypeEditor.tsx:700
 msgid "Set to 0 to never close comments automatically."
 msgstr "הגדירו 0 כדי לא לסגור תגובות אוטומטית לעולם."
 
@@ -11703,7 +11703,7 @@ msgstr "בהגדרה..."
 #: packages/admin/src/components/AdminCommandPalette.tsx:247
 #: packages/admin/src/components/ContentEditor.tsx:1729
 #: packages/admin/src/components/ContentEditor.tsx:2043
-#: packages/admin/src/components/ContentTypeEditor.tsx:456
+#: packages/admin/src/components/ContentTypeEditor.tsx:465
 #: packages/admin/src/components/Header.tsx:102
 #: packages/admin/src/components/PluginManager.tsx:530
 #: packages/admin/src/components/Settings.tsx:46
@@ -11746,8 +11746,8 @@ msgstr "משותף בכל התרגומים של אותו קרדיט."
 msgid "Short text"
 msgstr "טקסט קצר"
 
-#: packages/admin/src/components/FieldEditor.tsx:378
-#: packages/admin/src/components/FieldEditor.tsx:1270
+#: packages/admin/src/components/FieldEditor.tsx:390
+#: packages/admin/src/components/FieldEditor.tsx:1289
 msgid "Short Text"
 msgstr "טקסט קצר"
 
@@ -11795,7 +11795,7 @@ msgstr "מוצג לקוראים בסדר זה."
 msgid "Shown when hovering over the image."
 msgstr "מוצג במעבר עכבר מעל התמונה."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:594
+#: packages/admin/src/components/ContentTypeEditor.tsx:603
 msgid "Shows a button for creating a new entry"
 msgstr "מציג כפתור ליצירת פריט חדש"
 
@@ -11855,11 +11855,11 @@ msgstr "הגרסה החתומה אומתה"
 msgid "Signing in failed. Please try again."
 msgstr "ההתחברות נכשלה. נסו שוב."
 
-#: packages/admin/src/components/FieldEditor.tsx:415
+#: packages/admin/src/components/FieldEditor.tsx:427
 msgid "Single choice from options"
 msgstr "בחירה יחידה מהאפשרויות"
 
-#: packages/admin/src/components/FieldEditor.tsx:379
+#: packages/admin/src/components/FieldEditor.tsx:391
 msgid "Single line text input"
 msgstr "קלט טקסט בשורה אחת"
 
@@ -11967,12 +11967,12 @@ msgstr "דולג"
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:233
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1030
-#: packages/admin/src/components/ContentTypeEditor.tsx:128
-#: packages/admin/src/components/ContentTypeEditor.tsx:477
+#: packages/admin/src/components/ContentTypeEditor.tsx:131
+#: packages/admin/src/components/ContentTypeEditor.tsx:486
 #: packages/admin/src/components/ContentTypeList.tsx:201
-#: packages/admin/src/components/FieldEditor.tsx:456
-#: packages/admin/src/components/FieldEditor.tsx:825
-#: packages/admin/src/components/FieldEditor.tsx:1246
+#: packages/admin/src/components/FieldEditor.tsx:468
+#: packages/admin/src/components/FieldEditor.tsx:844
+#: packages/admin/src/components/FieldEditor.tsx:1265
 #: packages/admin/src/components/RelationForm.tsx:322
 #: packages/admin/src/components/RelationList.tsx:90
 #: packages/admin/src/components/SectionEditor.tsx:280
@@ -12179,7 +12179,7 @@ msgid "State"
 msgstr "מצב"
 
 #: packages/admin/src/components/ContentList.tsx:749
-#: packages/admin/src/components/ContentTypeEditor.tsx:134
+#: packages/admin/src/components/ContentTypeEditor.tsx:137
 #: packages/admin/src/components/Redirects.tsx:489
 #: packages/admin/src/components/settings/MediaUsageSettings.tsx:382
 #: packages/admin/src/components/settings/MediaUsageSettings.tsx:615
@@ -12230,15 +12230,15 @@ msgstr "מבנה"
 msgid "Structured"
 msgstr "מובנה"
 
-#: packages/admin/src/components/FieldEditor.tsx:1284
+#: packages/admin/src/components/FieldEditor.tsx:1303
 msgid "Sub-field slugs cannot be changed after creation."
 msgstr ""
 
-#: packages/admin/src/components/FieldEditor.tsx:1221
+#: packages/admin/src/components/FieldEditor.tsx:1240
 msgid "Sub-field slugs must be unique."
 msgstr ""
 
-#: packages/admin/src/components/FieldEditor.tsx:1187
+#: packages/admin/src/components/FieldEditor.tsx:1206
 msgid "Sub-Fields"
 msgstr "שדות משנה"
 
@@ -12279,11 +12279,11 @@ msgstr "מסונכרן"
 msgid "Synced passkey"
 msgstr "מפתח גישה מסונכרן"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:984
+#: packages/admin/src/components/ContentTypeEditor.tsx:997
 msgid "System"
 msgstr "מערכת"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:761
+#: packages/admin/src/components/ContentTypeEditor.tsx:770
 msgid "System Fields"
 msgstr "שדות מערכת"
 
@@ -12640,7 +12640,7 @@ msgstr "התפריט נמחק."
 msgid "The name of your site, used in the header and metadata"
 msgstr "שם האתר שלכם, המשמש בכותרת ובמטא-נתונים"
 
-#: packages/admin/src/components/FieldEditor.tsx:1066
+#: packages/admin/src/components/FieldEditor.tsx:1085
 msgid "The order controls how block types appear in the picker."
 msgstr "הסדר קובע איך סוגי הבלוקים מופיעים בבוחר."
 
@@ -12766,12 +12766,12 @@ msgstr "התמונה המקושרת אינה זמינה עוד. בחרו תמו�
 msgid "The referenced logo is no longer available. Pick a new one or remove the reference."
 msgstr "הלוגו המקושר אינו זמין עוד. בחרו לוגו חדש או הסירו את הקישור."
 
-#: packages/admin/src/components/FieldEditor.tsx:964
+#: packages/admin/src/components/FieldEditor.tsx:983
 msgid "The relationship and the referenced collection cannot be changed after creation. How many entries this field accepts is set on the relationship."
 msgstr "לא ניתן לשנות את הקשר ואת האוסף המקושר לאחר היצירה. מספר הפריטים שהשדה הזה מקבל נקבע בקשר."
 
-#: packages/admin/src/components/FieldEditor.tsx:806
-#: packages/admin/src/components/FieldEditor.tsx:1012
+#: packages/admin/src/components/FieldEditor.tsx:825
+#: packages/admin/src/components/FieldEditor.tsx:1031
 msgid "The relationship decides the referenced collection and how many entries this field accepts."
 msgstr "הקשר קובע את האוסף המקושר ואת מספר הפריטים שהשדה הזה מקבל."
 
@@ -12860,7 +12860,7 @@ msgstr "יש יותר מדי הפניות כדי לבדוק אם יש בהן ל�
 msgid "These tools remain disabled after installation until you explicitly enable agent access."
 msgstr "כלים אלה נשארים מושבתים לאחר ההתקנה עד שתפעילו במפורש גישת סוכן."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:873
+#: packages/admin/src/components/ContentTypeEditor.tsx:886
 msgid "This also removes:"
 msgstr "פעולה זו מסירה גם:"
 
@@ -12895,7 +12895,7 @@ msgstr "תוקף הקוד הזה פג. התחילו שוב את ההתחברות
 msgid "This code is invalid or has already been used."
 msgstr "הקוד הזה אינו תקין או שכבר נעשה בו שימוש."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:445
+#: packages/admin/src/components/ContentTypeEditor.tsx:454
 msgid "This collection is defined in code. Some settings cannot be changed here. Edit your live.config.ts file to modify the schema."
 msgstr "אוסף זה מוגדר בקוד. לא ניתן לשנות כאן חלק מההגדרות. ערכו את הקובץ live.config.ts שלכם כדי לשנות את הסכמה."
 
@@ -12978,25 +12978,25 @@ msgstr "השדה הזה מצפה לרשימה. הערך השמור יישאר ל
 msgid "This field is required"
 msgstr "שדה זה נדרש"
 
-#: packages/admin/src/components/FieldEditor.tsx:1396
+#: packages/admin/src/components/FieldEditor.tsx:1418
 msgid "This field lists entries that link to this one."
 msgstr "השדה הזה מציג פריטים שמקשרים לפריט הזה."
 
-#: packages/admin/src/components/FieldEditor.tsx:788
-#: packages/admin/src/components/FieldEditor.tsx:994
+#: packages/admin/src/components/FieldEditor.tsx:807
+#: packages/admin/src/components/FieldEditor.tsx:1013
 msgid "This field picks"
 msgstr "השדה הזה בוחר"
 
-#: packages/admin/src/components/FieldEditor.tsx:1395
+#: packages/admin/src/components/FieldEditor.tsx:1417
 msgid "This field picks entries this one links to."
 msgstr "השדה הזה בוחר פריטים שהפריט הזה מקשר אליהם."
 
 #. placeholder {0}: relation.childLabel
-#: packages/admin/src/components/FieldEditor.tsx:1407
+#: packages/admin/src/components/FieldEditor.tsx:1429
 msgid "This field will show the <0>{0}</0> this {linkingSide} links to"
 msgstr "בשדה הזה יוצגו <0>{0}</0> ש{linkingSide} זה מקשר אליהם"
 
-#: packages/admin/src/components/FieldEditor.tsx:1412
+#: packages/admin/src/components/FieldEditor.tsx:1434
 msgid "This field will show the <0>{linkingSide}</0> linking to this {linkedSide}"
 msgstr "בשדה הזה יוצגו <0>{linkingSide}</0> שמקשרים אל {linkedSide} זה"
 
@@ -13355,7 +13355,7 @@ msgstr "מחר"
 msgid "Tooltip text"
 msgstr "טקסט חלונית מידע"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:94
+#: packages/admin/src/components/ContentTypeEditor.tsx:97
 msgid "Track content history"
 msgstr "מעקב אחר היסטוריית תוכן"
 
@@ -13440,7 +13440,7 @@ msgstr "הפח ריק."
 msgid "Trash pagination"
 msgstr "חלוקת הפח לעמודים"
 
-#: packages/admin/src/components/FieldEditor.tsx:403
+#: packages/admin/src/components/FieldEditor.tsx:415
 msgid "True/false toggle"
 msgstr "מתג אמת/שקר"
 
@@ -13545,7 +13545,7 @@ msgid "Two records have the same value where it must be unique"
 msgstr "לשתי רשומות יש אותו ערך בשדה שחייב להיות ייחודי"
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:255
-#: packages/admin/src/components/FieldEditor.tsx:1262
+#: packages/admin/src/components/FieldEditor.tsx:1281
 #: packages/admin/src/components/MediaLibrary.tsx:1142
 #: packages/admin/src/routes/byline-schema.tsx:240
 #: packages/admin/src/routes/bylines.tsx:530
@@ -13610,12 +13610,12 @@ msgstr "אישור הסרה"
 msgid "Uninstalling..."
 msgstr "בהסרה..."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:937
-#: packages/admin/src/components/FieldEditor.tsx:852
+#: packages/admin/src/components/ContentTypeEditor.tsx:950
+#: packages/admin/src/components/FieldEditor.tsx:871
 msgid "Unique"
 msgstr "ייחודי"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:124
+#: packages/admin/src/components/ContentTypeEditor.tsx:127
 msgid "Unique identifier (ULID)"
 msgstr "מזהה ייחודי (ULID)"
 
@@ -13677,7 +13677,7 @@ msgid "Unscheduled"
 msgstr "לא מתוזמן"
 
 #: packages/admin/src/components/BlocksField.tsx:361
-#: packages/admin/src/components/ContentTypeEditor.tsx:935
+#: packages/admin/src/components/ContentTypeEditor.tsx:948
 msgid "Unsupported"
 msgstr "לא נתמך"
 
@@ -13718,7 +13718,7 @@ msgstr "ניתן לבחור עד {MAX_SELECTED} קרדיטים"
 msgid "Update"
 msgstr "עדכון"
 
-#: packages/admin/src/components/FieldEditor.tsx:1373
+#: packages/admin/src/components/FieldEditor.tsx:1394
 msgid "Update Field"
 msgstr "עדכון שדה"
 
@@ -13764,7 +13764,7 @@ msgstr "עדכון לגרסה v{0}"
 msgid "Updated"
 msgstr "עודכן"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:146
+#: packages/admin/src/components/ContentTypeEditor.tsx:149
 msgid "Updated At"
 msgstr "עודכן בתאריך"
 
@@ -13902,8 +13902,8 @@ msgid "Uploading the package"
 msgstr "מתבצעת העלאת החבילה"
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:49
-#: packages/admin/src/components/FieldEditor.tsx:462
-#: packages/admin/src/components/FieldEditor.tsx:1277
+#: packages/admin/src/components/FieldEditor.tsx:474
+#: packages/admin/src/components/FieldEditor.tsx:1296
 #: packages/admin/src/components/MenuEditor.tsx:420
 #: packages/admin/src/components/MenuEditor.tsx:602
 msgid "URL"
@@ -13914,7 +13914,7 @@ msgstr "URL"
 msgid "URL & language"
 msgstr "URL ושפה"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:527
+#: packages/admin/src/components/ContentTypeEditor.tsx:536
 msgid "URL Pattern"
 msgstr "תבנית URL"
 
@@ -13926,8 +13926,8 @@ msgstr "slug של URL"
 msgid "URL template (e.g. /blog/:slug)"
 msgstr ""
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:130
-#: packages/admin/src/components/FieldEditor.tsx:457
+#: packages/admin/src/components/ContentTypeEditor.tsx:133
+#: packages/admin/src/components/FieldEditor.tsx:469
 msgid "URL-friendly identifier"
 msgstr "מזהה ידידותי ל-URL"
 
@@ -14029,7 +14029,7 @@ msgstr "משמש קוראי מסך וכשטעינת תמונה נכשלת"
 msgid "Used in"
 msgstr "בשימוש ב"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:484
+#: packages/admin/src/components/ContentTypeEditor.tsx:493
 msgid "Used in URLs and API endpoints"
 msgstr "בשימוש בכתובות URL ובנקודות קצה של API"
 
@@ -14085,7 +14085,7 @@ msgid "Users with email addresses from these domains can sign up without an invi
 msgstr "משתמשים עם כתובות אימייל מדומיינים אלה יכולים להירשם ללא הזמנה. התפקיד שצוין יוקצה להם אוטומטית."
 
 #. placeholder {0}: version.version
-#: packages/admin/src/components/FieldEditor.tsx:1152
+#: packages/admin/src/components/FieldEditor.tsx:1171
 msgid "v{0}"
 msgstr "גרסה {0}"
 
@@ -14098,8 +14098,8 @@ msgstr "גרסה v{0} זמינה"
 msgid "Validating the package"
 msgstr "מתבצע אימות החבילה"
 
-#: packages/admin/src/components/FieldEditor.tsx:877
-#: packages/admin/src/components/FieldEditor.tsx:907
+#: packages/admin/src/components/FieldEditor.tsx:896
+#: packages/admin/src/components/FieldEditor.tsx:926
 msgid "Validation"
 msgstr "אימות תקינות"
 
@@ -14261,7 +14261,7 @@ msgstr "נשלח לכם קישור להתחברות ללא סיסמה."
 msgid "We've sent a verification link to <0>{email}</0>"
 msgstr "שלחנו קישור אימות אל <0>{email}</0>"
 
-#: packages/admin/src/components/FieldEditor.tsx:463
+#: packages/admin/src/components/FieldEditor.tsx:475
 msgid "Web address"
 msgstr "כתובת אתר"
 
@@ -14308,7 +14308,7 @@ msgstr "מהו מפתח גישה?"
 msgid "What it leaves out"
 msgstr "מה לא נכלל"
 
-#: packages/admin/src/components/FieldEditor.tsx:1441
+#: packages/admin/src/components/FieldEditor.tsx:1463
 msgid "What the direction changes"
 msgstr "מה משנה הכיוון"
 
@@ -14337,15 +14337,15 @@ msgstr "מה נמדד"
 msgid "When set, the image becomes a clickable link to this URL."
 msgstr "כשמוגדר, התמונה הופכת לקישור לחיץ ל-URL הזה."
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:142
+#: packages/admin/src/components/ContentTypeEditor.tsx:145
 msgid "When the entry was created"
 msgstr "מתי הפריט נוצר"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:148
+#: packages/admin/src/components/ContentTypeEditor.tsx:151
 msgid "When the entry was last modified"
 msgstr "מתי הפריט שונה לאחרונה"
 
-#: packages/admin/src/components/ContentTypeEditor.tsx:154
+#: packages/admin/src/components/ContentTypeEditor.tsx:157
 msgid "When the entry was published"
 msgstr "מתי הפריט פורסם"
 
@@ -14357,7 +14357,7 @@ msgstr "היכן הוא נשמר?"
 msgid "Which content types can use this taxonomy"
 msgstr "אילו סוגי תוכן יכולים להשתמש בטקסונומיה זו"
 
-#: packages/admin/src/components/FieldEditor.tsx:397
+#: packages/admin/src/components/FieldEditor.tsx:409
 msgid "Whole number"
 msgstr "מספר שלם"
 
