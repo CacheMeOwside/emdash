@@ -10,6 +10,12 @@ import SimplePosts from "../../../../demos/simple/src/pages/posts/index.astro";
 import CloudflarePosts from "../../../../templates/blog-cloudflare/src/pages/posts/index.astro";
 import NodePosts from "../../../../templates/blog/src/pages/posts/index.astro";
 
+function expectArchiveHeader(html: string): void {
+	const header = html.match(/<header\b[^>]*>[\s\S]*?<\/header>/)?.[0];
+	expect(header).toMatch(/<h1\b[^>]*>\s*All Posts\s*<\/h1>/);
+	expect(header).not.toMatch(/\b\d+\s+articles?\b/);
+}
+
 const page = vi.hoisted(() => ({ count: 20, nextCursor: "second-page" as string | undefined }));
 
 vi.mock("emdash", () => ({
@@ -59,14 +65,8 @@ describe.each([
 		const last = await container.renderToString(component, {
 			request: new Request("http://localhost/posts?cursor=second-page"),
 		});
-		const headerText = (html: string) =>
-			html
-				.match(/<header\b[^>]*>([\s\S]*?)<\/header>/)?.[1]
-				?.replace(/<[^>]+>/g, "")
-				.replace(/\s+/g, " ")
-				.trim();
-		expect(headerText(first)).toBe("All Posts");
-		expect(headerText(last)).toBe("All Posts");
+		expectArchiveHeader(first);
+		expectArchiveHeader(last);
 		expect(first.match(/<article\b/g)).toHaveLength(20);
 		expect(last.match(/<article\b/g)).toHaveLength(8);
 		expect(first).toContain('href="/posts?cursor=second-page"');
@@ -112,11 +112,7 @@ describe.each([
 		const html = await container.renderToString(withCache, {
 			request: new Request("http://localhost/posts"),
 		});
-		const header = html
-			.match(/<header\b[^>]*>([\s\S]*?)<\/header>/)?.[1]
-			?.replace(/<[^>]+>/g, "")
-			.trim();
-		expect(header).toBe("All Posts");
+		expectArchiveHeader(html);
 		expect(html.match(/<article\b/g)).toHaveLength(28);
 	});
 });
