@@ -55,12 +55,12 @@ import { isSqlite } from "./database/dialect-helpers.js";
 import { kyselyLogOption } from "./database/instrumentation.js";
 import {
 	enforceRuntimeMigrationPolicy,
-	PendingMigrationsError,
 	type RuntimeMigrationMode,
 } from "./database/migrations/policy.js";
 import {
-	ConcurrentMigrationTimeoutError,
 	MIGRATION_RACE_WAIT_MS,
+	MigrationFailedError,
+	MigrationLockHeldError,
 } from "./database/migrations/runner.js";
 import { AuditRepository } from "./database/repositories/audit.js";
 import { CommentRepository } from "./database/repositories/comment.js";
@@ -266,6 +266,7 @@ import { DEV_CONSOLE_EMAIL_PLUGIN_ID, devConsoleEmailDeliver } from "./plugins/e
 import { EmailPipeline } from "./plugins/email.js";
 import {
 	createHookPipeline,
+	EXCLUSIVE_HOOK_KEY_PREFIX,
 	getActiveContentSaveHookName,
 	resolveExclusiveHooks as resolveExclusiveHooksShared,
 	type HookPipeline,
@@ -353,7 +354,7 @@ export interface SandboxedPluginEntry {
 	/** Hook declarations this plugin implements */
 	hooks?: PluginManifest["hooks"];
 	/** Admin pages */
-	adminPages?: Array<{ path: string; label?: string; icon?: string }>;
+	adminPages?: Array<{ path: string; label?: string; icon?: string; group?: string }>;
 	/** Dashboard widgets */
 	adminWidgets?: Array<{ id: string; title?: string; size?: string }>;
 	/** Saved-entry Block Kit panels. */
@@ -1634,6 +1635,7 @@ export class EmDashRuntime {
 
 		let pluginStates: Map<string, string> = new Map();
 		let pluginStatesRead = false;
+		let exclusiveHookSelections: Map<string, string | undefined> | undefined;
 		const configuredLocales: string[] =
 			virtualConfig?.i18n?.locales ?? getI18nConfig()?.locales ?? [];
 		const localeCasingRepairVersion = getLocaleCasingRepairVersion(configuredLocales);
@@ -1749,6 +1751,29 @@ export class EmDashRuntime {
 				} catch (error) {
 					captureMissingManualSchema(error);
 					// options may not exist yet on a pre-migration db.
+				}
+			}),
+			phase("rt.hookselections", "Exclusive hook selections", async () => {
+				// Built-in and sandboxed providers register after these reads, so
+				// only configured plugins' hooks and the always-present
+				// comment:moderate are known here. Hook resolution reads the rest.
+				const keys = Array.from(
+					new Set([
+						"comment:moderate",
+						...deps.plugins.flatMap((plugin) =>
+							Object.entries(plugin.hooks)
+								.filter(([, hook]) => hook?.exclusive)
+								.map(([name]) => name),
+						),
+					]),
+					(name) => `${EXCLUSIVE_HOOK_KEY_PREFIX}${name}`,
+				);
+				try {
+					const stored = await optionsRepo.getMany<string>(keys);
+					exclusiveHookSelections = new Map(keys.map((key) => [key, stored.get(key)]));
+				} catch (error) {
+					captureMissingManualSchema(error);
+					// Hook resolution reads the selections itself when this fails.
 				}
 			}),
 		];
@@ -2139,7 +2164,7 @@ export class EmDashRuntime {
 
 		// Resolve exclusive hooks — auto-select providers and sync with DB
 		await phase("rt.hooks", "Exclusive hook resolution", () =>
-			EmDashRuntime.resolveExclusiveHooks(pipeline, db, deps),
+			EmDashRuntime.resolveExclusiveHooks(pipeline, db, deps, exclusiveHookSelections),
 		);
 
 		// ── Email pipeline ───────────────────────────────────────────────
@@ -2409,14 +2434,13 @@ export class EmDashRuntime {
 				try {
 					await enforceRuntimeMigrationPolicy(db, deps.migrationMode ?? "auto");
 				} catch (error) {
-					// Timing out behind another instance's in-flight migrations
-					// is not a failure of OUR migration — the holder may just be
-					// slow. Don't back off for it: the next request waits again
-					// and init recovers the moment the holder finishes.
-					if (
-						!(error instanceof ConcurrentMigrationTimeoutError) &&
-						!(error instanceof PendingMigrationsError)
-					) {
+					// Only a failed migration run, or a lock its holder left behind,
+					// backs off. Waiting behind a slow concurrent migrator, pending
+					// migrations in check mode, and errors from the applied-migration
+					// check on an up-to-date database (a lost connection, an
+					// unavailable replica) stay retryable, so the next request tries
+					// again.
+					if (error instanceof MigrationFailedError || error instanceof MigrationLockHeldError) {
 						holder.failures.set(cacheKey, {
 							at: Date.now(),
 							message: error instanceof Error ? error.message : String(error),
@@ -2515,6 +2539,7 @@ export class EmDashRuntime {
 					path: p.path,
 					label: p.label ?? p.path,
 					icon: p.icon,
+					group: p.group,
 				}));
 				const adminWidgets:
 					| Array<{
@@ -2644,6 +2669,7 @@ export class EmDashRuntime {
 					path: page.path,
 					label: page.label ?? page.path,
 					icon: page.icon,
+					group: page.group,
 				}));
 				const adminWidgets: PluginDashboardWidget[] | undefined = entry.adminWidgets?.map(
 					(widget) => ({
@@ -2951,6 +2977,7 @@ export class EmDashRuntime {
 		pipeline: HookPipeline,
 		db: Kysely<Database>,
 		deps: RuntimeDependencies,
+		storedSelections?: ReadonlyMap<string, string | undefined>,
 	): Promise<void> {
 		const exclusiveHookNames = pipeline.getRegisteredExclusiveHooks();
 		if (exclusiveHookNames.length === 0) return;
@@ -2976,7 +3003,16 @@ export class EmDashRuntime {
 			pipeline,
 			isActive: () => true,
 			getOption: (key) => optionsRepo.get<string>(key),
-			getOptions: (keys) => optionsRepo.getMany<string>(keys),
+			getOptions: async (keys) => {
+				const unread = keys.filter((key) => !storedSelections?.has(key));
+				const selections =
+					unread.length > 0 ? await optionsRepo.getMany<string>(unread) : new Map<string, string>();
+				for (const key of keys) {
+					const value = storedSelections?.get(key);
+					if (value !== undefined) selections.set(key, value);
+				}
+				return selections;
+			},
 			setOption: (key, value) => optionsRepo.set(key, value),
 			deleteOption: async (key) => {
 				await optionsRepo.delete(key);
@@ -3035,7 +3071,7 @@ export class EmDashRuntime {
 				enabled?: boolean;
 				sandboxed?: boolean;
 				adminMode?: "react" | "blocks" | "none";
-				adminPages?: Array<{ path: string; label?: string; icon?: string }>;
+				adminPages?: Array<{ path: string; label?: string; icon?: string; group?: string }>;
 				dashboardWidgets?: Array<{
 					id: string;
 					title?: string;
@@ -3649,9 +3685,10 @@ export class EmDashRuntime {
 		const resolvedItem = await repo.findByIdOrSlug(collection, id, body.locale);
 		const resolvedId = resolvedItem?.id ?? id;
 
-		// Validate _rev early — before draft revision writes which modify updated_at.
-		// After validation, strip _rev so the handler doesn't double-check against
-		// the now-modified timestamp.
+		// Validate _rev early — before draft revision writes which modify the version.
+		// The token is checked again against the row the draft UPDATE is conditioned
+		// on, and reaches the column handler only when no draft revision was staged,
+		// since staging advances the version the token encodes.
 		if (body._rev) {
 			if (!resolvedItem) {
 				return {
@@ -3832,6 +3869,15 @@ export class EmDashRuntime {
 
 				const revisionRepo = new RevisionRepository(this.db);
 				let existing = await repo.findById(collection, resolvedId);
+				if (body._rev && existing) {
+					const revCheck = validateRev(body._rev, existing);
+					if (!revCheck.valid) {
+						return {
+							success: false as const,
+							error: { code: "CONFLICT", message: revCheck.message },
+						};
+					}
+				}
 
 				for (let attempt = 0; existing && attempt < MAX_DRAFT_STAGE_ATTEMPTS; attempt++) {
 					let baseData: Record<string, unknown>;
@@ -3982,6 +4028,7 @@ export class EmDashRuntime {
 				? await handleContentGet(this.db, collection, resolvedId)
 				: await handleContentUpdate(this.db, collection, resolvedId, {
 						...bodyWithoutRev,
+						_rev: draftStorageChanged ? undefined : body._rev,
 						data: usesDraftRevisions ? undefined : processedData,
 						slug: usesDraftRevisions ? undefined : bodyWithoutRev.slug,
 						references: usesDraftRevisions ? undefined : bodyWithoutRev.references,
@@ -4925,14 +4972,18 @@ export class EmDashRuntime {
 				return result.result;
 			},
 			fireAfterCreate: (event) => {
-				void this.hooks
-					.runCommentAfterCreate(event)
-					.catch((error) =>
-						console.error(
-							"[comments] afterCreate error:",
-							error instanceof Error ? error.message : error,
+				// Deferred through after() so the host's waitUntil keeps the hooks
+				// alive past the response (see comments/public-submission.ts).
+				after(() =>
+					this.hooks
+						.runCommentAfterCreate(event)
+						.catch((error) =>
+							console.error(
+								"[comments] afterCreate error:",
+								error instanceof Error ? error.message : error,
+							),
 						),
-					);
+				);
 			},
 			fireAfterModerate: (event) => {
 				return this.hooks
