@@ -1144,7 +1144,7 @@ msgstr "החשבון כבר קיים"
 msgid "Account exists"
 msgstr "החשבון קיים"
 
-#: packages/admin/src/components/users/UserDetail.tsx:216
+#: packages/admin/src/components/users/UserDetail.tsx:228
 msgid "Account Info"
 msgstr "פרטי חשבון"
 
@@ -1168,7 +1168,7 @@ msgstr "פעולות"
 msgid "Activation cannot be confirmed. Keep editing paused and refresh the status."
 msgstr "לא ניתן לאשר את ההפעלה. השאירו את העריכה מושהית ורעננו את הסטטוס."
 
-#: packages/admin/src/components/users/UserDetail.tsx:206
+#: packages/admin/src/components/users/UserDetail.tsx:218
 #: packages/admin/src/components/users/UserList.tsx:210
 msgid "Active"
 msgstr "פעיל"
@@ -2519,7 +2519,7 @@ msgstr "שינוי"
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
 #. placeholder {1}: getRoleLabel(selectedUser?.role ?? 0)
 #. placeholder {2}: getRoleLabel(pendingSaveData?.role ?? 0)
-#: packages/admin/src/routes/users.tsx:296
+#: packages/admin/src/routes/users.tsx:300
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "האם לשנות את <0>{0}</0> מ-<1>{1}</1> ל-<2>{2}</2>? הם יאבדו גישה לתכונות ברמה גבוהה יותר."
 
@@ -2905,7 +2905,7 @@ msgstr "סגירת הגדרות גלריה"
 msgid "Close image settings"
 msgstr "סגירת הגדרות תמונה"
 
-#: packages/admin/src/components/users/UserDetail.tsx:121
+#: packages/admin/src/components/users/UserDetail.tsx:124
 msgid "Close panel"
 msgstr "סגירת חלונית"
 
@@ -3104,7 +3104,7 @@ msgid "Connect with WordPress"
 msgstr "חיבור עם WordPress"
 
 #. placeholder {0}: new Date(account.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:286
+#: packages/admin/src/components/users/UserDetail.tsx:298
 msgid "Connected {0}"
 msgstr "{0} מחובר"
 
@@ -3696,7 +3696,7 @@ msgstr "יצירה, עדכון ומחיקת תוכן"
 #: packages/admin/src/components/ContentList.tsx:1030
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1029
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:373
-#: packages/admin/src/components/users/UserDetail.tsx:219
+#: packages/admin/src/components/users/UserDetail.tsx:231
 msgid "Created"
 msgstr "נוצר"
 
@@ -3706,7 +3706,7 @@ msgid "Created \"{0}\"."
 msgstr "נוצר \"{0}\"."
 
 #. placeholder {0}: new Date(cred.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:260
+#: packages/admin/src/components/users/UserDetail.tsx:272
 msgid "Created {0}"
 msgstr "{0} נוצר"
 
@@ -4167,15 +4167,15 @@ msgstr "שליחת כל הדואר שהאתר שולח"
 msgid "Demo"
 msgstr "הדגמה"
 
-#: packages/admin/src/routes/users.tsx:303
+#: packages/admin/src/routes/users.tsx:307
 msgid "Demote User"
 msgstr "הורדת הרשאת משתמש"
 
-#: packages/admin/src/routes/users.tsx:294
+#: packages/admin/src/routes/users.tsx:298
 msgid "Demote User?"
 msgstr "להוריד הרשאת משתמש?"
 
-#: packages/admin/src/routes/users.tsx:304
+#: packages/admin/src/routes/users.tsx:308
 msgid "Demoting..."
 msgstr "בהורדת הרשאה..."
 
@@ -4249,7 +4249,7 @@ msgstr "המכשיר מורשה"
 msgid "Device code"
 msgstr "קוד מכשיר"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Device-bound"
 msgstr "קשור למכשיר"
 
@@ -4273,7 +4273,7 @@ msgstr "הבדלים מאתר המקור"
 msgid "Dimensions:"
 msgstr "ממדים:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Disable"
 msgstr "השבתה"
 
@@ -4289,17 +4289,17 @@ msgstr "השבתת כלי MCP של תוסף"
 msgid "Disable redirect"
 msgstr "השבתת הפניה"
 
-#: packages/admin/src/routes/users.tsx:279
+#: packages/admin/src/routes/users.tsx:283
 msgid "Disable User"
 msgstr "השבתת משתמש"
 
-#: packages/admin/src/routes/users.tsx:272
+#: packages/admin/src/routes/users.tsx:276
 msgid "Disable User?"
 msgstr "להשבית משתמש?"
 
 #: packages/admin/src/components/PluginManager.tsx:445
 #: packages/admin/src/components/Redirects.tsx:391
-#: packages/admin/src/components/users/UserDetail.tsx:201
+#: packages/admin/src/components/users/UserDetail.tsx:213
 #: packages/admin/src/components/users/UserList.tsx:205
 msgid "Disabled"
 msgstr "מושבת"
@@ -4309,11 +4309,11 @@ msgid "Disabled:"
 msgstr "מושבת:"
 
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
-#: packages/admin/src/routes/users.tsx:274
+#: packages/admin/src/routes/users.tsx:278
 msgid "Disabling <0>{0}</0> will prevent them from logging in until re-enabled. Their content will be preserved."
 msgstr "השבתת <0>{0}</0> תמנע מהם להתחבר עד להפעלה מחדש. התוכן שלהם יישמר."
 
-#: packages/admin/src/routes/users.tsx:280
+#: packages/admin/src/routes/users.tsx:284
 msgid "Disabling..."
 msgstr "בהשבתה..."
 
@@ -4856,7 +4856,7 @@ msgstr "מזהה em1.…"
 #: packages/admin/src/components/InviteAcceptPage.tsx:63
 #: packages/admin/src/components/Settings.tsx:112
 #: packages/admin/src/components/SignupPage.tsx:215
-#: packages/admin/src/components/users/UserDetail.tsx:154
+#: packages/admin/src/components/users/UserDetail.tsx:166
 msgid "Email"
 msgstr "אימייל"
 
@@ -4900,7 +4900,7 @@ msgstr "הגדרות אימייל"
 msgid "Email users"
 msgstr "שליחת אימייל למשתמשים"
 
-#: packages/admin/src/components/users/UserDetail.tsx:235
+#: packages/admin/src/components/users/UserDetail.tsx:247
 msgid "Email verified"
 msgstr "האימייל אומת"
 
@@ -4983,7 +4983,7 @@ msgstr "גלריה ריקה — פתחו הגדרות להוספת תמונות"
 msgid "Empty site"
 msgstr "אתר ריק"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Enable"
 msgstr "הפעלה"
 
@@ -5049,7 +5049,7 @@ msgstr "הזינו אישורים ידנית"
 msgid "Enter distraction-free mode"
 msgstr "כניסה למצב ללא הסחות דעת"
 
-#: packages/admin/src/components/users/UserDetail.tsx:158
+#: packages/admin/src/components/users/UserDetail.tsx:170
 msgid "Enter email"
 msgstr "הזנת אימייל"
 
@@ -5057,7 +5057,7 @@ msgstr "הזנת אימייל"
 msgid "Enter markdown content..."
 msgstr "הזינו תוכן markdown..."
 
-#: packages/admin/src/components/users/UserDetail.tsx:151
+#: packages/admin/src/components/users/UserDetail.tsx:162
 msgid "Enter name"
 msgstr "הזנת שם"
 
@@ -5529,7 +5529,7 @@ msgstr "הפעלת משתמש נכשלה"
 msgid "Failed to execute import"
 msgstr "ביצוע הייבוא נכשל"
 
-#: packages/admin/src/lib/api/client.ts:369
+#: packages/admin/src/lib/api/client.ts:374
 msgid "Failed to fetch auth mode"
 msgstr "אחזור מצב האימות נכשל"
 
@@ -5554,7 +5554,7 @@ msgstr "אחזור הגדרות האימייל נכשל"
 msgid "Failed to fetch entry terms"
 msgstr "אחזור מונחי הפריט נכשל"
 
-#: packages/admin/src/lib/api/client.ts:352
+#: packages/admin/src/lib/api/client.ts:357
 msgid "Failed to fetch manifest"
 msgstr "אחזור manifest נכשל"
 
@@ -5789,7 +5789,7 @@ msgid "Failed to load transfer settings"
 msgstr "טעינת הגדרות ההעברה נכשלה"
 
 #. placeholder {0}: usersQuery.error.message
-#: packages/admin/src/routes/users.tsx:205
+#: packages/admin/src/routes/users.tsx:208
 msgid "Failed to load users: {0}"
 msgstr "טעינת משתמשים נכשלה: {0}"
 
@@ -7319,7 +7319,7 @@ msgstr "נערך לאחרונה"
 msgid "Last enabled:"
 msgstr "הופעל לאחרונה:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:227
+#: packages/admin/src/components/users/UserDetail.tsx:239
 msgid "Last login"
 msgstr "התחברות אחרונה"
 
@@ -7336,7 +7336,7 @@ msgstr "עמוד אחרון"
 msgid "Last seen"
 msgstr "נראה לאחרונה"
 
-#: packages/admin/src/components/users/UserDetail.tsx:223
+#: packages/admin/src/components/users/UserDetail.tsx:235
 msgid "Last updated"
 msgstr "עודכן לאחרונה"
 
@@ -7346,7 +7346,7 @@ msgid "Last used"
 msgstr "נעשה בו שימוש לאחרונה"
 
 #. placeholder {0}: new Date(cred.lastUsedAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:262
+#: packages/admin/src/components/users/UserDetail.tsx:274
 msgid "Last used {0}"
 msgstr "נעשה בו שימוש לאחרונה {0}"
 
@@ -7416,7 +7416,7 @@ msgid "Link URL"
 msgstr "כתובת URL של הקישור"
 
 #. placeholder {0}: user.oauthAccounts.length
-#: packages/admin/src/components/users/UserDetail.tsx:276
+#: packages/admin/src/components/users/UserDetail.tsx:288
 msgid "Linked Accounts ({0})"
 msgstr "חשבונות מקושרים ({0})"
 
@@ -7838,6 +7838,10 @@ msgstr "מנוהל על ידי {providerName}"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1402
 msgid "Managed by an external media provider"
 msgstr "מנוהל על ידי ספק מדיה חיצוני"
+
+#: packages/admin/src/components/users/UserDetail.tsx:155
+msgid "Managed by your identity provider. Change the name there."
+msgstr ""
 
 #: packages/admin/src/components/Redirects.tsx:398
 msgid "Manual"
@@ -8388,7 +8392,8 @@ msgstr "הבלוג הנהדר שלי"
 #: packages/admin/src/components/TaxonomyManager.tsx:1406
 #: packages/admin/src/components/TaxonomyManager.tsx:1461
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
-#: packages/admin/src/components/users/UserDetail.tsx:148
+#: packages/admin/src/components/users/UserDetail.tsx:152
+#: packages/admin/src/components/users/UserDetail.tsx:159
 #: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "שם"
@@ -8425,7 +8430,7 @@ msgstr "ניווט"
 msgid "Needs attention"
 msgstr "דורש תשומת לב"
 
-#: packages/admin/src/components/users/UserDetail.tsx:231
+#: packages/admin/src/components/users/UserDetail.tsx:243
 #: packages/admin/src/components/users/UserList.tsx:178
 msgid "Never"
 msgstr "לעולם לא"
@@ -8563,7 +8568,7 @@ msgid "Next, the browser's passkey window will open"
 msgstr "לאחר מכן, חלון מפתח הגישה של הדפדפן ייפתח"
 
 #: packages/admin/src/components/ContentList.tsx:1570
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "No"
 msgstr "לא"
@@ -8862,7 +8867,7 @@ msgstr "ללא ניהול תגובות (אישור אוטומטי של הכול)
 msgid "No parent (top level)"
 msgstr "ללא הורה (רמה עליונה)"
 
-#: packages/admin/src/components/users/UserDetail.tsx:248
+#: packages/admin/src/components/users/UserDetail.tsx:260
 msgid "No passkeys registered"
 msgstr "לא נרשמו מפתחות גישה"
 
@@ -9406,7 +9411,7 @@ msgid "Passkeys"
 msgstr "מפתחות גישה"
 
 #. placeholder {0}: user.credentials.length
-#: packages/admin/src/components/users/UserDetail.tsx:245
+#: packages/admin/src/components/users/UserDetail.tsx:257
 msgid "Passkeys ({0})"
 msgstr "מפתחות גישה ({0})"
 
@@ -10174,7 +10179,7 @@ msgid "Records without a parent were left out"
 msgstr "רשומות ללא הורה לא נכללו"
 
 #. placeholder {0}: user.email
-#: packages/admin/src/components/users/UserDetail.tsx:336
+#: packages/admin/src/components/users/UserDetail.tsx:348
 msgid "Recovery link sent to {0}"
 msgstr "קישור שחזור נשלח אל {0}"
 
@@ -10572,7 +10577,7 @@ msgstr "מאגר"
 msgid "Request a new link"
 msgstr "בקשת קישור חדש"
 
-#: packages/admin/src/lib/api/client.ts:340
+#: packages/admin/src/lib/api/client.ts:345
 msgid "Request failed"
 msgstr "הבקשה נכשלה"
 
@@ -10901,8 +10906,8 @@ msgid "robots.txt"
 msgstr "קובץ robots.txt"
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:164
-#: packages/admin/src/components/users/UserDetail.tsx:169
 #: packages/admin/src/components/users/UserDetail.tsx:181
+#: packages/admin/src/components/users/UserDetail.tsx:193
 #: packages/admin/src/components/users/UserList.tsx:94
 msgid "Role"
 msgstr "תפקיד"
@@ -11006,7 +11011,7 @@ msgstr "שמירה בכל זאת"
 msgid "Save changes"
 msgstr "שמירת שינויים"
 
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 msgid "Save Changes"
 msgstr "שמירת שינויים"
 
@@ -11081,7 +11086,7 @@ msgstr "שמירת אוסף כאן הופכת את השדה הזה לבורר פ
 #: packages/admin/src/components/RelationFormPanel.tsx:112
 #: packages/admin/src/components/SaveButton.tsx:36
 #: packages/admin/src/components/TaxonomyManager.tsx:887
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 #: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
@@ -11705,7 +11710,7 @@ msgstr "שליחת הזמנה"
 msgid "Send magic link"
 msgstr "שליחת קישור התחברות"
 
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Send Recovery Link"
 msgstr "שליחת קישור שחזור"
 
@@ -11723,7 +11728,7 @@ msgstr "שליחת אימייל בדיקה"
 #: packages/admin/src/components/SignupPage.tsx:106
 #: packages/admin/src/components/SignupPage.tsx:168
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Sending..."
 msgstr "בשליחה..."
 
@@ -12384,7 +12389,7 @@ msgstr "מעבר למצב כהה"
 msgid "Switch to light"
 msgstr "מעבר למצב בהיר"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Synced"
 msgstr "מסונכרן"
 
@@ -13607,7 +13612,7 @@ msgstr "נסו לשנות את החיפוש או את המסננים שלכם."
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:333
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:471
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:460
-#: packages/admin/src/routes/users.tsx:210
+#: packages/admin/src/routes/users.tsx:213
 msgid "Try again"
 msgstr "נסו שוב"
 
@@ -13787,7 +13792,7 @@ msgid "Unlock aspect ratio"
 msgstr "ביטול נעילת יחס ממדים"
 
 #: packages/admin/src/components/settings/PasskeyItem.tsx:127
-#: packages/admin/src/components/users/UserDetail.tsx:254
+#: packages/admin/src/components/users/UserDetail.tsx:266
 msgid "Unnamed passkey"
 msgstr "מפתח גישה ללא שם"
 
@@ -14215,7 +14220,7 @@ msgstr "גישת משתמשים מנוהלת על ידי ספק חיצוני ({0
 msgid "User accounts, passkeys, API tokens, secrets, and plugin data are never exported. Each author’s name and email address are included so they can be matched to users on the other site."
 msgstr "חשבונות משתמשים, מפתחות גישה, אסימוני API, סודות ונתוני תוספים לעולם אינם מיוצאים. השם וכתובת האימייל של כל כותב/ת נכללים כדי שאפשר יהיה להתאים אותם למשתמשים באתר השני."
 
-#: packages/admin/src/components/users/UserDetail.tsx:116
+#: packages/admin/src/components/users/UserDetail.tsx:119
 msgid "User Details"
 msgstr "פרטי משתמש"
 
@@ -14224,7 +14229,7 @@ msgstr "פרטי משתמש"
 msgid "User for {0}"
 msgstr "משתמש עבור {0}"
 
-#: packages/admin/src/components/users/UserDetail.tsx:296
+#: packages/admin/src/components/users/UserDetail.tsx:308
 msgid "User not found"
 msgstr "המשתמש לא נמצא"
 
@@ -14710,7 +14715,7 @@ msgid "Yearly"
 msgstr "שנתי"
 
 #: packages/admin/src/components/ContentList.tsx:1572
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:420
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "Yes"
@@ -14744,7 +14749,7 @@ msgstr "תוכלו לצפות באתר ולתרום לו."
 msgid "You can view, rename, or add more passkeys later in Security settings."
 msgstr "תוכלו להציג, לשנות שם או להוסיף מפתחות גישה נוספים מאוחר יותר בהגדרות אבטחה."
 
-#: packages/admin/src/components/users/UserDetail.tsx:175
+#: packages/admin/src/components/users/UserDetail.tsx:187
 msgid "You cannot change your own role"
 msgstr "אינכם יכולים לשנות את התפקיד שלכם"
 

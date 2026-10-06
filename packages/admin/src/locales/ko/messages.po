@@ -1143,7 +1143,7 @@ msgstr "이미 계정이 있습니다"
 msgid "Account exists"
 msgstr "이미 존재하는 계정입니다"
 
-#: packages/admin/src/components/users/UserDetail.tsx:216
+#: packages/admin/src/components/users/UserDetail.tsx:228
 msgid "Account Info"
 msgstr "계정 정보"
 
@@ -1167,7 +1167,7 @@ msgstr "작업"
 msgid "Activation cannot be confirmed. Keep editing paused and refresh the status."
 msgstr "활성화 여부를 확인할 수 없습니다. 편집을 계속 중단한 상태로 두고 상태를 새로고침하세요."
 
-#: packages/admin/src/components/users/UserDetail.tsx:206
+#: packages/admin/src/components/users/UserDetail.tsx:218
 #: packages/admin/src/components/users/UserList.tsx:210
 msgid "Active"
 msgstr "활성"
@@ -2518,7 +2518,7 @@ msgstr "변경"
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
 #. placeholder {1}: getRoleLabel(selectedUser?.role ?? 0)
 #. placeholder {2}: getRoleLabel(pendingSaveData?.role ?? 0)
-#: packages/admin/src/routes/users.tsx:296
+#: packages/admin/src/routes/users.tsx:300
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "<0>{0}</0>의 역할을 <1>{1}</1>에서 <2>{2}</2>(으)로 변경하시겠습니까? 상위 역할의 기능에 접근할 수 없게 됩니다."
 
@@ -2904,7 +2904,7 @@ msgstr "갤러리 설정 닫기"
 msgid "Close image settings"
 msgstr "이미지 설정 닫기"
 
-#: packages/admin/src/components/users/UserDetail.tsx:121
+#: packages/admin/src/components/users/UserDetail.tsx:124
 msgid "Close panel"
 msgstr "패널 닫기"
 
@@ -3103,7 +3103,7 @@ msgid "Connect with WordPress"
 msgstr "WordPress 연결"
 
 #. placeholder {0}: new Date(account.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:286
+#: packages/admin/src/components/users/UserDetail.tsx:298
 msgid "Connected {0}"
 msgstr "연결일: {0}"
 
@@ -3695,7 +3695,7 @@ msgstr "콘텐츠 생성, 업데이트, 삭제"
 #: packages/admin/src/components/ContentList.tsx:1030
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1029
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:373
-#: packages/admin/src/components/users/UserDetail.tsx:219
+#: packages/admin/src/components/users/UserDetail.tsx:231
 msgid "Created"
 msgstr "생성됨"
 
@@ -3705,7 +3705,7 @@ msgid "Created \"{0}\"."
 msgstr "\"{0}\"을(를) 생성했습니다."
 
 #. placeholder {0}: new Date(cred.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:260
+#: packages/admin/src/components/users/UserDetail.tsx:272
 msgid "Created {0}"
 msgstr "생성: {0}"
 
@@ -4166,15 +4166,15 @@ msgstr ""
 msgid "Demo"
 msgstr "데모"
 
-#: packages/admin/src/routes/users.tsx:303
+#: packages/admin/src/routes/users.tsx:307
 msgid "Demote User"
 msgstr "사용자 역할 낮추기"
 
-#: packages/admin/src/routes/users.tsx:294
+#: packages/admin/src/routes/users.tsx:298
 msgid "Demote User?"
 msgstr "사용자 역할을 낮추시겠습니까?"
 
-#: packages/admin/src/routes/users.tsx:304
+#: packages/admin/src/routes/users.tsx:308
 msgid "Demoting..."
 msgstr "역할 낮추는 중..."
 
@@ -4248,7 +4248,7 @@ msgstr "기기 승인 완료"
 msgid "Device code"
 msgstr "기기 코드"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Device-bound"
 msgstr "기기 전용"
 
@@ -4272,7 +4272,7 @@ msgstr "원본 사이트와의 차이"
 msgid "Dimensions:"
 msgstr "크기:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Disable"
 msgstr "비활성화"
 
@@ -4288,17 +4288,17 @@ msgstr "플러그인 MCP 도구 비활성화"
 msgid "Disable redirect"
 msgstr "리디렉션 비활성화"
 
-#: packages/admin/src/routes/users.tsx:279
+#: packages/admin/src/routes/users.tsx:283
 msgid "Disable User"
 msgstr "사용자 비활성화"
 
-#: packages/admin/src/routes/users.tsx:272
+#: packages/admin/src/routes/users.tsx:276
 msgid "Disable User?"
 msgstr "사용자를 비활성화하시겠습니까?"
 
 #: packages/admin/src/components/PluginManager.tsx:445
 #: packages/admin/src/components/Redirects.tsx:391
-#: packages/admin/src/components/users/UserDetail.tsx:201
+#: packages/admin/src/components/users/UserDetail.tsx:213
 #: packages/admin/src/components/users/UserList.tsx:205
 msgid "Disabled"
 msgstr "비활성"
@@ -4308,11 +4308,11 @@ msgid "Disabled:"
 msgstr "비활성화:"
 
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
-#: packages/admin/src/routes/users.tsx:274
+#: packages/admin/src/routes/users.tsx:278
 msgid "Disabling <0>{0}</0> will prevent them from logging in until re-enabled. Their content will be preserved."
 msgstr "<0>{0}</0>을(를) 비활성화하면 다시 활성화할 때까지 로그인할 수 없습니다. 해당 사용자의 콘텐츠는 유지됩니다."
 
-#: packages/admin/src/routes/users.tsx:280
+#: packages/admin/src/routes/users.tsx:284
 msgid "Disabling..."
 msgstr "비활성화 중..."
 
@@ -4855,7 +4855,7 @@ msgstr "em1.…"
 #: packages/admin/src/components/InviteAcceptPage.tsx:63
 #: packages/admin/src/components/Settings.tsx:112
 #: packages/admin/src/components/SignupPage.tsx:215
-#: packages/admin/src/components/users/UserDetail.tsx:154
+#: packages/admin/src/components/users/UserDetail.tsx:166
 msgid "Email"
 msgstr "이메일"
 
@@ -4899,7 +4899,7 @@ msgstr "이메일 설정"
 msgid "Email users"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:235
+#: packages/admin/src/components/users/UserDetail.tsx:247
 msgid "Email verified"
 msgstr "이메일이 확인되었습니다."
 
@@ -4982,7 +4982,7 @@ msgstr "갤러리가 비어 있습니다. 설정을 열어 이미지를 추가�
 msgid "Empty site"
 msgstr "빈 사이트"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Enable"
 msgstr "활성화"
 
@@ -5048,7 +5048,7 @@ msgstr "자격 증명 직접 입력"
 msgid "Enter distraction-free mode"
 msgstr "집중 모드로 전환"
 
-#: packages/admin/src/components/users/UserDetail.tsx:158
+#: packages/admin/src/components/users/UserDetail.tsx:170
 msgid "Enter email"
 msgstr "이메일을 입력하세요"
 
@@ -5056,7 +5056,7 @@ msgstr "이메일을 입력하세요"
 msgid "Enter markdown content..."
 msgstr "마크다운 콘텐츠를 입력하세요..."
 
-#: packages/admin/src/components/users/UserDetail.tsx:151
+#: packages/admin/src/components/users/UserDetail.tsx:162
 msgid "Enter name"
 msgstr "이름을 입력하세요"
 
@@ -5528,7 +5528,7 @@ msgstr "사용자를 활성화하지 못했습니다."
 msgid "Failed to execute import"
 msgstr "가져오기를 실행하지 못했습니다"
 
-#: packages/admin/src/lib/api/client.ts:369
+#: packages/admin/src/lib/api/client.ts:374
 msgid "Failed to fetch auth mode"
 msgstr "인증 모드를 가져오지 못했습니다"
 
@@ -5553,7 +5553,7 @@ msgstr "이메일 설정을 불러오지 못했습니다."
 msgid "Failed to fetch entry terms"
 msgstr "콘텐츠에 지정된 분류 항목을 가져오지 못했습니다."
 
-#: packages/admin/src/lib/api/client.ts:352
+#: packages/admin/src/lib/api/client.ts:357
 msgid "Failed to fetch manifest"
 msgstr "매니페스트를 가져오지 못했습니다"
 
@@ -5788,7 +5788,7 @@ msgid "Failed to load transfer settings"
 msgstr "이전 설정을 로드하지 못했습니다."
 
 #. placeholder {0}: usersQuery.error.message
-#: packages/admin/src/routes/users.tsx:205
+#: packages/admin/src/routes/users.tsx:208
 msgid "Failed to load users: {0}"
 msgstr "사용자 목록을 로드하지 못했습니다: {0}"
 
@@ -7318,7 +7318,7 @@ msgstr ""
 msgid "Last enabled:"
 msgstr "마지막 활성화:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:227
+#: packages/admin/src/components/users/UserDetail.tsx:239
 msgid "Last login"
 msgstr "마지막 로그인"
 
@@ -7335,7 +7335,7 @@ msgstr "마지막 페이지"
 msgid "Last seen"
 msgstr "마지막 접근"
 
-#: packages/admin/src/components/users/UserDetail.tsx:223
+#: packages/admin/src/components/users/UserDetail.tsx:235
 msgid "Last updated"
 msgstr "최근 수정"
 
@@ -7345,7 +7345,7 @@ msgid "Last used"
 msgstr "마지막 사용"
 
 #. placeholder {0}: new Date(cred.lastUsedAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:262
+#: packages/admin/src/components/users/UserDetail.tsx:274
 msgid "Last used {0}"
 msgstr "마지막 사용: {0}"
 
@@ -7415,7 +7415,7 @@ msgid "Link URL"
 msgstr "링크 URL"
 
 #. placeholder {0}: user.oauthAccounts.length
-#: packages/admin/src/components/users/UserDetail.tsx:276
+#: packages/admin/src/components/users/UserDetail.tsx:288
 msgid "Linked Accounts ({0})"
 msgstr "연결된 계정({0})"
 
@@ -7837,6 +7837,10 @@ msgstr "{providerName}에서 관리"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1402
 msgid "Managed by an external media provider"
 msgstr "외부 미디어 제공자에서 관리"
+
+#: packages/admin/src/components/users/UserDetail.tsx:155
+msgid "Managed by your identity provider. Change the name there."
+msgstr ""
 
 #: packages/admin/src/components/Redirects.tsx:398
 msgid "Manual"
@@ -8387,7 +8391,8 @@ msgstr "내 멋진 블로그"
 #: packages/admin/src/components/TaxonomyManager.tsx:1406
 #: packages/admin/src/components/TaxonomyManager.tsx:1461
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
-#: packages/admin/src/components/users/UserDetail.tsx:148
+#: packages/admin/src/components/users/UserDetail.tsx:152
+#: packages/admin/src/components/users/UserDetail.tsx:159
 #: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "이름"
@@ -8424,7 +8429,7 @@ msgstr "탐색"
 msgid "Needs attention"
 msgstr "조치 필요"
 
-#: packages/admin/src/components/users/UserDetail.tsx:231
+#: packages/admin/src/components/users/UserDetail.tsx:243
 #: packages/admin/src/components/users/UserList.tsx:178
 msgid "Never"
 msgstr "없음"
@@ -8562,7 +8567,7 @@ msgid "Next, the browser's passkey window will open"
 msgstr "다음 단계에서 브라우저의 패스키 창이 열립니다"
 
 #: packages/admin/src/components/ContentList.tsx:1570
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "No"
 msgstr "아니요"
@@ -8861,7 +8866,7 @@ msgstr "검토 안 함(모두 자동 승인)"
 msgid "No parent (top level)"
 msgstr "상위 항목 없음(최상위)"
 
-#: packages/admin/src/components/users/UserDetail.tsx:248
+#: packages/admin/src/components/users/UserDetail.tsx:260
 msgid "No passkeys registered"
 msgstr "등록된 패스키가 없습니다"
 
@@ -9405,7 +9410,7 @@ msgid "Passkeys"
 msgstr "패스키"
 
 #. placeholder {0}: user.credentials.length
-#: packages/admin/src/components/users/UserDetail.tsx:245
+#: packages/admin/src/components/users/UserDetail.tsx:257
 msgid "Passkeys ({0})"
 msgstr "패스키({0})"
 
@@ -10173,7 +10178,7 @@ msgid "Records without a parent were left out"
 msgstr "상위 항목이 없는 레코드가 제외되었습니다"
 
 #. placeholder {0}: user.email
-#: packages/admin/src/components/users/UserDetail.tsx:336
+#: packages/admin/src/components/users/UserDetail.tsx:348
 msgid "Recovery link sent to {0}"
 msgstr "복구 링크가 {0}(으)로 전송되었습니다."
 
@@ -10571,7 +10576,7 @@ msgstr "레포지토리"
 msgid "Request a new link"
 msgstr "새 링크 요청"
 
-#: packages/admin/src/lib/api/client.ts:340
+#: packages/admin/src/lib/api/client.ts:345
 msgid "Request failed"
 msgstr "요청에 실패했습니다"
 
@@ -10900,8 +10905,8 @@ msgid "robots.txt"
 msgstr "robots.txt"
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:164
-#: packages/admin/src/components/users/UserDetail.tsx:169
 #: packages/admin/src/components/users/UserDetail.tsx:181
+#: packages/admin/src/components/users/UserDetail.tsx:193
 #: packages/admin/src/components/users/UserList.tsx:94
 msgid "Role"
 msgstr "역할"
@@ -11005,7 +11010,7 @@ msgstr "계속 저장"
 msgid "Save changes"
 msgstr "변경 사항 저장"
 
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 msgid "Save Changes"
 msgstr "변경 사항 저장"
 
@@ -11080,7 +11085,7 @@ msgstr "여기서 컬렉션을 선택하고 저장하면 이 필드가 항목 �
 #: packages/admin/src/components/RelationFormPanel.tsx:112
 #: packages/admin/src/components/SaveButton.tsx:36
 #: packages/admin/src/components/TaxonomyManager.tsx:887
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 #: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
@@ -11704,7 +11709,7 @@ msgstr "초대 보내기"
 msgid "Send magic link"
 msgstr "매직 링크 보내기"
 
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Send Recovery Link"
 msgstr "복구 링크 보내기"
 
@@ -11722,7 +11727,7 @@ msgstr "테스트 이메일 보내기"
 #: packages/admin/src/components/SignupPage.tsx:106
 #: packages/admin/src/components/SignupPage.tsx:168
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Sending..."
 msgstr "보내는 중..."
 
@@ -12383,7 +12388,7 @@ msgstr "다크 모드로 전환"
 msgid "Switch to light"
 msgstr "라이트 모드로 전환"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Synced"
 msgstr "동기화됨"
 
@@ -13606,7 +13611,7 @@ msgstr "검색이나 필터를 조정해 보세요."
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:333
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:471
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:460
-#: packages/admin/src/routes/users.tsx:210
+#: packages/admin/src/routes/users.tsx:213
 msgid "Try again"
 msgstr "다시 시도"
 
@@ -13786,7 +13791,7 @@ msgid "Unlock aspect ratio"
 msgstr "가로세로 비율 잠금 해제"
 
 #: packages/admin/src/components/settings/PasskeyItem.tsx:127
-#: packages/admin/src/components/users/UserDetail.tsx:254
+#: packages/admin/src/components/users/UserDetail.tsx:266
 msgid "Unnamed passkey"
 msgstr "이름이 없는 패스키"
 
@@ -14214,7 +14219,7 @@ msgstr "사용자 액세스는 외부 공급자({0})에 의해 관리됩니다. 
 msgid "User accounts, passkeys, API tokens, secrets, and plugin data are never exported. Each author’s name and email address are included so they can be matched to users on the other site."
 msgstr "사용자 계정, 패스키, API 토큰, 비밀 정보 및 플러그인 데이터는 내보내지 않습니다. 다른 사이트의 사용자와 매칭할 수 있도록 각 작성자의 이름과 이메일 주소는 포함됩니다."
 
-#: packages/admin/src/components/users/UserDetail.tsx:116
+#: packages/admin/src/components/users/UserDetail.tsx:119
 msgid "User Details"
 msgstr "사용자 세부정보"
 
@@ -14223,7 +14228,7 @@ msgstr "사용자 세부정보"
 msgid "User for {0}"
 msgstr "{0}의 콘텐츠를 소유할 사용자"
 
-#: packages/admin/src/components/users/UserDetail.tsx:296
+#: packages/admin/src/components/users/UserDetail.tsx:308
 msgid "User not found"
 msgstr "사용자를 찾을 수 없습니다"
 
@@ -14709,7 +14714,7 @@ msgid "Yearly"
 msgstr "연도별"
 
 #: packages/admin/src/components/ContentList.tsx:1572
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:420
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "Yes"
@@ -14743,7 +14748,7 @@ msgstr "사이트를 열람하고 기여할 수 있습니다."
 msgid "You can view, rename, or add more passkeys later in Security settings."
 msgstr "나중에 보안 설정에서 패스키를 확인하거나 이름을 바꾸고, 패스키를 더 추가할 수 있습니다."
 
-#: packages/admin/src/components/users/UserDetail.tsx:175
+#: packages/admin/src/components/users/UserDetail.tsx:187
 msgid "You cannot change your own role"
 msgstr "자신의 역할을 변경할 수 없습니다."
 

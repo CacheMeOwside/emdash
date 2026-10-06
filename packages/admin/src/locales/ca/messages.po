@@ -1143,7 +1143,7 @@ msgstr "El compte ja existeix"
 msgid "Account exists"
 msgstr "El compte existeix"
 
-#: packages/admin/src/components/users/UserDetail.tsx:216
+#: packages/admin/src/components/users/UserDetail.tsx:228
 msgid "Account Info"
 msgstr "Informació del compte"
 
@@ -1167,7 +1167,7 @@ msgstr "Accions"
 msgid "Activation cannot be confirmed. Keep editing paused and refresh the status."
 msgstr "No es pot confirmar l'activació. Mantén l'edició en pausa i actualitza l'estat."
 
-#: packages/admin/src/components/users/UserDetail.tsx:206
+#: packages/admin/src/components/users/UserDetail.tsx:218
 #: packages/admin/src/components/users/UserList.tsx:210
 msgid "Active"
 msgstr "Actiu"
@@ -2518,7 +2518,7 @@ msgstr "Canvia"
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
 #. placeholder {1}: getRoleLabel(selectedUser?.role ?? 0)
 #. placeholder {2}: getRoleLabel(pendingSaveData?.role ?? 0)
-#: packages/admin/src/routes/users.tsx:296
+#: packages/admin/src/routes/users.tsx:300
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "Vols canviar <0>{0}</0> de <1>{1}</1> a <2>{2}</2>? Perdrà l'accés a les funcions de nivell superior."
 
@@ -2904,7 +2904,7 @@ msgstr "Tanca la configuració de la galeria"
 msgid "Close image settings"
 msgstr "Tanca la configuració de la imatge"
 
-#: packages/admin/src/components/users/UserDetail.tsx:121
+#: packages/admin/src/components/users/UserDetail.tsx:124
 msgid "Close panel"
 msgstr "Tanca el tauler"
 
@@ -3103,7 +3103,7 @@ msgid "Connect with WordPress"
 msgstr "Connecta amb WordPress"
 
 #. placeholder {0}: new Date(account.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:286
+#: packages/admin/src/components/users/UserDetail.tsx:298
 msgid "Connected {0}"
 msgstr "{0} connectat"
 
@@ -3695,7 +3695,7 @@ msgstr "Crea, actualitza i elimina contingut"
 #: packages/admin/src/components/ContentList.tsx:1030
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1029
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:373
-#: packages/admin/src/components/users/UserDetail.tsx:219
+#: packages/admin/src/components/users/UserDetail.tsx:231
 msgid "Created"
 msgstr "Creat"
 
@@ -3705,7 +3705,7 @@ msgid "Created \"{0}\"."
 msgstr "S'ha creat \"{0}\"."
 
 #. placeholder {0}: new Date(cred.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:260
+#: packages/admin/src/components/users/UserDetail.tsx:272
 msgid "Created {0}"
 msgstr "S'ha creat {0}"
 
@@ -4166,15 +4166,15 @@ msgstr "Lliura tots els correus electrònics que envia el teu lloc"
 msgid "Demo"
 msgstr "Demostració"
 
-#: packages/admin/src/routes/users.tsx:303
+#: packages/admin/src/routes/users.tsx:307
 msgid "Demote User"
 msgstr "Degrada l'usuari"
 
-#: packages/admin/src/routes/users.tsx:294
+#: packages/admin/src/routes/users.tsx:298
 msgid "Demote User?"
 msgstr "Vols degradar l'usuari?"
 
-#: packages/admin/src/routes/users.tsx:304
+#: packages/admin/src/routes/users.tsx:308
 msgid "Demoting..."
 msgstr "S'està degradant..."
 
@@ -4248,7 +4248,7 @@ msgstr "Dispositiu autoritzat"
 msgid "Device code"
 msgstr "Codi del dispositiu"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Device-bound"
 msgstr "Vinculat al dispositiu"
 
@@ -4272,7 +4272,7 @@ msgstr "Diferències respecte del lloc d'origen"
 msgid "Dimensions:"
 msgstr "Dimensions:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Disable"
 msgstr "Desactiva"
 
@@ -4288,17 +4288,17 @@ msgstr "Desactiva les eines MCP del connector"
 msgid "Disable redirect"
 msgstr "Desactiva la redirecció"
 
-#: packages/admin/src/routes/users.tsx:279
+#: packages/admin/src/routes/users.tsx:283
 msgid "Disable User"
 msgstr "Desactiva l'usuari"
 
-#: packages/admin/src/routes/users.tsx:272
+#: packages/admin/src/routes/users.tsx:276
 msgid "Disable User?"
 msgstr "Vols desactivar l'usuari?"
 
 #: packages/admin/src/components/PluginManager.tsx:445
 #: packages/admin/src/components/Redirects.tsx:391
-#: packages/admin/src/components/users/UserDetail.tsx:201
+#: packages/admin/src/components/users/UserDetail.tsx:213
 #: packages/admin/src/components/users/UserList.tsx:205
 msgid "Disabled"
 msgstr "Desactivat"
@@ -4308,11 +4308,11 @@ msgid "Disabled:"
 msgstr "Desactivat:"
 
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
-#: packages/admin/src/routes/users.tsx:274
+#: packages/admin/src/routes/users.tsx:278
 msgid "Disabling <0>{0}</0> will prevent them from logging in until re-enabled. Their content will be preserved."
 msgstr "Si desactives <0>{0}</0>, no podrà iniciar la sessió fins que es torni a activar. El seu contingut es conservarà."
 
-#: packages/admin/src/routes/users.tsx:280
+#: packages/admin/src/routes/users.tsx:284
 msgid "Disabling..."
 msgstr "S'està desactivant..."
 
@@ -4855,7 +4855,7 @@ msgstr "em1.…"
 #: packages/admin/src/components/InviteAcceptPage.tsx:63
 #: packages/admin/src/components/Settings.tsx:112
 #: packages/admin/src/components/SignupPage.tsx:215
-#: packages/admin/src/components/users/UserDetail.tsx:154
+#: packages/admin/src/components/users/UserDetail.tsx:166
 msgid "Email"
 msgstr "Correu electrònic"
 
@@ -4899,7 +4899,7 @@ msgstr "Configuració de correu"
 msgid "Email users"
 msgstr "Envia un correu als usuaris"
 
-#: packages/admin/src/components/users/UserDetail.tsx:235
+#: packages/admin/src/components/users/UserDetail.tsx:247
 msgid "Email verified"
 msgstr "Correu electrònic verificat"
 
@@ -4982,7 +4982,7 @@ msgstr "Galeria buida — obre la configuració per afegir imatges"
 msgid "Empty site"
 msgstr "Lloc buit"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Enable"
 msgstr "Activa"
 
@@ -5048,7 +5048,7 @@ msgstr "Introdueix les credencials manualment"
 msgid "Enter distraction-free mode"
 msgstr "Entra al mode sense distraccions"
 
-#: packages/admin/src/components/users/UserDetail.tsx:158
+#: packages/admin/src/components/users/UserDetail.tsx:170
 msgid "Enter email"
 msgstr "Introdueix el correu electrònic"
 
@@ -5056,7 +5056,7 @@ msgstr "Introdueix el correu electrònic"
 msgid "Enter markdown content..."
 msgstr "Introdueix contingut en Markdown..."
 
-#: packages/admin/src/components/users/UserDetail.tsx:151
+#: packages/admin/src/components/users/UserDetail.tsx:162
 msgid "Enter name"
 msgstr "Introdueix el nom"
 
@@ -5528,7 +5528,7 @@ msgstr "No s'ha pogut activar l'usuari"
 msgid "Failed to execute import"
 msgstr "No s'ha pogut executar la importació"
 
-#: packages/admin/src/lib/api/client.ts:369
+#: packages/admin/src/lib/api/client.ts:374
 msgid "Failed to fetch auth mode"
 msgstr "No s'ha pogut obtenir el mode d'autenticació"
 
@@ -5553,7 +5553,7 @@ msgstr "No s'ha pogut obtenir la configuració de correu"
 msgid "Failed to fetch entry terms"
 msgstr "No s'han pogut obtenir els termes de l'entrada"
 
-#: packages/admin/src/lib/api/client.ts:352
+#: packages/admin/src/lib/api/client.ts:357
 msgid "Failed to fetch manifest"
 msgstr "No s'ha pogut obtenir el manifest"
 
@@ -5788,7 +5788,7 @@ msgid "Failed to load transfer settings"
 msgstr "No s'ha pogut carregar la configuració de transferència"
 
 #. placeholder {0}: usersQuery.error.message
-#: packages/admin/src/routes/users.tsx:205
+#: packages/admin/src/routes/users.tsx:208
 msgid "Failed to load users: {0}"
 msgstr "No s'han pogut carregar els usuaris: {0}"
 
@@ -7318,7 +7318,7 @@ msgstr "Darrera edició"
 msgid "Last enabled:"
 msgstr "Última activació:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:227
+#: packages/admin/src/components/users/UserDetail.tsx:239
 msgid "Last login"
 msgstr "Últim inici de sessió"
 
@@ -7335,7 +7335,7 @@ msgstr "Última pàgina"
 msgid "Last seen"
 msgstr "Vist per última vegada"
 
-#: packages/admin/src/components/users/UserDetail.tsx:223
+#: packages/admin/src/components/users/UserDetail.tsx:235
 msgid "Last updated"
 msgstr "Última actualització"
 
@@ -7345,7 +7345,7 @@ msgid "Last used"
 msgstr "Últim ús"
 
 #. placeholder {0}: new Date(cred.lastUsedAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:262
+#: packages/admin/src/components/users/UserDetail.tsx:274
 msgid "Last used {0}"
 msgstr "Últim ús {0}"
 
@@ -7415,7 +7415,7 @@ msgid "Link URL"
 msgstr "URL de l'enllaç"
 
 #. placeholder {0}: user.oauthAccounts.length
-#: packages/admin/src/components/users/UserDetail.tsx:276
+#: packages/admin/src/components/users/UserDetail.tsx:288
 msgid "Linked Accounts ({0})"
 msgstr "Comptes enllaçats ({0})"
 
@@ -7837,6 +7837,10 @@ msgstr "Gestionat per {providerName}"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1402
 msgid "Managed by an external media provider"
 msgstr "Gestionat per un proveïdor multimèdia extern"
+
+#: packages/admin/src/components/users/UserDetail.tsx:155
+msgid "Managed by your identity provider. Change the name there."
+msgstr ""
 
 #: packages/admin/src/components/Redirects.tsx:398
 msgid "Manual"
@@ -8387,7 +8391,8 @@ msgstr "El meu blog"
 #: packages/admin/src/components/TaxonomyManager.tsx:1406
 #: packages/admin/src/components/TaxonomyManager.tsx:1461
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
-#: packages/admin/src/components/users/UserDetail.tsx:148
+#: packages/admin/src/components/users/UserDetail.tsx:152
+#: packages/admin/src/components/users/UserDetail.tsx:159
 #: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "Nom"
@@ -8424,7 +8429,7 @@ msgstr "Navegació"
 msgid "Needs attention"
 msgstr "Necessita atenció"
 
-#: packages/admin/src/components/users/UserDetail.tsx:231
+#: packages/admin/src/components/users/UserDetail.tsx:243
 #: packages/admin/src/components/users/UserList.tsx:178
 msgid "Never"
 msgstr "Mai"
@@ -8562,7 +8567,7 @@ msgid "Next, the browser's passkey window will open"
 msgstr "A continuació, s'obrirà la finestra de claus d'accés del navegador"
 
 #: packages/admin/src/components/ContentList.tsx:1570
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "No"
 msgstr "No"
@@ -8861,7 +8866,7 @@ msgstr "Sense moderació (aprova-ho tot automàticament)"
 msgid "No parent (top level)"
 msgstr "Sense pare (nivell superior)"
 
-#: packages/admin/src/components/users/UserDetail.tsx:248
+#: packages/admin/src/components/users/UserDetail.tsx:260
 msgid "No passkeys registered"
 msgstr "No hi ha cap clau d'accés registrada"
 
@@ -9405,7 +9410,7 @@ msgid "Passkeys"
 msgstr "Claus d'accés"
 
 #. placeholder {0}: user.credentials.length
-#: packages/admin/src/components/users/UserDetail.tsx:245
+#: packages/admin/src/components/users/UserDetail.tsx:257
 msgid "Passkeys ({0})"
 msgstr "Claus d'accés ({0})"
 
@@ -10173,7 +10178,7 @@ msgid "Records without a parent were left out"
 msgstr "S'han omès els registres sense pare"
 
 #. placeholder {0}: user.email
-#: packages/admin/src/components/users/UserDetail.tsx:336
+#: packages/admin/src/components/users/UserDetail.tsx:348
 msgid "Recovery link sent to {0}"
 msgstr "S'ha enviat l'enllaç de recuperació a {0}"
 
@@ -10571,7 +10576,7 @@ msgstr "Dipòsit"
 msgid "Request a new link"
 msgstr "Sol·licita un enllaç nou"
 
-#: packages/admin/src/lib/api/client.ts:340
+#: packages/admin/src/lib/api/client.ts:345
 msgid "Request failed"
 msgstr "Ha fallat la sol·licitud"
 
@@ -10900,8 +10905,8 @@ msgid "robots.txt"
 msgstr "robots.txt"
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:164
-#: packages/admin/src/components/users/UserDetail.tsx:169
 #: packages/admin/src/components/users/UserDetail.tsx:181
+#: packages/admin/src/components/users/UserDetail.tsx:193
 #: packages/admin/src/components/users/UserList.tsx:94
 msgid "Role"
 msgstr "Rol"
@@ -11005,7 +11010,7 @@ msgstr "Desa igualment"
 msgid "Save changes"
 msgstr "Desa els canvis"
 
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 msgid "Save Changes"
 msgstr "Desa els canvis"
 
@@ -11080,7 +11085,7 @@ msgstr "Desar una col·lecció aquí converteix aquest camp en un selector d'ent
 #: packages/admin/src/components/RelationFormPanel.tsx:112
 #: packages/admin/src/components/SaveButton.tsx:36
 #: packages/admin/src/components/TaxonomyManager.tsx:887
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 #: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
@@ -11704,7 +11709,7 @@ msgstr "Envia la invitació"
 msgid "Send magic link"
 msgstr "Envia l'enllaç màgic"
 
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Send Recovery Link"
 msgstr "Envia l'enllaç de recuperació"
 
@@ -11722,7 +11727,7 @@ msgstr "Envia un correu de prova"
 #: packages/admin/src/components/SignupPage.tsx:106
 #: packages/admin/src/components/SignupPage.tsx:168
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Sending..."
 msgstr "S'està enviant..."
 
@@ -12383,7 +12388,7 @@ msgstr "Canvia a fosc"
 msgid "Switch to light"
 msgstr "Canvia a clar"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Synced"
 msgstr "Sincronitzat"
 
@@ -13606,7 +13611,7 @@ msgstr "Prova d'ajustar la teva cerca o els filtres."
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:333
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:471
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:460
-#: packages/admin/src/routes/users.tsx:210
+#: packages/admin/src/routes/users.tsx:213
 msgid "Try again"
 msgstr "Torna-ho a provar"
 
@@ -13786,7 +13791,7 @@ msgid "Unlock aspect ratio"
 msgstr "Desbloqueja la relació d'aspecte"
 
 #: packages/admin/src/components/settings/PasskeyItem.tsx:127
-#: packages/admin/src/components/users/UserDetail.tsx:254
+#: packages/admin/src/components/users/UserDetail.tsx:266
 msgid "Unnamed passkey"
 msgstr "Clau d'accés sense nom"
 
@@ -14214,7 +14219,7 @@ msgstr "L'accés dels usuaris el gestiona un proveïdor extern ({0}). La configu
 msgid "User accounts, passkeys, API tokens, secrets, and plugin data are never exported. Each author’s name and email address are included so they can be matched to users on the other site."
 msgstr "Els comptes d'usuari, les claus d'accés, els tokens d'API, els secrets i les dades dels connectors no s'exporten mai. El nom i l'adreça electrònica de cada autor s'inclouen per poder-los associar amb usuaris de l'altre lloc."
 
-#: packages/admin/src/components/users/UserDetail.tsx:116
+#: packages/admin/src/components/users/UserDetail.tsx:119
 msgid "User Details"
 msgstr "Detalls de l'usuari"
 
@@ -14223,7 +14228,7 @@ msgstr "Detalls de l'usuari"
 msgid "User for {0}"
 msgstr "Usuari per a {0}"
 
-#: packages/admin/src/components/users/UserDetail.tsx:296
+#: packages/admin/src/components/users/UserDetail.tsx:308
 msgid "User not found"
 msgstr "No s'ha trobat l'usuari"
 
@@ -14709,7 +14714,7 @@ msgid "Yearly"
 msgstr "Anual"
 
 #: packages/admin/src/components/ContentList.tsx:1572
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:420
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "Yes"
@@ -14743,7 +14748,7 @@ msgstr "Pots veure el lloc i contribuir-hi."
 msgid "You can view, rename, or add more passkeys later in Security settings."
 msgstr "Pots veure, canviar el nom o afegir més claus d'accés més tard a la configuració de Seguretat."
 
-#: packages/admin/src/components/users/UserDetail.tsx:175
+#: packages/admin/src/components/users/UserDetail.tsx:187
 msgid "You cannot change your own role"
 msgstr "No pots canviar el teu propi rol"
 

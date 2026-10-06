@@ -1143,7 +1143,7 @@ msgstr "帳號已存在"
 msgid "Account exists"
 msgstr "帳號已存在"
 
-#: packages/admin/src/components/users/UserDetail.tsx:216
+#: packages/admin/src/components/users/UserDetail.tsx:228
 msgid "Account Info"
 msgstr "帳號資訊"
 
@@ -1167,7 +1167,7 @@ msgstr "操作"
 msgid "Activation cannot be confirmed. Keep editing paused and refresh the status."
 msgstr "無法確認是否已啟用。請繼續暫停編輯，並重新整理狀態。"
 
-#: packages/admin/src/components/users/UserDetail.tsx:206
+#: packages/admin/src/components/users/UserDetail.tsx:218
 #: packages/admin/src/components/users/UserList.tsx:210
 msgid "Active"
 msgstr "啟用"
@@ -2518,7 +2518,7 @@ msgstr "變更"
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
 #. placeholder {1}: getRoleLabel(selectedUser?.role ?? 0)
 #. placeholder {2}: getRoleLabel(pendingSaveData?.role ?? 0)
-#: packages/admin/src/routes/users.tsx:296
+#: packages/admin/src/routes/users.tsx:300
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "要將 <0>{0}</0> 從 <1>{1}</1> 變更為 <2>{2}</2> 嗎？該使用者將無法存取較高層級的功能。"
 
@@ -2904,7 +2904,7 @@ msgstr "關閉圖庫設定"
 msgid "Close image settings"
 msgstr "關閉圖片設定"
 
-#: packages/admin/src/components/users/UserDetail.tsx:121
+#: packages/admin/src/components/users/UserDetail.tsx:124
 msgid "Close panel"
 msgstr "關閉面板"
 
@@ -3103,7 +3103,7 @@ msgid "Connect with WordPress"
 msgstr "連線至 WordPress"
 
 #. placeholder {0}: new Date(account.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:286
+#: packages/admin/src/components/users/UserDetail.tsx:298
 msgid "Connected {0}"
 msgstr "已連線 {0}"
 
@@ -3695,7 +3695,7 @@ msgstr "建立、更新、刪除內容"
 #: packages/admin/src/components/ContentList.tsx:1030
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1029
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:373
-#: packages/admin/src/components/users/UserDetail.tsx:219
+#: packages/admin/src/components/users/UserDetail.tsx:231
 msgid "Created"
 msgstr "建立時間"
 
@@ -3705,7 +3705,7 @@ msgid "Created \"{0}\"."
 msgstr "已建立「{0}」。"
 
 #. placeholder {0}: new Date(cred.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:260
+#: packages/admin/src/components/users/UserDetail.tsx:272
 msgid "Created {0}"
 msgstr "建立於 {0}"
 
@@ -4166,15 +4166,15 @@ msgstr "寄送網站傳出的所有電子郵件"
 msgid "Demo"
 msgstr "示範"
 
-#: packages/admin/src/routes/users.tsx:303
+#: packages/admin/src/routes/users.tsx:307
 msgid "Demote User"
 msgstr "降低使用者角色"
 
-#: packages/admin/src/routes/users.tsx:294
+#: packages/admin/src/routes/users.tsx:298
 msgid "Demote User?"
 msgstr "要調降使用者權限嗎？"
 
-#: packages/admin/src/routes/users.tsx:304
+#: packages/admin/src/routes/users.tsx:308
 msgid "Demoting..."
 msgstr "正在降低角色…"
 
@@ -4248,7 +4248,7 @@ msgstr "已授權裝置"
 msgid "Device code"
 msgstr "裝置代碼"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Device-bound"
 msgstr "裝置綁定"
 
@@ -4272,7 +4272,7 @@ msgstr "與來源網站的差異"
 msgid "Dimensions:"
 msgstr "尺寸:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Disable"
 msgstr "停用"
 
@@ -4288,17 +4288,17 @@ msgstr "停用外掛 MCP 工具"
 msgid "Disable redirect"
 msgstr "停用重新導向"
 
-#: packages/admin/src/routes/users.tsx:279
+#: packages/admin/src/routes/users.tsx:283
 msgid "Disable User"
 msgstr "停用使用者"
 
-#: packages/admin/src/routes/users.tsx:272
+#: packages/admin/src/routes/users.tsx:276
 msgid "Disable User?"
 msgstr "要停用使用者嗎？"
 
 #: packages/admin/src/components/PluginManager.tsx:445
 #: packages/admin/src/components/Redirects.tsx:391
-#: packages/admin/src/components/users/UserDetail.tsx:201
+#: packages/admin/src/components/users/UserDetail.tsx:213
 #: packages/admin/src/components/users/UserList.tsx:205
 msgid "Disabled"
 msgstr "已停用"
@@ -4308,11 +4308,11 @@ msgid "Disabled:"
 msgstr "已停用:"
 
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
-#: packages/admin/src/routes/users.tsx:274
+#: packages/admin/src/routes/users.tsx:278
 msgid "Disabling <0>{0}</0> will prevent them from logging in until re-enabled. Their content will be preserved."
 msgstr "停用 <0>{0}</0> 後，對方在重新啟用前將無法登入。其內容會予以保留。"
 
-#: packages/admin/src/routes/users.tsx:280
+#: packages/admin/src/routes/users.tsx:284
 msgid "Disabling..."
 msgstr "正在停用..."
 
@@ -4855,7 +4855,7 @@ msgstr "em1.…"
 #: packages/admin/src/components/InviteAcceptPage.tsx:63
 #: packages/admin/src/components/Settings.tsx:112
 #: packages/admin/src/components/SignupPage.tsx:215
-#: packages/admin/src/components/users/UserDetail.tsx:154
+#: packages/admin/src/components/users/UserDetail.tsx:166
 msgid "Email"
 msgstr "電子郵件"
 
@@ -4899,7 +4899,7 @@ msgstr "電子郵件設定"
 msgid "Email users"
 msgstr "寄送電子郵件給使用者"
 
-#: packages/admin/src/components/users/UserDetail.tsx:235
+#: packages/admin/src/components/users/UserDetail.tsx:247
 msgid "Email verified"
 msgstr "電子郵件地址已驗證"
 
@@ -4982,7 +4982,7 @@ msgstr "空白圖庫 — 開啟設定以新增圖片"
 msgid "Empty site"
 msgstr "空白網站"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Enable"
 msgstr "啟用"
 
@@ -5048,7 +5048,7 @@ msgstr "手動輸入認證資訊"
 msgid "Enter distraction-free mode"
 msgstr "進入專注模式"
 
-#: packages/admin/src/components/users/UserDetail.tsx:158
+#: packages/admin/src/components/users/UserDetail.tsx:170
 msgid "Enter email"
 msgstr "輸入電子郵件地址"
 
@@ -5056,7 +5056,7 @@ msgstr "輸入電子郵件地址"
 msgid "Enter markdown content..."
 msgstr "輸入 Markdown 內容..."
 
-#: packages/admin/src/components/users/UserDetail.tsx:151
+#: packages/admin/src/components/users/UserDetail.tsx:162
 msgid "Enter name"
 msgstr "輸入名稱"
 
@@ -5528,7 +5528,7 @@ msgstr "無法啟用使用者"
 msgid "Failed to execute import"
 msgstr "無法執行匯入"
 
-#: packages/admin/src/lib/api/client.ts:369
+#: packages/admin/src/lib/api/client.ts:374
 msgid "Failed to fetch auth mode"
 msgstr "無法擷取驗證模式"
 
@@ -5553,7 +5553,7 @@ msgstr "無法擷取電子郵件設定"
 msgid "Failed to fetch entry terms"
 msgstr "無法擷取內容項目的分類項目"
 
-#: packages/admin/src/lib/api/client.ts:352
+#: packages/admin/src/lib/api/client.ts:357
 msgid "Failed to fetch manifest"
 msgstr "無法擷取資訊清單"
 
@@ -5788,7 +5788,7 @@ msgid "Failed to load transfer settings"
 msgstr "無法載入移轉設定"
 
 #. placeholder {0}: usersQuery.error.message
-#: packages/admin/src/routes/users.tsx:205
+#: packages/admin/src/routes/users.tsx:208
 msgid "Failed to load users: {0}"
 msgstr "載入使用者失敗: {0}"
 
@@ -7318,7 +7318,7 @@ msgstr "上次編輯"
 msgid "Last enabled:"
 msgstr "上次啟用時間:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:227
+#: packages/admin/src/components/users/UserDetail.tsx:239
 msgid "Last login"
 msgstr "上次登入時間"
 
@@ -7335,7 +7335,7 @@ msgstr "最後一頁"
 msgid "Last seen"
 msgstr "上次出現時間"
 
-#: packages/admin/src/components/users/UserDetail.tsx:223
+#: packages/admin/src/components/users/UserDetail.tsx:235
 msgid "Last updated"
 msgstr "上次更新時間"
 
@@ -7345,7 +7345,7 @@ msgid "Last used"
 msgstr "上次使用時間"
 
 #. placeholder {0}: new Date(cred.lastUsedAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:262
+#: packages/admin/src/components/users/UserDetail.tsx:274
 msgid "Last used {0}"
 msgstr "上次使用時間為 {0}"
 
@@ -7415,7 +7415,7 @@ msgid "Link URL"
 msgstr "連結網址"
 
 #. placeholder {0}: user.oauthAccounts.length
-#: packages/admin/src/components/users/UserDetail.tsx:276
+#: packages/admin/src/components/users/UserDetail.tsx:288
 msgid "Linked Accounts ({0})"
 msgstr "已連結的帳號 ({0})"
 
@@ -7837,6 +7837,10 @@ msgstr "由 {providerName} 管理"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1402
 msgid "Managed by an external media provider"
 msgstr "由外部媒體服務提供者管理"
+
+#: packages/admin/src/components/users/UserDetail.tsx:155
+msgid "Managed by your identity provider. Change the name there."
+msgstr ""
 
 #: packages/admin/src/components/Redirects.tsx:398
 msgid "Manual"
@@ -8387,7 +8391,8 @@ msgstr "我的精彩網誌"
 #: packages/admin/src/components/TaxonomyManager.tsx:1406
 #: packages/admin/src/components/TaxonomyManager.tsx:1461
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
-#: packages/admin/src/components/users/UserDetail.tsx:148
+#: packages/admin/src/components/users/UserDetail.tsx:152
+#: packages/admin/src/components/users/UserDetail.tsx:159
 #: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "名稱"
@@ -8424,7 +8429,7 @@ msgstr "導覽"
 msgid "Needs attention"
 msgstr "需要處理"
 
-#: packages/admin/src/components/users/UserDetail.tsx:231
+#: packages/admin/src/components/users/UserDetail.tsx:243
 #: packages/admin/src/components/users/UserList.tsx:178
 msgid "Never"
 msgstr "從未"
@@ -8562,7 +8567,7 @@ msgid "Next, the browser's passkey window will open"
 msgstr "接著會開啟瀏覽器的通行密鑰視窗"
 
 #: packages/admin/src/components/ContentList.tsx:1570
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "No"
 msgstr "否"
@@ -8861,7 +8866,7 @@ msgstr "不進行審核 (全部自動核准)"
 msgid "No parent (top level)"
 msgstr "沒有上層項目 (最上層)"
 
-#: packages/admin/src/components/users/UserDetail.tsx:248
+#: packages/admin/src/components/users/UserDetail.tsx:260
 msgid "No passkeys registered"
 msgstr "尚未註冊通行密鑰"
 
@@ -9405,7 +9410,7 @@ msgid "Passkeys"
 msgstr "通行密鑰"
 
 #. placeholder {0}: user.credentials.length
-#: packages/admin/src/components/users/UserDetail.tsx:245
+#: packages/admin/src/components/users/UserDetail.tsx:257
 msgid "Passkeys ({0})"
 msgstr "通行密鑰 ({0})"
 
@@ -10173,7 +10178,7 @@ msgid "Records without a parent were left out"
 msgstr "已略過沒有上層項目的記錄"
 
 #. placeholder {0}: user.email
-#: packages/admin/src/components/users/UserDetail.tsx:336
+#: packages/admin/src/components/users/UserDetail.tsx:348
 msgid "Recovery link sent to {0}"
 msgstr "復原連結已傳送至 {0}"
 
@@ -10571,7 +10576,7 @@ msgstr "程式碼儲存庫"
 msgid "Request a new link"
 msgstr "索取新連結"
 
-#: packages/admin/src/lib/api/client.ts:340
+#: packages/admin/src/lib/api/client.ts:345
 msgid "Request failed"
 msgstr "要求失敗"
 
@@ -10900,8 +10905,8 @@ msgid "robots.txt"
 msgstr "robots.txt"
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:164
-#: packages/admin/src/components/users/UserDetail.tsx:169
 #: packages/admin/src/components/users/UserDetail.tsx:181
+#: packages/admin/src/components/users/UserDetail.tsx:193
 #: packages/admin/src/components/users/UserList.tsx:94
 msgid "Role"
 msgstr "角色"
@@ -11005,7 +11010,7 @@ msgstr "仍要儲存"
 msgid "Save changes"
 msgstr "儲存變更"
 
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 msgid "Save Changes"
 msgstr "儲存變更"
 
@@ -11080,7 +11085,7 @@ msgstr "在這裡儲存集合後，這個欄位會改為內容項目選擇器。
 #: packages/admin/src/components/RelationFormPanel.tsx:112
 #: packages/admin/src/components/SaveButton.tsx:36
 #: packages/admin/src/components/TaxonomyManager.tsx:887
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 #: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
@@ -11704,7 +11709,7 @@ msgstr "傳送邀請"
 msgid "Send magic link"
 msgstr "傳送快速登入連結"
 
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Send Recovery Link"
 msgstr "傳送復原連結"
 
@@ -11722,7 +11727,7 @@ msgstr "傳送測試電子郵件"
 #: packages/admin/src/components/SignupPage.tsx:106
 #: packages/admin/src/components/SignupPage.tsx:168
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Sending..."
 msgstr "正在傳送..."
 
@@ -12383,7 +12388,7 @@ msgstr "切換為深色模式"
 msgid "Switch to light"
 msgstr "切換為淺色模式"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Synced"
 msgstr "已同步"
 
@@ -13606,7 +13611,7 @@ msgstr "嘗試調整搜尋條件或篩選器。"
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:333
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:471
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:460
-#: packages/admin/src/routes/users.tsx:210
+#: packages/admin/src/routes/users.tsx:213
 msgid "Try again"
 msgstr "再試一次"
 
@@ -13786,7 +13791,7 @@ msgid "Unlock aspect ratio"
 msgstr "解除鎖定長寬比"
 
 #: packages/admin/src/components/settings/PasskeyItem.tsx:127
-#: packages/admin/src/components/users/UserDetail.tsx:254
+#: packages/admin/src/components/users/UserDetail.tsx:266
 msgid "Unnamed passkey"
 msgstr "未命名的通行密鑰"
 
@@ -14214,7 +14219,7 @@ msgstr "使用者存取權由外部服務提供者 ({0}) 管理。使用外部�
 msgid "User accounts, passkeys, API tokens, secrets, and plugin data are never exported. Each author’s name and email address are included so they can be matched to users on the other site."
 msgstr "使用者帳號、通行密鑰、API 認證權杖、機密資料與外掛資料一律不會匯出。每位作者的姓名與電子郵件地址會納入套件，以便對應至另一個網站上的使用者。"
 
-#: packages/admin/src/components/users/UserDetail.tsx:116
+#: packages/admin/src/components/users/UserDetail.tsx:119
 msgid "User Details"
 msgstr "使用者詳細資料"
 
@@ -14223,7 +14228,7 @@ msgstr "使用者詳細資料"
 msgid "User for {0}"
 msgstr "{0} 對應的使用者"
 
-#: packages/admin/src/components/users/UserDetail.tsx:296
+#: packages/admin/src/components/users/UserDetail.tsx:308
 msgid "User not found"
 msgstr "找不到使用者"
 
@@ -14709,7 +14714,7 @@ msgid "Yearly"
 msgstr "每年"
 
 #: packages/admin/src/components/ContentList.tsx:1572
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:420
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "Yes"
@@ -14743,7 +14748,7 @@ msgstr "您可以檢視網站並參與內容編輯。"
 msgid "You can view, rename, or add more passkeys later in Security settings."
 msgstr "你可以稍後在安全性設定中查看、重新命名或新增通行密鑰。"
 
-#: packages/admin/src/components/users/UserDetail.tsx:175
+#: packages/admin/src/components/users/UserDetail.tsx:187
 msgid "You cannot change your own role"
 msgstr "您無法變更自己的角色"
 

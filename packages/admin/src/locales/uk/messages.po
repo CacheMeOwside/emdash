@@ -1143,7 +1143,7 @@ msgstr "Обліковий запис уже існує"
 msgid "Account exists"
 msgstr "Обліковий запис існує"
 
-#: packages/admin/src/components/users/UserDetail.tsx:216
+#: packages/admin/src/components/users/UserDetail.tsx:228
 msgid "Account Info"
 msgstr "Інформація про обліковий запис"
 
@@ -1167,7 +1167,7 @@ msgstr "Дії"
 msgid "Activation cannot be confirmed. Keep editing paused and refresh the status."
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:206
+#: packages/admin/src/components/users/UserDetail.tsx:218
 #: packages/admin/src/components/users/UserList.tsx:210
 msgid "Active"
 msgstr "Активний"
@@ -2518,7 +2518,7 @@ msgstr "Змінити"
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
 #. placeholder {1}: getRoleLabel(selectedUser?.role ?? 0)
 #. placeholder {2}: getRoleLabel(pendingSaveData?.role ?? 0)
-#: packages/admin/src/routes/users.tsx:296
+#: packages/admin/src/routes/users.tsx:300
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "Змінити <0>{0}</0> з <1>{1}</1> на <2>{2}</2>? Вони втратять доступ до функцій вищого рівня."
 
@@ -2904,7 +2904,7 @@ msgstr ""
 msgid "Close image settings"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:121
+#: packages/admin/src/components/users/UserDetail.tsx:124
 msgid "Close panel"
 msgstr "Закрити панель"
 
@@ -3103,7 +3103,7 @@ msgid "Connect with WordPress"
 msgstr "Підключитися до WordPress"
 
 #. placeholder {0}: new Date(account.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:286
+#: packages/admin/src/components/users/UserDetail.tsx:298
 msgid "Connected {0}"
 msgstr "Підключено {0}"
 
@@ -3695,7 +3695,7 @@ msgstr "Створювати, оновлювати, видаляти вміст"
 #: packages/admin/src/components/ContentList.tsx:1030
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1029
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:373
-#: packages/admin/src/components/users/UserDetail.tsx:219
+#: packages/admin/src/components/users/UserDetail.tsx:231
 msgid "Created"
 msgstr "Створено"
 
@@ -3705,7 +3705,7 @@ msgid "Created \"{0}\"."
 msgstr "Створено \"{0}\"."
 
 #. placeholder {0}: new Date(cred.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:260
+#: packages/admin/src/components/users/UserDetail.tsx:272
 msgid "Created {0}"
 msgstr "Створено {0}"
 
@@ -4166,15 +4166,15 @@ msgstr ""
 msgid "Demo"
 msgstr "Демо"
 
-#: packages/admin/src/routes/users.tsx:303
+#: packages/admin/src/routes/users.tsx:307
 msgid "Demote User"
 msgstr "Понизити користувача"
 
-#: packages/admin/src/routes/users.tsx:294
+#: packages/admin/src/routes/users.tsx:298
 msgid "Demote User?"
 msgstr "Понизити користувача?"
 
-#: packages/admin/src/routes/users.tsx:304
+#: packages/admin/src/routes/users.tsx:308
 msgid "Demoting..."
 msgstr "Пониження..."
 
@@ -4248,7 +4248,7 @@ msgstr "Пристрій авторизовано"
 msgid "Device code"
 msgstr "Код пристрою"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Device-bound"
 msgstr "Прив'язаний до пристрою"
 
@@ -4272,7 +4272,7 @@ msgstr ""
 msgid "Dimensions:"
 msgstr "Розміри:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Disable"
 msgstr "Вимкнути"
 
@@ -4288,17 +4288,17 @@ msgstr ""
 msgid "Disable redirect"
 msgstr "Вимкнути перенаправлення"
 
-#: packages/admin/src/routes/users.tsx:279
+#: packages/admin/src/routes/users.tsx:283
 msgid "Disable User"
 msgstr "Вимкнути користувача"
 
-#: packages/admin/src/routes/users.tsx:272
+#: packages/admin/src/routes/users.tsx:276
 msgid "Disable User?"
 msgstr "Вимкнути користувача?"
 
 #: packages/admin/src/components/PluginManager.tsx:445
 #: packages/admin/src/components/Redirects.tsx:391
-#: packages/admin/src/components/users/UserDetail.tsx:201
+#: packages/admin/src/components/users/UserDetail.tsx:213
 #: packages/admin/src/components/users/UserList.tsx:205
 msgid "Disabled"
 msgstr "Вимкнено"
@@ -4308,11 +4308,11 @@ msgid "Disabled:"
 msgstr "Вимкнено:"
 
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
-#: packages/admin/src/routes/users.tsx:274
+#: packages/admin/src/routes/users.tsx:278
 msgid "Disabling <0>{0}</0> will prevent them from logging in until re-enabled. Their content will be preserved."
 msgstr "Вимкнення <0>{0}</0> заборонить вхід до повторного ввімкнення. Їхній вміст буде збережено."
 
-#: packages/admin/src/routes/users.tsx:280
+#: packages/admin/src/routes/users.tsx:284
 msgid "Disabling..."
 msgstr "Вимкнення..."
 
@@ -4855,7 +4855,7 @@ msgstr "em1.…"
 #: packages/admin/src/components/InviteAcceptPage.tsx:63
 #: packages/admin/src/components/Settings.tsx:112
 #: packages/admin/src/components/SignupPage.tsx:215
-#: packages/admin/src/components/users/UserDetail.tsx:154
+#: packages/admin/src/components/users/UserDetail.tsx:166
 msgid "Email"
 msgstr "Email"
 
@@ -4899,7 +4899,7 @@ msgstr "Налаштування email"
 msgid "Email users"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:235
+#: packages/admin/src/components/users/UserDetail.tsx:247
 msgid "Email verified"
 msgstr "Email підтверджено"
 
@@ -4982,7 +4982,7 @@ msgstr ""
 msgid "Empty site"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Enable"
 msgstr "Увімкнути"
 
@@ -5048,7 +5048,7 @@ msgstr "Введіть облікові дані вручну"
 msgid "Enter distraction-free mode"
 msgstr "Увійти в режим без відволікань"
 
-#: packages/admin/src/components/users/UserDetail.tsx:158
+#: packages/admin/src/components/users/UserDetail.tsx:170
 msgid "Enter email"
 msgstr "Введіть email"
 
@@ -5056,7 +5056,7 @@ msgstr "Введіть email"
 msgid "Enter markdown content..."
 msgstr "Введіть вміст markdown..."
 
-#: packages/admin/src/components/users/UserDetail.tsx:151
+#: packages/admin/src/components/users/UserDetail.tsx:162
 msgid "Enter name"
 msgstr "Введіть ім'я"
 
@@ -5528,7 +5528,7 @@ msgstr "Не вдалося увімкнути користувача"
 msgid "Failed to execute import"
 msgstr "Не вдалося виконати імпорт"
 
-#: packages/admin/src/lib/api/client.ts:369
+#: packages/admin/src/lib/api/client.ts:374
 msgid "Failed to fetch auth mode"
 msgstr "Не вдалося отримати режим автентифікації"
 
@@ -5553,7 +5553,7 @@ msgstr "Не вдалося отримати налаштування email"
 msgid "Failed to fetch entry terms"
 msgstr "Не вдалося отримати терміни запису"
 
-#: packages/admin/src/lib/api/client.ts:352
+#: packages/admin/src/lib/api/client.ts:357
 msgid "Failed to fetch manifest"
 msgstr "Не вдалося отримати маніфест"
 
@@ -5788,7 +5788,7 @@ msgid "Failed to load transfer settings"
 msgstr ""
 
 #. placeholder {0}: usersQuery.error.message
-#: packages/admin/src/routes/users.tsx:205
+#: packages/admin/src/routes/users.tsx:208
 msgid "Failed to load users: {0}"
 msgstr "Не вдалося завантажити користувачів: {0}"
 
@@ -7318,7 +7318,7 @@ msgstr ""
 msgid "Last enabled:"
 msgstr "Останнє увімкнення:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:227
+#: packages/admin/src/components/users/UserDetail.tsx:239
 msgid "Last login"
 msgstr "Останній вхід"
 
@@ -7335,7 +7335,7 @@ msgstr ""
 msgid "Last seen"
 msgstr "Остання активність"
 
-#: packages/admin/src/components/users/UserDetail.tsx:223
+#: packages/admin/src/components/users/UserDetail.tsx:235
 msgid "Last updated"
 msgstr "Останнє оновлення"
 
@@ -7345,7 +7345,7 @@ msgid "Last used"
 msgstr "Останнє використання"
 
 #. placeholder {0}: new Date(cred.lastUsedAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:262
+#: packages/admin/src/components/users/UserDetail.tsx:274
 msgid "Last used {0}"
 msgstr "Останнє використання {0}"
 
@@ -7415,7 +7415,7 @@ msgid "Link URL"
 msgstr ""
 
 #. placeholder {0}: user.oauthAccounts.length
-#: packages/admin/src/components/users/UserDetail.tsx:276
+#: packages/admin/src/components/users/UserDetail.tsx:288
 msgid "Linked Accounts ({0})"
 msgstr "Пов'язані облікові записи ({0})"
 
@@ -7837,6 +7837,10 @@ msgstr "Керується {providerName}"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1402
 msgid "Managed by an external media provider"
 msgstr "Керується зовнішнім медіа-провайдером"
+
+#: packages/admin/src/components/users/UserDetail.tsx:155
+msgid "Managed by your identity provider. Change the name there."
+msgstr ""
 
 #: packages/admin/src/components/Redirects.tsx:398
 msgid "Manual"
@@ -8387,7 +8391,8 @@ msgstr "Мій чудовий блог"
 #: packages/admin/src/components/TaxonomyManager.tsx:1406
 #: packages/admin/src/components/TaxonomyManager.tsx:1461
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
-#: packages/admin/src/components/users/UserDetail.tsx:148
+#: packages/admin/src/components/users/UserDetail.tsx:152
+#: packages/admin/src/components/users/UserDetail.tsx:159
 #: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "Ім'я"
@@ -8424,7 +8429,7 @@ msgstr "Навігація"
 msgid "Needs attention"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:231
+#: packages/admin/src/components/users/UserDetail.tsx:243
 #: packages/admin/src/components/users/UserList.tsx:178
 msgid "Never"
 msgstr "Ніколи"
@@ -8562,7 +8567,7 @@ msgid "Next, the browser's passkey window will open"
 msgstr ""
 
 #: packages/admin/src/components/ContentList.tsx:1570
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "No"
 msgstr "Ні"
@@ -8861,7 +8866,7 @@ msgstr "Без модерації (автосхвалення всіх)"
 msgid "No parent (top level)"
 msgstr "Без батьківського (верхній рівень)"
 
-#: packages/admin/src/components/users/UserDetail.tsx:248
+#: packages/admin/src/components/users/UserDetail.tsx:260
 msgid "No passkeys registered"
 msgstr "Passkey не зареєстровано"
 
@@ -9405,7 +9410,7 @@ msgid "Passkeys"
 msgstr "Passkeys"
 
 #. placeholder {0}: user.credentials.length
-#: packages/admin/src/components/users/UserDetail.tsx:245
+#: packages/admin/src/components/users/UserDetail.tsx:257
 msgid "Passkeys ({0})"
 msgstr "Passkeys ({0})"
 
@@ -10173,7 +10178,7 @@ msgid "Records without a parent were left out"
 msgstr ""
 
 #. placeholder {0}: user.email
-#: packages/admin/src/components/users/UserDetail.tsx:336
+#: packages/admin/src/components/users/UserDetail.tsx:348
 msgid "Recovery link sent to {0}"
 msgstr "Посилання для відновлення надіслано на {0}"
 
@@ -10571,7 +10576,7 @@ msgstr "Репозиторій"
 msgid "Request a new link"
 msgstr "Запросити нове посилання"
 
-#: packages/admin/src/lib/api/client.ts:340
+#: packages/admin/src/lib/api/client.ts:345
 msgid "Request failed"
 msgstr "Запит не вдався"
 
@@ -10900,8 +10905,8 @@ msgid "robots.txt"
 msgstr ""
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:164
-#: packages/admin/src/components/users/UserDetail.tsx:169
 #: packages/admin/src/components/users/UserDetail.tsx:181
+#: packages/admin/src/components/users/UserDetail.tsx:193
 #: packages/admin/src/components/users/UserList.tsx:94
 msgid "Role"
 msgstr "Роль"
@@ -11005,7 +11010,7 @@ msgstr ""
 msgid "Save changes"
 msgstr "Зберегти зміни"
 
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
@@ -11080,7 +11085,7 @@ msgstr ""
 #: packages/admin/src/components/RelationFormPanel.tsx:112
 #: packages/admin/src/components/SaveButton.tsx:36
 #: packages/admin/src/components/TaxonomyManager.tsx:887
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 #: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
@@ -11704,7 +11709,7 @@ msgstr "Надіслати запрошення"
 msgid "Send magic link"
 msgstr "Надіслати magic link"
 
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Send Recovery Link"
 msgstr "Надіслати посилання для відновлення"
 
@@ -11722,7 +11727,7 @@ msgstr "Надіслати тестовий email"
 #: packages/admin/src/components/SignupPage.tsx:106
 #: packages/admin/src/components/SignupPage.tsx:168
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Sending..."
 msgstr "Надсилання..."
 
@@ -12383,7 +12388,7 @@ msgstr ""
 msgid "Switch to light"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Synced"
 msgstr "Синхронізовано"
 
@@ -13606,7 +13611,7 @@ msgstr "Спробуйте змінити пошук або фільтри."
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:333
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:471
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:460
-#: packages/admin/src/routes/users.tsx:210
+#: packages/admin/src/routes/users.tsx:213
 msgid "Try again"
 msgstr "Спробувати ще раз"
 
@@ -13786,7 +13791,7 @@ msgid "Unlock aspect ratio"
 msgstr "Розблокувати пропорції"
 
 #: packages/admin/src/components/settings/PasskeyItem.tsx:127
-#: packages/admin/src/components/users/UserDetail.tsx:254
+#: packages/admin/src/components/users/UserDetail.tsx:266
 msgid "Unnamed passkey"
 msgstr "Passkey без назви"
 
@@ -14214,7 +14219,7 @@ msgstr "Доступ користувачів керується зовнішн�
 msgid "User accounts, passkeys, API tokens, secrets, and plugin data are never exported. Each author’s name and email address are included so they can be matched to users on the other site."
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:116
+#: packages/admin/src/components/users/UserDetail.tsx:119
 msgid "User Details"
 msgstr "Дані користувача"
 
@@ -14223,7 +14228,7 @@ msgstr "Дані користувача"
 msgid "User for {0}"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:296
+#: packages/admin/src/components/users/UserDetail.tsx:308
 msgid "User not found"
 msgstr "Користувача не знайдено"
 
@@ -14709,7 +14714,7 @@ msgid "Yearly"
 msgstr "Щорічно"
 
 #: packages/admin/src/components/ContentList.tsx:1572
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:420
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "Yes"
@@ -14743,7 +14748,7 @@ msgstr "Ви можете переглядати сайт і долучатис�
 msgid "You can view, rename, or add more passkeys later in Security settings."
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:175
+#: packages/admin/src/components/users/UserDetail.tsx:187
 msgid "You cannot change your own role"
 msgstr "Ви не можете змінити власну роль"
 

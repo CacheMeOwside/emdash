@@ -1143,7 +1143,7 @@ msgstr "Account already exists"
 msgid "Account exists"
 msgstr "Account exists"
 
-#: packages/admin/src/components/users/UserDetail.tsx:216
+#: packages/admin/src/components/users/UserDetail.tsx:228
 msgid "Account Info"
 msgstr "Account Info"
 
@@ -1167,7 +1167,7 @@ msgstr "Actions"
 msgid "Activation cannot be confirmed. Keep editing paused and refresh the status."
 msgstr "Activation cannot be confirmed. Keep editing paused and refresh the status."
 
-#: packages/admin/src/components/users/UserDetail.tsx:206
+#: packages/admin/src/components/users/UserDetail.tsx:218
 #: packages/admin/src/components/users/UserList.tsx:210
 msgid "Active"
 msgstr "Active"
@@ -2518,7 +2518,7 @@ msgstr "Change"
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
 #. placeholder {1}: getRoleLabel(selectedUser?.role ?? 0)
 #. placeholder {2}: getRoleLabel(pendingSaveData?.role ?? 0)
-#: packages/admin/src/routes/users.tsx:296
+#: packages/admin/src/routes/users.tsx:300
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 
@@ -2904,7 +2904,7 @@ msgstr "Close gallery settings"
 msgid "Close image settings"
 msgstr "Close image settings"
 
-#: packages/admin/src/components/users/UserDetail.tsx:121
+#: packages/admin/src/components/users/UserDetail.tsx:124
 msgid "Close panel"
 msgstr "Close panel"
 
@@ -3103,7 +3103,7 @@ msgid "Connect with WordPress"
 msgstr "Connect with WordPress"
 
 #. placeholder {0}: new Date(account.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:286
+#: packages/admin/src/components/users/UserDetail.tsx:298
 msgid "Connected {0}"
 msgstr "Connected {0}"
 
@@ -3695,7 +3695,7 @@ msgstr "Create, update, delete content"
 #: packages/admin/src/components/ContentList.tsx:1030
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1029
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:373
-#: packages/admin/src/components/users/UserDetail.tsx:219
+#: packages/admin/src/components/users/UserDetail.tsx:231
 msgid "Created"
 msgstr "Created"
 
@@ -3705,7 +3705,7 @@ msgid "Created \"{0}\"."
 msgstr "Created \"{0}\"."
 
 #. placeholder {0}: new Date(cred.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:260
+#: packages/admin/src/components/users/UserDetail.tsx:272
 msgid "Created {0}"
 msgstr "Created {0}"
 
@@ -4166,15 +4166,15 @@ msgstr "Deliver all email your site sends"
 msgid "Demo"
 msgstr "Demo"
 
-#: packages/admin/src/routes/users.tsx:303
+#: packages/admin/src/routes/users.tsx:307
 msgid "Demote User"
 msgstr "Demote User"
 
-#: packages/admin/src/routes/users.tsx:294
+#: packages/admin/src/routes/users.tsx:298
 msgid "Demote User?"
 msgstr "Demote User?"
 
-#: packages/admin/src/routes/users.tsx:304
+#: packages/admin/src/routes/users.tsx:308
 msgid "Demoting..."
 msgstr "Demoting..."
 
@@ -4248,7 +4248,7 @@ msgstr "Device authorized"
 msgid "Device code"
 msgstr "Device code"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Device-bound"
 msgstr "Device-bound"
 
@@ -4272,7 +4272,7 @@ msgstr "Differences from the source site"
 msgid "Dimensions:"
 msgstr "Dimensions:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Disable"
 msgstr "Disable"
 
@@ -4288,17 +4288,17 @@ msgstr "Disable plugin MCP tools"
 msgid "Disable redirect"
 msgstr "Disable redirect"
 
-#: packages/admin/src/routes/users.tsx:279
+#: packages/admin/src/routes/users.tsx:283
 msgid "Disable User"
 msgstr "Disable User"
 
-#: packages/admin/src/routes/users.tsx:272
+#: packages/admin/src/routes/users.tsx:276
 msgid "Disable User?"
 msgstr "Disable User?"
 
 #: packages/admin/src/components/PluginManager.tsx:445
 #: packages/admin/src/components/Redirects.tsx:391
-#: packages/admin/src/components/users/UserDetail.tsx:201
+#: packages/admin/src/components/users/UserDetail.tsx:213
 #: packages/admin/src/components/users/UserList.tsx:205
 msgid "Disabled"
 msgstr "Disabled"
@@ -4308,11 +4308,11 @@ msgid "Disabled:"
 msgstr "Disabled:"
 
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
-#: packages/admin/src/routes/users.tsx:274
+#: packages/admin/src/routes/users.tsx:278
 msgid "Disabling <0>{0}</0> will prevent them from logging in until re-enabled. Their content will be preserved."
 msgstr "Disabling <0>{0}</0> will prevent them from logging in until re-enabled. Their content will be preserved."
 
-#: packages/admin/src/routes/users.tsx:280
+#: packages/admin/src/routes/users.tsx:284
 msgid "Disabling..."
 msgstr "Disabling..."
 
@@ -4855,7 +4855,7 @@ msgstr "em1.…"
 #: packages/admin/src/components/InviteAcceptPage.tsx:63
 #: packages/admin/src/components/Settings.tsx:112
 #: packages/admin/src/components/SignupPage.tsx:215
-#: packages/admin/src/components/users/UserDetail.tsx:154
+#: packages/admin/src/components/users/UserDetail.tsx:166
 msgid "Email"
 msgstr "Email"
 
@@ -4899,7 +4899,7 @@ msgstr "Email Settings"
 msgid "Email users"
 msgstr "Email users"
 
-#: packages/admin/src/components/users/UserDetail.tsx:235
+#: packages/admin/src/components/users/UserDetail.tsx:247
 msgid "Email verified"
 msgstr "Email verified"
 
@@ -4982,7 +4982,7 @@ msgstr "Empty gallery — open settings to add images"
 msgid "Empty site"
 msgstr "Empty site"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Enable"
 msgstr "Enable"
 
@@ -5048,7 +5048,7 @@ msgstr "Enter credentials manually"
 msgid "Enter distraction-free mode"
 msgstr "Enter distraction-free mode"
 
-#: packages/admin/src/components/users/UserDetail.tsx:158
+#: packages/admin/src/components/users/UserDetail.tsx:170
 msgid "Enter email"
 msgstr "Enter email"
 
@@ -5056,7 +5056,7 @@ msgstr "Enter email"
 msgid "Enter markdown content..."
 msgstr "Enter markdown content..."
 
-#: packages/admin/src/components/users/UserDetail.tsx:151
+#: packages/admin/src/components/users/UserDetail.tsx:162
 msgid "Enter name"
 msgstr "Enter name"
 
@@ -5528,7 +5528,7 @@ msgstr "Failed to enable user"
 msgid "Failed to execute import"
 msgstr "Failed to execute import"
 
-#: packages/admin/src/lib/api/client.ts:369
+#: packages/admin/src/lib/api/client.ts:374
 msgid "Failed to fetch auth mode"
 msgstr "Failed to fetch auth mode"
 
@@ -5553,7 +5553,7 @@ msgstr "Failed to fetch email settings"
 msgid "Failed to fetch entry terms"
 msgstr "Failed to fetch entry terms"
 
-#: packages/admin/src/lib/api/client.ts:352
+#: packages/admin/src/lib/api/client.ts:357
 msgid "Failed to fetch manifest"
 msgstr "Failed to fetch manifest"
 
@@ -5788,7 +5788,7 @@ msgid "Failed to load transfer settings"
 msgstr "Failed to load transfer settings"
 
 #. placeholder {0}: usersQuery.error.message
-#: packages/admin/src/routes/users.tsx:205
+#: packages/admin/src/routes/users.tsx:208
 msgid "Failed to load users: {0}"
 msgstr "Failed to load users: {0}"
 
@@ -7318,7 +7318,7 @@ msgstr "Last edited"
 msgid "Last enabled:"
 msgstr "Last enabled:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:227
+#: packages/admin/src/components/users/UserDetail.tsx:239
 msgid "Last login"
 msgstr "Last login"
 
@@ -7335,7 +7335,7 @@ msgstr "Last page"
 msgid "Last seen"
 msgstr "Last seen"
 
-#: packages/admin/src/components/users/UserDetail.tsx:223
+#: packages/admin/src/components/users/UserDetail.tsx:235
 msgid "Last updated"
 msgstr "Last updated"
 
@@ -7345,7 +7345,7 @@ msgid "Last used"
 msgstr "Last used"
 
 #. placeholder {0}: new Date(cred.lastUsedAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:262
+#: packages/admin/src/components/users/UserDetail.tsx:274
 msgid "Last used {0}"
 msgstr "Last used {0}"
 
@@ -7415,7 +7415,7 @@ msgid "Link URL"
 msgstr "Link URL"
 
 #. placeholder {0}: user.oauthAccounts.length
-#: packages/admin/src/components/users/UserDetail.tsx:276
+#: packages/admin/src/components/users/UserDetail.tsx:288
 msgid "Linked Accounts ({0})"
 msgstr "Linked Accounts ({0})"
 
@@ -7837,6 +7837,10 @@ msgstr "Managed by {providerName}"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1402
 msgid "Managed by an external media provider"
 msgstr "Managed by an external media provider"
+
+#: packages/admin/src/components/users/UserDetail.tsx:155
+msgid "Managed by your identity provider. Change the name there."
+msgstr "Managed by your identity provider. Change the name there."
 
 #: packages/admin/src/components/Redirects.tsx:398
 msgid "Manual"
@@ -8387,7 +8391,8 @@ msgstr "My Awesome Blog"
 #: packages/admin/src/components/TaxonomyManager.tsx:1406
 #: packages/admin/src/components/TaxonomyManager.tsx:1461
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
-#: packages/admin/src/components/users/UserDetail.tsx:148
+#: packages/admin/src/components/users/UserDetail.tsx:152
+#: packages/admin/src/components/users/UserDetail.tsx:159
 #: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "Name"
@@ -8424,7 +8429,7 @@ msgstr "Navigation"
 msgid "Needs attention"
 msgstr "Needs attention"
 
-#: packages/admin/src/components/users/UserDetail.tsx:231
+#: packages/admin/src/components/users/UserDetail.tsx:243
 #: packages/admin/src/components/users/UserList.tsx:178
 msgid "Never"
 msgstr "Never"
@@ -8562,7 +8567,7 @@ msgid "Next, the browser's passkey window will open"
 msgstr "Next, the browser's passkey window will open"
 
 #: packages/admin/src/components/ContentList.tsx:1570
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "No"
 msgstr "No"
@@ -8861,7 +8866,7 @@ msgstr "No moderation (auto-approve all)"
 msgid "No parent (top level)"
 msgstr "No parent (top level)"
 
-#: packages/admin/src/components/users/UserDetail.tsx:248
+#: packages/admin/src/components/users/UserDetail.tsx:260
 msgid "No passkeys registered"
 msgstr "No passkeys registered"
 
@@ -9405,7 +9410,7 @@ msgid "Passkeys"
 msgstr "Passkeys"
 
 #. placeholder {0}: user.credentials.length
-#: packages/admin/src/components/users/UserDetail.tsx:245
+#: packages/admin/src/components/users/UserDetail.tsx:257
 msgid "Passkeys ({0})"
 msgstr "Passkeys ({0})"
 
@@ -10173,7 +10178,7 @@ msgid "Records without a parent were left out"
 msgstr "Records without a parent were left out"
 
 #. placeholder {0}: user.email
-#: packages/admin/src/components/users/UserDetail.tsx:336
+#: packages/admin/src/components/users/UserDetail.tsx:348
 msgid "Recovery link sent to {0}"
 msgstr "Recovery link sent to {0}"
 
@@ -10571,7 +10576,7 @@ msgstr "Repository"
 msgid "Request a new link"
 msgstr "Request a new link"
 
-#: packages/admin/src/lib/api/client.ts:340
+#: packages/admin/src/lib/api/client.ts:345
 msgid "Request failed"
 msgstr "Request failed"
 
@@ -10900,8 +10905,8 @@ msgid "robots.txt"
 msgstr "robots.txt"
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:164
-#: packages/admin/src/components/users/UserDetail.tsx:169
 #: packages/admin/src/components/users/UserDetail.tsx:181
+#: packages/admin/src/components/users/UserDetail.tsx:193
 #: packages/admin/src/components/users/UserList.tsx:94
 msgid "Role"
 msgstr "Role"
@@ -11005,7 +11010,7 @@ msgstr "Save anyway"
 msgid "Save changes"
 msgstr "Save changes"
 
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 msgid "Save Changes"
 msgstr "Save Changes"
 
@@ -11080,7 +11085,7 @@ msgstr "Saving a collection here turns this field into an entry picker. Its stor
 #: packages/admin/src/components/RelationFormPanel.tsx:112
 #: packages/admin/src/components/SaveButton.tsx:36
 #: packages/admin/src/components/TaxonomyManager.tsx:887
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 #: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
@@ -11704,7 +11709,7 @@ msgstr "Send Invite"
 msgid "Send magic link"
 msgstr "Send magic link"
 
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Send Recovery Link"
 msgstr "Send Recovery Link"
 
@@ -11722,7 +11727,7 @@ msgstr "Send Test Email"
 #: packages/admin/src/components/SignupPage.tsx:106
 #: packages/admin/src/components/SignupPage.tsx:168
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Sending..."
 msgstr "Sending..."
 
@@ -12383,7 +12388,7 @@ msgstr "Switch to dark"
 msgid "Switch to light"
 msgstr "Switch to light"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Synced"
 msgstr "Synced"
 
@@ -13606,7 +13611,7 @@ msgstr "Try adjusting your search or filters."
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:333
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:471
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:460
-#: packages/admin/src/routes/users.tsx:210
+#: packages/admin/src/routes/users.tsx:213
 msgid "Try again"
 msgstr "Try again"
 
@@ -13786,7 +13791,7 @@ msgid "Unlock aspect ratio"
 msgstr "Unlock aspect ratio"
 
 #: packages/admin/src/components/settings/PasskeyItem.tsx:127
-#: packages/admin/src/components/users/UserDetail.tsx:254
+#: packages/admin/src/components/users/UserDetail.tsx:266
 msgid "Unnamed passkey"
 msgstr "Unnamed passkey"
 
@@ -14214,7 +14219,7 @@ msgstr "User access is managed by an external provider ({0}). Self-signup domain
 msgid "User accounts, passkeys, API tokens, secrets, and plugin data are never exported. Each author’s name and email address are included so they can be matched to users on the other site."
 msgstr "User accounts, passkeys, API tokens, secrets, and plugin data are never exported. Each author’s name and email address are included so they can be matched to users on the other site."
 
-#: packages/admin/src/components/users/UserDetail.tsx:116
+#: packages/admin/src/components/users/UserDetail.tsx:119
 msgid "User Details"
 msgstr "User Details"
 
@@ -14223,7 +14228,7 @@ msgstr "User Details"
 msgid "User for {0}"
 msgstr "User for {0}"
 
-#: packages/admin/src/components/users/UserDetail.tsx:296
+#: packages/admin/src/components/users/UserDetail.tsx:308
 msgid "User not found"
 msgstr "User not found"
 
@@ -14709,7 +14714,7 @@ msgid "Yearly"
 msgstr "Yearly"
 
 #: packages/admin/src/components/ContentList.tsx:1572
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:420
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "Yes"
@@ -14743,7 +14748,7 @@ msgstr "You can view and contribute to the site."
 msgid "You can view, rename, or add more passkeys later in Security settings."
 msgstr "You can view, rename, or add more passkeys later in Security settings."
 
-#: packages/admin/src/components/users/UserDetail.tsx:175
+#: packages/admin/src/components/users/UserDetail.tsx:187
 msgid "You cannot change your own role"
 msgstr "You cannot change your own role"
 

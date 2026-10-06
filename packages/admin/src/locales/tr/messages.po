@@ -1143,7 +1143,7 @@ msgstr "Hesap zaten mevcut"
 msgid "Account exists"
 msgstr "Hesap mevcut"
 
-#: packages/admin/src/components/users/UserDetail.tsx:216
+#: packages/admin/src/components/users/UserDetail.tsx:228
 msgid "Account Info"
 msgstr "Hesap Bilgileri"
 
@@ -1167,7 +1167,7 @@ msgstr "Eylemler"
 msgid "Activation cannot be confirmed. Keep editing paused and refresh the status."
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:206
+#: packages/admin/src/components/users/UserDetail.tsx:218
 #: packages/admin/src/components/users/UserList.tsx:210
 msgid "Active"
 msgstr "Aktif"
@@ -2518,7 +2518,7 @@ msgstr "Değiştir"
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
 #. placeholder {1}: getRoleLabel(selectedUser?.role ?? 0)
 #. placeholder {2}: getRoleLabel(pendingSaveData?.role ?? 0)
-#: packages/admin/src/routes/users.tsx:296
+#: packages/admin/src/routes/users.tsx:300
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "<0>{0}</0>'i <1>{1}</1>'ten <2>{2}</2>'e değiştirmek ister misiniz? Daha üst düzey özelliklere erişimlerini kaybedecekler."
 
@@ -2904,7 +2904,7 @@ msgstr ""
 msgid "Close image settings"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:121
+#: packages/admin/src/components/users/UserDetail.tsx:124
 msgid "Close panel"
 msgstr "Paneli kapat"
 
@@ -3103,7 +3103,7 @@ msgid "Connect with WordPress"
 msgstr "WordPress ile bağlanın"
 
 #. placeholder {0}: new Date(account.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:286
+#: packages/admin/src/components/users/UserDetail.tsx:298
 msgid "Connected {0}"
 msgstr "Bağlı {0}"
 
@@ -3695,7 +3695,7 @@ msgstr "İçerik oluşturma, güncelleme, silme"
 #: packages/admin/src/components/ContentList.tsx:1030
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1029
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:373
-#: packages/admin/src/components/users/UserDetail.tsx:219
+#: packages/admin/src/components/users/UserDetail.tsx:231
 msgid "Created"
 msgstr "Oluşturuldu"
 
@@ -3705,7 +3705,7 @@ msgid "Created \"{0}\"."
 msgstr "\"{0}\" oluşturuldu."
 
 #. placeholder {0}: new Date(cred.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:260
+#: packages/admin/src/components/users/UserDetail.tsx:272
 msgid "Created {0}"
 msgstr "{0} oluşturuldu"
 
@@ -4166,15 +4166,15 @@ msgstr ""
 msgid "Demo"
 msgstr "Demo"
 
-#: packages/admin/src/routes/users.tsx:303
+#: packages/admin/src/routes/users.tsx:307
 msgid "Demote User"
 msgstr "Kullanıcıyı Düşür"
 
-#: packages/admin/src/routes/users.tsx:294
+#: packages/admin/src/routes/users.tsx:298
 msgid "Demote User?"
 msgstr "Kullanıcı Düşürülsün mü?"
 
-#: packages/admin/src/routes/users.tsx:304
+#: packages/admin/src/routes/users.tsx:308
 msgid "Demoting..."
 msgstr "Düşüyor..."
 
@@ -4248,7 +4248,7 @@ msgstr "Cihaza izin verildi"
 msgid "Device code"
 msgstr "Cihaz kodu"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Device-bound"
 msgstr "Cihaza bağlı"
 
@@ -4272,7 +4272,7 @@ msgstr ""
 msgid "Dimensions:"
 msgstr "Boyutlar:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Disable"
 msgstr "Devre dışı bırak"
 
@@ -4288,17 +4288,17 @@ msgstr ""
 msgid "Disable redirect"
 msgstr "Yönlendirmeyi devre dışı bırak"
 
-#: packages/admin/src/routes/users.tsx:279
+#: packages/admin/src/routes/users.tsx:283
 msgid "Disable User"
 msgstr "Kullanıcıyı Devre Dışı Bırak"
 
-#: packages/admin/src/routes/users.tsx:272
+#: packages/admin/src/routes/users.tsx:276
 msgid "Disable User?"
 msgstr "Kullanıcı Devre Dışı Bırakılsın mı?"
 
 #: packages/admin/src/components/PluginManager.tsx:445
 #: packages/admin/src/components/Redirects.tsx:391
-#: packages/admin/src/components/users/UserDetail.tsx:201
+#: packages/admin/src/components/users/UserDetail.tsx:213
 #: packages/admin/src/components/users/UserList.tsx:205
 msgid "Disabled"
 msgstr "Devre dışı"
@@ -4308,11 +4308,11 @@ msgid "Disabled:"
 msgstr "Devre dışı:"
 
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
-#: packages/admin/src/routes/users.tsx:274
+#: packages/admin/src/routes/users.tsx:278
 msgid "Disabling <0>{0}</0> will prevent them from logging in until re-enabled. Their content will be preserved."
 msgstr "<0>{0}</0>'in devre dışı bırakılması, yeniden etkinleştirilene kadar oturum açmalarını engelleyecektir. İçerikleri korunacaktır."
 
-#: packages/admin/src/routes/users.tsx:280
+#: packages/admin/src/routes/users.tsx:284
 msgid "Disabling..."
 msgstr "Devre dışı bırakılıyor..."
 
@@ -4855,7 +4855,7 @@ msgstr ""
 #: packages/admin/src/components/InviteAcceptPage.tsx:63
 #: packages/admin/src/components/Settings.tsx:112
 #: packages/admin/src/components/SignupPage.tsx:215
-#: packages/admin/src/components/users/UserDetail.tsx:154
+#: packages/admin/src/components/users/UserDetail.tsx:166
 msgid "Email"
 msgstr "E-posta"
 
@@ -4899,7 +4899,7 @@ msgstr "E-posta Ayarları"
 msgid "Email users"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:235
+#: packages/admin/src/components/users/UserDetail.tsx:247
 msgid "Email verified"
 msgstr "E-posta doğrulandı"
 
@@ -4982,7 +4982,7 @@ msgstr ""
 msgid "Empty site"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Enable"
 msgstr "Etkinleştir"
 
@@ -5048,7 +5048,7 @@ msgstr "Kimlik bilgilerini manuel olarak girin"
 msgid "Enter distraction-free mode"
 msgstr "Dikkat dağıtmayan moda girin"
 
-#: packages/admin/src/components/users/UserDetail.tsx:158
+#: packages/admin/src/components/users/UserDetail.tsx:170
 msgid "Enter email"
 msgstr "E-postayı girin"
 
@@ -5056,7 +5056,7 @@ msgstr "E-postayı girin"
 msgid "Enter markdown content..."
 msgstr "İşaretleme içeriğini girin..."
 
-#: packages/admin/src/components/users/UserDetail.tsx:151
+#: packages/admin/src/components/users/UserDetail.tsx:162
 msgid "Enter name"
 msgstr "Ad girin"
 
@@ -5528,7 +5528,7 @@ msgstr "Kullanıcı etkinleştirilemedi"
 msgid "Failed to execute import"
 msgstr "İçe aktarma yürütülemedi"
 
-#: packages/admin/src/lib/api/client.ts:369
+#: packages/admin/src/lib/api/client.ts:374
 msgid "Failed to fetch auth mode"
 msgstr "Kimlik doğrulama modu getirilemedi"
 
@@ -5553,7 +5553,7 @@ msgstr "E-posta ayarları getirilemedi"
 msgid "Failed to fetch entry terms"
 msgstr "Kayıt terimleri getirilemedi"
 
-#: packages/admin/src/lib/api/client.ts:352
+#: packages/admin/src/lib/api/client.ts:357
 msgid "Failed to fetch manifest"
 msgstr "Manifest getirilemedi"
 
@@ -5788,7 +5788,7 @@ msgid "Failed to load transfer settings"
 msgstr ""
 
 #. placeholder {0}: usersQuery.error.message
-#: packages/admin/src/routes/users.tsx:205
+#: packages/admin/src/routes/users.tsx:208
 msgid "Failed to load users: {0}"
 msgstr "Kullanıcılar yüklenemedi: {0}"
 
@@ -7318,7 +7318,7 @@ msgstr ""
 msgid "Last enabled:"
 msgstr "Son etkinleştirilen:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:227
+#: packages/admin/src/components/users/UserDetail.tsx:239
 msgid "Last login"
 msgstr "Son giriş"
 
@@ -7335,7 +7335,7 @@ msgstr ""
 msgid "Last seen"
 msgstr "Son görülme"
 
-#: packages/admin/src/components/users/UserDetail.tsx:223
+#: packages/admin/src/components/users/UserDetail.tsx:235
 msgid "Last updated"
 msgstr "Son güncelleme"
 
@@ -7345,7 +7345,7 @@ msgid "Last used"
 msgstr "Son kullanılan"
 
 #. placeholder {0}: new Date(cred.lastUsedAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:262
+#: packages/admin/src/components/users/UserDetail.tsx:274
 msgid "Last used {0}"
 msgstr "Son kullanılan {0}"
 
@@ -7415,7 +7415,7 @@ msgid "Link URL"
 msgstr ""
 
 #. placeholder {0}: user.oauthAccounts.length
-#: packages/admin/src/components/users/UserDetail.tsx:276
+#: packages/admin/src/components/users/UserDetail.tsx:288
 msgid "Linked Accounts ({0})"
 msgstr "Bağlantılı Hesaplar ({0})"
 
@@ -7836,6 +7836,10 @@ msgstr ""
 
 #: packages/admin/src/components/MediaDetailPanel.tsx:1402
 msgid "Managed by an external media provider"
+msgstr ""
+
+#: packages/admin/src/components/users/UserDetail.tsx:155
+msgid "Managed by your identity provider. Change the name there."
 msgstr ""
 
 #: packages/admin/src/components/Redirects.tsx:398
@@ -8387,7 +8391,8 @@ msgstr "Benim Harika Blogum"
 #: packages/admin/src/components/TaxonomyManager.tsx:1406
 #: packages/admin/src/components/TaxonomyManager.tsx:1461
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
-#: packages/admin/src/components/users/UserDetail.tsx:148
+#: packages/admin/src/components/users/UserDetail.tsx:152
+#: packages/admin/src/components/users/UserDetail.tsx:159
 #: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "İsim"
@@ -8424,7 +8429,7 @@ msgstr "Gezinme"
 msgid "Needs attention"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:231
+#: packages/admin/src/components/users/UserDetail.tsx:243
 #: packages/admin/src/components/users/UserList.tsx:178
 msgid "Never"
 msgstr "Asla"
@@ -8562,7 +8567,7 @@ msgid "Next, the browser's passkey window will open"
 msgstr ""
 
 #: packages/admin/src/components/ContentList.tsx:1570
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "No"
 msgstr "Hayır"
@@ -8861,7 +8866,7 @@ msgstr "Denetleme yok (tümünü otomatik onayla)"
 msgid "No parent (top level)"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:248
+#: packages/admin/src/components/users/UserDetail.tsx:260
 msgid "No passkeys registered"
 msgstr "Kayıtlı geçiş anahtarı yok"
 
@@ -9405,7 +9410,7 @@ msgid "Passkeys"
 msgstr "Geçiş anahtarları"
 
 #. placeholder {0}: user.credentials.length
-#: packages/admin/src/components/users/UserDetail.tsx:245
+#: packages/admin/src/components/users/UserDetail.tsx:257
 msgid "Passkeys ({0})"
 msgstr "Geçiş anahtarları ({0})"
 
@@ -10173,7 +10178,7 @@ msgid "Records without a parent were left out"
 msgstr ""
 
 #. placeholder {0}: user.email
-#: packages/admin/src/components/users/UserDetail.tsx:336
+#: packages/admin/src/components/users/UserDetail.tsx:348
 msgid "Recovery link sent to {0}"
 msgstr "{0}'e kurtarma bağlantısı gönderildi"
 
@@ -10571,7 +10576,7 @@ msgstr "Depo"
 msgid "Request a new link"
 msgstr "Yeni bir bağlantı isteyin"
 
-#: packages/admin/src/lib/api/client.ts:340
+#: packages/admin/src/lib/api/client.ts:345
 msgid "Request failed"
 msgstr "İstek başarısız oldu"
 
@@ -10900,8 +10905,8 @@ msgid "robots.txt"
 msgstr ""
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:164
-#: packages/admin/src/components/users/UserDetail.tsx:169
 #: packages/admin/src/components/users/UserDetail.tsx:181
+#: packages/admin/src/components/users/UserDetail.tsx:193
 #: packages/admin/src/components/users/UserList.tsx:94
 msgid "Role"
 msgstr "Rol"
@@ -11005,7 +11010,7 @@ msgstr ""
 msgid "Save changes"
 msgstr "Değişiklikleri kaydet"
 
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 msgid "Save Changes"
 msgstr "Değişiklikleri Kaydet"
 
@@ -11080,7 +11085,7 @@ msgstr ""
 #: packages/admin/src/components/RelationFormPanel.tsx:112
 #: packages/admin/src/components/SaveButton.tsx:36
 #: packages/admin/src/components/TaxonomyManager.tsx:887
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 #: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
@@ -11704,7 +11709,7 @@ msgstr "Davet Gönder"
 msgid "Send magic link"
 msgstr "Sihirli bağlantı gönder"
 
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Send Recovery Link"
 msgstr "Kurtarma Bağlantısını Gönder"
 
@@ -11722,7 +11727,7 @@ msgstr "Test E-postası Gönder"
 #: packages/admin/src/components/SignupPage.tsx:106
 #: packages/admin/src/components/SignupPage.tsx:168
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Sending..."
 msgstr "Gönderiliyor..."
 
@@ -12383,7 +12388,7 @@ msgstr ""
 msgid "Switch to light"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Synced"
 msgstr "Senkronize edildi"
 
@@ -13606,7 +13611,7 @@ msgstr "Aramanızı veya filtrelerinizi ayarlamayı deneyin."
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:333
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:471
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:460
-#: packages/admin/src/routes/users.tsx:210
+#: packages/admin/src/routes/users.tsx:213
 msgid "Try again"
 msgstr "Tekrar deneyin"
 
@@ -13786,7 +13791,7 @@ msgid "Unlock aspect ratio"
 msgstr "En boy oranının kilidini aç"
 
 #: packages/admin/src/components/settings/PasskeyItem.tsx:127
-#: packages/admin/src/components/users/UserDetail.tsx:254
+#: packages/admin/src/components/users/UserDetail.tsx:266
 msgid "Unnamed passkey"
 msgstr "Adsız geçiş anahtarı"
 
@@ -14214,7 +14219,7 @@ msgstr "Kullanıcı erişimi harici bir sağlayıcı ({0}) tarafından yönetili
 msgid "User accounts, passkeys, API tokens, secrets, and plugin data are never exported. Each author’s name and email address are included so they can be matched to users on the other site."
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:116
+#: packages/admin/src/components/users/UserDetail.tsx:119
 msgid "User Details"
 msgstr "Kullanıcı Detayları"
 
@@ -14223,7 +14228,7 @@ msgstr "Kullanıcı Detayları"
 msgid "User for {0}"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:296
+#: packages/admin/src/components/users/UserDetail.tsx:308
 msgid "User not found"
 msgstr "Kullanıcı bulunamadı"
 
@@ -14709,7 +14714,7 @@ msgid "Yearly"
 msgstr ""
 
 #: packages/admin/src/components/ContentList.tsx:1572
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:420
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "Yes"
@@ -14743,7 +14748,7 @@ msgstr "Siteyi görüntüleyebilir ve katkıda bulunabilirsiniz."
 msgid "You can view, rename, or add more passkeys later in Security settings."
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:175
+#: packages/admin/src/components/users/UserDetail.tsx:187
 msgid "You cannot change your own role"
 msgstr "Kendi rolünüzü değiştiremezsiniz"
 

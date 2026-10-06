@@ -1143,7 +1143,7 @@ msgstr "Nalog već postoji"
 msgid "Account exists"
 msgstr "Nalog postoji"
 
-#: packages/admin/src/components/users/UserDetail.tsx:216
+#: packages/admin/src/components/users/UserDetail.tsx:228
 msgid "Account Info"
 msgstr "Informacije o nalogu"
 
@@ -1167,7 +1167,7 @@ msgstr "Akcije"
 msgid "Activation cannot be confirmed. Keep editing paused and refresh the status."
 msgstr "Aktivacija se ne može potvrditi. Ostavi uređivanje pauzirano i osveži status."
 
-#: packages/admin/src/components/users/UserDetail.tsx:206
+#: packages/admin/src/components/users/UserDetail.tsx:218
 #: packages/admin/src/components/users/UserList.tsx:210
 msgid "Active"
 msgstr "Aktivan"
@@ -2518,7 +2518,7 @@ msgstr "Promeni"
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
 #. placeholder {1}: getRoleLabel(selectedUser?.role ?? 0)
 #. placeholder {2}: getRoleLabel(pendingSaveData?.role ?? 0)
-#: packages/admin/src/routes/users.tsx:296
+#: packages/admin/src/routes/users.tsx:300
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "Promeniti <0>{0}</0> sa <1>{1}</1> na <2>{2}</2>? Izgubiće pristup funkcijama višeg nivoa."
 
@@ -2904,7 +2904,7 @@ msgstr "Zatvori podešavanja galerije"
 msgid "Close image settings"
 msgstr "Zatvori podešavanja slike"
 
-#: packages/admin/src/components/users/UserDetail.tsx:121
+#: packages/admin/src/components/users/UserDetail.tsx:124
 msgid "Close panel"
 msgstr "Zatvori panel"
 
@@ -3103,7 +3103,7 @@ msgid "Connect with WordPress"
 msgstr "Poveži se sa WordPress-om"
 
 #. placeholder {0}: new Date(account.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:286
+#: packages/admin/src/components/users/UserDetail.tsx:298
 msgid "Connected {0}"
 msgstr "Povezano {0}"
 
@@ -3695,7 +3695,7 @@ msgstr "Kreiraj, ažuriraj, briši sadržaj"
 #: packages/admin/src/components/ContentList.tsx:1030
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1029
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:373
-#: packages/admin/src/components/users/UserDetail.tsx:219
+#: packages/admin/src/components/users/UserDetail.tsx:231
 msgid "Created"
 msgstr "Kreirano"
 
@@ -3705,7 +3705,7 @@ msgid "Created \"{0}\"."
 msgstr "Kreirano \"{0}\"."
 
 #. placeholder {0}: new Date(cred.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:260
+#: packages/admin/src/components/users/UserDetail.tsx:272
 msgid "Created {0}"
 msgstr "Kreirano {0}"
 
@@ -4166,15 +4166,15 @@ msgstr "Dostavi svu e-poštu koju sajt šalje"
 msgid "Demo"
 msgstr "Demo"
 
-#: packages/admin/src/routes/users.tsx:303
+#: packages/admin/src/routes/users.tsx:307
 msgid "Demote User"
 msgstr "Degradiraj korisnika"
 
-#: packages/admin/src/routes/users.tsx:294
+#: packages/admin/src/routes/users.tsx:298
 msgid "Demote User?"
 msgstr "Degradirati korisnika?"
 
-#: packages/admin/src/routes/users.tsx:304
+#: packages/admin/src/routes/users.tsx:308
 msgid "Demoting..."
 msgstr "Degradacija..."
 
@@ -4248,7 +4248,7 @@ msgstr "Uređaj autorizovan"
 msgid "Device code"
 msgstr "Kod uređaja"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Device-bound"
 msgstr "Vezan za uređaj"
 
@@ -4272,7 +4272,7 @@ msgstr "Razlike u odnosu na izvorni sajt"
 msgid "Dimensions:"
 msgstr "Dimenzije:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Disable"
 msgstr "Onemogući"
 
@@ -4288,17 +4288,17 @@ msgstr "Onemogući MCP alate dodatka"
 msgid "Disable redirect"
 msgstr "Onemogući preusmeravanje"
 
-#: packages/admin/src/routes/users.tsx:279
+#: packages/admin/src/routes/users.tsx:283
 msgid "Disable User"
 msgstr "Onemogući korisnika"
 
-#: packages/admin/src/routes/users.tsx:272
+#: packages/admin/src/routes/users.tsx:276
 msgid "Disable User?"
 msgstr "Onemogućiti korisnika?"
 
 #: packages/admin/src/components/PluginManager.tsx:445
 #: packages/admin/src/components/Redirects.tsx:391
-#: packages/admin/src/components/users/UserDetail.tsx:201
+#: packages/admin/src/components/users/UserDetail.tsx:213
 #: packages/admin/src/components/users/UserList.tsx:205
 msgid "Disabled"
 msgstr "Onemogućeno"
@@ -4308,11 +4308,11 @@ msgid "Disabled:"
 msgstr "Onemogućeno:"
 
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
-#: packages/admin/src/routes/users.tsx:274
+#: packages/admin/src/routes/users.tsx:278
 msgid "Disabling <0>{0}</0> will prevent them from logging in until re-enabled. Their content will be preserved."
 msgstr "Onemogućavanje <0>{0}</0> sprečiće ih da se prijave dok se ponovo ne omogući. Njihov sadržaj će se sačuvati."
 
-#: packages/admin/src/routes/users.tsx:280
+#: packages/admin/src/routes/users.tsx:284
 msgid "Disabling..."
 msgstr "Onemogućavanje..."
 
@@ -4855,7 +4855,7 @@ msgstr "em1.…"
 #: packages/admin/src/components/InviteAcceptPage.tsx:63
 #: packages/admin/src/components/Settings.tsx:112
 #: packages/admin/src/components/SignupPage.tsx:215
-#: packages/admin/src/components/users/UserDetail.tsx:154
+#: packages/admin/src/components/users/UserDetail.tsx:166
 msgid "Email"
 msgstr "E-pošta"
 
@@ -4899,7 +4899,7 @@ msgstr "Podešavanja e-pošte"
 msgid "Email users"
 msgstr "Pošalji e-poštu korisnicima"
 
-#: packages/admin/src/components/users/UserDetail.tsx:235
+#: packages/admin/src/components/users/UserDetail.tsx:247
 msgid "Email verified"
 msgstr "E-pošta verifikovana"
 
@@ -4982,7 +4982,7 @@ msgstr "Prazna galerija — otvori podešavanja da dodaš slike"
 msgid "Empty site"
 msgstr "Prazan sajt"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Enable"
 msgstr "Omogući"
 
@@ -5048,7 +5048,7 @@ msgstr "Unesi akreditive ručno"
 msgid "Enter distraction-free mode"
 msgstr "Uđi u režim bez ometanja"
 
-#: packages/admin/src/components/users/UserDetail.tsx:158
+#: packages/admin/src/components/users/UserDetail.tsx:170
 msgid "Enter email"
 msgstr "Unesi e-poštu"
 
@@ -5056,7 +5056,7 @@ msgstr "Unesi e-poštu"
 msgid "Enter markdown content..."
 msgstr "Unesi markdown sadržaj..."
 
-#: packages/admin/src/components/users/UserDetail.tsx:151
+#: packages/admin/src/components/users/UserDetail.tsx:162
 msgid "Enter name"
 msgstr "Unesi ime"
 
@@ -5528,7 +5528,7 @@ msgstr "Omogućavanje korisnika nije uspelo"
 msgid "Failed to execute import"
 msgstr "Izvršavanje uvoza nije uspelo"
 
-#: packages/admin/src/lib/api/client.ts:369
+#: packages/admin/src/lib/api/client.ts:374
 msgid "Failed to fetch auth mode"
 msgstr "Preuzimanje režima autentifikacije nije uspelo"
 
@@ -5553,7 +5553,7 @@ msgstr "Preuzimanje podešavanja e-pošte nije uspelo"
 msgid "Failed to fetch entry terms"
 msgstr "Preuzimanje termina unosa nije uspelo"
 
-#: packages/admin/src/lib/api/client.ts:352
+#: packages/admin/src/lib/api/client.ts:357
 msgid "Failed to fetch manifest"
 msgstr "Preuzimanje manifesta nije uspelo"
 
@@ -5788,7 +5788,7 @@ msgid "Failed to load transfer settings"
 msgstr "Učitavanje podešavanja prenosa nije uspelo"
 
 #. placeholder {0}: usersQuery.error.message
-#: packages/admin/src/routes/users.tsx:205
+#: packages/admin/src/routes/users.tsx:208
 msgid "Failed to load users: {0}"
 msgstr "Učitavanje korisnika nije uspelo: {0}"
 
@@ -7318,7 +7318,7 @@ msgstr "Poslednja izmena"
 msgid "Last enabled:"
 msgstr "Poslednje omogućeno:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:227
+#: packages/admin/src/components/users/UserDetail.tsx:239
 msgid "Last login"
 msgstr "Poslednja prijava"
 
@@ -7335,7 +7335,7 @@ msgstr "Poslednja stranica"
 msgid "Last seen"
 msgstr "Poslednji put viđen"
 
-#: packages/admin/src/components/users/UserDetail.tsx:223
+#: packages/admin/src/components/users/UserDetail.tsx:235
 msgid "Last updated"
 msgstr "Poslednje ažurirano"
 
@@ -7345,7 +7345,7 @@ msgid "Last used"
 msgstr "Poslednje korišćeno"
 
 #. placeholder {0}: new Date(cred.lastUsedAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:262
+#: packages/admin/src/components/users/UserDetail.tsx:274
 msgid "Last used {0}"
 msgstr "Poslednje korišćeno {0}"
 
@@ -7415,7 +7415,7 @@ msgid "Link URL"
 msgstr "URL linka"
 
 #. placeholder {0}: user.oauthAccounts.length
-#: packages/admin/src/components/users/UserDetail.tsx:276
+#: packages/admin/src/components/users/UserDetail.tsx:288
 msgid "Linked Accounts ({0})"
 msgstr "Povezani nalozi ({0})"
 
@@ -7837,6 +7837,10 @@ msgstr "Upravlja {providerName}"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1402
 msgid "Managed by an external media provider"
 msgstr "Upravlja eksterni provajder medija"
+
+#: packages/admin/src/components/users/UserDetail.tsx:155
+msgid "Managed by your identity provider. Change the name there."
+msgstr ""
 
 #: packages/admin/src/components/Redirects.tsx:398
 msgid "Manual"
@@ -8387,7 +8391,8 @@ msgstr "Moj sjajan blog"
 #: packages/admin/src/components/TaxonomyManager.tsx:1406
 #: packages/admin/src/components/TaxonomyManager.tsx:1461
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
-#: packages/admin/src/components/users/UserDetail.tsx:148
+#: packages/admin/src/components/users/UserDetail.tsx:152
+#: packages/admin/src/components/users/UserDetail.tsx:159
 #: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "Naziv"
@@ -8424,7 +8429,7 @@ msgstr "Navigacija"
 msgid "Needs attention"
 msgstr "Zahteva pažnju"
 
-#: packages/admin/src/components/users/UserDetail.tsx:231
+#: packages/admin/src/components/users/UserDetail.tsx:243
 #: packages/admin/src/components/users/UserList.tsx:178
 msgid "Never"
 msgstr "Nikada"
@@ -8562,7 +8567,7 @@ msgid "Next, the browser's passkey window will open"
 msgstr "Zatim će se otvoriti prozor za pristupni ključ (passkey) u pregledaču"
 
 #: packages/admin/src/components/ContentList.tsx:1570
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "No"
 msgstr "Ne"
@@ -8861,7 +8866,7 @@ msgstr "Bez moderacije (automatski odobri sve)"
 msgid "No parent (top level)"
 msgstr "Bez roditelja (najviši nivo)"
 
-#: packages/admin/src/components/users/UserDetail.tsx:248
+#: packages/admin/src/components/users/UserDetail.tsx:260
 msgid "No passkeys registered"
 msgstr "Nema registrovanih pristupnih ključeva (passkeys)"
 
@@ -9405,7 +9410,7 @@ msgid "Passkeys"
 msgstr "Pristupni ključevi (passkeys)"
 
 #. placeholder {0}: user.credentials.length
-#: packages/admin/src/components/users/UserDetail.tsx:245
+#: packages/admin/src/components/users/UserDetail.tsx:257
 msgid "Passkeys ({0})"
 msgstr "Pristupni ključevi (passkeys) ({0})"
 
@@ -10173,7 +10178,7 @@ msgid "Records without a parent were left out"
 msgstr "Izostavljeni su zapisi bez nadređenog"
 
 #. placeholder {0}: user.email
-#: packages/admin/src/components/users/UserDetail.tsx:336
+#: packages/admin/src/components/users/UserDetail.tsx:348
 msgid "Recovery link sent to {0}"
 msgstr "Link za oporavak poslat na {0}"
 
@@ -10571,7 +10576,7 @@ msgstr "Repozitorijum"
 msgid "Request a new link"
 msgstr "Zatraži novi link"
 
-#: packages/admin/src/lib/api/client.ts:340
+#: packages/admin/src/lib/api/client.ts:345
 msgid "Request failed"
 msgstr "Zahtev nije uspeo"
 
@@ -10900,8 +10905,8 @@ msgid "robots.txt"
 msgstr "robots.txt"
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:164
-#: packages/admin/src/components/users/UserDetail.tsx:169
 #: packages/admin/src/components/users/UserDetail.tsx:181
+#: packages/admin/src/components/users/UserDetail.tsx:193
 #: packages/admin/src/components/users/UserList.tsx:94
 msgid "Role"
 msgstr "Uloga"
@@ -11005,7 +11010,7 @@ msgstr "Ipak sačuvaj"
 msgid "Save changes"
 msgstr "Sačuvaj izmene"
 
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 msgid "Save Changes"
 msgstr "Sačuvaj izmene"
 
@@ -11080,7 +11085,7 @@ msgstr "Čuvanjem kolekcije ovde ovo polje postaje birač unosa. Sačuvani ID-ov
 #: packages/admin/src/components/RelationFormPanel.tsx:112
 #: packages/admin/src/components/SaveButton.tsx:36
 #: packages/admin/src/components/TaxonomyManager.tsx:887
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 #: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
@@ -11704,7 +11709,7 @@ msgstr "Pošalji pozivnicu"
 msgid "Send magic link"
 msgstr "Pošalji magični link"
 
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Send Recovery Link"
 msgstr "Pošalji link za oporavak"
 
@@ -11722,7 +11727,7 @@ msgstr "Pošalji test e-poštu"
 #: packages/admin/src/components/SignupPage.tsx:106
 #: packages/admin/src/components/SignupPage.tsx:168
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Sending..."
 msgstr "Šalje se..."
 
@@ -12383,7 +12388,7 @@ msgstr "Prebaci na tamni režim"
 msgid "Switch to light"
 msgstr "Prebaci na svetli režim"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Synced"
 msgstr "Sinhronizovano"
 
@@ -13606,7 +13611,7 @@ msgstr "Probaj prilagoditi pretragu ili filtere."
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:333
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:471
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:460
-#: packages/admin/src/routes/users.tsx:210
+#: packages/admin/src/routes/users.tsx:213
 msgid "Try again"
 msgstr "Pokušaj ponovo"
 
@@ -13786,7 +13791,7 @@ msgid "Unlock aspect ratio"
 msgstr "Otključaj odnos stranica"
 
 #: packages/admin/src/components/settings/PasskeyItem.tsx:127
-#: packages/admin/src/components/users/UserDetail.tsx:254
+#: packages/admin/src/components/users/UserDetail.tsx:266
 msgid "Unnamed passkey"
 msgstr "Pristupni ključ (passkey) bez naziva"
 
@@ -14214,7 +14219,7 @@ msgstr "Pristup korisnika upravlja spoljni provajder ({0}). Podešavanja domena 
 msgid "User accounts, passkeys, API tokens, secrets, and plugin data are never exported. Each author’s name and email address are included so they can be matched to users on the other site."
 msgstr "Korisnički nalozi, pristupni ključevi (passkeys), API tokeni, tajne i podaci dodataka se nikada ne izvoze. Ime i e-adresa svakog autora se uključuju da bi mogli da se mapiraju na korisnike na drugom sajtu."
 
-#: packages/admin/src/components/users/UserDetail.tsx:116
+#: packages/admin/src/components/users/UserDetail.tsx:119
 msgid "User Details"
 msgstr "Detalji korisnika"
 
@@ -14223,7 +14228,7 @@ msgstr "Detalji korisnika"
 msgid "User for {0}"
 msgstr "Korisnik za {0}"
 
-#: packages/admin/src/components/users/UserDetail.tsx:296
+#: packages/admin/src/components/users/UserDetail.tsx:308
 msgid "User not found"
 msgstr "Korisnik nije pronađen"
 
@@ -14709,7 +14714,7 @@ msgid "Yearly"
 msgstr "Godišnje"
 
 #: packages/admin/src/components/ContentList.tsx:1572
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:420
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "Yes"
@@ -14743,7 +14748,7 @@ msgstr "Možeš pregledati sajt i doprinositi mu."
 msgid "You can view, rename, or add more passkeys later in Security settings."
 msgstr "Pristupne ključeve (passkeys) možeš da pregledaš, preimenuješ ili dodaš kasnije u bezbednosnim podešavanjima."
 
-#: packages/admin/src/components/users/UserDetail.tsx:175
+#: packages/admin/src/components/users/UserDetail.tsx:187
 msgid "You cannot change your own role"
 msgstr "Ne možeš promeniti sopstvenu ulogu"
 

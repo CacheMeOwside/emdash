@@ -1143,7 +1143,7 @@ msgstr "Účet již existuje"
 msgid "Account exists"
 msgstr "Účet existuje"
 
-#: packages/admin/src/components/users/UserDetail.tsx:216
+#: packages/admin/src/components/users/UserDetail.tsx:228
 msgid "Account Info"
 msgstr "Informace o účtu"
 
@@ -1167,7 +1167,7 @@ msgstr "Akce"
 msgid "Activation cannot be confirmed. Keep editing paused and refresh the status."
 msgstr "Aktivaci nelze potvrdit. Pozastavte úpravy a aktualizujte stav."
 
-#: packages/admin/src/components/users/UserDetail.tsx:206
+#: packages/admin/src/components/users/UserDetail.tsx:218
 #: packages/admin/src/components/users/UserList.tsx:210
 msgid "Active"
 msgstr "Aktivní"
@@ -2518,7 +2518,7 @@ msgstr "Změnit"
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
 #. placeholder {1}: getRoleLabel(selectedUser?.role ?? 0)
 #. placeholder {2}: getRoleLabel(pendingSaveData?.role ?? 0)
-#: packages/admin/src/routes/users.tsx:296
+#: packages/admin/src/routes/users.tsx:300
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "Změnit <0>{0}</0> z <1>{1}</1> na <2>{2}</2>? Ztratí přístup k pokročilejším funkcím."
 
@@ -2904,7 +2904,7 @@ msgstr "Zavřít nastavení galerie"
 msgid "Close image settings"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:121
+#: packages/admin/src/components/users/UserDetail.tsx:124
 msgid "Close panel"
 msgstr "Zavřít panel"
 
@@ -3103,7 +3103,7 @@ msgid "Connect with WordPress"
 msgstr "Připojit k WordPressu"
 
 #. placeholder {0}: new Date(account.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:286
+#: packages/admin/src/components/users/UserDetail.tsx:298
 msgid "Connected {0}"
 msgstr "Připojeno dne {0}"
 
@@ -3695,7 +3695,7 @@ msgstr "Vytvářet, upravovat, mazat obsah"
 #: packages/admin/src/components/ContentList.tsx:1030
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1029
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:373
-#: packages/admin/src/components/users/UserDetail.tsx:219
+#: packages/admin/src/components/users/UserDetail.tsx:231
 msgid "Created"
 msgstr "Vytvořeno"
 
@@ -3705,7 +3705,7 @@ msgid "Created \"{0}\"."
 msgstr "Vytvořeno „{0}“."
 
 #. placeholder {0}: new Date(cred.createdAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:260
+#: packages/admin/src/components/users/UserDetail.tsx:272
 msgid "Created {0}"
 msgstr "Vytvořeno {0}"
 
@@ -4166,15 +4166,15 @@ msgstr ""
 msgid "Demo"
 msgstr "Ukázka"
 
-#: packages/admin/src/routes/users.tsx:303
+#: packages/admin/src/routes/users.tsx:307
 msgid "Demote User"
 msgstr "Snížit oprávnění uživatele"
 
-#: packages/admin/src/routes/users.tsx:294
+#: packages/admin/src/routes/users.tsx:298
 msgid "Demote User?"
 msgstr "Snížit oprávnění uživatele?"
 
-#: packages/admin/src/routes/users.tsx:304
+#: packages/admin/src/routes/users.tsx:308
 msgid "Demoting..."
 msgstr "Snižování oprávnění..."
 
@@ -4248,7 +4248,7 @@ msgstr "Zařízení autorizováno"
 msgid "Device code"
 msgstr "Kód zařízení"
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Device-bound"
 msgstr "Vázáno na zařízení"
 
@@ -4272,7 +4272,7 @@ msgstr ""
 msgid "Dimensions:"
 msgstr "Rozměry:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Disable"
 msgstr "Zakázat"
 
@@ -4288,17 +4288,17 @@ msgstr "Zakázat MCP nástroje pluginu"
 msgid "Disable redirect"
 msgstr "Zakázat přesměrování"
 
-#: packages/admin/src/routes/users.tsx:279
+#: packages/admin/src/routes/users.tsx:283
 msgid "Disable User"
 msgstr "Zakázat uživatele"
 
-#: packages/admin/src/routes/users.tsx:272
+#: packages/admin/src/routes/users.tsx:276
 msgid "Disable User?"
 msgstr "Zakázat uživatele?"
 
 #: packages/admin/src/components/PluginManager.tsx:445
 #: packages/admin/src/components/Redirects.tsx:391
-#: packages/admin/src/components/users/UserDetail.tsx:201
+#: packages/admin/src/components/users/UserDetail.tsx:213
 #: packages/admin/src/components/users/UserList.tsx:205
 msgid "Disabled"
 msgstr "Zakázáno"
@@ -4308,11 +4308,11 @@ msgid "Disabled:"
 msgstr "Zakázáno:"
 
 #. placeholder {0}: selectedUser?.name || selectedUser?.email
-#: packages/admin/src/routes/users.tsx:274
+#: packages/admin/src/routes/users.tsx:278
 msgid "Disabling <0>{0}</0> will prevent them from logging in until re-enabled. Their content will be preserved."
 msgstr "Zakázání účtu <0>{0}</0> znemožní přihlášení, dokud nebude znovu povolen. Obsah zůstane zachován."
 
-#: packages/admin/src/routes/users.tsx:280
+#: packages/admin/src/routes/users.tsx:284
 msgid "Disabling..."
 msgstr "Zakazování..."
 
@@ -4855,7 +4855,7 @@ msgstr "em1.…"
 #: packages/admin/src/components/InviteAcceptPage.tsx:63
 #: packages/admin/src/components/Settings.tsx:112
 #: packages/admin/src/components/SignupPage.tsx:215
-#: packages/admin/src/components/users/UserDetail.tsx:154
+#: packages/admin/src/components/users/UserDetail.tsx:166
 msgid "Email"
 msgstr "E-mail"
 
@@ -4899,7 +4899,7 @@ msgstr "Nastavení e-mailu"
 msgid "Email users"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:235
+#: packages/admin/src/components/users/UserDetail.tsx:247
 msgid "Email verified"
 msgstr "E-mail ověřen"
 
@@ -4982,7 +4982,7 @@ msgstr "Prázdná galerie — obrázky přidáte v nastavení"
 msgid "Empty site"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:319
+#: packages/admin/src/components/users/UserDetail.tsx:331
 msgid "Enable"
 msgstr "Povolit"
 
@@ -5048,7 +5048,7 @@ msgstr "Zadat přihlašovací údaje ručně"
 msgid "Enter distraction-free mode"
 msgstr "Zapnout režim bez rušení"
 
-#: packages/admin/src/components/users/UserDetail.tsx:158
+#: packages/admin/src/components/users/UserDetail.tsx:170
 msgid "Enter email"
 msgstr "Zadejte e-mail"
 
@@ -5056,7 +5056,7 @@ msgstr "Zadejte e-mail"
 msgid "Enter markdown content..."
 msgstr "Zadejte obsah v Markdownu..."
 
-#: packages/admin/src/components/users/UserDetail.tsx:151
+#: packages/admin/src/components/users/UserDetail.tsx:162
 msgid "Enter name"
 msgstr "Zadejte jméno"
 
@@ -5528,7 +5528,7 @@ msgstr "Nepodařilo se aktivovat uživatele"
 msgid "Failed to execute import"
 msgstr "Nepodařilo se spustit import"
 
-#: packages/admin/src/lib/api/client.ts:369
+#: packages/admin/src/lib/api/client.ts:374
 msgid "Failed to fetch auth mode"
 msgstr "Nepodařilo se načíst režim přihlášení"
 
@@ -5553,7 +5553,7 @@ msgstr "Nepodařilo se načíst nastavení e-mailu"
 msgid "Failed to fetch entry terms"
 msgstr "Nepodařilo se načíst položky taxonomie přiřazené k obsahu"
 
-#: packages/admin/src/lib/api/client.ts:352
+#: packages/admin/src/lib/api/client.ts:357
 msgid "Failed to fetch manifest"
 msgstr "Nepodařilo se načíst manifest"
 
@@ -5788,7 +5788,7 @@ msgid "Failed to load transfer settings"
 msgstr ""
 
 #. placeholder {0}: usersQuery.error.message
-#: packages/admin/src/routes/users.tsx:205
+#: packages/admin/src/routes/users.tsx:208
 msgid "Failed to load users: {0}"
 msgstr "Nepodařilo se načíst uživatele: {0}"
 
@@ -7318,7 +7318,7 @@ msgstr ""
 msgid "Last enabled:"
 msgstr "Naposledy povoleno:"
 
-#: packages/admin/src/components/users/UserDetail.tsx:227
+#: packages/admin/src/components/users/UserDetail.tsx:239
 msgid "Last login"
 msgstr "Poslední přihlášení"
 
@@ -7335,7 +7335,7 @@ msgstr "Poslední stránka"
 msgid "Last seen"
 msgstr "Poslední výskyt"
 
-#: packages/admin/src/components/users/UserDetail.tsx:223
+#: packages/admin/src/components/users/UserDetail.tsx:235
 msgid "Last updated"
 msgstr "Poslední aktualizace"
 
@@ -7345,7 +7345,7 @@ msgid "Last used"
 msgstr "Naposledy použito"
 
 #. placeholder {0}: new Date(cred.lastUsedAt).toLocaleDateString()
-#: packages/admin/src/components/users/UserDetail.tsx:262
+#: packages/admin/src/components/users/UserDetail.tsx:274
 msgid "Last used {0}"
 msgstr "Naposledy použito {0}"
 
@@ -7415,7 +7415,7 @@ msgid "Link URL"
 msgstr ""
 
 #. placeholder {0}: user.oauthAccounts.length
-#: packages/admin/src/components/users/UserDetail.tsx:276
+#: packages/admin/src/components/users/UserDetail.tsx:288
 msgid "Linked Accounts ({0})"
 msgstr "Propojené účty ({0})"
 
@@ -7837,6 +7837,10 @@ msgstr "Spravováno službou {providerName}"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1402
 msgid "Managed by an external media provider"
 msgstr "Spravováno externím poskytovatelem médií"
+
+#: packages/admin/src/components/users/UserDetail.tsx:155
+msgid "Managed by your identity provider. Change the name there."
+msgstr ""
 
 #: packages/admin/src/components/Redirects.tsx:398
 msgid "Manual"
@@ -8387,7 +8391,8 @@ msgstr "Můj skvělý blog"
 #: packages/admin/src/components/TaxonomyManager.tsx:1406
 #: packages/admin/src/components/TaxonomyManager.tsx:1461
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:37
-#: packages/admin/src/components/users/UserDetail.tsx:148
+#: packages/admin/src/components/users/UserDetail.tsx:152
+#: packages/admin/src/components/users/UserDetail.tsx:159
 #: packages/admin/src/components/Widgets.tsx:431
 msgid "Name"
 msgstr "Název"
@@ -8424,7 +8429,7 @@ msgstr "Navigace"
 msgid "Needs attention"
 msgstr "Vyžaduje pozornost"
 
-#: packages/admin/src/components/users/UserDetail.tsx:231
+#: packages/admin/src/components/users/UserDetail.tsx:243
 #: packages/admin/src/components/users/UserList.tsx:178
 msgid "Never"
 msgstr "Nikdy"
@@ -8562,7 +8567,7 @@ msgid "Next, the browser's passkey window will open"
 msgstr ""
 
 #: packages/admin/src/components/ContentList.tsx:1570
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "No"
 msgstr "Ne"
@@ -8861,7 +8866,7 @@ msgstr "Bez moderace (vše schvalovat automaticky)"
 msgid "No parent (top level)"
 msgstr "Bez nadřazené položky (nejvyšší úroveň)"
 
-#: packages/admin/src/components/users/UserDetail.tsx:248
+#: packages/admin/src/components/users/UserDetail.tsx:260
 msgid "No passkeys registered"
 msgstr "Žádné registrované přístupové klíče"
 
@@ -9405,7 +9410,7 @@ msgid "Passkeys"
 msgstr "Přístupové klíče"
 
 #. placeholder {0}: user.credentials.length
-#: packages/admin/src/components/users/UserDetail.tsx:245
+#: packages/admin/src/components/users/UserDetail.tsx:257
 msgid "Passkeys ({0})"
 msgstr "Přístupové klíče ({0})"
 
@@ -10173,7 +10178,7 @@ msgid "Records without a parent were left out"
 msgstr ""
 
 #. placeholder {0}: user.email
-#: packages/admin/src/components/users/UserDetail.tsx:336
+#: packages/admin/src/components/users/UserDetail.tsx:348
 msgid "Recovery link sent to {0}"
 msgstr "Odkaz pro obnovení odeslán na {0}"
 
@@ -10571,7 +10576,7 @@ msgstr "Repozitář"
 msgid "Request a new link"
 msgstr "Požádat o nový odkaz"
 
-#: packages/admin/src/lib/api/client.ts:340
+#: packages/admin/src/lib/api/client.ts:345
 msgid "Request failed"
 msgstr "Požadavek selhal"
 
@@ -10900,8 +10905,8 @@ msgid "robots.txt"
 msgstr ""
 
 #: packages/admin/src/components/users/InviteUserModal.tsx:164
-#: packages/admin/src/components/users/UserDetail.tsx:169
 #: packages/admin/src/components/users/UserDetail.tsx:181
+#: packages/admin/src/components/users/UserDetail.tsx:193
 #: packages/admin/src/components/users/UserList.tsx:94
 msgid "Role"
 msgstr "Role"
@@ -11005,7 +11010,7 @@ msgstr ""
 msgid "Save changes"
 msgstr "Uložit změny"
 
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 msgid "Save Changes"
 msgstr "Uložit změny"
 
@@ -11080,7 +11085,7 @@ msgstr ""
 #: packages/admin/src/components/RelationFormPanel.tsx:112
 #: packages/admin/src/components/SaveButton.tsx:36
 #: packages/admin/src/components/TaxonomyManager.tsx:887
-#: packages/admin/src/components/users/UserDetail.tsx:311
+#: packages/admin/src/components/users/UserDetail.tsx:323
 #: packages/admin/src/components/Widgets.tsx:986
 #: packages/admin/src/routes/bylines.tsx:859
 msgid "Saving..."
@@ -11704,7 +11709,7 @@ msgstr "Odeslat pozvánku"
 msgid "Send magic link"
 msgstr "Odeslat přihlašovací odkaz"
 
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Send Recovery Link"
 msgstr "Odeslat odkaz pro obnovení"
 
@@ -11722,7 +11727,7 @@ msgstr "Odeslat testovací e-mail"
 #: packages/admin/src/components/SignupPage.tsx:106
 #: packages/admin/src/components/SignupPage.tsx:168
 #: packages/admin/src/components/users/InviteUserModal.tsx:201
-#: packages/admin/src/components/users/UserDetail.tsx:332
+#: packages/admin/src/components/users/UserDetail.tsx:344
 msgid "Sending..."
 msgstr "Odesílání..."
 
@@ -12383,7 +12388,7 @@ msgstr ""
 msgid "Switch to light"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:256
+#: packages/admin/src/components/users/UserDetail.tsx:268
 msgid "Synced"
 msgstr "Synchronizováno"
 
@@ -13606,7 +13611,7 @@ msgstr "Zkuste upravit hledání nebo filtry."
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:333
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:471
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:460
-#: packages/admin/src/routes/users.tsx:210
+#: packages/admin/src/routes/users.tsx:213
 msgid "Try again"
 msgstr "Zkusit znovu"
 
@@ -13786,7 +13791,7 @@ msgid "Unlock aspect ratio"
 msgstr "Odemknout poměr stran"
 
 #: packages/admin/src/components/settings/PasskeyItem.tsx:127
-#: packages/admin/src/components/users/UserDetail.tsx:254
+#: packages/admin/src/components/users/UserDetail.tsx:266
 msgid "Unnamed passkey"
 msgstr "Nepojmenovaný přístupový klíč"
 
@@ -14214,7 +14219,7 @@ msgstr "Přístup uživatelů spravuje externí poskytovatel ({0}). Při použit
 msgid "User accounts, passkeys, API tokens, secrets, and plugin data are never exported. Each author’s name and email address are included so they can be matched to users on the other site."
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:116
+#: packages/admin/src/components/users/UserDetail.tsx:119
 msgid "User Details"
 msgstr "Podrobnosti uživatele"
 
@@ -14223,7 +14228,7 @@ msgstr "Podrobnosti uživatele"
 msgid "User for {0}"
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:296
+#: packages/admin/src/components/users/UserDetail.tsx:308
 msgid "User not found"
 msgstr "Uživatel nenalezen"
 
@@ -14709,7 +14714,7 @@ msgid "Yearly"
 msgstr "Ročně"
 
 #: packages/admin/src/components/ContentList.tsx:1572
-#: packages/admin/src/components/users/UserDetail.tsx:236
+#: packages/admin/src/components/users/UserDetail.tsx:248
 #: packages/admin/src/routes/byline-schema.tsx:420
 #: packages/admin/src/routes/byline-schema.tsx:422
 msgid "Yes"
@@ -14743,7 +14748,7 @@ msgstr "Můžete web prohlížet a přispívat do něj."
 msgid "You can view, rename, or add more passkeys later in Security settings."
 msgstr ""
 
-#: packages/admin/src/components/users/UserDetail.tsx:175
+#: packages/admin/src/components/users/UserDetail.tsx:187
 msgid "You cannot change your own role"
 msgstr "Vlastní roli nemůžete změnit"
 
