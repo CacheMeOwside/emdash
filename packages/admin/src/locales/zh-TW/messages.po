@@ -551,6 +551,10 @@ msgstr "{hidden, plural, one {{date} 還有 # 筆內容} other {{date} 還有 # 
 msgid "{hidden, plural, one {+# more} other {+# more}}"
 msgstr "{hidden, plural, one {還有 +# 筆} other {還有 +# 筆}}"
 
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:38
+msgid "{host} does not resolve to a public address"
+msgstr ""
+
 #: packages/admin/src/components/MediaImportSummary.tsx:9
 msgid "{importedFiles, plural, one {<count>#</count> file imported} other {<count>#</count> files imported}}"
 msgstr "{importedFiles, plural, one {已匯入 <count>#</count> 個檔案} other {已匯入 <count>#</count> 個檔案}}"
@@ -661,6 +665,18 @@ msgstr "{needsNewCollections, plural, one {將建立 # 個新內容集合} other
 #: packages/admin/src/components/WordPressImport.tsx:1911
 msgid "{needsNewFields, plural, one {Fields will be added to # existing collection} other {Fields will be added to # existing collections}}"
 msgstr "{needsNewFields, plural, one {欄位將新增至 # 個現有內容集合} other {欄位將新增至 # 個現有內容集合}}"
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:49
+msgid "{origin} does not serve this site yet"
+msgstr ""
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:47
+msgid "{origin} redirects elsewhere"
+msgstr ""
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:46
+msgid "{origin} redirects to {target}. Enter that address instead."
+msgstr ""
 
 #: packages/admin/src/components/Dashboard.tsx:151
 msgid "{overdueCount, plural, one {One scheduled item is overdue and the scheduler heartbeat is stale. Run `npx emdash doctor` and verify the deployed Cron Trigger.} other {# scheduled items are overdue and the scheduler heartbeat is stale. Run `npx emdash doctor` and verify the deployed Cron Trigger.}}"
@@ -2399,7 +2415,7 @@ msgstr "可以檢視內容"
 #: packages/admin/src/components/Sections.tsx:231
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:216
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:249
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:147
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:174
 #: packages/admin/src/components/settings/SecuritySettings.tsx:177
 #: packages/admin/src/components/TaxonomyManager.tsx:579
 #: packages/admin/src/components/TaxonomyManager.tsx:879
@@ -2522,7 +2538,7 @@ msgstr "變更"
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "要將 <0>{0}</0> 從 <1>{1}</1> 變更為 <2>{2}</2> 嗎？該使用者將無法存取較高層級的功能。"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:79
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:109
 #: packages/admin/src/components/settings/GeneralSettings.tsx:315
 msgid "Change domain"
 msgstr "變更網域"
@@ -2576,7 +2592,7 @@ msgstr "變更已儲存，但快取頁面可能仍顯示舊的 {pluralLower}。�
 msgid "Character between page title and site name (e.g., \"My Post | My Site\")"
 msgstr "頁面標題與網站名稱之間的字元 (例如「我的文章 | 我的網站」)"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:155
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:182
 msgid "Check and switch"
 msgstr "檢查並切換"
 
@@ -2663,7 +2679,7 @@ msgstr "正在檢查這個裝置是否支援通行密鑰..."
 msgid "Checking this site"
 msgstr "正在檢查這個網站"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:155
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:182
 msgid "Checking…"
 msgstr "正在檢查…"
 
@@ -3381,6 +3397,10 @@ msgstr "無法載入這個資料夾。"
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:183
 msgid "Could not publish"
 msgstr "無法發佈"
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:43
+msgid "Could not reach {origin}"
+msgstr ""
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:198
 msgid "Could not remove the schedule"
@@ -5023,6 +5043,10 @@ msgstr "已啟用"
 msgid "English is used because no content language is configured. Content language is stored with the entry and is separate from your admin language."
 msgstr "由於尚未設定內容語言，因此使用英文。內容語言會隨內容儲存，與你的管理介面語言分開設定。"
 
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:89
+msgid "Enter a domain such as example.com, without a path or port"
+msgstr ""
+
 #: packages/admin/src/components/BylineCreditsEditor.tsx:312
 msgid "Enter a name."
 msgstr "請輸入名稱。"
@@ -5064,7 +5088,7 @@ msgstr "輸入名稱"
 msgid "Enter the code from your terminal"
 msgstr "輸入終端機顯示的代碼"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:91
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:121
 msgid "Enter the domain below. EmDash checks that it serves this site before switching."
 msgstr "請在下方輸入網域。EmDash 會先確認該網域提供的是這個網站，再進行切換。"
 
@@ -5171,7 +5195,7 @@ msgid "Example: {pattern} → {preview}"
 msgstr "範例：{pattern} → {preview}"
 
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:294
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:97
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:127
 msgid "example.com"
 msgstr "example.com"
 
@@ -6980,7 +7004,7 @@ msgstr "ID"
 msgid "If an account exists for <0>{email}</0>, we've sent a sign-in link."
 msgstr "如果 <0>{email}</0> 有對應的帳號，我們已傳送登入連結。"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:123
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:150
 msgid "If the site can't be reached from the internet yet, for example on localhost or behind a login, you can use the address without the check."
 msgstr "如果網站還無法從網際網路連線，例如位於 localhost 或需要登入，你可以略過檢查，直接使用這個網址。"
 
@@ -7792,7 +7816,7 @@ msgstr "連結來源"
 msgid "Links in emails and plugins use {0}, set by the deployment configuration."
 msgstr "電子郵件及外掛中的連結會使用部署設定指定的 {0}。"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:84
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:114
 msgid "Links in emails and plugins, sitemaps, and absolute URLs in search and social metadata will use the new domain."
 msgstr "電子郵件及外掛中的連結、網站地圖，以及搜尋和社群中繼資料中的絕對網址，都會使用新網域。"
 
@@ -8794,7 +8818,7 @@ msgstr "新內容集合"
 msgid "New Content Type"
 msgstr "新增內容類型"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:96
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:126
 msgid "New domain"
 msgstr "新網域"
 
@@ -9760,7 +9784,7 @@ msgstr "通行密鑰只能在建立時的網址使用。"
 msgid "Passkeys only work at the address where they were created. Add one here so you can sign in at this address next time."
 msgstr "通行密鑰只能在建立時的網址使用。請在這裡新增一組，下次就能在這個網址登入。"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:113
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:143
 msgid "Passkeys only work at the address where they were created. After switching, keep signing in at the current address, or use an email sign-in link at the new one."
 msgstr "通行密鑰只能在建立時的網址使用。切換後，請繼續從目前的網址登入，或在新網址使用電子郵件登入連結。"
 
@@ -10046,7 +10070,7 @@ msgstr "外掛小工具錯誤"
 msgid "Plugins"
 msgstr "外掛"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:89
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:119
 msgid "Point the domain at this site. On Cloudflare, open your Worker in Workers & Pages, go to the Domains tab, and add the domain."
 msgstr "將網域指向這個網站。在 Cloudflare 的 Workers & Pages 開啟你的 Worker，前往 [Domains] 分頁並新增網域。"
 
@@ -12383,7 +12407,7 @@ msgstr "網站網址"
 msgid "Site URL set to {url}"
 msgstr "網站網址已設為 {url}"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:83
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:113
 msgid "Sitemaps and absolute URLs in search and social metadata will use the new domain. Links in emails and plugins keep using {configuredUrl}, set by the deployment configuration."
 msgstr "網站地圖，以及搜尋和社群中繼資料中的絕對網址，將使用新網域。電子郵件與外掛中的連結仍會使用部署設定中的 {configuredUrl}。"
 
@@ -14478,7 +14502,7 @@ msgstr "使用情況可能已過時。"
 msgid "Use [param] or [...rest] in paths for pattern matching."
 msgstr "在路徑中使用 [param] 或 [...rest] 進行模式比對。"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:133
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:160
 msgid "Use {fallbackUrl} anyway"
 msgstr "仍要使用 {fallbackUrl}"
 
@@ -15259,7 +15283,7 @@ msgstr "您的角色"
 msgid "Your role does not permit any of the permissions this device requested."
 msgstr "你的角色不允許使用這個裝置要求的任何權限。"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:81
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:111
 msgid "Your site is currently at {currentUrl}."
 msgstr "網站目前的網址為 {currentUrl}。"
 

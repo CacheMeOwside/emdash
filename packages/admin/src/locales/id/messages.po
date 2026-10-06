@@ -551,6 +551,10 @@ msgstr "{hidden, plural, other {# entri lainnya pada {date}}}"
 msgid "{hidden, plural, one {+# more} other {+# more}}"
 msgstr "{hidden, plural, other {+# lainnya}}"
 
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:38
+msgid "{host} does not resolve to a public address"
+msgstr ""
+
 #: packages/admin/src/components/MediaImportSummary.tsx:9
 msgid "{importedFiles, plural, one {<count>#</count> file imported} other {<count>#</count> files imported}}"
 msgstr "{importedFiles, plural, other {<count>#</count> berkas diimpor}}"
@@ -661,6 +665,18 @@ msgstr "{needsNewCollections, plural, other {# koleksi baru akan dibuat}}"
 #: packages/admin/src/components/WordPressImport.tsx:1911
 msgid "{needsNewFields, plural, one {Fields will be added to # existing collection} other {Fields will be added to # existing collections}}"
 msgstr "{needsNewFields, plural, other {Field akan ditambahkan ke # koleksi yang ada}}"
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:49
+msgid "{origin} does not serve this site yet"
+msgstr ""
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:47
+msgid "{origin} redirects elsewhere"
+msgstr ""
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:46
+msgid "{origin} redirects to {target}. Enter that address instead."
+msgstr ""
 
 #: packages/admin/src/components/Dashboard.tsx:151
 msgid "{overdueCount, plural, one {One scheduled item is overdue and the scheduler heartbeat is stale. Run `npx emdash doctor` and verify the deployed Cron Trigger.} other {# scheduled items are overdue and the scheduler heartbeat is stale. Run `npx emdash doctor` and verify the deployed Cron Trigger.}}"
@@ -2399,7 +2415,7 @@ msgstr "Dapat melihat konten"
 #: packages/admin/src/components/Sections.tsx:231
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:216
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:249
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:147
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:174
 #: packages/admin/src/components/settings/SecuritySettings.tsx:177
 #: packages/admin/src/components/TaxonomyManager.tsx:579
 #: packages/admin/src/components/TaxonomyManager.tsx:879
@@ -2522,7 +2538,7 @@ msgstr "Ubah"
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "Ubah <0>{0}</0> dari <1>{1}</1> ke <2>{2}</2>? Mereka akan kehilangan akses ke fitur tingkat lebih tinggi."
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:79
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:109
 #: packages/admin/src/components/settings/GeneralSettings.tsx:315
 msgid "Change domain"
 msgstr "Ubah domain"
@@ -2576,7 +2592,7 @@ msgstr "Perubahan telah disimpan, tetapi halaman yang disimpan mungkin masih men
 msgid "Character between page title and site name (e.g., \"My Post | My Site\")"
 msgstr "Karakter antara judul halaman dan nama situs (cth., \"Pos Saya | Situs Saya\")"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:155
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:182
 msgid "Check and switch"
 msgstr "Periksa dan alihkan"
 
@@ -2663,7 +2679,7 @@ msgstr "Memeriksa perangkat ini untuk dukungan kunci sandi..."
 msgid "Checking this site"
 msgstr "Memeriksa situs ini"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:155
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:182
 msgid "Checking…"
 msgstr "Memeriksa…"
 
@@ -3381,6 +3397,10 @@ msgstr "Tidak dapat memuat map ini."
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:183
 msgid "Could not publish"
 msgstr "Tidak dapat memublikasikan"
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:43
+msgid "Could not reach {origin}"
+msgstr ""
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:198
 msgid "Could not remove the schedule"
@@ -5023,6 +5043,10 @@ msgstr "Diaktifkan"
 msgid "English is used because no content language is configured. Content language is stored with the entry and is separate from your admin language."
 msgstr "Inggris digunakan karena tidak ada bahasa konten yang dikonfigurasikan. Bahasa konten disimpan bersama entri dan terpisah dari bahasa admin Anda."
 
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:89
+msgid "Enter a domain such as example.com, without a path or port"
+msgstr ""
+
 #: packages/admin/src/components/BylineCreditsEditor.tsx:312
 msgid "Enter a name."
 msgstr "Masukkan nama."
@@ -5064,7 +5088,7 @@ msgstr "Masukkan nama"
 msgid "Enter the code from your terminal"
 msgstr "Masukkan kode dari terminal Anda"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:91
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:121
 msgid "Enter the domain below. EmDash checks that it serves this site before switching."
 msgstr "Masukkan domain di bawah. EmDash memeriksa bahwa itu menyajikan situs ini sebelum beralih."
 
@@ -5171,7 +5195,7 @@ msgid "Example: {pattern} → {preview}"
 msgstr "Contoh: {pattern} → {preview}"
 
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:294
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:97
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:127
 msgid "example.com"
 msgstr "example.com"
 
@@ -6980,7 +7004,7 @@ msgstr "ID"
 msgid "If an account exists for <0>{email}</0>, we've sent a sign-in link."
 msgstr "Jika ada akun untuk <0>{email}</0>, kami telah mengirimkan tautan masuk."
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:123
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:150
 msgid "If the site can't be reached from the internet yet, for example on localhost or behind a login, you can use the address without the check."
 msgstr "Jika situs belum dapat dicapai dari internet, contohnya di localhost atau di balik halaman masuk, Anda dapat menggunakan alamat tanpa pemeriksaan."
 
@@ -7792,7 +7816,7 @@ msgstr "Ditautkan dari"
 msgid "Links in emails and plugins use {0}, set by the deployment configuration."
 msgstr "Tautan di surel dan pengaya menggunakan {0}, diatur oleh konfigurasi penggelaran."
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:84
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:114
 msgid "Links in emails and plugins, sitemaps, and absolute URLs in search and social metadata will use the new domain."
 msgstr "Tautan di surel dan pengaya, peta situs, dan URL absolut di metadata pencarian dan sosial akan menggunakan domain baru."
 
@@ -8794,7 +8818,7 @@ msgstr "Koleksi baru"
 msgid "New Content Type"
 msgstr "Tipe Konten Baru"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:96
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:126
 msgid "New domain"
 msgstr "Domain baru"
 
@@ -9760,7 +9784,7 @@ msgstr "Kunci sandi hanya bekerja pada alamat di mana mereka telah dibuat."
 msgid "Passkeys only work at the address where they were created. Add one here so you can sign in at this address next time."
 msgstr "Kunci sandi hanya bekerja pada alamat di mana mereka telah dibuat. Tambahkan yang ada di sini sehingga Anda dapat masuk pada alamat ini pada kali selanjutnya."
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:113
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:143
 msgid "Passkeys only work at the address where they were created. After switching, keep signing in at the current address, or use an email sign-in link at the new one."
 msgstr "Kunci sandi hanya bekerja pada alamat di mana mereka telah dibuat. Setelah mengalihkan, pertahankan masuk pada alamat saat ini, atau gunakan tautan masuk surel pada yang baru."
 
@@ -10046,7 +10070,7 @@ msgstr "Galat widget pengaya"
 msgid "Plugins"
 msgstr "Pengaya"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:89
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:119
 msgid "Point the domain at this site. On Cloudflare, open your Worker in Workers & Pages, go to the Domains tab, and add the domain."
 msgstr "Arahkan domain pada situs ini. Di Cloudflare, buka Worker Anda di Workers & Pages, pergi ke tab Domains, dan tambahkan domain."
 
@@ -12383,7 +12407,7 @@ msgstr "URL Situs"
 msgid "Site URL set to {url}"
 msgstr "URL situs diatur ke {url}"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:83
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:113
 msgid "Sitemaps and absolute URLs in search and social metadata will use the new domain. Links in emails and plugins keep using {configuredUrl}, set by the deployment configuration."
 msgstr "Peta situs dan URL absolut di metadata pencarian dan sosial akan menggunakan domain baru. Tautan di surel dan pengaya tetap menggunakan {configuredUrl}, diatur oleh konfigurasi penggelaran."
 
@@ -14478,7 +14502,7 @@ msgstr "Penggunaan mungkin sudah usang."
 msgid "Use [param] or [...rest] in paths for pattern matching."
 msgstr "Gunakan [param] atau [...rest] di jalur untuk pencocokan pola."
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:133
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:160
 msgid "Use {fallbackUrl} anyway"
 msgstr "Gunakan {fallbackUrl} saja"
 
@@ -15259,7 +15283,7 @@ msgstr "Peran Anda"
 msgid "Your role does not permit any of the permissions this device requested."
 msgstr "Peran Anda tidak mengizinkan salah satu izin yang diminta perangkat ini."
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:81
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:111
 msgid "Your site is currently at {currentUrl}."
 msgstr "Situs Anda saat ini di {currentUrl}."
 

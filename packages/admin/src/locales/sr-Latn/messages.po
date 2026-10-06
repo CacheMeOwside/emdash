@@ -551,6 +551,10 @@ msgstr "{hidden, plural, one {još # unos na {date}} few {još # unosa na {date}
 msgid "{hidden, plural, one {+# more} other {+# more}}"
 msgstr "{hidden, plural, one {+# više} few {+# više} other {+# više}}"
 
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:38
+msgid "{host} does not resolve to a public address"
+msgstr ""
+
 #: packages/admin/src/components/MediaImportSummary.tsx:9
 msgid "{importedFiles, plural, one {<count>#</count> file imported} other {<count>#</count> files imported}}"
 msgstr "{importedFiles, plural, one {<count>#</count> fajl uvezen} few {<count>#</count> fajla uvezena} other {<count>#</count> fajlova uvezeno}}"
@@ -661,6 +665,18 @@ msgstr "{needsNewCollections, plural, one {# nova kolekcija će se kreirati} few
 #: packages/admin/src/components/WordPressImport.tsx:1911
 msgid "{needsNewFields, plural, one {Fields will be added to # existing collection} other {Fields will be added to # existing collections}}"
 msgstr "{needsNewFields, plural, one {Polja će se dodati u # postojeću kolekciju} few {Polja će se dodati u # postojeće kolekcije} other {Polja će se dodati u # postojećih kolekcija}}"
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:49
+msgid "{origin} does not serve this site yet"
+msgstr ""
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:47
+msgid "{origin} redirects elsewhere"
+msgstr ""
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:46
+msgid "{origin} redirects to {target}. Enter that address instead."
+msgstr ""
 
 #: packages/admin/src/components/Dashboard.tsx:151
 msgid "{overdueCount, plural, one {One scheduled item is overdue and the scheduler heartbeat is stale. Run `npx emdash doctor` and verify the deployed Cron Trigger.} other {# scheduled items are overdue and the scheduler heartbeat is stale. Run `npx emdash doctor` and verify the deployed Cron Trigger.}}"
@@ -2399,7 +2415,7 @@ msgstr "Može pregledati sadržaj"
 #: packages/admin/src/components/Sections.tsx:231
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:216
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:249
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:147
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:174
 #: packages/admin/src/components/settings/SecuritySettings.tsx:177
 #: packages/admin/src/components/TaxonomyManager.tsx:579
 #: packages/admin/src/components/TaxonomyManager.tsx:879
@@ -2522,7 +2538,7 @@ msgstr "Promeni"
 msgid "Change <0>{0}</0> from <1>{1}</1> to <2>{2}</2>? They will lose access to higher-level features."
 msgstr "Promeniti <0>{0}</0> sa <1>{1}</1> na <2>{2}</2>? Izgubiće pristup funkcijama višeg nivoa."
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:79
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:109
 #: packages/admin/src/components/settings/GeneralSettings.tsx:315
 msgid "Change domain"
 msgstr "Promeni domen"
@@ -2576,7 +2592,7 @@ msgstr "Promene su sačuvane, ali keširane stranice mogu da prikazuju stare {pl
 msgid "Character between page title and site name (e.g., \"My Post | My Site\")"
 msgstr "Karakter između naslova stranice i imena sajta (npr. \"Moja objava | Moj sajt\")"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:155
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:182
 msgid "Check and switch"
 msgstr "Proveri i prebaci"
 
@@ -2663,7 +2679,7 @@ msgstr "Proveravanje podrške za pristupne ključeve (passkeys) na ovom uređaju
 msgid "Checking this site"
 msgstr "Proveravanje ovog sajta"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:155
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:182
 msgid "Checking…"
 msgstr "Proveravanje…"
 
@@ -3381,6 +3397,10 @@ msgstr "Nije moguće učitati ovu fasciklu."
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:183
 msgid "Could not publish"
 msgstr "Nije moguće objaviti"
+
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:43
+msgid "Could not reach {origin}"
+msgstr ""
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:198
 msgid "Could not remove the schedule"
@@ -5023,6 +5043,10 @@ msgstr "Omogućeno"
 msgid "English is used because no content language is configured. Content language is stored with the entry and is separate from your admin language."
 msgstr "Engleski se koristi jer nije podešen jezik sadržaja. Jezik sadržaja se čuva uz unos i odvojen je od jezika administracije."
 
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:89
+msgid "Enter a domain such as example.com, without a path or port"
+msgstr ""
+
 #: packages/admin/src/components/BylineCreditsEditor.tsx:312
 msgid "Enter a name."
 msgstr "Unesi naziv."
@@ -5064,7 +5088,7 @@ msgstr "Unesi ime"
 msgid "Enter the code from your terminal"
 msgstr "Unesi kod iz terminala"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:91
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:121
 msgid "Enter the domain below. EmDash checks that it serves this site before switching."
 msgstr "Unesi domen ispod. EmDash proverava da li opslužuje ovaj sajt pre prebacivanja."
 
@@ -5171,7 +5195,7 @@ msgid "Example: {pattern} → {preview}"
 msgstr "Primer: {pattern} → {preview}"
 
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:294
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:97
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:127
 msgid "example.com"
 msgstr "example.com"
 
@@ -6980,7 +7004,7 @@ msgstr "ID"
 msgid "If an account exists for <0>{email}</0>, we've sent a sign-in link."
 msgstr "Ako nalog postoji za <0>{email}</0>, poslali smo link za prijavu."
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:123
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:150
 msgid "If the site can't be reached from the internet yet, for example on localhost or behind a login, you can use the address without the check."
 msgstr "Ako sajt još nije dostupan sa interneta, na primer na localhost-u ili iza prijave, možeš da koristiš adresu bez provere."
 
@@ -7792,7 +7816,7 @@ msgstr "Linkovi od"
 msgid "Links in emails and plugins use {0}, set by the deployment configuration."
 msgstr "Linkovi u e-pošti i dodacima koriste {0}, koje postavlja konfiguracija za objavljivanje."
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:84
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:114
 msgid "Links in emails and plugins, sitemaps, and absolute URLs in search and social metadata will use the new domain."
 msgstr "Linkovi u e-pošti i dodacima, mape sajta i apsolutni URL-ovi u metapodacima za pretragu i društvene mreže koristiće novi domen."
 
@@ -8794,7 +8818,7 @@ msgstr "Nova kolekcija"
 msgid "New Content Type"
 msgstr "Novi tip sadržaja"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:96
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:126
 msgid "New domain"
 msgstr "Novi domen"
 
@@ -9760,7 +9784,7 @@ msgstr "Pristupni ključevi (passkeys) rade samo na adresi na kojoj su napravlje
 msgid "Passkeys only work at the address where they were created. Add one here so you can sign in at this address next time."
 msgstr "Pristupni ključevi (passkeys) rade samo na adresi na kojoj su napravljeni. Dodaj jedan ovde da možeš da se prijaviš na ovoj adresi sledeći put."
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:113
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:143
 msgid "Passkeys only work at the address where they were created. After switching, keep signing in at the current address, or use an email sign-in link at the new one."
 msgstr "Pristupni ključevi (passkeys) rade samo na adresi na kojoj su napravljeni. Nakon prebacivanja, nastavi da se prijavljuješ na trenutnoj adresi ili koristi link za prijavu iz e-pošte na novoj."
 
@@ -10046,7 +10070,7 @@ msgstr "Greška vidžeta dodatka"
 msgid "Plugins"
 msgstr "Dodaci"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:89
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:119
 msgid "Point the domain at this site. On Cloudflare, open your Worker in Workers & Pages, go to the Domains tab, and add the domain."
 msgstr "Usmeri domen na ovaj sajt. Na Cloudflare-u otvori svoj Worker u odeljku Workers & Pages, idi na karticu Domains i dodaj domen."
 
@@ -12383,7 +12407,7 @@ msgstr "URL sajta"
 msgid "Site URL set to {url}"
 msgstr "Postavljen je URL sajta na {url}"
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:83
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:113
 msgid "Sitemaps and absolute URLs in search and social metadata will use the new domain. Links in emails and plugins keep using {configuredUrl}, set by the deployment configuration."
 msgstr "Mape sajta i apsolutni URL-ovi u metapodacima za pretragu i društvene mreže koristiće novi domen. Linkovi u e-pošti i dodacima nastavljaju da koriste {configuredUrl}, koje postavlja konfiguracija za objavljivanje."
 
@@ -14478,7 +14502,7 @@ msgstr "Korišćenje može da bude zastarelo."
 msgid "Use [param] or [...rest] in paths for pattern matching."
 msgstr "Koristi [param] ili [...rest] u putanjama za uparivanje šablona."
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:133
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:160
 msgid "Use {fallbackUrl} anyway"
 msgstr "Ipak koristi {fallbackUrl}"
 
@@ -15259,7 +15283,7 @@ msgstr "Uloga"
 msgid "Your role does not permit any of the permissions this device requested."
 msgstr "Uloga ne dozvoljava nijednu od dozvola koje je ovaj uređaj zatražio."
 
-#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:81
+#: packages/admin/src/components/settings/ChangeDomainDialog.tsx:111
 msgid "Your site is currently at {currentUrl}."
 msgstr "Sajt je trenutno na {currentUrl}."
 
