@@ -7446,6 +7446,10 @@ msgstr "Invitationslink oprettet"
 msgid "Invite User"
 msgstr "Inviter bruger"
 
+#: packages/admin/src/lib/api/users.ts:194
+msgid "Invite validation failed"
+msgstr ""
+
 #: packages/admin/src/components/users/UserList.tsx:133
 msgid "Invite your first team member"
 msgstr "Inviter dit første teammedlem"
@@ -12290,6 +12294,10 @@ msgstr "Signeret version verificeret"
 msgid "Signing in failed. Please try again."
 msgstr "Login mislykkedes. Prøv igen."
 
+#: packages/admin/src/lib/api/users.ts:431
+msgid "Signup completion failed"
+msgstr ""
+
 #: packages/admin/src/lib/api/users.ts:377
 msgid "Signup request failed"
 msgstr ""
@@ -13809,6 +13817,10 @@ msgstr "Token oprettet: {0}"
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:496
 msgid "Token Name"
 msgstr "Tokennavn"
+
+#: packages/admin/src/lib/api/users.ts:393
+msgid "Token verification failed"
+msgstr ""
 
 #: packages/admin/src/components/editor/codeBlockLanguages.ts:55
 msgid "TOML"

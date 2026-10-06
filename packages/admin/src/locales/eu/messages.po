@@ -7443,6 +7443,10 @@ msgstr ""
 msgid "Invite User"
 msgstr ""
 
+#: packages/admin/src/lib/api/users.ts:194
+msgid "Invite validation failed"
+msgstr ""
+
 #: packages/admin/src/components/users/UserList.tsx:133
 msgid "Invite your first team member"
 msgstr ""
@@ -12284,6 +12288,10 @@ msgstr ""
 msgid "Signing in failed. Please try again."
 msgstr ""
 
+#: packages/admin/src/lib/api/users.ts:431
+msgid "Signup completion failed"
+msgstr ""
+
 #: packages/admin/src/lib/api/users.ts:377
 msgid "Signup request failed"
 msgstr ""
@@ -13803,6 +13811,10 @@ msgstr "Tokena sortu da: {0}"
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:496
 msgid "Token Name"
 msgstr "Tokenarenizena"
+
+#: packages/admin/src/lib/api/users.ts:393
+msgid "Token verification failed"
+msgstr ""
 
 #: packages/admin/src/components/editor/codeBlockLanguages.ts:55
 msgid "TOML"

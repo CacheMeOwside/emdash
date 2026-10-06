@@ -7446,6 +7446,10 @@ msgstr "Einladungslink erstellt"
 msgid "Invite User"
 msgstr "Benutzer einladen"
 
+#: packages/admin/src/lib/api/users.ts:194
+msgid "Invite validation failed"
+msgstr ""
+
 #: packages/admin/src/components/users/UserList.tsx:133
 msgid "Invite your first team member"
 msgstr "Lade dein erstes Teammitglied ein"
@@ -12290,6 +12294,10 @@ msgstr "Signiertes Release verifiziert"
 msgid "Signing in failed. Please try again."
 msgstr "Die Anmeldung ist fehlgeschlagen. Bitte versuche es erneut."
 
+#: packages/admin/src/lib/api/users.ts:431
+msgid "Signup completion failed"
+msgstr ""
+
 #: packages/admin/src/lib/api/users.ts:377
 msgid "Signup request failed"
 msgstr ""
@@ -13809,6 +13817,10 @@ msgstr "Token erstellt: {0}"
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:496
 msgid "Token Name"
 msgstr "Token-Name"
+
+#: packages/admin/src/lib/api/users.ts:393
+msgid "Token verification failed"
+msgstr ""
 
 #: packages/admin/src/components/editor/codeBlockLanguages.ts:55
 msgid "TOML"

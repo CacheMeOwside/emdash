@@ -7447,6 +7447,10 @@ msgstr "קישור ההזמנה נוצר"
 msgid "Invite User"
 msgstr "הזמנת משתמש"
 
+#: packages/admin/src/lib/api/users.ts:194
+msgid "Invite validation failed"
+msgstr ""
+
 #: packages/admin/src/components/users/UserList.tsx:133
 msgid "Invite your first team member"
 msgstr "הזמנת חבר/ת הצוות הראשון שלכם"
@@ -12291,6 +12295,10 @@ msgstr "הגרסה החתומה אומתה"
 msgid "Signing in failed. Please try again."
 msgstr "ההתחברות נכשלה. נסו שוב."
 
+#: packages/admin/src/lib/api/users.ts:431
+msgid "Signup completion failed"
+msgstr ""
+
 #: packages/admin/src/lib/api/users.ts:377
 msgid "Signup request failed"
 msgstr ""
@@ -13810,6 +13818,10 @@ msgstr "אסימון נוצר: {0}"
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:496
 msgid "Token Name"
 msgstr "שם אסימון"
+
+#: packages/admin/src/lib/api/users.ts:393
+msgid "Token verification failed"
+msgstr ""
 
 #: packages/admin/src/components/editor/codeBlockLanguages.ts:55
 msgid "TOML"

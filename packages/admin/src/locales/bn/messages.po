@@ -7446,6 +7446,10 @@ msgstr "আমন্ত্রণ লিঙ্ক তৈরি হয়েছে
 msgid "Invite User"
 msgstr "ব্যবহারকারীকে আমন্ত্রণ জানান"
 
+#: packages/admin/src/lib/api/users.ts:194
+msgid "Invite validation failed"
+msgstr ""
+
 #: packages/admin/src/components/users/UserList.tsx:133
 msgid "Invite your first team member"
 msgstr "আপনার প্রথম টিম সদস্যকে আমন্ত্রণ জানান"
@@ -12290,6 +12294,10 @@ msgstr "স্বাক্ষরিত রিলিজ যাচাই করা
 msgid "Signing in failed. Please try again."
 msgstr "সাইন ইন ব্যর্থ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।"
 
+#: packages/admin/src/lib/api/users.ts:431
+msgid "Signup completion failed"
+msgstr ""
+
 #: packages/admin/src/lib/api/users.ts:377
 msgid "Signup request failed"
 msgstr ""
@@ -13809,6 +13817,10 @@ msgstr "টোকেন তৈরি হয়েছে: {0}"
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:496
 msgid "Token Name"
 msgstr "টোকেনের নাম"
+
+#: packages/admin/src/lib/api/users.ts:393
+msgid "Token verification failed"
+msgstr ""
 
 #: packages/admin/src/components/editor/codeBlockLanguages.ts:55
 msgid "TOML"

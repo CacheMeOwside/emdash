@@ -7446,6 +7446,10 @@ msgstr "Link za pozivnicu kreiran"
 msgid "Invite User"
 msgstr "Pozovi korisnika"
 
+#: packages/admin/src/lib/api/users.ts:194
+msgid "Invite validation failed"
+msgstr ""
+
 #: packages/admin/src/components/users/UserList.tsx:133
 msgid "Invite your first team member"
 msgstr "Pozovi prvog člana tima"
@@ -12290,6 +12294,10 @@ msgstr "Potpisano izdanje je verifikovano"
 msgid "Signing in failed. Please try again."
 msgstr "Prijava nije uspela. Pokušaj ponovo."
 
+#: packages/admin/src/lib/api/users.ts:431
+msgid "Signup completion failed"
+msgstr ""
+
 #: packages/admin/src/lib/api/users.ts:377
 msgid "Signup request failed"
 msgstr ""
@@ -13809,6 +13817,10 @@ msgstr "Token kreiran: {0}"
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:496
 msgid "Token Name"
 msgstr "Naziv tokena"
+
+#: packages/admin/src/lib/api/users.ts:393
+msgid "Token verification failed"
+msgstr ""
 
 #: packages/admin/src/components/editor/codeBlockLanguages.ts:55
 msgid "TOML"
