@@ -2184,7 +2184,7 @@ msgid "Block"
 msgstr "Block"
 
 #. placeholder {0}: index + 1
-#: packages/admin/src/components/BlocksField.tsx:406
+#: packages/admin/src/components/BlocksField.tsx:412
 msgid "Block {0}"
 msgstr "Block {0}"
 
@@ -4001,7 +4001,7 @@ msgstr "Delete {0}?"
 msgid "Delete backup?"
 msgstr "Delete backup?"
 
-#: packages/admin/src/components/BlocksField.tsx:382
+#: packages/admin/src/components/BlocksField.tsx:388
 #: packages/admin/src/components/editor/EmbedBlockShell.tsx:358
 msgid "Delete block"
 msgstr "Delete block"
@@ -4641,7 +4641,7 @@ msgstr "Duplicate"
 msgid "Duplicate {title}"
 msgstr "Duplicate {title}"
 
-#: packages/admin/src/components/BlocksField.tsx:373
+#: packages/admin/src/components/BlocksField.tsx:379
 msgid "Duplicate block"
 msgstr "Duplicate block"
 
@@ -7264,7 +7264,7 @@ msgstr "In trash"
 msgid "In Windows Settings, open Accounts, then Sign-in options, and set up a PIN. Fingerprint and face recognition are optional."
 msgstr "In Windows Settings, open Accounts, then Sign-in options, and set up a PIN. Fingerprint and face recognition are optional."
 
-#: packages/admin/src/components/BlocksField.tsx:359
+#: packages/admin/src/components/BlocksField.tsx:361
 msgid "Inactive version"
 msgstr "Inactive version"
 
@@ -11083,7 +11083,7 @@ msgstr "Restoring..."
 msgid "Results"
 msgstr "Results"
 
-#: packages/admin/src/components/BlocksField.tsx:360
+#: packages/admin/src/components/BlocksField.tsx:362
 #: packages/admin/src/components/FieldEditor.tsx:1126
 msgid "Retired"
 msgstr "Retired"
@@ -13359,7 +13359,7 @@ msgstr "These tools remain disabled after installation until you explicitly enab
 msgid "This also removes:"
 msgstr "This also removes:"
 
-#: packages/admin/src/components/BlocksField.tsx:394
+#: packages/admin/src/components/BlocksField.tsx:400
 msgid "This block cannot be edited because its stored definition is unavailable."
 msgstr "This block cannot be edited because its stored definition is unavailable."
 
@@ -14206,7 +14206,7 @@ msgstr "Unsaved content may leave your site"
 msgid "Unscheduled"
 msgstr "Unscheduled"
 
-#: packages/admin/src/components/BlocksField.tsx:361
+#: packages/admin/src/components/BlocksField.tsx:363
 #: packages/admin/src/components/ContentTypeEditor.tsx:948
 msgid "Unsupported"
 msgstr "Unsupported"
@@ -14684,7 +14684,7 @@ msgstr "Version"
 #. placeholder {0}: block._version
 #. placeholder {0}: release.version
 #. placeholder {0}: version.version
-#: packages/admin/src/components/BlocksField.tsx:358
+#: packages/admin/src/components/BlocksField.tsx:360
 #: packages/admin/src/components/BlockTypeList.tsx:42
 #: packages/admin/src/components/RegistryPluginDetail.tsx:556
 msgid "Version {0}"
