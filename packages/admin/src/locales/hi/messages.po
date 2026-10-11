@@ -5136,7 +5136,7 @@ msgstr "लिंक करने वाली ओर की एंट्री"
 #: packages/admin/src/components/Widgets.tsx:772
 #: packages/admin/src/router.tsx:3235
 msgid "Error"
-msgstr "गलती"
+msgstr "एरर"
 
 #: packages/admin/src/components/Widgets.tsx:237
 msgid "Error adding widget"
@@ -6576,7 +6576,7 @@ msgstr ""
 
 #: packages/admin/src/components/MediaPickerModal.tsx:1204
 msgid "Folder"
-msgstr ""
+msgstr "फ़ोल्डर"
 
 #: packages/admin/src/components/MediaFolderDialog.tsx:67
 msgid "Folder deleted"
@@ -8295,7 +8295,7 @@ msgstr "एमडीएक्स"
 #: packages/admin/src/components/WordPressImport.tsx:1170
 #: packages/admin/src/components/WordPressImport.tsx:1357
 msgid "Media"
-msgstr "मिडिया"
+msgstr "मीडिया"
 
 #: packages/admin/src/components/MediaDetailPanel.tsx:1109
 msgid "Media details"
