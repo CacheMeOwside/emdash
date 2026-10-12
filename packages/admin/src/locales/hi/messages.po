@@ -5224,7 +5224,7 @@ msgstr ""
 
 #: packages/admin/src/components/BlocksField.tsx:350
 msgid "Expand block"
-msgstr ""
+msgstr "ब्लॉक विस्तृत करें"
 
 #: packages/admin/src/components/PluginManager.tsx:558
 #: packages/admin/src/components/PluginManager.tsx:563
@@ -12876,7 +12876,7 @@ msgstr "लक्ष्य स्थान"
 #: packages/admin/src/components/settings/transfer/labels.ts:13
 #: packages/admin/src/components/TaxonomySidebar.tsx:898
 msgid "Taxonomies"
-msgstr "taxonomies"
+msgstr "वर्गीकरण"
 
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:77
 msgid "Taxonomies Manage"
@@ -12884,7 +12884,7 @@ msgstr "वर्गीकरण प्रबंधित करें"
 
 #: packages/admin/src/components/BulkTagDialog.tsx:285
 msgid "Taxonomy"
-msgstr ""
+msgstr "वर्गीकरण"
 
 #. placeholder {0}: blocker.name
 #: packages/admin/src/components/settings/transfer/labels.ts:110
