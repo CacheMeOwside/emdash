@@ -4450,7 +4450,7 @@ msgstr "दस्तावेज़"
 
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:293
 msgid "Domain"
-msgstr "कार्यक्षेत्र"
+msgstr "डोमेन"
 
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:80
 msgid "Domain added successfully"
@@ -5656,7 +5656,7 @@ msgstr ""
 
 #: packages/admin/src/lib/api/users.ts:297
 msgid "Failed to fetch allowed domains"
-msgstr ""
+msgstr "अनुमत डोमेन लाने में विफल"
 
 #: packages/admin/src/lib/api/api-tokens.ts:76
 msgid "Failed to fetch API tokens"
@@ -5862,7 +5862,7 @@ msgstr "शर्तें लाने में विफल"
 
 #: packages/admin/src/lib/api/settings.ts:87
 msgid "Failed to fetch the site domain"
-msgstr ""
+msgstr "साइट डोमेन लाने में विफल"
 
 #: packages/admin/src/lib/api/theme-marketplace.ts:99
 msgid "Failed to fetch theme"
@@ -6276,7 +6276,7 @@ msgstr "{0} को अपडेट करने में विफल"
 
 #: packages/admin/src/lib/api/users.ts:335
 msgid "Failed to update allowed domain"
-msgstr ""
+msgstr "अनुमत डोमेन अपडेट करने में विफल"
 
 #: packages/admin/src/lib/api/backups.ts:46
 msgid "Failed to update backup settings"
@@ -7849,7 +7849,7 @@ msgstr ""
 
 #: packages/admin/src/components/settings/ChangeDomainDialog.tsx:114
 msgid "Links in emails and plugins, sitemaps, and absolute URLs in search and social metadata will use the new domain."
-msgstr ""
+msgstr "ईमेल और प्लगइन के लिंक, साइटमैप, और सर्च व सोशल मेटाडेटा के एब्सोल्यूट URL नए डोमेन का उपयोग करेंगे।"
 
 #: packages/admin/src/components/RelationForm.tsx:275
 msgid "Links to"
@@ -8854,7 +8854,7 @@ msgstr "नई सामग्री प्रकार"
 
 #: packages/admin/src/components/settings/ChangeDomainDialog.tsx:126
 msgid "New domain"
-msgstr ""
+msgstr "नया डोमेन"
 
 #: packages/admin/src/routes/byline-schema.tsx:224
 msgid "New field"
@@ -10101,7 +10101,7 @@ msgstr "प्लग-इन"
 
 #: packages/admin/src/components/settings/ChangeDomainDialog.tsx:119
 msgid "Point the domain at this site. On Cloudflare, open your Worker in Workers & Pages, go to the Domains tab, and add the domain."
-msgstr ""
+msgstr "डोमेन को इस साइट पर पॉइंट करें। Cloudflare पर, Workers & Pages में अपना Worker खोलें, Domains टैब पर जाएँ, और डोमेन जोड़ें।"
 
 #: packages/admin/src/components/settings/BackupSettings.tsx:342
 msgid "Point-in-Time Restore"
@@ -12453,7 +12453,7 @@ msgstr ""
 
 #: packages/admin/src/components/settings/ChangeDomainDialog.tsx:113
 msgid "Sitemaps and absolute URLs in search and social metadata will use the new domain. Links in emails and plugins keep using {configuredUrl}, set by the deployment configuration."
-msgstr ""
+msgstr "साइटमैप और सर्च व सोशल मेटाडेटा के एब्सोल्यूट URL नए डोमेन का उपयोग करेंगे। ईमेल और प्लगइन के लिंक {configuredUrl} का ही उपयोग करते रहेंगे, जो डिप्लॉयमेंट कॉन्फ़िगरेशन में सेट है।"
 
 #: packages/admin/src/components/settings/BackupSettings.tsx:345
 msgid "Sites on Cloudflare D1 can additionally restore the database to any minute within the last 30 days using D1 Time Travel — always on, no setup required."
@@ -14657,7 +14657,7 @@ msgstr ""
 
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:38
 msgid "Users from <0>{domain}</0> will no longer be able to sign up without an invite. Existing users are not affected."
-msgstr ""
+msgstr "<0>{domain}</0> के उपयोगकर्ता अब बिना आमंत्रण के साइन अप नहीं कर पाएँगे। मौजूदा उपयोगकर्ता प्रभावित नहीं होंगे।"
 
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:205
 msgid "Users with email addresses from these domains can sign up without an invite. They will be assigned the specified role automatically."
