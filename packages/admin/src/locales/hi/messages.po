@@ -12841,7 +12841,7 @@ msgstr ""
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:375
 #: packages/admin/src/components/SetupWizard.tsx:148
 msgid "Tagline"
-msgstr "TAGLINE"
+msgstr "टैगलाइन"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:214
 #: packages/admin/src/components/Widgets.tsx:144
