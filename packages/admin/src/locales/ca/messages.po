@@ -8283,7 +8283,7 @@ msgstr "S'està carregant el menú..."
 msgid "Loading menus..."
 msgstr "S'estan carregant els menús..."
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:259
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:258
 msgid "Loading plugin panel"
 msgstr "S'està carregant el tauler del connector"
 
@@ -10404,7 +10404,7 @@ msgstr "No s'ha trobat el connector. L'editor o el slug poden ser incorrectes."
 msgid "Plugin pages"
 msgstr "Pàgines del connector"
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:265
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:264
 #: packages/admin/src/lib/content-editor-panels.tsx:192
 msgid "Plugin panel unavailable."
 msgstr "Tauler del connector no disponible."
@@ -11569,7 +11569,7 @@ msgstr "Retirat"
 #: packages/admin/src/components/MediaPickerModal.tsx:1335
 #: packages/admin/src/components/MediaPickerModal.tsx:1408
 #: packages/admin/src/components/PluginFieldErrorBoundary.tsx:44
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:273
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:272
 #: packages/admin/src/components/Sections.tsx:281
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:122
 #: packages/admin/src/lib/content-editor-panels.tsx:201

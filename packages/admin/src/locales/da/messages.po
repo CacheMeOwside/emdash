@@ -8283,7 +8283,7 @@ msgstr "Indlæser menu..."
 msgid "Loading menus..."
 msgstr "Indlæser menuer..."
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:259
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:258
 msgid "Loading plugin panel"
 msgstr "Indlæser pluginpanel"
 
@@ -10404,7 +10404,7 @@ msgstr "Pluginet blev ikke fundet. Udgiveren eller slug kan være forkert."
 msgid "Plugin pages"
 msgstr "Plugin-sider"
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:265
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:264
 #: packages/admin/src/lib/content-editor-panels.tsx:192
 msgid "Plugin panel unavailable."
 msgstr "Plugin-panelet er ikke tilgængeligt."
@@ -11569,7 +11569,7 @@ msgstr "Udfaset"
 #: packages/admin/src/components/MediaPickerModal.tsx:1335
 #: packages/admin/src/components/MediaPickerModal.tsx:1408
 #: packages/admin/src/components/PluginFieldErrorBoundary.tsx:44
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:273
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:272
 #: packages/admin/src/components/Sections.tsx:281
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:122
 #: packages/admin/src/lib/content-editor-panels.tsx:201

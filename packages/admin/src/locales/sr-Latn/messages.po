@@ -8283,7 +8283,7 @@ msgstr "Učitavanje menija..."
 msgid "Loading menus..."
 msgstr "Učitavanje menija..."
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:259
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:258
 msgid "Loading plugin panel"
 msgstr "Učitavanje panela dodatka"
 
@@ -10404,7 +10404,7 @@ msgstr "Dodatak nije pronađen. Izdavač ili slug možda nisu tačni."
 msgid "Plugin pages"
 msgstr "Stranice dodatka"
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:265
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:264
 #: packages/admin/src/lib/content-editor-panels.tsx:192
 msgid "Plugin panel unavailable."
 msgstr "Panel dodatka nije dostupan."
@@ -11569,7 +11569,7 @@ msgstr "Povučeno"
 #: packages/admin/src/components/MediaPickerModal.tsx:1335
 #: packages/admin/src/components/MediaPickerModal.tsx:1408
 #: packages/admin/src/components/PluginFieldErrorBoundary.tsx:44
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:273
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:272
 #: packages/admin/src/components/Sections.tsx:281
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:122
 #: packages/admin/src/lib/content-editor-panels.tsx:201

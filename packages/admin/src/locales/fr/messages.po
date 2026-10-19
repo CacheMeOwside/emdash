@@ -8283,7 +8283,7 @@ msgstr "En cours de chargement du menu..."
 msgid "Loading menus..."
 msgstr "En cours de chargement des menus..."
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:259
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:258
 msgid "Loading plugin panel"
 msgstr "Chargement du panneau du module d’extension"
 
@@ -10404,7 +10404,7 @@ msgstr "Module d’extension introuvable. L’éditeur ou le slug est peut-être
 msgid "Plugin pages"
 msgstr "Pages du module d'extension"
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:265
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:264
 #: packages/admin/src/lib/content-editor-panels.tsx:192
 msgid "Plugin panel unavailable."
 msgstr "Panneau du module d'extension indisponible."
@@ -11569,7 +11569,7 @@ msgstr "Retiré"
 #: packages/admin/src/components/MediaPickerModal.tsx:1335
 #: packages/admin/src/components/MediaPickerModal.tsx:1408
 #: packages/admin/src/components/PluginFieldErrorBoundary.tsx:44
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:273
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:272
 #: packages/admin/src/components/Sections.tsx:281
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:122
 #: packages/admin/src/lib/content-editor-panels.tsx:201
