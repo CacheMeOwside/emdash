@@ -1561,7 +1561,7 @@ msgstr "Admin"
 msgid "Admin navigation"
 msgstr "Admin-Navigation"
 
-#: packages/admin/src/components/WelcomeModal.tsx:25
+#: packages/admin/src/components/WelcomeModal.tsx:26
 msgid "Administrator"
 msgstr "Administrator"
 
@@ -1984,7 +1984,7 @@ msgstr "Möchtest du das Feld „{0}“ wirklich löschen?"
 msgid "Are you sure you want to delete this menu? This will also delete all menu items. This action cannot be undone."
 msgstr "Möchtest du dieses Menü wirklich löschen? Dadurch werden auch alle Menüpunkte gelöscht. Diese Aktion kann nicht rückgängig gemacht werden."
 
-#: packages/admin/src/components/WelcomeModal.tsx:59
+#: packages/admin/src/components/WelcomeModal.tsx:60
 msgid "As an administrator, you can invite other users from the Users section."
 msgstr "Als Administrator kannst du im Bereich „Benutzer“ andere Benutzer einladen."
 
@@ -2058,7 +2058,7 @@ msgstr "Die Anmeldung wurde abgebrochen oder hat zu lange gedauert. Bitte versuc
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1418
 #: packages/admin/src/components/RelationForm.tsx:315
 #: packages/admin/src/components/users/roleDefinitions.ts:30
-#: packages/admin/src/components/WelcomeModal.tsx:27
+#: packages/admin/src/components/WelcomeModal.tsx:28
 msgid "Author"
 msgstr "Autor"
 
@@ -3096,7 +3096,7 @@ msgstr "Klicke auf diesen Link, um dich bei {siteName} anzumelden:"
 #: packages/admin/src/components/users/InviteUserModal.tsx:88
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
-#: packages/admin/src/components/WelcomeModal.tsx:60
+#: packages/admin/src/components/WelcomeModal.tsx:61
 #: packages/admin/src/components/Widgets.tsx:414
 #: packages/admin/src/components/Widgets.tsx:420
 #: packages/admin/src/components/Widgets.tsx:424
@@ -3482,7 +3482,7 @@ msgid "Continue with security key"
 msgstr "Mit Sicherheitsschlüssel fortfahren"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:24
-#: packages/admin/src/components/WelcomeModal.tsx:28
+#: packages/admin/src/components/WelcomeModal.tsx:29
 msgid "Contributor"
 msgstr "Mitwirkender"
 
@@ -5111,7 +5111,7 @@ msgid "visualEditing.sessionExpired"
 msgstr "Die Bearbeitungssitzung ist abgelaufen. Lade die Seite neu, um fortzufahren."
 
 #: packages/admin/src/components/users/roleDefinitions.ts:36
-#: packages/admin/src/components/WelcomeModal.tsx:26
+#: packages/admin/src/components/WelcomeModal.tsx:27
 msgid "Editor"
 msgstr "Redakteur"
 
@@ -5885,7 +5885,7 @@ msgstr "Verwerfen des Entwurfs fehlgeschlagen"
 msgid "Failed to dismiss scheduled publication rejection"
 msgstr "Schließen des Hinweises zur abgelehnten Planung fehlgeschlagen"
 
-#: packages/admin/src/components/WelcomeModal.tsx:76
+#: packages/admin/src/components/WelcomeModal.tsx:78
 msgid "Failed to dismiss welcome"
 msgstr "Ausblenden der Willkommensnachricht fehlgeschlagen"
 
@@ -6991,7 +6991,7 @@ msgstr "Allgemeine Einstellungen"
 msgid "Genres"
 msgstr "Genres"
 
-#: packages/admin/src/components/WelcomeModal.tsx:154
+#: packages/admin/src/components/WelcomeModal.tsx:156
 msgid "Get Started"
 msgstr "Los geht's"
 
@@ -13220,7 +13220,7 @@ msgid "Sub-Fields"
 msgstr "Untergeordnete Felder"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:18
-#: packages/admin/src/components/WelcomeModal.tsx:29
+#: packages/admin/src/components/WelcomeModal.tsx:30
 msgid "Subscriber"
 msgstr "Abonnent"
 
@@ -15390,11 +15390,11 @@ msgstr "Website"
 msgid "Website URL"
 msgstr "Website-URL"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "Willkommen bei EmDash, {firstName}!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash!"
 msgstr "Willkommen bei EmDash!"
 
@@ -15666,11 +15666,11 @@ msgstr "Yoast/RankMath"
 msgid "You can close this page and return to your terminal."
 msgstr "Du kannst diese Seite schließen und zu deinem Terminal zurückkehren."
 
-#: packages/admin/src/components/WelcomeModal.tsx:49
+#: packages/admin/src/components/WelcomeModal.tsx:50
 msgid "You can create and edit your own content."
 msgstr "Du kannst eigene Inhalte erstellen und bearbeiten."
 
-#: packages/admin/src/components/WelcomeModal.tsx:48
+#: packages/admin/src/components/WelcomeModal.tsx:49
 msgid "You can manage content, media, menus, and taxonomies."
 msgstr "Du kannst Inhalte, Medien, Menüs und Taxonomien verwalten."
 
@@ -15678,7 +15678,7 @@ msgstr "Du kannst Inhalte, Medien, Menüs und Taxonomien verwalten."
 msgid "You can still edit the fixed fields above. Saving will not touch any stored custom-field values."
 msgstr "Die festen Felder oben kannst du weiterhin bearbeiten. Beim Speichern werden gespeicherte Werte benutzerdefinierter Felder nicht angetastet."
 
-#: packages/admin/src/components/WelcomeModal.tsx:50
+#: packages/admin/src/components/WelcomeModal.tsx:51
 msgid "You can view and contribute to the site."
 msgstr "Du kannst die Website ansehen und mitwirken."
 
@@ -15703,7 +15703,7 @@ msgstr "Du hast keine Berechtigung, diese Datei zu verschieben."
 msgid "You don't have permission to view the calendar."
 msgstr "Du hast keine Berechtigung, den Kalender anzusehen."
 
-#: packages/admin/src/components/WelcomeModal.tsx:47
+#: packages/admin/src/components/WelcomeModal.tsx:48
 msgid "You have full access to manage this site, including users, settings, and all content."
 msgstr "Du hast vollen Zugriff, um diese Website einschließlich Benutzern, Einstellungen und aller Inhalte zu verwalten."
 
@@ -15782,7 +15782,7 @@ msgstr "du@unternehmen.de"
 msgid "you@example.com"
 msgstr "du@beispiel.de"
 
-#: packages/admin/src/components/WelcomeModal.tsx:45
+#: packages/admin/src/components/WelcomeModal.tsx:46
 msgid "Your account has been created successfully."
 msgstr "Dein Benutzerkonto wurde erfolgreich erstellt."
 
@@ -15856,7 +15856,7 @@ msgstr "Dein Name"
 msgid "Your name (optional)"
 msgstr "Dein Name (optional)"
 
-#: packages/admin/src/components/WelcomeModal.tsx:46
+#: packages/admin/src/components/WelcomeModal.tsx:47
 msgid "Your Role"
 msgstr "Deine Rolle"
 

@@ -1561,7 +1561,7 @@ msgstr "ผู้ดูแลระบบ"
 msgid "Admin navigation"
 msgstr "การนำทางของผู้ดูแลระบบ"
 
-#: packages/admin/src/components/WelcomeModal.tsx:25
+#: packages/admin/src/components/WelcomeModal.tsx:26
 msgid "Administrator"
 msgstr "ผู้ดูแลระบบ"
 
@@ -1984,7 +1984,7 @@ msgstr "คุณแน่ใจหรือไม่ว่าต้องกา
 msgid "Are you sure you want to delete this menu? This will also delete all menu items. This action cannot be undone."
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบเมนูนี้? การดำเนินการนี้จะลบรายการเมนูทั้งหมดด้วย และไม่สามารถยกเลิกได้"
 
-#: packages/admin/src/components/WelcomeModal.tsx:59
+#: packages/admin/src/components/WelcomeModal.tsx:60
 msgid "As an administrator, you can invite other users from the Users section."
 msgstr "ในฐานะผู้ดูแลระบบ คุณสามารถเชิญผู้ใช้คนอื่นได้จากส่วนผู้ใช้"
 
@@ -2058,7 +2058,7 @@ msgstr "การยืนยันตัวตนถูกยกเลิกห
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1418
 #: packages/admin/src/components/RelationForm.tsx:315
 #: packages/admin/src/components/users/roleDefinitions.ts:30
-#: packages/admin/src/components/WelcomeModal.tsx:27
+#: packages/admin/src/components/WelcomeModal.tsx:28
 msgid "Author"
 msgstr "ผู้เขียน"
 
@@ -3096,7 +3096,7 @@ msgstr "คลิกลิงก์นี้เพื่อเข้าสู่
 #: packages/admin/src/components/users/InviteUserModal.tsx:88
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
-#: packages/admin/src/components/WelcomeModal.tsx:60
+#: packages/admin/src/components/WelcomeModal.tsx:61
 #: packages/admin/src/components/Widgets.tsx:414
 #: packages/admin/src/components/Widgets.tsx:420
 #: packages/admin/src/components/Widgets.tsx:424
@@ -3482,7 +3482,7 @@ msgid "Continue with security key"
 msgstr "ดำเนินการต่อด้วยคีย์ความปลอดภัย"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:24
-#: packages/admin/src/components/WelcomeModal.tsx:28
+#: packages/admin/src/components/WelcomeModal.tsx:29
 msgid "Contributor"
 msgstr "ผู้ร่วมเขียน"
 
@@ -5111,7 +5111,7 @@ msgid "visualEditing.sessionExpired"
 msgstr "เซสชันการแก้ไขหมดอายุ รีเฟรชหน้าเพื่อดำเนินการต่อ"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:36
-#: packages/admin/src/components/WelcomeModal.tsx:26
+#: packages/admin/src/components/WelcomeModal.tsx:27
 msgid "Editor"
 msgstr "ผู้แก้ไข"
 
@@ -5885,7 +5885,7 @@ msgstr ""
 msgid "Failed to dismiss scheduled publication rejection"
 msgstr "ปิดการแจ้งการปฏิเสธการเผยแพร่ตามกำหนดเวลาไม่สำเร็จ"
 
-#: packages/admin/src/components/WelcomeModal.tsx:76
+#: packages/admin/src/components/WelcomeModal.tsx:78
 msgid "Failed to dismiss welcome"
 msgstr "ปิดข้อความต้อนรับไม่สำเร็จ"
 
@@ -6991,7 +6991,7 @@ msgstr "การตั้งค่าทั่วไป"
 msgid "Genres"
 msgstr "แนว"
 
-#: packages/admin/src/components/WelcomeModal.tsx:154
+#: packages/admin/src/components/WelcomeModal.tsx:156
 msgid "Get Started"
 msgstr "เริ่มต้นใช้งาน"
 
@@ -13220,7 +13220,7 @@ msgid "Sub-Fields"
 msgstr "ฟิลด์ย่อย"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:18
-#: packages/admin/src/components/WelcomeModal.tsx:29
+#: packages/admin/src/components/WelcomeModal.tsx:30
 msgid "Subscriber"
 msgstr "ผู้ติดตาม"
 
@@ -15390,11 +15390,11 @@ msgstr "เว็บไซต์"
 msgid "Website URL"
 msgstr "URL ของเว็บไซต์"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "ยินดีต้อนรับสู่ EmDash, {firstName}!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash!"
 msgstr "ยินดีต้อนรับสู่ EmDash!"
 
@@ -15666,11 +15666,11 @@ msgstr "Yoast/RankMath"
 msgid "You can close this page and return to your terminal."
 msgstr "คุณสามารถปิดหน้านี้และกลับไปยังเทอร์มินัลของคุณได้"
 
-#: packages/admin/src/components/WelcomeModal.tsx:49
+#: packages/admin/src/components/WelcomeModal.tsx:50
 msgid "You can create and edit your own content."
 msgstr "คุณสามารถสร้างและแก้ไขเนื้อหาของคุณเองได้"
 
-#: packages/admin/src/components/WelcomeModal.tsx:48
+#: packages/admin/src/components/WelcomeModal.tsx:49
 msgid "You can manage content, media, menus, and taxonomies."
 msgstr "คุณสามารถจัดการเนื้อหา มีเดีย เมนู และอนุกรมวิธานได้"
 
@@ -15678,7 +15678,7 @@ msgstr "คุณสามารถจัดการเนื้อหา ม�
 msgid "You can still edit the fixed fields above. Saving will not touch any stored custom-field values."
 msgstr "คุณยังแก้ไขฟิลด์ตายตัวด้านบนได้ การบันทึกจะไม่กระทบค่าของฟิลด์ที่กำหนดเองที่จัดเก็บไว้"
 
-#: packages/admin/src/components/WelcomeModal.tsx:50
+#: packages/admin/src/components/WelcomeModal.tsx:51
 msgid "You can view and contribute to the site."
 msgstr "คุณสามารถดูและมีส่วนร่วมกับเว็บไซต์ได้"
 
@@ -15703,7 +15703,7 @@ msgstr "คุณไม่มีสิทธิ์ย้ายไฟล์นี
 msgid "You don't have permission to view the calendar."
 msgstr "คุณไม่มีสิทธิ์ดูปฏิทิน"
 
-#: packages/admin/src/components/WelcomeModal.tsx:47
+#: packages/admin/src/components/WelcomeModal.tsx:48
 msgid "You have full access to manage this site, including users, settings, and all content."
 msgstr "คุณมีสิทธิ์เข้าถึงเต็มรูปแบบในการจัดการเว็บไซต์นี้ รวมถึงผู้ใช้ การตั้งค่า และเนื้อหาทั้งหมด"
 
@@ -15782,7 +15782,7 @@ msgstr "you@company.com"
 msgid "you@example.com"
 msgstr "you@example.com"
 
-#: packages/admin/src/components/WelcomeModal.tsx:45
+#: packages/admin/src/components/WelcomeModal.tsx:46
 msgid "Your account has been created successfully."
 msgstr "สร้างบัญชีของคุณสำเร็จแล้ว"
 
@@ -15856,7 +15856,7 @@ msgstr "ชื่อของคุณ"
 msgid "Your name (optional)"
 msgstr "ชื่อของคุณ (ไม่บังคับ)"
 
-#: packages/admin/src/components/WelcomeModal.tsx:46
+#: packages/admin/src/components/WelcomeModal.tsx:47
 msgid "Your Role"
 msgstr "บทบาทของคุณ"
 

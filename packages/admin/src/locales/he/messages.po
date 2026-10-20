@@ -1562,7 +1562,7 @@ msgstr "מנהל/ת"
 msgid "Admin navigation"
 msgstr "ניווט ניהול"
 
-#: packages/admin/src/components/WelcomeModal.tsx:25
+#: packages/admin/src/components/WelcomeModal.tsx:26
 msgid "Administrator"
 msgstr "מנהל/ת"
 
@@ -1985,7 +1985,7 @@ msgstr "האם למחוק את השדה \"{0}\"?"
 msgid "Are you sure you want to delete this menu? This will also delete all menu items. This action cannot be undone."
 msgstr "האם למחוק את התפריט הזה? פעולה זו תמחק גם את כל פריטי התפריט. לא ניתן לבטל פעולה זו."
 
-#: packages/admin/src/components/WelcomeModal.tsx:59
+#: packages/admin/src/components/WelcomeModal.tsx:60
 msgid "As an administrator, you can invite other users from the Users section."
 msgstr "כמנהל/ת, תוכלו להזמין משתמשים אחרים ממסך המשתמשים."
 
@@ -2059,7 +2059,7 @@ msgstr "האימות בוטל או שתם זמנו. נסו שוב."
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1418
 #: packages/admin/src/components/RelationForm.tsx:315
 #: packages/admin/src/components/users/roleDefinitions.ts:30
-#: packages/admin/src/components/WelcomeModal.tsx:27
+#: packages/admin/src/components/WelcomeModal.tsx:28
 msgid "Author"
 msgstr "כותב/ת"
 
@@ -3097,7 +3097,7 @@ msgstr "לחצו על הקישור הזה כדי להתחבר אל {siteName}:"
 #: packages/admin/src/components/users/InviteUserModal.tsx:88
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
-#: packages/admin/src/components/WelcomeModal.tsx:60
+#: packages/admin/src/components/WelcomeModal.tsx:61
 #: packages/admin/src/components/Widgets.tsx:414
 #: packages/admin/src/components/Widgets.tsx:420
 #: packages/admin/src/components/Widgets.tsx:424
@@ -3483,7 +3483,7 @@ msgid "Continue with security key"
 msgstr "המשך עם מפתח אבטחה"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:24
-#: packages/admin/src/components/WelcomeModal.tsx:28
+#: packages/admin/src/components/WelcomeModal.tsx:29
 msgid "Contributor"
 msgstr "תורם/ת"
 
@@ -5112,7 +5112,7 @@ msgid "visualEditing.sessionExpired"
 msgstr "פג תוקף הפעלת העריכה החזותית"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:36
-#: packages/admin/src/components/WelcomeModal.tsx:26
+#: packages/admin/src/components/WelcomeModal.tsx:27
 msgid "Editor"
 msgstr "עורך/ת"
 
@@ -5886,7 +5886,7 @@ msgstr ""
 msgid "Failed to dismiss scheduled publication rejection"
 msgstr "סגירת דחיית הפרסום המתוזמן נכשלה"
 
-#: packages/admin/src/components/WelcomeModal.tsx:76
+#: packages/admin/src/components/WelcomeModal.tsx:78
 msgid "Failed to dismiss welcome"
 msgstr "סגירת הודעת הפתיחה נכשלה"
 
@@ -6992,7 +6992,7 @@ msgstr "הגדרות כלליות"
 msgid "Genres"
 msgstr "סוגות"
 
-#: packages/admin/src/components/WelcomeModal.tsx:154
+#: packages/admin/src/components/WelcomeModal.tsx:156
 msgid "Get Started"
 msgstr "תחילת העבודה"
 
@@ -13221,7 +13221,7 @@ msgid "Sub-Fields"
 msgstr "שדות משנה"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:18
-#: packages/admin/src/components/WelcomeModal.tsx:29
+#: packages/admin/src/components/WelcomeModal.tsx:30
 msgid "Subscriber"
 msgstr "מנוי/ה"
 
@@ -15391,11 +15391,11 @@ msgstr "אתר אינטרנט"
 msgid "Website URL"
 msgstr "URL של אתר אינטרנט"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "ברוכים הבאים ל-EmDash, {firstName}!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash!"
 msgstr "ברוכים הבאים ל-EmDash!"
 
@@ -15667,11 +15667,11 @@ msgstr "תוספי Yoast/RankMath"
 msgid "You can close this page and return to your terminal."
 msgstr "תוכלו לסגור עמוד זה ולחזור למסוף שלכם."
 
-#: packages/admin/src/components/WelcomeModal.tsx:49
+#: packages/admin/src/components/WelcomeModal.tsx:50
 msgid "You can create and edit your own content."
 msgstr "תוכלו ליצור ולערוך את התוכן שלכם."
 
-#: packages/admin/src/components/WelcomeModal.tsx:48
+#: packages/admin/src/components/WelcomeModal.tsx:49
 msgid "You can manage content, media, menus, and taxonomies."
 msgstr "תוכלו לנהל תוכן, מדיה, תפריטים וטקסונומיות."
 
@@ -15679,7 +15679,7 @@ msgstr "תוכלו לנהל תוכן, מדיה, תפריטים וטקסונומ�
 msgid "You can still edit the fixed fields above. Saving will not touch any stored custom-field values."
 msgstr "עדיין תוכלו לערוך את השדות הקבועים למעלה. השמירה לא תיגע בערכים שמורים של שדות מותאמים אישית."
 
-#: packages/admin/src/components/WelcomeModal.tsx:50
+#: packages/admin/src/components/WelcomeModal.tsx:51
 msgid "You can view and contribute to the site."
 msgstr "תוכלו לצפות באתר ולתרום לו."
 
@@ -15704,7 +15704,7 @@ msgstr "אין לכם הרשאה להעביר קובץ זה."
 msgid "You don't have permission to view the calendar."
 msgstr "אין לכם הרשאה לצפות בלוח השנה."
 
-#: packages/admin/src/components/WelcomeModal.tsx:47
+#: packages/admin/src/components/WelcomeModal.tsx:48
 msgid "You have full access to manage this site, including users, settings, and all content."
 msgstr "יש לכם גישה מלאה לניהול אתר זה, כולל משתמשים, הגדרות וכל התוכן."
 
@@ -15783,7 +15783,7 @@ msgstr "אתם@company.com"
 msgid "you@example.com"
 msgstr "אתם@example.com"
 
-#: packages/admin/src/components/WelcomeModal.tsx:45
+#: packages/admin/src/components/WelcomeModal.tsx:46
 msgid "Your account has been created successfully."
 msgstr "החשבון שלכם נוצר בהצלחה."
 
@@ -15857,7 +15857,7 @@ msgstr "השם שלכם"
 msgid "Your name (optional)"
 msgstr "השם שלכם (אופציונלי)"
 
-#: packages/admin/src/components/WelcomeModal.tsx:46
+#: packages/admin/src/components/WelcomeModal.tsx:47
 msgid "Your Role"
 msgstr "התפקיד שלכם"
 

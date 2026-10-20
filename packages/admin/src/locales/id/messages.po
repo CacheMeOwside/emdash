@@ -1561,7 +1561,7 @@ msgstr "Admin"
 msgid "Admin navigation"
 msgstr "Navigasi admin"
 
-#: packages/admin/src/components/WelcomeModal.tsx:25
+#: packages/admin/src/components/WelcomeModal.tsx:26
 msgid "Administrator"
 msgstr "Administrator"
 
@@ -1984,7 +1984,7 @@ msgstr "Apakah Anda yakin ingin menghapus kolom \"{0}\"?"
 msgid "Are you sure you want to delete this menu? This will also delete all menu items. This action cannot be undone."
 msgstr "Apakah Anda yakin ingin menghapus menu ini? Ini juga akan menghapus semua item menu. Tindakan ini tidak dapat dibatalkan."
 
-#: packages/admin/src/components/WelcomeModal.tsx:59
+#: packages/admin/src/components/WelcomeModal.tsx:60
 msgid "As an administrator, you can invite other users from the Users section."
 msgstr "Sebagai administrator, Anda dapat mengundang pengguna lain dari bagian Pengguna."
 
@@ -2058,7 +2058,7 @@ msgstr "Otentikasi dibatalkan atau waktu telah habis. Silakan coba lagi."
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1418
 #: packages/admin/src/components/RelationForm.tsx:315
 #: packages/admin/src/components/users/roleDefinitions.ts:30
-#: packages/admin/src/components/WelcomeModal.tsx:27
+#: packages/admin/src/components/WelcomeModal.tsx:28
 msgid "Author"
 msgstr "Penulis"
 
@@ -3096,7 +3096,7 @@ msgstr "Klik tautan ini untuk masuk ke {siteName}:"
 #: packages/admin/src/components/users/InviteUserModal.tsx:88
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
-#: packages/admin/src/components/WelcomeModal.tsx:60
+#: packages/admin/src/components/WelcomeModal.tsx:61
 #: packages/admin/src/components/Widgets.tsx:414
 #: packages/admin/src/components/Widgets.tsx:420
 #: packages/admin/src/components/Widgets.tsx:424
@@ -3482,7 +3482,7 @@ msgid "Continue with security key"
 msgstr "Lanjutkan dengan kunci keamanan"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:24
-#: packages/admin/src/components/WelcomeModal.tsx:28
+#: packages/admin/src/components/WelcomeModal.tsx:29
 msgid "Contributor"
 msgstr "Kontributor"
 
@@ -5111,7 +5111,7 @@ msgid "visualEditing.sessionExpired"
 msgstr "Sesi penyuntingan kedaluwarsa. Muat ulang halaman untuk melanjutkan."
 
 #: packages/admin/src/components/users/roleDefinitions.ts:36
-#: packages/admin/src/components/WelcomeModal.tsx:26
+#: packages/admin/src/components/WelcomeModal.tsx:27
 msgid "Editor"
 msgstr "Penyunting"
 
@@ -5885,7 +5885,7 @@ msgstr "Gagal membuang draf"
 msgid "Failed to dismiss scheduled publication rejection"
 msgstr "Gagal mengabaikan penolakan publikasi terjadwal"
 
-#: packages/admin/src/components/WelcomeModal.tsx:76
+#: packages/admin/src/components/WelcomeModal.tsx:78
 msgid "Failed to dismiss welcome"
 msgstr "Gagal mengabaikan sambutan"
 
@@ -6991,7 +6991,7 @@ msgstr "Pengaturan Umum"
 msgid "Genres"
 msgstr "Genre"
 
-#: packages/admin/src/components/WelcomeModal.tsx:154
+#: packages/admin/src/components/WelcomeModal.tsx:156
 msgid "Get Started"
 msgstr "Mulai"
 
@@ -13220,7 +13220,7 @@ msgid "Sub-Fields"
 msgstr "Sub-Kolom"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:18
-#: packages/admin/src/components/WelcomeModal.tsx:29
+#: packages/admin/src/components/WelcomeModal.tsx:30
 msgid "Subscriber"
 msgstr "Pelanggan"
 
@@ -15390,11 +15390,11 @@ msgstr "Situs web"
 msgid "Website URL"
 msgstr "URL situs web"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "Selamat datang di EmDash, {firstName}!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash!"
 msgstr "Selamat datang di EmDash!"
 
@@ -15666,11 +15666,11 @@ msgstr "Yoast/RankMath"
 msgid "You can close this page and return to your terminal."
 msgstr "Anda dapat menutup halaman ini dan kembali ke terminal Anda."
 
-#: packages/admin/src/components/WelcomeModal.tsx:49
+#: packages/admin/src/components/WelcomeModal.tsx:50
 msgid "You can create and edit your own content."
 msgstr "Anda dapat membuat dan menyunting konten Anda sendiri."
 
-#: packages/admin/src/components/WelcomeModal.tsx:48
+#: packages/admin/src/components/WelcomeModal.tsx:49
 msgid "You can manage content, media, menus, and taxonomies."
 msgstr "Anda dapat mengelola konten, media, menu, dan taksonomi."
 
@@ -15678,7 +15678,7 @@ msgstr "Anda dapat mengelola konten, media, menu, dan taksonomi."
 msgid "You can still edit the fixed fields above. Saving will not touch any stored custom-field values."
 msgstr "Anda masih dapat menyunting kolom tetap di atas. Penyimpanan tidak akan mengubah nilai kolom kustom yang sudah tersimpan."
 
-#: packages/admin/src/components/WelcomeModal.tsx:50
+#: packages/admin/src/components/WelcomeModal.tsx:51
 msgid "You can view and contribute to the site."
 msgstr "Anda dapat melihat dan berkontribusi ke situs."
 
@@ -15703,7 +15703,7 @@ msgstr "Anda tidak memiliki izin untuk memindahkan berkas ini."
 msgid "You don't have permission to view the calendar."
 msgstr "Anda tidak memiliki izin untuk melihat kalender."
 
-#: packages/admin/src/components/WelcomeModal.tsx:47
+#: packages/admin/src/components/WelcomeModal.tsx:48
 msgid "You have full access to manage this site, including users, settings, and all content."
 msgstr "Anda memiliki akses penuh untuk mengelola situs ini, termasuk pengguna, pengaturan, dan semua konten."
 
@@ -15782,7 +15782,7 @@ msgstr "you@company.com"
 msgid "you@example.com"
 msgstr "you@example.com"
 
-#: packages/admin/src/components/WelcomeModal.tsx:45
+#: packages/admin/src/components/WelcomeModal.tsx:46
 msgid "Your account has been created successfully."
 msgstr "Akun Anda telah berhasil dibuat."
 
@@ -15856,7 +15856,7 @@ msgstr "Nama Anda"
 msgid "Your name (optional)"
 msgstr "Nama Anda (opsional)"
 
-#: packages/admin/src/components/WelcomeModal.tsx:46
+#: packages/admin/src/components/WelcomeModal.tsx:47
 msgid "Your Role"
 msgstr "Peran Anda"
 

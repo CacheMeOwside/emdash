@@ -1561,7 +1561,7 @@ msgstr "Správce"
 msgid "Admin navigation"
 msgstr "Navigace administrace"
 
-#: packages/admin/src/components/WelcomeModal.tsx:25
+#: packages/admin/src/components/WelcomeModal.tsx:26
 msgid "Administrator"
 msgstr "Administrátor"
 
@@ -1984,7 +1984,7 @@ msgstr "Opravdu chcete smazat pole „{0}“?"
 msgid "Are you sure you want to delete this menu? This will also delete all menu items. This action cannot be undone."
 msgstr "Opravdu chcete smazat tuto nabídku? Smažou se tím i všechny její položky. Tuto akci nelze vrátit zpět."
 
-#: packages/admin/src/components/WelcomeModal.tsx:59
+#: packages/admin/src/components/WelcomeModal.tsx:60
 msgid "As an administrator, you can invite other users from the Users section."
 msgstr "Jako administrátor můžete pozvat další uživatele v sekci Uživatelé."
 
@@ -2058,7 +2058,7 @@ msgstr "Ověření bylo zrušeno nebo vypršel jeho časový limit. Zkuste to pr
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1418
 #: packages/admin/src/components/RelationForm.tsx:315
 #: packages/admin/src/components/users/roleDefinitions.ts:30
-#: packages/admin/src/components/WelcomeModal.tsx:27
+#: packages/admin/src/components/WelcomeModal.tsx:28
 msgid "Author"
 msgstr "Autor"
 
@@ -3096,7 +3096,7 @@ msgstr ""
 #: packages/admin/src/components/users/InviteUserModal.tsx:88
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
-#: packages/admin/src/components/WelcomeModal.tsx:60
+#: packages/admin/src/components/WelcomeModal.tsx:61
 #: packages/admin/src/components/Widgets.tsx:414
 #: packages/admin/src/components/Widgets.tsx:420
 #: packages/admin/src/components/Widgets.tsx:424
@@ -3482,7 +3482,7 @@ msgid "Continue with security key"
 msgstr ""
 
 #: packages/admin/src/components/users/roleDefinitions.ts:24
-#: packages/admin/src/components/WelcomeModal.tsx:28
+#: packages/admin/src/components/WelcomeModal.tsx:29
 msgid "Contributor"
 msgstr "Přispěvatel"
 
@@ -5111,7 +5111,7 @@ msgid "visualEditing.sessionExpired"
 msgstr ""
 
 #: packages/admin/src/components/users/roleDefinitions.ts:36
-#: packages/admin/src/components/WelcomeModal.tsx:26
+#: packages/admin/src/components/WelcomeModal.tsx:27
 msgid "Editor"
 msgstr "Redaktor"
 
@@ -5885,7 +5885,7 @@ msgstr ""
 msgid "Failed to dismiss scheduled publication rejection"
 msgstr ""
 
-#: packages/admin/src/components/WelcomeModal.tsx:76
+#: packages/admin/src/components/WelcomeModal.tsx:78
 msgid "Failed to dismiss welcome"
 msgstr "Nepodařilo se zavřít uvítání"
 
@@ -6991,7 +6991,7 @@ msgstr "Obecné nastavení"
 msgid "Genres"
 msgstr "Žánry"
 
-#: packages/admin/src/components/WelcomeModal.tsx:154
+#: packages/admin/src/components/WelcomeModal.tsx:156
 msgid "Get Started"
 msgstr "Začít"
 
@@ -13220,7 +13220,7 @@ msgid "Sub-Fields"
 msgstr "Podpole"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:18
-#: packages/admin/src/components/WelcomeModal.tsx:29
+#: packages/admin/src/components/WelcomeModal.tsx:30
 msgid "Subscriber"
 msgstr "Odběratel"
 
@@ -15390,11 +15390,11 @@ msgstr "Web"
 msgid "Website URL"
 msgstr "URL webu"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "Vítejte v EmDash, {firstName}!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash!"
 msgstr "Vítejte v EmDash!"
 
@@ -15666,11 +15666,11 @@ msgstr "Yoast/RankMath"
 msgid "You can close this page and return to your terminal."
 msgstr "Tuto stránku můžete zavřít a vrátit se do terminálu."
 
-#: packages/admin/src/components/WelcomeModal.tsx:49
+#: packages/admin/src/components/WelcomeModal.tsx:50
 msgid "You can create and edit your own content."
 msgstr "Můžete vytvářet a upravovat vlastní obsah."
 
-#: packages/admin/src/components/WelcomeModal.tsx:48
+#: packages/admin/src/components/WelcomeModal.tsx:49
 msgid "You can manage content, media, menus, and taxonomies."
 msgstr "Můžete spravovat obsah, média, nabídky a taxonomie."
 
@@ -15678,7 +15678,7 @@ msgstr "Můžete spravovat obsah, média, nabídky a taxonomie."
 msgid "You can still edit the fixed fields above. Saving will not touch any stored custom-field values."
 msgstr "Pevná pole výše lze i nadále upravovat. Uložení neovlivní žádné uložené hodnoty vlastních polí."
 
-#: packages/admin/src/components/WelcomeModal.tsx:50
+#: packages/admin/src/components/WelcomeModal.tsx:51
 msgid "You can view and contribute to the site."
 msgstr "Můžete web prohlížet a přispívat do něj."
 
@@ -15703,7 +15703,7 @@ msgstr "Nemáte oprávnění k přesunu tohoto souboru."
 msgid "You don't have permission to view the calendar."
 msgstr ""
 
-#: packages/admin/src/components/WelcomeModal.tsx:47
+#: packages/admin/src/components/WelcomeModal.tsx:48
 msgid "You have full access to manage this site, including users, settings, and all content."
 msgstr "Máte plný přístup ke správě tohoto webu včetně uživatelů, nastavení a veškerého obsahu."
 
@@ -15782,7 +15782,7 @@ msgstr "vy@firma.cz"
 msgid "you@example.com"
 msgstr "vy@example.com"
 
-#: packages/admin/src/components/WelcomeModal.tsx:45
+#: packages/admin/src/components/WelcomeModal.tsx:46
 msgid "Your account has been created successfully."
 msgstr "Váš účet byl úspěšně vytvořen."
 
@@ -15856,7 +15856,7 @@ msgstr "Vaše jméno"
 msgid "Your name (optional)"
 msgstr "Vaše jméno (nepovinné)"
 
-#: packages/admin/src/components/WelcomeModal.tsx:46
+#: packages/admin/src/components/WelcomeModal.tsx:47
 msgid "Your Role"
 msgstr "Vaše role"
 

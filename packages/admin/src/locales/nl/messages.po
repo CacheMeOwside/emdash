@@ -1561,7 +1561,7 @@ msgstr "Admin"
 msgid "Admin navigation"
 msgstr "Adminnavigatie"
 
-#: packages/admin/src/components/WelcomeModal.tsx:25
+#: packages/admin/src/components/WelcomeModal.tsx:26
 msgid "Administrator"
 msgstr "Beheerder"
 
@@ -1984,7 +1984,7 @@ msgstr "Weet je zeker dat je het veld \"{0}\" wilt verwijderen?"
 msgid "Are you sure you want to delete this menu? This will also delete all menu items. This action cannot be undone."
 msgstr "Weet je zeker dat je dit menu wilt verwijderen? Hiermee worden ook alle menu-items verwijderd. Deze actie kan niet ongedaan worden gemaakt."
 
-#: packages/admin/src/components/WelcomeModal.tsx:59
+#: packages/admin/src/components/WelcomeModal.tsx:60
 msgid "As an administrator, you can invite other users from the Users section."
 msgstr "Als beheerder kun je andere gebruikers uitnodigen via de sectie Gebruikers."
 
@@ -2058,7 +2058,7 @@ msgstr "Authenticatie is geannuleerd of verlopen. Probeer het opnieuw."
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1418
 #: packages/admin/src/components/RelationForm.tsx:315
 #: packages/admin/src/components/users/roleDefinitions.ts:30
-#: packages/admin/src/components/WelcomeModal.tsx:27
+#: packages/admin/src/components/WelcomeModal.tsx:28
 msgid "Author"
 msgstr "Auteur"
 
@@ -3096,7 +3096,7 @@ msgstr "Klik op deze link om in te loggen op {siteName}:"
 #: packages/admin/src/components/users/InviteUserModal.tsx:88
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
-#: packages/admin/src/components/WelcomeModal.tsx:60
+#: packages/admin/src/components/WelcomeModal.tsx:61
 #: packages/admin/src/components/Widgets.tsx:414
 #: packages/admin/src/components/Widgets.tsx:420
 #: packages/admin/src/components/Widgets.tsx:424
@@ -3482,7 +3482,7 @@ msgid "Continue with security key"
 msgstr "Doorgaan met beveiligingssleutel"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:24
-#: packages/admin/src/components/WelcomeModal.tsx:28
+#: packages/admin/src/components/WelcomeModal.tsx:29
 msgid "Contributor"
 msgstr "Bijdrager"
 
@@ -5111,7 +5111,7 @@ msgid "visualEditing.sessionExpired"
 msgstr "De bewerksessie is verlopen. Ververs de pagina om verder te gaan."
 
 #: packages/admin/src/components/users/roleDefinitions.ts:36
-#: packages/admin/src/components/WelcomeModal.tsx:26
+#: packages/admin/src/components/WelcomeModal.tsx:27
 msgid "Editor"
 msgstr "Redacteur"
 
@@ -5885,7 +5885,7 @@ msgstr "Verwerpen van concept mislukt"
 msgid "Failed to dismiss scheduled publication rejection"
 msgstr "Melding over geblokkeerde ingeplande publicatie kon niet worden gesloten"
 
-#: packages/admin/src/components/WelcomeModal.tsx:76
+#: packages/admin/src/components/WelcomeModal.tsx:78
 msgid "Failed to dismiss welcome"
 msgstr "Verbergen van welkomstscherm mislukt"
 
@@ -6991,7 +6991,7 @@ msgstr "Algemene instellingen"
 msgid "Genres"
 msgstr "Genres"
 
-#: packages/admin/src/components/WelcomeModal.tsx:154
+#: packages/admin/src/components/WelcomeModal.tsx:156
 msgid "Get Started"
 msgstr "Aan de slag"
 
@@ -13220,7 +13220,7 @@ msgid "Sub-Fields"
 msgstr "Subvelden"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:18
-#: packages/admin/src/components/WelcomeModal.tsx:29
+#: packages/admin/src/components/WelcomeModal.tsx:30
 msgid "Subscriber"
 msgstr "Abonnee"
 
@@ -15390,11 +15390,11 @@ msgstr "Website"
 msgid "Website URL"
 msgstr "Website-URL"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "Welkom bij EmDash, {firstName}!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash!"
 msgstr "Welkom bij EmDash!"
 
@@ -15666,11 +15666,11 @@ msgstr "Yoast/RankMath"
 msgid "You can close this page and return to your terminal."
 msgstr "Je kunt deze pagina sluiten en teruggaan naar je terminal."
 
-#: packages/admin/src/components/WelcomeModal.tsx:49
+#: packages/admin/src/components/WelcomeModal.tsx:50
 msgid "You can create and edit your own content."
 msgstr "Je kunt je eigen content aanmaken en bewerken."
 
-#: packages/admin/src/components/WelcomeModal.tsx:48
+#: packages/admin/src/components/WelcomeModal.tsx:49
 msgid "You can manage content, media, menus, and taxonomies."
 msgstr "Je kunt content, media, menu's en taxonomieën beheren."
 
@@ -15678,7 +15678,7 @@ msgstr "Je kunt content, media, menu's en taxonomieën beheren."
 msgid "You can still edit the fixed fields above. Saving will not touch any stored custom-field values."
 msgstr "Je kunt de vaste velden hierboven nog steeds bewerken. Opslaan wijzigt geen opgeslagen waarden van aangepaste velden."
 
-#: packages/admin/src/components/WelcomeModal.tsx:50
+#: packages/admin/src/components/WelcomeModal.tsx:51
 msgid "You can view and contribute to the site."
 msgstr "Je kunt de site bekijken en eraan bijdragen."
 
@@ -15703,7 +15703,7 @@ msgstr "Je hebt geen rechten om dit bestand te verplaatsen."
 msgid "You don't have permission to view the calendar."
 msgstr "Je hebt geen rechten om de kalender te bekijken."
 
-#: packages/admin/src/components/WelcomeModal.tsx:47
+#: packages/admin/src/components/WelcomeModal.tsx:48
 msgid "You have full access to manage this site, including users, settings, and all content."
 msgstr "Je hebt volledige toegang om deze site te beheren, inclusief gebruikers, instellingen en alle content."
 
@@ -15782,7 +15782,7 @@ msgstr "jij@bedrijf.com"
 msgid "you@example.com"
 msgstr "jij@voorbeeld.com"
 
-#: packages/admin/src/components/WelcomeModal.tsx:45
+#: packages/admin/src/components/WelcomeModal.tsx:46
 msgid "Your account has been created successfully."
 msgstr "Je account is succesvol aangemaakt."
 
@@ -15856,7 +15856,7 @@ msgstr "Je naam"
 msgid "Your name (optional)"
 msgstr "Je naam (optioneel)"
 
-#: packages/admin/src/components/WelcomeModal.tsx:46
+#: packages/admin/src/components/WelcomeModal.tsx:47
 msgid "Your Role"
 msgstr "Je rol"
 

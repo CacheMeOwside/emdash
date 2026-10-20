@@ -1561,7 +1561,7 @@ msgstr "관리자"
 msgid "Admin navigation"
 msgstr "관리자 탐색 메뉴"
 
-#: packages/admin/src/components/WelcomeModal.tsx:25
+#: packages/admin/src/components/WelcomeModal.tsx:26
 msgid "Administrator"
 msgstr "관리자"
 
@@ -1984,7 +1984,7 @@ msgstr "정말로 \"{0}\" 필드를 삭제하시겠습니까?"
 msgid "Are you sure you want to delete this menu? This will also delete all menu items. This action cannot be undone."
 msgstr "이 메뉴를 삭제하시겠습니까? 그러면 모든 메뉴 항목도 삭제됩니다. 이 작업은 취소할 수 없습니다."
 
-#: packages/admin/src/components/WelcomeModal.tsx:59
+#: packages/admin/src/components/WelcomeModal.tsx:60
 msgid "As an administrator, you can invite other users from the Users section."
 msgstr "관리자는 사용자 섹션에서 다른 사용자를 초대할 수 있습니다."
 
@@ -2058,7 +2058,7 @@ msgstr "인증이 취소되었거나 시간이 초과되었습니다. 다시 시
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1418
 #: packages/admin/src/components/RelationForm.tsx:315
 #: packages/admin/src/components/users/roleDefinitions.ts:30
-#: packages/admin/src/components/WelcomeModal.tsx:27
+#: packages/admin/src/components/WelcomeModal.tsx:28
 msgid "Author"
 msgstr "작성자"
 
@@ -3096,7 +3096,7 @@ msgstr "{siteName}에 로그인하려면 이 링크를 클릭하세요:"
 #: packages/admin/src/components/users/InviteUserModal.tsx:88
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
-#: packages/admin/src/components/WelcomeModal.tsx:60
+#: packages/admin/src/components/WelcomeModal.tsx:61
 #: packages/admin/src/components/Widgets.tsx:414
 #: packages/admin/src/components/Widgets.tsx:420
 #: packages/admin/src/components/Widgets.tsx:424
@@ -3482,7 +3482,7 @@ msgid "Continue with security key"
 msgstr "보안 키로 계속"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:24
-#: packages/admin/src/components/WelcomeModal.tsx:28
+#: packages/admin/src/components/WelcomeModal.tsx:29
 msgid "Contributor"
 msgstr "기여자"
 
@@ -5111,7 +5111,7 @@ msgid "visualEditing.sessionExpired"
 msgstr "편집 세션이 만료되었습니다. 계속하려면 페이지를 새로고침하세요."
 
 #: packages/admin/src/components/users/roleDefinitions.ts:36
-#: packages/admin/src/components/WelcomeModal.tsx:26
+#: packages/admin/src/components/WelcomeModal.tsx:27
 msgid "Editor"
 msgstr "편집자"
 
@@ -5885,7 +5885,7 @@ msgstr ""
 msgid "Failed to dismiss scheduled publication rejection"
 msgstr "예약 게시 거부 알림을 닫지 못했습니다"
 
-#: packages/admin/src/components/WelcomeModal.tsx:76
+#: packages/admin/src/components/WelcomeModal.tsx:78
 msgid "Failed to dismiss welcome"
 msgstr "환영 안내 창을 닫지 못했습니다"
 
@@ -6991,7 +6991,7 @@ msgstr "일반 설정"
 msgid "Genres"
 msgstr "장르"
 
-#: packages/admin/src/components/WelcomeModal.tsx:154
+#: packages/admin/src/components/WelcomeModal.tsx:156
 msgid "Get Started"
 msgstr "시작하기"
 
@@ -13220,7 +13220,7 @@ msgid "Sub-Fields"
 msgstr "하위 필드"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:18
-#: packages/admin/src/components/WelcomeModal.tsx:29
+#: packages/admin/src/components/WelcomeModal.tsx:30
 msgid "Subscriber"
 msgstr "열람자"
 
@@ -15390,11 +15390,11 @@ msgstr "웹사이트"
 msgid "Website URL"
 msgstr "웹사이트 URL"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "EmDash에 오신 것을 환영합니다, {firstName}님!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash!"
 msgstr "EmDash에 오신 것을 환영합니다!"
 
@@ -15666,11 +15666,11 @@ msgstr "Yoast/RankMath"
 msgid "You can close this page and return to your terminal."
 msgstr "이 페이지를 닫고 터미널로 돌아갈 수 있습니다."
 
-#: packages/admin/src/components/WelcomeModal.tsx:49
+#: packages/admin/src/components/WelcomeModal.tsx:50
 msgid "You can create and edit your own content."
 msgstr "본인의 콘텐츠를 작성하고 수정할 수 있습니다."
 
-#: packages/admin/src/components/WelcomeModal.tsx:48
+#: packages/admin/src/components/WelcomeModal.tsx:49
 msgid "You can manage content, media, menus, and taxonomies."
 msgstr "콘텐츠, 미디어, 메뉴, 분류를 관리할 수 있습니다."
 
@@ -15678,7 +15678,7 @@ msgstr "콘텐츠, 미디어, 메뉴, 분류를 관리할 수 있습니다."
 msgid "You can still edit the fixed fields above. Saving will not touch any stored custom-field values."
 msgstr "위의 기본 필드는 계속 편집할 수 있습니다. 저장해도 저장된 커스텀 필드 값은 변경되지 않습니다."
 
-#: packages/admin/src/components/WelcomeModal.tsx:50
+#: packages/admin/src/components/WelcomeModal.tsx:51
 msgid "You can view and contribute to the site."
 msgstr "사이트를 열람하고 기여할 수 있습니다."
 
@@ -15703,7 +15703,7 @@ msgstr "이 파일을 이동할 권한이 없습니다."
 msgid "You don't have permission to view the calendar."
 msgstr ""
 
-#: packages/admin/src/components/WelcomeModal.tsx:47
+#: packages/admin/src/components/WelcomeModal.tsx:48
 msgid "You have full access to manage this site, including users, settings, and all content."
 msgstr "사용자, 설정, 전체 콘텐츠를 포함한 사이트 전체를 관리할 수 있는 권한이 있습니다."
 
@@ -15782,7 +15782,7 @@ msgstr "you@company.com"
 msgid "you@example.com"
 msgstr "you@example.com"
 
-#: packages/admin/src/components/WelcomeModal.tsx:45
+#: packages/admin/src/components/WelcomeModal.tsx:46
 msgid "Your account has been created successfully."
 msgstr "계정이 성공적으로 만들어졌습니다."
 
@@ -15856,7 +15856,7 @@ msgstr "이름"
 msgid "Your name (optional)"
 msgstr "이름(선택 사항)"
 
-#: packages/admin/src/components/WelcomeModal.tsx:46
+#: packages/admin/src/components/WelcomeModal.tsx:47
 msgid "Your Role"
 msgstr "내 역할"
 

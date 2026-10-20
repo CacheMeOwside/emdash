@@ -1561,7 +1561,7 @@ msgstr "অ্যাডমিন"
 msgid "Admin navigation"
 msgstr "অ্যাডমিন নেভিগেশন"
 
-#: packages/admin/src/components/WelcomeModal.tsx:25
+#: packages/admin/src/components/WelcomeModal.tsx:26
 msgid "Administrator"
 msgstr "অ্যাডমিন"
 
@@ -1984,7 +1984,7 @@ msgstr "আপনি কি নিশ্চিত যে আপনি \"{0}\" �
 msgid "Are you sure you want to delete this menu? This will also delete all menu items. This action cannot be undone."
 msgstr "আপনি কি নিশ্চিত যে আপনি এই মেনুটি মুছতে চান? এতে মেনুর সব আইটেমও মুছে যাবে। এটি পূর্বাবস্থায় ফেরানো যাবে না।"
 
-#: packages/admin/src/components/WelcomeModal.tsx:59
+#: packages/admin/src/components/WelcomeModal.tsx:60
 msgid "As an administrator, you can invite other users from the Users section."
 msgstr "অ্যাডমিন হিসেবে, আপনি ব্যবহারকারী সেকশন থেকে অন্য ব্যবহারকারীদের আমন্ত্রণ জানাতে পারেন।"
 
@@ -2058,7 +2058,7 @@ msgstr "প্রমাণীকরণ বাতিল হয়েছে বা
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1418
 #: packages/admin/src/components/RelationForm.tsx:315
 #: packages/admin/src/components/users/roleDefinitions.ts:30
-#: packages/admin/src/components/WelcomeModal.tsx:27
+#: packages/admin/src/components/WelcomeModal.tsx:28
 msgid "Author"
 msgstr "লেখক"
 
@@ -3096,7 +3096,7 @@ msgstr "{siteName}-এ সাইন ইন করতে এই লিঙ্ক�
 #: packages/admin/src/components/users/InviteUserModal.tsx:88
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
-#: packages/admin/src/components/WelcomeModal.tsx:60
+#: packages/admin/src/components/WelcomeModal.tsx:61
 #: packages/admin/src/components/Widgets.tsx:414
 #: packages/admin/src/components/Widgets.tsx:420
 #: packages/admin/src/components/Widgets.tsx:424
@@ -3482,7 +3482,7 @@ msgid "Continue with security key"
 msgstr "সিকিউরিটি কী দিয়ে চালিয়ে যান"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:24
-#: packages/admin/src/components/WelcomeModal.tsx:28
+#: packages/admin/src/components/WelcomeModal.tsx:29
 msgid "Contributor"
 msgstr "কন্ট্রিবিউটর"
 
@@ -5111,7 +5111,7 @@ msgid "visualEditing.sessionExpired"
 msgstr "সম্পাদনার সেশনের মেয়াদ শেষ হয়েছে। চালিয়ে যেতে পেজটি রিফ্রেশ করুন।"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:36
-#: packages/admin/src/components/WelcomeModal.tsx:26
+#: packages/admin/src/components/WelcomeModal.tsx:27
 msgid "Editor"
 msgstr "এডিটর"
 
@@ -5885,7 +5885,7 @@ msgstr ""
 msgid "Failed to dismiss scheduled publication rejection"
 msgstr "নির্ধারিত প্রকাশনার প্রত্যাখ্যান বার্তা সরাতে ব্যর্থ হয়েছে"
 
-#: packages/admin/src/components/WelcomeModal.tsx:76
+#: packages/admin/src/components/WelcomeModal.tsx:78
 msgid "Failed to dismiss welcome"
 msgstr "স্বাগত বার্তা সরাতে ব্যর্থ হয়েছে"
 
@@ -6991,7 +6991,7 @@ msgstr "সাধারণ সেটিংস"
 msgid "Genres"
 msgstr "ধরন"
 
-#: packages/admin/src/components/WelcomeModal.tsx:154
+#: packages/admin/src/components/WelcomeModal.tsx:156
 msgid "Get Started"
 msgstr "শুরু করুন"
 
@@ -13220,7 +13220,7 @@ msgid "Sub-Fields"
 msgstr "সাব-ফিল্ড"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:18
-#: packages/admin/src/components/WelcomeModal.tsx:29
+#: packages/admin/src/components/WelcomeModal.tsx:30
 msgid "Subscriber"
 msgstr "সাবস্ক্রাইবার"
 
@@ -15390,11 +15390,11 @@ msgstr "ওয়েবসাইট"
 msgid "Website URL"
 msgstr "ওয়েবসাইটের URL"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "EmDash-এ স্বাগতম, {firstName}!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash!"
 msgstr "EmDash-এ স্বাগতম!"
 
@@ -15666,11 +15666,11 @@ msgstr "Yoast/RankMath"
 msgid "You can close this page and return to your terminal."
 msgstr "আপনি এই পেজটি বন্ধ করে আপনার টার্মিনালে ফিরে যেতে পারেন।"
 
-#: packages/admin/src/components/WelcomeModal.tsx:49
+#: packages/admin/src/components/WelcomeModal.tsx:50
 msgid "You can create and edit your own content."
 msgstr "আপনি নিজের কনটেন্ট তৈরি ও সম্পাদনা করতে পারবেন।"
 
-#: packages/admin/src/components/WelcomeModal.tsx:48
+#: packages/admin/src/components/WelcomeModal.tsx:49
 msgid "You can manage content, media, menus, and taxonomies."
 msgstr "আপনি কনটেন্ট, মিডিয়া, মেনু এবং ট্যাক্সোনমি পরিচালনা করতে পারবেন।"
 
@@ -15678,7 +15678,7 @@ msgstr "আপনি কনটেন্ট, মিডিয়া, মেনু 
 msgid "You can still edit the fixed fields above. Saving will not touch any stored custom-field values."
 msgstr "আপনি এখনো উপরের নির্দিষ্ট ফিল্ডগুলো সম্পাদনা করতে পারবেন। সংরক্ষণ করলে সংরক্ষিত কোনো কাস্টম-ফিল্ডের মান পরিবর্তিত হবে না।"
 
-#: packages/admin/src/components/WelcomeModal.tsx:50
+#: packages/admin/src/components/WelcomeModal.tsx:51
 msgid "You can view and contribute to the site."
 msgstr "আপনি সাইটটি দেখতে এবং এতে অবদান রাখতে পারবেন।"
 
@@ -15703,7 +15703,7 @@ msgstr "এই ফাইলটি সরানোর অনুমতি আপ�
 msgid "You don't have permission to view the calendar."
 msgstr ""
 
-#: packages/admin/src/components/WelcomeModal.tsx:47
+#: packages/admin/src/components/WelcomeModal.tsx:48
 msgid "You have full access to manage this site, including users, settings, and all content."
 msgstr "ব্যবহারকারী, সেটিংস এবং সব কনটেন্টসহ এই সাইট পরিচালনার পূর্ণ অ্যাক্সেস আপনার আছে।"
 
@@ -15782,7 +15782,7 @@ msgstr "you@company.com"
 msgid "you@example.com"
 msgstr "you@example.com"
 
-#: packages/admin/src/components/WelcomeModal.tsx:45
+#: packages/admin/src/components/WelcomeModal.tsx:46
 msgid "Your account has been created successfully."
 msgstr "আপনার অ্যাকাউন্ট সফলভাবে তৈরি হয়েছে।"
 
@@ -15856,7 +15856,7 @@ msgstr "আপনার নাম"
 msgid "Your name (optional)"
 msgstr "আপনার নাম (ঐচ্ছিক)"
 
-#: packages/admin/src/components/WelcomeModal.tsx:46
+#: packages/admin/src/components/WelcomeModal.tsx:47
 msgid "Your Role"
 msgstr "আপনার ভূমিকা"
 

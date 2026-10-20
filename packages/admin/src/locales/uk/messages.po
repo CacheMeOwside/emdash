@@ -1561,7 +1561,7 @@ msgstr "Адмін"
 msgid "Admin navigation"
 msgstr "Навігація адмін-панелі"
 
-#: packages/admin/src/components/WelcomeModal.tsx:25
+#: packages/admin/src/components/WelcomeModal.tsx:26
 msgid "Administrator"
 msgstr "Адміністратор"
 
@@ -1984,7 +1984,7 @@ msgstr "Ви впевнені, що хочете видалити поле \"{0}
 msgid "Are you sure you want to delete this menu? This will also delete all menu items. This action cannot be undone."
 msgstr "Ви впевнені, що хочете видалити це меню? Це також видалить усі елементи меню. Цю дію не можна скасувати."
 
-#: packages/admin/src/components/WelcomeModal.tsx:59
+#: packages/admin/src/components/WelcomeModal.tsx:60
 msgid "As an administrator, you can invite other users from the Users section."
 msgstr "Як адміністратор, ви можете запрошувати інших користувачів у розділі Користувачі."
 
@@ -2058,7 +2058,7 @@ msgstr "Автентифікацію скасовано або час вичер
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1418
 #: packages/admin/src/components/RelationForm.tsx:315
 #: packages/admin/src/components/users/roleDefinitions.ts:30
-#: packages/admin/src/components/WelcomeModal.tsx:27
+#: packages/admin/src/components/WelcomeModal.tsx:28
 msgid "Author"
 msgstr "Автор"
 
@@ -3096,7 +3096,7 @@ msgstr ""
 #: packages/admin/src/components/users/InviteUserModal.tsx:88
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
-#: packages/admin/src/components/WelcomeModal.tsx:60
+#: packages/admin/src/components/WelcomeModal.tsx:61
 #: packages/admin/src/components/Widgets.tsx:414
 #: packages/admin/src/components/Widgets.tsx:420
 #: packages/admin/src/components/Widgets.tsx:424
@@ -3482,7 +3482,7 @@ msgid "Continue with security key"
 msgstr ""
 
 #: packages/admin/src/components/users/roleDefinitions.ts:24
-#: packages/admin/src/components/WelcomeModal.tsx:28
+#: packages/admin/src/components/WelcomeModal.tsx:29
 msgid "Contributor"
 msgstr "Учасник"
 
@@ -5111,7 +5111,7 @@ msgid "visualEditing.sessionExpired"
 msgstr ""
 
 #: packages/admin/src/components/users/roleDefinitions.ts:36
-#: packages/admin/src/components/WelcomeModal.tsx:26
+#: packages/admin/src/components/WelcomeModal.tsx:27
 msgid "Editor"
 msgstr "Редактор"
 
@@ -5885,7 +5885,7 @@ msgstr ""
 msgid "Failed to dismiss scheduled publication rejection"
 msgstr ""
 
-#: packages/admin/src/components/WelcomeModal.tsx:76
+#: packages/admin/src/components/WelcomeModal.tsx:78
 msgid "Failed to dismiss welcome"
 msgstr "Не вдалося закрити привітання"
 
@@ -6991,7 +6991,7 @@ msgstr "Загальні налаштування"
 msgid "Genres"
 msgstr "Жанри"
 
-#: packages/admin/src/components/WelcomeModal.tsx:154
+#: packages/admin/src/components/WelcomeModal.tsx:156
 msgid "Get Started"
 msgstr "Почати"
 
@@ -13220,7 +13220,7 @@ msgid "Sub-Fields"
 msgstr "Підполя"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:18
-#: packages/admin/src/components/WelcomeModal.tsx:29
+#: packages/admin/src/components/WelcomeModal.tsx:30
 msgid "Subscriber"
 msgstr "Підписник"
 
@@ -15390,11 +15390,11 @@ msgstr "Вебсайт"
 msgid "Website URL"
 msgstr "URL вебсайту"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "Ласкаво просимо до EmDash, {firstName}!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash!"
 msgstr "Ласкаво просимо до EmDash!"
 
@@ -15666,11 +15666,11 @@ msgstr "Yoast/RankMath"
 msgid "You can close this page and return to your terminal."
 msgstr "Можете закрити цю сторінку й повернутися до термінала."
 
-#: packages/admin/src/components/WelcomeModal.tsx:49
+#: packages/admin/src/components/WelcomeModal.tsx:50
 msgid "You can create and edit your own content."
 msgstr "Ви можете створювати та редагувати власний контент."
 
-#: packages/admin/src/components/WelcomeModal.tsx:48
+#: packages/admin/src/components/WelcomeModal.tsx:49
 msgid "You can manage content, media, menus, and taxonomies."
 msgstr "Ви можете керувати контентом, медіа, меню та таксономіями."
 
@@ -15678,7 +15678,7 @@ msgstr "Ви можете керувати контентом, медіа, ме�
 msgid "You can still edit the fixed fields above. Saving will not touch any stored custom-field values."
 msgstr "Ви ще можете редагувати поля вище. Збереження не змінить збережені значення власних полів."
 
-#: packages/admin/src/components/WelcomeModal.tsx:50
+#: packages/admin/src/components/WelcomeModal.tsx:51
 msgid "You can view and contribute to the site."
 msgstr "Ви можете переглядати сайт і долучатися до роботи з ним."
 
@@ -15703,7 +15703,7 @@ msgstr ""
 msgid "You don't have permission to view the calendar."
 msgstr ""
 
-#: packages/admin/src/components/WelcomeModal.tsx:47
+#: packages/admin/src/components/WelcomeModal.tsx:48
 msgid "You have full access to manage this site, including users, settings, and all content."
 msgstr "У вас повний доступ до керування сайтом, включно з користувачами, налаштуваннями та всім контентом."
 
@@ -15782,7 +15782,7 @@ msgstr "ви@company.com"
 msgid "you@example.com"
 msgstr "ви@example.com"
 
-#: packages/admin/src/components/WelcomeModal.tsx:45
+#: packages/admin/src/components/WelcomeModal.tsx:46
 msgid "Your account has been created successfully."
 msgstr "Ваш обліковий запис успішно створено."
 
@@ -15856,7 +15856,7 @@ msgstr "Ваше ім’я"
 msgid "Your name (optional)"
 msgstr "Ваше ім’я (необов’язково)"
 
-#: packages/admin/src/components/WelcomeModal.tsx:46
+#: packages/admin/src/components/WelcomeModal.tsx:47
 msgid "Your Role"
 msgstr "Ваша роль"
 

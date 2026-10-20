@@ -1561,7 +1561,7 @@ msgstr "Yönetici"
 msgid "Admin navigation"
 msgstr "Yönetici gezinmesi"
 
-#: packages/admin/src/components/WelcomeModal.tsx:25
+#: packages/admin/src/components/WelcomeModal.tsx:26
 msgid "Administrator"
 msgstr "Yönetici"
 
@@ -1984,7 +1984,7 @@ msgstr "\"{0}\" alanını silmek istediğinizden emin misiniz?"
 msgid "Are you sure you want to delete this menu? This will also delete all menu items. This action cannot be undone."
 msgstr "Bu menüyü silmek istediğinizden emin misiniz? Bu aynı zamanda tüm menü öğelerini de silecektir. Bu eylem geri alınamaz."
 
-#: packages/admin/src/components/WelcomeModal.tsx:59
+#: packages/admin/src/components/WelcomeModal.tsx:60
 msgid "As an administrator, you can invite other users from the Users section."
 msgstr "Yönetici olarak Kullanıcılar bölümünden diğer kullanıcıları davet edebilirsiniz."
 
@@ -2058,7 +2058,7 @@ msgstr "Kimlik doğrulama iptal edildi veya zaman aşımına uğradı. Lütfen t
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1418
 #: packages/admin/src/components/RelationForm.tsx:315
 #: packages/admin/src/components/users/roleDefinitions.ts:30
-#: packages/admin/src/components/WelcomeModal.tsx:27
+#: packages/admin/src/components/WelcomeModal.tsx:28
 msgid "Author"
 msgstr "Yazar"
 
@@ -3096,7 +3096,7 @@ msgstr "{siteName} sitesinde oturum açmak için bu bağlantıya tıklayın:"
 #: packages/admin/src/components/users/InviteUserModal.tsx:88
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
-#: packages/admin/src/components/WelcomeModal.tsx:60
+#: packages/admin/src/components/WelcomeModal.tsx:61
 #: packages/admin/src/components/Widgets.tsx:414
 #: packages/admin/src/components/Widgets.tsx:420
 #: packages/admin/src/components/Widgets.tsx:424
@@ -3482,7 +3482,7 @@ msgid "Continue with security key"
 msgstr "Güvenlik anahtarıyla devam et"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:24
-#: packages/admin/src/components/WelcomeModal.tsx:28
+#: packages/admin/src/components/WelcomeModal.tsx:29
 msgid "Contributor"
 msgstr "Katkıda Bulunan"
 
@@ -5111,7 +5111,7 @@ msgid "visualEditing.sessionExpired"
 msgstr "Düzenleme oturumunun süresi doldu. Devam etmek için sayfayı yenileyin."
 
 #: packages/admin/src/components/users/roleDefinitions.ts:36
-#: packages/admin/src/components/WelcomeModal.tsx:26
+#: packages/admin/src/components/WelcomeModal.tsx:27
 msgid "Editor"
 msgstr "Editör"
 
@@ -5885,7 +5885,7 @@ msgstr "Taslak değişikliklerinden vazgeçilemedi"
 msgid "Failed to dismiss scheduled publication rejection"
 msgstr "Zamanlanmış yayın engeli bildirimi kapatılamadı"
 
-#: packages/admin/src/components/WelcomeModal.tsx:76
+#: packages/admin/src/components/WelcomeModal.tsx:78
 msgid "Failed to dismiss welcome"
 msgstr "Hoş geldiniz reddedilemedi"
 
@@ -6991,7 +6991,7 @@ msgstr "Genel Ayarlar"
 msgid "Genres"
 msgstr "Türler"
 
-#: packages/admin/src/components/WelcomeModal.tsx:154
+#: packages/admin/src/components/WelcomeModal.tsx:156
 msgid "Get Started"
 msgstr "Başlayın"
 
@@ -13220,7 +13220,7 @@ msgid "Sub-Fields"
 msgstr "Alt Alanlar"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:18
-#: packages/admin/src/components/WelcomeModal.tsx:29
+#: packages/admin/src/components/WelcomeModal.tsx:30
 msgid "Subscriber"
 msgstr "Abone"
 
@@ -15390,11 +15390,11 @@ msgstr "Web sitesi"
 msgid "Website URL"
 msgstr "Web sitesi URL'si"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "EmDash, {firstName}'e hoş geldiniz!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash!"
 msgstr "EmDash'e hoş geldiniz!"
 
@@ -15666,11 +15666,11 @@ msgstr "Yoast/RankMath"
 msgid "You can close this page and return to your terminal."
 msgstr "Bu sayfayı kapatıp terminalinize dönebilirsiniz."
 
-#: packages/admin/src/components/WelcomeModal.tsx:49
+#: packages/admin/src/components/WelcomeModal.tsx:50
 msgid "You can create and edit your own content."
 msgstr "Kendi içeriğinizi oluşturabilir ve düzenleyebilirsiniz."
 
-#: packages/admin/src/components/WelcomeModal.tsx:48
+#: packages/admin/src/components/WelcomeModal.tsx:49
 msgid "You can manage content, media, menus, and taxonomies."
 msgstr "İçeriği, medyayı, menüleri ve sınıflandırmaları yönetebilirsiniz."
 
@@ -15678,7 +15678,7 @@ msgstr "İçeriği, medyayı, menüleri ve sınıflandırmaları yönetebilirsin
 msgid "You can still edit the fixed fields above. Saving will not touch any stored custom-field values."
 msgstr "Yukarıdaki sabit alanları hâlâ düzenleyebilirsiniz. Kaydetme, saklanan özel alan değerlerine dokunmayacaktır."
 
-#: packages/admin/src/components/WelcomeModal.tsx:50
+#: packages/admin/src/components/WelcomeModal.tsx:51
 msgid "You can view and contribute to the site."
 msgstr "Siteyi görüntüleyebilir ve katkıda bulunabilirsiniz."
 
@@ -15703,7 +15703,7 @@ msgstr "Bu dosyayı taşıma izniniz yok."
 msgid "You don't have permission to view the calendar."
 msgstr "Takvimi görüntüleme izniniz yok."
 
-#: packages/admin/src/components/WelcomeModal.tsx:47
+#: packages/admin/src/components/WelcomeModal.tsx:48
 msgid "You have full access to manage this site, including users, settings, and all content."
 msgstr "Kullanıcılar, ayarlar ve tüm içerik dahil olmak üzere bu siteyi yönetmek için tam erişime sahipsiniz."
 
@@ -15782,7 +15782,7 @@ msgstr "sen@şirket.com"
 msgid "you@example.com"
 msgstr "sen@example.com"
 
-#: packages/admin/src/components/WelcomeModal.tsx:45
+#: packages/admin/src/components/WelcomeModal.tsx:46
 msgid "Your account has been created successfully."
 msgstr "Hesabınız başarıyla oluşturuldu."
 
@@ -15856,7 +15856,7 @@ msgstr "Adınız"
 msgid "Your name (optional)"
 msgstr "Adınız (isteğe bağlı)"
 
-#: packages/admin/src/components/WelcomeModal.tsx:46
+#: packages/admin/src/components/WelcomeModal.tsx:47
 msgid "Your Role"
 msgstr "Rolünüz"
 

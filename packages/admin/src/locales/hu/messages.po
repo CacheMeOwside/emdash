@@ -1561,7 +1561,7 @@ msgstr "Admin"
 msgid "Admin navigation"
 msgstr "Admin navigáció"
 
-#: packages/admin/src/components/WelcomeModal.tsx:25
+#: packages/admin/src/components/WelcomeModal.tsx:26
 msgid "Administrator"
 msgstr "Adminisztrátor"
 
@@ -1984,7 +1984,7 @@ msgstr "Biztosan törlöd a(z) \"{0}\" mezőt?"
 msgid "Are you sure you want to delete this menu? This will also delete all menu items. This action cannot be undone."
 msgstr "Biztosan törlöd ezt a menüt? Ez az összes menüelemet is törli. A művelet nem vonható vissza."
 
-#: packages/admin/src/components/WelcomeModal.tsx:59
+#: packages/admin/src/components/WelcomeModal.tsx:60
 msgid "As an administrator, you can invite other users from the Users section."
 msgstr "Adminisztrátorként a Felhasználók szakaszból hívhatsz meg további felhasználókat."
 
@@ -2058,7 +2058,7 @@ msgstr "A hitelesítés megszakadt vagy időtúllépés történt. Próbáld új
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1418
 #: packages/admin/src/components/RelationForm.tsx:315
 #: packages/admin/src/components/users/roleDefinitions.ts:30
-#: packages/admin/src/components/WelcomeModal.tsx:27
+#: packages/admin/src/components/WelcomeModal.tsx:28
 msgid "Author"
 msgstr "Szerző"
 
@@ -3096,7 +3096,7 @@ msgstr ""
 #: packages/admin/src/components/users/InviteUserModal.tsx:88
 #: packages/admin/src/components/users/InviteUserModal.tsx:94
 #: packages/admin/src/components/users/InviteUserModal.tsx:98
-#: packages/admin/src/components/WelcomeModal.tsx:60
+#: packages/admin/src/components/WelcomeModal.tsx:61
 #: packages/admin/src/components/Widgets.tsx:414
 #: packages/admin/src/components/Widgets.tsx:420
 #: packages/admin/src/components/Widgets.tsx:424
@@ -3482,7 +3482,7 @@ msgid "Continue with security key"
 msgstr ""
 
 #: packages/admin/src/components/users/roleDefinitions.ts:24
-#: packages/admin/src/components/WelcomeModal.tsx:28
+#: packages/admin/src/components/WelcomeModal.tsx:29
 msgid "Contributor"
 msgstr "Közreműködő"
 
@@ -5111,7 +5111,7 @@ msgid "visualEditing.sessionExpired"
 msgstr ""
 
 #: packages/admin/src/components/users/roleDefinitions.ts:36
-#: packages/admin/src/components/WelcomeModal.tsx:26
+#: packages/admin/src/components/WelcomeModal.tsx:27
 msgid "Editor"
 msgstr "Szerkesztő"
 
@@ -5885,7 +5885,7 @@ msgstr ""
 msgid "Failed to dismiss scheduled publication rejection"
 msgstr ""
 
-#: packages/admin/src/components/WelcomeModal.tsx:76
+#: packages/admin/src/components/WelcomeModal.tsx:78
 msgid "Failed to dismiss welcome"
 msgstr "Nem sikerült üdvözlést bezárni"
 
@@ -6991,7 +6991,7 @@ msgstr "Általános beállítások"
 msgid "Genres"
 msgstr "Műfajok"
 
-#: packages/admin/src/components/WelcomeModal.tsx:154
+#: packages/admin/src/components/WelcomeModal.tsx:156
 msgid "Get Started"
 msgstr "Kezdés"
 
@@ -13220,7 +13220,7 @@ msgid "Sub-Fields"
 msgstr "Almezők"
 
 #: packages/admin/src/components/users/roleDefinitions.ts:18
-#: packages/admin/src/components/WelcomeModal.tsx:29
+#: packages/admin/src/components/WelcomeModal.tsx:30
 msgid "Subscriber"
 msgstr "Feliratkozó"
 
@@ -15390,11 +15390,11 @@ msgstr "Weboldal"
 msgid "Website URL"
 msgstr "Weboldal URL"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "Üdv az EmDashben, {firstName}!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:102
+#: packages/admin/src/components/WelcomeModal.tsx:104
 msgid "Welcome to EmDash!"
 msgstr "Üdv az EmDashben!"
 
@@ -15666,11 +15666,11 @@ msgstr ""
 msgid "You can close this page and return to your terminal."
 msgstr "Bezárhatod ezt az oldalt, és visszatérhetsz a terminálhoz."
 
-#: packages/admin/src/components/WelcomeModal.tsx:49
+#: packages/admin/src/components/WelcomeModal.tsx:50
 msgid "You can create and edit your own content."
 msgstr "Létrehozhatod és szerkesztheted a saját tartalmaidat."
 
-#: packages/admin/src/components/WelcomeModal.tsx:48
+#: packages/admin/src/components/WelcomeModal.tsx:49
 msgid "You can manage content, media, menus, and taxonomies."
 msgstr "Kezelheted a tartalmakat, médiát, menüket és taxonómiákat."
 
@@ -15678,7 +15678,7 @@ msgstr "Kezelheted a tartalmakat, médiát, menüket és taxonómiákat."
 msgid "You can still edit the fixed fields above. Saving will not touch any stored custom-field values."
 msgstr "A fenti rögzített mezőket továbbra is szerkesztheted. A mentés nem módosítja a tárolt egyéni mezőértékeket."
 
-#: packages/admin/src/components/WelcomeModal.tsx:50
+#: packages/admin/src/components/WelcomeModal.tsx:51
 msgid "You can view and contribute to the site."
 msgstr "Megtekintheted a weboldalet és közreműködhetsz benne."
 
@@ -15703,7 +15703,7 @@ msgstr ""
 msgid "You don't have permission to view the calendar."
 msgstr ""
 
-#: packages/admin/src/components/WelcomeModal.tsx:47
+#: packages/admin/src/components/WelcomeModal.tsx:48
 msgid "You have full access to manage this site, including users, settings, and all content."
 msgstr "Teljes hozzáférésed van a weboldal kezeléséhez, beleértve a felhasználókat, beállításokat és minden tartalmat."
 
@@ -15782,7 +15782,7 @@ msgstr "you@company.com"
 msgid "you@example.com"
 msgstr "you@example.com"
 
-#: packages/admin/src/components/WelcomeModal.tsx:45
+#: packages/admin/src/components/WelcomeModal.tsx:46
 msgid "Your account has been created successfully."
 msgstr "A fiókod sikeresen létrejött."
 
@@ -15856,7 +15856,7 @@ msgstr "Neved"
 msgid "Your name (optional)"
 msgstr "Neved (opcionális)"
 
-#: packages/admin/src/components/WelcomeModal.tsx:46
+#: packages/admin/src/components/WelcomeModal.tsx:47
 msgid "Your Role"
 msgstr "Szerepköröd"
 
