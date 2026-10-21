@@ -97,7 +97,7 @@ msgid "{0, plural, one {# comment imported} other {# comments imported}}"
 msgstr "{0, plural, one {# kommentar importerad} other {# kommentarer importerade}}"
 
 #. placeholder {0}: result.affected
-#: packages/admin/src/router.tsx:2445
+#: packages/admin/src/router.tsx:2446
 msgid "{0, plural, one {# comment updated} other {# comments updated}}"
 msgstr "{0, plural, one {# kommentar uppdaterad} other {# kommentarer uppdaterade}}"
 
@@ -1172,7 +1172,7 @@ msgstr "Acceptera inbjudan"
 msgid "Access denied"
 msgstr "Åtkomst nekad"
 
-#: packages/admin/src/router.tsx:2465
+#: packages/admin/src/router.tsx:2466
 msgid "Access Denied"
 msgstr "Åtkomst nekad"
 
@@ -1829,11 +1829,11 @@ msgstr "En krypterad digital nyckel som du låser upp med fingeravtryck, ansikts
 #: packages/admin/src/router.tsx:1593
 #: packages/admin/src/router.tsx:1626
 #: packages/admin/src/router.tsx:1647
-#: packages/admin/src/router.tsx:2410
-#: packages/admin/src/router.tsx:2426
-#: packages/admin/src/router.tsx:2451
-#: packages/admin/src/router.tsx:2877
-#: packages/admin/src/router.tsx:3062
+#: packages/admin/src/router.tsx:2411
+#: packages/admin/src/router.tsx:2427
+#: packages/admin/src/router.tsx:2452
+#: packages/admin/src/router.tsx:2878
+#: packages/admin/src/router.tsx:3063
 #: packages/admin/src/routes/byline-schema.tsx:103
 #: packages/admin/src/routes/byline-schema.tsx:123
 #: packages/admin/src/routes/byline-schema.tsx:139
@@ -5413,7 +5413,7 @@ msgstr "post på den länkande sidan"
 #: packages/admin/src/components/SetupWizard.tsx:607
 #: packages/admin/src/components/TaxonomyManager.tsx:1210
 #: packages/admin/src/components/Widgets.tsx:773
-#: packages/admin/src/router.tsx:3337
+#: packages/admin/src/router.tsx:3338
 msgid "Error"
 msgstr "Fel"
 
@@ -5790,7 +5790,7 @@ msgid "Failed to delete collection"
 msgstr "Det gick inte att ta bort samlingen"
 
 #: packages/admin/src/lib/api/comments.ts:114
-#: packages/admin/src/router.tsx:2425
+#: packages/admin/src/router.tsx:2426
 msgid "Failed to delete comment"
 msgstr "Det gick inte att ta bort kommentaren"
 
@@ -6155,7 +6155,7 @@ msgstr "Det gick inte att hämta uppdateringsstatus"
 #: packages/admin/src/lib/api/current-user.ts:22
 #: packages/admin/src/lib/api/users.ts:91
 #: packages/admin/src/lib/api/users.ts:96
-#: packages/admin/src/router.tsx:2356
+#: packages/admin/src/router.tsx:2357
 msgid "Failed to fetch user"
 msgstr "Det gick inte att hämta användaren"
 
@@ -6344,7 +6344,7 @@ msgid "Failed to lock the entry"
 msgstr "Det gick inte att låsa posten"
 
 #: packages/admin/src/lib/api/comments.ts:131
-#: packages/admin/src/router.tsx:2450
+#: packages/admin/src/router.tsx:2451
 msgid "Failed to perform bulk action"
 msgstr "Det gick inte att utföra massåtgärden"
 
@@ -6374,7 +6374,7 @@ msgstr "Det gick inte att publicera innehållet"
 msgid "Failed to read byline field usage"
 msgstr "Det gick inte att läsa hur skribentfältet används"
 
-#: packages/admin/src/router.tsx:2876
+#: packages/admin/src/router.tsx:2877
 msgid "Failed to register {slug}"
 msgstr ""
 
@@ -6457,7 +6457,7 @@ msgstr "Det gick inte att skriva om URL:erna"
 
 #: packages/admin/src/router.tsx:910
 #: packages/admin/src/router.tsx:1313
-#: packages/admin/src/router.tsx:3061
+#: packages/admin/src/router.tsx:3062
 msgid "Failed to save"
 msgstr "Det gick inte att spara"
 
@@ -6627,7 +6627,7 @@ msgstr "Det gick inte att uppdatera sektionen"
 msgid "Failed to update settings"
 msgstr "Det gick inte att uppdatera inställningar"
 
-#: packages/admin/src/router.tsx:2409
+#: packages/admin/src/router.tsx:2410
 msgid "Failed to update status"
 msgstr "Det gick inte att uppdatera statusen"
 
@@ -6873,7 +6873,7 @@ msgstr "Mappen har tagits bort"
 msgid "Folder name must be between 1 and 200 characters"
 msgstr "Mappnamnet måste vara mellan 1 och 200 tecken"
 
-#: packages/admin/src/router.tsx:2079
+#: packages/admin/src/router.tsx:2080
 msgid "Folder no longer exists"
 msgstr "Mappen finns inte längre"
 
@@ -7020,7 +7020,7 @@ msgid "Go live {countdown}"
 msgstr "Publiceras {countdown}"
 
 #: packages/admin/src/components/WordPressImport.tsx:2477
-#: packages/admin/src/router.tsx:3357
+#: packages/admin/src/router.tsx:3358
 msgid "Go to Dashboard"
 msgstr "Gå till översikten"
 
@@ -8207,7 +8207,7 @@ msgid "Load preview"
 msgstr "Läs in förhandsgranskning"
 
 #: packages/admin/src/components/calendar/CalendarToolbar.tsx:59
-#: packages/admin/src/router.tsx:3312
+#: packages/admin/src/router.tsx:3313
 msgid "Loading"
 msgstr "Läser in"
 
@@ -8236,8 +8236,8 @@ msgstr "Läser in samlingar …"
 msgid "Loading comments..."
 msgstr "Läser in kommentarer …"
 
-#: packages/admin/src/router.tsx:3314
-#: packages/admin/src/router.tsx:3326
+#: packages/admin/src/router.tsx:3315
+#: packages/admin/src/router.tsx:3327
 msgid "Loading configuration..."
 msgstr "Läser in konfiguration …"
 
@@ -8549,11 +8549,11 @@ msgstr "Markdown"
 msgid "Marketplace"
 msgstr "Marknadsplats"
 
-#: packages/admin/src/router.tsx:2713
+#: packages/admin/src/router.tsx:2714
 msgid "Marketplace browsing is no longer available."
 msgstr "Det går inte längre att bläddra på marknadsplatsen."
 
-#: packages/admin/src/router.tsx:2688
+#: packages/admin/src/router.tsx:2689
 msgid "Marketplace browsing is no longer available. Manage installed plugins from Plugins."
 msgstr "Det går inte längre att bläddra på marknadsplatsen. Hantera installerade tillägg under Tillägg."
 
@@ -10068,7 +10068,7 @@ msgstr "Paketets kontrollsumma"
 msgid "Package downloaded"
 msgstr "Paketet har laddats ner"
 
-#: packages/admin/src/router.tsx:3352
+#: packages/admin/src/router.tsx:3353
 msgid "Page Not Found"
 msgstr "Sidan hittades inte"
 
@@ -10422,8 +10422,8 @@ msgstr "Tilläggsregister"
 msgid "Plugin registry configuration error"
 msgstr "Fel i konfigurationen av tilläggsregistret"
 
-#: packages/admin/src/router.tsx:2648
-#: packages/admin/src/router.tsx:2679
+#: packages/admin/src/router.tsx:2649
+#: packages/admin/src/router.tsx:2680
 msgid "Plugin registry is not configured."
 msgstr "Tilläggsregistret är inte konfigurerat."
 
@@ -10850,7 +10850,7 @@ msgid "Read your taxonomies and terms"
 msgstr "Läsa dina taxonomier och termer"
 
 #: packages/admin/src/components/EntryLockNotice.tsx:70
-#: packages/admin/src/router.tsx:2012
+#: packages/admin/src/router.tsx:2013
 msgid "Read-only"
 msgstr "Skrivskyddad"
 
@@ -11573,7 +11573,7 @@ msgstr "Utfasad"
 #: packages/admin/src/components/Sections.tsx:281
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:122
 #: packages/admin/src/lib/content-editor-panels.tsx:201
-#: packages/admin/src/router.tsx:3340
+#: packages/admin/src/router.tsx:3341
 #: packages/admin/src/routes/byline-schema.tsx:280
 #: packages/admin/src/routes/calendar.tsx:345
 msgid "Retry"
@@ -13708,7 +13708,7 @@ msgstr "Paketets innehåll skrivs till den här webbplatsen. Importen kan inte �
 msgid "The package’s file index is not valid."
 msgstr "Paketets filindex är ogiltigt."
 
-#: packages/admin/src/router.tsx:3354
+#: packages/admin/src/router.tsx:3355
 msgid "The page you're looking for doesn't exist."
 msgstr "Sidan du letar efter finns inte."
 
@@ -13940,11 +13940,11 @@ msgstr "Posten har ändrats någon annanstans sedan du öppnade den."
 msgid "This entry changed somewhere else. Save anyway, or reload to get the newer version."
 msgstr "Posten har ändrats någon annanstans. Spara ändå eller läs in sidan igen för att hämta den nyare versionen."
 
-#: packages/admin/src/router.tsx:1949
+#: packages/admin/src/router.tsx:1950
 msgid "This entry doesn't exist or isn't published. Your role can only view published content."
 msgstr "Posten finns inte eller är inte publicerad. Med din roll kan du bara se publicerat innehåll."
 
-#: packages/admin/src/router.tsx:1950
+#: packages/admin/src/router.tsx:1951
 msgid "This entry doesn't exist or was deleted."
 msgstr "Posten finns inte eller har tagits bort."
 
@@ -15719,7 +15719,7 @@ msgstr "Du behöver administratörsbehörighet för att hantera spårning av med
 msgid "You need Admin permissions to transfer this site."
 msgstr "Du behöver administratörsbehörighet för att flytta webbplatsen."
 
-#: packages/admin/src/router.tsx:2466
+#: packages/admin/src/router.tsx:2467
 msgid "You need Editor permissions to moderate comments."
 msgstr "Du behöver redaktörsbehörighet för att moderera kommentarer."
 
@@ -15860,11 +15860,11 @@ msgstr "Ditt namn (valfritt)"
 msgid "Your Role"
 msgstr "Din roll"
 
-#: packages/admin/src/router.tsx:2017
+#: packages/admin/src/router.tsx:2018
 msgid "Your role can edit your own entries only while they are drafts."
 msgstr ""
 
-#: packages/admin/src/router.tsx:2018
+#: packages/admin/src/router.tsx:2019
 msgid "Your role can't edit this entry."
 msgstr ""
 
