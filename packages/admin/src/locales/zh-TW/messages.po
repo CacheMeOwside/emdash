@@ -2535,7 +2535,7 @@ msgstr "可以檢視內容"
 #: packages/admin/src/components/PortableTextEditor.tsx:5762
 #: packages/admin/src/components/PortableTextEditor.tsx:5788
 #: packages/admin/src/components/PortableTextEditor.tsx:6535
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:369
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:407
 #: packages/admin/src/components/Redirects.tsx:187
 #: packages/admin/src/components/RelationDialog.tsx:60
 #: packages/admin/src/components/SectionPickerModal.tsx:131
@@ -2680,17 +2680,17 @@ msgstr "變更圖片"
 msgid "Change Logo"
 msgstr "變更標誌"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:629
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:674
 msgid "Change publication date"
 msgstr "變更發佈日期"
 
 #. placeholder {0}: isolate(formattedValue)
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:604
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:649
 msgid "Change publication date: {0}"
 msgstr ""
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:623
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:469
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:518
 msgid "Change schedule"
 msgstr "變更排程"
 
@@ -2885,6 +2885,10 @@ msgstr "選擇 {label}"
 msgid "Choose a credential manager on this device, another device, or a security key."
 msgstr "請選擇這個裝置上的憑證管理工具、另一個裝置或安全金鑰。"
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:36
+msgid "Choose a date"
+msgstr ""
+
 #: packages/admin/src/components/ContentList.tsx:1210
 #: packages/admin/src/components/ContentList.tsx:1216
 msgid "Choose a date range"
@@ -2893,10 +2897,6 @@ msgstr "選擇日期範圍"
 #: packages/admin/src/components/MediaPickerModal.tsx:234
 msgid "Choose a file from the library or upload a new one."
 msgstr "從媒體庫選擇檔案，或上傳新檔案。"
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:476
-msgid "Choose a new publication time for this draft."
-msgstr "為這份草稿選擇新的發佈時間。"
 
 #. placeholder {0}: formatFileFormat(item.mimeType)
 #: packages/admin/src/components/MediaDetailPanel.tsx:918
@@ -2910,6 +2910,14 @@ msgstr "請選擇可辨識的時區，以確保日期正確顯示。"
 #: packages/admin/src/components/BulkTagDialog.tsx:184
 msgid "Choose a term and enter between 1 and 50 posts."
 msgstr "請選擇分類項目，並輸入 1 至 50 篇文章。"
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:40
+msgid "Choose a time in the future"
+msgstr ""
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:37
+msgid "Choose a valid date"
+msgstr ""
 
 #: packages/admin/src/components/MediaPickerModal.tsx:236
 msgid "Choose a video from the library or upload a new one."
@@ -2948,14 +2956,6 @@ msgstr "請再次選擇同一個套件檔案，以完成上傳。"
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:187
 msgid "Choose Touch ID or another available credential manager, then confirm with your fingerprint or Mac password."
 msgstr "請選擇 Touch ID 或其他可用的憑證管理工具，再使用指紋或 Mac 密碼確認。"
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:474
-msgid "Choose when these changes replace the live version."
-msgstr "選擇何時以這些變更取代已公開的版本。"
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:477
-msgid "Choose when this draft becomes public."
-msgstr "選擇何時公開這份草稿。"
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:180
 msgid "Choose Windows Hello or another available credential manager, then confirm with your PIN, fingerprint, or face."
@@ -3075,7 +3075,7 @@ msgstr "請點擊這個連結以登入 {siteName}："
 #: packages/admin/src/components/PortableTextEditor.tsx:2697
 #: packages/admin/src/components/PortableTextEditor.tsx:2703
 #: packages/admin/src/components/PortableTextEditor.tsx:2707
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:349
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:386
 #: packages/admin/src/components/Redirects.tsx:117
 #: packages/admin/src/components/Redirects.tsx:123
 #: packages/admin/src/components/RelationDialog.tsx:65
@@ -5330,10 +5330,18 @@ msgstr "請輸入可辨識的時區才能儲存"
 msgid "Enter a slug."
 msgstr ""
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:38
+msgid "Enter a time"
+msgstr ""
+
 #: packages/admin/src/components/MenuEditor.tsx:527
 #: packages/admin/src/components/MenuEditor.tsx:725
 msgid "Enter a URL (https://…) or a relative path (/…)"
 msgstr "輸入 URL (https://…) 或相對路徑 (/…)"
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:39
+msgid "Enter a valid time"
+msgstr ""
 
 #: packages/admin/src/components/ContentEditor.tsx:3179
 msgid "Enter a valid URL (e.g. https://example.com)"
@@ -7218,7 +7226,7 @@ msgstr "Hooks"
 msgid "Horizontal {0}%, vertical {1}%"
 msgstr "水平 {0}%，垂直 {1}%"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:194
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:232
 msgid "Hour"
 msgstr "小時"
 
@@ -8378,7 +8386,7 @@ msgstr "載入中…"
 msgid "Loading…"
 msgstr "載入中…"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:112
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:129
 msgid "Local time"
 msgstr "當地時間"
 
@@ -8818,7 +8826,7 @@ msgstr "區塊數量下限"
 msgid "Minor section heading"
 msgstr "小節標題"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:216
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:258
 msgid "Minute"
 msgstr "分鐘"
 
@@ -10257,7 +10265,7 @@ msgstr "這篇文章中公開顯示的人員。"
 msgid "Per page"
 msgstr "每頁"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:235
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:282
 msgid "Period"
 msgstr "上午／下午"
 
@@ -10634,7 +10642,7 @@ msgstr "公開路由"
 #: packages/admin/src/components/ContentSettingsPanel.tsx:987
 #: packages/admin/src/components/ContentSettingsPanel.tsx:992
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1003
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:633
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:678
 msgid "Publication date"
 msgstr "發佈日期"
 
@@ -11852,7 +11860,7 @@ msgstr "執行外掛操作前請先儲存變更"
 msgid "Save content as draft before publishing"
 msgstr "發佈前將內容儲存為草稿"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:635
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:681
 msgid "Save date"
 msgstr "儲存日期"
 
@@ -11873,7 +11881,7 @@ msgstr "裁切前，請先儲存或捨棄其他變更。"
 msgid "Save Relation"
 msgstr "儲存關聯"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Save schedule"
 msgstr "儲存排程"
 
@@ -11944,20 +11952,20 @@ msgid "Scan it with a nearby phone or tablet."
 msgstr "使用附近的手機或平板掃描。"
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:623
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Schedule"
 msgstr "排程"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:471
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:520
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Schedule changes"
 msgstr "排程發佈變更"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:489
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:532
 msgid "Schedule date"
 msgstr "排程日期"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:472
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:521
 msgid "Schedule publication"
 msgstr "排程發佈"
 
@@ -13425,6 +13433,10 @@ msgstr "test@example.com"
 msgid "Text formatting"
 msgstr "文字格式"
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:41
+msgid "That time does not exist in your time zone"
+msgstr ""
+
 #: packages/admin/src/components/revisions/useRevisionView.ts:546
 msgid "That version is no longer available. Back to editing."
 msgstr ""
@@ -14299,7 +14311,7 @@ msgstr "這會還原至已發佈的版本。您的草稿變更將會遺失。"
 msgid "Thoughts, tutorials, and more"
 msgstr "想法、教學及更多內容"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:184
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:220
 msgid "Time"
 msgstr "時間"
 
@@ -14311,7 +14323,7 @@ msgstr "時間採用 {zoneName}。"
 msgid "Times are in {zoneName}. Your browser uses {viewerZoneName}."
 msgstr "時間採用 {zoneName}。你的瀏覽器使用 {viewerZoneName}。"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:254
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:311
 #: packages/admin/src/components/settings/GeneralSettings.tsx:508
 msgid "Timezone"
 msgstr "時區"

@@ -2537,7 +2537,7 @@ msgstr "می‌تواند محتوا را مشاهده کند"
 #: packages/admin/src/components/PortableTextEditor.tsx:5762
 #: packages/admin/src/components/PortableTextEditor.tsx:5788
 #: packages/admin/src/components/PortableTextEditor.tsx:6535
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:369
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:407
 #: packages/admin/src/components/Redirects.tsx:187
 #: packages/admin/src/components/RelationDialog.tsx:60
 #: packages/admin/src/components/SectionPickerModal.tsx:131
@@ -2682,17 +2682,17 @@ msgstr ""
 msgid "Change Logo"
 msgstr "تغییر لوگو"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:629
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:674
 msgid "Change publication date"
 msgstr ""
 
 #. placeholder {0}: isolate(formattedValue)
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:604
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:649
 msgid "Change publication date: {0}"
 msgstr ""
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:623
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:469
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:518
 msgid "Change schedule"
 msgstr ""
 
@@ -2887,6 +2887,10 @@ msgstr ""
 msgid "Choose a credential manager on this device, another device, or a security key."
 msgstr ""
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:36
+msgid "Choose a date"
+msgstr ""
+
 #: packages/admin/src/components/ContentList.tsx:1210
 #: packages/admin/src/components/ContentList.tsx:1216
 msgid "Choose a date range"
@@ -2894,10 +2898,6 @@ msgstr ""
 
 #: packages/admin/src/components/MediaPickerModal.tsx:234
 msgid "Choose a file from the library or upload a new one."
-msgstr ""
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:476
-msgid "Choose a new publication time for this draft."
 msgstr ""
 
 #. placeholder {0}: formatFileFormat(item.mimeType)
@@ -2911,6 +2911,14 @@ msgstr ""
 
 #: packages/admin/src/components/BulkTagDialog.tsx:184
 msgid "Choose a term and enter between 1 and 50 posts."
+msgstr ""
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:40
+msgid "Choose a time in the future"
+msgstr ""
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:37
+msgid "Choose a valid date"
 msgstr ""
 
 #: packages/admin/src/components/MediaPickerModal.tsx:236
@@ -2949,14 +2957,6 @@ msgstr ""
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:187
 msgid "Choose Touch ID or another available credential manager, then confirm with your fingerprint or Mac password."
-msgstr ""
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:474
-msgid "Choose when these changes replace the live version."
-msgstr ""
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:477
-msgid "Choose when this draft becomes public."
 msgstr ""
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:180
@@ -3077,7 +3077,7 @@ msgstr ""
 #: packages/admin/src/components/PortableTextEditor.tsx:2697
 #: packages/admin/src/components/PortableTextEditor.tsx:2703
 #: packages/admin/src/components/PortableTextEditor.tsx:2707
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:349
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:386
 #: packages/admin/src/components/Redirects.tsx:117
 #: packages/admin/src/components/Redirects.tsx:123
 #: packages/admin/src/components/RelationDialog.tsx:65
@@ -5329,10 +5329,18 @@ msgstr ""
 msgid "Enter a slug."
 msgstr ""
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:38
+msgid "Enter a time"
+msgstr ""
+
 #: packages/admin/src/components/MenuEditor.tsx:527
 #: packages/admin/src/components/MenuEditor.tsx:725
 msgid "Enter a URL (https://…) or a relative path (/…)"
 msgstr "یک آدرس (https://…) یا یک مسیر نسبی (/…) وارد کنید"
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:39
+msgid "Enter a valid time"
+msgstr ""
 
 #: packages/admin/src/components/ContentEditor.tsx:3179
 msgid "Enter a valid URL (e.g. https://example.com)"
@@ -7217,7 +7225,7 @@ msgstr "هوک‌ها"
 msgid "Horizontal {0}%, vertical {1}%"
 msgstr ""
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:194
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:232
 msgid "Hour"
 msgstr ""
 
@@ -8377,7 +8385,7 @@ msgstr ""
 msgid "Loading…"
 msgstr ""
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:112
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:129
 msgid "Local time"
 msgstr ""
 
@@ -8817,7 +8825,7 @@ msgstr ""
 msgid "Minor section heading"
 msgstr ""
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:216
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:258
 msgid "Minute"
 msgstr ""
 
@@ -10253,7 +10261,7 @@ msgstr ""
 msgid "Per page"
 msgstr ""
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:235
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:282
 msgid "Period"
 msgstr ""
 
@@ -10630,7 +10638,7 @@ msgstr ""
 #: packages/admin/src/components/ContentSettingsPanel.tsx:987
 #: packages/admin/src/components/ContentSettingsPanel.tsx:992
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1003
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:633
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:678
 msgid "Publication date"
 msgstr ""
 
@@ -11848,7 +11856,7 @@ msgstr ""
 msgid "Save content as draft before publishing"
 msgstr "ذخیره محتوا به‌عنوان پیش‌نویس قبل از انتشار"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:635
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:681
 msgid "Save date"
 msgstr ""
 
@@ -11869,7 +11877,7 @@ msgstr ""
 msgid "Save Relation"
 msgstr ""
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Save schedule"
 msgstr ""
 
@@ -11940,20 +11948,20 @@ msgid "Scan it with a nearby phone or tablet."
 msgstr ""
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:623
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Schedule"
 msgstr "زمان‌بندی"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:471
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:520
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Schedule changes"
 msgstr ""
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:489
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:532
 msgid "Schedule date"
 msgstr ""
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:472
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:521
 msgid "Schedule publication"
 msgstr ""
 
@@ -13421,6 +13429,10 @@ msgstr "test@example.com"
 msgid "Text formatting"
 msgstr ""
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:41
+msgid "That time does not exist in your time zone"
+msgstr ""
+
 #: packages/admin/src/components/revisions/useRevisionView.ts:546
 msgid "That version is no longer available. Back to editing."
 msgstr ""
@@ -14295,7 +14307,7 @@ msgstr "این به نسخه منتشرشده بازمی‌گردد. تغییر�
 msgid "Thoughts, tutorials, and more"
 msgstr "اندیشه‌ها، آموزش‌ها و بیشتر"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:184
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:220
 msgid "Time"
 msgstr ""
 
@@ -14307,7 +14319,7 @@ msgstr ""
 msgid "Times are in {zoneName}. Your browser uses {viewerZoneName}."
 msgstr ""
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:254
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:311
 #: packages/admin/src/components/settings/GeneralSettings.tsx:508
 msgid "Timezone"
 msgstr "منطقه زمانی"

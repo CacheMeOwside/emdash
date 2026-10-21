@@ -2535,7 +2535,7 @@ msgstr "Kan visa innehåll"
 #: packages/admin/src/components/PortableTextEditor.tsx:5762
 #: packages/admin/src/components/PortableTextEditor.tsx:5788
 #: packages/admin/src/components/PortableTextEditor.tsx:6535
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:369
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:407
 #: packages/admin/src/components/Redirects.tsx:187
 #: packages/admin/src/components/RelationDialog.tsx:60
 #: packages/admin/src/components/SectionPickerModal.tsx:131
@@ -2680,17 +2680,17 @@ msgstr "Ändra bild"
 msgid "Change Logo"
 msgstr "Ändra logotyp"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:629
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:674
 msgid "Change publication date"
 msgstr "Ändra publiceringsdatum"
 
 #. placeholder {0}: isolate(formattedValue)
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:604
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:649
 msgid "Change publication date: {0}"
 msgstr ""
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:623
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:469
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:518
 msgid "Change schedule"
 msgstr "Ändra schemaläggning"
 
@@ -2885,6 +2885,10 @@ msgstr "Välj {label}"
 msgid "Choose a credential manager on this device, another device, or a security key."
 msgstr "Välj en lösenordshanterare på den här enheten, en annan enhet eller en säkerhetsnyckel."
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:36
+msgid "Choose a date"
+msgstr ""
+
 #: packages/admin/src/components/ContentList.tsx:1210
 #: packages/admin/src/components/ContentList.tsx:1216
 msgid "Choose a date range"
@@ -2893,10 +2897,6 @@ msgstr "Välj ett datumintervall"
 #: packages/admin/src/components/MediaPickerModal.tsx:234
 msgid "Choose a file from the library or upload a new one."
 msgstr "Välj en fil från biblioteket eller ladda upp en ny."
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:476
-msgid "Choose a new publication time for this draft."
-msgstr "Välj en ny publiceringstid för utkastet."
 
 #. placeholder {0}: formatFileFormat(item.mimeType)
 #: packages/admin/src/components/MediaDetailPanel.tsx:918
@@ -2910,6 +2910,14 @@ msgstr "Välj en giltig tidszon så att datum visas korrekt."
 #: packages/admin/src/components/BulkTagDialog.tsx:184
 msgid "Choose a term and enter between 1 and 50 posts."
 msgstr "Välj en term och ange mellan 1 och 50 inlägg."
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:40
+msgid "Choose a time in the future"
+msgstr ""
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:37
+msgid "Choose a valid date"
+msgstr ""
 
 #: packages/admin/src/components/MediaPickerModal.tsx:236
 msgid "Choose a video from the library or upload a new one."
@@ -2948,14 +2956,6 @@ msgstr "Välj samma paketfil igen för att slutföra uppladdningen."
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:187
 msgid "Choose Touch ID or another available credential manager, then confirm with your fingerprint or Mac password."
 msgstr "Välj Touch ID eller en annan tillgänglig lösenordshanterare och bekräfta sedan med fingeravtryck eller ditt Mac-lösenord."
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:474
-msgid "Choose when these changes replace the live version."
-msgstr "Välj när ändringarna ska ersätta den publicerade versionen."
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:477
-msgid "Choose when this draft becomes public."
-msgstr "Välj när utkastet ska publiceras."
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:180
 msgid "Choose Windows Hello or another available credential manager, then confirm with your PIN, fingerprint, or face."
@@ -3075,7 +3075,7 @@ msgstr "Klicka på den här länken för att logga in på {siteName}:"
 #: packages/admin/src/components/PortableTextEditor.tsx:2697
 #: packages/admin/src/components/PortableTextEditor.tsx:2703
 #: packages/admin/src/components/PortableTextEditor.tsx:2707
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:349
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:386
 #: packages/admin/src/components/Redirects.tsx:117
 #: packages/admin/src/components/Redirects.tsx:123
 #: packages/admin/src/components/RelationDialog.tsx:65
@@ -5330,10 +5330,18 @@ msgstr "Ange en giltig tidszon för att spara"
 msgid "Enter a slug."
 msgstr ""
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:38
+msgid "Enter a time"
+msgstr ""
+
 #: packages/admin/src/components/MenuEditor.tsx:527
 #: packages/admin/src/components/MenuEditor.tsx:725
 msgid "Enter a URL (https://…) or a relative path (/…)"
 msgstr "Ange en URL (https://…) eller en relativ sökväg (/…)"
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:39
+msgid "Enter a valid time"
+msgstr ""
 
 #: packages/admin/src/components/ContentEditor.tsx:3179
 msgid "Enter a valid URL (e.g. https://example.com)"
@@ -7218,7 +7226,7 @@ msgstr "Hooks"
 msgid "Horizontal {0}%, vertical {1}%"
 msgstr "Horisontellt {0} %, vertikalt {1} %"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:194
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:232
 msgid "Hour"
 msgstr "Timme"
 
@@ -8378,7 +8386,7 @@ msgstr "Läser in …"
 msgid "Loading…"
 msgstr "Läser in …"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:112
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:129
 msgid "Local time"
 msgstr "Lokal tid"
 
@@ -8818,7 +8826,7 @@ msgstr "Minsta antal block"
 msgid "Minor section heading"
 msgstr "Underordnad sektionsrubrik"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:216
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:258
 msgid "Minute"
 msgstr "Minut"
 
@@ -10257,7 +10265,7 @@ msgstr "Personer som visas offentligt på inlägget."
 msgid "Per page"
 msgstr "Per sida"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:235
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:282
 msgid "Period"
 msgstr "fm/em"
 
@@ -10634,7 +10642,7 @@ msgstr "Offentliga rutter"
 #: packages/admin/src/components/ContentSettingsPanel.tsx:987
 #: packages/admin/src/components/ContentSettingsPanel.tsx:992
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1003
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:633
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:678
 msgid "Publication date"
 msgstr "Publiceringsdatum"
 
@@ -11852,7 +11860,7 @@ msgstr "Spara ändringarna innan du kör tilläggsåtgärder"
 msgid "Save content as draft before publishing"
 msgstr "Spara innehåll som utkast innan publicering"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:635
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:681
 msgid "Save date"
 msgstr "Spara datum"
 
@@ -11873,7 +11881,7 @@ msgstr "Spara eller kassera de andra ändringarna innan du beskär."
 msgid "Save Relation"
 msgstr "Spara relation"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Save schedule"
 msgstr "Spara schemaläggning"
 
@@ -11944,20 +11952,20 @@ msgid "Scan it with a nearby phone or tablet."
 msgstr "Skanna den med en telefon eller surfplatta i närheten."
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:623
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Schedule"
 msgstr "Schemalägg"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:471
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:520
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Schedule changes"
 msgstr "Schemalägg ändringar"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:489
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:532
 msgid "Schedule date"
 msgstr "Schemalagt datum"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:472
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:521
 msgid "Schedule publication"
 msgstr "Schemalägg publicering"
 
@@ -13425,6 +13433,10 @@ msgstr "test@example.com"
 msgid "Text formatting"
 msgstr "Textformatering"
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:41
+msgid "That time does not exist in your time zone"
+msgstr ""
+
 #: packages/admin/src/components/revisions/useRevisionView.ts:546
 msgid "That version is no longer available. Back to editing."
 msgstr ""
@@ -14299,7 +14311,7 @@ msgstr "Innehållet återställs till den publicerade versionen. Dina utkastsän
 msgid "Thoughts, tutorials, and more"
 msgstr "Tankar, guider och mer"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:184
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:220
 msgid "Time"
 msgstr "Tid"
 
@@ -14311,7 +14323,7 @@ msgstr "Tiderna anges i {zoneName}."
 msgid "Times are in {zoneName}. Your browser uses {viewerZoneName}."
 msgstr "Tiderna anges i {zoneName}. Din webbläsare använder {viewerZoneName}."
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:254
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:311
 #: packages/admin/src/components/settings/GeneralSettings.tsx:508
 msgid "Timezone"
 msgstr "Tidszon"

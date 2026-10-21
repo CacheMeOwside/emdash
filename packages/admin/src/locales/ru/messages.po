@@ -2535,7 +2535,7 @@ msgstr "Может просматривать материалы"
 #: packages/admin/src/components/PortableTextEditor.tsx:5762
 #: packages/admin/src/components/PortableTextEditor.tsx:5788
 #: packages/admin/src/components/PortableTextEditor.tsx:6535
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:369
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:407
 #: packages/admin/src/components/Redirects.tsx:187
 #: packages/admin/src/components/RelationDialog.tsx:60
 #: packages/admin/src/components/SectionPickerModal.tsx:131
@@ -2680,17 +2680,17 @@ msgstr "Сменить изображение"
 msgid "Change Logo"
 msgstr "Сменить логотип"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:629
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:674
 msgid "Change publication date"
 msgstr "Изменить дату публикации"
 
 #. placeholder {0}: isolate(formattedValue)
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:604
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:649
 msgid "Change publication date: {0}"
 msgstr "Изменить дату публикации: {0}"
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:623
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:469
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:518
 msgid "Change schedule"
 msgstr "Изменить расписание"
 
@@ -2885,6 +2885,10 @@ msgstr "Выбрать: {label}"
 msgid "Choose a credential manager on this device, another device, or a security key."
 msgstr "Выберите менеджер учётных данных на этом устройстве, на другом устройстве или ключ безопасности."
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:36
+msgid "Choose a date"
+msgstr ""
+
 #: packages/admin/src/components/ContentList.tsx:1210
 #: packages/admin/src/components/ContentList.tsx:1216
 msgid "Choose a date range"
@@ -2893,10 +2897,6 @@ msgstr "Выберите диапазон дат"
 #: packages/admin/src/components/MediaPickerModal.tsx:234
 msgid "Choose a file from the library or upload a new one."
 msgstr "Выберите файл из библиотеки или загрузите новый."
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:476
-msgid "Choose a new publication time for this draft."
-msgstr "Выберите новое время публикации этого черновика."
 
 #. placeholder {0}: formatFileFormat(item.mimeType)
 #: packages/admin/src/components/MediaDetailPanel.tsx:918
@@ -2910,6 +2910,14 @@ msgstr "Выберите известный часовой пояс, чтобы 
 #: packages/admin/src/components/BulkTagDialog.tsx:184
 msgid "Choose a term and enter between 1 and 50 posts."
 msgstr "Выберите термин и укажите от 1 до 50 записей."
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:40
+msgid "Choose a time in the future"
+msgstr ""
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:37
+msgid "Choose a valid date"
+msgstr ""
 
 #: packages/admin/src/components/MediaPickerModal.tsx:236
 msgid "Choose a video from the library or upload a new one."
@@ -2948,14 +2956,6 @@ msgstr "Выберите тот же файл пакета ещё раз, что
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:187
 msgid "Choose Touch ID or another available credential manager, then confirm with your fingerprint or Mac password."
 msgstr "Выберите Touch ID или другой менеджер учётных данных и подтвердите отпечатком или паролем Mac."
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:474
-msgid "Choose when these changes replace the live version."
-msgstr "Выберите, когда эти изменения заменят опубликованную версию."
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:477
-msgid "Choose when this draft becomes public."
-msgstr "Выберите, когда этот черновик станет публичным."
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:180
 msgid "Choose Windows Hello or another available credential manager, then confirm with your PIN, fingerprint, or face."
@@ -3075,7 +3075,7 @@ msgstr "Перейдите по этой ссылке, чтобы войти н�
 #: packages/admin/src/components/PortableTextEditor.tsx:2697
 #: packages/admin/src/components/PortableTextEditor.tsx:2703
 #: packages/admin/src/components/PortableTextEditor.tsx:2707
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:349
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:386
 #: packages/admin/src/components/Redirects.tsx:117
 #: packages/admin/src/components/Redirects.tsx:123
 #: packages/admin/src/components/RelationDialog.tsx:65
@@ -5330,10 +5330,18 @@ msgstr "Чтобы сохранить, введите известный час�
 msgid "Enter a slug."
 msgstr "Введите ярлык."
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:38
+msgid "Enter a time"
+msgstr ""
+
 #: packages/admin/src/components/MenuEditor.tsx:527
 #: packages/admin/src/components/MenuEditor.tsx:725
 msgid "Enter a URL (https://…) or a relative path (/…)"
 msgstr "Введите URL (https://…) или относительный путь (/…)"
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:39
+msgid "Enter a valid time"
+msgstr ""
 
 #: packages/admin/src/components/ContentEditor.tsx:3179
 msgid "Enter a valid URL (e.g. https://example.com)"
@@ -7218,7 +7226,7 @@ msgstr "Хуки"
 msgid "Horizontal {0}%, vertical {1}%"
 msgstr "По горизонтали {0}%, по вертикали {1}%"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:194
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:232
 msgid "Hour"
 msgstr "Час"
 
@@ -8378,7 +8386,7 @@ msgstr "Загрузка…"
 msgid "Loading…"
 msgstr "Загрузка…"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:112
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:129
 msgid "Local time"
 msgstr "Местное время"
 
@@ -8818,7 +8826,7 @@ msgstr "Минимум блоков"
 msgid "Minor section heading"
 msgstr "Небольшой заголовок раздела"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:216
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:258
 msgid "Minute"
 msgstr "Минута"
 
@@ -10257,7 +10265,7 @@ msgstr "Люди, которых видно на этой записи."
 msgid "Per page"
 msgstr "На странице"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:235
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:282
 msgid "Period"
 msgstr "Период"
 
@@ -10634,7 +10642,7 @@ msgstr "Публичные маршруты"
 #: packages/admin/src/components/ContentSettingsPanel.tsx:987
 #: packages/admin/src/components/ContentSettingsPanel.tsx:992
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1003
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:633
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:678
 msgid "Publication date"
 msgstr "Дата публикации"
 
@@ -11852,7 +11860,7 @@ msgstr "Сохраните изменения, прежде чем запуск�
 msgid "Save content as draft before publishing"
 msgstr "Сохранять материал как черновик перед публикацией"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:635
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:681
 msgid "Save date"
 msgstr "Сохранить дату"
 
@@ -11873,7 +11881,7 @@ msgstr "Сохраните или отмените остальные измен
 msgid "Save Relation"
 msgstr "Сохранить связь"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Save schedule"
 msgstr "Сохранить расписание"
 
@@ -11944,20 +11952,20 @@ msgid "Scan it with a nearby phone or tablet."
 msgstr "Отсканируйте ближайшим телефоном или планшетом."
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:623
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Schedule"
 msgstr "Запланировать"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:471
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:520
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Schedule changes"
 msgstr "Запланировать изменения"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:489
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:532
 msgid "Schedule date"
 msgstr "Дата расписания"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:472
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:521
 msgid "Schedule publication"
 msgstr "Запланировать публикацию"
 
@@ -13425,6 +13433,10 @@ msgstr "test@example.com"
 msgid "Text formatting"
 msgstr "Оформление текста"
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:41
+msgid "That time does not exist in your time zone"
+msgstr ""
+
 #: packages/admin/src/components/revisions/useRevisionView.ts:546
 msgid "That version is no longer available. Back to editing."
 msgstr ""
@@ -14299,7 +14311,7 @@ msgstr "Будет возвращена опубликованная верси�
 msgid "Thoughts, tutorials, and more"
 msgstr "Заметки, руководства и другое"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:184
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:220
 msgid "Time"
 msgstr "Время"
 
@@ -14311,7 +14323,7 @@ msgstr "Время указано в поясе {zoneName}."
 msgid "Times are in {zoneName}. Your browser uses {viewerZoneName}."
 msgstr "Время указано в поясе {zoneName}. Ваш браузер использует {viewerZoneName}."
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:254
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:311
 #: packages/admin/src/components/settings/GeneralSettings.tsx:508
 msgid "Timezone"
 msgstr "Часовой пояс"

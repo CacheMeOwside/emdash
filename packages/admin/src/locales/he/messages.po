@@ -2536,7 +2536,7 @@ msgstr "יכול/ה להציג תוכן"
 #: packages/admin/src/components/PortableTextEditor.tsx:5762
 #: packages/admin/src/components/PortableTextEditor.tsx:5788
 #: packages/admin/src/components/PortableTextEditor.tsx:6535
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:369
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:407
 #: packages/admin/src/components/Redirects.tsx:187
 #: packages/admin/src/components/RelationDialog.tsx:60
 #: packages/admin/src/components/SectionPickerModal.tsx:131
@@ -2681,17 +2681,17 @@ msgstr "שינוי תמונה"
 msgid "Change Logo"
 msgstr "שינוי לוגו"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:629
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:674
 msgid "Change publication date"
 msgstr "שינוי תאריך פרסום"
 
 #. placeholder {0}: isolate(formattedValue)
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:604
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:649
 msgid "Change publication date: {0}"
 msgstr ""
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:623
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:469
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:518
 msgid "Change schedule"
 msgstr "שינוי תזמון"
 
@@ -2886,6 +2886,10 @@ msgstr "בחירת {label}"
 msgid "Choose a credential manager on this device, another device, or a security key."
 msgstr "בחרו מנהל אישורים במכשיר זה, במכשיר אחר או במפתח אבטחה."
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:36
+msgid "Choose a date"
+msgstr ""
+
 #: packages/admin/src/components/ContentList.tsx:1210
 #: packages/admin/src/components/ContentList.tsx:1216
 msgid "Choose a date range"
@@ -2894,10 +2898,6 @@ msgstr "בחירת טווח תאריכים"
 #: packages/admin/src/components/MediaPickerModal.tsx:234
 msgid "Choose a file from the library or upload a new one."
 msgstr "בחרו קובץ מהספרייה או העלו קובץ חדש."
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:476
-msgid "Choose a new publication time for this draft."
-msgstr "בחרו זמן פרסום חדש לטיוטה זו."
 
 #. placeholder {0}: formatFileFormat(item.mimeType)
 #: packages/admin/src/components/MediaDetailPanel.tsx:918
@@ -2911,6 +2911,14 @@ msgstr "בחרו אזור זמן מוכר כדי שהתאריכים יוצגו �
 #: packages/admin/src/components/BulkTagDialog.tsx:184
 msgid "Choose a term and enter between 1 and 50 posts."
 msgstr "בחרו מונח והזינו בין 1 ל-50 פוסטים."
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:40
+msgid "Choose a time in the future"
+msgstr ""
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:37
+msgid "Choose a valid date"
+msgstr ""
 
 #: packages/admin/src/components/MediaPickerModal.tsx:236
 msgid "Choose a video from the library or upload a new one."
@@ -2949,14 +2957,6 @@ msgstr "בחרו שוב את אותו קובץ חבילה כדי לסיים לה
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:187
 msgid "Choose Touch ID or another available credential manager, then confirm with your fingerprint or Mac password."
 msgstr "בחרו Touch ID או מנהל אישורים זמין אחר, ולאחר מכן אשרו באמצעות טביעת האצבע או סיסמת ה-Mac שלכם."
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:474
-msgid "Choose when these changes replace the live version."
-msgstr "בחרו מתי שינויים אלה יחליפו את הגרסה החיה."
-
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:477
-msgid "Choose when this draft becomes public."
-msgstr "בחרו מתי הטיוטה הזו תהפוך לציבורית."
 
 #: packages/admin/src/components/auth/PasskeyRegistration.tsx:180
 msgid "Choose Windows Hello or another available credential manager, then confirm with your PIN, fingerprint, or face."
@@ -3076,7 +3076,7 @@ msgstr "לחצו על הקישור הזה כדי להתחבר אל {siteName}:"
 #: packages/admin/src/components/PortableTextEditor.tsx:2697
 #: packages/admin/src/components/PortableTextEditor.tsx:2703
 #: packages/admin/src/components/PortableTextEditor.tsx:2707
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:349
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:386
 #: packages/admin/src/components/Redirects.tsx:117
 #: packages/admin/src/components/Redirects.tsx:123
 #: packages/admin/src/components/RelationDialog.tsx:65
@@ -5331,10 +5331,18 @@ msgstr "הזינו אזור זמן מוכר כדי לשמור"
 msgid "Enter a slug."
 msgstr ""
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:38
+msgid "Enter a time"
+msgstr ""
+
 #: packages/admin/src/components/MenuEditor.tsx:527
 #: packages/admin/src/components/MenuEditor.tsx:725
 msgid "Enter a URL (https://…) or a relative path (/…)"
 msgstr "הזינו URL ‏(https://…) או נתיב יחסי (/…)"
+
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:39
+msgid "Enter a valid time"
+msgstr ""
 
 #: packages/admin/src/components/ContentEditor.tsx:3179
 msgid "Enter a valid URL (e.g. https://example.com)"
@@ -7219,7 +7227,7 @@ msgstr "Hooks של תוסף"
 msgid "Horizontal {0}%, vertical {1}%"
 msgstr "אופקי {0}%, אנכי {1}%"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:194
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:232
 msgid "Hour"
 msgstr "שעה"
 
@@ -8379,7 +8387,7 @@ msgstr "בטעינה…"
 msgid "Loading…"
 msgstr "בטעינה…"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:112
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:129
 msgid "Local time"
 msgstr "זמן מקומי"
 
@@ -8819,7 +8827,7 @@ msgstr "מינימום בלוקים"
 msgid "Minor section heading"
 msgstr "כותרת מקטע קטנה"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:216
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:258
 msgid "Minute"
 msgstr "דקה"
 
@@ -10258,7 +10266,7 @@ msgstr "אנשים המוצגים בפומבי בפוסט זה."
 msgid "Per page"
 msgstr "בכל עמוד"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:235
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:282
 msgid "Period"
 msgstr "תקופה"
 
@@ -10635,7 +10643,7 @@ msgstr "נתיבים ציבוריים"
 #: packages/admin/src/components/ContentSettingsPanel.tsx:987
 #: packages/admin/src/components/ContentSettingsPanel.tsx:992
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1003
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:633
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:678
 msgid "Publication date"
 msgstr "תאריך פרסום"
 
@@ -11853,7 +11861,7 @@ msgstr "שמרו שינויים לפני הפעלת פעולות תוסף"
 msgid "Save content as draft before publishing"
 msgstr "שמירת תוכן כטיוטה לפני פרסום"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:635
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:681
 msgid "Save date"
 msgstr "שמירת תאריך"
 
@@ -11874,7 +11882,7 @@ msgstr "שמרו או בטלו את השינויים האחרים לפני הח�
 msgid "Save Relation"
 msgstr "שמירת קשר"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Save schedule"
 msgstr "שמירת תזמון"
 
@@ -11945,20 +11953,20 @@ msgid "Scan it with a nearby phone or tablet."
 msgstr "סרקו אותו באמצעות טלפון או טאבלט קרובים."
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:623
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Schedule"
 msgstr "תזמון"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:471
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:478
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:520
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:522
 msgid "Schedule changes"
 msgstr "תזמון שינויים"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:489
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:532
 msgid "Schedule date"
 msgstr "תאריך תזמון"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:472
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:521
 msgid "Schedule publication"
 msgstr "תזמון פרסום"
 
@@ -13426,6 +13434,10 @@ msgstr "בדיקה: test@example.com"
 msgid "Text formatting"
 msgstr "עיצוב טקסט"
 
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:41
+msgid "That time does not exist in your time zone"
+msgstr ""
+
 #: packages/admin/src/components/revisions/useRevisionView.ts:546
 msgid "That version is no longer available. Back to editing."
 msgstr ""
@@ -14300,7 +14312,7 @@ msgstr "פעולה זו תחזיר לגרסה שפורסמה. שינויי הט�
 msgid "Thoughts, tutorials, and more"
 msgstr "מחשבות, מדריכים ועוד"
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:184
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:220
 msgid "Time"
 msgstr "שעה"
 
@@ -14312,7 +14324,7 @@ msgstr "השעות לפי {zoneName}."
 msgid "Times are in {zoneName}. Your browser uses {viewerZoneName}."
 msgstr "השעות לפי {zoneName}. הדפדפן שלכם משתמש ב-{viewerZoneName}."
 
-#: packages/admin/src/components/PublishingDateTimeEditor.tsx:254
+#: packages/admin/src/components/PublishingDateTimeEditor.tsx:311
 #: packages/admin/src/components/settings/GeneralSettings.tsx:508
 msgid "Timezone"
 msgstr "אזור זמן"
