@@ -7364,7 +7364,7 @@ msgstr "תמונה {0}"
 
 #: packages/admin/src/components/ImageFieldRenderer.tsx:336
 #: packages/admin/src/components/ImageFieldRenderer.tsx:351
-#: packages/admin/src/components/SeoImageField.tsx:128
+#: packages/admin/src/components/SeoImageField.tsx:171
 msgid "Image actions"
 msgstr "פעולות תמונה"
 
@@ -7383,7 +7383,7 @@ msgstr "קישור התמונה"
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:70
 #: packages/admin/src/components/ImageFieldRenderer.tsx:488
 #: packages/admin/src/components/ImageFieldRenderer.tsx:543
-#: packages/admin/src/components/SeoImageField.tsx:107
+#: packages/admin/src/components/SeoImageField.tsx:146
 msgid "Image not found"
 msgstr "התמונה לא נמצאה"
 
@@ -7404,7 +7404,7 @@ msgstr "הגדרות תמונה"
 msgid "Image Settings"
 msgstr "הגדרות תמונה"
 
-#: packages/admin/src/components/SeoImageField.tsx:97
+#: packages/admin/src/components/SeoImageField.tsx:136
 msgid "Image shown when this page is shared on social media"
 msgstr "תמונה המוצגת כשעמוד זה משותף במדיה חברתית"
 
@@ -9821,7 +9821,7 @@ msgstr "הרשאת OAuth דורשת HTTPS. השתמשו באישורים ידנ�
 msgid "Off"
 msgstr "כבוי"
 
-#: packages/admin/src/components/SeoImageField.tsx:49
+#: packages/admin/src/components/SeoImageField.tsx:88
 msgid "OG Image"
 msgstr "תמונת OG"
 
@@ -11109,8 +11109,8 @@ msgid "Remove {entry}"
 msgstr "הסרת {entry}"
 
 #: packages/admin/src/components/ContentEditor.tsx:3415
-#: packages/admin/src/components/SeoImageField.tsx:163
-#: packages/admin/src/components/SeoImageField.tsx:164
+#: packages/admin/src/components/SeoImageField.tsx:206
+#: packages/admin/src/components/SeoImageField.tsx:207
 msgid "Remove {label}"
 msgstr "הסרת {label}"
 
@@ -11324,15 +11324,15 @@ msgstr "החלפה"
 #: packages/admin/src/components/ImageFieldRenderer.tsx:604
 #: packages/admin/src/components/PortableTextEditor.tsx:5806
 #: packages/admin/src/components/PortableTextEditor.tsx:5887
-#: packages/admin/src/components/SeoImageField.tsx:151
-#: packages/admin/src/components/SeoImageField.tsx:184
+#: packages/admin/src/components/SeoImageField.tsx:194
+#: packages/admin/src/components/SeoImageField.tsx:253
 msgid "Replace"
 msgstr "החלפה"
 
 #: packages/admin/src/components/ContentEditor.tsx:3443
 #: packages/admin/src/components/ImageFieldRenderer.tsx:595
-#: packages/admin/src/components/SeoImageField.tsx:148
-#: packages/admin/src/components/SeoImageField.tsx:183
+#: packages/admin/src/components/SeoImageField.tsx:191
+#: packages/admin/src/components/SeoImageField.tsx:252
 msgid "Replace {label}"
 msgstr "החלפת {label}"
 
@@ -11870,6 +11870,10 @@ msgstr "שמירת תאריך"
 msgid "visualEditing.saveFailed"
 msgstr "השמירה נכשלה"
 
+#: packages/admin/src/components/SeoImageField.tsx:241
+msgid "Save image URL"
+msgstr ""
+
 #: packages/admin/src/components/settings/PasskeyItem.tsx:112
 msgid "Save name"
 msgstr "שמירת שם"
@@ -12355,7 +12359,7 @@ msgstr "בחירה"
 #: packages/admin/src/components/ContentEditor.tsx:3427
 #: packages/admin/src/components/ContentEditor.tsx:3443
 #: packages/admin/src/components/ImageFieldRenderer.tsx:596
-#: packages/admin/src/components/SeoImageField.tsx:183
+#: packages/admin/src/components/SeoImageField.tsx:252
 msgid "Select {label}"
 msgstr "בחירת {label}"
 
@@ -12698,6 +12702,10 @@ msgstr "שתפו קישור זה עם המשתמש שהוזמן"
 #: packages/admin/src/components/BylineFieldEditor.tsx:290
 msgid "Shared across all translations of the same byline."
 msgstr "משותף בכל התרגומים של אותו קרדיט."
+
+#: packages/admin/src/components/SeoImageField.tsx:226
+msgid "Sharing image needs a URL"
+msgstr ""
 
 #: packages/admin/src/components/BylineFieldEditor.tsx:47
 msgid "Short text"
@@ -13779,6 +13787,10 @@ msgstr "הקשר קובע את האוסף המקושר ואת מספר הפרי�
 #: packages/admin/src/components/SetupWizard.tsx:188
 msgid "The sample content added so far is kept. Continue to add the rest."
 msgstr "תוכן הדוגמה שנוסף עד כה נשמר. המשיכו כדי להוסיף את השאר."
+
+#: packages/admin/src/components/SeoImageField.tsx:229
+msgid "The saved media ID may not work in shared links. Save the image URL to use this file for sharing."
+msgstr ""
 
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:193
 msgid "The scheduled changes to {title} stay as a draft."
@@ -15512,7 +15524,7 @@ msgstr "מדוע זה חשוב לכותרות תוצאות חיפוש?"
 msgid "Why is this important for search visibility?"
 msgstr "מדוע זה חשוב לנראות בחיפוש?"
 
-#: packages/admin/src/components/SeoImageField.tsx:98
+#: packages/admin/src/components/SeoImageField.tsx:137
 msgid "Why is this important for social sharing?"
 msgstr "מדוע זה חשוב לשיתוף חברתי?"
 
