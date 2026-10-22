@@ -134,7 +134,6 @@ interface SubmissionItem {
 	notes?: string;
 	createdAt: string;
 	meta: {
-		ip: string | null;
 		country: string | null;
 	};
 }
