@@ -72,9 +72,7 @@ msgstr "{0, plural, one {(# 个项目)} other {(# 个项目)}}"
 #. placeholder {0}: bounds.max
 #: packages/admin/src/components/ContentEditor.tsx:3201
 msgid "{0, plural, one {{counted} of # character, at least {min}} other {{counted} of # characters, at least {min}}}"
-msgstr ""
-"{0, plural, one {{counted}，共 # 个字符（至少 {min}）} other {{counted}，共 # 个字符（至少 "
-"{min}）}}"
+msgstr "{0, plural, one {{counted}，共 # 个字符（至少 {min}）} other {{counted}，共 # 个字符（至少 {min}）}}"
 
 #. placeholder {0}: bounds.max
 #: packages/admin/src/components/ContentEditor.tsx:3206
@@ -221,8 +219,7 @@ msgstr "{0, plural, one {该内容类型参与 # 个关联关系} other {该内�
 #: packages/admin/src/components/editor/TableControls.tsx:223
 #: packages/admin/src/components/PortableTextEditor.tsx:5398
 msgid "{0, plural, one {# row} other {# rows}} × {1, plural, one {# column} other {# columns}} selected"
-msgstr ""
-"{0, plural, one {# 行} other {# 行}} × {1, plural, one {# 列} other {# 列}}已选中"
+msgstr "{0, plural, one {# 行} other {# 行}} × {1, plural, one {# 列} other {# 列}}已选中"
 
 #. placeholder {0}: selected.size
 #: packages/admin/src/components/comments/CommentInbox.tsx:261
@@ -548,8 +545,7 @@ msgstr "{earlierCount, plural, one {显示 # 条更早的条目} other {显示 #
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:162
 msgid "{failed, plural, one {# email could not be sent. Check the email provider.} other {# emails could not be sent. Check the email provider.}}"
-msgstr ""
-"{failed, plural, one {# 封邮件未能发送。请检查邮件服务提供商。} other {# 封邮件未能发送。请检查邮件服务提供商。}}"
+msgstr "{failed, plural, one {# 封邮件未能发送。请检查邮件服务提供商。} other {# 封邮件未能发送。请检查邮件服务提供商。}}"
 
 #: packages/admin/src/components/MediaUploadDialog.tsx:198
 msgid "{failedCount, plural, one {# upload failed} other {# uploads failed}}"
@@ -557,9 +553,7 @@ msgstr "{failedCount, plural, one {# 个上传失败} other {# 个上传失败}}
 
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:262
 msgid "{filesMissing, plural, one {# file still needs to be uploaded. Choose the same package file again to finish; files already uploaded are skipped.} other {# files still need to be uploaded. Choose the same package file again to finish; files already uploaded are skipped.}}"
-msgstr ""
-"{filesMissing, plural, one {还有 # 个文件需要上传。请再次选择相同的包文件以完成；已上传的文件将被跳过。} other "
-"{还有 # 个文件需要上传。请再次选择相同的包文件以完成；已上传的文件将被跳过。}}"
+msgstr "{filesMissing, plural, one {还有 # 个文件需要上传。请再次选择相同的包文件以完成；已上传的文件将被跳过。} other {还有 # 个文件需要上传。请再次选择相同的包文件以完成；已上传的文件将被跳过。}}"
 
 #. placeholder {0}: hasMore ? "+" : ""
 #. placeholder {1}: hasMore ? "+" : ""
@@ -585,9 +579,7 @@ msgstr "{host} 未解析到公网地址"
 
 #: packages/admin/src/components/MediaImportSummary.tsx:9
 msgid "{importedFiles, plural, one {<count>#</count> file imported} other {<count>#</count> files imported}}"
-msgstr ""
-"{importedFiles, plural, one {已导入 <count>#</count> 个文件} other {已导入 "
-"<count>#</count> 个文件}}"
+msgstr "{importedFiles, plural, one {已导入 <count>#</count> 个文件} other {已导入 <count>#</count> 个文件}}"
 
 #: packages/admin/src/components/LocaleSwitcher.tsx:117
 msgid "{label} — no translation"
@@ -626,9 +618,7 @@ msgstr "延迟 {lateness}"
 
 #: packages/admin/src/components/ContentList.tsx:1362
 msgid "{matchCount, plural, one {# item matching \"{searchQuery}\"} other {# items matching \"{searchQuery}\"}}"
-msgstr ""
-"{matchCount, plural, one {# 个项目匹配 \"{searchQuery}\"} other {# 个项目匹配 "
-"\"{searchQuery}\"}}"
+msgstr "{matchCount, plural, one {# 个项目匹配 \"{searchQuery}\"} other {# 个项目匹配 \"{searchQuery}\"}}"
 
 #: packages/admin/src/components/WordPressImport.tsx:2532
 msgid "{matchedCount} of {totalCount} assigned"
@@ -640,8 +630,7 @@ msgstr "通过电子邮件匹配 {matchedCount} / {totalCount} 位作者"
 
 #: packages/admin/src/lib/content-validation-errors.ts:100
 msgid "{maximum, plural, one {{name} can have at most # character.} other {{name} can have at most # characters.}}"
-msgstr ""
-"{maximum, plural, one {{name} 最多只能有 # 个字符。} other {{name} 最多只能有 # 个字符。}}"
+msgstr "{maximum, plural, one {{name} 最多只能有 # 个字符。} other {{name} 最多只能有 # 个字符。}}"
 
 #: packages/admin/src/lib/content-validation-errors.ts:106
 msgid "{maximum, plural, one {{name} can have at most # item.} other {{name} can have at most # items.}}"
@@ -649,8 +638,7 @@ msgstr "{maximum, plural, one {{name} 最多只能有 # 项。} other {{name} �
 
 #: packages/admin/src/lib/content-validation-errors.ts:81
 msgid "{minimum, plural, one {{name} needs at least # character.} other {{name} needs at least # characters.}}"
-msgstr ""
-"{minimum, plural, one {{name} 至少需要 # 个字符。} other {{name} 至少需要 # 个字符。}}"
+msgstr "{minimum, plural, one {{name} 至少需要 # 个字符。} other {{name} 至少需要 # 个字符。}}"
 
 #: packages/admin/src/lib/content-validation-errors.ts:87
 msgid "{minimum, plural, one {{name} needs at least # item.} other {{name} needs at least # items.}}"
@@ -718,22 +706,15 @@ msgstr "{origin} 重定向到 {target}。请改为输入该地址。"
 
 #: packages/admin/src/components/Dashboard.tsx:154
 msgid "{overdueCount, plural, one {One scheduled item is overdue and the scheduler heartbeat is stale. Run `npx emdash doctor` and verify the deployed Cron Trigger.} other {# scheduled items are overdue and the scheduler heartbeat is stale. Run `npx emdash doctor` and verify the deployed Cron Trigger.}}"
-msgstr ""
-"{overdueCount, plural, one {有 1 个定时项已过期，且调度器心跳已过期。请运行 `npx emdash doctor` "
-"并验证已部署的 Cron 触发器。} other {有 # 个定时项已过期，且调度器心跳已过期。请运行 `npx emdash doctor` "
-"并验证已部署的 Cron 触发器。}}"
+msgstr "{overdueCount, plural, one {有 1 个定时项已过期，且调度器心跳已过期。请运行 `npx emdash doctor` 并验证已部署的 Cron 触发器。} other {有 # 个定时项已过期，且调度器心跳已过期。请运行 `npx emdash doctor` 并验证已部署的 Cron 触发器。}}"
 
 #: packages/admin/src/components/Dashboard.tsx:149
 msgid "{overdueCount, plural, one {One scheduled item is overdue, but no scheduler run has completed. Run `npx emdash doctor` and verify the deployed Cron Trigger.} other {# scheduled items are overdue, but no scheduler run has completed. Run `npx emdash doctor` and verify the deployed Cron Trigger.}}"
-msgstr ""
-"{overdueCount, plural, one {有 1 个定时项已过期，但调度器尚未完成任何运行。请运行 `npx emdash doctor`"
-" 并验证已部署的 Cron 触发器。} other {有 # 个定时项已过期，但调度器尚未完成任何运行。请运行 `npx emdash doctor` "
-"并验证已部署的 Cron 触发器。}}"
+msgstr "{overdueCount, plural, one {有 1 个定时项已过期，但调度器尚未完成任何运行。请运行 `npx emdash doctor` 并验证已部署的 Cron 触发器。} other {有 # 个定时项已过期，但调度器尚未完成任何运行。请运行 `npx emdash doctor` 并验证已部署的 Cron 触发器。}}"
 
 #: packages/admin/src/components/MediaUploadDialog.tsx:287
 msgid "{overflowCount, plural, one {# file was not added because the upload list is full.} other {# files were not added because the upload list is full.}}"
-msgstr ""
-"{overflowCount, plural, one {# 个文件未添加，因为上传列表已满。} other {# 个文件未添加，因为上传列表已满。}}"
+msgstr "{overflowCount, plural, one {# 个文件未添加，因为上传列表已满。} other {# 个文件未添加，因为上传列表已满。}}"
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:115
 msgid "{pluginName} is requesting additional permissions:"
@@ -755,9 +736,7 @@ msgstr "{plural} 现在上线；草稿编辑内容保持未发布。"
 
 #: packages/admin/src/components/Dashboard.tsx:168
 msgid "{policyRejected, plural, one {Open the affected entry, resolve the policy reason, and schedule it again. A successful schedule or publish clears this notice.} other {Open the affected entries, resolve the policy reasons, and schedule them again. A successful schedule or publish clears each notice.}}"
-msgstr ""
-"{policyRejected, plural, one {打开受影响的条目，解决策略原因，然后重新定时。成功的定时或发布将清除此通知。} other "
-"{打开受影响的条目，解决策略原因，然后重新定时。成功的定时或发布将清除各条通知。}}"
+msgstr "{policyRejected, plural, one {打开受影响的条目，解决策略原因，然后重新定时。成功的定时或发布将清除此通知。} other {打开受影响的条目，解决策略原因，然后重新定时。成功的定时或发布将清除各条通知。}}"
 
 #: packages/admin/src/components/media/MediaBrowserItems.tsx:303
 msgid "{position} of {total}"
@@ -787,13 +766,7 @@ msgstr "{rejectedCount, plural, one {# 个文件未添加。} other {# 个文件
 
 #: packages/admin/src/components/MediaImportSummary.tsx:11
 msgid "{rewrittenUrls, plural, one {<rewrittenCount>#</rewrittenCount> image URL updated in {updatedContentItems, plural, one {<contentCount>#</contentCount> content item} other {<contentCount>#</contentCount> content items}}} other {<rewrittenCount>#</rewrittenCount> image URLs updated in {updatedContentItems, plural, one {<contentCount>#</contentCount> content item} other {<contentCount>#</contentCount> content items}}}}"
-msgstr ""
-"{rewrittenUrls, plural, one {已在 {updatedContentItems, plural, one "
-"{<contentCount>#</contentCount> 个内容项} other {<contentCount>#</contentCount> "
-"个内容项}} 中更新 <rewrittenCount>#</rewrittenCount> 个图片 URL} other {已在 "
-"{updatedContentItems, plural, one {<contentCount>#</contentCount> 个内容项} "
-"other {<contentCount>#</contentCount> 个内容项}} 中更新 "
-"<rewrittenCount>#</rewrittenCount> 个图片 URL}}"
+msgstr "{rewrittenUrls, plural, one {已在 {updatedContentItems, plural, one {<contentCount>#</contentCount> 个内容项} other {<contentCount>#</contentCount> 个内容项}} 中更新 <rewrittenCount>#</rewrittenCount> 个图片 URL} other {已在 {updatedContentItems, plural, one {<contentCount>#</contentCount> 个内容项} other {<contentCount>#</contentCount> 个内容项}} 中更新 <rewrittenCount>#</rewrittenCount> 个图片 URL}}"
 
 #: packages/admin/src/components/editor/TableControls.tsx:142
 msgid "{row} × {column} table"
@@ -813,8 +786,7 @@ msgstr "{selectedCount, plural, one {已选 # 项} other {已选 # 项}}"
 
 #: packages/admin/src/components/ContentList.tsx:652
 msgid "{selectedCount, plural, one {Move # item to trash? You can restore it later.} other {Move # items to trash? You can restore them later.}}"
-msgstr ""
-"{selectedCount, plural, one {将 # 项移入回收站？之后可以恢复。} other {将 # 项移入回收站？之后可以恢复。}}"
+msgstr "{selectedCount, plural, one {将 # 项移入回收站？之后可以恢复。} other {将 # 项移入回收站？之后可以恢复。}}"
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:159
 msgid "{sent, plural, one {Emailed # user} other {Emailed # users}}"
@@ -1871,9 +1843,7 @@ msgstr "发生错误"
 
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:389
 msgid "An import replaces a new site’s starter content, so it only runs on a site with no content of its own. To move content here, set up a new EmDash site and import into that. These are what this site already has:"
-msgstr ""
-"导入会替换新站点的初始内容，因此只能在没有自有内容的站点上运行。要将内容迁移到此处，请设置一个新的 EmDash "
-"站点并导入到该站点。此站点已包含以下内容："
+msgstr "导入会替换新站点的初始内容，因此只能在没有自有内容的站点上运行。要将内容迁移到此处，请设置一个新的 EmDash 站点并导入到该站点。此站点已包含以下内容："
 
 #: packages/admin/src/routes/byline-schema.tsx:272
 msgid "An unexpected error occurred."
@@ -2836,8 +2806,7 @@ msgstr "检查 astro.config.mjs 中的 registry.policy.minimumReleaseAge，然�
 
 #: packages/admin/src/components/RegistryConfigurationBanner.tsx:20
 msgid "Check registry.policy.minimumReleaseAgeExclude in astro.config.mjs, then restart EmDash."
-msgstr ""
-"检查 astro.config.mjs 中的 registry.policy.minimumReleaseAgeExclude，然后重启 EmDash。"
+msgstr "检查 astro.config.mjs 中的 registry.policy.minimumReleaseAgeExclude，然后重启 EmDash。"
 
 #: packages/admin/src/components/WordPressImport.tsx:1145
 msgid "Check Site"
@@ -3160,10 +3129,7 @@ msgstr "关闭设置"
 
 #: packages/admin/src/components/WordPressImport.tsx:93
 msgid "Cloudflare's bot protection answered with a challenge page, so EmDash can't reach the EmDash Exporter API. Allow requests to /wp-json/emdash/v1/ (and ?rest_route=/emdash/v1/ on sites without pretty permalinks), for example with a WAF custom rule that skips bot protection, or pause bot protection during the migration, then try again."
-msgstr ""
-"Cloudflare 的机器人防护返回了验证页面，因此 EmDash 无法访问 EmDash Exporter API。请放行对 /wp-"
-"json/emdash/v1/ 的请求（对于未启用固定链接美化的站点，还包括 "
-"?rest_route=/emdash/v1/），例如使用一条跳过机器人防护的 WAF 自定义规则，或在迁移期间暂停机器人防护，然后重试。"
+msgstr "Cloudflare 的机器人防护返回了验证页面，因此 EmDash 无法访问 EmDash Exporter API。请放行对 /wp-json/emdash/v1/ 的请求（对于未启用固定链接美化的站点，还包括 ?rest_route=/emdash/v1/），例如使用一条跳过机器人防护的 WAF 自定义规则，或在迁移期间暂停机器人防护，然后重试。"
 
 #: packages/admin/src/components/ContentTypeList.tsx:392
 #: packages/admin/src/components/editor/IframeBlockNode.tsx:40
@@ -3220,8 +3186,7 @@ msgstr "合集"
 
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:105
 msgid "Collections and fields, all content with drafts, revisions, scheduled posts, and trash, translations, taxonomies, bylines, media files, menus, widgets, sections, redirects, SEO, and site settings."
-msgstr ""
-"合集与字段、所有内容（含草稿、修订版本、定时发布文章和回收站）、翻译、分类法、署名、媒体文件、菜单、小组件、分区、重定向、SEO 以及站点设置。"
+msgstr "合集与字段、所有内容（含草稿、修订版本、定时发布文章和回收站）、翻译、分类法、署名、媒体文件、菜单、小组件、分区、重定向、SEO 以及站点设置。"
 
 #: packages/admin/src/components/WordPressImport.tsx:2384
 msgid "Collections created:"
@@ -4768,9 +4733,7 @@ msgstr "下载安装包"
 
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:217
 msgid "Download package fetches the export file by file and checks each one, so it works for sites of any size. Download as one file asks the server for a single archive, which is quicker for small sites but can fail for large sites on Cloudflare Workers."
-msgstr ""
-"下载安装包会逐个文件获取导出并逐一校验，适用于任何规模的站点。下载为单个文件是向服务器请求单个归档包，小站点更快，但大型站点在 Cloudflare "
-"Workers 上可能失败。"
+msgstr "下载安装包会逐个文件获取导出并逐一校验，适用于任何规模的站点。下载为单个文件是向服务器请求单个归档包，小站点更快，但大型站点在 Cloudflare Workers 上可能失败。"
 
 #: packages/admin/src/components/RegistryPluginDetail.tsx:572
 msgid "Download SBOM"
@@ -5492,9 +5455,7 @@ msgstr "每条导入的记录和媒体文件都已回读并与安装包匹配。
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:582
 msgid "Every other user with an active account gets an email saying the site is now at {siteHost}, with a link to sign in there. Passkeys from another address don't work at {siteHost}, so users sign in with an email link and add a new passkey."
-msgstr ""
-"其他所有拥有活跃账户的用户将收到一封邮件，告知站点已迁移到 {siteHost}，并附上登录链接。其他地址的通行密钥在 {siteHost} "
-"上不可用，因此用户需通过邮件链接登录并添加新的通行密钥。"
+msgstr "其他所有拥有活跃账户的用户将收到一封邮件，告知站点已迁移到 {siteHost}，并附上登录链接。其他地址的通行密钥在 {siteHost} 上不可用，因此用户需通过邮件链接登录并添加新的通行密钥。"
 
 #: packages/admin/src/components/MediaDetailPanel.tsx:1998
 msgid "Every place using this image will update to the cropped version."
@@ -7655,8 +7616,7 @@ msgstr "内联"
 
 #: packages/admin/src/components/editor/HtmlBlockPreview.tsx:128
 msgid "Inline blocks use your site's styles. Your site removes scripts, style tags and style attributes, and empties iframes other than YouTube and Vimeo."
-msgstr ""
-"内联区块使用您站点的样式。您的站点会移除脚本、style 标签和 style 属性，并清空除 YouTube 和 Vimeo 之外的 iframe。"
+msgstr "内联区块使用您站点的样式。您的站点会移除脚本、style 标签和 style 属性，并清空除 YouTube 和 Vimeo 之外的 iframe。"
 
 #: packages/admin/src/components/PortableTextEditor.tsx:4799
 #: packages/admin/src/components/PortableTextEditor.tsx:6352
@@ -7766,8 +7726,7 @@ msgstr "安装被阻止"
 
 #: packages/admin/src/components/WordPressImport.tsx:1086
 msgid "Install the EmDash Exporter plugin on your WordPress site and generate a key under Tools → EmDash Migration."
-msgstr ""
-"在您的 WordPress 站点上安装 EmDash Exporter 插件，并在「工具」→「EmDash Migration」下生成密钥。"
+msgstr "在您的 WordPress 站点上安装 EmDash Exporter 插件，并在「工具」→「EmDash Migration」下生成密钥。"
 
 #: packages/admin/src/components/RegistryPluginDetail.tsx:908
 msgid "Installation"
@@ -10237,10 +10196,7 @@ msgstr "通行密钥只能在创建时所在的地址使用。请前往 {handove
 
 #: packages/admin/src/components/auth/PasskeyContextMessage.tsx:5
 msgid "Passkeys require a <0>secure context</0>: use <1>HTTPS</1>, or open the admin at <2>http://localhost</2> (with your dev port). Plain <3>http://</3> on a custom hostname is not treated as secure, even on loopback."
-msgstr ""
-"通行密钥需要 <0>安全上下文</0>：使用 <1>HTTPS</1>，或在 "
-"<2>http://localhost</2>（加上您的开发端口）打开管理后台。自定义主机名上的普通 <3>http://</3> "
-"即使在回环地址上也不被视为安全。"
+msgstr "通行密钥需要 <0>安全上下文</0>：使用 <1>HTTPS</1>，或在 <2>http://localhost</2>（加上您的开发端口）打开管理后台。自定义主机名上的普通 <3>http://</3> 即使在回环地址上也不被视为安全。"
 
 #: packages/admin/src/components/auth/PasskeyLogin.tsx:155
 msgid "Passkeys require HTTPS or http://localhost (with your port); this hostname is not a secure browser context."
@@ -10274,9 +10230,7 @@ msgstr "模式（正则表达式）"
 #. placeholder {9}: "/{year}/{month}/{day}/{slug}.html"
 #: packages/admin/src/components/ContentTypeEditor.tsx:557
 msgid "Pattern for generating URLs, e.g. /blog/{0}. Tokens: {1}, {2}, and date tokens {3}/{4}/{5} (also {6}/{7}/{8}) from the publish date — e.g. {9} for WordPress-style permalinks."
-msgstr ""
-"生成 URL 的模式，例如 /blog/{0}。标记：{1}、{2}，以及来自发布日期的日期标记 {3}/{4}/{5}（还有 "
-"{6}/{7}/{8}）——例如，{9} 用于 WordPress 风格的固定链接。"
+msgstr "生成 URL 的模式，例如 /blog/{0}。标记：{1}、{2}，以及来自发布日期的日期标记 {3}/{4}/{5}（还有 {6}/{7}/{8}）——例如，{9} 用于 WordPress 风格的固定链接。"
 
 #. placeholder {0}: "{slug}"
 #: packages/admin/src/components/ContentTypeEditor.tsx:548
@@ -10823,8 +10777,7 @@ msgstr "快速创建关联关系"
 
 #: packages/admin/src/components/FieldEditor.tsx:1060
 msgid "Quick create names the relationship after this field and this collection, takes how many entries it holds from the switch above, and puts no limit on how many entries link back the other way. <0>Create the relationship yourself</0> to set its slug, the name each side goes by, and both limits, then pick it above."
-msgstr ""
-"快速创建将根据此字段和此内容集合为关联关系命名，从上方开关获取其容纳条目数，并不对反向链接的条目数设限。<0>自行创建关联关系</0>可设置其别名、双方的显示名称和两个限制，然后在上方选择它。"
+msgstr "快速创建将根据此字段和此内容集合为关联关系命名，从上方开关获取其容纳条目数，并不对反向链接的条目数设限。<0>自行创建关联关系</0>可设置其别名、双方的显示名称和两个限制，然后在上方选择它。"
 
 #: packages/admin/src/components/editor/blockTypes.ts:109
 #: packages/admin/src/components/PortableTextEditor.tsx:2071
@@ -12970,8 +12923,7 @@ msgstr "搜索和社交元数据中的站点地图和绝对 URL 将使用新域�
 
 #: packages/admin/src/components/settings/BackupSettings.tsx:347
 msgid "Sites on Cloudflare D1 can additionally restore the database to any minute within the last 30 days using D1 Time Travel — always on, no setup required."
-msgstr ""
-"使用 Cloudflare D1 的站点还可通过 D1 Time Travel 将数据库恢复到过去 30 天内的任意分钟——始终开启，无需设置。"
+msgstr "使用 Cloudflare D1 的站点还可通过 D1 Time Travel 将数据库恢复到过去 30 天内的任意分钟——始终开启，无需设置。"
 
 #: packages/admin/src/components/MediaLibrary.tsx:1143
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:280
@@ -13963,9 +13915,7 @@ msgstr "此区块运行 JavaScript。"
 
 #: packages/admin/src/components/settings/transfer/ExportSection.tsx:225
 msgid "This browser keeps the whole package in memory until the download finishes. For an export this size, use a Chromium-based browser, which saves straight to disk, or run emdash site export from the CLI."
-msgstr ""
-"此浏览器会在下载完成前将整个包保存在内存中。对于此大小的导出，请使用基于 Chromium 的浏览器（可直接保存到磁盘），或从 CLI 运行 "
-"emdash site export。"
+msgstr "此浏览器会在下载完成前将整个包保存在内存中。对于此大小的导出，请使用基于 Chromium 的浏览器（可直接保存到磁盘），或从 CLI 运行 emdash site export。"
 
 #: packages/admin/src/components/MediaDetailPanel.tsx:1943
 #: packages/admin/src/components/MediaDetailPanel.tsx:1979
@@ -14293,8 +14243,7 @@ msgstr "此站点无法接收导入"
 
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:242
 msgid "This site has no content yet, so it can receive an import. Choose a .emdash package file. It is checked in your browser and uploaded in parts; nothing on this site changes until you review and confirm the import."
-msgstr ""
-"此站点尚无内容，因此可以接收导入。请选择 .emdash 包文件。它将在您的浏览器中进行检查并分块上传；在您检查并确认导入之前，此站点不会发生任何更改。"
+msgstr "此站点尚无内容，因此可以接收导入。请选择 .emdash 包文件。它将在您的浏览器中进行检查并分块上传；在您检查并确认导入之前，此站点不会发生任何更改。"
 
 #: packages/admin/src/components/Dashboard.tsx:277
 msgid "This site has no content yet, so you can import a .emdash package exported from another EmDash site."
@@ -15432,8 +15381,7 @@ msgstr "我们在打开浏览器的通行密钥提示之前进行了检查，以
 #. placeholder {0}: result.url
 #: packages/admin/src/components/WordPressImport.tsx:1320
 msgid "We couldn't connect to a WordPress site at {0}. This could mean the site isn't WordPress, the REST API is disabled, or the site isn't accessible."
-msgstr ""
-"我们无法连接到位于 {0} 的 WordPress 站点。这可能意味着该站点不是 WordPress、REST API 被禁用或站点无法访问。"
+msgstr "我们无法连接到位于 {0} 的 WordPress 站点。这可能意味着该站点不是 WordPress、REST API 被禁用或站点无法访问。"
 
 #: packages/admin/src/components/WordPressImport.tsx:1132
 msgid "We'll check what import options are available for your site."
