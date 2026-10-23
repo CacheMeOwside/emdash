@@ -12067,6 +12067,7 @@ msgstr "SCSS"
 
 #: packages/admin/src/components/ContentTypeEditor.tsx:106
 #: packages/admin/src/components/Settings.tsx:165
+#: packages/admin/src/components/Settings.tsx:165
 #: packages/admin/src/components/Widgets.tsx:160
 msgid "Search"
 msgstr "Cari"
