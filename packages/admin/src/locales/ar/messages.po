@@ -217,7 +217,7 @@ msgstr "{0, plural, zero {لا علاقات يشارك فيها نوع المح�
 #. placeholder {1}: state.columns
 #: packages/admin/src/components/editor/TableControls.tsx:190
 #: packages/admin/src/components/editor/TableControls.tsx:223
-#: packages/admin/src/components/PortableTextEditor.tsx:5398
+#: packages/admin/src/components/PortableTextEditor.tsx:5400
 msgid "{0, plural, one {# row} other {# rows}} × {1, plural, one {# column} other {# columns}} selected"
 msgstr "تم تحديد {0, plural, one {صف واحد} two {صفين} few {# صفوف} many {# صفًا} other {# صف}} × {1, plural, one {عمود واحد} two {عمودين} few {# أعمدة} many {# عمودًا} other {# عمود}}"
 
@@ -776,7 +776,7 @@ msgstr "جدول {row} × {column}"
 msgid "{rows, plural, one {Row deleted} other {# rows deleted}}"
 msgstr "{rows, plural, one {حُذف الصف} two {حُذف صفان} few {حُذفت # صفوف} many {حُذف # صفًا} other {حُذف # صف}}"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3585
+#: packages/admin/src/components/PortableTextEditor.tsx:3587
 msgid "{rows} × {columns} table pasted"
 msgstr "لُصق جدول {rows} × {columns}"
 
@@ -1293,12 +1293,12 @@ msgstr "إضافة كاتب"
 
 #: packages/admin/src/components/editor/VideoNode.tsx:387
 #: packages/admin/src/components/editor/VideoNode.tsx:389
-#: packages/admin/src/components/PortableTextEditor.tsx:5845
+#: packages/admin/src/components/PortableTextEditor.tsx:5847
 msgid "Add caption"
 msgstr ""
 
 #: packages/admin/src/components/editor/TableControls.tsx:26
-#: packages/admin/src/components/PortableTextEditor.tsx:5411
+#: packages/admin/src/components/PortableTextEditor.tsx:5413
 msgid "Add column after"
 msgstr "إضافة عمود بعده"
 
@@ -1368,9 +1368,9 @@ msgstr "إضافة عنصر"
 msgid "Add Item"
 msgstr "إضافة عنصر"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5041
-#: packages/admin/src/components/PortableTextEditor.tsx:5838
-#: packages/admin/src/components/PortableTextEditor.tsx:6286
+#: packages/admin/src/components/PortableTextEditor.tsx:5043
+#: packages/admin/src/components/PortableTextEditor.tsx:5840
+#: packages/admin/src/components/PortableTextEditor.tsx:6288
 msgid "Add link"
 msgstr "إضافة رابط"
 
@@ -1414,7 +1414,7 @@ msgid "Add row above"
 msgstr "إضافة صف أعلاه"
 
 #: packages/admin/src/components/editor/TableControls.tsx:25
-#: packages/admin/src/components/PortableTextEditor.tsx:5404
+#: packages/admin/src/components/PortableTextEditor.tsx:5406
 msgid "Add row below"
 msgstr "إضافة صف أدناه"
 
@@ -1604,25 +1604,25 @@ msgid "Agent-callable MCP tools"
 msgstr "أدوات MCP القابلة للاستدعاء من الوكلاء"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:165
-#: packages/admin/src/components/PortableTextEditor.tsx:5301
+#: packages/admin/src/components/PortableTextEditor.tsx:5303
 msgid "Align"
 msgstr ""
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6460
+#: packages/admin/src/components/PortableTextEditor.tsx:6462
 msgid "Align center"
 msgstr ""
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6452
+#: packages/admin/src/components/PortableTextEditor.tsx:6454
 msgid "Align left"
 msgstr ""
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6468
+#: packages/admin/src/components/PortableTextEditor.tsx:6470
 msgid "Align right"
 msgstr ""
 
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:484
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:725
-#: packages/admin/src/components/PortableTextEditor.tsx:5819
+#: packages/admin/src/components/PortableTextEditor.tsx:5821
 msgid "Alignment"
 msgstr "المحاذاة"
 
@@ -1746,8 +1746,8 @@ msgstr ""
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:515
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:519
 #: packages/admin/src/components/MediaLibrary.tsx:1144
-#: packages/admin/src/components/PortableTextEditor.tsx:5750
-#: packages/admin/src/components/PortableTextEditor.tsx:5816
+#: packages/admin/src/components/PortableTextEditor.tsx:5752
+#: packages/admin/src/components/PortableTextEditor.tsx:5818
 msgid "Alt text"
 msgstr "النص البديل"
 
@@ -1898,7 +1898,7 @@ msgid "Application Password"
 msgstr "كلمة مرور التطبيق"
 
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:610
-#: packages/admin/src/components/PortableTextEditor.tsx:6551
+#: packages/admin/src/components/PortableTextEditor.tsx:6553
 msgid "Apply"
 msgstr "تطبيق"
 
@@ -1906,8 +1906,8 @@ msgstr "تطبيق"
 msgid "Apply changes"
 msgstr "تطبيق التغييرات"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5015
-#: packages/admin/src/components/PortableTextEditor.tsx:5791
+#: packages/admin/src/components/PortableTextEditor.tsx:5017
+#: packages/admin/src/components/PortableTextEditor.tsx:5793
 msgid "Apply link"
 msgstr "تطبيق الرابط"
 
@@ -2344,8 +2344,8 @@ msgstr "العوائق"
 msgid "Blocks"
 msgstr "الكتل"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4795
-#: packages/admin/src/components/PortableTextEditor.tsx:6320
+#: packages/admin/src/components/PortableTextEditor.tsx:4797
+#: packages/admin/src/components/PortableTextEditor.tsx:6322
 msgid "Bold"
 msgstr "عريض"
 
@@ -2406,7 +2406,7 @@ msgstr "تم التحقق من مصدر البناء"
 
 #: packages/admin/src/components/editor/blockTypes.ts:93
 #: packages/admin/src/components/PortableTextEditor.tsx:2051
-#: packages/admin/src/components/PortableTextEditor.tsx:6377
+#: packages/admin/src/components/PortableTextEditor.tsx:6379
 msgid "Bullet List"
 msgstr "قائمة نقطية"
 
@@ -2521,7 +2521,7 @@ msgstr "يمكنه عرض المحتوى"
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1380
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:607
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:826
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:394
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:421
 #: packages/admin/src/components/EditorDraftPatchPreview.tsx:78
 #: packages/admin/src/components/FieldEditor.tsx:1386
 #: packages/admin/src/components/MediaDetailPanel.tsx:1859
@@ -2532,9 +2532,9 @@ msgstr "يمكنه عرض المحتوى"
 #: packages/admin/src/components/MenuEditor.tsx:754
 #: packages/admin/src/components/MenuList.tsx:184
 #: packages/admin/src/components/PluginManager.tsx:817
-#: packages/admin/src/components/PortableTextEditor.tsx:5762
-#: packages/admin/src/components/PortableTextEditor.tsx:5788
-#: packages/admin/src/components/PortableTextEditor.tsx:6535
+#: packages/admin/src/components/PortableTextEditor.tsx:5764
+#: packages/admin/src/components/PortableTextEditor.tsx:5790
+#: packages/admin/src/components/PortableTextEditor.tsx:6537
 #: packages/admin/src/components/PublishingDateTimeEditor.tsx:407
 #: packages/admin/src/components/Redirects.tsx:187
 #: packages/admin/src/components/RelationDialog.tsx:60
@@ -2553,7 +2553,7 @@ msgstr "يمكنه عرض المحتوى"
 msgid "Cancel"
 msgstr "إلغاء"
 
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:393
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:420
 msgid "Cancel (Esc)"
 msgstr "إلغاء (Esc)"
 
@@ -2645,8 +2645,8 @@ msgstr "تم دمج الخلايا"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:54
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:277
-#: packages/admin/src/components/PortableTextEditor.tsx:5305
-#: packages/admin/src/components/PortableTextEditor.tsx:5423
+#: packages/admin/src/components/PortableTextEditor.tsx:5307
+#: packages/admin/src/components/PortableTextEditor.tsx:5425
 msgid "Center"
 msgstr "توسيط"
 
@@ -2993,7 +2993,7 @@ msgstr "مسح المكتملة"
 msgid "Clear filters"
 msgstr "مسح الفلاتر"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5315
+#: packages/admin/src/components/PortableTextEditor.tsx:5317
 msgid "Clear formatting"
 msgstr ""
 
@@ -3139,7 +3139,7 @@ msgstr "كود"
 
 #: packages/admin/src/components/editor/blockTypes.ts:117
 #: packages/admin/src/components/PortableTextEditor.tsx:2081
-#: packages/admin/src/components/PortableTextEditor.tsx:6419
+#: packages/admin/src/components/PortableTextEditor.tsx:6421
 msgid "Code Block"
 msgstr "كتلة كود"
 
@@ -3193,7 +3193,7 @@ msgid "Collections created:"
 msgstr "المجموعات المُنشأة:"
 
 #: packages/admin/src/components/editor/TableControls.tsx:26
-#: packages/admin/src/components/PortableTextEditor.tsx:5409
+#: packages/admin/src/components/PortableTextEditor.tsx:5411
 msgid "Column added after"
 msgstr "أُضيف عمود بعده"
 
@@ -3209,7 +3209,7 @@ msgstr "تم تقليل عرض العمود"
 msgid "Column width increased"
 msgstr "تمت زيادة عرض العمود"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3585
+#: packages/admin/src/components/PortableTextEditor.tsx:3587
 msgid "Column width resized"
 msgstr "تم تغيير عرض العمود"
 
@@ -3452,7 +3452,7 @@ msgid "Continue Import"
 msgstr "متابعة الاستيراد"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:187
-#: packages/admin/src/components/PortableTextEditor.tsx:6394
+#: packages/admin/src/components/PortableTextEditor.tsx:6396
 msgid "Continue numbering"
 msgstr "متابعة الترقيم"
 
@@ -3532,8 +3532,8 @@ msgstr "قم بنسخ هذا الرمز الآن — لن يظهر لاحقًا"
 msgid "Copy token"
 msgstr "نسخ الرمز"
 
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:309
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:310
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:334
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:335
 #: packages/admin/src/components/MediaDetailPanel.tsx:1378
 msgid "Copy URL"
 msgstr "نسخ الرابط"
@@ -3562,7 +3562,7 @@ msgstr "تعذّر النسخ تلقائيًا. يرجى تحديد الرابط
 msgid "Could not create {singularLower}"
 msgstr "تعذّر إنشاء {singularLower}"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4590
+#: packages/admin/src/components/PortableTextEditor.tsx:4592
 msgid "Could not insert section"
 msgstr "تعذّر إدراج القسم"
 
@@ -4144,7 +4144,7 @@ msgstr "مُعرَّف في الكود"
 #: packages/admin/src/components/ContentTypeEditor.tsx:868
 #: packages/admin/src/components/ContentTypeList.tsx:258
 #: packages/admin/src/components/editor/BlockMenu.tsx:218
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:365
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:392
 #: packages/admin/src/components/MediaDetailPanel.tsx:1828
 #: packages/admin/src/components/MediaDetailPanel.tsx:1932
 #: packages/admin/src/components/MenuEditor.tsx:672
@@ -4246,7 +4246,7 @@ msgstr "حذف التعليق؟"
 msgid "Delete Content Type?"
 msgstr "حذف نوع المحتوى؟"
 
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:366
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:393
 msgid "Delete embed"
 msgstr "حذف المحتوى المُضمَّن"
 
@@ -4265,7 +4265,7 @@ msgstr "حذف المجلد"
 msgid "Delete gallery"
 msgstr "حذف المعرض"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5857
+#: packages/admin/src/components/PortableTextEditor.tsx:5859
 msgid "Delete image"
 msgstr "حذف الصورة"
 
@@ -4419,7 +4419,7 @@ msgid "visualEditing.altTextPlaceholder"
 msgstr ""
 
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:522
-#: packages/admin/src/components/PortableTextEditor.tsx:5751
+#: packages/admin/src/components/PortableTextEditor.tsx:5753
 msgid "Describe the image"
 msgstr "صِف الصورة"
 
@@ -4588,11 +4588,11 @@ msgstr "إخفاء {0} المكتملة"
 msgid "Dismiss import suggestion"
 msgstr "إخفاء اقتراح الاستيراد"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4611
+#: packages/admin/src/components/PortableTextEditor.tsx:4613
 msgid "Dismiss section error"
 msgstr "إخفاء خطأ القسم"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4578
+#: packages/admin/src/components/PortableTextEditor.tsx:4580
 msgid "Dismiss table paste error"
 msgstr "إخفاء خطأ لصق الجدول"
 
@@ -4897,8 +4897,8 @@ msgstr "يمكن أن يحتوي كل جزء من المسار على عنصر �
 msgid "Earliest saved version"
 msgstr ""
 
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:354
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:355
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:380
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:381
 #: packages/admin/src/components/MenuCard.tsx:59
 #: packages/admin/src/components/MenuEditor.tsx:667
 #: packages/admin/src/components/Sections.tsx:439
@@ -4963,7 +4963,7 @@ msgstr "تعديل حقل الكاتب"
 
 #: packages/admin/src/components/editor/VideoNode.tsx:387
 #: packages/admin/src/components/editor/VideoNode.tsx:389
-#: packages/admin/src/components/PortableTextEditor.tsx:5845
+#: packages/admin/src/components/PortableTextEditor.tsx:5847
 msgid "Edit caption"
 msgstr ""
 
@@ -4999,10 +4999,10 @@ msgstr "تعديل الصورة"
 msgid "Edit image {0}"
 msgstr "تعديل الصورة {0}"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5041
-#: packages/admin/src/components/PortableTextEditor.tsx:5147
-#: packages/admin/src/components/PortableTextEditor.tsx:5838
-#: packages/admin/src/components/PortableTextEditor.tsx:6285
+#: packages/admin/src/components/PortableTextEditor.tsx:5043
+#: packages/admin/src/components/PortableTextEditor.tsx:5149
+#: packages/admin/src/components/PortableTextEditor.tsx:5840
+#: packages/admin/src/components/PortableTextEditor.tsx:6287
 msgid "Edit link"
 msgstr "تعديل الرابط"
 
@@ -5044,8 +5044,8 @@ msgstr "تعديل إعادة التوجيه {0}"
 msgid "Edit role"
 msgstr "تعديل الدور"
 
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:354
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:355
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:380
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:381
 msgid "Edit URL"
 msgstr "تعديل الرابط"
 
@@ -5194,7 +5194,7 @@ msgid "Embed"
 msgstr ""
 
 #. placeholder {0}: block.label
-#: packages/admin/src/components/PortableTextEditor.tsx:3751
+#: packages/admin/src/components/PortableTextEditor.tsx:3753
 msgid "Embed a {0}"
 msgstr "تضمين {0}"
 
@@ -5375,8 +5375,8 @@ msgstr "أدخل الرمز من الطرفية الخاصة بك"
 msgid "Enter the domain below. EmDash checks that it serves this site before switching."
 msgstr ""
 
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:122
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:131
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:127
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:136
 msgid "Enter URL..."
 msgstr "أدخل الرابط..."
 
@@ -6929,7 +6929,7 @@ msgstr "للاستيراد الكامل بما في ذلك المسودات وج
 msgid "For the best import experience, install the <0>EmDash Exporter</0> plugin on your WordPress site."
 msgstr "للحصول على أفضل تجربة استيراد، ثبّت إضافة <0>EmDash Exporter</0> على موقع WordPress الخاص بك."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4993
+#: packages/admin/src/components/PortableTextEditor.tsx:4995
 msgid "Format selection"
 msgstr ""
 
@@ -6977,7 +6977,7 @@ msgstr "وصول التحكم الكامل"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:44
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:235
-#: packages/admin/src/components/PortableTextEditor.tsx:3699
+#: packages/admin/src/components/PortableTextEditor.tsx:3701
 #: packages/admin/src/components/revisions/RevisionDocument.tsx:437
 msgid "Gallery"
 msgstr "معرض"
@@ -7345,7 +7345,7 @@ msgstr ""
 #: packages/admin/src/components/editor/BlockMenu.tsx:42
 #: packages/admin/src/components/FieldEditor.tsx:444
 #: packages/admin/src/components/FieldEditor.tsx:1304
-#: packages/admin/src/components/PortableTextEditor.tsx:3686
+#: packages/admin/src/components/PortableTextEditor.tsx:3688
 #: packages/admin/src/components/revisions/RevisionDocument.tsx:302
 #: packages/admin/src/components/revisions/RevisionDocument.tsx:458
 msgid "Image"
@@ -7367,7 +7367,7 @@ msgstr "الصورة {0}"
 msgid "Image actions"
 msgstr "إجراءات الصورة"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5716
+#: packages/admin/src/components/PortableTextEditor.tsx:5718
 msgid "Image controls"
 msgstr ""
 
@@ -7375,7 +7375,7 @@ msgstr ""
 msgid "Image from media library"
 msgstr "صورة من مكتبة الوسائط"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6283
+#: packages/admin/src/components/PortableTextEditor.tsx:6285
 msgid "Image link"
 msgstr "رابط الصورة"
 
@@ -7395,7 +7395,7 @@ msgid "Image replaced."
 msgstr "استُبدلت الصورة."
 
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:391
-#: packages/admin/src/components/PortableTextEditor.tsx:5850
+#: packages/admin/src/components/PortableTextEditor.tsx:5852
 msgid "Image settings"
 msgstr "إعدادات الصورة"
 
@@ -7618,8 +7618,8 @@ msgstr ""
 msgid "Inline blocks use your site's styles. Your site removes scripts, style tags and style attributes, and empties iframes other than YouTube and Vimeo."
 msgstr ""
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4799
-#: packages/admin/src/components/PortableTextEditor.tsx:6352
+#: packages/admin/src/components/PortableTextEditor.tsx:4801
+#: packages/admin/src/components/PortableTextEditor.tsx:6354
 msgid "Inline Code"
 msgstr "كود مضمَّن"
 
@@ -7640,7 +7640,7 @@ msgstr "إدراج كتلة كود"
 msgid "Insert a horizontal rule"
 msgstr "إدراج فاصل أفقي"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3730
+#: packages/admin/src/components/PortableTextEditor.tsx:3732
 msgid "Insert a reusable section"
 msgstr "إدراج قسم قابل لإعادة الاستخدام"
 
@@ -7648,11 +7648,11 @@ msgstr "إدراج قسم قابل لإعادة الاستخدام"
 msgid "Insert a table"
 msgstr "إدراج جدول"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3687
+#: packages/admin/src/components/PortableTextEditor.tsx:3689
 msgid "Insert an image"
 msgstr "إدراج صورة"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3700
+#: packages/admin/src/components/PortableTextEditor.tsx:3702
 msgid "Insert an image gallery"
 msgstr "إدراج معرض صور"
 
@@ -7660,8 +7660,8 @@ msgstr "إدراج معرض صور"
 msgid "Insert block"
 msgstr "إدراج كتلة"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6299
-#: packages/admin/src/components/PortableTextEditor.tsx:6309
+#: packages/admin/src/components/PortableTextEditor.tsx:6301
+#: packages/admin/src/components/PortableTextEditor.tsx:6311
 msgid "Insert block after current block"
 msgstr "إدراج كتلة بعد الكتلة الحالية"
 
@@ -7669,12 +7669,12 @@ msgstr "إدراج كتلة بعد الكتلة الحالية"
 msgid "Insert block below"
 msgstr "إدراج كتلة أدناه"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6433
+#: packages/admin/src/components/PortableTextEditor.tsx:6435
 msgid "Insert HTML"
 msgstr "إدراج HTML"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4705
-#: packages/admin/src/components/PortableTextEditor.tsx:6426
+#: packages/admin/src/components/PortableTextEditor.tsx:4707
+#: packages/admin/src/components/PortableTextEditor.tsx:6428
 msgid "Insert image"
 msgstr "إدراج صورة"
 
@@ -7703,7 +7703,7 @@ msgstr "إدراج قسم"
 msgid "Insert table"
 msgstr "إدراج جدول"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4719
+#: packages/admin/src/components/PortableTextEditor.tsx:4721
 msgid "Insert video"
 msgstr ""
 
@@ -7826,8 +7826,8 @@ msgstr "يُخزَّن لدى أداة المصادقة أو مدير بيانا
 msgid "It was started somewhere else, so its plan can no longer be changed. Its progress will appear here."
 msgstr "بدأ من مكان آخر، لذا لم يعد من الممكن تغيير خطته. سيظهر تقدمه هنا."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4796
-#: packages/admin/src/components/PortableTextEditor.tsx:6328
+#: packages/admin/src/components/PortableTextEditor.tsx:4798
+#: packages/admin/src/components/PortableTextEditor.tsx:6330
 msgid "Italic"
 msgstr "مائل"
 
@@ -8050,8 +8050,8 @@ msgstr ""
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:53
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:276
-#: packages/admin/src/components/PortableTextEditor.tsx:5304
-#: packages/admin/src/components/PortableTextEditor.tsx:5422
+#: packages/admin/src/components/PortableTextEditor.tsx:5306
+#: packages/admin/src/components/PortableTextEditor.tsx:5424
 msgid "Left"
 msgstr "يسار"
 
@@ -8072,7 +8072,7 @@ msgstr "الترخيص"
 msgid "Limit"
 msgstr "الحد"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6512
+#: packages/admin/src/components/PortableTextEditor.tsx:6514
 msgid "Link"
 msgstr "رابط"
 
@@ -8080,7 +8080,7 @@ msgstr "رابط"
 msgid "Link expired"
 msgstr "انتهت صلاحية الرابط"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5125
+#: packages/admin/src/components/PortableTextEditor.tsx:5127
 msgid "Link options"
 msgstr ""
 
@@ -8164,7 +8164,7 @@ msgstr "روابط إلى"
 msgid "Links to {0}"
 msgstr "يرتبط بـ {0}"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3506
+#: packages/admin/src/components/PortableTextEditor.tsx:3508
 msgid "List"
 msgstr ""
 
@@ -8253,7 +8253,7 @@ msgstr "جارٍ تحميل الإعدادات..."
 msgid "Loading content..."
 msgstr "جاري تحميل المحتوى..."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4541
+#: packages/admin/src/components/PortableTextEditor.tsx:4543
 msgid "Loading editor..."
 msgstr "جارٍ تحميل المحرر..."
 
@@ -8869,7 +8869,7 @@ msgstr "الأرشيفات الشهرية/السنوية"
 msgid "More actions for {0}"
 msgstr "المزيد من الإجراءات لـ {0}"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5271
+#: packages/admin/src/components/PortableTextEditor.tsx:5273
 msgid "More formatting"
 msgstr ""
 
@@ -9427,7 +9427,7 @@ msgstr "لا يوجد أنواع محتوى بعد."
 msgid "No custom fields yet"
 msgstr "لا توجد حقول مخصصة بعد"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5812
+#: packages/admin/src/components/PortableTextEditor.tsx:5814
 msgid "No description yet"
 msgstr ""
 
@@ -9438,6 +9438,10 @@ msgstr "لا يوجد وصف مفصّل متاح."
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:285
 msgid "No domains configured. Users must be invited individually."
 msgstr "لم يتم تهيئة نطاقات. يجب دعوة المستخدمين بشكل فردي."
+
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:310
+msgid "No editor is available for this block type. Its content is preserved."
+msgstr ""
 
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:332
 msgid "No email address"
@@ -9735,7 +9739,7 @@ msgid "Non-guest"
 msgstr "غير ضيف"
 
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:275
-#: packages/admin/src/components/PortableTextEditor.tsx:5421
+#: packages/admin/src/components/PortableTextEditor.tsx:5423
 msgid "None"
 msgstr "لا شيء"
 
@@ -9807,7 +9811,7 @@ msgstr "عدد المنشورات الظاهرة لكل صفحة في عروض �
 
 #: packages/admin/src/components/editor/blockTypes.ts:101
 #: packages/admin/src/components/PortableTextEditor.tsx:2061
-#: packages/admin/src/components/PortableTextEditor.tsx:6385
+#: packages/admin/src/components/PortableTextEditor.tsx:6387
 msgid "Numbered List"
 msgstr "قائمة مرقمة"
 
@@ -9913,8 +9917,8 @@ msgstr ""
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:783
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:803
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:804
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:320
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:321
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:345
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:346
 msgid "Open in new tab"
 msgstr "فتح في علامة تبويب جديدة"
 
@@ -10781,8 +10785,8 @@ msgstr "يسمّي الإنشاء السريع العلاقة باسم هذا ا
 
 #: packages/admin/src/components/editor/blockTypes.ts:109
 #: packages/admin/src/components/PortableTextEditor.tsx:2071
-#: packages/admin/src/components/PortableTextEditor.tsx:3507
-#: packages/admin/src/components/PortableTextEditor.tsx:6411
+#: packages/admin/src/components/PortableTextEditor.tsx:3509
+#: packages/admin/src/components/PortableTextEditor.tsx:6413
 msgid "Quote"
 msgstr "إقتباس"
 
@@ -10956,7 +10960,7 @@ msgstr "إعادات التوجيه"
 msgid "Redirects that loop will be imported turned off"
 msgstr "ستُستورد إعادات التوجيه الحلقية وهي متوقفة"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6574
+#: packages/admin/src/components/PortableTextEditor.tsx:6576
 msgid "Redo"
 msgstr "إعادة"
 
@@ -11078,7 +11082,7 @@ msgstr ""
 #: packages/admin/src/components/ImageFieldRenderer.tsx:383
 #: packages/admin/src/components/ImageFieldRenderer.tsx:454
 #: packages/admin/src/components/media/MediaBrowserItems.tsx:220
-#: packages/admin/src/components/PortableTextEditor.tsx:6547
+#: packages/admin/src/components/PortableTextEditor.tsx:6549
 #: packages/admin/src/components/settings/GeneralSettings.tsx:400
 #: packages/admin/src/components/settings/GeneralSettings.tsx:460
 #: packages/admin/src/components/settings/PasskeyItem.tsx:160
@@ -11153,9 +11157,9 @@ msgstr "إزالة الصورة؟"
 msgid "Remove item {0}"
 msgstr "إزالة العنصر {0}"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5019
-#: packages/admin/src/components/PortableTextEditor.tsx:5159
-#: packages/admin/src/components/PortableTextEditor.tsx:5784
+#: packages/admin/src/components/PortableTextEditor.tsx:5021
+#: packages/admin/src/components/PortableTextEditor.tsx:5161
+#: packages/admin/src/components/PortableTextEditor.tsx:5786
 msgid "Remove link"
 msgstr "إزالة الرابط"
 
@@ -11321,8 +11325,8 @@ msgstr ""
 #: packages/admin/src/components/ImageFieldRenderer.tsx:427
 #: packages/admin/src/components/ImageFieldRenderer.tsx:601
 #: packages/admin/src/components/ImageFieldRenderer.tsx:604
-#: packages/admin/src/components/PortableTextEditor.tsx:5806
-#: packages/admin/src/components/PortableTextEditor.tsx:5887
+#: packages/admin/src/components/PortableTextEditor.tsx:5808
+#: packages/admin/src/components/PortableTextEditor.tsx:5889
 #: packages/admin/src/components/SeoImageField.tsx:194
 #: packages/admin/src/components/SeoImageField.tsx:253
 msgid "Replace"
@@ -11347,7 +11351,7 @@ msgstr "استبدال نسخة الوضع الداكن لـ {label}"
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:372
 #: packages/admin/src/components/MediaDetailPanel.tsx:1839
 #: packages/admin/src/components/MediaDetailPanel.tsx:1967
-#: packages/admin/src/components/PortableTextEditor.tsx:5886
+#: packages/admin/src/components/PortableTextEditor.tsx:5888
 msgid "Replace image"
 msgstr "استبدال الصورة"
 
@@ -11518,7 +11522,7 @@ msgid "Resolving publisher handle..."
 msgstr "جارٍ التحقق من معرّف الناشر..."
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:193
-#: packages/admin/src/components/PortableTextEditor.tsx:6401
+#: packages/admin/src/components/PortableTextEditor.tsx:6403
 msgid "Restart numbering"
 msgstr "إعادة بدء الترقيم"
 
@@ -11722,8 +11726,8 @@ msgstr "محرر النص المنسق"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:55
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:278
-#: packages/admin/src/components/PortableTextEditor.tsx:5306
-#: packages/admin/src/components/PortableTextEditor.tsx:5424
+#: packages/admin/src/components/PortableTextEditor.tsx:5308
+#: packages/admin/src/components/PortableTextEditor.tsx:5426
 msgid "Right"
 msgstr "يمين"
 
@@ -11777,7 +11781,7 @@ msgid "Row added above"
 msgstr "أُضيف صف أعلاه"
 
 #: packages/admin/src/components/editor/TableControls.tsx:25
-#: packages/admin/src/components/PortableTextEditor.tsx:5402
+#: packages/admin/src/components/PortableTextEditor.tsx:5404
 msgid "Row added below"
 msgstr "أُضيف صف أدناه"
 
@@ -11820,7 +11824,7 @@ msgstr "محتوى نموذجي"
 
 #: packages/admin/src/components/BylineFormDialog.tsx:549
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:829
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:405
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:432
 #: packages/admin/src/components/MediaDetailPanel.tsx:1890
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
 #: packages/admin/src/components/MenuEditor.tsx:466
@@ -11831,11 +11835,11 @@ msgstr "محتوى نموذجي"
 msgid "Save"
 msgstr "حفظ"
 
-#: packages/admin/src/components/editor/PluginBlockNode.tsx:404
+#: packages/admin/src/components/editor/PluginBlockNode.tsx:431
 msgid "Save (Enter)"
 msgstr "حفظ (Enter)"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5765
+#: packages/admin/src/components/PortableTextEditor.tsx:5767
 msgid "Save alt text"
 msgstr "حفظ النص البديل"
 
@@ -12252,7 +12256,7 @@ msgstr "قابل للبحث"
 msgid "Searching…"
 msgstr "جارٍ البحث…"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3729
+#: packages/admin/src/components/PortableTextEditor.tsx:3731
 msgid "Section"
 msgstr "قسم"
 
@@ -12441,13 +12445,13 @@ msgstr "اختيار أيقونة المتصفح"
 msgid "Select file"
 msgstr "اختر ملفًا"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4733
+#: packages/admin/src/components/PortableTextEditor.tsx:4735
 msgid "Select gallery images"
 msgstr "اختيار صور المعرض"
 
 #: packages/admin/src/components/ImageFieldRenderer.tsx:576
 #: packages/admin/src/components/MediaPickerModal.tsx:232
-#: packages/admin/src/components/PortableTextEditor.tsx:4704
+#: packages/admin/src/components/PortableTextEditor.tsx:4706
 msgid "Select image"
 msgstr "اختيار صورة"
 
@@ -12480,7 +12484,7 @@ msgid "Select up to 50 posts at a time."
 msgstr "حدد ما يصل إلى 50 مقالة في كل مرة."
 
 #: packages/admin/src/components/MediaPickerModal.tsx:232
-#: packages/admin/src/components/PortableTextEditor.tsx:4718
+#: packages/admin/src/components/PortableTextEditor.tsx:4720
 msgid "Select video"
 msgstr ""
 
@@ -13136,7 +13140,7 @@ msgid "Start writing with plain text"
 msgstr ""
 
 #: packages/admin/src/components/ContentEditor.tsx:2579
-#: packages/admin/src/components/PortableTextEditor.tsx:3493
+#: packages/admin/src/components/PortableTextEditor.tsx:3495
 msgid "Start writing, or type '/' for commands"
 msgstr "ابدأ الكتابة، أو اكتب '/' لعرض الأوامر"
 
@@ -13205,8 +13209,8 @@ msgstr "النسخ الاحتياطية المخزنة"
 msgid "Stored per locale — each translation of a byline gets its own value."
 msgstr "يُخزَّن لكل لغة — تحصل كل ترجمة للكاتب على قيمتها الخاصة."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4798
-#: packages/admin/src/components/PortableTextEditor.tsx:6344
+#: packages/admin/src/components/PortableTextEditor.tsx:4800
+#: packages/admin/src/components/PortableTextEditor.tsx:6346
 msgid "Strikethrough"
 msgstr "يتوسطه خط"
 
@@ -13240,11 +13244,11 @@ msgstr "الحقول الفرعية"
 msgid "Subscriber"
 msgstr "مشترك"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5285
+#: packages/admin/src/components/PortableTextEditor.tsx:5287
 msgid "Subscript"
 msgstr "نص سفلي"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5291
+#: packages/admin/src/components/PortableTextEditor.tsx:5293
 msgid "Superscript"
 msgstr "نص علوي"
 
@@ -13288,11 +13292,11 @@ msgstr "حقول النظام"
 msgid "Table"
 msgstr "جدول"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4555
+#: packages/admin/src/components/PortableTextEditor.tsx:4557
 msgid "Table cells accept text, links, and formatting only."
 msgstr "تقبل خلايا الجدول النصوص والروابط والتنسيق فقط."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5392
+#: packages/admin/src/components/PortableTextEditor.tsx:5394
 msgid "Table controls"
 msgstr "عناصر التحكم في الجدول"
 
@@ -13301,7 +13305,7 @@ msgid "Table deleted"
 msgstr "حُذف الجدول"
 
 #: packages/admin/src/components/editor/TableControls.tsx:401
-#: packages/admin/src/components/PortableTextEditor.tsx:4445
+#: packages/admin/src/components/PortableTextEditor.tsx:4447
 msgid "Table inserted"
 msgstr "أُدرج الجدول"
 
@@ -13309,7 +13313,7 @@ msgstr "أُدرج الجدول"
 msgid "Table size"
 msgstr "حجم الجدول"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4552
+#: packages/admin/src/components/PortableTextEditor.tsx:4554
 msgid "Tables cannot be pasted inside lists or quotes. Paste the table into its own paragraph and try again."
 msgstr "لا يمكن لصق الجداول داخل القوائم أو الاقتباسات. الصق الجدول في فقرة مستقلة وحاول مرة أخرى."
 
@@ -13437,7 +13441,7 @@ msgstr "المصطلحات"
 msgid "test@example.com"
 msgstr "test@example.com"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6588
+#: packages/admin/src/components/PortableTextEditor.tsx:6590
 msgid "Text formatting"
 msgstr "تنسيق النص"
 
@@ -13935,7 +13939,7 @@ msgstr "هذا الرمز غير صالح أو استُخدم بالفعل."
 msgid "This collection is defined in code. Some settings cannot be changed here. Edit your live.config.ts file to modify the schema."
 msgstr "هذه المجموعة مُعرَّفة في الكود. لا يمكن تغيير بعض الإعدادات هنا. عدّل ملف live.config.ts لتغيير المخطط."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4527
+#: packages/admin/src/components/PortableTextEditor.tsx:4529
 msgid "This content cannot be edited safely"
 msgstr "لا يمكن تعديل هذا المحتوى بأمان"
 
@@ -13997,11 +14001,11 @@ msgstr "هذا التصدير كبير"
 msgid "This field cannot be edited by this version of EmDash."
 msgstr "لا يمكن لهذا الإصدار من EmDash تعديل هذا الحقل."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4510
+#: packages/admin/src/components/PortableTextEditor.tsx:4512
 msgid "This field contains table content that the editor cannot preserve. Update it through the API before editing or saving this content."
 msgstr "يحتوي هذا الحقل على محتوى جدول لا يستطيع المحرر الحفاظ عليه. حدّثه عبر واجهة API قبل تعديل هذا المحتوى أو حفظه."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4529
+#: packages/admin/src/components/PortableTextEditor.tsx:4531
 msgid "This field contains unsupported Portable Text marks: <0>{markList}</0>. Remove them through the API before editing or saving this content."
 msgstr "يحتوي هذا الحقل على علامات Portable Text غير مدعومة: <0>{markList}</0>. أزلها عبر واجهة API قبل تعديل هذا المحتوى أو حفظه."
 
@@ -14130,7 +14134,7 @@ msgstr "أُنشئت هذه الحزمة بإصدار أحدث أو مختلف �
 msgid "This passkey is already registered on this device."
 msgstr "مفتاح المرور هذا مسجل بالفعل على هذا الجهاز."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4548
+#: packages/admin/src/components/PortableTextEditor.tsx:4550
 msgid "This paste is too large. Paste fewer cells or less text at a time."
 msgstr "هذا اللصق كبير جدًا. الصق خلايا أقل أو نصًا أقل في كل مرة."
 
@@ -14203,12 +14207,12 @@ msgstr "يؤدي هذا إلى إزالة الجدولة والنشر فورًا
 msgid "This saved timezone isn't recognized. Choose a suggestion for reliable date display."
 msgstr ""
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4593
+#: packages/admin/src/components/PortableTextEditor.tsx:4595
 msgid "This section contains table content that the editor cannot preserve. Update the section before inserting it."
 msgstr "يحتوي هذا القسم على محتوى جدول لا يستطيع المحرر الحفاظ عليه. حدّث القسم قبل إدراجه."
 
 #. placeholder {0}: sectionInsertErrorMarks.join(", ")
-#: packages/admin/src/components/PortableTextEditor.tsx:4595
+#: packages/admin/src/components/PortableTextEditor.tsx:4597
 msgid "This section contains unsupported Portable Text marks: <0>{0}</0>. Update the section before inserting it."
 msgstr "يحتوي هذا القسم على علامات Portable Text غير مدعومة: <0>{0}</0>. حدّث القسم قبل إدراجه."
 
@@ -14261,15 +14265,15 @@ msgstr "يحتوي هذا الموقع على بيانات جزئية من اس�
 msgid "This site was set up with starter content. It has no entries of its own, and the import deletes it before adding the package’s content."
 msgstr "أُعدّ هذا الموقع بمحتوى أولي. لا يحتوي على إدخالات خاصة به، ويحذف الاستيراد ذلك المحتوى قبل إضافة محتوى الحزمة."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4550
+#: packages/admin/src/components/PortableTextEditor.tsx:4552
 msgid "This spreadsheet data has invalid quoted cells. Fix the quotes or remove the tab separators and try again."
 msgstr "تحتوي بيانات جدول البيانات هذه على خلايا ذات علامات اقتباس غير صالحة. أصلح علامات الاقتباس أو أزل فواصل الجدولة وحاول مرة أخرى."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4508
+#: packages/admin/src/components/PortableTextEditor.tsx:4510
 msgid "This table cannot be edited safely"
 msgstr "لا يمكن تعديل هذا الجدول بأمان"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4554
+#: packages/admin/src/components/PortableTextEditor.tsx:4556
 msgid "This table has unsupported cell formatting, merged cells, or column widths. Paste it as plain text or simplify the table and try again."
 msgstr "يحتوي هذا الجدول على تنسيق خلايا أو خلايا مدمجة أو عروض أعمدة غير مدعومة. الصقه كنص عادي أو بسّط الجدول وحاول مرة أخرى."
 
@@ -14580,9 +14584,9 @@ msgid "TSX"
 msgstr "TSX"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:146
-#: packages/admin/src/components/PortableTextEditor.tsx:5208
 #: packages/admin/src/components/PortableTextEditor.tsx:5210
-#: packages/admin/src/components/PortableTextEditor.tsx:5227
+#: packages/admin/src/components/PortableTextEditor.tsx:5212
+#: packages/admin/src/components/PortableTextEditor.tsx:5229
 msgid "Turn into"
 msgstr "حوّل إلى"
 
@@ -14643,7 +14647,7 @@ msgstr "عدم تطابق النوع ({0})"
 msgid "Type to filter"
 msgstr ""
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4665
+#: packages/admin/src/components/PortableTextEditor.tsx:4667
 msgid "Type to search"
 msgstr ""
 
@@ -14665,12 +14669,12 @@ msgstr "تعذّر الوصول إلى السوق"
 msgid "Unassigned"
 msgstr "لم يتم التعيين"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4797
-#: packages/admin/src/components/PortableTextEditor.tsx:6336
+#: packages/admin/src/components/PortableTextEditor.tsx:4799
+#: packages/admin/src/components/PortableTextEditor.tsx:6338
 msgid "Underline"
 msgstr "تسطير"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6567
+#: packages/admin/src/components/PortableTextEditor.tsx:6569
 msgid "Undo"
 msgstr "تراجع"
 
@@ -14958,7 +14962,7 @@ msgstr "ارفع الوسائط للاحتفاظ بالأصول القابلة �
 msgid "Upload not finished"
 msgstr "لم يكتمل الرفع"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3716
+#: packages/admin/src/components/PortableTextEditor.tsx:3718
 msgid "Upload or choose a video"
 msgstr ""
 
@@ -15276,7 +15280,7 @@ msgstr ""
 #: packages/admin/src/components/editor/BlockMenu.tsx:43
 #: packages/admin/src/components/MediaLibrary.tsx:922
 #: packages/admin/src/components/MediaPickerModal.tsx:392
-#: packages/admin/src/components/PortableTextEditor.tsx:3715
+#: packages/admin/src/components/PortableTextEditor.tsx:3717
 #: packages/admin/src/components/revisions/RevisionDocument.tsx:485
 msgid "Video"
 msgstr "فيديو"
