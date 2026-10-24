@@ -282,12 +282,12 @@ msgid "{0, plural, one {field} other {fields}}"
 msgstr "{0, plural, one {polje} few {polja} other {polja}}"
 
 #. placeholder {0}: stats.mediaCount
-#: packages/admin/src/components/Dashboard.tsx:416
+#: packages/admin/src/components/Dashboard.tsx:420
 msgid "{0, plural, one {Media file} other {Media files}}"
 msgstr "{0, plural, one {Medijska datoteka} few {Medijske datoteke} other {Medijskih datoteka}}"
 
 #. placeholder {0}: policyRejected - policyRejections.length
-#: packages/admin/src/components/Dashboard.tsx:214
+#: packages/admin/src/components/Dashboard.tsx:218
 msgid "{0, plural, one {One more blocked entry is not shown.} other {# more blocked entries are not shown.}}"
 msgstr "{0, plural, one {Još jedan blokirani unos nije prikazan.} few {Još # blokirana unosa nisu prikazana.} other {Još # blokiranih unosa nije prikazano.}}"
 
@@ -302,7 +302,7 @@ msgid "{0, plural, one {Show # more} other {Show # more}}"
 msgstr "{0, plural, one {Prikaži još #} other {Prikaži još #}}"
 
 #. placeholder {0}: stats.userCount
-#: packages/admin/src/components/Dashboard.tsx:424
+#: packages/admin/src/components/Dashboard.tsx:428
 msgid "{0, plural, one {User} other {Users}}"
 msgstr "{0, plural, one {Korisnik} few {Korisnika} other {Korisnika}}"
 
@@ -704,11 +704,11 @@ msgstr ""
 msgid "{origin} redirects to {target}. Enter that address instead."
 msgstr ""
 
-#: packages/admin/src/components/Dashboard.tsx:154
+#: packages/admin/src/components/Dashboard.tsx:158
 msgid "{overdueCount, plural, one {One scheduled item is overdue and the scheduler heartbeat is stale. Run `npx emdash doctor` and verify the deployed Cron Trigger.} other {# scheduled items are overdue and the scheduler heartbeat is stale. Run `npx emdash doctor` and verify the deployed Cron Trigger.}}"
 msgstr "{overdueCount, plural, one {Jedna zakazana stavka kasni, a signal rada planera je zastario. Pokrenite `npx emdash doctor` i provjerite postavljeni Cron Trigger.} few {# zakazane stavke kasne, a signal rada planera je zastario. Pokrenite `npx emdash doctor` i provjerite postavljeni Cron Trigger.} other {# zakazanih stavki kasni, a signal rada planera je zastario. Pokrenite `npx emdash doctor` i provjerite postavljeni Cron Trigger.}}"
 
-#: packages/admin/src/components/Dashboard.tsx:149
+#: packages/admin/src/components/Dashboard.tsx:153
 msgid "{overdueCount, plural, one {One scheduled item is overdue, but no scheduler run has completed. Run `npx emdash doctor` and verify the deployed Cron Trigger.} other {# scheduled items are overdue, but no scheduler run has completed. Run `npx emdash doctor` and verify the deployed Cron Trigger.}}"
 msgstr "{overdueCount, plural, one {Jedna zakazana stavka kasni, a planer se još nijednom nije uspješno izvršio. Pokrenite `npx emdash doctor` i provjerite postavljeni Cron Trigger.} few {# zakazane stavke kasne, a planer se još nijednom nije uspješno izvršio. Pokrenite `npx emdash doctor` i provjerite postavljeni Cron Trigger.} other {# zakazanih stavki kasni, a planer se još nijednom nije uspješno izvršio. Pokrenite `npx emdash doctor` i provjerite postavljeni Cron Trigger.}}"
 
@@ -734,7 +734,7 @@ msgstr "Postavke dodatka {pluginName}"
 msgid "{plural} go live now; draft edits stay unpublished."
 msgstr "{plural} odmah se objavljuju; izmjene u skicama ostaju neobjavljene."
 
-#: packages/admin/src/components/Dashboard.tsx:168
+#: packages/admin/src/components/Dashboard.tsx:172
 msgid "{policyRejected, plural, one {Open the affected entry, resolve the policy reason, and schedule it again. A successful schedule or publish clears this notice.} other {Open the affected entries, resolve the policy reasons, and schedule them again. A successful schedule or publish clears each notice.}}"
 msgstr "{policyRejected, plural, one {Otvorite zahvaćeni unos, riješite razlog odbijanja i ponovno ga zakažite. Uspješno zakazivanje ili objava uklanja ovu obavijest.} other {Otvorite zahvaćene unose, riješite razloge odbijanja i ponovno ih zakažite. Uspješno zakazivanje ili objava uklanja svaku obavijest.}}"
 
@@ -832,11 +832,11 @@ msgstr "Unos „{title}“ bit će objavljen {when}."
 msgid "{total, plural, one {# item} other {# items}}"
 msgstr "{total, plural, one {# stavka} few {# stavke} other {# stavki}}"
 
-#: packages/admin/src/components/Dashboard.tsx:400
+#: packages/admin/src/components/Dashboard.tsx:404
 msgid "{totalDrafts, plural, one {Draft} other {Drafts}}"
 msgstr "{totalDrafts, plural, one {Skica} few {Skice} other {Skica}}"
 
-#: packages/admin/src/components/Dashboard.tsx:406
+#: packages/admin/src/components/Dashboard.tsx:410
 msgid "{totalScheduled, plural, one {Scheduled} other {Scheduled}}"
 msgstr "{totalScheduled, plural, one {Zakazano} other {Zakazano}}"
 
@@ -1552,12 +1552,12 @@ msgid "admin"
 msgstr "admin"
 
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:117
-#: packages/admin/src/components/Sidebar.tsx:692
+#: packages/admin/src/components/Sidebar.tsx:708
 #: packages/admin/src/components/users/roleDefinitions.ts:42
 msgid "Admin"
 msgstr "Admin"
 
-#: packages/admin/src/components/Sidebar.tsx:634
+#: packages/admin/src/components/Sidebar.tsx:650
 msgid "Admin navigation"
 msgstr "Administracijska navigacija"
 
@@ -2452,7 +2452,7 @@ msgstr "Polja potpisa"
 msgid "Byline schema"
 msgstr "Shema potpisa"
 
-#: packages/admin/src/components/Sidebar.tsx:526
+#: packages/admin/src/components/Sidebar.tsx:538
 msgid "Byline Schema"
 msgstr "Shema potpisa"
 
@@ -2466,7 +2466,7 @@ msgstr "Potpis ažuriran"
 #: packages/admin/src/components/ContentSettingsPanel.tsx:1148
 #: packages/admin/src/components/settings/transfer/labels.ts:19
 #: packages/admin/src/components/settings/transfer/labels.ts:79
-#: packages/admin/src/components/Sidebar.tsx:492
+#: packages/admin/src/components/Sidebar.tsx:504
 #: packages/admin/src/routes/bylines.tsx:285
 msgid "Bylines"
 msgstr "Potpisi"
@@ -2483,9 +2483,9 @@ msgstr "C#"
 msgid "C++"
 msgstr "C++"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:143
+#: packages/admin/src/components/AdminCommandPalette.tsx:147
 #: packages/admin/src/components/ContentTypeEditor.tsx:568
-#: packages/admin/src/components/Sidebar.tsx:666
+#: packages/admin/src/components/Sidebar.tsx:682
 #: packages/admin/src/routes/calendar.tsx:277
 msgid "Calendar"
 msgstr "Kalendar"
@@ -2617,7 +2617,7 @@ msgstr "Titlovi / podnaslovi"
 msgid "Capture is being prepared. Keep editing paused until setup is complete."
 msgstr "Snimanje se priprema. Uređivanje ostaje pauzirano dok se postavljanje ne dovrši."
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:206
+#: packages/admin/src/components/AdminCommandPalette.tsx:210
 #: packages/admin/src/components/Widgets.tsx:144
 msgid "Categories"
 msgstr "Kategorije"
@@ -3249,7 +3249,7 @@ msgstr "Reakcije na komentare"
 #: packages/admin/src/components/ContentTypeEditor.tsx:661
 #: packages/admin/src/components/settings/transfer/labels.ts:34
 #: packages/admin/src/components/settings/transfer/labels.ts:88
-#: packages/admin/src/components/Sidebar.tsx:456
+#: packages/admin/src/components/Sidebar.tsx:468
 msgid "Comments"
 msgstr "Komentari"
 
@@ -3334,12 +3334,12 @@ msgstr "Povezuje"
 msgid "content"
 msgstr "sadržaj"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:403
+#: packages/admin/src/components/AdminCommandPalette.tsx:407
 #: packages/admin/src/components/comments/CommentDetail.tsx:106
 #: packages/admin/src/components/comments/CommentInbox.tsx:331
-#: packages/admin/src/components/Dashboard.tsx:494
+#: packages/admin/src/components/Dashboard.tsx:498
 #: packages/admin/src/components/SectionEditor.tsx:215
-#: packages/admin/src/components/Sidebar.tsx:676
+#: packages/admin/src/components/Sidebar.tsx:692
 #: packages/admin/src/components/Widgets.tsx:911
 msgid "Content"
 msgstr "Sadržaj"
@@ -3414,9 +3414,9 @@ msgstr "Sadržaj za uvoz"
 msgid "Content types"
 msgstr "Vrste sadržaja"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:198
+#: packages/admin/src/components/AdminCommandPalette.tsx:202
 #: packages/admin/src/components/ContentTypeList.tsx:131
-#: packages/admin/src/components/Sidebar.tsx:522
+#: packages/admin/src/components/Sidebar.tsx:534
 msgid "Content Types"
 msgstr "Vrste sadržaja"
 
@@ -3570,7 +3570,7 @@ msgstr "Nije moguće umetnuti odjeljak"
 msgid "Could not load {pluralLower}."
 msgstr "Nije moguće učitati: {pluralLower}."
 
-#: packages/admin/src/components/Dashboard.tsx:310
+#: packages/admin/src/components/Dashboard.tsx:314
 msgid "Could not load dashboard data"
 msgstr "Nije moguće učitati podatke nadzorne ploče"
 
@@ -4050,11 +4050,11 @@ msgstr "Dnevne automatske sigurnosne kopije"
 msgid "Dark mode variant"
 msgstr "Varijanta za tamni način"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:136
+#: packages/admin/src/components/AdminCommandPalette.tsx:140
 #: packages/admin/src/components/ContentTypeList.tsx:394
-#: packages/admin/src/components/Dashboard.tsx:71
-#: packages/admin/src/components/Sidebar.tsx:426
-#: packages/admin/src/components/Sidebar.tsx:661
+#: packages/admin/src/components/Dashboard.tsx:75
+#: packages/admin/src/components/Sidebar.tsx:438
+#: packages/admin/src/components/Sidebar.tsx:677
 msgid "Dashboard"
 msgstr "Nadzorna ploča"
 
@@ -4573,7 +4573,7 @@ msgid "Discarding..."
 msgstr "Odbacivanje..."
 
 #: packages/admin/src/components/CoreUpdateBanner.tsx:76
-#: packages/admin/src/components/Dashboard.tsx:204
+#: packages/admin/src/components/Dashboard.tsx:208
 #: packages/admin/src/components/editor/ImageUploadExtension.ts:117
 #: packages/admin/src/components/settings/ApiTokenSettings.tsx:282
 msgid "Dismiss"
@@ -4584,7 +4584,7 @@ msgstr "Zatvori"
 msgid "Dismiss completed {0}"
 msgstr "Ukloni dovršeno: {0}"
 
-#: packages/admin/src/components/Dashboard.tsx:294
+#: packages/admin/src/components/Dashboard.tsx:298
 msgid "Dismiss import suggestion"
 msgstr "Odbaci prijedlog uvoza"
 
@@ -4780,7 +4780,7 @@ msgid "draft, published, or archived"
 msgstr "skica, objavljeno ili arhivirano"
 
 #: packages/admin/src/components/ContentTypeEditor.tsx:91
-#: packages/admin/src/components/Dashboard.tsx:528
+#: packages/admin/src/components/Dashboard.tsx:532
 msgid "Drafts"
 msgstr "Skice"
 
@@ -5888,7 +5888,7 @@ msgstr "Odbacivanje promjena nije uspjelo"
 msgid "Failed to discard draft"
 msgstr ""
 
-#: packages/admin/src/components/Dashboard.tsx:223
+#: packages/admin/src/components/Dashboard.tsx:227
 #: packages/admin/src/lib/api/dashboard.ts:73
 msgid "Failed to dismiss scheduled publication rejection"
 msgstr "Odbacivanje obavijesti o odbijenoj zakazanoj objavi nije uspjelo"
@@ -7424,9 +7424,9 @@ msgstr "URL slike"
 msgid "Images"
 msgstr "Slike"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:240
+#: packages/admin/src/components/AdminCommandPalette.tsx:244
 #: packages/admin/src/components/settings/transfer/ImportSection.tsx:210
-#: packages/admin/src/components/Sidebar.tsx:548
+#: packages/admin/src/components/Sidebar.tsx:560
 #: packages/admin/src/components/WordPressImport.tsx:783
 msgid "Import"
 msgstr "Uvoz"
@@ -7436,7 +7436,7 @@ msgstr "Uvoz"
 msgid "Import {0}"
 msgstr "Uvezi {0}"
 
-#: packages/admin/src/components/Dashboard.tsx:286
+#: packages/admin/src/components/Dashboard.tsx:290
 msgid "Import a site package"
 msgstr "Uvezi paket web-stranice"
 
@@ -8471,7 +8471,7 @@ msgstr "Glavna biblioteka"
 msgid "Main Sidebar"
 msgstr "Glavna bočna traka"
 
-#: packages/admin/src/components/Sidebar.tsx:684
+#: packages/admin/src/components/Sidebar.tsx:700
 msgid "Manage"
 msgstr "Upravljanje"
 
@@ -8609,7 +8609,7 @@ msgstr "MDX"
 #: packages/admin/src/components/Settings.tsx:72
 #: packages/admin/src/components/settings/transfer/labels.ts:17
 #: packages/admin/src/components/settings/transfer/labels.ts:84
-#: packages/admin/src/components/Sidebar.tsx:441
+#: packages/admin/src/components/Sidebar.tsx:453
 #: packages/admin/src/components/WordPressImport.tsx:797
 #: packages/admin/src/components/WordPressImport.tsx:1195
 #: packages/admin/src/components/WordPressImport.tsx:1388
@@ -8651,7 +8651,7 @@ msgstr "Mediji iz ove mape vratit će se u glavnu biblioteku. Nijedna datoteka n
 msgid "visualEditing.mediaLibrary"
 msgstr ""
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:167
+#: packages/admin/src/components/AdminCommandPalette.tsx:171
 #: packages/admin/src/components/MediaLibrary.tsx:755
 #: packages/admin/src/components/MediaLibrary.tsx:770
 msgid "Media Library"
@@ -8760,10 +8760,10 @@ msgstr "Redoslijed izbornika je ažuriran."
 msgid "Menu renamed"
 msgstr ""
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:174
+#: packages/admin/src/components/AdminCommandPalette.tsx:178
 #: packages/admin/src/components/MenuList.tsx:101
 #: packages/admin/src/components/settings/transfer/labels.ts:28
-#: packages/admin/src/components/Sidebar.tsx:464
+#: packages/admin/src/components/Sidebar.tsx:476
 #: packages/admin/src/components/WordPressImport.tsx:1199
 msgid "Menus"
 msgstr "Izbornici"
@@ -9101,7 +9101,7 @@ msgstr "Premještanje stavke {label} na položaj {0} od {1}."
 msgid "Moving {label} was cancelled."
 msgstr "Premještanje stavke {label} je otkazano."
 
-#: packages/admin/src/components/Dashboard.tsx:276
+#: packages/admin/src/components/Dashboard.tsx:280
 msgid "Moving from another EmDash site?"
 msgstr "Prelazite s druge EmDash web-stranice?"
 
@@ -9152,7 +9152,7 @@ msgstr "Imenujte odjeljak, zatim dodajte njegov sadržaj u uređivaču."
 msgid "Navigate"
 msgstr "Navigacija"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:365
+#: packages/admin/src/components/AdminCommandPalette.tsx:369
 #: packages/admin/src/components/ContentTypeEditor.tsx:562
 msgid "Navigation"
 msgstr "Navigacija"
@@ -9247,7 +9247,7 @@ msgstr "Novi profil za višekratnu upotrebu"
 msgid "New section"
 msgstr "Novi odjeljak"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:504
+#: packages/admin/src/components/AdminCommandPalette.tsx:508
 msgid "new tab"
 msgstr "nova kartica"
 
@@ -9395,7 +9395,7 @@ msgstr "Još nema potpisa"
 msgid "No changes"
 msgstr ""
 
-#: packages/admin/src/components/Dashboard.tsx:500
+#: packages/admin/src/components/Dashboard.tsx:504
 msgid "No collections configured"
 msgstr "Nema konfiguriranih zbirki"
 
@@ -9645,7 +9645,7 @@ msgstr "Nijedan dodatak ne odgovara upitu „{debouncedQuery}“."
 msgid "No public URL available"
 msgstr "Javni URL nije dostupan"
 
-#: packages/admin/src/components/Dashboard.tsx:579
+#: packages/admin/src/components/Dashboard.tsx:583
 msgid "No recent activity"
 msgstr "Nema nedavnih aktivnosti"
 
@@ -9680,7 +9680,7 @@ msgstr "Nema rezultata za „{activeSearch}“"
 msgid "No results for \"{debouncedQuery}\". Try a different search term."
 msgstr "Nema rezultata za „{debouncedQuery}“. Pokušajte s drugim pojmom za pretraživanje."
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:490
+#: packages/admin/src/components/AdminCommandPalette.tsx:494
 #: packages/admin/src/components/Settings.tsx:166
 msgid "No results found"
 msgstr "Nema rezultata"
@@ -10467,12 +10467,12 @@ msgstr "Dodatak ažuriran"
 msgid "Plugin widget error"
 msgstr "Pogreška widgeta dodatka"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:232
+#: packages/admin/src/components/AdminCommandPalette.tsx:236
 #: packages/admin/src/components/PluginManager.tsx:180
 #: packages/admin/src/components/PluginManager.tsx:189
 #: packages/admin/src/components/PluginManager.tsx:199
-#: packages/admin/src/components/Sidebar.tsx:530
-#: packages/admin/src/components/Sidebar.tsx:700
+#: packages/admin/src/components/Sidebar.tsx:542
+#: packages/admin/src/components/Sidebar.tsx:716
 msgid "Plugins"
 msgstr "Dodaci"
 
@@ -10650,7 +10650,7 @@ msgstr "Javne rute"
 msgid "Publication date"
 msgstr "Datum objave"
 
-#: packages/admin/src/components/Dashboard.tsx:167
+#: packages/admin/src/components/Dashboard.tsx:171
 msgid "Publication policy blocked scheduled content"
 msgstr "Pravilo objavljivanja blokiralo je zakazani sadržaj"
 
@@ -10697,7 +10697,7 @@ msgstr "Objavljivanje, povlačenje objave, zakazivanje i uklanjanje rasporeda sa
 #: packages/admin/src/components/ContentList.tsx:1024
 #: packages/admin/src/components/ContentList.tsx:1035
 #: packages/admin/src/components/ContentStatusBadge.tsx:59
-#: packages/admin/src/components/Dashboard.tsx:522
+#: packages/admin/src/components/Dashboard.tsx:526
 #: packages/admin/src/components/revisions/RevisionList.tsx:266
 #: packages/admin/src/components/revisions/RevisionViewBar.tsx:161
 #: packages/admin/src/router.tsx:1488
@@ -10898,7 +10898,7 @@ msgstr "Ponovna izgradnja pretraživanja i predmemorije"
 msgid "Receipt digest"
 msgstr "Sažetak potvrde (digest)"
 
-#: packages/admin/src/components/Dashboard.tsx:573
+#: packages/admin/src/components/Dashboard.tsx:577
 msgid "Recent Activity"
 msgstr "Nedavne aktivnosti"
 
@@ -10952,7 +10952,7 @@ msgstr "Preusmjeravanje na prijavu..."
 #: packages/admin/src/components/Redirects.tsx:424
 #: packages/admin/src/components/settings/transfer/labels.ts:33
 #: packages/admin/src/components/settings/transfer/labels.ts:90
-#: packages/admin/src/components/Sidebar.tsx:471
+#: packages/admin/src/components/Sidebar.tsx:483
 msgid "Redirects"
 msgstr "Preusmjeravanja"
 
@@ -10998,7 +10998,7 @@ msgstr "Osvježi status"
 msgid "Refresh status before continuing."
 msgstr "Osvježite status prije nastavka."
 
-#: packages/admin/src/components/Dashboard.tsx:311
+#: packages/admin/src/components/Dashboard.tsx:315
 msgid "Refresh the page or try again."
 msgstr "Osvježite stranicu ili pokušajte ponovno."
 
@@ -11025,7 +11025,7 @@ msgstr "Registracija je otkazana ili je isteklo vrijeme. Pokušajte ponovno."
 
 #: packages/admin/src/components/PluginManager.tsx:217
 #: packages/admin/src/components/PluginManager.tsx:460
-#: packages/admin/src/components/Sidebar.tsx:539
+#: packages/admin/src/components/Sidebar.tsx:551
 msgid "Registry"
 msgstr "Registar"
 
@@ -12007,7 +12007,7 @@ msgstr ""
 msgid "Scheduled publication"
 msgstr "Zakazana objava"
 
-#: packages/admin/src/components/Dashboard.tsx:231
+#: packages/admin/src/components/Dashboard.tsx:235
 msgid "Scheduled publishing needs attention"
 msgstr "Zakazano objavljivanje zahtijeva pozornost"
 
@@ -12182,7 +12182,7 @@ msgstr "Pretraži medije"
 msgid "Search or type a URL"
 msgstr "Pretražite ili upišite URL"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:463
+#: packages/admin/src/components/AdminCommandPalette.tsx:467
 msgid "Search pages and content..."
 msgstr "Pretraži stranice i sadržaj..."
 
@@ -12284,11 +12284,11 @@ msgstr "Odjeljak nije pronađen"
 msgid "Section title"
 msgstr "Naslov odjeljka"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:190
+#: packages/admin/src/components/AdminCommandPalette.tsx:194
 #: packages/admin/src/components/Sections.tsx:150
 #: packages/admin/src/components/settings/transfer/labels.ts:32
 #: packages/admin/src/components/settings/transfer/labels.ts:93
-#: packages/admin/src/components/Sidebar.tsx:485
+#: packages/admin/src/components/Sidebar.tsx:497
 msgid "Sections"
 msgstr "Odjeljci"
 
@@ -12338,7 +12338,7 @@ msgstr "Sigurnosni kontakti"
 msgid "Security error. Make sure you're on a secure connection."
 msgstr "Sigurnosna pogreška. Provjerite upotrebljavate li sigurnu vezu."
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:264
+#: packages/admin/src/components/AdminCommandPalette.tsx:268
 #: packages/admin/src/components/Header.tsx:96
 #: packages/admin/src/components/Settings.tsx:83
 #: packages/admin/src/components/settings/SecuritySettings.tsx:93
@@ -12664,14 +12664,14 @@ msgstr "Postavljanje"
 msgid "Setting up..."
 msgstr "Postavljanje..."
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:248
+#: packages/admin/src/components/AdminCommandPalette.tsx:252
 #: packages/admin/src/components/ContentEditor.tsx:1979
 #: packages/admin/src/components/ContentEditor.tsx:2306
 #: packages/admin/src/components/ContentTypeEditor.tsx:467
 #: packages/admin/src/components/Header.tsx:104
 #: packages/admin/src/components/PluginManager.tsx:543
 #: packages/admin/src/components/Settings.tsx:46
-#: packages/admin/src/components/Sidebar.tsx:553
+#: packages/admin/src/components/Sidebar.tsx:565
 #: packages/admin/src/components/WordPressImport.tsx:1868
 msgid "Settings"
 msgstr "Postavke"
@@ -12909,7 +12909,7 @@ msgstr "Naslov i slogan web-stranice"
 msgid "Site title is required"
 msgstr "Naslov web-stranice je obvezan"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:256
+#: packages/admin/src/components/AdminCommandPalette.tsx:260
 msgid "Site Transfer"
 msgstr "Prijenos web-stranice"
 
@@ -13180,7 +13180,7 @@ msgstr "Status"
 msgid "Status code"
 msgstr "Statusni kod"
 
-#: packages/admin/src/components/Dashboard.tsx:626
+#: packages/admin/src/components/Dashboard.tsx:630
 msgid "Status: {status}"
 msgstr "Status: {status}"
 
@@ -13323,7 +13323,7 @@ msgstr "Tablice se ne mogu lijepiti unutar popisa ili citata. Zalijepite tablicu
 msgid "Tagline"
 msgstr "Slogan"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:215
+#: packages/admin/src/components/AdminCommandPalette.tsx:219
 #: packages/admin/src/components/Widgets.tsx:152
 msgid "Tags"
 msgstr "Oznake"
@@ -14249,7 +14249,7 @@ msgstr "Ova web-stranica ne može primiti uvoz"
 msgid "This site has no content yet, so it can receive an import. Choose a .emdash package file. It is checked in your browser and uploaded in parts; nothing on this site changes until you review and confirm the import."
 msgstr "Ova web-stranica još nema sadržaja, pa može primiti uvoz. Odaberite datoteku paketa .emdash. Provjerava se u vašem pregledniku i prenosi u dijelovima; ništa se na ovoj web-stranici ne mijenja dok ne pregledate i potvrdite uvoz."
 
-#: packages/admin/src/components/Dashboard.tsx:277
+#: packages/admin/src/components/Dashboard.tsx:281
 msgid "This site has no content yet, so you can import a .emdash package exported from another EmDash site."
 msgstr "Ova web-stranica još nema sadržaja, pa možete uvesti paket .emdash izvezen s druge EmDash web-stranice."
 
@@ -14360,7 +14360,7 @@ msgstr "Naslov (info-oblačić)"
 msgid "Title Separator"
 msgstr "Razdjelnik naslova"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:508
+#: packages/admin/src/components/AdminCommandPalette.tsx:512
 msgid "to close"
 msgstr "za zatvaranje"
 
@@ -14368,7 +14368,7 @@ msgstr "za zatvaranje"
 msgid "To move a site to another EmDash installation, use <0>Transfer</0>."
 msgstr "Za premještanje web-stranice na drugu EmDash instalaciju upotrijebite <0>Prijenos</0>."
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:498
+#: packages/admin/src/components/AdminCommandPalette.tsx:502
 msgid "to select"
 msgstr "za odabir"
 
@@ -14789,7 +14789,7 @@ msgstr "Nepodržana vrsta elementa widgeta: {0}"
 msgid "Until {0}"
 msgstr "Do {0}"
 
-#: packages/admin/src/components/Dashboard.tsx:593
+#: packages/admin/src/components/Dashboard.tsx:597
 #: packages/admin/src/components/MediaUsedIn.tsx:320
 msgid "Untitled"
 msgstr "Bez naslova"
@@ -14950,7 +14950,7 @@ msgstr "Prenesi datoteke"
 msgid "Upload images, videos, and documents to keep reusable assets in one place."
 msgstr "Prenesite slike, videozapise i dokumente kako biste resurse za višekratnu upotrebu držali na jednom mjestu."
 
-#: packages/admin/src/components/Dashboard.tsx:352
+#: packages/admin/src/components/Dashboard.tsx:356
 msgid "Upload Media"
 msgstr "Prenesi medije"
 
@@ -15181,8 +15181,8 @@ msgstr "Korisnik za {0}"
 msgid "User not found"
 msgstr "Korisnik nije pronađen"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:224
-#: packages/admin/src/components/Sidebar.tsx:527
+#: packages/admin/src/components/AdminCommandPalette.tsx:228
+#: packages/admin/src/components/Sidebar.tsx:539
 #: packages/admin/src/components/users/UserList.tsx:55
 msgid "Users"
 msgstr "Korisnici"
@@ -15572,11 +15572,11 @@ msgstr "Naslov widgeta"
 msgid "Widget updated"
 msgstr "Widget ažuriran"
 
-#: packages/admin/src/components/AdminCommandPalette.tsx:182
+#: packages/admin/src/components/AdminCommandPalette.tsx:186
 #: packages/admin/src/components/PluginManager.tsx:491
 #: packages/admin/src/components/settings/transfer/labels.ts:31
 #: packages/admin/src/components/settings/transfer/labels.ts:91
-#: packages/admin/src/components/Sidebar.tsx:478
+#: packages/admin/src/components/Sidebar.tsx:490
 #: packages/admin/src/components/Widgets.tsx:397
 #: packages/admin/src/components/WordPressImport.tsx:1207
 msgid "Widgets"
