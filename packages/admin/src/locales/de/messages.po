@@ -1291,8 +1291,8 @@ msgstr "Block hinzufügen"
 msgid "Add byline"
 msgstr "Autorenangabe hinzufügen"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:387
-#: packages/admin/src/components/editor/VideoNode.tsx:389
+#: packages/admin/src/components/editor/VideoNode.tsx:388
+#: packages/admin/src/components/editor/VideoNode.tsx:390
 #: packages/admin/src/components/PortableTextEditor.tsx:5847
 msgid "Add caption"
 msgstr ""
@@ -2603,8 +2603,8 @@ msgstr "Zustimmung zu Berechtigungen"
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:491
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:528
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:753
-#: packages/admin/src/components/editor/ImageNode.tsx:308
-#: packages/admin/src/components/editor/VideoNode.tsx:329
+#: packages/admin/src/components/editor/ImageNode.tsx:311
+#: packages/admin/src/components/editor/VideoNode.tsx:332
 #: packages/admin/src/components/MediaDetailPanel.tsx:1616
 msgid "Caption"
 msgstr "Bildunterschrift"
@@ -4340,8 +4340,8 @@ msgstr "Taxonomie löschen"
 msgid "Delete Taxonomy"
 msgstr "Taxonomie löschen"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:402
 #: packages/admin/src/components/editor/VideoNode.tsx:403
+#: packages/admin/src/components/editor/VideoNode.tsx:404
 msgid "Delete video"
 msgstr "Video löschen"
 
@@ -4961,8 +4961,8 @@ msgstr "Autorenangabe bearbeiten"
 msgid "Edit byline field"
 msgstr "Autorenangaben-Feld bearbeiten"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:387
-#: packages/admin/src/components/editor/VideoNode.tsx:389
+#: packages/admin/src/components/editor/VideoNode.tsx:388
+#: packages/admin/src/components/editor/VideoNode.tsx:390
 #: packages/admin/src/components/PortableTextEditor.tsx:5847
 msgid "Edit caption"
 msgstr ""
@@ -11319,7 +11319,7 @@ msgstr "Ersetzen"
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:506
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:299
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:373
-#: packages/admin/src/components/editor/VideoNode.tsx:426
+#: packages/admin/src/components/editor/VideoNode.tsx:427
 #: packages/admin/src/components/ImageFieldRenderer.tsx:303
 #: packages/admin/src/components/ImageFieldRenderer.tsx:364
 #: packages/admin/src/components/ImageFieldRenderer.tsx:427
@@ -11377,9 +11377,9 @@ msgstr "Referenz ersetzen"
 msgid "Replace this site’s content with a package exported from another EmDash site."
 msgstr "Ersetze die Inhalte dieser Website durch ein Paket, das aus einer anderen EmDash-Website exportiert wurde."
 
-#: packages/admin/src/components/editor/VideoNode.tsx:373
 #: packages/admin/src/components/editor/VideoNode.tsx:374
-#: packages/admin/src/components/editor/VideoNode.tsx:425
+#: packages/admin/src/components/editor/VideoNode.tsx:375
+#: packages/admin/src/components/editor/VideoNode.tsx:426
 msgid "Replace video"
 msgstr "Video ersetzen"
 
@@ -14289,7 +14289,7 @@ msgstr "Diese Version kann nicht angezeigt werden."
 msgid "This version is not visible on the site"
 msgstr "Diese Version ist auf der Website nicht sichtbar"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:317
+#: packages/admin/src/components/editor/VideoNode.tsx:320
 msgid "This video can't be played."
 msgstr "Dieses Video kann nicht abgespielt werden."
 
@@ -14630,11 +14630,11 @@ msgstr "Zwei Datensätze weisen denselben Wert auf, der jedoch eindeutig sein mu
 msgid "Type"
 msgstr "Typ"
 
-#: packages/admin/src/components/editor/ImageNode.tsx:309
+#: packages/admin/src/components/editor/ImageNode.tsx:312
 msgid "Type caption for image (optional)"
 msgstr "Bildunterschrift eingeben (optional)"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:330
+#: packages/admin/src/components/editor/VideoNode.tsx:333
 msgid "Type caption for video (optional)"
 msgstr "Bildunterschrift eingeben (optional)"
 
@@ -15285,7 +15285,7 @@ msgstr "Version wiederhergestellt"
 msgid "Video"
 msgstr "Video"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:357
+#: packages/admin/src/components/editor/VideoNode.tsx:358
 msgid "Video actions"
 msgstr "Videoaktionen"
 

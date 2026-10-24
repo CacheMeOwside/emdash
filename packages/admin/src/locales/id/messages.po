@@ -1291,8 +1291,8 @@ msgstr "Tambahkan blok"
 msgid "Add byline"
 msgstr "Tambahkan byline"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:387
-#: packages/admin/src/components/editor/VideoNode.tsx:389
+#: packages/admin/src/components/editor/VideoNode.tsx:388
+#: packages/admin/src/components/editor/VideoNode.tsx:390
 #: packages/admin/src/components/PortableTextEditor.tsx:5847
 msgid "Add caption"
 msgstr "Tambahkan takarir"
@@ -2603,8 +2603,8 @@ msgstr "Persetujuan kapabilitas"
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:491
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:528
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:753
-#: packages/admin/src/components/editor/ImageNode.tsx:308
-#: packages/admin/src/components/editor/VideoNode.tsx:329
+#: packages/admin/src/components/editor/ImageNode.tsx:311
+#: packages/admin/src/components/editor/VideoNode.tsx:332
 #: packages/admin/src/components/MediaDetailPanel.tsx:1616
 msgid "Caption"
 msgstr "Takarir"
@@ -4340,8 +4340,8 @@ msgstr "Hapus taksonomi"
 msgid "Delete Taxonomy"
 msgstr "Hapus Taksonomi"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:402
 #: packages/admin/src/components/editor/VideoNode.tsx:403
+#: packages/admin/src/components/editor/VideoNode.tsx:404
 msgid "Delete video"
 msgstr "Hapus video"
 
@@ -4961,8 +4961,8 @@ msgstr "Sunting byline"
 msgid "Edit byline field"
 msgstr "Sunting kolom byline"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:387
-#: packages/admin/src/components/editor/VideoNode.tsx:389
+#: packages/admin/src/components/editor/VideoNode.tsx:388
+#: packages/admin/src/components/editor/VideoNode.tsx:390
 #: packages/admin/src/components/PortableTextEditor.tsx:5847
 msgid "Edit caption"
 msgstr "Sunting takarir"
@@ -11319,7 +11319,7 @@ msgstr "Ganti"
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:506
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:299
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:373
-#: packages/admin/src/components/editor/VideoNode.tsx:426
+#: packages/admin/src/components/editor/VideoNode.tsx:427
 #: packages/admin/src/components/ImageFieldRenderer.tsx:303
 #: packages/admin/src/components/ImageFieldRenderer.tsx:364
 #: packages/admin/src/components/ImageFieldRenderer.tsx:427
@@ -11377,9 +11377,9 @@ msgstr "Ganti referensi"
 msgid "Replace this site’s content with a package exported from another EmDash site."
 msgstr "Ganti konten situs ini dengan paket yang diekspor dari situs EmDash lain."
 
-#: packages/admin/src/components/editor/VideoNode.tsx:373
 #: packages/admin/src/components/editor/VideoNode.tsx:374
-#: packages/admin/src/components/editor/VideoNode.tsx:425
+#: packages/admin/src/components/editor/VideoNode.tsx:375
+#: packages/admin/src/components/editor/VideoNode.tsx:426
 msgid "Replace video"
 msgstr "Ganti video"
 
@@ -14289,7 +14289,7 @@ msgstr "Versi ini tidak dapat ditampilkan."
 msgid "This version is not visible on the site"
 msgstr "Versi ini tidak terlihat di situs"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:317
+#: packages/admin/src/components/editor/VideoNode.tsx:320
 msgid "This video can't be played."
 msgstr "Video ini tidak dapat diputar."
 
@@ -14630,11 +14630,11 @@ msgstr "Dua rekaman memiliki nilai yang sama di mana harus unik"
 msgid "Type"
 msgstr "Tipe"
 
-#: packages/admin/src/components/editor/ImageNode.tsx:309
+#: packages/admin/src/components/editor/ImageNode.tsx:312
 msgid "Type caption for image (optional)"
 msgstr "Ketik takarir untuk gambar (opsional)"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:330
+#: packages/admin/src/components/editor/VideoNode.tsx:333
 msgid "Type caption for video (optional)"
 msgstr "Ketik takarir untuk video (opsional)"
 
@@ -15285,7 +15285,7 @@ msgstr "Versi dipulihkan"
 msgid "Video"
 msgstr "Video"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:357
+#: packages/admin/src/components/editor/VideoNode.tsx:358
 msgid "Video actions"
 msgstr "Tindakan video"
 

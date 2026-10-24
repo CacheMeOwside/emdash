@@ -1291,8 +1291,8 @@ msgstr "Dodaj blok"
 msgid "Add byline"
 msgstr "Dodaj potpis"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:387
-#: packages/admin/src/components/editor/VideoNode.tsx:389
+#: packages/admin/src/components/editor/VideoNode.tsx:388
+#: packages/admin/src/components/editor/VideoNode.tsx:390
 #: packages/admin/src/components/PortableTextEditor.tsx:5847
 msgid "Add caption"
 msgstr ""
@@ -2603,8 +2603,8 @@ msgstr "Pristanak na mogućnosti"
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:491
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:528
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:753
-#: packages/admin/src/components/editor/ImageNode.tsx:308
-#: packages/admin/src/components/editor/VideoNode.tsx:329
+#: packages/admin/src/components/editor/ImageNode.tsx:311
+#: packages/admin/src/components/editor/VideoNode.tsx:332
 #: packages/admin/src/components/MediaDetailPanel.tsx:1616
 msgid "Caption"
 msgstr "Opis slike"
@@ -4340,8 +4340,8 @@ msgstr "Izbriši taksonomiju"
 msgid "Delete Taxonomy"
 msgstr "Izbriši taksonomiju"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:402
 #: packages/admin/src/components/editor/VideoNode.tsx:403
+#: packages/admin/src/components/editor/VideoNode.tsx:404
 msgid "Delete video"
 msgstr "Izbriši videozapis"
 
@@ -4961,8 +4961,8 @@ msgstr "Uredi potpis"
 msgid "Edit byline field"
 msgstr "Uredi polje potpisa"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:387
-#: packages/admin/src/components/editor/VideoNode.tsx:389
+#: packages/admin/src/components/editor/VideoNode.tsx:388
+#: packages/admin/src/components/editor/VideoNode.tsx:390
 #: packages/admin/src/components/PortableTextEditor.tsx:5847
 msgid "Edit caption"
 msgstr ""
@@ -11319,7 +11319,7 @@ msgstr ""
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:506
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:299
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:373
-#: packages/admin/src/components/editor/VideoNode.tsx:426
+#: packages/admin/src/components/editor/VideoNode.tsx:427
 #: packages/admin/src/components/ImageFieldRenderer.tsx:303
 #: packages/admin/src/components/ImageFieldRenderer.tsx:364
 #: packages/admin/src/components/ImageFieldRenderer.tsx:427
@@ -11377,9 +11377,9 @@ msgstr "Zamijeni referencu"
 msgid "Replace this site’s content with a package exported from another EmDash site."
 msgstr "Zamijenite sadržaj ove web-stranice paketom izvezenim s druge EmDash web-stranice."
 
-#: packages/admin/src/components/editor/VideoNode.tsx:373
 #: packages/admin/src/components/editor/VideoNode.tsx:374
-#: packages/admin/src/components/editor/VideoNode.tsx:425
+#: packages/admin/src/components/editor/VideoNode.tsx:375
+#: packages/admin/src/components/editor/VideoNode.tsx:426
 msgid "Replace video"
 msgstr "Zamijeni videozapis"
 
@@ -14289,7 +14289,7 @@ msgstr ""
 msgid "This version is not visible on the site"
 msgstr "Ova verzija nije vidljiva na web-stranici"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:317
+#: packages/admin/src/components/editor/VideoNode.tsx:320
 msgid "This video can't be played."
 msgstr "Ovaj videozapis nije moguće reproducirati."
 
@@ -14630,11 +14630,11 @@ msgstr "Dva zapisa imaju istu vrijednost ondje gdje mora biti jedinstvena"
 msgid "Type"
 msgstr "Vrsta"
 
-#: packages/admin/src/components/editor/ImageNode.tsx:309
+#: packages/admin/src/components/editor/ImageNode.tsx:312
 msgid "Type caption for image (optional)"
 msgstr "Upišite opis slike (neobvezno)"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:330
+#: packages/admin/src/components/editor/VideoNode.tsx:333
 msgid "Type caption for video (optional)"
 msgstr "Upišite opis videozapisa (neobvezno)"
 
@@ -15285,7 +15285,7 @@ msgstr ""
 msgid "Video"
 msgstr "Videozapis"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:357
+#: packages/admin/src/components/editor/VideoNode.tsx:358
 msgid "Video actions"
 msgstr "Radnje videozapisa"
 

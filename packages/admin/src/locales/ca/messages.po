@@ -1291,8 +1291,8 @@ msgstr "Afegeix un bloc"
 msgid "Add byline"
 msgstr "Afegeix una signatura"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:387
-#: packages/admin/src/components/editor/VideoNode.tsx:389
+#: packages/admin/src/components/editor/VideoNode.tsx:388
+#: packages/admin/src/components/editor/VideoNode.tsx:390
 #: packages/admin/src/components/PortableTextEditor.tsx:5847
 msgid "Add caption"
 msgstr ""
@@ -2603,8 +2603,8 @@ msgstr "Consentiment de capacitats"
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:491
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:528
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:753
-#: packages/admin/src/components/editor/ImageNode.tsx:308
-#: packages/admin/src/components/editor/VideoNode.tsx:329
+#: packages/admin/src/components/editor/ImageNode.tsx:311
+#: packages/admin/src/components/editor/VideoNode.tsx:332
 #: packages/admin/src/components/MediaDetailPanel.tsx:1616
 msgid "Caption"
 msgstr "Llegenda"
@@ -4340,8 +4340,8 @@ msgstr "Elimina la taxonomia"
 msgid "Delete Taxonomy"
 msgstr "Elimina la taxonomia"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:402
 #: packages/admin/src/components/editor/VideoNode.tsx:403
+#: packages/admin/src/components/editor/VideoNode.tsx:404
 msgid "Delete video"
 msgstr ""
 
@@ -4961,8 +4961,8 @@ msgstr "Edita la signatura"
 msgid "Edit byline field"
 msgstr "Edita el camp de signatura"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:387
-#: packages/admin/src/components/editor/VideoNode.tsx:389
+#: packages/admin/src/components/editor/VideoNode.tsx:388
+#: packages/admin/src/components/editor/VideoNode.tsx:390
 #: packages/admin/src/components/PortableTextEditor.tsx:5847
 msgid "Edit caption"
 msgstr ""
@@ -11319,7 +11319,7 @@ msgstr "visualEditing.replaceImage"
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:506
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:299
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:373
-#: packages/admin/src/components/editor/VideoNode.tsx:426
+#: packages/admin/src/components/editor/VideoNode.tsx:427
 #: packages/admin/src/components/ImageFieldRenderer.tsx:303
 #: packages/admin/src/components/ImageFieldRenderer.tsx:364
 #: packages/admin/src/components/ImageFieldRenderer.tsx:427
@@ -11377,9 +11377,9 @@ msgstr "Substitueix la referència"
 msgid "Replace this site’s content with a package exported from another EmDash site."
 msgstr "Substitueix el contingut d'aquest lloc amb un paquet exportat des d'un altre lloc EmDash."
 
-#: packages/admin/src/components/editor/VideoNode.tsx:373
 #: packages/admin/src/components/editor/VideoNode.tsx:374
-#: packages/admin/src/components/editor/VideoNode.tsx:425
+#: packages/admin/src/components/editor/VideoNode.tsx:375
+#: packages/admin/src/components/editor/VideoNode.tsx:426
 msgid "Replace video"
 msgstr ""
 
@@ -14289,7 +14289,7 @@ msgstr ""
 msgid "This version is not visible on the site"
 msgstr "Aquesta versió no és visible al lloc"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:317
+#: packages/admin/src/components/editor/VideoNode.tsx:320
 msgid "This video can't be played."
 msgstr ""
 
@@ -14630,11 +14630,11 @@ msgstr "Dos registres tenen el mateix valor allà on ha de ser únic"
 msgid "Type"
 msgstr "Tipus"
 
-#: packages/admin/src/components/editor/ImageNode.tsx:309
+#: packages/admin/src/components/editor/ImageNode.tsx:312
 msgid "Type caption for image (optional)"
 msgstr "Escriu un peu de foto per a la imatge (opcional)"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:330
+#: packages/admin/src/components/editor/VideoNode.tsx:333
 msgid "Type caption for video (optional)"
 msgstr ""
 
@@ -15285,7 +15285,7 @@ msgstr ""
 msgid "Video"
 msgstr "Vídeo"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:357
+#: packages/admin/src/components/editor/VideoNode.tsx:358
 msgid "Video actions"
 msgstr ""
 

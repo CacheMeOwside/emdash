@@ -1291,8 +1291,8 @@ msgstr "Blok ekle"
 msgid "Add byline"
 msgstr "Yazar bilgisi ekle"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:387
-#: packages/admin/src/components/editor/VideoNode.tsx:389
+#: packages/admin/src/components/editor/VideoNode.tsx:388
+#: packages/admin/src/components/editor/VideoNode.tsx:390
 #: packages/admin/src/components/PortableTextEditor.tsx:5847
 msgid "Add caption"
 msgstr "Resim yazısı ekle"
@@ -2603,8 +2603,8 @@ msgstr "İzin onayı"
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:491
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:528
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:753
-#: packages/admin/src/components/editor/ImageNode.tsx:308
-#: packages/admin/src/components/editor/VideoNode.tsx:329
+#: packages/admin/src/components/editor/ImageNode.tsx:311
+#: packages/admin/src/components/editor/VideoNode.tsx:332
 #: packages/admin/src/components/MediaDetailPanel.tsx:1616
 msgid "Caption"
 msgstr "Resim yazısı"
@@ -4340,8 +4340,8 @@ msgstr "Sınıflandırmayı sil"
 msgid "Delete Taxonomy"
 msgstr "Sınıflandırmayı Sil"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:402
 #: packages/admin/src/components/editor/VideoNode.tsx:403
+#: packages/admin/src/components/editor/VideoNode.tsx:404
 msgid "Delete video"
 msgstr "Videoyu sil"
 
@@ -4961,8 +4961,8 @@ msgstr "Yazar bilgisini düzenle"
 msgid "Edit byline field"
 msgstr "Yazar bilgisi alanını düzenle"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:387
-#: packages/admin/src/components/editor/VideoNode.tsx:389
+#: packages/admin/src/components/editor/VideoNode.tsx:388
+#: packages/admin/src/components/editor/VideoNode.tsx:390
 #: packages/admin/src/components/PortableTextEditor.tsx:5847
 msgid "Edit caption"
 msgstr "Resim yazısını düzenle"
@@ -11319,7 +11319,7 @@ msgstr "Değiştir"
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:506
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:299
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:373
-#: packages/admin/src/components/editor/VideoNode.tsx:426
+#: packages/admin/src/components/editor/VideoNode.tsx:427
 #: packages/admin/src/components/ImageFieldRenderer.tsx:303
 #: packages/admin/src/components/ImageFieldRenderer.tsx:364
 #: packages/admin/src/components/ImageFieldRenderer.tsx:427
@@ -11377,9 +11377,9 @@ msgstr "Referansı değiştir"
 msgid "Replace this site’s content with a package exported from another EmDash site."
 msgstr "Bu sitenin içeriğini, başka bir EmDash sitesinden dışa aktarılmış bir paketle değiştirin."
 
-#: packages/admin/src/components/editor/VideoNode.tsx:373
 #: packages/admin/src/components/editor/VideoNode.tsx:374
-#: packages/admin/src/components/editor/VideoNode.tsx:425
+#: packages/admin/src/components/editor/VideoNode.tsx:375
+#: packages/admin/src/components/editor/VideoNode.tsx:426
 msgid "Replace video"
 msgstr "Videoyu değiştir"
 
@@ -14289,7 +14289,7 @@ msgstr "Bu sürüm gösterilemiyor."
 msgid "This version is not visible on the site"
 msgstr "Bu sürüm sitede görünmüyor"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:317
+#: packages/admin/src/components/editor/VideoNode.tsx:320
 msgid "This video can't be played."
 msgstr "Bu video oynatılamıyor."
 
@@ -14630,11 +14630,11 @@ msgstr "Benzersiz olması gereken bir değer iki kayıtta aynı"
 msgid "Type"
 msgstr "Tür"
 
-#: packages/admin/src/components/editor/ImageNode.tsx:309
+#: packages/admin/src/components/editor/ImageNode.tsx:312
 msgid "Type caption for image (optional)"
 msgstr "Resim yazısı girin (isteğe bağlı)"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:330
+#: packages/admin/src/components/editor/VideoNode.tsx:333
 msgid "Type caption for video (optional)"
 msgstr "Video açıklaması girin (isteğe bağlı)"
 
@@ -15285,7 +15285,7 @@ msgstr "Sürüm geri yüklendi"
 msgid "Video"
 msgstr "Video"
 
-#: packages/admin/src/components/editor/VideoNode.tsx:357
+#: packages/admin/src/components/editor/VideoNode.tsx:358
 msgid "Video actions"
 msgstr "Video işlemleri"
 
