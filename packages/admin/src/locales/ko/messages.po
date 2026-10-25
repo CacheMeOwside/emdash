@@ -217,7 +217,7 @@ msgstr "{0, plural, one {이 콘텐츠 유형에 연결된 관계 #개} other {�
 #. placeholder {1}: state.columns
 #: packages/admin/src/components/editor/TableControls.tsx:190
 #: packages/admin/src/components/editor/TableControls.tsx:223
-#: packages/admin/src/components/PortableTextEditor.tsx:5400
+#: packages/admin/src/components/PortableTextEditor.tsx:5394
 msgid "{0, plural, one {# row} other {# rows}} × {1, plural, one {# column} other {# columns}} selected"
 msgstr "{0, plural, one {#행} other {#행}} × {1, plural, one {#열} other {#열}} 선택됨"
 
@@ -776,7 +776,7 @@ msgstr "{row} × {column} 표"
 msgid "{rows, plural, one {Row deleted} other {# rows deleted}}"
 msgstr "{rows, plural, one {행 삭제됨} other {#개 행 삭제됨}}"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3587
+#: packages/admin/src/components/PortableTextEditor.tsx:3585
 msgid "{rows} × {columns} table pasted"
 msgstr "{rows} × {columns} 표 붙여넣기 완료"
 
@@ -1293,12 +1293,12 @@ msgstr "저자 정보 추가"
 
 #: packages/admin/src/components/editor/VideoNode.tsx:388
 #: packages/admin/src/components/editor/VideoNode.tsx:390
-#: packages/admin/src/components/PortableTextEditor.tsx:5847
+#: packages/admin/src/components/PortableTextEditor.tsx:5841
 msgid "Add caption"
 msgstr ""
 
 #: packages/admin/src/components/editor/TableControls.tsx:26
-#: packages/admin/src/components/PortableTextEditor.tsx:5413
+#: packages/admin/src/components/PortableTextEditor.tsx:5407
 msgid "Add column after"
 msgstr "뒤에 열 추가"
 
@@ -1368,9 +1368,9 @@ msgstr "항목 추가"
 msgid "Add Item"
 msgstr "항목 추가"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5043
-#: packages/admin/src/components/PortableTextEditor.tsx:5840
-#: packages/admin/src/components/PortableTextEditor.tsx:6288
+#: packages/admin/src/components/PortableTextEditor.tsx:5037
+#: packages/admin/src/components/PortableTextEditor.tsx:5834
+#: packages/admin/src/components/PortableTextEditor.tsx:6282
 msgid "Add link"
 msgstr "링크 추가"
 
@@ -1414,7 +1414,7 @@ msgid "Add row above"
 msgstr "위에 행 추가"
 
 #: packages/admin/src/components/editor/TableControls.tsx:25
-#: packages/admin/src/components/PortableTextEditor.tsx:5406
+#: packages/admin/src/components/PortableTextEditor.tsx:5400
 msgid "Add row below"
 msgstr "아래에 행 추가"
 
@@ -1604,25 +1604,25 @@ msgid "Agent-callable MCP tools"
 msgstr "에이전트가 호출할 수 있는 MCP 도구"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:165
-#: packages/admin/src/components/PortableTextEditor.tsx:5303
+#: packages/admin/src/components/PortableTextEditor.tsx:5297
 msgid "Align"
 msgstr ""
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6462
+#: packages/admin/src/components/PortableTextEditor.tsx:6456
 msgid "Align center"
 msgstr ""
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6454
+#: packages/admin/src/components/PortableTextEditor.tsx:6448
 msgid "Align left"
 msgstr ""
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6470
+#: packages/admin/src/components/PortableTextEditor.tsx:6464
 msgid "Align right"
 msgstr ""
 
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:484
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:725
-#: packages/admin/src/components/PortableTextEditor.tsx:5821
+#: packages/admin/src/components/PortableTextEditor.tsx:5815
 msgid "Alignment"
 msgstr "정렬"
 
@@ -1746,8 +1746,8 @@ msgstr ""
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:515
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:519
 #: packages/admin/src/components/MediaLibrary.tsx:1144
-#: packages/admin/src/components/PortableTextEditor.tsx:5752
-#: packages/admin/src/components/PortableTextEditor.tsx:5818
+#: packages/admin/src/components/PortableTextEditor.tsx:5746
+#: packages/admin/src/components/PortableTextEditor.tsx:5812
 msgid "Alt text"
 msgstr "대체 텍스트"
 
@@ -1898,7 +1898,7 @@ msgid "Application Password"
 msgstr "애플리케이션 비밀번호"
 
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:610
-#: packages/admin/src/components/PortableTextEditor.tsx:6553
+#: packages/admin/src/components/PortableTextEditor.tsx:6547
 msgid "Apply"
 msgstr "적용"
 
@@ -1906,8 +1906,8 @@ msgstr "적용"
 msgid "Apply changes"
 msgstr "변경 사항 적용"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5017
-#: packages/admin/src/components/PortableTextEditor.tsx:5793
+#: packages/admin/src/components/PortableTextEditor.tsx:5011
+#: packages/admin/src/components/PortableTextEditor.tsx:5787
 msgid "Apply link"
 msgstr "링크 적용"
 
@@ -2344,8 +2344,8 @@ msgstr "진행 차단 사유"
 msgid "Blocks"
 msgstr "블록"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4797
-#: packages/admin/src/components/PortableTextEditor.tsx:6322
+#: packages/admin/src/components/PortableTextEditor.tsx:4791
+#: packages/admin/src/components/PortableTextEditor.tsx:6316
 msgid "Bold"
 msgstr "굵게"
 
@@ -2406,7 +2406,7 @@ msgstr "빌드 출처 검증됨"
 
 #: packages/admin/src/components/editor/blockTypes.ts:93
 #: packages/admin/src/components/PortableTextEditor.tsx:2051
-#: packages/admin/src/components/PortableTextEditor.tsx:6379
+#: packages/admin/src/components/PortableTextEditor.tsx:6373
 msgid "Bullet List"
 msgstr "글머리 기호 목록"
 
@@ -2532,9 +2532,9 @@ msgstr "콘텐츠 조회 가능"
 #: packages/admin/src/components/MenuEditor.tsx:754
 #: packages/admin/src/components/MenuList.tsx:184
 #: packages/admin/src/components/PluginManager.tsx:817
-#: packages/admin/src/components/PortableTextEditor.tsx:5764
-#: packages/admin/src/components/PortableTextEditor.tsx:5790
-#: packages/admin/src/components/PortableTextEditor.tsx:6537
+#: packages/admin/src/components/PortableTextEditor.tsx:5758
+#: packages/admin/src/components/PortableTextEditor.tsx:5784
+#: packages/admin/src/components/PortableTextEditor.tsx:6531
 #: packages/admin/src/components/PublishingDateTimeEditor.tsx:407
 #: packages/admin/src/components/Redirects.tsx:187
 #: packages/admin/src/components/RelationDialog.tsx:60
@@ -2645,8 +2645,8 @@ msgstr "셀 병합됨"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:54
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:277
-#: packages/admin/src/components/PortableTextEditor.tsx:5307
-#: packages/admin/src/components/PortableTextEditor.tsx:5425
+#: packages/admin/src/components/PortableTextEditor.tsx:5301
+#: packages/admin/src/components/PortableTextEditor.tsx:5419
 msgid "Center"
 msgstr "가운데"
 
@@ -2993,7 +2993,7 @@ msgstr "완료한 항목 지우기"
 msgid "Clear filters"
 msgstr "필터 초기화"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5317
+#: packages/admin/src/components/PortableTextEditor.tsx:5311
 msgid "Clear formatting"
 msgstr ""
 
@@ -3139,7 +3139,7 @@ msgstr "코드"
 
 #: packages/admin/src/components/editor/blockTypes.ts:117
 #: packages/admin/src/components/PortableTextEditor.tsx:2081
-#: packages/admin/src/components/PortableTextEditor.tsx:6421
+#: packages/admin/src/components/PortableTextEditor.tsx:6415
 msgid "Code Block"
 msgstr "코드 블록"
 
@@ -3193,7 +3193,7 @@ msgid "Collections created:"
 msgstr "생성된 컬렉션:"
 
 #: packages/admin/src/components/editor/TableControls.tsx:26
-#: packages/admin/src/components/PortableTextEditor.tsx:5411
+#: packages/admin/src/components/PortableTextEditor.tsx:5405
 msgid "Column added after"
 msgstr "뒤에 열 추가됨"
 
@@ -3209,7 +3209,7 @@ msgstr "열 너비 줄어듦"
 msgid "Column width increased"
 msgstr "열 너비 늘어남"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3587
+#: packages/admin/src/components/PortableTextEditor.tsx:3585
 msgid "Column width resized"
 msgstr "열 너비 조정됨"
 
@@ -3452,7 +3452,7 @@ msgid "Continue Import"
 msgstr "계속 가져오기"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:187
-#: packages/admin/src/components/PortableTextEditor.tsx:6396
+#: packages/admin/src/components/PortableTextEditor.tsx:6390
 msgid "Continue numbering"
 msgstr "번호 이어서 매기기"
 
@@ -3562,7 +3562,7 @@ msgstr "자동으로 복사할 수 없습니다. 위의 URL을 선택하고 수�
 msgid "Could not create {singularLower}"
 msgstr "{singularLower} 생성에 실패했습니다."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4592
+#: packages/admin/src/components/PortableTextEditor.tsx:4586
 msgid "Could not insert section"
 msgstr "섹션을 삽입할 수 없습니다"
 
@@ -4265,7 +4265,7 @@ msgstr "폴더 삭제"
 msgid "Delete gallery"
 msgstr "갤러리 삭제"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5859
+#: packages/admin/src/components/PortableTextEditor.tsx:5853
 msgid "Delete image"
 msgstr "이미지 삭제"
 
@@ -4419,7 +4419,7 @@ msgid "visualEditing.altTextPlaceholder"
 msgstr ""
 
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:522
-#: packages/admin/src/components/PortableTextEditor.tsx:5753
+#: packages/admin/src/components/PortableTextEditor.tsx:5747
 msgid "Describe the image"
 msgstr "이미지를 설명하세요"
 
@@ -4588,11 +4588,11 @@ msgstr "업로드가 완료된 {0} 항목 지우기"
 msgid "Dismiss import suggestion"
 msgstr "가져오기 제안 닫기"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4613
+#: packages/admin/src/components/PortableTextEditor.tsx:4607
 msgid "Dismiss section error"
 msgstr "섹션 오류 메시지 닫기"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4580
+#: packages/admin/src/components/PortableTextEditor.tsx:4574
 msgid "Dismiss table paste error"
 msgstr "표 붙여넣기 오류 메시지 닫기"
 
@@ -4963,7 +4963,7 @@ msgstr "저자 정보 필드 편집"
 
 #: packages/admin/src/components/editor/VideoNode.tsx:388
 #: packages/admin/src/components/editor/VideoNode.tsx:390
-#: packages/admin/src/components/PortableTextEditor.tsx:5847
+#: packages/admin/src/components/PortableTextEditor.tsx:5841
 msgid "Edit caption"
 msgstr ""
 
@@ -4999,10 +4999,10 @@ msgstr "이미지 편집"
 msgid "Edit image {0}"
 msgstr "이미지 {0} 편집"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5043
-#: packages/admin/src/components/PortableTextEditor.tsx:5149
-#: packages/admin/src/components/PortableTextEditor.tsx:5840
-#: packages/admin/src/components/PortableTextEditor.tsx:6287
+#: packages/admin/src/components/PortableTextEditor.tsx:5037
+#: packages/admin/src/components/PortableTextEditor.tsx:5143
+#: packages/admin/src/components/PortableTextEditor.tsx:5834
+#: packages/admin/src/components/PortableTextEditor.tsx:6281
 msgid "Edit link"
 msgstr "링크 편집"
 
@@ -5194,7 +5194,7 @@ msgid "Embed"
 msgstr ""
 
 #. placeholder {0}: block.label
-#: packages/admin/src/components/PortableTextEditor.tsx:3753
+#: packages/admin/src/components/PortableTextEditor.tsx:3751
 msgid "Embed a {0}"
 msgstr "{0} 삽입"
 
@@ -6929,7 +6929,7 @@ msgstr "초안과 모든 콘텐츠를 포함한 완전한 가져오기를 위해
 msgid "For the best import experience, install the <0>EmDash Exporter</0> plugin on your WordPress site."
 msgstr "더 원활하게 가져오려면 WordPress 사이트에 <0>EmDash Exporter</0> 플러그인을 설치하세요."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4995
+#: packages/admin/src/components/PortableTextEditor.tsx:4989
 msgid "Format selection"
 msgstr ""
 
@@ -6977,7 +6977,7 @@ msgstr "관리자 전체 권한"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:44
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:235
-#: packages/admin/src/components/PortableTextEditor.tsx:3701
+#: packages/admin/src/components/PortableTextEditor.tsx:3699
 #: packages/admin/src/components/revisions/RevisionDocument.tsx:437
 msgid "Gallery"
 msgstr "갤러리"
@@ -7345,7 +7345,7 @@ msgstr ""
 #: packages/admin/src/components/editor/BlockMenu.tsx:42
 #: packages/admin/src/components/FieldEditor.tsx:444
 #: packages/admin/src/components/FieldEditor.tsx:1304
-#: packages/admin/src/components/PortableTextEditor.tsx:3688
+#: packages/admin/src/components/PortableTextEditor.tsx:3686
 #: packages/admin/src/components/revisions/RevisionDocument.tsx:302
 #: packages/admin/src/components/revisions/RevisionDocument.tsx:458
 msgid "Image"
@@ -7367,7 +7367,7 @@ msgstr "이미지 {0}"
 msgid "Image actions"
 msgstr "이미지 작업"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5718
+#: packages/admin/src/components/PortableTextEditor.tsx:5712
 msgid "Image controls"
 msgstr ""
 
@@ -7375,7 +7375,7 @@ msgstr ""
 msgid "Image from media library"
 msgstr "미디어 라이브러리의 이미지"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6285
+#: packages/admin/src/components/PortableTextEditor.tsx:6279
 msgid "Image link"
 msgstr "이미지 링크"
 
@@ -7395,7 +7395,7 @@ msgid "Image replaced."
 msgstr "이미지가 교체되었습니다."
 
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:391
-#: packages/admin/src/components/PortableTextEditor.tsx:5852
+#: packages/admin/src/components/PortableTextEditor.tsx:5846
 msgid "Image settings"
 msgstr "이미지 설정"
 
@@ -7618,8 +7618,8 @@ msgstr ""
 msgid "Inline blocks use your site's styles. Your site removes scripts, style tags and style attributes, and empties iframes other than YouTube and Vimeo."
 msgstr ""
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4801
-#: packages/admin/src/components/PortableTextEditor.tsx:6354
+#: packages/admin/src/components/PortableTextEditor.tsx:4795
+#: packages/admin/src/components/PortableTextEditor.tsx:6348
 msgid "Inline Code"
 msgstr "인라인 코드"
 
@@ -7640,7 +7640,7 @@ msgstr "코드 블록 삽입"
 msgid "Insert a horizontal rule"
 msgstr "수평선 삽입"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3732
+#: packages/admin/src/components/PortableTextEditor.tsx:3730
 msgid "Insert a reusable section"
 msgstr "재사용 가능한 섹션 삽입"
 
@@ -7648,11 +7648,11 @@ msgstr "재사용 가능한 섹션 삽입"
 msgid "Insert a table"
 msgstr "표 삽입"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3689
+#: packages/admin/src/components/PortableTextEditor.tsx:3687
 msgid "Insert an image"
 msgstr "이미지 삽입"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3702
+#: packages/admin/src/components/PortableTextEditor.tsx:3700
 msgid "Insert an image gallery"
 msgstr "이미지 갤러리 삽입"
 
@@ -7660,8 +7660,8 @@ msgstr "이미지 갤러리 삽입"
 msgid "Insert block"
 msgstr "블록 삽입"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6301
-#: packages/admin/src/components/PortableTextEditor.tsx:6311
+#: packages/admin/src/components/PortableTextEditor.tsx:6295
+#: packages/admin/src/components/PortableTextEditor.tsx:6305
 msgid "Insert block after current block"
 msgstr "현재 블록 뒤에 블록 삽입"
 
@@ -7669,12 +7669,12 @@ msgstr "현재 블록 뒤에 블록 삽입"
 msgid "Insert block below"
 msgstr "아래에 블록 삽입"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6435
+#: packages/admin/src/components/PortableTextEditor.tsx:6429
 msgid "Insert HTML"
 msgstr "HTML 삽입"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4707
-#: packages/admin/src/components/PortableTextEditor.tsx:6428
+#: packages/admin/src/components/PortableTextEditor.tsx:4701
+#: packages/admin/src/components/PortableTextEditor.tsx:6422
 msgid "Insert image"
 msgstr "이미지 삽입"
 
@@ -7703,7 +7703,7 @@ msgstr "섹션 삽입"
 msgid "Insert table"
 msgstr "표 삽입"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4721
+#: packages/admin/src/components/PortableTextEditor.tsx:4715
 msgid "Insert video"
 msgstr ""
 
@@ -7826,8 +7826,8 @@ msgstr "보안 시스템 안내 창에서 선택한 인증기나 자격 증명 �
 msgid "It was started somewhere else, so its plan can no longer be changed. Its progress will appear here."
 msgstr "다른 곳에서 시작되어 더 이상 계획을 변경할 수 없습니다. 진행 상황이 여기에 표시됩니다."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4798
-#: packages/admin/src/components/PortableTextEditor.tsx:6330
+#: packages/admin/src/components/PortableTextEditor.tsx:4792
+#: packages/admin/src/components/PortableTextEditor.tsx:6324
 msgid "Italic"
 msgstr "기울임꼴"
 
@@ -8050,8 +8050,8 @@ msgstr ""
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:53
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:276
-#: packages/admin/src/components/PortableTextEditor.tsx:5306
-#: packages/admin/src/components/PortableTextEditor.tsx:5424
+#: packages/admin/src/components/PortableTextEditor.tsx:5300
+#: packages/admin/src/components/PortableTextEditor.tsx:5418
 msgid "Left"
 msgstr "왼쪽"
 
@@ -8072,7 +8072,7 @@ msgstr "라이선스"
 msgid "Limit"
 msgstr "최대 표시 개수"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6514
+#: packages/admin/src/components/PortableTextEditor.tsx:6508
 msgid "Link"
 msgstr "링크"
 
@@ -8080,7 +8080,7 @@ msgstr "링크"
 msgid "Link expired"
 msgstr "링크가 만료되었습니다"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5127
+#: packages/admin/src/components/PortableTextEditor.tsx:5121
 msgid "Link options"
 msgstr ""
 
@@ -8164,7 +8164,7 @@ msgstr "연결되는 콘텐츠 유형"
 msgid "Links to {0}"
 msgstr "연결 대상: {0}"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3508
+#: packages/admin/src/components/PortableTextEditor.tsx:3506
 msgid "List"
 msgstr ""
 
@@ -8253,7 +8253,7 @@ msgstr "설정을 불러오는 중..."
 msgid "Loading content..."
 msgstr "콘텐츠 로드 중..."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4543
+#: packages/admin/src/components/PortableTextEditor.tsx:4537
 msgid "Loading editor..."
 msgstr "편집기 로드 중..."
 
@@ -8869,7 +8869,7 @@ msgstr "월별·연도별 아카이브"
 msgid "More actions for {0}"
 msgstr "{0} 추가 작업"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5273
+#: packages/admin/src/components/PortableTextEditor.tsx:5267
 msgid "More formatting"
 msgstr ""
 
@@ -9427,7 +9427,7 @@ msgstr "아직 콘텐츠 유형이 없습니다."
 msgid "No custom fields yet"
 msgstr "아직 커스텀 필드가 없습니다"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5814
+#: packages/admin/src/components/PortableTextEditor.tsx:5808
 msgid "No description yet"
 msgstr ""
 
@@ -9739,7 +9739,7 @@ msgid "Non-guest"
 msgstr "게스트 제외"
 
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:275
-#: packages/admin/src/components/PortableTextEditor.tsx:5423
+#: packages/admin/src/components/PortableTextEditor.tsx:5417
 msgid "None"
 msgstr "없음"
 
@@ -9811,7 +9811,7 @@ msgstr "목록 보기에서 페이지당 표시할 게시물 수"
 
 #: packages/admin/src/components/editor/blockTypes.ts:101
 #: packages/admin/src/components/PortableTextEditor.tsx:2061
-#: packages/admin/src/components/PortableTextEditor.tsx:6387
+#: packages/admin/src/components/PortableTextEditor.tsx:6381
 msgid "Numbered List"
 msgstr "번호 매기기 목록"
 
@@ -10785,8 +10785,8 @@ msgstr "빠르게 만들면 이 필드와 이 컬렉션의 이름을 바탕으�
 
 #: packages/admin/src/components/editor/blockTypes.ts:109
 #: packages/admin/src/components/PortableTextEditor.tsx:2071
-#: packages/admin/src/components/PortableTextEditor.tsx:3509
-#: packages/admin/src/components/PortableTextEditor.tsx:6413
+#: packages/admin/src/components/PortableTextEditor.tsx:3507
+#: packages/admin/src/components/PortableTextEditor.tsx:6407
 msgid "Quote"
 msgstr "인용"
 
@@ -10960,7 +10960,7 @@ msgstr "리디렉션"
 msgid "Redirects that loop will be imported turned off"
 msgstr "순환하는 리디렉션은 비활성화된 상태로 가져옵니다"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6576
+#: packages/admin/src/components/PortableTextEditor.tsx:6570
 msgid "Redo"
 msgstr "다시 실행"
 
@@ -11082,7 +11082,7 @@ msgstr ""
 #: packages/admin/src/components/ImageFieldRenderer.tsx:383
 #: packages/admin/src/components/ImageFieldRenderer.tsx:454
 #: packages/admin/src/components/media/MediaBrowserItems.tsx:220
-#: packages/admin/src/components/PortableTextEditor.tsx:6549
+#: packages/admin/src/components/PortableTextEditor.tsx:6543
 #: packages/admin/src/components/settings/GeneralSettings.tsx:400
 #: packages/admin/src/components/settings/GeneralSettings.tsx:460
 #: packages/admin/src/components/settings/PasskeyItem.tsx:160
@@ -11157,9 +11157,9 @@ msgstr "이미지를 삭제할까요?"
 msgid "Remove item {0}"
 msgstr "항목 {0} 삭제"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5021
-#: packages/admin/src/components/PortableTextEditor.tsx:5161
-#: packages/admin/src/components/PortableTextEditor.tsx:5786
+#: packages/admin/src/components/PortableTextEditor.tsx:5015
+#: packages/admin/src/components/PortableTextEditor.tsx:5155
+#: packages/admin/src/components/PortableTextEditor.tsx:5780
 msgid "Remove link"
 msgstr "링크 해제"
 
@@ -11325,8 +11325,8 @@ msgstr ""
 #: packages/admin/src/components/ImageFieldRenderer.tsx:427
 #: packages/admin/src/components/ImageFieldRenderer.tsx:601
 #: packages/admin/src/components/ImageFieldRenderer.tsx:604
-#: packages/admin/src/components/PortableTextEditor.tsx:5808
-#: packages/admin/src/components/PortableTextEditor.tsx:5889
+#: packages/admin/src/components/PortableTextEditor.tsx:5802
+#: packages/admin/src/components/PortableTextEditor.tsx:5883
 #: packages/admin/src/components/SeoImageField.tsx:194
 #: packages/admin/src/components/SeoImageField.tsx:253
 msgid "Replace"
@@ -11351,7 +11351,7 @@ msgstr "{label} 항목의 다크 모드용 대체 이미지 교체"
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:372
 #: packages/admin/src/components/MediaDetailPanel.tsx:1839
 #: packages/admin/src/components/MediaDetailPanel.tsx:1967
-#: packages/admin/src/components/PortableTextEditor.tsx:5888
+#: packages/admin/src/components/PortableTextEditor.tsx:5882
 msgid "Replace image"
 msgstr "이미지 교체"
 
@@ -11522,7 +11522,7 @@ msgid "Resolving publisher handle..."
 msgstr "게시자 핸들 확인 중..."
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:193
-#: packages/admin/src/components/PortableTextEditor.tsx:6403
+#: packages/admin/src/components/PortableTextEditor.tsx:6397
 msgid "Restart numbering"
 msgstr "번호 다시 매기기"
 
@@ -11726,8 +11726,8 @@ msgstr "리치 텍스트 편집기"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:55
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:278
-#: packages/admin/src/components/PortableTextEditor.tsx:5308
-#: packages/admin/src/components/PortableTextEditor.tsx:5426
+#: packages/admin/src/components/PortableTextEditor.tsx:5302
+#: packages/admin/src/components/PortableTextEditor.tsx:5420
 msgid "Right"
 msgstr "오른쪽"
 
@@ -11781,7 +11781,7 @@ msgid "Row added above"
 msgstr "위에 행 추가됨"
 
 #: packages/admin/src/components/editor/TableControls.tsx:25
-#: packages/admin/src/components/PortableTextEditor.tsx:5404
+#: packages/admin/src/components/PortableTextEditor.tsx:5398
 msgid "Row added below"
 msgstr "아래에 행 추가됨"
 
@@ -11839,7 +11839,7 @@ msgstr "저장"
 msgid "Save (Enter)"
 msgstr "저장(Enter)"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5767
+#: packages/admin/src/components/PortableTextEditor.tsx:5761
 msgid "Save alt text"
 msgstr "대체 텍스트 저장"
 
@@ -12256,7 +12256,7 @@ msgstr "검색 가능"
 msgid "Searching…"
 msgstr "검색 중…"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3731
+#: packages/admin/src/components/PortableTextEditor.tsx:3729
 msgid "Section"
 msgstr "섹션"
 
@@ -12445,13 +12445,13 @@ msgstr "파비콘 선택"
 msgid "Select file"
 msgstr "파일 선택"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4735
+#: packages/admin/src/components/PortableTextEditor.tsx:4729
 msgid "Select gallery images"
 msgstr "갤러리 이미지 선택"
 
 #: packages/admin/src/components/ImageFieldRenderer.tsx:576
 #: packages/admin/src/components/MediaPickerModal.tsx:232
-#: packages/admin/src/components/PortableTextEditor.tsx:4706
+#: packages/admin/src/components/PortableTextEditor.tsx:4700
 msgid "Select image"
 msgstr "이미지 선택"
 
@@ -12484,7 +12484,7 @@ msgid "Select up to 50 posts at a time."
 msgstr "한 번에 최대 50개의 게시물을 선택하세요."
 
 #: packages/admin/src/components/MediaPickerModal.tsx:232
-#: packages/admin/src/components/PortableTextEditor.tsx:4720
+#: packages/admin/src/components/PortableTextEditor.tsx:4714
 msgid "Select video"
 msgstr ""
 
@@ -13209,8 +13209,8 @@ msgstr "저장된 백업"
 msgid "Stored per locale — each translation of a byline gets its own value."
 msgstr "언어별로 저장됩니다. 저자 정보의 각 번역에 별도의 값이 저장됩니다."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4800
-#: packages/admin/src/components/PortableTextEditor.tsx:6346
+#: packages/admin/src/components/PortableTextEditor.tsx:4794
+#: packages/admin/src/components/PortableTextEditor.tsx:6340
 msgid "Strikethrough"
 msgstr "취소선"
 
@@ -13244,11 +13244,11 @@ msgstr "하위 필드"
 msgid "Subscriber"
 msgstr "열람자"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5287
+#: packages/admin/src/components/PortableTextEditor.tsx:5281
 msgid "Subscript"
 msgstr "아래 첨자"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5293
+#: packages/admin/src/components/PortableTextEditor.tsx:5287
 msgid "Superscript"
 msgstr "위 첨자"
 
@@ -13292,11 +13292,11 @@ msgstr "시스템 필드"
 msgid "Table"
 msgstr "표"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4557
+#: packages/admin/src/components/PortableTextEditor.tsx:4551
 msgid "Table cells accept text, links, and formatting only."
 msgstr "표 셀에는 텍스트, 링크, 서식만 사용할 수 있습니다."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:5394
+#: packages/admin/src/components/PortableTextEditor.tsx:5388
 msgid "Table controls"
 msgstr "표 편집 도구"
 
@@ -13305,7 +13305,7 @@ msgid "Table deleted"
 msgstr "표 삭제됨"
 
 #: packages/admin/src/components/editor/TableControls.tsx:401
-#: packages/admin/src/components/PortableTextEditor.tsx:4447
+#: packages/admin/src/components/PortableTextEditor.tsx:4441
 msgid "Table inserted"
 msgstr "표 삽입됨"
 
@@ -13313,7 +13313,7 @@ msgstr "표 삽입됨"
 msgid "Table size"
 msgstr "표 크기"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4554
+#: packages/admin/src/components/PortableTextEditor.tsx:4548
 msgid "Tables cannot be pasted inside lists or quotes. Paste the table into its own paragraph and try again."
 msgstr "목록이나 인용문 안에는 표를 붙여넣을 수 없습니다. 표를 별도의 문단에 붙여넣고 다시 시도하세요."
 
@@ -13441,7 +13441,7 @@ msgstr "분류 항목"
 msgid "test@example.com"
 msgstr "test@example.com"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6590
+#: packages/admin/src/components/PortableTextEditor.tsx:6584
 msgid "Text formatting"
 msgstr "텍스트 서식"
 
@@ -13939,7 +13939,7 @@ msgstr "이 코드는 유효하지 않거나 이미 사용되었습니다."
 msgid "This collection is defined in code. Some settings cannot be changed here. Edit your live.config.ts file to modify the schema."
 msgstr "이 컬렉션은 코드에 정의되어 있습니다. 일부 설정은 여기에서 변경할 수 없습니다. 스키마를 수정하려면 live.config.ts 파일을 편집하세요."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4529
+#: packages/admin/src/components/PortableTextEditor.tsx:4523
 msgid "This content cannot be edited safely"
 msgstr "이 콘텐츠를 안전하게 편집할 수 없습니다"
 
@@ -14001,11 +14001,11 @@ msgstr "내보내기 크기가 큽니다"
 msgid "This field cannot be edited by this version of EmDash."
 msgstr "현재 EmDash 버전에서는 이 필드를 편집할 수 없습니다."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4512
+#: packages/admin/src/components/PortableTextEditor.tsx:4506
 msgid "This field contains table content that the editor cannot preserve. Update it through the API before editing or saving this content."
 msgstr "이 필드에는 편집기가 보존할 수 없는 표 콘텐츠가 포함되어 있습니다. 이 콘텐츠를 편집하거나 저장하기 전에 API를 통해 해당 필드를 수정하세요."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4531
+#: packages/admin/src/components/PortableTextEditor.tsx:4525
 msgid "This field contains unsupported Portable Text marks: <0>{markList}</0>. Remove them through the API before editing or saving this content."
 msgstr "이 필드에는 지원되지 않는 Portable Text 마크가 포함되어 있습니다: <0>{markList}</0>. 이 콘텐츠를 편집하거나 저장하기 전에 API를 통해 해당 마크를 제거하세요."
 
@@ -14134,7 +14134,7 @@ msgstr "이 패키지는 더 최신 버전 또는 다른 버전의 EmDash에서 
 msgid "This passkey is already registered on this device."
 msgstr "이 패스키는 이 기기에 이미 등록되어 있습니다."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4550
+#: packages/admin/src/components/PortableTextEditor.tsx:4544
 msgid "This paste is too large. Paste fewer cells or less text at a time."
 msgstr "붙여넣을 내용이 너무 큽니다. 한 번에 붙여넣는 셀 수나 텍스트 양을 줄이세요."
 
@@ -14207,12 +14207,12 @@ msgstr "예약을 취소하고 즉시 게시합니다."
 msgid "This saved timezone isn't recognized. Choose a suggestion for reliable date display."
 msgstr "저장된 시간대를 인식할 수 없습니다. 날짜가 정확하게 표시되도록 추천 항목에서 선택하세요."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4595
+#: packages/admin/src/components/PortableTextEditor.tsx:4589
 msgid "This section contains table content that the editor cannot preserve. Update the section before inserting it."
 msgstr "이 섹션에는 편집기가 보존할 수 없는 표 콘텐츠가 포함되어 있습니다. 삽입하기 전에 섹션을 수정하세요."
 
 #. placeholder {0}: sectionInsertErrorMarks.join(", ")
-#: packages/admin/src/components/PortableTextEditor.tsx:4597
+#: packages/admin/src/components/PortableTextEditor.tsx:4591
 msgid "This section contains unsupported Portable Text marks: <0>{0}</0>. Update the section before inserting it."
 msgstr "이 섹션에는 지원되지 않는 Portable Text 마크가 포함되어 있습니다: <0>{0}</0>. 삽입하기 전에 섹션을 수정하세요."
 
@@ -14265,15 +14265,15 @@ msgstr "이 사이트에 이전 가져오기의 일부 데이터가 남아 있�
 msgid "This site was set up with starter content. It has no entries of its own, and the import deletes it before adding the package’s content."
 msgstr "이 사이트는 초기 콘텐츠로 설정되었습니다. 자체 항목은 없으며, 가져오기는 패키지의 콘텐츠를 추가하기 전에 초기 콘텐츠를 삭제합니다."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4552
+#: packages/admin/src/components/PortableTextEditor.tsx:4546
 msgid "This spreadsheet data has invalid quoted cells. Fix the quotes or remove the tab separators and try again."
 msgstr "이 스프레드시트 데이터에는 따옴표 처리가 잘못된 셀이 있습니다. 따옴표를 수정하거나 탭 구분자를 제거한 후 다시 시도하세요."
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4510
+#: packages/admin/src/components/PortableTextEditor.tsx:4504
 msgid "This table cannot be edited safely"
 msgstr "이 표를 안전하게 편집할 수 없습니다"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4556
+#: packages/admin/src/components/PortableTextEditor.tsx:4550
 msgid "This table has unsupported cell formatting, merged cells, or column widths. Paste it as plain text or simplify the table and try again."
 msgstr "이 표에는 지원되지 않는 셀 서식, 병합된 셀 또는 열 너비가 있습니다. 일반 텍스트로 붙여넣거나 표를 단순화한 후 다시 시도하세요."
 
@@ -14584,9 +14584,9 @@ msgid "TSX"
 msgstr "TSX"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:146
-#: packages/admin/src/components/PortableTextEditor.tsx:5210
-#: packages/admin/src/components/PortableTextEditor.tsx:5212
-#: packages/admin/src/components/PortableTextEditor.tsx:5229
+#: packages/admin/src/components/PortableTextEditor.tsx:5204
+#: packages/admin/src/components/PortableTextEditor.tsx:5206
+#: packages/admin/src/components/PortableTextEditor.tsx:5223
 msgid "Turn into"
 msgstr "변환"
 
@@ -14647,7 +14647,7 @@ msgstr "유형 불일치({0})"
 msgid "Type to filter"
 msgstr ""
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4667
+#: packages/admin/src/components/PortableTextEditor.tsx:4661
 msgid "Type to search"
 msgstr ""
 
@@ -14669,12 +14669,12 @@ msgstr "마켓플레이스에 접속할 수 없습니다"
 msgid "Unassigned"
 msgstr "할당되지 않음"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:4799
-#: packages/admin/src/components/PortableTextEditor.tsx:6338
+#: packages/admin/src/components/PortableTextEditor.tsx:4793
+#: packages/admin/src/components/PortableTextEditor.tsx:6332
 msgid "Underline"
 msgstr "밑줄"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:6569
+#: packages/admin/src/components/PortableTextEditor.tsx:6563
 msgid "Undo"
 msgstr "실행 취소"
 
@@ -14962,7 +14962,7 @@ msgstr "미디어를 업로드해 재사용할 자료를 한곳에서 관리하�
 msgid "Upload not finished"
 msgstr "업로드 미완료"
 
-#: packages/admin/src/components/PortableTextEditor.tsx:3718
+#: packages/admin/src/components/PortableTextEditor.tsx:3716
 msgid "Upload or choose a video"
 msgstr ""
 
@@ -15280,7 +15280,7 @@ msgstr ""
 #: packages/admin/src/components/editor/BlockMenu.tsx:43
 #: packages/admin/src/components/MediaLibrary.tsx:922
 #: packages/admin/src/components/MediaPickerModal.tsx:392
-#: packages/admin/src/components/PortableTextEditor.tsx:3717
+#: packages/admin/src/components/PortableTextEditor.tsx:3715
 #: packages/admin/src/components/revisions/RevisionDocument.tsx:485
 msgid "Video"
 msgstr "동영상"
