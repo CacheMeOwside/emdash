@@ -198,47 +198,6 @@ describe("MenuRepository", () => {
 		});
 	});
 
-	describe("createItem() default sortOrder", () => {
-		it("appends with the next available sortOrder when omitted", async () => {
-			const menu = await repo.create({ name: "primary", label: "Primary" });
-			const a = await repo.createItem(menu.id, menu.locale, {
-				type: "custom",
-				label: "A",
-				customUrl: "/a",
-			});
-			const b = await repo.createItem(menu.id, menu.locale, {
-				type: "custom",
-				label: "B",
-				customUrl: "/b",
-			});
-			expect(a.sortOrder).toBe(0);
-			expect(b.sortOrder).toBe(1);
-		});
-
-		it("calculates sortOrder per parent scope", async () => {
-			const menu = await repo.create({ name: "primary", label: "Primary" });
-			const parent = await repo.createItem(menu.id, menu.locale, {
-				type: "custom",
-				label: "Parent",
-				customUrl: "/p",
-			});
-			const child1 = await repo.createItem(menu.id, menu.locale, {
-				type: "custom",
-				label: "C1",
-				customUrl: "/p/1",
-				parentId: parent.id,
-			});
-			const child2 = await repo.createItem(menu.id, menu.locale, {
-				type: "custom",
-				label: "C2",
-				customUrl: "/p/2",
-				parentId: parent.id,
-			});
-			expect(child1.sortOrder).toBe(0);
-			expect(child2.sortOrder).toBe(1);
-		});
-	});
-
 	describe("updateItem()", () => {
 		it("returns null when the item doesn't belong to the menu", async () => {
 			const menu1 = await repo.create({ name: "primary", label: "Primary" });
@@ -461,5 +420,58 @@ describeEachDialect("MenuRepository.create() with translationOf", (dialect) => {
 		expect(items).toHaveLength(6);
 		const copiedParent = items.find((item) => item.label === "Parent");
 		expect(items.find((item) => item.label === "Child")?.parentId).toBe(copiedParent?.id);
+	});
+});
+
+describeEachDialect("MenuRepository createItem() default sortOrder", (dialect) => {
+	let ctx: DialectTestContext;
+	let repo: MenuRepository;
+
+	beforeEach(async () => {
+		ctx = await setupForDialect(dialect);
+		repo = new MenuRepository(ctx.db);
+	});
+
+	afterEach(async () => {
+		await teardownForDialect(ctx);
+	});
+
+	it("appends with the next available sortOrder when omitted", async () => {
+		const menu = await repo.create({ name: "primary", label: "Primary" });
+		const a = await repo.createItem(menu.id, menu.locale, {
+			type: "custom",
+			label: "A",
+			customUrl: "/a",
+		});
+		const b = await repo.createItem(menu.id, menu.locale, {
+			type: "custom",
+			label: "B",
+			customUrl: "/b",
+		});
+		expect(a.sortOrder).toBe(0);
+		expect(b.sortOrder).toBe(1);
+	});
+
+	it("calculates sortOrder per parent scope", async () => {
+		const menu = await repo.create({ name: "primary", label: "Primary" });
+		const parent = await repo.createItem(menu.id, menu.locale, {
+			type: "custom",
+			label: "Parent",
+			customUrl: "/p",
+		});
+		const child1 = await repo.createItem(menu.id, menu.locale, {
+			type: "custom",
+			label: "C1",
+			customUrl: "/p/1",
+			parentId: parent.id,
+		});
+		const child2 = await repo.createItem(menu.id, menu.locale, {
+			type: "custom",
+			label: "C2",
+			customUrl: "/p/2",
+			parentId: parent.id,
+		});
+		expect(child1.sortOrder).toBe(0);
+		expect(child2.sortOrder).toBe(1);
 	});
 });
