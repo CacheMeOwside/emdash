@@ -87,7 +87,7 @@ msgid "{0, plural, one {# byline} other {# bylines}}"
 msgstr "{0, plural, one {# Autorenangabe} other {# Autorenangaben}}"
 
 #. placeholder {0}: seedInfo.collections
-#: packages/admin/src/components/SetupWizard.tsx:219
+#: packages/admin/src/components/SetupWizard.tsx:220
 msgid "{0, plural, one {# collection} other {# collections}}"
 msgstr "{0, plural, one {# Sammlung} other {# Sammlungen}}"
 
@@ -385,7 +385,7 @@ msgstr "{0} von {1} Dateien · {2} von {3}"
 
 #. placeholder {0}: i18n.number(seedProgress.done)
 #. placeholder {1}: i18n.number(seedProgress.total)
-#: packages/admin/src/components/SetupWizard.tsx:210
+#: packages/admin/src/components/SetupWizard.tsx:211
 msgid "{0} of {1} items"
 msgstr "{0} von {1} Elementen"
 
@@ -885,8 +885,8 @@ msgstr "• In deine EmDash-Medienbibliothek hochgeladen"
 msgid "• URLs in your content are updated automatically"
 msgstr "• URLs in deinen Inhalten werden automatisch aktualisiert"
 
-#: packages/admin/src/components/SetupWizard.tsx:289
-#: packages/admin/src/components/SetupWizard.tsx:340
+#: packages/admin/src/components/SetupWizard.tsx:290
+#: packages/admin/src/components/SetupWizard.tsx:341
 #: packages/admin/src/components/WordPressImport.tsx:1656
 msgid "← Back"
 msgstr "← Zurück"
@@ -1181,7 +1181,7 @@ msgstr "Zugriff verweigert"
 msgid "Access your media library"
 msgstr "Auf deine Medienbibliothek zugreifen"
 
-#: packages/admin/src/components/SetupWizard.tsx:409
+#: packages/admin/src/components/SetupWizard.tsx:410
 msgid "Account"
 msgstr "Benutzerkonto"
 
@@ -3442,8 +3442,8 @@ msgstr "Inhalte bearbeiten"
 msgid "Continue"
 msgstr "Fortfahren"
 
-#: packages/admin/src/components/SetupWizard.tsx:201
-#: packages/admin/src/components/SetupWizard.tsx:297
+#: packages/admin/src/components/SetupWizard.tsx:202
+#: packages/admin/src/components/SetupWizard.tsx:298
 msgid "Continue →"
 msgstr "Fortfahren →"
 
@@ -3464,7 +3464,7 @@ msgstr "Auf {handoverHost} fortfahren"
 msgid "Continue to finish signing in. The link works only once."
 msgstr "Fahre fort, um die Anmeldung abzuschließen. Der Link funktioniert nur einmal."
 
-#: packages/admin/src/components/SetupWizard.tsx:356
+#: packages/admin/src/components/SetupWizard.tsx:357
 msgid "Continue to import"
 msgstr "Weiter zum Import"
 
@@ -3875,7 +3875,7 @@ msgstr "Token erstellen"
 msgid "Create Widget Area"
 msgstr "Widget-Bereich erstellen"
 
-#: packages/admin/src/components/SetupWizard.tsx:628
+#: packages/admin/src/components/SetupWizard.tsx:620
 msgid "Create your account"
 msgstr "Erstelle dein Benutzerkonto"
 
@@ -5154,7 +5154,7 @@ msgstr "Allen Benutzern eine E-Mail senden?"
 msgid "Email every other user a link to the sign-in page at {siteHost}."
 msgstr "Sende allen anderen Benutzern per E-Mail einen Link zur Anmeldeseite unter {siteHost}."
 
-#: packages/admin/src/components/SetupWizard.tsx:242
+#: packages/admin/src/components/SetupWizard.tsx:243
 #: packages/admin/src/components/SignupPage.tsx:69
 msgid "Email is required"
 msgstr "E-Mail-Adresse ist erforderlich"
@@ -5265,7 +5265,7 @@ msgstr "Leer"
 msgid "Empty gallery — open settings to add images"
 msgstr "Leere Galerie — öffne die Einstellungen, um Bilder hinzuzufügen"
 
-#: packages/admin/src/components/SetupWizard.tsx:173
+#: packages/admin/src/components/SetupWizard.tsx:174
 msgid "Empty site"
 msgstr "Leere Website"
 
@@ -5418,7 +5418,7 @@ msgstr "Eintrag auf der verweisenden Seite"
 #: packages/admin/src/components/MenuEditor.tsx:158
 #: packages/admin/src/components/MenuEditor.tsx:226
 #: packages/admin/src/components/MenuEditor.tsx:266
-#: packages/admin/src/components/SetupWizard.tsx:607
+#: packages/admin/src/components/SetupWizard.tsx:603
 #: packages/admin/src/components/TaxonomyManager.tsx:1210
 #: packages/admin/src/components/Widgets.tsx:781
 #: packages/admin/src/router.tsx:3364
@@ -5666,7 +5666,7 @@ msgstr "Erstellen fehlgeschlagen: {0}"
 msgid "Failed to create a sign-in link"
 msgstr "Erstellen eines Anmeldelinks fehlgeschlagen"
 
-#: packages/admin/src/components/SetupWizard.tsx:561
+#: packages/admin/src/components/SetupWizard.tsx:557
 msgid "Failed to create admin"
 msgstr "Erstellen des Administrators fehlgeschlagen"
 
@@ -6123,7 +6123,7 @@ msgstr "Abrufen der Abschnitte fehlgeschlagen"
 msgid "Failed to fetch settings"
 msgstr "Abrufen der Einstellungen fehlgeschlagen"
 
-#: packages/admin/src/components/SetupWizard.tsx:502
+#: packages/admin/src/components/SetupWizard.tsx:504
 msgid "Failed to fetch setup status"
 msgstr "Abrufen des Einrichtungs-Status fehlgeschlagen"
 
@@ -6318,7 +6318,7 @@ msgstr "Laden der Plugins fehlgeschlagen: {0}"
 msgid "Failed to load plugins. The registry aggregator may be unreachable."
 msgstr "Laden der Plugins fehlgeschlagen. Der Verzeichnisaggregator ist möglicherweise nicht erreichbar."
 
-#: packages/admin/src/components/SetupWizard.tsx:609
+#: packages/admin/src/components/SetupWizard.tsx:605
 msgid "Failed to load setup"
 msgstr "Laden des Einrichtungsassistenten fehlgeschlagen"
 
@@ -6999,7 +6999,7 @@ msgstr "Allgemeine Einstellungen"
 msgid "Genres"
 msgstr "Genres"
 
-#: packages/admin/src/components/WelcomeModal.tsx:156
+#: packages/admin/src/components/WelcomeModal.tsx:164
 msgid "Get Started"
 msgstr "Los geht's"
 
@@ -7230,7 +7230,7 @@ msgstr "Horizontal {0} %, vertikal {1} %"
 msgid "Hour"
 msgstr "Stunde"
 
-#: packages/admin/src/components/SetupWizard.tsx:158
+#: packages/admin/src/components/SetupWizard.tsx:159
 msgid "How do you want to start?"
 msgstr "Wie möchtest du starten?"
 
@@ -7448,7 +7448,7 @@ msgstr "Ein Website-Paket in diese Website importieren, solange sie leer ist, un
 msgid "Import all content directly including drafts, custom post types, ACF fields, and SEO data. No file download needed."
 msgstr "Importiere alle Inhalte direkt, einschließlich Entwürfen, benutzerdefinierten Inhaltstypen, ACF-Feldern und SEO-Daten. Es ist kein Dateidownload erforderlich."
 
-#: packages/admin/src/components/SetupWizard.tsx:178
+#: packages/admin/src/components/SetupWizard.tsx:179
 msgid "Import an existing EmDash site"
 msgstr "Bestehende EmDash-Website importieren"
 
@@ -7854,7 +7854,7 @@ msgid "Its listing has not been approved for display. Check back later."
 msgstr "Der Eintrag wurde noch nicht zur Anzeige freigegeben. Schau später noch einmal vorbei."
 
 #: packages/admin/src/components/InviteAcceptPage.tsx:76
-#: packages/admin/src/components/SetupWizard.tsx:277
+#: packages/admin/src/components/SetupWizard.tsx:278
 #: packages/admin/src/components/SignupPage.tsx:231
 msgid "Jane Doe"
 msgstr "Max Mustermann"
@@ -8324,7 +8324,7 @@ msgstr "Abschnitte werden geladen..."
 msgid "Loading settings..."
 msgstr "Einstellungen werden geladen..."
 
-#: packages/admin/src/components/SetupWizard.tsx:596
+#: packages/admin/src/components/SetupWizard.tsx:592
 msgid "Loading setup..."
 msgstr "Einrichtung wird geladen..."
 
@@ -9117,7 +9117,7 @@ msgstr "Mehrzeilige Texteingabe"
 msgid "Multiple choices from options"
 msgstr "Mehrfachauswahl aus Optionen"
 
-#: packages/admin/src/components/SetupWizard.tsx:141
+#: packages/admin/src/components/SetupWizard.tsx:142
 msgid "My Awesome Blog"
 msgstr "Mein wunderbarer Blog"
 
@@ -9840,7 +9840,7 @@ msgstr "An"
 msgid "On the site"
 msgstr "Auf der Website"
 
-#: packages/admin/src/components/SetupWizard.tsx:179
+#: packages/admin/src/components/SetupWizard.tsx:180
 msgid "Once setup is done, upload a .emdash package exported from another EmDash site."
 msgstr "Lade nach der Einrichtung ein .emdash-Paket hoch, das aus einer anderen EmDash-Website exportiert wurde."
 
@@ -9931,7 +9931,7 @@ msgid "Open setup"
 msgstr "Einrichtung öffnen"
 
 #: packages/admin/src/components/InviteAcceptPage.tsx:89
-#: packages/admin/src/components/SetupWizard.tsx:356
+#: packages/admin/src/components/SetupWizard.tsx:357
 #: packages/admin/src/components/SignupPage.tsx:246
 msgid "Open the dashboard"
 msgstr "Dashboard öffnen"
@@ -10002,7 +10002,7 @@ msgstr "oder per URL verbinden"
 
 #: packages/admin/src/components/InviteAcceptPage.tsx:102
 #: packages/admin/src/components/LoginPage.tsx:282
-#: packages/admin/src/components/SetupWizard.tsx:369
+#: packages/admin/src/components/SetupWizard.tsx:370
 msgid "Or continue with"
 msgstr "Oder fortfahren mit"
 
@@ -10325,7 +10325,7 @@ msgstr "Plan-Prüfsumme"
 msgid "Please ask your administrator to send a new invite."
 msgstr "Wende dich an deinen Administrator, um eine neue Einladung zu erhalten."
 
-#: packages/admin/src/components/SetupWizard.tsx:244
+#: packages/admin/src/components/SetupWizard.tsx:245
 msgid "Please enter a valid email"
 msgstr "Gib eine gültige E-Mail-Adresse an"
 
@@ -10536,7 +10536,7 @@ msgid "Preparing to download files from WordPress..."
 msgstr "Herunterladen der Dateien aus WordPress wird vorbereitet..."
 
 #: packages/admin/src/components/auth/PasskeyLogin.tsx:163
-#: packages/admin/src/components/SetupWizard.tsx:297
+#: packages/admin/src/components/SetupWizard.tsx:298
 msgid "Preparing..."
 msgstr "Wird vorbereitet..."
 
@@ -11817,8 +11817,8 @@ msgstr "Entspricht der aktuellen Version"
 msgid "Same window"
 msgstr "Aktueller Tab"
 
-#: packages/admin/src/components/SetupWizard.tsx:167
-#: packages/admin/src/components/SetupWizard.tsx:207
+#: packages/admin/src/components/SetupWizard.tsx:168
+#: packages/admin/src/components/SetupWizard.tsx:208
 msgid "Sample content"
 msgstr "Beispielinhalte"
 
@@ -12296,7 +12296,7 @@ msgstr "Abschnitte"
 msgid "Sections could not be loaded."
 msgstr "Abschnitte konnten nicht geladen werden."
 
-#: packages/admin/src/components/SetupWizard.tsx:629
+#: packages/admin/src/components/SetupWizard.tsx:621
 msgid "Secure your account"
 msgstr "Schütze dein Benutzerkonto"
 
@@ -12651,7 +12651,7 @@ msgstr "Erfassung der Medienverwendung einrichten"
 msgid "Set up Windows Hello"
 msgstr "Windows Hello einrichten"
 
-#: packages/admin/src/components/SetupWizard.tsx:627
+#: packages/admin/src/components/SetupWizard.tsx:619
 msgid "Set up your site"
 msgstr "Richte deine Website ein"
 
@@ -12660,7 +12660,7 @@ msgstr "Richte deine Website ein"
 msgid "Setting up"
 msgstr "Wird eingerichtet"
 
-#: packages/admin/src/components/SetupWizard.tsx:201
+#: packages/admin/src/components/SetupWizard.tsx:202
 msgid "Setting up..."
 msgstr "Wird eingerichtet..."
 
@@ -12693,8 +12693,8 @@ msgstr "Einstellungen erfolgreich gespeichert"
 msgid "Setup couldn’t continue. Try again."
 msgstr "Die Einrichtung konnte nicht fortgesetzt werden. Versuche es erneut."
 
-#: packages/admin/src/components/SetupWizard.tsx:528
-#: packages/admin/src/components/SetupWizard.tsx:531
+#: packages/admin/src/components/SetupWizard.tsx:524
+#: packages/admin/src/components/SetupWizard.tsx:527
 msgid "Setup failed"
 msgstr "Einrichten fehlgeschlagen"
 
@@ -12781,7 +12781,7 @@ msgstr "Zeigt eine Schaltfläche zum Erstellen eines neuen Eintrags an"
 msgid "Sign in"
 msgstr "Anmelden"
 
-#: packages/admin/src/components/SetupWizard.tsx:410
+#: packages/admin/src/components/SetupWizard.tsx:411
 msgid "Sign In"
 msgstr "Anmelden"
 
@@ -12801,7 +12801,7 @@ msgstr "Melde dich bei deiner Website an"
 #. placeholder {0}: activeProviderEntry.label ?? activeProvider
 #. placeholder {0}: provider.label
 #: packages/admin/src/components/LoginPage.tsx:252
-#: packages/admin/src/components/SetupWizard.tsx:327
+#: packages/admin/src/components/SetupWizard.tsx:328
 msgid "Sign in with {0}"
 msgstr "Mit {0} anmelden"
 
@@ -12849,7 +12849,7 @@ msgid "Single line text input"
 msgstr "Einzeilige Texteingabe"
 
 #: packages/admin/src/components/Settings.tsx:50
-#: packages/admin/src/components/SetupWizard.tsx:408
+#: packages/admin/src/components/SetupWizard.tsx:409
 msgid "Site"
 msgstr "Website"
 
@@ -12887,7 +12887,7 @@ msgid "Site settings"
 msgstr "Website-Einstellungen"
 
 #: packages/admin/src/components/MediaUsedIn.tsx:298
-#: packages/admin/src/components/SetupWizard.tsx:406
+#: packages/admin/src/components/SetupWizard.tsx:407
 #: packages/admin/src/components/WordPressImport.tsx:1201
 msgid "Site Settings"
 msgstr "Website-Einstellungen"
@@ -12897,7 +12897,7 @@ msgid "Site title"
 msgstr "Website-Titel"
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:278
-#: packages/admin/src/components/SetupWizard.tsx:137
+#: packages/admin/src/components/SetupWizard.tsx:138
 msgid "Site Title"
 msgstr "Website-Titel"
 
@@ -12905,7 +12905,7 @@ msgstr "Website-Titel"
 msgid "Site title & tagline"
 msgstr "Website-Titel & Slogan"
 
-#: packages/admin/src/components/SetupWizard.tsx:121
+#: packages/admin/src/components/SetupWizard.tsx:122
 msgid "Site title is required"
 msgstr "Website-Titel ist erforderlich"
 
@@ -13127,11 +13127,11 @@ msgstr "Import starten"
 msgid "Start Import"
 msgstr "Import starten"
 
-#: packages/admin/src/components/SetupWizard.tsx:174
+#: packages/admin/src/components/SetupWizard.tsx:175
 msgid "Start with the template’s content types and no content."
 msgstr "Starte mit den Inhaltstypen der Vorlage, aber ohne Inhalte."
 
-#: packages/admin/src/components/SetupWizard.tsx:168
+#: packages/admin/src/components/SetupWizard.tsx:169
 msgid "Start with the template’s example posts and pages. Recommended for new sites."
 msgstr "Starte mit den Beispielbeiträgen und -seiten der Vorlage. Empfohlen für neue Websites."
 
@@ -13319,7 +13319,7 @@ msgstr "Tabellen können nicht in Listen oder Zitate eingefügt werden. Füge di
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:286
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:375
-#: packages/admin/src/components/SetupWizard.tsx:148
+#: packages/admin/src/components/SetupWizard.tsx:149
 msgid "Tagline"
 msgstr "Slogan"
 
@@ -13403,7 +13403,7 @@ msgstr "Technische Details zur Verifizierung"
 msgid "Tell users where to sign in"
 msgstr "Benutzer über die Anmeldeadresse informieren"
 
-#: packages/admin/src/components/SetupWizard.tsx:218
+#: packages/admin/src/components/SetupWizard.tsx:219
 msgid "Template:"
 msgstr "Vorlage:"
 
@@ -13787,7 +13787,7 @@ msgstr "Beziehung und referenzierte Sammlung lassen sich nach dem Erstellen nich
 msgid "The relationship decides the referenced collection and how many entries this field accepts."
 msgstr "Die Beziehung bestimmt die referenzierte Sammlung und wie viele Einträge dieses Feld aufnimmt."
 
-#: packages/admin/src/components/SetupWizard.tsx:188
+#: packages/admin/src/components/SetupWizard.tsx:189
 msgid "The sample content added so far is kept. Continue to add the rest."
 msgstr "Die bisher hinzugefügten Beispielinhalte bleiben erhalten. Fahre fort, um den Rest hinzuzufügen."
 
@@ -14323,7 +14323,7 @@ msgstr "Hierdurch werden das Plugin und sein Bundle von deiner Website entfernt.
 msgid "This will revert to the published version. Your draft changes will be lost."
 msgstr "Dadurch wird der Inhalt auf die veröffentlichte Version zurückgesetzt. Deine Entwurfsänderungen gehen verloren."
 
-#: packages/admin/src/components/SetupWizard.tsx:152
+#: packages/admin/src/components/SetupWizard.tsx:153
 msgid "Thoughts, tutorials, and more"
 msgstr "Gedanken, Anleitungen und mehr"
 
@@ -15418,11 +15418,19 @@ msgstr "Website"
 msgid "Website URL"
 msgstr "Website-URL"
 
-#: packages/admin/src/components/WelcomeModal.tsx:104
+#: packages/admin/src/components/WelcomeModal.tsx:107
+msgid "Welcome to {siteName}, {firstName}!"
+msgstr ""
+
+#: packages/admin/src/components/WelcomeModal.tsx:108
+msgid "Welcome to {siteName}!"
+msgstr ""
+
+#: packages/admin/src/components/WelcomeModal.tsx:111
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "Willkommen bei EmDash, {firstName}!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:104
+#: packages/admin/src/components/WelcomeModal.tsx:111
 msgid "Welcome to EmDash!"
 msgstr "Willkommen bei EmDash!"
 
@@ -15786,7 +15794,7 @@ msgstr "Du registrierst dich als <0>{roleName}</0>"
 msgid "You're signed in at {0}"
 msgstr "Du bist unter {0} angemeldet"
 
-#: packages/admin/src/components/SetupWizard.tsx:632
+#: packages/admin/src/components/SetupWizard.tsx:624
 msgid "You're signed in via Cloudflare Access"
 msgstr "Du bist über Cloudflare Access angemeldet"
 
@@ -15806,7 +15814,7 @@ msgstr "Du wurdest eingeladen!"
 msgid "you@company.com"
 msgstr "du@unternehmen.de"
 
-#: packages/admin/src/components/SetupWizard.tsx:265
+#: packages/admin/src/components/SetupWizard.tsx:266
 msgid "you@example.com"
 msgstr "du@beispiel.de"
 
@@ -15850,7 +15858,7 @@ msgstr "Dein Entwurf wird durch die Version ({when}) ersetzt. Dein aktueller Ent
 msgid "Your draft will be replaced with the version from {when}. Your current draft stays in Revisions, and the restored version goes live at the scheduled time."
 msgstr "Dein Entwurf wird durch die Version ({when}) ersetzt. Dein aktueller Entwurf bleibt unter „Revisionen“ erhalten, und die wiederhergestellte Version wird zum geplanten Zeitpunkt veröffentlicht."
 
-#: packages/admin/src/components/SetupWizard.tsx:261
+#: packages/admin/src/components/SetupWizard.tsx:262
 msgid "Your Email"
 msgstr "Deine E-Mail-Adresse"
 
@@ -15875,7 +15883,7 @@ msgstr "Benutzername deines LinkedIn-Profils"
 msgid "Your media library is empty"
 msgstr "Deine Medienbibliothek ist leer"
 
-#: packages/admin/src/components/SetupWizard.tsx:273
+#: packages/admin/src/components/SetupWizard.tsx:274
 msgid "Your Name"
 msgstr "Dein Name"
 

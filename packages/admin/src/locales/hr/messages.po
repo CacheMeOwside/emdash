@@ -87,7 +87,7 @@ msgid "{0, plural, one {# byline} other {# bylines}}"
 msgstr "{0, plural, one {# potpis} few {# potpisa} other {# potpisa}}"
 
 #. placeholder {0}: seedInfo.collections
-#: packages/admin/src/components/SetupWizard.tsx:219
+#: packages/admin/src/components/SetupWizard.tsx:220
 msgid "{0, plural, one {# collection} other {# collections}}"
 msgstr "{0, plural, one {# zbirka} few {# zbirke} other {# zbirki}}"
 
@@ -385,7 +385,7 @@ msgstr "{0} od {1} datoteka · {2} od {3}"
 
 #. placeholder {0}: i18n.number(seedProgress.done)
 #. placeholder {1}: i18n.number(seedProgress.total)
-#: packages/admin/src/components/SetupWizard.tsx:210
+#: packages/admin/src/components/SetupWizard.tsx:211
 msgid "{0} of {1} items"
 msgstr "{0} od {1} stavki"
 
@@ -885,8 +885,8 @@ msgstr "• Prenose se u vašu EmDash pohranu medija"
 msgid "• URLs in your content are updated automatically"
 msgstr "• URL-ovi u vašem sadržaju automatski se ažuriraju"
 
-#: packages/admin/src/components/SetupWizard.tsx:289
-#: packages/admin/src/components/SetupWizard.tsx:340
+#: packages/admin/src/components/SetupWizard.tsx:290
+#: packages/admin/src/components/SetupWizard.tsx:341
 #: packages/admin/src/components/WordPressImport.tsx:1656
 msgid "← Back"
 msgstr "← Natrag"
@@ -1181,7 +1181,7 @@ msgstr "Pristup odbijen"
 msgid "Access your media library"
 msgstr "Pristup vašoj medijskoj biblioteci"
 
-#: packages/admin/src/components/SetupWizard.tsx:409
+#: packages/admin/src/components/SetupWizard.tsx:410
 msgid "Account"
 msgstr "Račun"
 
@@ -3442,8 +3442,8 @@ msgstr "Pisanje sadržaja"
 msgid "Continue"
 msgstr "Nastavi"
 
-#: packages/admin/src/components/SetupWizard.tsx:201
-#: packages/admin/src/components/SetupWizard.tsx:297
+#: packages/admin/src/components/SetupWizard.tsx:202
+#: packages/admin/src/components/SetupWizard.tsx:298
 msgid "Continue →"
 msgstr "Nastavi →"
 
@@ -3464,7 +3464,7 @@ msgstr "Nastavi na {handoverHost}"
 msgid "Continue to finish signing in. The link works only once."
 msgstr "Nastavite kako biste dovršili prijavu. Poveznica radi samo jednom."
 
-#: packages/admin/src/components/SetupWizard.tsx:356
+#: packages/admin/src/components/SetupWizard.tsx:357
 msgid "Continue to import"
 msgstr "Nastavi na uvoz"
 
@@ -3875,7 +3875,7 @@ msgstr "Stvori token"
 msgid "Create Widget Area"
 msgstr "Stvori područje widgeta"
 
-#: packages/admin/src/components/SetupWizard.tsx:628
+#: packages/admin/src/components/SetupWizard.tsx:620
 msgid "Create your account"
 msgstr "Izradite svoj račun"
 
@@ -5154,7 +5154,7 @@ msgstr "Poslati e-poštu svim korisnicima?"
 msgid "Email every other user a link to the sign-in page at {siteHost}."
 msgstr "Pošaljite svim ostalim korisnicima e-poštom poveznicu na stranicu za prijavu na {siteHost}."
 
-#: packages/admin/src/components/SetupWizard.tsx:242
+#: packages/admin/src/components/SetupWizard.tsx:243
 #: packages/admin/src/components/SignupPage.tsx:69
 msgid "Email is required"
 msgstr "E-pošta je obvezna"
@@ -5265,7 +5265,7 @@ msgstr ""
 msgid "Empty gallery — open settings to add images"
 msgstr "Prazna galerija – otvorite postavke za dodavanje slika"
 
-#: packages/admin/src/components/SetupWizard.tsx:173
+#: packages/admin/src/components/SetupWizard.tsx:174
 msgid "Empty site"
 msgstr "Prazna web-stranica"
 
@@ -5418,7 +5418,7 @@ msgstr "unos na strani koja povezuje"
 #: packages/admin/src/components/MenuEditor.tsx:158
 #: packages/admin/src/components/MenuEditor.tsx:226
 #: packages/admin/src/components/MenuEditor.tsx:266
-#: packages/admin/src/components/SetupWizard.tsx:607
+#: packages/admin/src/components/SetupWizard.tsx:603
 #: packages/admin/src/components/TaxonomyManager.tsx:1210
 #: packages/admin/src/components/Widgets.tsx:781
 #: packages/admin/src/router.tsx:3364
@@ -5666,7 +5666,7 @@ msgstr "Stvaranje nije uspjelo: {0}"
 msgid "Failed to create a sign-in link"
 msgstr "Stvaranje poveznice za prijavu nije uspjelo"
 
-#: packages/admin/src/components/SetupWizard.tsx:561
+#: packages/admin/src/components/SetupWizard.tsx:557
 msgid "Failed to create admin"
 msgstr "Stvaranje administratora nije uspjelo"
 
@@ -6123,7 +6123,7 @@ msgstr "Dohvaćanje odjeljaka nije uspjelo"
 msgid "Failed to fetch settings"
 msgstr "Dohvaćanje postavki nije uspjelo"
 
-#: packages/admin/src/components/SetupWizard.tsx:502
+#: packages/admin/src/components/SetupWizard.tsx:504
 msgid "Failed to fetch setup status"
 msgstr "Dohvaćanje statusa postavljanja nije uspjelo"
 
@@ -6318,7 +6318,7 @@ msgstr "Učitavanje dodataka nije uspjelo: {0}"
 msgid "Failed to load plugins. The registry aggregator may be unreachable."
 msgstr "Učitavanje dodataka nije uspjelo. Agregator registra možda nije dostupan."
 
-#: packages/admin/src/components/SetupWizard.tsx:609
+#: packages/admin/src/components/SetupWizard.tsx:605
 msgid "Failed to load setup"
 msgstr "Učitavanje postavljanja nije uspjelo"
 
@@ -6999,7 +6999,7 @@ msgstr "Opće postavke"
 msgid "Genres"
 msgstr "Žanrovi"
 
-#: packages/admin/src/components/WelcomeModal.tsx:156
+#: packages/admin/src/components/WelcomeModal.tsx:164
 msgid "Get Started"
 msgstr "Započni"
 
@@ -7230,7 +7230,7 @@ msgstr "Vodoravno {0} %, okomito {1} %"
 msgid "Hour"
 msgstr "Sat"
 
-#: packages/admin/src/components/SetupWizard.tsx:158
+#: packages/admin/src/components/SetupWizard.tsx:159
 msgid "How do you want to start?"
 msgstr "Kako želite započeti?"
 
@@ -7448,7 +7448,7 @@ msgstr "Uvoz paketa web-stranice na ovu web-stranicu dok je prazna, uz prepisiva
 msgid "Import all content directly including drafts, custom post types, ACF fields, and SEO data. No file download needed."
 msgstr "Uvezite sav sadržaj izravno, uključujući skice, prilagođene vrste objava, ACF polja i SEO podatke. Nije potrebno preuzimati datoteku."
 
-#: packages/admin/src/components/SetupWizard.tsx:178
+#: packages/admin/src/components/SetupWizard.tsx:179
 msgid "Import an existing EmDash site"
 msgstr "Uvezi postojeću EmDash web-stranicu"
 
@@ -7854,7 +7854,7 @@ msgid "Its listing has not been approved for display. Check back later."
 msgstr "Njegov unos u popisu još nije odobren za prikaz. Provjerite ponovno kasnije."
 
 #: packages/admin/src/components/InviteAcceptPage.tsx:76
-#: packages/admin/src/components/SetupWizard.tsx:277
+#: packages/admin/src/components/SetupWizard.tsx:278
 #: packages/admin/src/components/SignupPage.tsx:231
 msgid "Jane Doe"
 msgstr "Ivana Horvat"
@@ -8324,7 +8324,7 @@ msgstr "Učitavanje odjeljaka..."
 msgid "Loading settings..."
 msgstr "Učitavanje postavki..."
 
-#: packages/admin/src/components/SetupWizard.tsx:596
+#: packages/admin/src/components/SetupWizard.tsx:592
 msgid "Loading setup..."
 msgstr "Učitavanje postavljanja..."
 
@@ -9117,7 +9117,7 @@ msgstr "Višeredni običan tekst"
 msgid "Multiple choices from options"
 msgstr "Više izbora iz opcija"
 
-#: packages/admin/src/components/SetupWizard.tsx:141
+#: packages/admin/src/components/SetupWizard.tsx:142
 msgid "My Awesome Blog"
 msgstr "Moj sjajni blog"
 
@@ -9840,7 +9840,7 @@ msgstr ""
 msgid "On the site"
 msgstr "Na web-stranici"
 
-#: packages/admin/src/components/SetupWizard.tsx:179
+#: packages/admin/src/components/SetupWizard.tsx:180
 msgid "Once setup is done, upload a .emdash package exported from another EmDash site."
 msgstr "Kada se postavljanje dovrši, prenesite paket .emdash izvezen s druge EmDash web-stranice."
 
@@ -9931,7 +9931,7 @@ msgid "Open setup"
 msgstr "Otvori postavljanje"
 
 #: packages/admin/src/components/InviteAcceptPage.tsx:89
-#: packages/admin/src/components/SetupWizard.tsx:356
+#: packages/admin/src/components/SetupWizard.tsx:357
 #: packages/admin/src/components/SignupPage.tsx:246
 msgid "Open the dashboard"
 msgstr "Otvori nadzornu ploču"
@@ -10002,7 +10002,7 @@ msgstr "ili se povežite putem URL-a"
 
 #: packages/admin/src/components/InviteAcceptPage.tsx:102
 #: packages/admin/src/components/LoginPage.tsx:282
-#: packages/admin/src/components/SetupWizard.tsx:369
+#: packages/admin/src/components/SetupWizard.tsx:370
 msgid "Or continue with"
 msgstr "Ili nastavite s"
 
@@ -10325,7 +10325,7 @@ msgstr "Sažetak plana (digest)"
 msgid "Please ask your administrator to send a new invite."
 msgstr "Zamolite administratora da pošalje novu pozivnicu."
 
-#: packages/admin/src/components/SetupWizard.tsx:244
+#: packages/admin/src/components/SetupWizard.tsx:245
 msgid "Please enter a valid email"
 msgstr "Unesite valjanu adresu e-pošte"
 
@@ -10536,7 +10536,7 @@ msgid "Preparing to download files from WordPress..."
 msgstr "Priprema preuzimanja datoteka iz WordPressa..."
 
 #: packages/admin/src/components/auth/PasskeyLogin.tsx:163
-#: packages/admin/src/components/SetupWizard.tsx:297
+#: packages/admin/src/components/SetupWizard.tsx:298
 msgid "Preparing..."
 msgstr "Priprema..."
 
@@ -11817,8 +11817,8 @@ msgstr ""
 msgid "Same window"
 msgstr "Isti prozor"
 
-#: packages/admin/src/components/SetupWizard.tsx:167
-#: packages/admin/src/components/SetupWizard.tsx:207
+#: packages/admin/src/components/SetupWizard.tsx:168
+#: packages/admin/src/components/SetupWizard.tsx:208
 msgid "Sample content"
 msgstr "Primjer sadržaja"
 
@@ -12296,7 +12296,7 @@ msgstr "Odjeljci"
 msgid "Sections could not be loaded."
 msgstr "Odjeljke nije moguće učitati."
 
-#: packages/admin/src/components/SetupWizard.tsx:629
+#: packages/admin/src/components/SetupWizard.tsx:621
 msgid "Secure your account"
 msgstr "Zaštitite svoj račun"
 
@@ -12651,7 +12651,7 @@ msgstr "Postavi praćenje korištenja medija"
 msgid "Set up Windows Hello"
 msgstr "Postavi Windows Hello"
 
-#: packages/admin/src/components/SetupWizard.tsx:627
+#: packages/admin/src/components/SetupWizard.tsx:619
 msgid "Set up your site"
 msgstr "Postavite svoju web-stranicu"
 
@@ -12660,7 +12660,7 @@ msgstr "Postavite svoju web-stranicu"
 msgid "Setting up"
 msgstr "Postavljanje"
 
-#: packages/admin/src/components/SetupWizard.tsx:201
+#: packages/admin/src/components/SetupWizard.tsx:202
 msgid "Setting up..."
 msgstr "Postavljanje..."
 
@@ -12693,8 +12693,8 @@ msgstr "Postavke su uspješno spremljene"
 msgid "Setup couldn’t continue. Try again."
 msgstr "Postavljanje nije moguće nastaviti. Pokušajte ponovno."
 
-#: packages/admin/src/components/SetupWizard.tsx:528
-#: packages/admin/src/components/SetupWizard.tsx:531
+#: packages/admin/src/components/SetupWizard.tsx:524
+#: packages/admin/src/components/SetupWizard.tsx:527
 msgid "Setup failed"
 msgstr "Postavljanje nije uspjelo"
 
@@ -12781,7 +12781,7 @@ msgstr "Prikazuje gumb za stvaranje novog unosa"
 msgid "Sign in"
 msgstr "Prijava"
 
-#: packages/admin/src/components/SetupWizard.tsx:410
+#: packages/admin/src/components/SetupWizard.tsx:411
 msgid "Sign In"
 msgstr "Prijava"
 
@@ -12801,7 +12801,7 @@ msgstr "Prijavite se na svoju web-stranicu"
 #. placeholder {0}: activeProviderEntry.label ?? activeProvider
 #. placeholder {0}: provider.label
 #: packages/admin/src/components/LoginPage.tsx:252
-#: packages/admin/src/components/SetupWizard.tsx:327
+#: packages/admin/src/components/SetupWizard.tsx:328
 msgid "Sign in with {0}"
 msgstr "Prijava putem {0}"
 
@@ -12849,7 +12849,7 @@ msgid "Single line text input"
 msgstr "Jednoredni unos teksta"
 
 #: packages/admin/src/components/Settings.tsx:50
-#: packages/admin/src/components/SetupWizard.tsx:408
+#: packages/admin/src/components/SetupWizard.tsx:409
 msgid "Site"
 msgstr "Web-stranica"
 
@@ -12887,7 +12887,7 @@ msgid "Site settings"
 msgstr "Postavke web-stranice"
 
 #: packages/admin/src/components/MediaUsedIn.tsx:298
-#: packages/admin/src/components/SetupWizard.tsx:406
+#: packages/admin/src/components/SetupWizard.tsx:407
 #: packages/admin/src/components/WordPressImport.tsx:1201
 msgid "Site Settings"
 msgstr "Postavke web-stranice"
@@ -12897,7 +12897,7 @@ msgid "Site title"
 msgstr "Naslov web-stranice"
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:278
-#: packages/admin/src/components/SetupWizard.tsx:137
+#: packages/admin/src/components/SetupWizard.tsx:138
 msgid "Site Title"
 msgstr "Naslov web-stranice"
 
@@ -12905,7 +12905,7 @@ msgstr "Naslov web-stranice"
 msgid "Site title & tagline"
 msgstr "Naslov i slogan web-stranice"
 
-#: packages/admin/src/components/SetupWizard.tsx:121
+#: packages/admin/src/components/SetupWizard.tsx:122
 msgid "Site title is required"
 msgstr "Naslov web-stranice je obvezan"
 
@@ -13127,11 +13127,11 @@ msgstr "Pokreni uvoz"
 msgid "Start Import"
 msgstr "Pokreni uvoz"
 
-#: packages/admin/src/components/SetupWizard.tsx:174
+#: packages/admin/src/components/SetupWizard.tsx:175
 msgid "Start with the template’s content types and no content."
 msgstr "Započnite s vrstama sadržaja predloška, bez sadržaja."
 
-#: packages/admin/src/components/SetupWizard.tsx:168
+#: packages/admin/src/components/SetupWizard.tsx:169
 msgid "Start with the template’s example posts and pages. Recommended for new sites."
 msgstr "Započnite s primjerima objava i stranica iz predloška. Preporučeno za nove web-stranice."
 
@@ -13319,7 +13319,7 @@ msgstr "Tablice se ne mogu lijepiti unutar popisa ili citata. Zalijepite tablicu
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:286
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:375
-#: packages/admin/src/components/SetupWizard.tsx:148
+#: packages/admin/src/components/SetupWizard.tsx:149
 msgid "Tagline"
 msgstr "Slogan"
 
@@ -13403,7 +13403,7 @@ msgstr "Detalji tehničke provjere"
 msgid "Tell users where to sign in"
 msgstr "Recite korisnicima gdje se prijaviti"
 
-#: packages/admin/src/components/SetupWizard.tsx:218
+#: packages/admin/src/components/SetupWizard.tsx:219
 msgid "Template:"
 msgstr "Predložak:"
 
@@ -13787,7 +13787,7 @@ msgstr "Relacija i referencirana zbirka ne mogu se mijenjati nakon stvaranja. Br
 msgid "The relationship decides the referenced collection and how many entries this field accepts."
 msgstr "Relacija određuje referenciranu zbirku i broj unosa koje ovo polje prihvaća."
 
-#: packages/admin/src/components/SetupWizard.tsx:188
+#: packages/admin/src/components/SetupWizard.tsx:189
 msgid "The sample content added so far is kept. Continue to add the rest."
 msgstr "Dosad dodani primjeri sadržaja ostaju sačuvani. Nastavite kako biste dodali ostatak."
 
@@ -14323,7 +14323,7 @@ msgstr "Ovime će se dodatak i njegov paket ukloniti s vaše web-stranice."
 msgid "This will revert to the published version. Your draft changes will be lost."
 msgstr "Ovime će se vratiti objavljena verzija. Promjene u skici bit će izgubljene."
 
-#: packages/admin/src/components/SetupWizard.tsx:152
+#: packages/admin/src/components/SetupWizard.tsx:153
 msgid "Thoughts, tutorials, and more"
 msgstr "Razmišljanja, vodiči i još mnogo toga"
 
@@ -15418,11 +15418,19 @@ msgstr "Web-stranica"
 msgid "Website URL"
 msgstr "URL web-stranice"
 
-#: packages/admin/src/components/WelcomeModal.tsx:104
+#: packages/admin/src/components/WelcomeModal.tsx:107
+msgid "Welcome to {siteName}, {firstName}!"
+msgstr ""
+
+#: packages/admin/src/components/WelcomeModal.tsx:108
+msgid "Welcome to {siteName}!"
+msgstr ""
+
+#: packages/admin/src/components/WelcomeModal.tsx:111
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "Dobro došli u EmDash, {firstName}!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:104
+#: packages/admin/src/components/WelcomeModal.tsx:111
 msgid "Welcome to EmDash!"
 msgstr "Dobro došli u EmDash!"
 
@@ -15786,7 +15794,7 @@ msgstr "Registrirat ćete se kao <0>{roleName}</0>"
 msgid "You're signed in at {0}"
 msgstr "Prijavljeni ste na {0}"
 
-#: packages/admin/src/components/SetupWizard.tsx:632
+#: packages/admin/src/components/SetupWizard.tsx:624
 msgid "You're signed in via Cloudflare Access"
 msgstr "Prijavljeni ste putem Cloudflare Accessa"
 
@@ -15806,7 +15814,7 @@ msgstr "Pozvani ste!"
 msgid "you@company.com"
 msgstr "vi@tvrtka.hr"
 
-#: packages/admin/src/components/SetupWizard.tsx:265
+#: packages/admin/src/components/SetupWizard.tsx:266
 msgid "you@example.com"
 msgstr "vi@primjer.hr"
 
@@ -15850,7 +15858,7 @@ msgstr ""
 msgid "Your draft will be replaced with the version from {when}. Your current draft stays in Revisions, and the restored version goes live at the scheduled time."
 msgstr ""
 
-#: packages/admin/src/components/SetupWizard.tsx:261
+#: packages/admin/src/components/SetupWizard.tsx:262
 msgid "Your Email"
 msgstr "Vaša e-pošta"
 
@@ -15875,7 +15883,7 @@ msgstr "Korisničko ime vašeg LinkedIn profila"
 msgid "Your media library is empty"
 msgstr "Vaša medijska biblioteka je prazna"
 
-#: packages/admin/src/components/SetupWizard.tsx:273
+#: packages/admin/src/components/SetupWizard.tsx:274
 msgid "Your Name"
 msgstr "Vaše ime"
 

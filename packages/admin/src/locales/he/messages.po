@@ -88,7 +88,7 @@ msgid "{0, plural, one {# byline} other {# bylines}}"
 msgstr "{0, plural, one {קרדיט אחד} two {שני קרדיטים} other {# קרדיטים}}"
 
 #. placeholder {0}: seedInfo.collections
-#: packages/admin/src/components/SetupWizard.tsx:219
+#: packages/admin/src/components/SetupWizard.tsx:220
 msgid "{0, plural, one {# collection} other {# collections}}"
 msgstr "{0, plural, one {אוסף אחד} two {שני אוספים} other {# אוספים}}"
 
@@ -386,7 +386,7 @@ msgstr "{0} מתוך {1} קבצים · {2} מתוך {3}"
 
 #. placeholder {0}: i18n.number(seedProgress.done)
 #. placeholder {1}: i18n.number(seedProgress.total)
-#: packages/admin/src/components/SetupWizard.tsx:210
+#: packages/admin/src/components/SetupWizard.tsx:211
 msgid "{0} of {1} items"
 msgstr "{0} מתוך {1} פריטים"
 
@@ -886,8 +886,8 @@ msgstr "• יועלו לאחסון המדיה של EmDash"
 msgid "• URLs in your content are updated automatically"
 msgstr "• כתובות URL בתוכן שלכם מתעדכנות אוטומטית"
 
-#: packages/admin/src/components/SetupWizard.tsx:289
-#: packages/admin/src/components/SetupWizard.tsx:340
+#: packages/admin/src/components/SetupWizard.tsx:290
+#: packages/admin/src/components/SetupWizard.tsx:341
 #: packages/admin/src/components/WordPressImport.tsx:1656
 msgid "← Back"
 msgstr "חזרה →"
@@ -1182,7 +1182,7 @@ msgstr "הגישה נדחתה"
 msgid "Access your media library"
 msgstr "גישה לספריית המדיה שלכם"
 
-#: packages/admin/src/components/SetupWizard.tsx:409
+#: packages/admin/src/components/SetupWizard.tsx:410
 msgid "Account"
 msgstr "חשבון"
 
@@ -3443,8 +3443,8 @@ msgstr "כתיבת תוכן"
 msgid "Continue"
 msgstr "המשך"
 
-#: packages/admin/src/components/SetupWizard.tsx:201
-#: packages/admin/src/components/SetupWizard.tsx:297
+#: packages/admin/src/components/SetupWizard.tsx:202
+#: packages/admin/src/components/SetupWizard.tsx:298
 msgid "Continue →"
 msgstr "המשך ←"
 
@@ -3465,7 +3465,7 @@ msgstr "המשך ב-{handoverHost}"
 msgid "Continue to finish signing in. The link works only once."
 msgstr "המשיכו כדי לסיים את ההתחברות. הקישור פועל פעם אחת בלבד."
 
-#: packages/admin/src/components/SetupWizard.tsx:356
+#: packages/admin/src/components/SetupWizard.tsx:357
 msgid "Continue to import"
 msgstr "המשך לייבוא"
 
@@ -3876,7 +3876,7 @@ msgstr "יצירת אסימון"
 msgid "Create Widget Area"
 msgstr "יצירת אזור וידג׳טים"
 
-#: packages/admin/src/components/SetupWizard.tsx:628
+#: packages/admin/src/components/SetupWizard.tsx:620
 msgid "Create your account"
 msgstr "יצירת החשבון שלכם"
 
@@ -5155,7 +5155,7 @@ msgstr "לשלוח אימייל לכל המשתמשים?"
 msgid "Email every other user a link to the sign-in page at {siteHost}."
 msgstr "שליחת אימייל לכל שאר המשתמשים עם קישור לדף ההתחברות ב-{siteHost}."
 
-#: packages/admin/src/components/SetupWizard.tsx:242
+#: packages/admin/src/components/SetupWizard.tsx:243
 #: packages/admin/src/components/SignupPage.tsx:69
 msgid "Email is required"
 msgstr "נדרשת כתובת אימייל"
@@ -5266,7 +5266,7 @@ msgstr ""
 msgid "Empty gallery — open settings to add images"
 msgstr "גלריה ריקה — פתחו הגדרות להוספת תמונות"
 
-#: packages/admin/src/components/SetupWizard.tsx:173
+#: packages/admin/src/components/SetupWizard.tsx:174
 msgid "Empty site"
 msgstr "אתר ריק"
 
@@ -5419,7 +5419,7 @@ msgstr "פריט בצד המקשר"
 #: packages/admin/src/components/MenuEditor.tsx:158
 #: packages/admin/src/components/MenuEditor.tsx:226
 #: packages/admin/src/components/MenuEditor.tsx:266
-#: packages/admin/src/components/SetupWizard.tsx:607
+#: packages/admin/src/components/SetupWizard.tsx:603
 #: packages/admin/src/components/TaxonomyManager.tsx:1210
 #: packages/admin/src/components/Widgets.tsx:781
 #: packages/admin/src/router.tsx:3364
@@ -5667,7 +5667,7 @@ msgstr "יצירת {0} נכשלה"
 msgid "Failed to create a sign-in link"
 msgstr "יצירת קישור התחברות נכשלה"
 
-#: packages/admin/src/components/SetupWizard.tsx:561
+#: packages/admin/src/components/SetupWizard.tsx:557
 msgid "Failed to create admin"
 msgstr "יצירת מנהל/ת נכשלה"
 
@@ -6124,7 +6124,7 @@ msgstr "אחזור מקטעים נכשל"
 msgid "Failed to fetch settings"
 msgstr "אחזור הגדרות נכשל"
 
-#: packages/admin/src/components/SetupWizard.tsx:502
+#: packages/admin/src/components/SetupWizard.tsx:504
 msgid "Failed to fetch setup status"
 msgstr "אחזור סטטוס ההגדרה נכשל"
 
@@ -6319,7 +6319,7 @@ msgstr "טעינת תוספים נכשלה: {0}"
 msgid "Failed to load plugins. The registry aggregator may be unreachable."
 msgstr "טעינת תוספים נכשלה. ייתכן שמאגר הרישום אינו נגיש."
 
-#: packages/admin/src/components/SetupWizard.tsx:609
+#: packages/admin/src/components/SetupWizard.tsx:605
 msgid "Failed to load setup"
 msgstr "טעינת ההגדרה נכשלה"
 
@@ -7000,7 +7000,7 @@ msgstr "הגדרות כלליות"
 msgid "Genres"
 msgstr "סוגות"
 
-#: packages/admin/src/components/WelcomeModal.tsx:156
+#: packages/admin/src/components/WelcomeModal.tsx:164
 msgid "Get Started"
 msgstr "תחילת העבודה"
 
@@ -7231,7 +7231,7 @@ msgstr "אופקי {0}%, אנכי {1}%"
 msgid "Hour"
 msgstr "שעה"
 
-#: packages/admin/src/components/SetupWizard.tsx:158
+#: packages/admin/src/components/SetupWizard.tsx:159
 msgid "How do you want to start?"
 msgstr "איך תרצו להתחיל?"
 
@@ -7449,7 +7449,7 @@ msgstr "ייבוא חבילת אתר לאתר הזה כל עוד הוא ריק, 
 msgid "Import all content directly including drafts, custom post types, ACF fields, and SEO data. No file download needed."
 msgstr "ייבאו ישירות את כל התוכן, כולל טיוטות, סוגי פוסטים מותאמים אישית, שדות ACF ונתוני SEO. אין צורך בהורדת קובץ."
 
-#: packages/admin/src/components/SetupWizard.tsx:178
+#: packages/admin/src/components/SetupWizard.tsx:179
 msgid "Import an existing EmDash site"
 msgstr "ייבוא אתר EmDash קיים"
 
@@ -7855,7 +7855,7 @@ msgid "Its listing has not been approved for display. Check back later."
 msgstr "הרישום שלו לא אושר להצגה. בדקו שוב מאוחר יותר."
 
 #: packages/admin/src/components/InviteAcceptPage.tsx:76
-#: packages/admin/src/components/SetupWizard.tsx:277
+#: packages/admin/src/components/SetupWizard.tsx:278
 #: packages/admin/src/components/SignupPage.tsx:231
 msgid "Jane Doe"
 msgstr "יעל ישראלי"
@@ -8325,7 +8325,7 @@ msgstr "מתבצעת טעינת מקטעים..."
 msgid "Loading settings..."
 msgstr "מתבצעת טעינת הגדרות..."
 
-#: packages/admin/src/components/SetupWizard.tsx:596
+#: packages/admin/src/components/SetupWizard.tsx:592
 msgid "Loading setup..."
 msgstr "מתבצעת טעינת הגדרה..."
 
@@ -9118,7 +9118,7 @@ msgstr "טקסט פשוט מרובה שורות"
 msgid "Multiple choices from options"
 msgstr "בחירות מרובות מהאפשרויות"
 
-#: packages/admin/src/components/SetupWizard.tsx:141
+#: packages/admin/src/components/SetupWizard.tsx:142
 msgid "My Awesome Blog"
 msgstr "הבלוג הנהדר שלי"
 
@@ -9841,7 +9841,7 @@ msgstr ""
 msgid "On the site"
 msgstr "באתר"
 
-#: packages/admin/src/components/SetupWizard.tsx:179
+#: packages/admin/src/components/SetupWizard.tsx:180
 msgid "Once setup is done, upload a .emdash package exported from another EmDash site."
 msgstr "בסיום ההגדרה, העלו חבילת .emdash שיוצאה מאתר EmDash אחר."
 
@@ -9932,7 +9932,7 @@ msgid "Open setup"
 msgstr "פתיחת הגדרה"
 
 #: packages/admin/src/components/InviteAcceptPage.tsx:89
-#: packages/admin/src/components/SetupWizard.tsx:356
+#: packages/admin/src/components/SetupWizard.tsx:357
 #: packages/admin/src/components/SignupPage.tsx:246
 msgid "Open the dashboard"
 msgstr "פתיחת לוח הבקרה"
@@ -10003,7 +10003,7 @@ msgstr "או התחברו באמצעות URL"
 
 #: packages/admin/src/components/InviteAcceptPage.tsx:102
 #: packages/admin/src/components/LoginPage.tsx:282
-#: packages/admin/src/components/SetupWizard.tsx:369
+#: packages/admin/src/components/SetupWizard.tsx:370
 msgid "Or continue with"
 msgstr "או המשיכו עם"
 
@@ -10326,7 +10326,7 @@ msgstr "תמצית התוכנית"
 msgid "Please ask your administrator to send a new invite."
 msgstr "בקשו ממנהל/ת לשלוח הזמנה חדשה."
 
-#: packages/admin/src/components/SetupWizard.tsx:244
+#: packages/admin/src/components/SetupWizard.tsx:245
 msgid "Please enter a valid email"
 msgstr "הזינו אימייל תקין"
 
@@ -10537,7 +10537,7 @@ msgid "Preparing to download files from WordPress..."
 msgstr "מתבצעת הכנה להורדת קבצים מ-WordPress..."
 
 #: packages/admin/src/components/auth/PasskeyLogin.tsx:163
-#: packages/admin/src/components/SetupWizard.tsx:297
+#: packages/admin/src/components/SetupWizard.tsx:298
 msgid "Preparing..."
 msgstr "בהכנה..."
 
@@ -11818,8 +11818,8 @@ msgstr ""
 msgid "Same window"
 msgstr "אותו חלון"
 
-#: packages/admin/src/components/SetupWizard.tsx:167
-#: packages/admin/src/components/SetupWizard.tsx:207
+#: packages/admin/src/components/SetupWizard.tsx:168
+#: packages/admin/src/components/SetupWizard.tsx:208
 msgid "Sample content"
 msgstr "תוכן לדוגמה"
 
@@ -12297,7 +12297,7 @@ msgstr "מקטעים"
 msgid "Sections could not be loaded."
 msgstr "לא ניתן לטעון את המקטעים."
 
-#: packages/admin/src/components/SetupWizard.tsx:629
+#: packages/admin/src/components/SetupWizard.tsx:621
 msgid "Secure your account"
 msgstr "אבטחו את החשבון שלכם"
 
@@ -12652,7 +12652,7 @@ msgstr "הגדרת מעקב שימוש במדיה"
 msgid "Set up Windows Hello"
 msgstr "הגדרת Windows Hello"
 
-#: packages/admin/src/components/SetupWizard.tsx:627
+#: packages/admin/src/components/SetupWizard.tsx:619
 msgid "Set up your site"
 msgstr "הגדרת האתר שלכם"
 
@@ -12661,7 +12661,7 @@ msgstr "הגדרת האתר שלכם"
 msgid "Setting up"
 msgstr "בהגדרה"
 
-#: packages/admin/src/components/SetupWizard.tsx:201
+#: packages/admin/src/components/SetupWizard.tsx:202
 msgid "Setting up..."
 msgstr "בהגדרה..."
 
@@ -12694,8 +12694,8 @@ msgstr "ההגדרות נשמרו בהצלחה"
 msgid "Setup couldn’t continue. Try again."
 msgstr "לא ניתן היה להמשיך בהגדרה. נסו שוב."
 
-#: packages/admin/src/components/SetupWizard.tsx:528
-#: packages/admin/src/components/SetupWizard.tsx:531
+#: packages/admin/src/components/SetupWizard.tsx:524
+#: packages/admin/src/components/SetupWizard.tsx:527
 msgid "Setup failed"
 msgstr "ההגדרה נכשלה"
 
@@ -12782,7 +12782,7 @@ msgstr "מציג כפתור ליצירת פריט חדש"
 msgid "Sign in"
 msgstr "התחברות"
 
-#: packages/admin/src/components/SetupWizard.tsx:410
+#: packages/admin/src/components/SetupWizard.tsx:411
 msgid "Sign In"
 msgstr "התחברות"
 
@@ -12802,7 +12802,7 @@ msgstr "התחברות לאתר שלכם"
 #. placeholder {0}: activeProviderEntry.label ?? activeProvider
 #. placeholder {0}: provider.label
 #: packages/admin/src/components/LoginPage.tsx:252
-#: packages/admin/src/components/SetupWizard.tsx:327
+#: packages/admin/src/components/SetupWizard.tsx:328
 msgid "Sign in with {0}"
 msgstr "התחברות באמצעות {0}"
 
@@ -12850,7 +12850,7 @@ msgid "Single line text input"
 msgstr "קלט טקסט בשורה אחת"
 
 #: packages/admin/src/components/Settings.tsx:50
-#: packages/admin/src/components/SetupWizard.tsx:408
+#: packages/admin/src/components/SetupWizard.tsx:409
 msgid "Site"
 msgstr "אתר"
 
@@ -12888,7 +12888,7 @@ msgid "Site settings"
 msgstr "הגדרות אתר"
 
 #: packages/admin/src/components/MediaUsedIn.tsx:298
-#: packages/admin/src/components/SetupWizard.tsx:406
+#: packages/admin/src/components/SetupWizard.tsx:407
 #: packages/admin/src/components/WordPressImport.tsx:1201
 msgid "Site Settings"
 msgstr "הגדרות אתר"
@@ -12898,7 +12898,7 @@ msgid "Site title"
 msgstr "כותרת אתר"
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:278
-#: packages/admin/src/components/SetupWizard.tsx:137
+#: packages/admin/src/components/SetupWizard.tsx:138
 msgid "Site Title"
 msgstr "כותרת אתר"
 
@@ -12906,7 +12906,7 @@ msgstr "כותרת אתר"
 msgid "Site title & tagline"
 msgstr "כותרת האתר והסלוגן"
 
-#: packages/admin/src/components/SetupWizard.tsx:121
+#: packages/admin/src/components/SetupWizard.tsx:122
 msgid "Site title is required"
 msgstr "נדרשת כותרת אתר"
 
@@ -13128,11 +13128,11 @@ msgstr "התחלת ייבוא"
 msgid "Start Import"
 msgstr "התחלת ייבוא"
 
-#: packages/admin/src/components/SetupWizard.tsx:174
+#: packages/admin/src/components/SetupWizard.tsx:175
 msgid "Start with the template’s content types and no content."
 msgstr "התחילו עם סוגי התוכן של התבנית וללא תוכן."
 
-#: packages/admin/src/components/SetupWizard.tsx:168
+#: packages/admin/src/components/SetupWizard.tsx:169
 msgid "Start with the template’s example posts and pages. Recommended for new sites."
 msgstr "התחילו עם הפוסטים והעמודים לדוגמה של התבנית. מומלץ לאתרים חדשים."
 
@@ -13320,7 +13320,7 @@ msgstr "לא ניתן להדביק טבלאות בתוך רשימות או צי�
 
 #: packages/admin/src/components/settings/GeneralSettings.tsx:286
 #: packages/admin/src/components/settings/transfer/ImportReview.tsx:375
-#: packages/admin/src/components/SetupWizard.tsx:148
+#: packages/admin/src/components/SetupWizard.tsx:149
 msgid "Tagline"
 msgstr "סלוגן"
 
@@ -13404,7 +13404,7 @@ msgstr "פרטי אימות טכניים"
 msgid "Tell users where to sign in"
 msgstr "עדכון המשתמשים היכן להתחבר"
 
-#: packages/admin/src/components/SetupWizard.tsx:218
+#: packages/admin/src/components/SetupWizard.tsx:219
 msgid "Template:"
 msgstr "תבנית:"
 
@@ -13788,7 +13788,7 @@ msgstr "לא ניתן לשנות את הקשר ואת האוסף המקושר ל
 msgid "The relationship decides the referenced collection and how many entries this field accepts."
 msgstr "הקשר קובע את האוסף המקושר ואת מספר הפריטים שהשדה הזה מקבל."
 
-#: packages/admin/src/components/SetupWizard.tsx:188
+#: packages/admin/src/components/SetupWizard.tsx:189
 msgid "The sample content added so far is kept. Continue to add the rest."
 msgstr "תוכן הדוגמה שנוסף עד כה נשמר. המשיכו כדי להוסיף את השאר."
 
@@ -14324,7 +14324,7 @@ msgstr "פעולה זו תסיר את התוסף ואת החבילה שלו מה
 msgid "This will revert to the published version. Your draft changes will be lost."
 msgstr "פעולה זו תחזיר לגרסה שפורסמה. שינויי הטיוטה שלכם יאבדו."
 
-#: packages/admin/src/components/SetupWizard.tsx:152
+#: packages/admin/src/components/SetupWizard.tsx:153
 msgid "Thoughts, tutorials, and more"
 msgstr "מחשבות, מדריכים ועוד"
 
@@ -15419,11 +15419,19 @@ msgstr "אתר אינטרנט"
 msgid "Website URL"
 msgstr "URL של אתר אינטרנט"
 
-#: packages/admin/src/components/WelcomeModal.tsx:104
+#: packages/admin/src/components/WelcomeModal.tsx:107
+msgid "Welcome to {siteName}, {firstName}!"
+msgstr ""
+
+#: packages/admin/src/components/WelcomeModal.tsx:108
+msgid "Welcome to {siteName}!"
+msgstr ""
+
+#: packages/admin/src/components/WelcomeModal.tsx:111
 msgid "Welcome to EmDash, {firstName}!"
 msgstr "ברוכים הבאים ל-EmDash, {firstName}!"
 
-#: packages/admin/src/components/WelcomeModal.tsx:104
+#: packages/admin/src/components/WelcomeModal.tsx:111
 msgid "Welcome to EmDash!"
 msgstr "ברוכים הבאים ל-EmDash!"
 
@@ -15787,7 +15795,7 @@ msgstr "תירשמו בתור <0>{roleName}</0>"
 msgid "You're signed in at {0}"
 msgstr "התחברתם ב-{0}"
 
-#: packages/admin/src/components/SetupWizard.tsx:632
+#: packages/admin/src/components/SetupWizard.tsx:624
 msgid "You're signed in via Cloudflare Access"
 msgstr "אתם מחוברים באמצעות Cloudflare Access"
 
@@ -15807,7 +15815,7 @@ msgstr "הוזמנתם!"
 msgid "you@company.com"
 msgstr "אתם@company.com"
 
-#: packages/admin/src/components/SetupWizard.tsx:265
+#: packages/admin/src/components/SetupWizard.tsx:266
 msgid "you@example.com"
 msgstr "אתם@example.com"
 
@@ -15851,7 +15859,7 @@ msgstr ""
 msgid "Your draft will be replaced with the version from {when}. Your current draft stays in Revisions, and the restored version goes live at the scheduled time."
 msgstr ""
 
-#: packages/admin/src/components/SetupWizard.tsx:261
+#: packages/admin/src/components/SetupWizard.tsx:262
 msgid "Your Email"
 msgstr "האימייל שלכם"
 
@@ -15876,7 +15884,7 @@ msgstr "שם המשתמש של פרופיל הלינקדאין שלכם"
 msgid "Your media library is empty"
 msgstr "ספריית המדיה שלכם ריקה"
 
-#: packages/admin/src/components/SetupWizard.tsx:273
+#: packages/admin/src/components/SetupWizard.tsx:274
 msgid "Your Name"
 msgstr "השם שלכם"
 
