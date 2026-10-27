@@ -18,7 +18,7 @@ msgstr ""
 msgid " (default)"
 msgstr " (डिफ़ॉल्ट)"
 
-#: packages/admin/src/components/MenuEditor.tsx:635
+#: packages/admin/src/components/MenuEditor.tsx:631
 msgid " (opens in new window)"
 msgstr " (नई विंडो में खुलता है)"
 
@@ -45,6 +45,16 @@ msgstr "\"{0}\" अपने मीडिया प्रोवाइडर स�
 #: packages/admin/src/components/MediaDetailPanel.tsx:1928
 msgid "\"{0}\" will be permanently deleted."
 msgstr "\"{0}\" हमेशा के लिए हटा दिया जाएगा."
+
+#. placeholder {0}: item.label
+#: packages/admin/src/components/MenuEditor.tsx:681
+msgid "\"{0}\" will be removed from this menu. This action cannot be undone."
+msgstr ""
+
+#. placeholder {0}: widget.title || t`Untitled Widget`
+#: packages/admin/src/components/Widgets.tsx:849
+msgid "\"{0}\" will be removed from this widget area. This action cannot be undone."
+msgstr ""
 
 #: packages/admin/src/components/OptionalLabel.tsx:13
 msgid "(optional)"
@@ -1231,7 +1241,7 @@ msgstr "एक्टिव v{0}"
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:175
 #: packages/admin/src/components/BylineCreditsEditor.tsx:402
-#: packages/admin/src/components/MenuEditor.tsx:551
+#: packages/admin/src/components/MenuEditor.tsx:547
 msgid "Add"
 msgstr "जोड़ना"
 
@@ -1306,14 +1316,14 @@ msgstr "बाद में कॉलम जोड़ें"
 msgid "Add column before"
 msgstr "पहले कॉलम जोड़ें"
 
-#: packages/admin/src/components/MenuEditor.tsx:481
-#: packages/admin/src/components/MenuEditor.tsx:607
+#: packages/admin/src/components/MenuEditor.tsx:477
+#: packages/admin/src/components/MenuEditor.tsx:603
 msgid "Add Content"
 msgstr "सामग्री जोड़ें"
 
-#: packages/admin/src/components/MenuEditor.tsx:493
-#: packages/admin/src/components/MenuEditor.tsx:500
-#: packages/admin/src/components/MenuEditor.tsx:610
+#: packages/admin/src/components/MenuEditor.tsx:489
+#: packages/admin/src/components/MenuEditor.tsx:496
+#: packages/admin/src/components/MenuEditor.tsx:606
 msgid "Add Custom Link"
 msgstr "कस्टम लिंक जोड़ें"
 
@@ -1374,7 +1384,7 @@ msgstr "मद जोड़ें"
 msgid "Add link"
 msgstr "लिंक जोड़ें"
 
-#: packages/admin/src/components/MenuEditor.tsx:600
+#: packages/admin/src/components/MenuEditor.tsx:596
 msgid "Add links to build your navigation menu"
 msgstr "अपना नेविगेशन मेनू बनाने के लिए लिंक जोड़ें"
 
@@ -1526,7 +1536,7 @@ msgstr "इमेज जोड़ी गई"
 msgid "Added:"
 msgstr "जोड़ा गया:"
 
-#: packages/admin/src/components/MenuEditor.tsx:551
+#: packages/admin/src/components/MenuEditor.tsx:547
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:316
 msgid "Adding..."
 msgstr "जोड़ा जा रहा है..."
@@ -2174,7 +2184,7 @@ msgstr "वापस"
 #: packages/admin/src/components/FieldEditor.tsx:673
 #: packages/admin/src/components/MediaDetailPanel.tsx:1817
 #: packages/admin/src/components/MediaLibrary.tsx:747
-#: packages/admin/src/components/MenuEditor.tsx:404
+#: packages/admin/src/components/MenuEditor.tsx:400
 #: packages/admin/src/components/WordPressImport.tsx:1565
 #: packages/admin/src/components/WordPressImport.tsx:2586
 msgid "Back"
@@ -2219,7 +2229,7 @@ msgstr "मुख्य लाइब्रेरी पर वापस जा�
 msgid "Back to marketplace"
 msgstr "बाज़ार में वापस"
 
-#: packages/admin/src/components/MenuEditor.tsx:402
+#: packages/admin/src/components/MenuEditor.tsx:398
 msgid "Back to menus"
 msgstr "मेनू पर वापस जाएँ"
 
@@ -2526,9 +2536,9 @@ msgstr "सामग्री देख सकते हैं"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1859
 #: packages/admin/src/components/MediaFolderDialog.tsx:152
 #: packages/admin/src/components/MediaPickerModal.tsx:1599
-#: packages/admin/src/components/MenuEditor.tsx:463
-#: packages/admin/src/components/MenuEditor.tsx:548
-#: packages/admin/src/components/MenuEditor.tsx:754
+#: packages/admin/src/components/MenuEditor.tsx:459
+#: packages/admin/src/components/MenuEditor.tsx:544
+#: packages/admin/src/components/MenuEditor.tsx:764
 #: packages/admin/src/components/MenuList.tsx:184
 #: packages/admin/src/components/PluginManager.tsx:819
 #: packages/admin/src/components/PortableTextEditor.tsx:5773
@@ -3061,15 +3071,15 @@ msgstr "{siteName} में साइन इन करने के लिए �
 #: packages/admin/src/components/MediaPickerModal.tsx:1010
 #: packages/admin/src/components/MediaPickerModal.tsx:1017
 #: packages/admin/src/components/MediaUploadDialog.tsx:237
-#: packages/admin/src/components/MenuEditor.tsx:432
+#: packages/admin/src/components/MenuEditor.tsx:428
+#: packages/admin/src/components/MenuEditor.tsx:434
 #: packages/admin/src/components/MenuEditor.tsx:438
-#: packages/admin/src/components/MenuEditor.tsx:442
-#: packages/admin/src/components/MenuEditor.tsx:503
+#: packages/admin/src/components/MenuEditor.tsx:499
+#: packages/admin/src/components/MenuEditor.tsx:505
 #: packages/admin/src/components/MenuEditor.tsx:509
-#: packages/admin/src/components/MenuEditor.tsx:513
-#: packages/admin/src/components/MenuEditor.tsx:699
-#: packages/admin/src/components/MenuEditor.tsx:705
 #: packages/admin/src/components/MenuEditor.tsx:709
+#: packages/admin/src/components/MenuEditor.tsx:715
+#: packages/admin/src/components/MenuEditor.tsx:719
 #: packages/admin/src/components/MenuList.tsx:145
 #: packages/admin/src/components/PortableTextEditor.tsx:2697
 #: packages/admin/src/components/PortableTextEditor.tsx:2703
@@ -3174,6 +3184,12 @@ msgstr "संग्रह “{0}” में एंट्रीज़ है�
 msgid "Collection “{0}” was created on this site"
 msgstr "संग्रह “{0}” इस साइट पर बनाया गया था"
 
+#: packages/admin/src/router.tsx:780
+#: packages/admin/src/router.tsx:982
+#: packages/admin/src/router.tsx:1963
+msgid "Collection \"{collection}\" not found"
+msgstr ""
+
 #: packages/admin/src/components/comments/CommentDetail.tsx:109
 msgid "Collection:"
 msgstr "संग्रह:"
@@ -3268,7 +3284,7 @@ msgstr "पूर्ण"
 msgid "Complete signup"
 msgstr "पूर्ण साइनअप"
 
-#: packages/admin/src/components/Widgets.tsx:943
+#: packages/admin/src/components/Widgets.tsx:953
 msgid "Component"
 msgstr "अवयव"
 
@@ -3339,7 +3355,7 @@ msgstr "सामग्री"
 #: packages/admin/src/components/Dashboard.tsx:498
 #: packages/admin/src/components/SectionEditor.tsx:215
 #: packages/admin/src/components/Sidebar.tsx:690
-#: packages/admin/src/components/Widgets.tsx:911
+#: packages/admin/src/components/Widgets.tsx:921
 msgid "Content"
 msgstr "सामग्री"
 
@@ -3990,12 +4006,12 @@ msgstr "क्रॉप की गई कॉपी बनाई गई।"
 msgid "CSS"
 msgstr "सीएसएस"
 
-#: packages/admin/src/components/MenuEditor.tsx:540
-#: packages/admin/src/components/MenuEditor.tsx:739
+#: packages/admin/src/components/MenuEditor.tsx:536
+#: packages/admin/src/components/MenuEditor.tsx:749
 msgid "CSS classes"
 msgstr "CSS क्लास"
 
-#: packages/admin/src/components/MenuEditor.tsx:639
+#: packages/admin/src/components/MenuEditor.tsx:635
 msgid "CSS classes:"
 msgstr "CSS क्लास:"
 
@@ -4146,7 +4162,8 @@ msgstr "कोड में परिभाषित"
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:392
 #: packages/admin/src/components/MediaDetailPanel.tsx:1828
 #: packages/admin/src/components/MediaDetailPanel.tsx:1932
-#: packages/admin/src/components/MenuEditor.tsx:672
+#: packages/admin/src/components/MenuEditor.tsx:668
+#: packages/admin/src/components/MenuEditor.tsx:682
 #: packages/admin/src/components/MenuList.tsx:235
 #: packages/admin/src/components/Redirects.tsx:620
 #: packages/admin/src/components/RelationDeleteDialog.tsx:40
@@ -4155,6 +4172,7 @@ msgstr "कोड में परिभाषित"
 #: packages/admin/src/components/TaxonomyManager.tsx:1541
 #: packages/admin/src/components/TaxonomyManager.tsx:1557
 #: packages/admin/src/components/Widgets.tsx:728
+#: packages/admin/src/components/Widgets.tsx:850
 #: packages/admin/src/routes/byline-schema.tsx:378
 msgid "Delete"
 msgstr "मिटाना"
@@ -4179,7 +4197,7 @@ msgstr "“{0}” हटाएं?"
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:275
 #: packages/admin/src/components/settings/BackupSettings.tsx:329
 #: packages/admin/src/components/TaxonomyManager.tsx:492
-#: packages/admin/src/components/Widgets.tsx:829
+#: packages/admin/src/components/Widgets.tsx:824
 #: packages/admin/src/routes/byline-schema.tsx:460
 msgid "Delete {0}"
 msgstr "{0} हटाएं"
@@ -4276,6 +4294,10 @@ msgstr "मीडिया हटाएँ?"
 msgid "Delete menu"
 msgstr "मेनू हटाएँ"
 
+#: packages/admin/src/components/MenuEditor.tsx:680
+msgid "Delete menu item?"
+msgstr ""
+
 #: packages/admin/src/components/comments/CommentInbox.tsx:550
 msgid "Delete permanently"
 msgstr "स्थायी रूप से हटाएँ"
@@ -4348,6 +4370,10 @@ msgstr "वीडियो हटाएँ"
 msgid "Delete Widget Area?"
 msgstr "विजेट क्षेत्र हटाएँ?"
 
+#: packages/admin/src/components/Widgets.tsx:848
+msgid "Delete widget?"
+msgstr ""
+
 #: packages/admin/src/components/ContentList.tsx:920
 msgid "Deleted"
 msgstr "हटाए गए"
@@ -4369,6 +4395,7 @@ msgstr "Deleting \"{0}\" will also remove {1, plural, one {# संग्रह�
 #: packages/admin/src/components/MediaDetailPanel.tsx:1828
 #: packages/admin/src/components/MediaDetailPanel.tsx:1933
 #: packages/admin/src/components/MediaFolderDialog.tsx:185
+#: packages/admin/src/components/MenuEditor.tsx:683
 #: packages/admin/src/components/MenuList.tsx:236
 #: packages/admin/src/components/Redirects.tsx:621
 #: packages/admin/src/components/RelationDeleteDialog.tsx:41
@@ -4377,6 +4404,7 @@ msgstr "Deleting \"{0}\" will also remove {1, plural, one {# संग्रह�
 #: packages/admin/src/components/TaxonomyManager.tsx:1542
 #: packages/admin/src/components/TaxonomyManager.tsx:1558
 #: packages/admin/src/components/Widgets.tsx:729
+#: packages/admin/src/components/Widgets.tsx:851
 #: packages/admin/src/routes/bylines.tsx:535
 msgid "Deleting..."
 msgstr "हटाया जा रहा है..."
@@ -4806,7 +4834,7 @@ msgstr "पुन: व्यवस्थित करने के लिए ख
 #. placeholder {0}: field.label
 #. placeholder {0}: widget.title ?? t`widget`
 #: packages/admin/src/components/ContentTypeEditor.tsx:937
-#: packages/admin/src/components/Widgets.tsx:814
+#: packages/admin/src/components/Widgets.tsx:809
 msgid "Drag to reorder {0}"
 msgstr "पुनः व्यवस्थित करने के लिए खींचें {0}"
 
@@ -4899,7 +4927,7 @@ msgstr "सबसे पहले सेव किया गया वर्श�
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:380
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:381
 #: packages/admin/src/components/MenuCard.tsx:59
-#: packages/admin/src/components/MenuEditor.tsx:667
+#: packages/admin/src/components/MenuEditor.tsx:663
 #: packages/admin/src/components/Sections.tsx:439
 #: packages/admin/src/components/Shell.tsx:87
 #: packages/admin/src/components/TranslationsPanel.tsx:95
@@ -5013,11 +5041,11 @@ msgstr "संपादन लॉकिंग"
 msgid "Edit media alt text, captions, and focal points"
 msgstr "मीडिया का ऑल्ट टेक्स्ट, कैप्शन और फ़ोकल पॉइंट संपादित करें"
 
-#: packages/admin/src/components/MenuEditor.tsx:696
+#: packages/admin/src/components/MenuEditor.tsx:706
 msgid "Edit Menu Item"
 msgstr "मेनू आइटम संपादित करें"
 
-#: packages/admin/src/components/MenuEditor.tsx:473
+#: packages/admin/src/components/MenuEditor.tsx:469
 msgid "Edit menu items"
 msgstr "मेनू आइटम संपादित करें"
 
@@ -5333,8 +5361,8 @@ msgstr "स्लग दर्ज करें।"
 msgid "Enter a time"
 msgstr "समय दर्ज करें"
 
-#: packages/admin/src/components/MenuEditor.tsx:527
-#: packages/admin/src/components/MenuEditor.tsx:725
+#: packages/admin/src/components/MenuEditor.tsx:523
+#: packages/admin/src/components/MenuEditor.tsx:735
 msgid "Enter a URL (https://…) or a relative path (/…)"
 msgstr "एक URL (https://…) या एक संबंधित पथ (/…) दर्ज करें"
 
@@ -5414,12 +5442,10 @@ msgstr "लिंक की गई ओर की एंट्री"
 msgid "entry on the linking side"
 msgstr "लिंक करने वाली ओर की एंट्री"
 
-#: packages/admin/src/components/MenuEditor.tsx:158
-#: packages/admin/src/components/MenuEditor.tsx:226
-#: packages/admin/src/components/MenuEditor.tsx:266
+#: packages/admin/src/components/MenuEditor.tsx:160
+#: packages/admin/src/components/MenuEditor.tsx:262
 #: packages/admin/src/components/SetupWizard.tsx:603
 #: packages/admin/src/components/TaxonomyManager.tsx:1213
-#: packages/admin/src/components/Widgets.tsx:781
 #: packages/admin/src/router.tsx:3364
 msgid "Error"
 msgstr "एरर"
@@ -5436,7 +5462,7 @@ msgstr "विजेट्स को पुनः व्यवस्थित �
 msgid "Error saving section"
 msgstr "अनुभाग सहेजने में एरर"
 
-#: packages/admin/src/components/Widgets.tsx:796
+#: packages/admin/src/components/Widgets.tsx:791
 msgid "Error updating widget"
 msgstr "विजेट अपडेट करने में एरर"
 
@@ -7206,7 +7232,7 @@ msgstr ""
 msgid "Holds an entry ID. Set a target collection under Content Types to pick entries instead."
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:519
+#: packages/admin/src/components/MenuEditor.tsx:515
 msgid "Home"
 msgstr "घर"
 
@@ -7272,7 +7298,7 @@ msgstr ""
 msgid "https://example.com"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:528
+#: packages/admin/src/components/MenuEditor.tsx:524
 msgid "https://example.com or /about"
 msgstr "https://example.com या /about"
 
@@ -7835,15 +7861,15 @@ msgstr "तिरछा"
 msgid "Item {0}"
 msgstr "आइटम {0}"
 
-#: packages/admin/src/components/MenuEditor.tsx:208
+#: packages/admin/src/components/MenuEditor.tsx:210
 msgid "Item added"
 msgstr "आइटम जोड़ा गया"
 
-#: packages/admin/src/components/MenuEditor.tsx:220
+#: packages/admin/src/components/MenuEditor.tsx:223
 msgid "Item deleted"
 msgstr "आइटम हटा दिया गया"
 
-#: packages/admin/src/components/MenuEditor.tsx:245
+#: packages/admin/src/components/MenuEditor.tsx:241
 msgid "Item updated"
 msgstr "आइटम अपडेट किया गया"
 
@@ -7948,9 +7974,9 @@ msgstr "Kotlin"
 #: packages/admin/src/components/BylineFieldEditor.tsx:226
 #: packages/admin/src/components/FieldEditor.tsx:837
 #: packages/admin/src/components/FieldEditor.tsx:1253
-#: packages/admin/src/components/MenuEditor.tsx:449
-#: packages/admin/src/components/MenuEditor.tsx:519
-#: packages/admin/src/components/MenuEditor.tsx:716
+#: packages/admin/src/components/MenuEditor.tsx:445
+#: packages/admin/src/components/MenuEditor.tsx:515
+#: packages/admin/src/components/MenuEditor.tsx:726
 #: packages/admin/src/components/MenuList.tsx:153
 #: packages/admin/src/components/TaxonomyManager.tsx:1040
 #: packages/admin/src/components/Widgets.tsx:446
@@ -8281,7 +8307,7 @@ msgstr ""
 msgid "Loading media usage tracking settings…"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:380
+#: packages/admin/src/components/MenuEditor.tsx:376
 msgid "Loading menu..."
 msgstr "मेनू लोड हो रहा है..."
 
@@ -8706,13 +8732,13 @@ msgid "Medium section heading"
 msgstr "मध्यम अनुभाग शीर्षक"
 
 #: packages/admin/src/components/Widgets.tsx:112
-#: packages/admin/src/components/Widgets.tsx:926
+#: packages/admin/src/components/Widgets.tsx:936
 msgid "Menu"
 msgstr "मेनू"
 
 #. placeholder {0}: translated.label
 #. placeholder {1}: translated.locale.toUpperCase()
-#: packages/admin/src/components/MenuEditor.tsx:147
+#: packages/admin/src/components/MenuEditor.tsx:149
 msgid "Menu \"{0}\" ({1}) created."
 msgstr "मेनू \"{0}\" ({1}) बनाया गया।"
 
@@ -8729,15 +8755,15 @@ msgstr "मेनू बनाया गया"
 msgid "Menu deleted"
 msgstr "मेनू हटा दिया गया"
 
-#: packages/admin/src/components/MenuEditor.tsx:208
+#: packages/admin/src/components/MenuEditor.tsx:210
 msgid "Menu item has been added."
 msgstr "मेनू आइटम जोड़ा गया है."
 
-#: packages/admin/src/components/MenuEditor.tsx:221
+#: packages/admin/src/components/MenuEditor.tsx:224
 msgid "Menu item has been deleted."
 msgstr "मेनू आइटम हटा दिया गया है."
 
-#: packages/admin/src/components/MenuEditor.tsx:246
+#: packages/admin/src/components/MenuEditor.tsx:242
 msgid "Menu item has been updated."
 msgstr "मेनू आइटम अपडेट कर दिया गया है."
 
@@ -8746,15 +8772,15 @@ msgstr "मेनू आइटम अपडेट कर दिया गया 
 msgid "Menu items"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:388
+#: packages/admin/src/components/MenuEditor.tsx:384
 msgid "Menu not found"
 msgstr "मेनू नहीं मिला"
 
-#: packages/admin/src/components/MenuEditor.tsx:261
+#: packages/admin/src/components/MenuEditor.tsx:257
 msgid "Menu order has been updated."
 msgstr "मेनू क्रम अद्यतन कर दिया गया है."
 
-#: packages/admin/src/components/MenuEditor.tsx:173
+#: packages/admin/src/components/MenuEditor.tsx:175
 msgid "Menu renamed"
 msgstr ""
 
@@ -8956,7 +8982,7 @@ msgid "Move {title} to trash"
 msgstr "{title} को कूड़ेदान में ले जाएँ"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:212
-#: packages/admin/src/components/MenuEditor.tsx:660
+#: packages/admin/src/components/MenuEditor.tsx:656
 #: packages/admin/src/components/TaxonomyManager.tsx:345
 msgid "Move down"
 msgstr "नीचे की ओर"
@@ -9000,7 +9026,7 @@ msgid "Move to Trash?"
 msgstr "कूड़ेदान में ले जाएं?"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:206
-#: packages/admin/src/components/MenuEditor.tsx:651
+#: packages/admin/src/components/MenuEditor.tsx:647
 #: packages/admin/src/components/TaxonomyManager.tsx:337
 msgid "Move up"
 msgstr "बढ़ाना"
@@ -9257,10 +9283,10 @@ msgstr ""
 msgid "New Taxonomy"
 msgstr "नई वर्गीकरण"
 
-#: packages/admin/src/components/MenuEditor.tsx:534
-#: packages/admin/src/components/MenuEditor.tsx:537
-#: packages/admin/src/components/MenuEditor.tsx:733
-#: packages/admin/src/components/MenuEditor.tsx:736
+#: packages/admin/src/components/MenuEditor.tsx:530
+#: packages/admin/src/components/MenuEditor.tsx:533
+#: packages/admin/src/components/MenuEditor.tsx:743
+#: packages/admin/src/components/MenuEditor.tsx:746
 msgid "New window"
 msgstr "नई विंडो"
 
@@ -9590,7 +9616,7 @@ msgstr "इस प्रदाता से कोई मीडिया उप�
 msgid "No media found"
 msgstr "कोई मीडिया नहीं मिला"
 
-#: packages/admin/src/components/MenuEditor.tsx:599
+#: packages/admin/src/components/MenuEditor.tsx:595
 msgid "No menu items yet"
 msgstr "अभी तक कोई मेनू आइटम नहीं"
 
@@ -9607,7 +9633,7 @@ msgstr "कोई न्यूनतम नहीं"
 msgid "No moderation (auto-approve all)"
 msgstr "कोई मॉडरेशन नहीं (सभी को स्वतः स्वीकृत करें)"
 
-#: packages/admin/src/components/MenuEditor.tsx:367
+#: packages/admin/src/components/MenuEditor.tsx:363
 msgid "No parent (top level)"
 msgstr "कोई अभिभावक नहीं (शीर्ष स्तर)"
 
@@ -10012,7 +10038,7 @@ msgstr "या एक निर्यात फ़ाइल अपलोड क�
 msgid "or upload directly"
 msgstr "या सीधे अपलोड करें"
 
-#: packages/admin/src/components/MenuEditor.tsx:260
+#: packages/admin/src/components/MenuEditor.tsx:256
 msgid "Order saved"
 msgstr "ऑर्डर सहेजा गया"
 
@@ -10110,7 +10136,7 @@ msgstr ""
 msgid "Paragraph inserted before table"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:746
+#: packages/admin/src/components/MenuEditor.tsx:756
 #: packages/admin/src/components/TaxonomyManager.tsx:821
 msgid "Parent"
 msgstr "माता-पिता"
@@ -11276,8 +11302,8 @@ msgstr "नाम बदलें"
 msgid "Rename {0}"
 msgstr "नाम बदलें{0}"
 
-#: packages/admin/src/components/MenuEditor.tsx:422
-#: packages/admin/src/components/MenuEditor.tsx:429
+#: packages/admin/src/components/MenuEditor.tsx:418
+#: packages/admin/src/components/MenuEditor.tsx:425
 msgid "Rename menu"
 msgstr ""
 
@@ -11808,10 +11834,10 @@ msgstr "जंग"
 msgid "Same as current version"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:534
-#: packages/admin/src/components/MenuEditor.tsx:536
-#: packages/admin/src/components/MenuEditor.tsx:733
-#: packages/admin/src/components/MenuEditor.tsx:735
+#: packages/admin/src/components/MenuEditor.tsx:530
+#: packages/admin/src/components/MenuEditor.tsx:532
+#: packages/admin/src/components/MenuEditor.tsx:743
+#: packages/admin/src/components/MenuEditor.tsx:745
 msgid "Same window"
 msgstr "वही खिड़की"
 
@@ -11825,11 +11851,11 @@ msgstr ""
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:432
 #: packages/admin/src/components/MediaDetailPanel.tsx:1890
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
-#: packages/admin/src/components/MenuEditor.tsx:466
-#: packages/admin/src/components/MenuEditor.tsx:757
+#: packages/admin/src/components/MenuEditor.tsx:462
+#: packages/admin/src/components/MenuEditor.tsx:767
 #: packages/admin/src/components/Redirects.tsx:195
 #: packages/admin/src/components/SaveButton.tsx:35
-#: packages/admin/src/components/Widgets.tsx:995
+#: packages/admin/src/components/Widgets.tsx:1005
 msgid "Save"
 msgstr "बचाना"
 
@@ -11922,8 +11948,8 @@ msgstr ""
 #: packages/admin/src/components/FieldEditor.tsx:1401
 #: packages/admin/src/components/MediaDetailPanel.tsx:1890
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
-#: packages/admin/src/components/MenuEditor.tsx:466
-#: packages/admin/src/components/MenuEditor.tsx:757
+#: packages/admin/src/components/MenuEditor.tsx:462
+#: packages/admin/src/components/MenuEditor.tsx:767
 #: packages/admin/src/components/PluginSettings.tsx:166
 #: packages/admin/src/components/PluginSettings.tsx:209
 #: packages/admin/src/components/Redirects.tsx:192
@@ -11931,7 +11957,7 @@ msgstr ""
 #: packages/admin/src/components/SaveButton.tsx:36
 #: packages/admin/src/components/TaxonomyManager.tsx:893
 #: packages/admin/src/components/users/UserDetail.tsx:330
-#: packages/admin/src/components/Widgets.tsx:995
+#: packages/admin/src/components/Widgets.tsx:1005
 msgid "Saving..."
 msgstr "सहेजा जा रहा है..."
 
@@ -12376,7 +12402,7 @@ msgstr "{title} चुनें"
 msgid "Select a collection"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:968
+#: packages/admin/src/components/Widgets.tsx:978
 msgid "Select a component..."
 msgstr "एक घटक चुनें..."
 
@@ -12389,7 +12415,7 @@ msgstr ""
 msgid "Select a location"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:931
+#: packages/admin/src/components/Widgets.tsx:941
 msgid "Select a menu..."
 msgstr "एक मेनू चुनें..."
 
@@ -12607,8 +12633,8 @@ msgstr "SEO सेटिंग्स सहेजी गईं"
 msgid "SEO Title"
 msgstr "एसईओ शीर्षक"
 
-#: packages/admin/src/components/MenuEditor.tsx:543
-#: packages/admin/src/components/MenuEditor.tsx:743
+#: packages/admin/src/components/MenuEditor.tsx:539
+#: packages/admin/src/components/MenuEditor.tsx:753
 msgid "Separate class names with spaces. Themes can use them to style the link."
 msgstr ""
 
@@ -12761,7 +12787,7 @@ msgstr "टोकन दिखाएँ"
 msgid "Showing {pageShowingRange} of {0}"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:454
+#: packages/admin/src/components/MenuEditor.tsx:450
 #: packages/admin/src/components/MenuList.tsx:159
 msgid "Shown in the admin. Some themes also show it on the site."
 msgstr ""
@@ -13345,8 +13371,8 @@ msgstr ""
 msgid "Taking over..."
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:531
-#: packages/admin/src/components/MenuEditor.tsx:730
+#: packages/admin/src/components/MenuEditor.tsx:527
+#: packages/admin/src/components/MenuEditor.tsx:740
 msgid "Target"
 msgstr "लक्ष्य"
 
@@ -13646,7 +13672,7 @@ msgid "The menu has been deleted."
 msgstr "मेनू हटा दिया गया है."
 
 #. placeholder {0}: renamed.label
-#: packages/admin/src/components/MenuEditor.tsx:174
+#: packages/admin/src/components/MenuEditor.tsx:176
 msgid "The menu is now called \"{0}\"."
 msgstr ""
 
@@ -14350,7 +14376,7 @@ msgstr "समयक्षेत्र"
 #: packages/admin/src/components/ContentList.tsx:912
 #: packages/admin/src/components/SectionEditor.tsx:272
 #: packages/admin/src/components/Sections.tsx:192
-#: packages/admin/src/components/Widgets.tsx:903
+#: packages/admin/src/components/Widgets.tsx:913
 msgid "Title"
 msgstr "शीर्षक"
 
@@ -14468,7 +14494,7 @@ msgstr "अनुवाद करें {0}"
 msgid "Translating..."
 msgstr "अनुवाद हो रहा है..."
 
-#: packages/admin/src/components/MenuEditor.tsx:146
+#: packages/admin/src/components/MenuEditor.tsx:148
 #: packages/admin/src/components/TaxonomyManager.tsx:1259
 #: packages/admin/src/components/TaxonomySidebar.tsx:778
 #: packages/admin/src/router.tsx:1642
@@ -14802,7 +14828,8 @@ msgid "Untitled file"
 msgstr "शीर्षक रहित फ़ाइल"
 
 #: packages/admin/src/components/Widgets.tsx:548
-#: packages/admin/src/components/Widgets.tsx:821
+#: packages/admin/src/components/Widgets.tsx:816
+#: packages/admin/src/components/Widgets.tsx:849
 msgid "Untitled Widget"
 msgstr "शीर्षक रहित विजेट"
 
@@ -15021,8 +15048,8 @@ msgstr ""
 #: packages/admin/src/components/BylineFieldEditor.tsx:49
 #: packages/admin/src/components/FieldEditor.tsx:474
 #: packages/admin/src/components/FieldEditor.tsx:1303
-#: packages/admin/src/components/MenuEditor.tsx:522
-#: packages/admin/src/components/MenuEditor.tsx:720
+#: packages/admin/src/components/MenuEditor.tsx:518
+#: packages/admin/src/components/MenuEditor.tsx:730
 msgid "URL"
 msgstr "URL"
 
@@ -15549,8 +15576,8 @@ msgstr "यह महत्वपूर्ण क्यों है?"
 msgid "Wide"
 msgstr "चौड़ा"
 
-#: packages/admin/src/components/Widgets.tsx:814
-#: packages/admin/src/components/Widgets.tsx:829
+#: packages/admin/src/components/Widgets.tsx:809
+#: packages/admin/src/components/Widgets.tsx:824
 msgid "widget"
 msgstr "विजेट"
 
@@ -15570,15 +15597,15 @@ msgstr "विजेट क्षेत्र हटा दिया गया"
 msgid "Widget areas"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:777
+#: packages/admin/src/components/Widgets.tsx:779
 msgid "Widget deleted"
 msgstr "विजेट हटा दिया गया"
 
-#: packages/admin/src/components/Widgets.tsx:906
+#: packages/admin/src/components/Widgets.tsx:916
 msgid "Widget title"
 msgstr "विजेट शीर्षक"
 
-#: packages/admin/src/components/Widgets.tsx:792
+#: packages/admin/src/components/Widgets.tsx:787
 msgid "Widget updated"
 msgstr "विजेट अद्यतन किया गया"
 
@@ -15657,7 +15684,7 @@ msgstr ""
 msgid "Write JavaScript…"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:916
+#: packages/admin/src/components/Widgets.tsx:926
 msgid "Write widget content..."
 msgstr "विजेट सामग्री लिखें..."
 

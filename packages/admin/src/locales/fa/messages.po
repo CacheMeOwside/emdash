@@ -20,7 +20,7 @@ msgstr ""
 msgid " (default)"
 msgstr " (پیش‌فرض)"
 
-#: packages/admin/src/components/MenuEditor.tsx:635
+#: packages/admin/src/components/MenuEditor.tsx:631
 msgid " (opens in new window)"
 msgstr " (در پنجره جدید باز می‌شود)"
 
@@ -46,6 +46,16 @@ msgstr ""
 #. placeholder {0}: item.filename
 #: packages/admin/src/components/MediaDetailPanel.tsx:1928
 msgid "\"{0}\" will be permanently deleted."
+msgstr ""
+
+#. placeholder {0}: item.label
+#: packages/admin/src/components/MenuEditor.tsx:681
+msgid "\"{0}\" will be removed from this menu. This action cannot be undone."
+msgstr ""
+
+#. placeholder {0}: widget.title || t`Untitled Widget`
+#: packages/admin/src/components/Widgets.tsx:849
+msgid "\"{0}\" will be removed from this widget area. This action cannot be undone."
 msgstr ""
 
 #: packages/admin/src/components/OptionalLabel.tsx:13
@@ -1233,7 +1243,7 @@ msgstr ""
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:175
 #: packages/admin/src/components/BylineCreditsEditor.tsx:402
-#: packages/admin/src/components/MenuEditor.tsx:551
+#: packages/admin/src/components/MenuEditor.tsx:547
 msgid "Add"
 msgstr "افزودن"
 
@@ -1308,14 +1318,14 @@ msgstr ""
 msgid "Add column before"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:481
-#: packages/admin/src/components/MenuEditor.tsx:607
+#: packages/admin/src/components/MenuEditor.tsx:477
+#: packages/admin/src/components/MenuEditor.tsx:603
 msgid "Add Content"
 msgstr "افزودن محتوا"
 
-#: packages/admin/src/components/MenuEditor.tsx:493
-#: packages/admin/src/components/MenuEditor.tsx:500
-#: packages/admin/src/components/MenuEditor.tsx:610
+#: packages/admin/src/components/MenuEditor.tsx:489
+#: packages/admin/src/components/MenuEditor.tsx:496
+#: packages/admin/src/components/MenuEditor.tsx:606
 msgid "Add Custom Link"
 msgstr "افزودن لینک سفارشی"
 
@@ -1376,7 +1386,7 @@ msgstr "افزودن مورد"
 msgid "Add link"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:600
+#: packages/admin/src/components/MenuEditor.tsx:596
 msgid "Add links to build your navigation menu"
 msgstr "لینک‌ها را برای ساخت فهرست ناوبری خود بیفزایید"
 
@@ -1528,7 +1538,7 @@ msgstr ""
 msgid "Added:"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:551
+#: packages/admin/src/components/MenuEditor.tsx:547
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:316
 msgid "Adding..."
 msgstr "در حال افزودن..."
@@ -2176,7 +2186,7 @@ msgstr ""
 #: packages/admin/src/components/FieldEditor.tsx:673
 #: packages/admin/src/components/MediaDetailPanel.tsx:1817
 #: packages/admin/src/components/MediaLibrary.tsx:747
-#: packages/admin/src/components/MenuEditor.tsx:404
+#: packages/admin/src/components/MenuEditor.tsx:400
 #: packages/admin/src/components/WordPressImport.tsx:1565
 #: packages/admin/src/components/WordPressImport.tsx:2586
 msgid "Back"
@@ -2221,7 +2231,7 @@ msgstr ""
 msgid "Back to marketplace"
 msgstr "بازگشت به فروشگاه"
 
-#: packages/admin/src/components/MenuEditor.tsx:402
+#: packages/admin/src/components/MenuEditor.tsx:398
 msgid "Back to menus"
 msgstr ""
 
@@ -2528,9 +2538,9 @@ msgstr "می‌تواند محتوا را مشاهده کند"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1859
 #: packages/admin/src/components/MediaFolderDialog.tsx:152
 #: packages/admin/src/components/MediaPickerModal.tsx:1599
-#: packages/admin/src/components/MenuEditor.tsx:463
-#: packages/admin/src/components/MenuEditor.tsx:548
-#: packages/admin/src/components/MenuEditor.tsx:754
+#: packages/admin/src/components/MenuEditor.tsx:459
+#: packages/admin/src/components/MenuEditor.tsx:544
+#: packages/admin/src/components/MenuEditor.tsx:764
 #: packages/admin/src/components/MenuList.tsx:184
 #: packages/admin/src/components/PluginManager.tsx:819
 #: packages/admin/src/components/PortableTextEditor.tsx:5773
@@ -3063,15 +3073,15 @@ msgstr ""
 #: packages/admin/src/components/MediaPickerModal.tsx:1010
 #: packages/admin/src/components/MediaPickerModal.tsx:1017
 #: packages/admin/src/components/MediaUploadDialog.tsx:237
-#: packages/admin/src/components/MenuEditor.tsx:432
+#: packages/admin/src/components/MenuEditor.tsx:428
+#: packages/admin/src/components/MenuEditor.tsx:434
 #: packages/admin/src/components/MenuEditor.tsx:438
-#: packages/admin/src/components/MenuEditor.tsx:442
-#: packages/admin/src/components/MenuEditor.tsx:503
+#: packages/admin/src/components/MenuEditor.tsx:499
+#: packages/admin/src/components/MenuEditor.tsx:505
 #: packages/admin/src/components/MenuEditor.tsx:509
-#: packages/admin/src/components/MenuEditor.tsx:513
-#: packages/admin/src/components/MenuEditor.tsx:699
-#: packages/admin/src/components/MenuEditor.tsx:705
 #: packages/admin/src/components/MenuEditor.tsx:709
+#: packages/admin/src/components/MenuEditor.tsx:715
+#: packages/admin/src/components/MenuEditor.tsx:719
 #: packages/admin/src/components/MenuList.tsx:145
 #: packages/admin/src/components/PortableTextEditor.tsx:2697
 #: packages/admin/src/components/PortableTextEditor.tsx:2703
@@ -3176,6 +3186,12 @@ msgstr ""
 msgid "Collection “{0}” was created on this site"
 msgstr ""
 
+#: packages/admin/src/router.tsx:780
+#: packages/admin/src/router.tsx:982
+#: packages/admin/src/router.tsx:1963
+msgid "Collection \"{collection}\" not found"
+msgstr ""
+
 #: packages/admin/src/components/comments/CommentDetail.tsx:109
 msgid "Collection:"
 msgstr "مجموعه:"
@@ -3270,7 +3286,7 @@ msgstr ""
 msgid "Complete signup"
 msgstr "تکمیل ثبت‌نام"
 
-#: packages/admin/src/components/Widgets.tsx:943
+#: packages/admin/src/components/Widgets.tsx:953
 msgid "Component"
 msgstr ""
 
@@ -3341,7 +3357,7 @@ msgstr ""
 #: packages/admin/src/components/Dashboard.tsx:498
 #: packages/admin/src/components/SectionEditor.tsx:215
 #: packages/admin/src/components/Sidebar.tsx:690
-#: packages/admin/src/components/Widgets.tsx:911
+#: packages/admin/src/components/Widgets.tsx:921
 msgid "Content"
 msgstr "محتوا"
 
@@ -3992,12 +4008,12 @@ msgstr ""
 msgid "CSS"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:540
-#: packages/admin/src/components/MenuEditor.tsx:739
+#: packages/admin/src/components/MenuEditor.tsx:536
+#: packages/admin/src/components/MenuEditor.tsx:749
 msgid "CSS classes"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:639
+#: packages/admin/src/components/MenuEditor.tsx:635
 msgid "CSS classes:"
 msgstr ""
 
@@ -4148,7 +4164,8 @@ msgstr ""
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:392
 #: packages/admin/src/components/MediaDetailPanel.tsx:1828
 #: packages/admin/src/components/MediaDetailPanel.tsx:1932
-#: packages/admin/src/components/MenuEditor.tsx:672
+#: packages/admin/src/components/MenuEditor.tsx:668
+#: packages/admin/src/components/MenuEditor.tsx:682
 #: packages/admin/src/components/MenuList.tsx:235
 #: packages/admin/src/components/Redirects.tsx:620
 #: packages/admin/src/components/RelationDeleteDialog.tsx:40
@@ -4157,6 +4174,7 @@ msgstr ""
 #: packages/admin/src/components/TaxonomyManager.tsx:1541
 #: packages/admin/src/components/TaxonomyManager.tsx:1557
 #: packages/admin/src/components/Widgets.tsx:728
+#: packages/admin/src/components/Widgets.tsx:850
 #: packages/admin/src/routes/byline-schema.tsx:378
 msgid "Delete"
 msgstr "حذف"
@@ -4181,7 +4199,7 @@ msgstr ""
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:275
 #: packages/admin/src/components/settings/BackupSettings.tsx:329
 #: packages/admin/src/components/TaxonomyManager.tsx:492
-#: packages/admin/src/components/Widgets.tsx:829
+#: packages/admin/src/components/Widgets.tsx:824
 #: packages/admin/src/routes/byline-schema.tsx:460
 msgid "Delete {0}"
 msgstr "حذف {0}"
@@ -4278,6 +4296,10 @@ msgstr ""
 msgid "Delete menu"
 msgstr ""
 
+#: packages/admin/src/components/MenuEditor.tsx:680
+msgid "Delete menu item?"
+msgstr ""
+
 #: packages/admin/src/components/comments/CommentInbox.tsx:550
 msgid "Delete permanently"
 msgstr "حذف دائمی"
@@ -4350,6 +4372,10 @@ msgstr ""
 msgid "Delete Widget Area?"
 msgstr ""
 
+#: packages/admin/src/components/Widgets.tsx:848
+msgid "Delete widget?"
+msgstr ""
+
 #: packages/admin/src/components/ContentList.tsx:920
 msgid "Deleted"
 msgstr "حذف‌شده"
@@ -4371,6 +4397,7 @@ msgstr ""
 #: packages/admin/src/components/MediaDetailPanel.tsx:1828
 #: packages/admin/src/components/MediaDetailPanel.tsx:1933
 #: packages/admin/src/components/MediaFolderDialog.tsx:185
+#: packages/admin/src/components/MenuEditor.tsx:683
 #: packages/admin/src/components/MenuList.tsx:236
 #: packages/admin/src/components/Redirects.tsx:621
 #: packages/admin/src/components/RelationDeleteDialog.tsx:41
@@ -4379,6 +4406,7 @@ msgstr ""
 #: packages/admin/src/components/TaxonomyManager.tsx:1542
 #: packages/admin/src/components/TaxonomyManager.tsx:1558
 #: packages/admin/src/components/Widgets.tsx:729
+#: packages/admin/src/components/Widgets.tsx:851
 #: packages/admin/src/routes/bylines.tsx:535
 msgid "Deleting..."
 msgstr "در حال حذف..."
@@ -4808,7 +4836,7 @@ msgstr ""
 #. placeholder {0}: field.label
 #. placeholder {0}: widget.title ?? t`widget`
 #: packages/admin/src/components/ContentTypeEditor.tsx:937
-#: packages/admin/src/components/Widgets.tsx:814
+#: packages/admin/src/components/Widgets.tsx:809
 msgid "Drag to reorder {0}"
 msgstr ""
 
@@ -4901,7 +4929,7 @@ msgstr ""
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:380
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:381
 #: packages/admin/src/components/MenuCard.tsx:59
-#: packages/admin/src/components/MenuEditor.tsx:667
+#: packages/admin/src/components/MenuEditor.tsx:663
 #: packages/admin/src/components/Sections.tsx:439
 #: packages/admin/src/components/Shell.tsx:87
 #: packages/admin/src/components/TranslationsPanel.tsx:95
@@ -5015,11 +5043,11 @@ msgstr ""
 msgid "Edit media alt text, captions, and focal points"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:696
+#: packages/admin/src/components/MenuEditor.tsx:706
 msgid "Edit Menu Item"
 msgstr "ویرایش آیتم فهرست"
 
-#: packages/admin/src/components/MenuEditor.tsx:473
+#: packages/admin/src/components/MenuEditor.tsx:469
 msgid "Edit menu items"
 msgstr "ویرایش آیتم‌های فهرست"
 
@@ -5332,8 +5360,8 @@ msgstr ""
 msgid "Enter a time"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:527
-#: packages/admin/src/components/MenuEditor.tsx:725
+#: packages/admin/src/components/MenuEditor.tsx:523
+#: packages/admin/src/components/MenuEditor.tsx:735
 msgid "Enter a URL (https://…) or a relative path (/…)"
 msgstr "یک آدرس (https://…) یا یک مسیر نسبی (/…) وارد کنید"
 
@@ -5413,12 +5441,10 @@ msgstr ""
 msgid "entry on the linking side"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:158
-#: packages/admin/src/components/MenuEditor.tsx:226
-#: packages/admin/src/components/MenuEditor.tsx:266
+#: packages/admin/src/components/MenuEditor.tsx:160
+#: packages/admin/src/components/MenuEditor.tsx:262
 #: packages/admin/src/components/SetupWizard.tsx:603
 #: packages/admin/src/components/TaxonomyManager.tsx:1213
-#: packages/admin/src/components/Widgets.tsx:781
 #: packages/admin/src/router.tsx:3364
 msgid "Error"
 msgstr "خطا"
@@ -5435,7 +5461,7 @@ msgstr ""
 msgid "Error saving section"
 msgstr "خطا در ذخیره بخش"
 
-#: packages/admin/src/components/Widgets.tsx:796
+#: packages/admin/src/components/Widgets.tsx:791
 msgid "Error updating widget"
 msgstr ""
 
@@ -7205,7 +7231,7 @@ msgstr ""
 msgid "Holds an entry ID. Set a target collection under Content Types to pick entries instead."
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:519
+#: packages/admin/src/components/MenuEditor.tsx:515
 msgid "Home"
 msgstr "خانه"
 
@@ -7271,7 +7297,7 @@ msgstr ""
 msgid "https://example.com"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:528
+#: packages/admin/src/components/MenuEditor.tsx:524
 msgid "https://example.com or /about"
 msgstr "https://example.com یا /about"
 
@@ -7834,15 +7860,15 @@ msgstr ""
 msgid "Item {0}"
 msgstr "مورد {0}"
 
-#: packages/admin/src/components/MenuEditor.tsx:208
+#: packages/admin/src/components/MenuEditor.tsx:210
 msgid "Item added"
 msgstr "مورد افزوده شد"
 
-#: packages/admin/src/components/MenuEditor.tsx:220
+#: packages/admin/src/components/MenuEditor.tsx:223
 msgid "Item deleted"
 msgstr "مورد حذف شد"
 
-#: packages/admin/src/components/MenuEditor.tsx:245
+#: packages/admin/src/components/MenuEditor.tsx:241
 msgid "Item updated"
 msgstr "مورد به‌روزرسانی شد"
 
@@ -7947,9 +7973,9 @@ msgstr ""
 #: packages/admin/src/components/BylineFieldEditor.tsx:226
 #: packages/admin/src/components/FieldEditor.tsx:837
 #: packages/admin/src/components/FieldEditor.tsx:1253
-#: packages/admin/src/components/MenuEditor.tsx:449
-#: packages/admin/src/components/MenuEditor.tsx:519
-#: packages/admin/src/components/MenuEditor.tsx:716
+#: packages/admin/src/components/MenuEditor.tsx:445
+#: packages/admin/src/components/MenuEditor.tsx:515
+#: packages/admin/src/components/MenuEditor.tsx:726
 #: packages/admin/src/components/MenuList.tsx:153
 #: packages/admin/src/components/TaxonomyManager.tsx:1040
 #: packages/admin/src/components/Widgets.tsx:446
@@ -8280,7 +8306,7 @@ msgstr ""
 msgid "Loading media usage tracking settings…"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:380
+#: packages/admin/src/components/MenuEditor.tsx:376
 msgid "Loading menu..."
 msgstr "در حال بارگذاری فهرست..."
 
@@ -8705,13 +8731,13 @@ msgid "Medium section heading"
 msgstr "سرتیتر متوسط بخش"
 
 #: packages/admin/src/components/Widgets.tsx:112
-#: packages/admin/src/components/Widgets.tsx:926
+#: packages/admin/src/components/Widgets.tsx:936
 msgid "Menu"
 msgstr "فهرست"
 
 #. placeholder {0}: translated.label
 #. placeholder {1}: translated.locale.toUpperCase()
-#: packages/admin/src/components/MenuEditor.tsx:147
+#: packages/admin/src/components/MenuEditor.tsx:149
 msgid "Menu \"{0}\" ({1}) created."
 msgstr ""
 
@@ -8728,15 +8754,15 @@ msgstr "فهرست ساخته شد"
 msgid "Menu deleted"
 msgstr "فهرست حذف شد"
 
-#: packages/admin/src/components/MenuEditor.tsx:208
+#: packages/admin/src/components/MenuEditor.tsx:210
 msgid "Menu item has been added."
 msgstr "آیتم فهرست افزوده شد."
 
-#: packages/admin/src/components/MenuEditor.tsx:221
+#: packages/admin/src/components/MenuEditor.tsx:224
 msgid "Menu item has been deleted."
 msgstr "آیتم فهرست حذف شد."
 
-#: packages/admin/src/components/MenuEditor.tsx:246
+#: packages/admin/src/components/MenuEditor.tsx:242
 msgid "Menu item has been updated."
 msgstr "آیتم فهرست به‌روزرسانی شد."
 
@@ -8745,15 +8771,15 @@ msgstr "آیتم فهرست به‌روزرسانی شد."
 msgid "Menu items"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:388
+#: packages/admin/src/components/MenuEditor.tsx:384
 msgid "Menu not found"
 msgstr "فهرست یافت نشد"
 
-#: packages/admin/src/components/MenuEditor.tsx:261
+#: packages/admin/src/components/MenuEditor.tsx:257
 msgid "Menu order has been updated."
 msgstr "ترتیب فهرست به‌روزرسانی شد."
 
-#: packages/admin/src/components/MenuEditor.tsx:173
+#: packages/admin/src/components/MenuEditor.tsx:175
 msgid "Menu renamed"
 msgstr ""
 
@@ -8955,7 +8981,7 @@ msgid "Move {title} to trash"
 msgstr "انتقال {title} به سطل زباله"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:212
-#: packages/admin/src/components/MenuEditor.tsx:660
+#: packages/admin/src/components/MenuEditor.tsx:656
 #: packages/admin/src/components/TaxonomyManager.tsx:345
 msgid "Move down"
 msgstr "انتقال به پایین"
@@ -8999,7 +9025,7 @@ msgid "Move to Trash?"
 msgstr "انتقال به سطل زباله؟"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:206
-#: packages/admin/src/components/MenuEditor.tsx:651
+#: packages/admin/src/components/MenuEditor.tsx:647
 #: packages/admin/src/components/TaxonomyManager.tsx:337
 msgid "Move up"
 msgstr "انتقال به بالا"
@@ -9256,10 +9282,10 @@ msgstr ""
 msgid "New Taxonomy"
 msgstr "دسته‌بندی جدید"
 
-#: packages/admin/src/components/MenuEditor.tsx:534
-#: packages/admin/src/components/MenuEditor.tsx:537
-#: packages/admin/src/components/MenuEditor.tsx:733
-#: packages/admin/src/components/MenuEditor.tsx:736
+#: packages/admin/src/components/MenuEditor.tsx:530
+#: packages/admin/src/components/MenuEditor.tsx:533
+#: packages/admin/src/components/MenuEditor.tsx:743
+#: packages/admin/src/components/MenuEditor.tsx:746
 msgid "New window"
 msgstr "پنجره جدید"
 
@@ -9589,7 +9615,7 @@ msgstr ""
 msgid "No media found"
 msgstr "رسانه‌ای یافت نشد"
 
-#: packages/admin/src/components/MenuEditor.tsx:599
+#: packages/admin/src/components/MenuEditor.tsx:595
 msgid "No menu items yet"
 msgstr "هنوز آیتم فهرستیی نیست"
 
@@ -9606,7 +9632,7 @@ msgstr "بدون حداقل"
 msgid "No moderation (auto-approve all)"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:367
+#: packages/admin/src/components/MenuEditor.tsx:363
 msgid "No parent (top level)"
 msgstr ""
 
@@ -10008,7 +10034,7 @@ msgstr "یا فایل برون‌ریزی بارگذاری کنید"
 msgid "or upload directly"
 msgstr "یا مستقیماً بارگذاری کنید"
 
-#: packages/admin/src/components/MenuEditor.tsx:260
+#: packages/admin/src/components/MenuEditor.tsx:256
 msgid "Order saved"
 msgstr "ترتیب ذخیره شد"
 
@@ -10106,7 +10132,7 @@ msgstr ""
 msgid "Paragraph inserted before table"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:746
+#: packages/admin/src/components/MenuEditor.tsx:756
 #: packages/admin/src/components/TaxonomyManager.tsx:821
 msgid "Parent"
 msgstr "مادر"
@@ -11272,8 +11298,8 @@ msgstr "تغییر نام"
 msgid "Rename {0}"
 msgstr "تغییر نام {0}"
 
-#: packages/admin/src/components/MenuEditor.tsx:422
-#: packages/admin/src/components/MenuEditor.tsx:429
+#: packages/admin/src/components/MenuEditor.tsx:418
+#: packages/admin/src/components/MenuEditor.tsx:425
 msgid "Rename menu"
 msgstr ""
 
@@ -11804,10 +11830,10 @@ msgstr ""
 msgid "Same as current version"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:534
-#: packages/admin/src/components/MenuEditor.tsx:536
-#: packages/admin/src/components/MenuEditor.tsx:733
-#: packages/admin/src/components/MenuEditor.tsx:735
+#: packages/admin/src/components/MenuEditor.tsx:530
+#: packages/admin/src/components/MenuEditor.tsx:532
+#: packages/admin/src/components/MenuEditor.tsx:743
+#: packages/admin/src/components/MenuEditor.tsx:745
 msgid "Same window"
 msgstr "همین پنجره"
 
@@ -11821,11 +11847,11 @@ msgstr ""
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:432
 #: packages/admin/src/components/MediaDetailPanel.tsx:1890
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
-#: packages/admin/src/components/MenuEditor.tsx:466
-#: packages/admin/src/components/MenuEditor.tsx:757
+#: packages/admin/src/components/MenuEditor.tsx:462
+#: packages/admin/src/components/MenuEditor.tsx:767
 #: packages/admin/src/components/Redirects.tsx:195
 #: packages/admin/src/components/SaveButton.tsx:35
-#: packages/admin/src/components/Widgets.tsx:995
+#: packages/admin/src/components/Widgets.tsx:1005
 msgid "Save"
 msgstr "ذخیره"
 
@@ -11918,8 +11944,8 @@ msgstr ""
 #: packages/admin/src/components/FieldEditor.tsx:1401
 #: packages/admin/src/components/MediaDetailPanel.tsx:1890
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
-#: packages/admin/src/components/MenuEditor.tsx:466
-#: packages/admin/src/components/MenuEditor.tsx:757
+#: packages/admin/src/components/MenuEditor.tsx:462
+#: packages/admin/src/components/MenuEditor.tsx:767
 #: packages/admin/src/components/PluginSettings.tsx:166
 #: packages/admin/src/components/PluginSettings.tsx:209
 #: packages/admin/src/components/Redirects.tsx:192
@@ -11927,7 +11953,7 @@ msgstr ""
 #: packages/admin/src/components/SaveButton.tsx:36
 #: packages/admin/src/components/TaxonomyManager.tsx:893
 #: packages/admin/src/components/users/UserDetail.tsx:330
-#: packages/admin/src/components/Widgets.tsx:995
+#: packages/admin/src/components/Widgets.tsx:1005
 msgid "Saving..."
 msgstr "درحال ذخیره‌سازی …"
 
@@ -12372,7 +12398,7 @@ msgstr ""
 msgid "Select a collection"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:968
+#: packages/admin/src/components/Widgets.tsx:978
 msgid "Select a component..."
 msgstr ""
 
@@ -12385,7 +12411,7 @@ msgstr ""
 msgid "Select a location"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:931
+#: packages/admin/src/components/Widgets.tsx:941
 msgid "Select a menu..."
 msgstr ""
 
@@ -12603,8 +12629,8 @@ msgstr "تنظیمات سئو ذخیره شد"
 msgid "SEO Title"
 msgstr "عنوان سئو"
 
-#: packages/admin/src/components/MenuEditor.tsx:543
-#: packages/admin/src/components/MenuEditor.tsx:743
+#: packages/admin/src/components/MenuEditor.tsx:539
+#: packages/admin/src/components/MenuEditor.tsx:753
 msgid "Separate class names with spaces. Themes can use them to style the link."
 msgstr ""
 
@@ -12757,7 +12783,7 @@ msgstr "نمایش توکن"
 msgid "Showing {pageShowingRange} of {0}"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:454
+#: packages/admin/src/components/MenuEditor.tsx:450
 #: packages/admin/src/components/MenuList.tsx:159
 msgid "Shown in the admin. Some themes also show it on the site."
 msgstr ""
@@ -13341,8 +13367,8 @@ msgstr ""
 msgid "Taking over..."
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:531
-#: packages/admin/src/components/MenuEditor.tsx:730
+#: packages/admin/src/components/MenuEditor.tsx:527
+#: packages/admin/src/components/MenuEditor.tsx:740
 msgid "Target"
 msgstr "هدف"
 
@@ -13642,7 +13668,7 @@ msgid "The menu has been deleted."
 msgstr "فهرست حذف شد."
 
 #. placeholder {0}: renamed.label
-#: packages/admin/src/components/MenuEditor.tsx:174
+#: packages/admin/src/components/MenuEditor.tsx:176
 msgid "The menu is now called \"{0}\"."
 msgstr ""
 
@@ -14346,7 +14372,7 @@ msgstr "منطقه زمانی"
 #: packages/admin/src/components/ContentList.tsx:912
 #: packages/admin/src/components/SectionEditor.tsx:272
 #: packages/admin/src/components/Sections.tsx:192
-#: packages/admin/src/components/Widgets.tsx:903
+#: packages/admin/src/components/Widgets.tsx:913
 msgid "Title"
 msgstr "عنوان"
 
@@ -14464,7 +14490,7 @@ msgstr ""
 msgid "Translating..."
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:146
+#: packages/admin/src/components/MenuEditor.tsx:148
 #: packages/admin/src/components/TaxonomyManager.tsx:1259
 #: packages/admin/src/components/TaxonomySidebar.tsx:778
 #: packages/admin/src/router.tsx:1642
@@ -14798,7 +14824,8 @@ msgid "Untitled file"
 msgstr ""
 
 #: packages/admin/src/components/Widgets.tsx:548
-#: packages/admin/src/components/Widgets.tsx:821
+#: packages/admin/src/components/Widgets.tsx:816
+#: packages/admin/src/components/Widgets.tsx:849
 msgid "Untitled Widget"
 msgstr ""
 
@@ -15017,8 +15044,8 @@ msgstr ""
 #: packages/admin/src/components/BylineFieldEditor.tsx:49
 #: packages/admin/src/components/FieldEditor.tsx:474
 #: packages/admin/src/components/FieldEditor.tsx:1303
-#: packages/admin/src/components/MenuEditor.tsx:522
-#: packages/admin/src/components/MenuEditor.tsx:720
+#: packages/admin/src/components/MenuEditor.tsx:518
+#: packages/admin/src/components/MenuEditor.tsx:730
 msgid "URL"
 msgstr "URL"
 
@@ -15545,8 +15572,8 @@ msgstr ""
 msgid "Wide"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:814
-#: packages/admin/src/components/Widgets.tsx:829
+#: packages/admin/src/components/Widgets.tsx:809
+#: packages/admin/src/components/Widgets.tsx:824
 msgid "widget"
 msgstr ""
 
@@ -15566,15 +15593,15 @@ msgstr ""
 msgid "Widget areas"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:777
+#: packages/admin/src/components/Widgets.tsx:779
 msgid "Widget deleted"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:906
+#: packages/admin/src/components/Widgets.tsx:916
 msgid "Widget title"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:792
+#: packages/admin/src/components/Widgets.tsx:787
 msgid "Widget updated"
 msgstr ""
 
@@ -15653,7 +15680,7 @@ msgstr ""
 msgid "Write JavaScript…"
 msgstr ""
 
-#: packages/admin/src/components/Widgets.tsx:916
+#: packages/admin/src/components/Widgets.tsx:926
 msgid "Write widget content..."
 msgstr ""
 
