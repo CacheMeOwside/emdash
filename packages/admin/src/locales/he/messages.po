@@ -157,7 +157,7 @@ msgid "{0, plural, one {# matching tag} other {# matching tags}}"
 msgstr "{0, plural, one {תגית תואמת אחת} two {שתי תגיות תואמות} other {# תגיות תואמות}}"
 
 #. placeholder {0}: mcpTools.length
-#: packages/admin/src/components/PluginManager.tsx:503
+#: packages/admin/src/components/PluginManager.tsx:505
 msgid "{0, plural, one {# MCP tool} other {# MCP tools}}"
 msgstr "{0, plural, one {כלי MCP אחד} two {שני כלי MCP} other {# כלי MCP}}"
 
@@ -188,9 +188,14 @@ msgstr "{0, plural, one {הרשאה אחת מבוקשת} two {שתי הרשאו�
 
 #. placeholder {0}: plugin.capabilities.length
 #: packages/admin/src/components/MarketplaceBrowse.tsx:290
-#: packages/admin/src/components/PluginManager.tsx:517
+#: packages/admin/src/components/PluginManager.tsx:519
 msgid "{0, plural, one {# permission} other {# permissions}}"
 msgstr "{0, plural, one {הרשאה אחת} two {שתי הרשאות} other {# הרשאות}}"
+
+#. placeholder {0}: plugins?.length ?? 0
+#: packages/admin/src/components/PluginManager.tsx:221
+msgid "{0, plural, one {# plugin} other {# plugins}}"
+msgstr ""
 
 #. placeholder {0}: mapping.postCount
 #: packages/admin/src/components/WordPressImport.tsx:2545
@@ -345,7 +350,7 @@ msgid "{0} has been deactivated"
 msgstr "{0} הושבת"
 
 #. placeholder {0}: plugin.name
-#: packages/admin/src/components/PluginManager.tsx:398
+#: packages/admin/src/components/PluginManager.tsx:400
 msgid "{0} has been removed"
 msgstr "{0} הוסר"
 
@@ -432,11 +437,6 @@ msgstr "לא ניתן לעדכן {0} מתוך {total}"
 msgid "{0} of media, {1} of records"
 msgstr "{0} של מדיה, {1} של רשומות"
 
-#. placeholder {0}: plugins?.length ?? 0
-#: packages/admin/src/components/PluginManager.tsx:220
-msgid "{0} plugins"
-msgstr "{0} תוספים"
-
 #. placeholder {0}: theme.name
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:206
 msgid "{0} preview"
@@ -465,7 +465,7 @@ msgid "{0} updated everywhere it appears."
 msgstr "{0} עודכן בכל מקום שבו הוא מופיע."
 
 #. placeholder {0}: plugin.name
-#: packages/admin/src/components/PluginManager.tsx:307
+#: packages/admin/src/components/PluginManager.tsx:309
 msgid "{0} updated to v{installedVersion}"
 msgstr "{0} עודכן לגרסה v{installedVersion}"
 
@@ -1544,7 +1544,7 @@ msgstr "נתונים נוספים לייבוא."
 msgid "Additional details"
 msgstr "פרטים נוספים"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:282
+#: packages/admin/src/components/settings/SeoSettings.tsx:276
 msgid "Adds rules to robots.txt that ask AI crawlers not to use this site for training. Search engines can still index it."
 msgstr ""
 
@@ -1591,12 +1591,12 @@ msgstr "אחרי הפעלה מפורשת של התוסף, הוא יכול לשל
 msgid "Agenda"
 msgstr "סדר יום"
 
-#: packages/admin/src/components/PluginManager.tsx:612
+#: packages/admin/src/components/PluginManager.tsx:614
 msgid "Agent access"
 msgstr "גישת סוכן"
 
 #. placeholder {0}: plugin.name
-#: packages/admin/src/components/PluginManager.tsx:409
+#: packages/admin/src/components/PluginManager.tsx:411
 msgid "Agent access for {0} has been updated"
 msgstr "גישת הסוכן עבור {0} עודכנה"
 
@@ -1685,7 +1685,7 @@ msgstr "כל הסוגים"
 msgid "All uploads finished"
 msgstr "כל ההעלאות הסתיימו"
 
-#: packages/admin/src/components/PluginManager.tsx:614
+#: packages/admin/src/components/PluginManager.tsx:616
 msgid "Allow MCP tokens with plugin-tool scope to invoke these routes."
 msgstr "אפשרו לאסימוני MCP בהיקף plugin-tool לקרוא לנתיבים אלה."
 
@@ -1722,7 +1722,7 @@ msgstr "כבר משויך או כפול"
 msgid "Already have an account?"
 msgstr "כבר יש לכם חשבון?"
 
-#: packages/admin/src/components/PluginManager.tsx:811
+#: packages/admin/src/components/PluginManager.tsx:813
 msgid "Also delete plugin storage data"
 msgstr "מחיקת נתוני אחסון התוסף גם כן"
 
@@ -1787,7 +1787,7 @@ msgstr "מפתח דיגיטלי מוצפן שנפתח באמצעות טביעת 
 #: packages/admin/src/components/MarketplaceBrowse.tsx:135
 #: packages/admin/src/components/PluginManager.tsx:143
 #: packages/admin/src/components/PluginManager.tsx:162
-#: packages/admin/src/components/PluginManager.tsx:340
+#: packages/admin/src/components/PluginManager.tsx:342
 #: packages/admin/src/components/PluginSettings.tsx:75
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:85
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:108
@@ -2293,8 +2293,7 @@ msgstr "לפני שתמשיכו:"
 msgid "Between {min} and {max}"
 msgstr "בין {min} ל-{max}"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:243
-#: packages/admin/src/components/settings/SeoSettings.tsx:259
+#: packages/admin/src/components/settings/SeoSettings.tsx:253
 msgid "Bing Verification"
 msgstr "אימות Bing"
 
@@ -2532,7 +2531,7 @@ msgstr "יכול/ה להציג תוכן"
 #: packages/admin/src/components/MenuEditor.tsx:548
 #: packages/admin/src/components/MenuEditor.tsx:754
 #: packages/admin/src/components/MenuList.tsx:184
-#: packages/admin/src/components/PluginManager.tsx:817
+#: packages/admin/src/components/PluginManager.tsx:819
 #: packages/admin/src/components/PortableTextEditor.tsx:5773
 #: packages/admin/src/components/PortableTextEditor.tsx:5799
 #: packages/admin/src/components/PortableTextEditor.tsx:6547
@@ -2593,7 +2592,7 @@ msgstr "לא ניתן למחוק מקטעי ערכת עיצוב"
 msgid "Canonical URL"
 msgstr "URL קנוני"
 
-#: packages/admin/src/components/PluginManager.tsx:588
+#: packages/admin/src/components/PluginManager.tsx:590
 msgid "Capabilities"
 msgstr "הרשאות"
 
@@ -3152,8 +3151,8 @@ msgstr "פעולות בלוק קוד"
 msgid "Collapse block"
 msgstr "כיווץ הבלוק"
 
-#: packages/admin/src/components/PluginManager.tsx:571
-#: packages/admin/src/components/PluginManager.tsx:576
+#: packages/admin/src/components/PluginManager.tsx:573
+#: packages/admin/src/components/PluginManager.tsx:578
 msgid "Collapse details"
 msgstr "כיווץ פרטים"
 
@@ -4030,7 +4029,7 @@ msgstr "מותאם אישית"
 msgid "Custom Fields"
 msgstr "שדות מותאמים אישית"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:275
+#: packages/admin/src/components/settings/SeoSettings.tsx:269
 msgid "Custom robots.txt content. Leave empty to use the default."
 msgstr "תוכן robots.txt מותאם אישית. השאירו ריק כדי להשתמש בברירת המחדל."
 
@@ -4462,7 +4461,7 @@ msgid "Destination path"
 msgstr "נתיב יעד"
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:311
-#: packages/admin/src/components/PluginManager.tsx:633
+#: packages/admin/src/components/PluginManager.tsx:635
 msgid "Destructive"
 msgstr "הרסנית"
 
@@ -4507,11 +4506,11 @@ msgstr "ממדים:"
 msgid "Disable"
 msgstr "השבתה"
 
-#: packages/admin/src/components/PluginManager.tsx:565
+#: packages/admin/src/components/PluginManager.tsx:567
 msgid "Disable plugin"
 msgstr "השבתת תוסף"
 
-#: packages/admin/src/components/PluginManager.tsx:623
+#: packages/admin/src/components/PluginManager.tsx:625
 msgid "Disable plugin MCP tools"
 msgstr "השבתת כלי MCP של תוסף"
 
@@ -4527,14 +4526,14 @@ msgstr "השבתת משתמש"
 msgid "Disable User?"
 msgstr "להשבית משתמש?"
 
-#: packages/admin/src/components/PluginManager.tsx:458
+#: packages/admin/src/components/PluginManager.tsx:460
 #: packages/admin/src/components/Redirects.tsx:399
 #: packages/admin/src/components/users/UserDetail.tsx:214
 #: packages/admin/src/components/users/UserList.tsx:209
 msgid "Disabled"
 msgstr "מושבת"
 
-#: packages/admin/src/components/PluginManager.tsx:685
+#: packages/admin/src/components/PluginManager.tsx:687
 msgid "Disabled:"
 msgstr "מושבת:"
 
@@ -4547,8 +4546,8 @@ msgstr "השבתת <0>{0}</0> תמנע מהם להתחבר עד להפעלה מ�
 msgid "Disabling..."
 msgstr "בהשבתה..."
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:280
-#: packages/admin/src/components/settings/SeoSettings.tsx:290
+#: packages/admin/src/components/settings/SeoSettings.tsx:274
+#: packages/admin/src/components/settings/SeoSettings.tsx:284
 msgid "Disallow AI training"
 msgstr ""
 
@@ -5282,11 +5281,11 @@ msgstr "הפעלת תגובות"
 msgid "Enable full-text search on this collection"
 msgstr "הפעלת חיפוש טקסט מלא באוסף זה"
 
-#: packages/admin/src/components/PluginManager.tsx:565
+#: packages/admin/src/components/PluginManager.tsx:567
 msgid "Enable plugin"
 msgstr "הפעלת תוסף"
 
-#: packages/admin/src/components/PluginManager.tsx:624
+#: packages/admin/src/components/PluginManager.tsx:626
 msgid "Enable plugin MCP tools"
 msgstr "הפעלת כלי MCP של תוסף"
 
@@ -5507,8 +5506,8 @@ msgstr "יציאה ממצב ללא הסחות דעת (⌘⇧\\)"
 msgid "Expand block"
 msgstr "הרחבת הבלוק"
 
-#: packages/admin/src/components/PluginManager.tsx:571
-#: packages/admin/src/components/PluginManager.tsx:576
+#: packages/admin/src/components/PluginManager.tsx:573
+#: packages/admin/src/components/PluginManager.tsx:578
 msgid "Expand details"
 msgstr "הרחבת פרטים"
 
@@ -6606,7 +6605,7 @@ msgstr ""
 msgid "Failed to update menu item"
 msgstr ""
 
-#: packages/admin/src/components/PluginManager.tsx:339
+#: packages/admin/src/components/PluginManager.tsx:341
 #: packages/admin/src/lib/api/marketplace.ts:373
 #: packages/admin/src/lib/api/registry.ts:878
 msgid "Failed to update plugin"
@@ -7045,8 +7044,7 @@ msgstr "יתפרסם"
 msgid "Goes live {countdown}"
 msgstr "יתפרסם {countdown}"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:243
-#: packages/admin/src/components/settings/SeoSettings.tsx:250
+#: packages/admin/src/components/settings/SeoSettings.tsx:244
 msgid "Google Verification"
 msgstr "אימות Google"
 
@@ -7217,7 +7215,7 @@ msgstr "בית"
 msgid "Homepage"
 msgstr "דף הבית"
 
-#: packages/admin/src/components/PluginManager.tsx:497
+#: packages/admin/src/components/PluginManager.tsx:499
 msgid "Hooks"
 msgstr "Hooks של תוסף"
 
@@ -7745,11 +7743,11 @@ msgid "Installed"
 msgstr "מותקן"
 
 #. placeholder {0}: plugin.marketplaceVersion || plugin.version
-#: packages/admin/src/components/PluginManager.tsx:652
+#: packages/admin/src/components/PluginManager.tsx:654
 msgid "Installed from marketplace (v{0})"
 msgstr "הותקן מחנות התוספים (v{0})"
 
-#: packages/admin/src/components/PluginManager.tsx:673
+#: packages/admin/src/components/PluginManager.tsx:675
 msgid "Installed:"
 msgstr "מותקן:"
 
@@ -7989,7 +7987,7 @@ msgstr "כותרת מקטע גדולה"
 msgid "Last edited"
 msgstr "נערך לאחרונה"
 
-#: packages/admin/src/components/PluginManager.tsx:679
+#: packages/admin/src/components/PluginManager.tsx:681
 msgid "Last enabled:"
 msgstr "הופעל לאחרונה:"
 
@@ -8554,7 +8552,7 @@ msgid "Markdown"
 msgstr "תחביר Markdown"
 
 #: packages/admin/src/components/MarketplaceBrowse.tsx:87
-#: packages/admin/src/components/PluginManager.tsx:459
+#: packages/admin/src/components/PluginManager.tsx:461
 msgid "Marketplace"
 msgstr "חנות התוספים"
 
@@ -8787,11 +8785,11 @@ msgstr "מיזוג תאים נבחרים"
 msgid "Meta Description"
 msgstr "תיאור meta"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:262
+#: packages/admin/src/components/settings/SeoSettings.tsx:256
 msgid "Meta tag content for Bing Webmaster Tools verification"
 msgstr "תוכן תגית meta לאימות Bing Webmaster Tools"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:253
+#: packages/admin/src/components/settings/SeoSettings.tsx:247
 msgid "Meta tag content for Google Search Console verification"
 msgstr "תוכן תגית meta לאימות Google Search Console"
 
@@ -9626,7 +9624,7 @@ msgstr "עדיין לא נרשמו מפתחות גישה."
 msgid "No pending requests"
 msgstr "אין בקשות ממתינות"
 
-#: packages/admin/src/components/PluginManager.tsx:240
+#: packages/admin/src/components/PluginManager.tsx:242
 msgid "No plugins configured"
 msgstr "לא הוגדרו תוספים"
 
@@ -10067,7 +10065,7 @@ msgstr "מחליף את כותרת העמוד בתוצאות מנועי חיפו
 msgid "Ownership"
 msgstr "בעלות"
 
-#: packages/admin/src/components/PluginManager.tsx:661
+#: packages/admin/src/components/PluginManager.tsx:663
 msgid "Package"
 msgstr "חבילה"
 
@@ -10095,7 +10093,7 @@ msgstr "מספר עמוד"
 msgid "Page size"
 msgstr "גודל עמוד"
 
-#: packages/admin/src/components/PluginManager.tsx:485
+#: packages/admin/src/components/PluginManager.tsx:487
 #: packages/admin/src/components/WordPressImport.tsx:1382
 msgid "Pages"
 msgstr "עמודים"
@@ -10392,7 +10390,7 @@ msgstr "שגיאת תוסף ({0})"
 msgid "Plugin installation requires explicit consent"
 msgstr "התקנת תוסף דורשת הסכמה מפורשת"
 
-#: packages/admin/src/components/PluginManager.tsx:408
+#: packages/admin/src/components/PluginManager.tsx:410
 msgid "Plugin MCP access updated"
 msgstr "גישת MCP של תוסף עודכנה"
 
@@ -10413,7 +10411,7 @@ msgstr "התוסף לא נמצא"
 msgid "Plugin not found. The publisher or slug may be incorrect."
 msgstr "התוסף לא נמצא. ייתכן שהמפרסם או ה-slug אינם תקינים."
 
-#: packages/admin/src/components/PluginManager.tsx:554
+#: packages/admin/src/components/PluginManager.tsx:556
 msgid "Plugin pages"
 msgstr "עמודי תוסף"
 
@@ -10451,7 +10449,7 @@ msgstr "התוסף השיב עם {0}: {text}"
 msgid "Plugin tools: {0}"
 msgstr "כלי תוסף: {0}"
 
-#: packages/admin/src/components/PluginManager.tsx:397
+#: packages/admin/src/components/PluginManager.tsx:399
 msgid "Plugin uninstalled"
 msgstr "התוסף הוסר"
 
@@ -10460,7 +10458,7 @@ msgstr "התוסף הוסר"
 msgid "Plugin update requires re-consent"
 msgstr "עדכון תוסף דורש הסכמה מחדש"
 
-#: packages/admin/src/components/PluginManager.tsx:306
+#: packages/admin/src/components/PluginManager.tsx:308
 msgid "Plugin updated"
 msgstr "התוסף עודכן"
 
@@ -11025,7 +11023,7 @@ msgid "Registration was cancelled or timed out. Please try again."
 msgstr "ההרשמה בוטלה או שתם זמנה. נסו שוב."
 
 #: packages/admin/src/components/PluginManager.tsx:217
-#: packages/admin/src/components/PluginManager.tsx:460
+#: packages/admin/src/components/PluginManager.tsx:462
 #: packages/admin/src/components/Sidebar.tsx:549
 msgid "Registry"
 msgstr "רישום"
@@ -11737,8 +11735,8 @@ msgstr "ימין"
 msgid "Risk score: {0}/100"
 msgstr "ציון סיכון: {0}/100"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:267
-#: packages/admin/src/components/settings/SeoSettings.tsx:271
+#: packages/admin/src/components/settings/SeoSettings.tsx:261
+#: packages/admin/src/components/settings/SeoSettings.tsx:265
 msgid "robots.txt"
 msgstr "קובץ robots.txt"
 
@@ -11773,7 +11771,7 @@ msgstr "ניתן לניתוב"
 #. placeholder {0}: tool.route
 #. placeholder {1}: tool.permission
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:307
-#: packages/admin/src/components/PluginManager.tsx:637
+#: packages/admin/src/components/PluginManager.tsx:639
 msgid "Route: {0} · Permission: {1}"
 msgstr "נתיב: {0} · הרשאה: {1}"
 
@@ -12148,6 +12146,10 @@ msgstr "אופטימיזציה למנועי חיפוש"
 msgid "Search engine optimization and verification"
 msgstr "אופטימיזציה למנועי חיפוש ואימות"
 
+#: packages/admin/src/components/settings/SeoSettings.tsx:240
+msgid "Search Engine Verification"
+msgstr ""
+
 #: packages/admin/src/components/editor/LinkDestinationInput.tsx:79
 msgid "Search failed"
 msgstr "החיפוש נכשל"
@@ -12429,7 +12431,7 @@ msgstr "בחירת תוכן"
 msgid "Select dark mode variant for {label}"
 msgstr "בחירת גרסה למצב כהה עבור {label}"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:313
+#: packages/admin/src/components/settings/SeoSettings.tsx:307
 msgid "Select default social image"
 msgstr "בחירת תמונה חברתית כברירת מחדל"
 
@@ -12670,7 +12672,7 @@ msgstr "בהגדרה..."
 #: packages/admin/src/components/ContentEditor.tsx:2306
 #: packages/admin/src/components/ContentTypeEditor.tsx:467
 #: packages/admin/src/components/Header.tsx:104
-#: packages/admin/src/components/PluginManager.tsx:543
+#: packages/admin/src/components/PluginManager.tsx:545
 #: packages/admin/src/components/Settings.tsx:46
 #: packages/admin/src/components/Sidebar.tsx:563
 #: packages/admin/src/components/WordPressImport.tsx:1868
@@ -13067,7 +13069,7 @@ msgstr "מיון ערכות עיצוב"
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:568
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:790
 #: packages/admin/src/components/MarketplacePluginDetail.tsx:236
-#: packages/admin/src/components/PluginManager.tsx:649
+#: packages/admin/src/components/PluginManager.tsx:651
 #: packages/admin/src/components/Redirects.tsx:492
 #: packages/admin/src/components/SectionEditor.tsx:316
 msgid "Source"
@@ -14172,7 +14174,7 @@ msgstr "תוסף זה עדיין אינו זמין"
 msgid "This plugin requires no special permissions."
 msgstr "תוסף זה אינו דורש הרשאות מיוחדות."
 
-#: packages/admin/src/components/PluginManager.tsx:470
+#: packages/admin/src/components/PluginManager.tsx:472
 msgid "This publisher identity no longer resolves."
 msgstr "זהות מפרסם זו אינה נפתרת עוד."
 
@@ -14316,7 +14318,7 @@ msgstr "פעולה זו תמחק לצמיתות את \"{0}\". לא ניתן לב
 msgid "This will permanently delete this comment. This action cannot be undone."
 msgstr "פעולה זו תמחק תגובה זו לצמיתות. לא ניתן לבטל פעולה זו."
 
-#: packages/admin/src/components/PluginManager.tsx:806
+#: packages/admin/src/components/PluginManager.tsx:808
 msgid "This will remove the plugin and its bundle from your site."
 msgstr "פעולה זו תסיר את התוסף ואת החבילה שלו מהאתר שלכם."
 
@@ -14684,20 +14686,20 @@ msgid "Unfinished media uploads were left out"
 msgstr "העלאות מדיה שלא הסתיימו הושמטו"
 
 #: packages/admin/src/components/MarketplacePluginDetail.tsx:202
-#: packages/admin/src/components/PluginManager.tsx:701
-#: packages/admin/src/components/PluginManager.tsx:820
+#: packages/admin/src/components/PluginManager.tsx:703
+#: packages/admin/src/components/PluginManager.tsx:822
 msgid "Uninstall"
 msgstr "הסרה"
 
-#: packages/admin/src/components/PluginManager.tsx:804
+#: packages/admin/src/components/PluginManager.tsx:806
 msgid "Uninstall {pluginName}?"
 msgstr "להסיר את {pluginName}?"
 
-#: packages/admin/src/components/PluginManager.tsx:799
+#: packages/admin/src/components/PluginManager.tsx:801
 msgid "Uninstall confirmation"
 msgstr "אישור הסרה"
 
-#: packages/admin/src/components/PluginManager.tsx:820
+#: packages/admin/src/components/PluginManager.tsx:822
 msgid "Uninstalling..."
 msgstr "בהסרה..."
 
@@ -14858,7 +14860,7 @@ msgid "Update this redirect rule."
 msgstr "עדכנו כלל הפניה זה."
 
 #. placeholder {0}: updateInfo.latest
-#: packages/admin/src/components/PluginManager.tsx:535
+#: packages/admin/src/components/PluginManager.tsx:537
 msgid "Update to v{0}"
 msgstr "עדכון לגרסה v{0}"
 
@@ -14885,7 +14887,7 @@ msgid "Updating usage"
 msgstr "מתבצע עדכון שימוש"
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:355
-#: packages/admin/src/components/PluginManager.tsx:535
+#: packages/admin/src/components/PluginManager.tsx:537
 #: packages/admin/src/components/SandboxedPluginPage.tsx:161
 #: packages/admin/src/components/SandboxedPluginPage.tsx:165
 #: packages/admin/src/components/SandboxedPluginWidget.tsx:122
@@ -15206,7 +15208,7 @@ msgid "v{0}"
 msgstr "גרסה {0}"
 
 #. placeholder {0}: updateInfo.latest
-#: packages/admin/src/components/PluginManager.tsx:463
+#: packages/admin/src/components/PluginManager.tsx:465
 msgid "v{0} available"
 msgstr "גרסה v{0} זמינה"
 
@@ -15582,7 +15584,7 @@ msgid "Widget updated"
 msgstr "הווידג׳ט עודכן"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:186
-#: packages/admin/src/components/PluginManager.tsx:491
+#: packages/admin/src/components/PluginManager.tsx:493
 #: packages/admin/src/components/settings/transfer/labels.ts:31
 #: packages/admin/src/components/settings/transfer/labels.ts:91
 #: packages/admin/src/components/Sidebar.tsx:488

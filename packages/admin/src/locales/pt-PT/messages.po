@@ -156,7 +156,7 @@ msgid "{0, plural, one {# matching tag} other {# matching tags}}"
 msgstr "{0, plural, one {# etiqueta correspondente} other {# etiquetas correspondentes}}"
 
 #. placeholder {0}: mcpTools.length
-#: packages/admin/src/components/PluginManager.tsx:503
+#: packages/admin/src/components/PluginManager.tsx:505
 msgid "{0, plural, one {# MCP tool} other {# MCP tools}}"
 msgstr "{0, plural, one {# ferramenta MCP} other {# ferramentas MCP}}"
 
@@ -187,9 +187,14 @@ msgstr "{0, plural, one {# permissão pedida} other {# permissões pedidas}}"
 
 #. placeholder {0}: plugin.capabilities.length
 #: packages/admin/src/components/MarketplaceBrowse.tsx:290
-#: packages/admin/src/components/PluginManager.tsx:517
+#: packages/admin/src/components/PluginManager.tsx:519
 msgid "{0, plural, one {# permission} other {# permissions}}"
 msgstr "{0, plural, one {# permissão} other {# permissões}}"
+
+#. placeholder {0}: plugins?.length ?? 0
+#: packages/admin/src/components/PluginManager.tsx:221
+msgid "{0, plural, one {# plugin} other {# plugins}}"
+msgstr ""
 
 #. placeholder {0}: mapping.postCount
 #: packages/admin/src/components/WordPressImport.tsx:2545
@@ -344,7 +349,7 @@ msgid "{0} has been deactivated"
 msgstr "{0} foi desativado"
 
 #. placeholder {0}: plugin.name
-#: packages/admin/src/components/PluginManager.tsx:398
+#: packages/admin/src/components/PluginManager.tsx:400
 msgid "{0} has been removed"
 msgstr "{0} foi removido"
 
@@ -431,11 +436,6 @@ msgstr "Não foi possível atualizar {0} de {total}"
 msgid "{0} of media, {1} of records"
 msgstr "{0} de multimédia, {1} de registos"
 
-#. placeholder {0}: plugins?.length ?? 0
-#: packages/admin/src/components/PluginManager.tsx:220
-msgid "{0} plugins"
-msgstr "{0} plugins"
-
 #. placeholder {0}: theme.name
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:206
 msgid "{0} preview"
@@ -464,7 +464,7 @@ msgid "{0} updated everywhere it appears."
 msgstr "Crédito de {0} atualizado em todos os locais onde aparece."
 
 #. placeholder {0}: plugin.name
-#: packages/admin/src/components/PluginManager.tsx:307
+#: packages/admin/src/components/PluginManager.tsx:309
 msgid "{0} updated to v{installedVersion}"
 msgstr "{0} atualizado para v{installedVersion}"
 
@@ -1543,7 +1543,7 @@ msgstr "Dados adicionais a importar."
 msgid "Additional details"
 msgstr "Detalhes adicionais"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:282
+#: packages/admin/src/components/settings/SeoSettings.tsx:276
 msgid "Adds rules to robots.txt that ask AI crawlers not to use this site for training. Search engines can still index it."
 msgstr ""
 
@@ -1590,12 +1590,12 @@ msgstr "Depois de invocar explicitamente este plugin, este pode enviar conteúdo
 msgid "Agenda"
 msgstr "Agenda"
 
-#: packages/admin/src/components/PluginManager.tsx:612
+#: packages/admin/src/components/PluginManager.tsx:614
 msgid "Agent access"
 msgstr "Acesso de agentes"
 
 #. placeholder {0}: plugin.name
-#: packages/admin/src/components/PluginManager.tsx:409
+#: packages/admin/src/components/PluginManager.tsx:411
 msgid "Agent access for {0} has been updated"
 msgstr "O acesso de agentes para {0} foi atualizado"
 
@@ -1684,7 +1684,7 @@ msgstr "Todos os tipos"
 msgid "All uploads finished"
 msgstr "Todos os carregamentos terminaram"
 
-#: packages/admin/src/components/PluginManager.tsx:614
+#: packages/admin/src/components/PluginManager.tsx:616
 msgid "Allow MCP tokens with plugin-tool scope to invoke these routes."
 msgstr "Permitir que tokens MCP com o âmbito plugin-tool invoquem estas rotas."
 
@@ -1721,7 +1721,7 @@ msgstr "Já atribuído ou duplicado"
 msgid "Already have an account?"
 msgstr "Já tem conta?"
 
-#: packages/admin/src/components/PluginManager.tsx:811
+#: packages/admin/src/components/PluginManager.tsx:813
 msgid "Also delete plugin storage data"
 msgstr "Eliminar também os dados de armazenamento do plugin"
 
@@ -1786,7 +1786,7 @@ msgstr "Uma chave digital encriptada que desbloqueia com a impressão digital, o
 #: packages/admin/src/components/MarketplaceBrowse.tsx:135
 #: packages/admin/src/components/PluginManager.tsx:143
 #: packages/admin/src/components/PluginManager.tsx:162
-#: packages/admin/src/components/PluginManager.tsx:340
+#: packages/admin/src/components/PluginManager.tsx:342
 #: packages/admin/src/components/PluginSettings.tsx:75
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:85
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:108
@@ -2292,8 +2292,7 @@ msgstr "Antes de continuar:"
 msgid "Between {min} and {max}"
 msgstr "Entre {min} e {max}"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:243
-#: packages/admin/src/components/settings/SeoSettings.tsx:259
+#: packages/admin/src/components/settings/SeoSettings.tsx:253
 msgid "Bing Verification"
 msgstr "Verificação do Bing"
 
@@ -2531,7 +2530,7 @@ msgstr "Pode ver conteúdo"
 #: packages/admin/src/components/MenuEditor.tsx:548
 #: packages/admin/src/components/MenuEditor.tsx:754
 #: packages/admin/src/components/MenuList.tsx:184
-#: packages/admin/src/components/PluginManager.tsx:817
+#: packages/admin/src/components/PluginManager.tsx:819
 #: packages/admin/src/components/PortableTextEditor.tsx:5773
 #: packages/admin/src/components/PortableTextEditor.tsx:5799
 #: packages/admin/src/components/PortableTextEditor.tsx:6547
@@ -2592,7 +2591,7 @@ msgstr "Não é possível eliminar secções do tema"
 msgid "Canonical URL"
 msgstr "URL canónico"
 
-#: packages/admin/src/components/PluginManager.tsx:588
+#: packages/admin/src/components/PluginManager.tsx:590
 msgid "Capabilities"
 msgstr "Capacidades"
 
@@ -3151,8 +3150,8 @@ msgstr "Ações do bloco de código"
 msgid "Collapse block"
 msgstr "Recolher bloco"
 
-#: packages/admin/src/components/PluginManager.tsx:571
-#: packages/admin/src/components/PluginManager.tsx:576
+#: packages/admin/src/components/PluginManager.tsx:573
+#: packages/admin/src/components/PluginManager.tsx:578
 msgid "Collapse details"
 msgstr "Fechar detalhes"
 
@@ -4029,7 +4028,7 @@ msgstr "Personalizada"
 msgid "Custom Fields"
 msgstr "Campos personalizados"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:275
+#: packages/admin/src/components/settings/SeoSettings.tsx:269
 msgid "Custom robots.txt content. Leave empty to use the default."
 msgstr "Conteúdo personalizado do robots.txt. Deixe vazio para utilizar a predefinição."
 
@@ -4461,7 +4460,7 @@ msgid "Destination path"
 msgstr "Caminho de destino"
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:311
-#: packages/admin/src/components/PluginManager.tsx:633
+#: packages/admin/src/components/PluginManager.tsx:635
 msgid "Destructive"
 msgstr "Destrutiva"
 
@@ -4506,11 +4505,11 @@ msgstr "Dimensões:"
 msgid "Disable"
 msgstr "Desativar"
 
-#: packages/admin/src/components/PluginManager.tsx:565
+#: packages/admin/src/components/PluginManager.tsx:567
 msgid "Disable plugin"
 msgstr "Desativar plugin"
 
-#: packages/admin/src/components/PluginManager.tsx:623
+#: packages/admin/src/components/PluginManager.tsx:625
 msgid "Disable plugin MCP tools"
 msgstr "Desativar as ferramentas MCP do plugin"
 
@@ -4526,14 +4525,14 @@ msgstr "Desativar utilizador"
 msgid "Disable User?"
 msgstr "Desativar utilizador?"
 
-#: packages/admin/src/components/PluginManager.tsx:458
+#: packages/admin/src/components/PluginManager.tsx:460
 #: packages/admin/src/components/Redirects.tsx:399
 #: packages/admin/src/components/users/UserDetail.tsx:214
 #: packages/admin/src/components/users/UserList.tsx:209
 msgid "Disabled"
 msgstr "Desativado"
 
-#: packages/admin/src/components/PluginManager.tsx:685
+#: packages/admin/src/components/PluginManager.tsx:687
 msgid "Disabled:"
 msgstr "Desativado:"
 
@@ -4546,8 +4545,8 @@ msgstr "Desativar <0>{0}</0> impede o início de sessão até a conta ser reativ
 msgid "Disabling..."
 msgstr "A desativar..."
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:280
-#: packages/admin/src/components/settings/SeoSettings.tsx:290
+#: packages/admin/src/components/settings/SeoSettings.tsx:274
+#: packages/admin/src/components/settings/SeoSettings.tsx:284
 msgid "Disallow AI training"
 msgstr ""
 
@@ -5281,11 +5280,11 @@ msgstr "Ativar comentários"
 msgid "Enable full-text search on this collection"
 msgstr "Ativar pesquisa de texto integral nesta coleção"
 
-#: packages/admin/src/components/PluginManager.tsx:565
+#: packages/admin/src/components/PluginManager.tsx:567
 msgid "Enable plugin"
 msgstr "Ativar plugin"
 
-#: packages/admin/src/components/PluginManager.tsx:624
+#: packages/admin/src/components/PluginManager.tsx:626
 msgid "Enable plugin MCP tools"
 msgstr "Ativar as ferramentas MCP do plugin"
 
@@ -5506,8 +5505,8 @@ msgstr "Sair do modo sem distrações (⌘⇧\\)"
 msgid "Expand block"
 msgstr "Expandir bloco"
 
-#: packages/admin/src/components/PluginManager.tsx:571
-#: packages/admin/src/components/PluginManager.tsx:576
+#: packages/admin/src/components/PluginManager.tsx:573
+#: packages/admin/src/components/PluginManager.tsx:578
 msgid "Expand details"
 msgstr "Expandir detalhes"
 
@@ -6605,7 +6604,7 @@ msgstr ""
 msgid "Failed to update menu item"
 msgstr ""
 
-#: packages/admin/src/components/PluginManager.tsx:339
+#: packages/admin/src/components/PluginManager.tsx:341
 #: packages/admin/src/lib/api/marketplace.ts:373
 #: packages/admin/src/lib/api/registry.ts:878
 msgid "Failed to update plugin"
@@ -7044,8 +7043,7 @@ msgstr "Publicação"
 msgid "Goes live {countdown}"
 msgstr "Publicação {countdown}"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:243
-#: packages/admin/src/components/settings/SeoSettings.tsx:250
+#: packages/admin/src/components/settings/SeoSettings.tsx:244
 msgid "Google Verification"
 msgstr "Verificação do Google"
 
@@ -7216,7 +7214,7 @@ msgstr "Início"
 msgid "Homepage"
 msgstr "Página inicial"
 
-#: packages/admin/src/components/PluginManager.tsx:497
+#: packages/admin/src/components/PluginManager.tsx:499
 msgid "Hooks"
 msgstr "Hooks"
 
@@ -7744,11 +7742,11 @@ msgid "Installed"
 msgstr "Instalado"
 
 #. placeholder {0}: plugin.marketplaceVersion || plugin.version
-#: packages/admin/src/components/PluginManager.tsx:652
+#: packages/admin/src/components/PluginManager.tsx:654
 msgid "Installed from marketplace (v{0})"
 msgstr "Instalado a partir do marketplace (v{0})"
 
-#: packages/admin/src/components/PluginManager.tsx:673
+#: packages/admin/src/components/PluginManager.tsx:675
 msgid "Installed:"
 msgstr "Instalado:"
 
@@ -7988,7 +7986,7 @@ msgstr "Título de secção grande"
 msgid "Last edited"
 msgstr "Última edição"
 
-#: packages/admin/src/components/PluginManager.tsx:679
+#: packages/admin/src/components/PluginManager.tsx:681
 msgid "Last enabled:"
 msgstr "Última ativação:"
 
@@ -8553,7 +8551,7 @@ msgid "Markdown"
 msgstr "Markdown"
 
 #: packages/admin/src/components/MarketplaceBrowse.tsx:87
-#: packages/admin/src/components/PluginManager.tsx:459
+#: packages/admin/src/components/PluginManager.tsx:461
 msgid "Marketplace"
 msgstr "Marketplace"
 
@@ -8786,11 +8784,11 @@ msgstr "Unir células selecionadas"
 msgid "Meta Description"
 msgstr "Meta descrição"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:262
+#: packages/admin/src/components/settings/SeoSettings.tsx:256
 msgid "Meta tag content for Bing Webmaster Tools verification"
 msgstr "Conteúdo da meta tag para a verificação do Bing Webmaster Tools"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:253
+#: packages/admin/src/components/settings/SeoSettings.tsx:247
 msgid "Meta tag content for Google Search Console verification"
 msgstr "Conteúdo da meta tag para a verificação do Google Search Console"
 
@@ -9625,7 +9623,7 @@ msgstr "Ainda não existem chaves de acesso registadas."
 msgid "No pending requests"
 msgstr "Nenhum pedido pendente"
 
-#: packages/admin/src/components/PluginManager.tsx:240
+#: packages/admin/src/components/PluginManager.tsx:242
 msgid "No plugins configured"
 msgstr "Nenhum plugin configurado"
 
@@ -10066,7 +10064,7 @@ msgstr "Substitui o título da página nos resultados dos motores de pesquisa"
 msgid "Ownership"
 msgstr "Propriedade"
 
-#: packages/admin/src/components/PluginManager.tsx:661
+#: packages/admin/src/components/PluginManager.tsx:663
 msgid "Package"
 msgstr "Pacote"
 
@@ -10094,7 +10092,7 @@ msgstr "Número da página"
 msgid "Page size"
 msgstr "Tamanho da página"
 
-#: packages/admin/src/components/PluginManager.tsx:485
+#: packages/admin/src/components/PluginManager.tsx:487
 #: packages/admin/src/components/WordPressImport.tsx:1382
 msgid "Pages"
 msgstr "Páginas"
@@ -10391,7 +10389,7 @@ msgstr "Erro do plugin ({0})"
 msgid "Plugin installation requires explicit consent"
 msgstr "A instalação do plugin exige consentimento explícito"
 
-#: packages/admin/src/components/PluginManager.tsx:408
+#: packages/admin/src/components/PluginManager.tsx:410
 msgid "Plugin MCP access updated"
 msgstr "Acesso MCP do plugin atualizado"
 
@@ -10412,7 +10410,7 @@ msgstr "Plugin não encontrado"
 msgid "Plugin not found. The publisher or slug may be incorrect."
 msgstr "Plugin não encontrado. O autor ou o slug podem estar incorretos."
 
-#: packages/admin/src/components/PluginManager.tsx:554
+#: packages/admin/src/components/PluginManager.tsx:556
 msgid "Plugin pages"
 msgstr "Páginas do plugin"
 
@@ -10450,7 +10448,7 @@ msgstr "O plugin respondeu com {0}: {text}"
 msgid "Plugin tools: {0}"
 msgstr "Ferramentas do plugin: {0}"
 
-#: packages/admin/src/components/PluginManager.tsx:397
+#: packages/admin/src/components/PluginManager.tsx:399
 msgid "Plugin uninstalled"
 msgstr "Plugin desinstalado"
 
@@ -10459,7 +10457,7 @@ msgstr "Plugin desinstalado"
 msgid "Plugin update requires re-consent"
 msgstr "A atualização do plugin exige um novo consentimento"
 
-#: packages/admin/src/components/PluginManager.tsx:306
+#: packages/admin/src/components/PluginManager.tsx:308
 msgid "Plugin updated"
 msgstr "Plugin atualizado"
 
@@ -11024,7 +11022,7 @@ msgid "Registration was cancelled or timed out. Please try again."
 msgstr "O registo foi cancelado ou expirou. Tente novamente."
 
 #: packages/admin/src/components/PluginManager.tsx:217
-#: packages/admin/src/components/PluginManager.tsx:460
+#: packages/admin/src/components/PluginManager.tsx:462
 #: packages/admin/src/components/Sidebar.tsx:549
 msgid "Registry"
 msgstr "Registo"
@@ -11736,8 +11734,8 @@ msgstr "Direita"
 msgid "Risk score: {0}/100"
 msgstr "Pontuação de risco: {0}/100"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:267
-#: packages/admin/src/components/settings/SeoSettings.tsx:271
+#: packages/admin/src/components/settings/SeoSettings.tsx:261
+#: packages/admin/src/components/settings/SeoSettings.tsx:265
 msgid "robots.txt"
 msgstr "robots.txt"
 
@@ -11772,7 +11770,7 @@ msgstr "Com rota própria"
 #. placeholder {0}: tool.route
 #. placeholder {1}: tool.permission
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:307
-#: packages/admin/src/components/PluginManager.tsx:637
+#: packages/admin/src/components/PluginManager.tsx:639
 msgid "Route: {0} · Permission: {1}"
 msgstr "Rota: {0} · Permissão: {1}"
 
@@ -12147,6 +12145,10 @@ msgstr "Otimização para motores de pesquisa"
 msgid "Search engine optimization and verification"
 msgstr "Otimização e verificação para motores de pesquisa"
 
+#: packages/admin/src/components/settings/SeoSettings.tsx:240
+msgid "Search Engine Verification"
+msgstr ""
+
 #: packages/admin/src/components/editor/LinkDestinationInput.tsx:79
 msgid "Search failed"
 msgstr "A pesquisa falhou"
@@ -12428,7 +12430,7 @@ msgstr "Selecionar conteúdo"
 msgid "Select dark mode variant for {label}"
 msgstr "Selecionar a variante do modo escuro de {label}"
 
-#: packages/admin/src/components/settings/SeoSettings.tsx:313
+#: packages/admin/src/components/settings/SeoSettings.tsx:307
 msgid "Select default social image"
 msgstr "Selecionar imagem social predefinida"
 
@@ -12669,7 +12671,7 @@ msgstr "A configurar..."
 #: packages/admin/src/components/ContentEditor.tsx:2306
 #: packages/admin/src/components/ContentTypeEditor.tsx:467
 #: packages/admin/src/components/Header.tsx:104
-#: packages/admin/src/components/PluginManager.tsx:543
+#: packages/admin/src/components/PluginManager.tsx:545
 #: packages/admin/src/components/Settings.tsx:46
 #: packages/admin/src/components/Sidebar.tsx:563
 #: packages/admin/src/components/WordPressImport.tsx:1868
@@ -13066,7 +13068,7 @@ msgstr "Ordenar temas"
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:568
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:790
 #: packages/admin/src/components/MarketplacePluginDetail.tsx:236
-#: packages/admin/src/components/PluginManager.tsx:649
+#: packages/admin/src/components/PluginManager.tsx:651
 #: packages/admin/src/components/Redirects.tsx:492
 #: packages/admin/src/components/SectionEditor.tsx:316
 msgid "Source"
@@ -14171,7 +14173,7 @@ msgstr "Este plugin ainda não está disponível"
 msgid "This plugin requires no special permissions."
 msgstr "Este plugin não requer permissões especiais."
 
-#: packages/admin/src/components/PluginManager.tsx:470
+#: packages/admin/src/components/PluginManager.tsx:472
 msgid "This publisher identity no longer resolves."
 msgstr "A identidade deste autor já não é resolvida."
 
@@ -14315,7 +14317,7 @@ msgstr "Isto irá eliminar permanentemente \"{0}\". Esta ação não pode ser an
 msgid "This will permanently delete this comment. This action cannot be undone."
 msgstr "Isto irá eliminar permanentemente este comentário. Esta ação não pode ser anulada."
 
-#: packages/admin/src/components/PluginManager.tsx:806
+#: packages/admin/src/components/PluginManager.tsx:808
 msgid "This will remove the plugin and its bundle from your site."
 msgstr "Isto irá remover o plugin e o respetivo pacote do site."
 
@@ -14683,20 +14685,20 @@ msgid "Unfinished media uploads were left out"
 msgstr "Os carregamentos multimédia não concluídos foram omitidos"
 
 #: packages/admin/src/components/MarketplacePluginDetail.tsx:202
-#: packages/admin/src/components/PluginManager.tsx:701
-#: packages/admin/src/components/PluginManager.tsx:820
+#: packages/admin/src/components/PluginManager.tsx:703
+#: packages/admin/src/components/PluginManager.tsx:822
 msgid "Uninstall"
 msgstr "Desinstalar"
 
-#: packages/admin/src/components/PluginManager.tsx:804
+#: packages/admin/src/components/PluginManager.tsx:806
 msgid "Uninstall {pluginName}?"
 msgstr "Desinstalar {pluginName}?"
 
-#: packages/admin/src/components/PluginManager.tsx:799
+#: packages/admin/src/components/PluginManager.tsx:801
 msgid "Uninstall confirmation"
 msgstr "Confirmação de desinstalação"
 
-#: packages/admin/src/components/PluginManager.tsx:820
+#: packages/admin/src/components/PluginManager.tsx:822
 msgid "Uninstalling..."
 msgstr "A desinstalar..."
 
@@ -14857,7 +14859,7 @@ msgid "Update this redirect rule."
 msgstr "Atualize esta regra de redirecionamento."
 
 #. placeholder {0}: updateInfo.latest
-#: packages/admin/src/components/PluginManager.tsx:535
+#: packages/admin/src/components/PluginManager.tsx:537
 msgid "Update to v{0}"
 msgstr "Atualizar para v{0}"
 
@@ -14884,7 +14886,7 @@ msgid "Updating usage"
 msgstr "A atualizar utilizações"
 
 #: packages/admin/src/components/CapabilityConsentDialog.tsx:355
-#: packages/admin/src/components/PluginManager.tsx:535
+#: packages/admin/src/components/PluginManager.tsx:537
 #: packages/admin/src/components/SandboxedPluginPage.tsx:161
 #: packages/admin/src/components/SandboxedPluginPage.tsx:165
 #: packages/admin/src/components/SandboxedPluginWidget.tsx:122
@@ -15205,7 +15207,7 @@ msgid "v{0}"
 msgstr "v{0}"
 
 #. placeholder {0}: updateInfo.latest
-#: packages/admin/src/components/PluginManager.tsx:463
+#: packages/admin/src/components/PluginManager.tsx:465
 msgid "v{0} available"
 msgstr "v{0} disponível"
 
@@ -15581,7 +15583,7 @@ msgid "Widget updated"
 msgstr "Widget atualizado"
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:186
-#: packages/admin/src/components/PluginManager.tsx:491
+#: packages/admin/src/components/PluginManager.tsx:493
 #: packages/admin/src/components/settings/transfer/labels.ts:31
 #: packages/admin/src/components/settings/transfer/labels.ts:91
 #: packages/admin/src/components/Sidebar.tsx:488
