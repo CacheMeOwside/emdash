@@ -2,6 +2,8 @@
 "@emdash-cms/plugin-ai-search": minor
 ---
 
-Adds `@emdash-cms/plugin-ai-search`, a plugin that indexes published content and author profiles into Cloudflare AI Search and keeps the index current as content changes. Set it up from the admin wizard, then add the `AiSearch` Astro component to a layout for a search button and modal. Requires EmDash 1.0.1 or later, Cloudflare Workers, and an `ai_search_namespaces` binding. See the [AI Search plugin guide](https://docs.emdashcms.com/plugins/ai-search/).
+Adds `@emdash-cms/plugin-ai-search`, a site search plugin powered by Cloudflare AI Search. It indexes published content and author profiles, keeps the index current as content changes, and adds an `AiSearch` component with a search button and modal. Choose what to index in the plugin's setup wizard in the admin. Requires EmDash 1.0.1 or later.
 
-It replaces `aiSearch` from `@emdash-cms/cloudflare/plugins`; the guide covers switching.
+The plugin connects through an AI Search binding on Cloudflare Workers, or through a Cloudflare API token on any platform, including Node.js.
+
+This plugin replaces `aiSearch` from `@emdash-cms/cloudflare/plugins`. The [AI Search plugin guide](https://docs.emdashcms.com/plugins/ai-search/) covers setup, API token rate limits and switching.
