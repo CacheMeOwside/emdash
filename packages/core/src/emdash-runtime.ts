@@ -3388,9 +3388,10 @@ export class EmDashRuntime {
 		id: string,
 		locale?: string,
 		referenceOptions?: { includeDrafts: boolean },
+		draftOptions?: { includeStagedSlug?: boolean },
 	) {
 		const result = await handleContentGet(this.db, collection, id, locale, referenceOptions);
-		return this.hydrateDraftData(result);
+		return this.hydrateDraftData(result, draftOptions);
 	}
 
 	async handleContentGetIncludingTrashed(collection: string, id: string, locale?: string) {
