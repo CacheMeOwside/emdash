@@ -185,12 +185,12 @@ msgid "{0, plural, one {(# item)} other {(# items)}}"
 msgstr "{0, plural, one {(# öğe)} other {(# öğe)}}"
 
 #. placeholder {0}: bounds.max
-#: packages/admin/src/components/ContentEditor.tsx:3201
+#: packages/admin/src/components/ContentEditor.tsx:3208
 msgid "{0, plural, one {{counted} of # character, at least {min}} other {{counted} of # characters, at least {min}}}"
 msgstr "{0, plural, one {{counted} / # karakter, en az {min}} other {{counted} / # karakter, en az {min}}}"
 
 #. placeholder {0}: bounds.max
-#: packages/admin/src/components/ContentEditor.tsx:3206
+#: packages/admin/src/components/ContentEditor.tsx:3213
 msgid "{0, plural, one {{counted} of # character} other {{counted} of # characters}}"
 msgstr "{0, plural, one {{counted} / # karakter} other {{counted} / # karakter}}"
 
@@ -237,12 +237,12 @@ msgid "{0, plural, one {# entry} other {# entries}}"
 msgstr "{0, plural, one {# kayıt} other {# kayıt}}"
 
 #. placeholder {0}: uploadQueue.jobs.filter( (job) => job.status === "queued" || job.status === "uploading", ).length
-#: packages/admin/src/components/MediaPickerModal.tsx:1654
+#: packages/admin/src/components/MediaPickerModal.tsx:1660
 msgid "{0, plural, one {# file uploading} other {# files uploading}}"
 msgstr "{0, plural, one {# dosya yükleniyor} other {# dosya yükleniyor}}"
 
 #. placeholder {0}: uploadQueue.overflowCount
-#: packages/admin/src/components/MediaPickerModal.tsx:1335
+#: packages/admin/src/components/MediaPickerModal.tsx:1341
 msgid "{0, plural, one {# file was not added because the upload list is full.} other {# files were not added because the upload list is full.}}"
 msgstr "{0, plural, one {Yükleme listesi dolu olduğu için # dosya eklenmedi.} other {Yükleme listesi dolu olduğu için # dosya eklenmedi.}}"
 
@@ -362,7 +362,7 @@ msgid "{0, plural, one {# taxonomy created} other {# taxonomies created}}"
 msgstr "{0, plural, one {# sınıflandırma oluşturuldu} other {# sınıflandırma oluşturuldu}}"
 
 #. placeholder {0}: uploadQueue.failedCount
-#: packages/admin/src/components/MediaPickerModal.tsx:1661
+#: packages/admin/src/components/MediaPickerModal.tsx:1667
 msgid "{0, plural, one {# upload failed} other {# uploads failed}}"
 msgstr "{0, plural, one {# yükleme başarısız oldu} other {# yükleme başarısız oldu}}"
 
@@ -372,22 +372,22 @@ msgid "{0, plural, one {+# more} other {+# more}}"
 msgstr "{0, plural, one {+# tane daha} other {+# tane daha}}"
 
 #. placeholder {0}: selectedItems.length
-#: packages/admin/src/components/MediaPickerModal.tsx:881
+#: packages/admin/src/components/MediaPickerModal.tsx:887
 msgid "{0, plural, one {Add # file} other {Add # files}}"
 msgstr "{0, plural, one {# dosya ekle} other {# dosya ekle}}"
 
 #. placeholder {0}: selectedItems.length
-#: packages/admin/src/components/MediaPickerModal.tsx:884
+#: packages/admin/src/components/MediaPickerModal.tsx:890
 msgid "{0, plural, one {Add # image} other {Add # images}}"
 msgstr "{0, plural, one {# görsel ekle} other {# görsel ekle}}"
 
 #. placeholder {0}: selectedItems.length
-#: packages/admin/src/components/MediaPickerModal.tsx:883
+#: packages/admin/src/components/MediaPickerModal.tsx:889
 msgid "{0, plural, one {Add # video} other {Add # videos}}"
 msgstr "{0, plural, one {# video ekle} other {# video ekle}}"
 
 #. placeholder {0}: bounds.min
-#: packages/admin/src/components/ContentEditor.tsx:3211
+#: packages/admin/src/components/ContentEditor.tsx:3218
 msgid "{0, plural, one {At least # character} other {At least # characters}}"
 msgstr "{0, plural, one {En az # karakter} other {En az # karakter}}"
 
@@ -875,7 +875,7 @@ msgstr "{0} gönderinin {ready} tanesi hazır"
 msgid "{records, plural, one {# record written} other {# records written}}"
 msgstr "{records, plural, one {# kayıt yazıldı} other {# kayıt yazıldı}}"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:969
+#: packages/admin/src/components/MediaPickerModal.tsx:975
 msgid "{rejectedCount, plural, one {# file was not added.} other {# files were not added.}}"
 msgstr "{rejectedCount, plural, one {# dosya eklenmedi.} other {# dosya eklenmedi.}}"
 
@@ -1196,7 +1196,7 @@ msgstr "Bir paket dosyası eksik"
 msgid "A publication time has not been selected"
 msgstr "Yayın zamanı seçilmedi"
 
-#: packages/admin/src/components/ContentEditor.tsx:1408
+#: packages/admin/src/components/ContentEditor.tsx:1410
 msgid "A publishing action is already in progress"
 msgstr "Bir yayınlama işlemi zaten sürüyor"
 
@@ -1395,7 +1395,7 @@ msgstr "İçeriğinizde katkısı belirtilecek bir kişi veya ekip ekleyin."
 msgid "Add another byline"
 msgstr "Başka bir yazar bilgisi ekle"
 
-#: packages/admin/src/components/BlocksField.tsx:275
+#: packages/admin/src/components/BlocksField.tsx:283
 msgid "Add at least {minItems} blocks."
 msgstr "En az {minItems} blok ekleyin."
 
@@ -1403,7 +1403,7 @@ msgstr "En az {minItems} blok ekleyin."
 msgid "Add at least one sub-field to define the repeater structure."
 msgstr "Tekrarlayıcı yapısını tanımlamak için en az bir alt alan ekleyin."
 
-#: packages/admin/src/components/BlocksField.tsx:176
+#: packages/admin/src/components/BlocksField.tsx:184
 msgid "Add block"
 msgstr "Blok ekle"
 
@@ -1437,7 +1437,7 @@ msgstr "İçerik Ekle"
 msgid "Add Custom Link"
 msgstr "Özel Bağlantı Ekle"
 
-#: packages/admin/src/components/ImageFieldRenderer.tsx:467
+#: packages/admin/src/components/ImageFieldRenderer.tsx:471
 msgid "Add dark mode variant"
 msgstr "Koyu mod varyantı ekle"
 
@@ -1520,8 +1520,8 @@ msgstr "Noindex meta etiketi ekle"
 msgid "Add Passkey"
 msgstr "Geçiş Anahtarı Ekle"
 
-#: packages/admin/src/components/ContentEditor.tsx:3123
-#: packages/admin/src/components/ContentEditor.tsx:3123
+#: packages/admin/src/components/ContentEditor.tsx:3130
+#: packages/admin/src/components/ContentEditor.tsx:3130
 msgid "Add reference"
 msgstr "Referans ekle"
 
@@ -1795,7 +1795,7 @@ msgid "All statuses"
 msgstr "Tüm durumlar"
 
 #: packages/admin/src/components/MediaLibrary.tsx:936
-#: packages/admin/src/components/MediaPickerModal.tsx:398
+#: packages/admin/src/components/MediaPickerModal.tsx:404
 #: packages/admin/src/components/Redirects.tsx:406
 msgid "All types"
 msgstr "Tüm türler"
@@ -2128,11 +2128,11 @@ msgstr "MCP üzerinden bağlanan asistanlar, belirteçlerine aktarım kapsamı v
 msgid "Astro"
 msgstr "Astro"
 
-#: packages/admin/src/components/ContentEditor.tsx:3234
+#: packages/admin/src/components/ContentEditor.tsx:3241
 msgid "At least {min}"
 msgstr "En az {min}"
 
-#: packages/admin/src/components/ContentEditor.tsx:3231
+#: packages/admin/src/components/ContentEditor.tsx:3238
 msgid "At most {max}"
 msgstr "En fazla {max}"
 
@@ -2146,7 +2146,7 @@ msgstr "Atıf"
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:69
 #: packages/admin/src/components/MediaLibrary.tsx:939
-#: packages/admin/src/components/MediaPickerModal.tsx:402
+#: packages/admin/src/components/MediaPickerModal.tsx:408
 msgid "Audio"
 msgstr "Ses"
 
@@ -2300,7 +2300,7 @@ msgstr "Geri"
 msgid "Back"
 msgstr "Geri"
 
-#: packages/admin/src/components/ContentEditor.tsx:1648
+#: packages/admin/src/components/ContentEditor.tsx:1650
 msgid "Back to {collectionLabel} list"
 msgstr "{collectionLabel} listesine geri dön"
 
@@ -2408,7 +2408,7 @@ msgstr "Göndermeden önce:"
 msgid "Before you continue:"
 msgstr "Devam etmeden önce:"
 
-#: packages/admin/src/components/ContentEditor.tsx:3228
+#: packages/admin/src/components/ContentEditor.tsx:3235
 msgid "Between {min} and {max}"
 msgstr "{min} ile {max} arasında"
 
@@ -2425,7 +2425,7 @@ msgid "Block"
 msgstr "Blok"
 
 #. placeholder {0}: index + 1
-#: packages/admin/src/components/BlocksField.tsx:415
+#: packages/admin/src/components/BlocksField.tsx:423
 msgid "Block {0}"
 msgstr "Blok {0}"
 
@@ -2645,7 +2645,7 @@ msgstr "İçeriği görüntüleyebilir"
 #: packages/admin/src/components/FieldEditor.tsx:1386
 #: packages/admin/src/components/MediaDetailPanel.tsx:1859
 #: packages/admin/src/components/MediaFolderDialog.tsx:152
-#: packages/admin/src/components/MediaPickerModal.tsx:1635
+#: packages/admin/src/components/MediaPickerModal.tsx:1641
 #: packages/admin/src/components/MenuEditor.tsx:459
 #: packages/admin/src/components/MenuEditor.tsx:544
 #: packages/admin/src/components/MenuEditor.tsx:764
@@ -3013,7 +3013,7 @@ msgstr ""
 msgid "Choose a date range"
 msgstr "Tarih aralığı seçin"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:235
+#: packages/admin/src/components/MediaPickerModal.tsx:239
 msgid "Choose a file from the library or upload a new one."
 msgstr "Kitaplıktan bir dosya seçin veya yeni bir dosya yükleyin."
 
@@ -3038,11 +3038,11 @@ msgstr ""
 msgid "Choose a valid date"
 msgstr ""
 
-#: packages/admin/src/components/MediaPickerModal.tsx:237
+#: packages/admin/src/components/MediaPickerModal.tsx:241
 msgid "Choose a video from the library or upload a new one."
 msgstr "Kitaplıktan video seçin veya yeni bir video yükleyin."
 
-#: packages/admin/src/components/MediaPickerModal.tsx:238
+#: packages/admin/src/components/MediaPickerModal.tsx:242
 msgid "Choose an image from the library or upload a new one."
 msgstr "Kitaplıktan bir görsel seçin veya yeni bir görsel yükleyin."
 
@@ -3055,7 +3055,7 @@ msgstr "Başka bir seçenek belirleyin"
 msgid "Choose bylines"
 msgstr "Yazar bilgilerini seç"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1139
+#: packages/admin/src/components/MediaPickerModal.tsx:1145
 msgid "Choose files to upload"
 msgstr "Yüklenecek dosyaları seçin"
 
@@ -3178,8 +3178,8 @@ msgstr "{siteName} sitesinde oturum açmak için bu bağlantıya tıklayın:"
 #: packages/admin/src/components/MarketplacePluginDetail.tsx:462
 #: packages/admin/src/components/MediaDetailPanel.tsx:1127
 #: packages/admin/src/components/MediaDetailPanel.tsx:1859
-#: packages/admin/src/components/MediaPickerModal.tsx:1046
-#: packages/admin/src/components/MediaPickerModal.tsx:1053
+#: packages/admin/src/components/MediaPickerModal.tsx:1052
+#: packages/admin/src/components/MediaPickerModal.tsx:1059
 #: packages/admin/src/components/MediaUploadDialog.tsx:237
 #: packages/admin/src/components/MenuEditor.tsx:428
 #: packages/admin/src/components/MenuEditor.tsx:434
@@ -3242,7 +3242,7 @@ msgstr "Görsel ayarlarını kapat"
 msgid "Close panel"
 msgstr "Paneli kapat"
 
-#: packages/admin/src/components/ContentEditor.tsx:2320
+#: packages/admin/src/components/ContentEditor.tsx:2322
 msgid "Close settings"
 msgstr "Ayarları kapat"
 
@@ -3266,7 +3266,7 @@ msgstr "Kod Bloğu"
 msgid "Code block actions"
 msgstr "Kod bloğu işlemleri"
 
-#: packages/admin/src/components/BlocksField.tsx:350
+#: packages/admin/src/components/BlocksField.tsx:358
 msgid "Collapse block"
 msgstr "Bloğu daralt"
 
@@ -3699,11 +3699,11 @@ msgstr "{pluralLower} yüklenemedi."
 msgid "Could not load dashboard data"
 msgstr "Pano verileri yüklenemedi"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:685
+#: packages/admin/src/components/MediaPickerModal.tsx:691
 msgid "Could not load image from URL"
 msgstr "URL'den resim yüklenemedi"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1435
+#: packages/admin/src/components/MediaPickerModal.tsx:1441
 msgid "Could not load media."
 msgstr "Medya yüklenemedi."
 
@@ -3715,7 +3715,7 @@ msgstr "Takvim yüklenemedi"
 msgid "Could not load this entry's details."
 msgstr "Bu kaydın ayrıntıları yüklenemedi."
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1247
+#: packages/admin/src/components/MediaPickerModal.tsx:1253
 msgid "Could not load this folder."
 msgstr "Bu klasör yüklenemedi."
 
@@ -3743,7 +3743,7 @@ msgstr "Medya öğesinin veya seçilen klasörün hâlâ mevcut olup olmadığı
 msgid "Couldn't detect WordPress"
 msgstr "WordPress algılanamadı"
 
-#: packages/admin/src/components/ContentEditor.tsx:3102
+#: packages/admin/src/components/ContentEditor.tsx:3109
 msgid "Couldn't load all references."
 msgstr "Tüm referanslar yüklenemedi."
 
@@ -4171,7 +4171,7 @@ msgid "Daily automatic backups"
 msgstr "Günlük otomatik yedeklemeler"
 
 #: packages/admin/src/components/FieldEditor.tsx:1371
-#: packages/admin/src/components/ImageFieldRenderer.tsx:411
+#: packages/admin/src/components/ImageFieldRenderer.tsx:415
 msgid "Dark mode variant"
 msgstr "Koyu mod varyantı"
 
@@ -4338,7 +4338,7 @@ msgstr "{0} silinsin mi?"
 msgid "Delete backup?"
 msgstr "Yedek silinsin mi?"
 
-#: packages/admin/src/components/BlocksField.tsx:391
+#: packages/admin/src/components/BlocksField.tsx:399
 #: packages/admin/src/components/editor/EmbedBlockShell.tsx:358
 msgid "Delete block"
 msgstr "Bloğu sil"
@@ -4767,7 +4767,7 @@ msgstr "Etiket bulutunu göster"
 msgid "Displayed below the image as a visible caption."
 msgstr "Görselin altında resim yazısı olarak gösterilir."
 
-#: packages/admin/src/components/ContentEditor.tsx:1767
+#: packages/admin/src/components/ContentEditor.tsx:1769
 msgid "Distraction-free mode (⌘⇧\\)"
 msgstr "Dikkat dağıtmayan mod (⌘⇧\\)"
 
@@ -4790,7 +4790,7 @@ msgstr "Belge"
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:66
 #: packages/admin/src/components/MediaLibrary.tsx:940
-#: packages/admin/src/components/MediaPickerModal.tsx:403
+#: packages/admin/src/components/MediaPickerModal.tsx:409
 msgid "Documents"
 msgstr "Belgeler"
 
@@ -4962,11 +4962,11 @@ msgstr "Widget'ları eklemek için buraya sürükleyin"
 msgid "Drag widgets into an area to add them"
 msgstr "Widget'ları eklemek için bir alana sürükleyin"
 
-#: packages/admin/src/components/media/ImageDropTarget.tsx:136
+#: packages/admin/src/components/media/ImageDropTarget.tsx:145
 msgid "Drop an image here or <0>browse</0>"
 msgstr "Buraya bir görsel bırakın veya <0>göz atın</0>"
 
-#: packages/admin/src/components/media/ImageDropTarget.tsx:118
+#: packages/admin/src/components/media/ImageDropTarget.tsx:127
 msgid "Drop an image here or browse for {label}"
 msgstr "Buraya bir görsel bırakın veya {label} için göz atın"
 
@@ -4974,7 +4974,7 @@ msgstr "Buraya bir görsel bırakın veya {label} için göz atın"
 msgid "Drop files to upload"
 msgstr "Yüklemek için dosyaları bırakın"
 
-#: packages/admin/src/components/media/ImageDropTarget.tsx:48
+#: packages/admin/src/components/media/ImageDropTarget.tsx:52
 msgid "Drop one image at a time."
 msgstr "Tek seferde bir görsel bırakın."
 
@@ -4991,7 +4991,7 @@ msgstr "WordPress dışa aktarma dosyanızı buraya bırakın"
 msgid "Duplicate"
 msgstr "Çoğalt"
 
-#: packages/admin/src/components/BlocksField.tsx:382
+#: packages/admin/src/components/BlocksField.tsx:390
 msgid "Duplicate block"
 msgstr "Bloğu çoğalt"
 
@@ -5066,7 +5066,7 @@ msgstr "Düzenle: {0}"
 msgid "Edit {0} field"
 msgstr "{0} alanını düzenleyin"
 
-#: packages/admin/src/components/ContentEditor.tsx:1503
+#: packages/admin/src/components/ContentEditor.tsx:1505
 msgid "Edit {itemLabel}"
 msgstr "{itemLabel} öğesini düzenle"
 
@@ -5077,10 +5077,10 @@ msgstr "{label} düzenle"
 
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:462
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:309
-#: packages/admin/src/components/ImageFieldRenderer.tsx:317
-#: packages/admin/src/components/ImageFieldRenderer.tsx:374
-#: packages/admin/src/components/ImageFieldRenderer.tsx:442
-#: packages/admin/src/components/MediaPickerModal.tsx:1631
+#: packages/admin/src/components/ImageFieldRenderer.tsx:321
+#: packages/admin/src/components/ImageFieldRenderer.tsx:378
+#: packages/admin/src/components/ImageFieldRenderer.tsx:446
+#: packages/admin/src/components/MediaPickerModal.tsx:1637
 msgid "Edit asset"
 msgstr "Medya dosyasını düzenle"
 
@@ -5099,7 +5099,7 @@ msgstr "Yazar bilgisi alanını düzenle"
 msgid "Edit caption"
 msgstr "Resim yazısını düzenle"
 
-#: packages/admin/src/components/ImageFieldRenderer.tsx:440
+#: packages/admin/src/components/ImageFieldRenderer.tsx:444
 msgid "Edit dark mode asset"
 msgstr "Koyu mod görselini düzenle"
 
@@ -5475,7 +5475,7 @@ msgstr "Bir URL (https://…) veya göreli yol (/…) girin"
 msgid "Enter a valid time"
 msgstr ""
 
-#: packages/admin/src/components/ContentEditor.tsx:3278
+#: packages/admin/src/components/ContentEditor.tsx:3285
 msgid "Enter a valid URL (e.g. https://example.com)"
 msgstr "Geçerli bir URL girin (ör. https://example.com)"
 
@@ -5483,7 +5483,7 @@ msgstr "Geçerli bir URL girin (ör. https://example.com)"
 msgid "Enter credentials manually"
 msgstr "Kimlik bilgilerini manuel olarak girin"
 
-#: packages/admin/src/components/ContentEditor.tsx:1762
+#: packages/admin/src/components/ContentEditor.tsx:1764
 msgid "Enter distraction-free mode"
 msgstr "Dikkat dağıtmayan moda girin"
 
@@ -5491,7 +5491,7 @@ msgstr "Dikkat dağıtmayan moda girin"
 msgid "Enter email"
 msgstr "E-postayı girin"
 
-#: packages/admin/src/components/ContentEditor.tsx:2618
+#: packages/admin/src/components/ContentEditor.tsx:2620
 msgid "Enter markdown content..."
 msgstr "İşaretleme içeriğini girin..."
 
@@ -5624,15 +5624,15 @@ msgstr "Mevcut içerik dizine eklendi. Yeni değişiklikler otomatik olarak taki
 msgid "Exists"
 msgstr "Var"
 
-#: packages/admin/src/components/ContentEditor.tsx:1762
+#: packages/admin/src/components/ContentEditor.tsx:1764
 msgid "Exit distraction-free mode"
 msgstr "Dikkat dağıtmayan moddan çık"
 
-#: packages/admin/src/components/ContentEditor.tsx:1766
+#: packages/admin/src/components/ContentEditor.tsx:1768
 msgid "Exit distraction-free mode (⌘⇧\\)"
 msgstr "Dikkat dağıtmayan moddan çık (⌘⇧\\)"
 
-#: packages/admin/src/components/BlocksField.tsx:350
+#: packages/admin/src/components/BlocksField.tsx:358
 msgid "Expand block"
 msgstr "Bloğu genişlet"
 
@@ -5774,7 +5774,7 @@ msgstr "Eklentiyle iletişim kurulamadı"
 msgid "Failed to compare revisions"
 msgstr "Sürümler karşılaştırılamadı"
 
-#: packages/admin/src/lib/api/media.ts:380
+#: packages/admin/src/lib/api/media.ts:384
 msgid "Failed to confirm upload"
 msgstr "Yükleme onaylanamadı"
 
@@ -5842,7 +5842,7 @@ msgstr "İçerik oluşturulamadı"
 msgid "Failed to create field"
 msgstr "Alan oluşturulamadı"
 
-#: packages/admin/src/lib/api/media.ts:253
+#: packages/admin/src/lib/api/media.ts:255
 msgid "Failed to create media folder"
 msgstr "Medya klasörü oluşturulamadı"
 
@@ -5941,15 +5941,15 @@ msgstr "İçerik silinemedi"
 msgid "Failed to delete field"
 msgstr "Alan silinemedi"
 
-#: packages/admin/src/lib/api/media.ts:765
+#: packages/admin/src/lib/api/media.ts:771
 msgid "Failed to delete from provider"
 msgstr "Sağlayıcıdan silinemedi"
 
-#: packages/admin/src/lib/api/media.ts:624
+#: packages/admin/src/lib/api/media.ts:630
 msgid "Failed to delete media"
 msgstr "Medya silinemedi"
 
-#: packages/admin/src/lib/api/media.ts:275
+#: packages/admin/src/lib/api/media.ts:277
 msgid "Failed to delete media folder"
 msgstr "Medya klasörü silinemedi"
 
@@ -6150,27 +6150,27 @@ msgstr "Alanlar alınamadı"
 msgid "Failed to fetch manifest"
 msgstr "Manifest getirilemedi"
 
-#: packages/admin/src/lib/api/media.ts:175
+#: packages/admin/src/lib/api/media.ts:177
 msgid "Failed to fetch media"
 msgstr "Medya getirilemedi"
 
-#: packages/admin/src/lib/api/media.ts:240
+#: packages/admin/src/lib/api/media.ts:242
 msgid "Failed to fetch media folder"
 msgstr "Medya klasörü getirilemedi"
 
-#: packages/admin/src/lib/api/media.ts:232
+#: packages/admin/src/lib/api/media.ts:234
 msgid "Failed to fetch media folders"
 msgstr "Medya klasörleri getirilemedi"
 
-#: packages/admin/src/lib/api/media.ts:193
+#: packages/admin/src/lib/api/media.ts:195
 msgid "Failed to fetch media item"
 msgstr "Medya öğesi getirilemedi"
 
-#: packages/admin/src/lib/api/media.ts:698
+#: packages/admin/src/lib/api/media.ts:704
 msgid "Failed to fetch media providers"
 msgstr "Medya sağlayıcıları getirilemedi"
 
-#: packages/admin/src/lib/api/media.ts:216
+#: packages/admin/src/lib/api/media.ts:218
 msgid "Failed to fetch media usage details"
 msgstr "Medya kullanım ayrıntıları getirilemedi"
 
@@ -6208,7 +6208,7 @@ msgstr "Eklenti ayarları getirilemedi"
 msgid "Failed to fetch plugins"
 msgstr "Eklentiler getirilemedi"
 
-#: packages/admin/src/lib/api/media.ts:728
+#: packages/admin/src/lib/api/media.ts:734
 msgid "Failed to fetch provider media"
 msgstr "Sağlayıcı medyası getirilemedi"
 
@@ -6330,7 +6330,7 @@ msgstr "Kimlik doğrulama seçenekleri alınamadı"
 msgid "Failed to get registration options"
 msgstr "Kayıt seçenekleri alınamadı"
 
-#: packages/admin/src/lib/api/media.ts:352
+#: packages/admin/src/lib/api/media.ts:356
 msgid "Failed to get upload URL"
 msgstr "Yükleme URL'si alınamadı"
 
@@ -6402,7 +6402,7 @@ msgstr "Dışa aktarma manifesti yüklenemedi"
 msgid "Failed to load exports"
 msgstr "Dışa aktarmalar yüklenemedi"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:669
+#: packages/admin/src/components/MediaPickerModal.tsx:675
 msgid "Failed to load image"
 msgstr "Resim yüklenemedi"
 
@@ -6533,7 +6533,7 @@ msgstr "Alan kaldırılamadı"
 msgid "Failed to remove passkey"
 msgstr "Geçiş anahtarı kaldırılamadı"
 
-#: packages/admin/src/lib/api/media.ts:266
+#: packages/admin/src/lib/api/media.ts:268
 msgid "Failed to rename media folder"
 msgstr "Medya klasörü yeniden adlandırılamadı"
 
@@ -6567,7 +6567,7 @@ msgstr "Terimler yeniden sıralanamadı"
 msgid "Failed to reorder widgets"
 msgstr "Widget'lar yeniden sıralanamadı"
 
-#: packages/admin/src/lib/api/media.ts:612
+#: packages/admin/src/lib/api/media.ts:618
 msgid "Failed to replace media image"
 msgstr "Medya görseli değiştirilemedi"
 
@@ -6723,7 +6723,7 @@ msgstr "Alan adı güncellenemedi"
 msgid "Failed to update field"
 msgstr "Alan güncellenemedi"
 
-#: packages/admin/src/lib/api/media.ts:648
+#: packages/admin/src/lib/api/media.ts:654
 msgid "Failed to update media"
 msgstr "Medya güncellenemedi"
 
@@ -6785,15 +6785,15 @@ msgstr "Widget güncellenemedi"
 msgid "Failed to upload a package file"
 msgstr "Bir paket dosyası yüklenemedi"
 
-#: packages/admin/src/lib/api/media.ts:405
+#: packages/admin/src/lib/api/media.ts:409
 msgid "Failed to upload file"
 msgstr "Dosya yüklenemedi"
 
-#: packages/admin/src/lib/api/media.ts:553
+#: packages/admin/src/lib/api/media.ts:559
 msgid "Failed to upload media"
 msgstr "Medya yüklenemedi"
 
-#: packages/admin/src/lib/api/media.ts:753
+#: packages/admin/src/lib/api/media.ts:759
 msgid "Failed to upload to provider"
 msgstr "Sağlayıcıya yüklenemedi"
 
@@ -6947,7 +6947,7 @@ msgid "Filter by status"
 msgstr "Duruma göre filtrele"
 
 #: packages/admin/src/components/MediaLibrary.tsx:942
-#: packages/admin/src/components/MediaPickerModal.tsx:1321
+#: packages/admin/src/components/MediaPickerModal.tsx:1327
 #: packages/admin/src/components/Redirects.tsx:407
 msgid "Filter by type"
 msgstr "Türe göre filtrele"
@@ -6965,7 +6965,7 @@ msgid "Finish any current edits."
 msgstr "Devam eden düzenlemeleri tamamlayın."
 
 #: packages/admin/src/components/ListPaginationFooter.tsx:109
-#: packages/admin/src/components/MediaPickerModal.tsx:1591
+#: packages/admin/src/components/MediaPickerModal.tsx:1597
 msgid "First page"
 msgstr "İlk sayfa"
 
@@ -6981,11 +6981,11 @@ msgstr "İlk sürüm"
 msgid "First-time commenters only"
 msgstr "Yalnızca ilk kez yorum yapanlar"
 
-#: packages/admin/src/components/ContentEditor.tsx:1485
+#: packages/admin/src/components/ContentEditor.tsx:1487
 msgid "Fix invalid fields before changing the publication date"
 msgstr "Yayınlanma tarihini değiştirmeden önce geçersiz alanları düzeltin"
 
-#: packages/admin/src/components/ContentEditor.tsx:1415
+#: packages/admin/src/components/ContentEditor.tsx:1417
 msgid "Fix invalid fields before changing the schedule"
 msgstr "Zamanlamayı değiştirmeden önce geçersiz alanları düzeltin"
 
@@ -6998,7 +6998,7 @@ msgstr "Odak noktası"
 msgid "Focal point. Use arrow keys to move it."
 msgstr "Odak noktası. Taşımak için ok tuşlarını kullanın."
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1241
+#: packages/admin/src/components/MediaPickerModal.tsx:1247
 msgid "Folder"
 msgstr "Klasör"
 
@@ -7015,7 +7015,7 @@ msgstr "Klasör adı 1 ile 200 karakter arasında olmalıdır"
 msgid "Folder no longer exists"
 msgstr "Klasör artık mevcut değil"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:498
+#: packages/admin/src/components/MediaPickerModal.tsx:504
 msgid "Folder no longer exists. Returned to the main library."
 msgstr "Klasör artık mevcut değil. Ana kitaplığa dönüldü."
 
@@ -7032,14 +7032,14 @@ msgid "Folder unavailable"
 msgstr "Klasör kullanılamıyor"
 
 #: packages/admin/src/components/MediaLibrary.tsx:969
-#: packages/admin/src/components/MediaPickerModal.tsx:1359
+#: packages/admin/src/components/MediaPickerModal.tsx:1365
 msgid "Folders"
 msgstr "Klasörler"
 
 #: packages/admin/src/components/MediaDetailPanel.tsx:1547
 #: packages/admin/src/components/MediaLibrary.tsx:979
 #: packages/admin/src/components/MediaLibrary.tsx:1488
-#: packages/admin/src/components/MediaPickerModal.tsx:1364
+#: packages/admin/src/components/MediaPickerModal.tsx:1370
 msgid "Folders could not be loaded."
 msgstr "Klasörler yüklenemedi."
 
@@ -7088,7 +7088,7 @@ msgstr "Paketten: “{packageValue}”"
 msgid "From the post owner"
 msgstr "Gönderinin sahibinden"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:380
+#: packages/admin/src/components/MediaPickerModal.tsx:386
 msgid "From URL"
 msgstr "URL'den"
 
@@ -7149,7 +7149,7 @@ msgstr "Daha sonra tanıyabilmeniz için bu geçiş anahtarına bir ad verin."
 msgid "Go"
 msgstr "Git"
 
-#: packages/admin/src/components/ContentEditor.tsx:1411
+#: packages/admin/src/components/ContentEditor.tsx:1413
 msgid "Go back to editing first."
 msgstr "Önce düzenlemeye dönün."
 
@@ -7183,7 +7183,7 @@ msgid "GraphQL"
 msgstr "GrafikQL"
 
 #: packages/admin/src/components/MediaLibrary.tsx:897
-#: packages/admin/src/components/MediaPickerModal.tsx:1277
+#: packages/admin/src/components/MediaPickerModal.tsx:1283
 msgid "Grid view"
 msgstr "Izgara görünümü"
 
@@ -7333,7 +7333,7 @@ msgstr "İsabetler"
 msgid "Hold an entry while someone is editing it, and refuse other writers"
 msgstr "Bir kayıt düzenlenirken kilitle ve diğer kullanıcıların düzenlemesini engelle"
 
-#: packages/admin/src/components/ContentEditor.tsx:2791
+#: packages/admin/src/components/ContentEditor.tsx:2797
 msgid "Holds an entry ID. Set a target collection under Content Types to pick entries instead."
 msgstr "Bir içerik kaydı kimliği tutar. Bunun yerine kayıt seçebilmek için İçerik Türleri altında hedef koleksiyon belirleyin."
 
@@ -7416,7 +7416,7 @@ msgstr "https://example.com veya /page"
 msgid "https://example.com/blog/my-post"
 msgstr "https://example.com/blog/my-post"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1166
+#: packages/admin/src/components/MediaPickerModal.tsx:1172
 msgid "https://example.com/image.jpg"
 msgstr "https://example.com/image.jpg"
 
@@ -7490,8 +7490,8 @@ msgstr "Görsel"
 msgid "Image {0}"
 msgstr "Görsel {0}"
 
-#: packages/admin/src/components/ImageFieldRenderer.tsx:336
-#: packages/admin/src/components/ImageFieldRenderer.tsx:351
+#: packages/admin/src/components/ImageFieldRenderer.tsx:340
+#: packages/admin/src/components/ImageFieldRenderer.tsx:355
 #: packages/admin/src/components/SeoImageField.tsx:171
 msgid "Image actions"
 msgstr "Görsel işlemleri"
@@ -7509,8 +7509,8 @@ msgid "Image link"
 msgstr "Görsel bağlantısı"
 
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:70
-#: packages/admin/src/components/ImageFieldRenderer.tsx:488
-#: packages/admin/src/components/ImageFieldRenderer.tsx:543
+#: packages/admin/src/components/ImageFieldRenderer.tsx:492
+#: packages/admin/src/components/ImageFieldRenderer.tsx:547
 #: packages/admin/src/components/SeoImageField.tsx:146
 msgid "Image not found"
 msgstr "Resim bulunamadı"
@@ -7537,19 +7537,19 @@ msgid "Image shown when this page is shared on social media"
 msgstr "Bu sayfa sosyal medyada paylaşıldığında gösterilen resim"
 
 #: packages/admin/src/components/editor/ImageUploadExtension.ts:262
-#: packages/admin/src/components/media/ImageDropTarget.tsx:72
+#: packages/admin/src/components/media/ImageDropTarget.tsx:81
 msgid "Image upload failed. Try again."
 msgstr "Görsel yüklenemedi. Tekrar deneyin."
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1155
-#: packages/admin/src/components/MediaPickerModal.tsx:1165
+#: packages/admin/src/components/MediaPickerModal.tsx:1161
+#: packages/admin/src/components/MediaPickerModal.tsx:1171
 msgid "Image URL"
 msgstr "Görsel URL'si"
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:64
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:256
 #: packages/admin/src/components/MediaLibrary.tsx:937
-#: packages/admin/src/components/MediaPickerModal.tsx:400
+#: packages/admin/src/components/MediaPickerModal.tsx:406
 msgid "Images"
 msgstr "Görseller"
 
@@ -7701,7 +7701,7 @@ msgstr "Çöp kutusunda"
 msgid "In Windows Settings, open Accounts, then Sign-in options, and set up a PIN. Fingerprint and face recognition are optional."
 msgstr "Windows Ayarları'nda Hesaplar bölümünü, ardından Oturum açma seçeneklerini açıp bir PIN ayarlayın. Parmak izi ve yüz tanıma isteğe bağlıdır."
 
-#: packages/admin/src/components/BlocksField.tsx:364
+#: packages/admin/src/components/BlocksField.tsx:372
 msgid "Inactive version"
 msgstr "Etkin olmayan sürüm"
 
@@ -7898,7 +7898,7 @@ msgstr "GEÇERSİZ TANITICI"
 msgid "Invalid invite link"
 msgstr "Geçersiz davet bağlantısı"
 
-#: packages/admin/src/components/ContentEditor.tsx:3354
+#: packages/admin/src/components/ContentEditor.tsx:3361
 msgid "Invalid JSON"
 msgstr "Geçersiz JSON"
 
@@ -8130,7 +8130,7 @@ msgid "Last Login"
 msgstr "Son Giriş"
 
 #: packages/admin/src/components/ListPaginationFooter.tsx:112
-#: packages/admin/src/components/MediaPickerModal.tsx:1594
+#: packages/admin/src/components/MediaPickerModal.tsx:1600
 msgid "Last page"
 msgstr "Son sayfa"
 
@@ -8188,8 +8188,8 @@ msgstr "Sol"
 #: packages/admin/src/components/MediaLibrary.tsx:426
 #: packages/admin/src/components/MediaLibrary.tsx:703
 #: packages/admin/src/components/MediaLibrary.tsx:1276
-#: packages/admin/src/components/MediaPickerModal.tsx:375
-#: packages/admin/src/components/MediaPickerModal.tsx:392
+#: packages/admin/src/components/MediaPickerModal.tsx:381
+#: packages/admin/src/components/MediaPickerModal.tsx:398
 msgid "Library"
 msgstr "Kütüphane"
 
@@ -8298,7 +8298,7 @@ msgid "List"
 msgstr "Liste"
 
 #: packages/admin/src/components/MediaLibrary.tsx:906
-#: packages/admin/src/components/MediaPickerModal.tsx:1287
+#: packages/admin/src/components/MediaPickerModal.tsx:1293
 msgid "List view"
 msgstr "Liste görünümü"
 
@@ -8335,7 +8335,7 @@ msgstr "Daha Fazla Yükle"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1566
 #: packages/admin/src/components/MediaLibrary.tsx:1009
 #: packages/admin/src/components/MediaLibrary.tsx:1206
-#: packages/admin/src/components/MediaPickerModal.tsx:1413
+#: packages/admin/src/components/MediaPickerModal.tsx:1419
 msgid "Load more folders"
 msgstr "Daha fazla klasör yükle"
 
@@ -8392,7 +8392,7 @@ msgstr "Dışa aktarmalar yükleniyor…"
 
 #: packages/admin/src/components/MediaLibrary.tsx:953
 #: packages/admin/src/components/MediaLibrary.tsx:1174
-#: packages/admin/src/components/MediaPickerModal.tsx:1382
+#: packages/admin/src/components/MediaPickerModal.tsx:1388
 msgid "Loading folders"
 msgstr "Klasörler yükleniyor"
 
@@ -8404,7 +8404,7 @@ msgstr "Klasörler yükleniyor..."
 msgid "Loading imports…"
 msgstr "İçe aktarmalar yükleniyor…"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1430
+#: packages/admin/src/components/MediaPickerModal.tsx:1436
 msgid "Loading media"
 msgstr "Medya yükleniyor"
 
@@ -8432,7 +8432,7 @@ msgstr "Eklentiler yükleniyor..."
 msgid "Loading redirects..."
 msgstr "Yönlendirmeler yükleniyor..."
 
-#: packages/admin/src/components/ContentEditor.tsx:3110
+#: packages/admin/src/components/ContentEditor.tsx:3117
 msgid "Loading references..."
 msgstr "Referanslar yükleniyor..."
 
@@ -8592,7 +8592,7 @@ msgid "Lua"
 msgstr "Lua"
 
 #: packages/admin/src/components/MediaDetailPanel.tsx:575
-#: packages/admin/src/components/MediaPickerModal.tsx:1235
+#: packages/admin/src/components/MediaPickerModal.tsx:1241
 msgid "Main library"
 msgstr "Ana kitaplık"
 
@@ -8791,7 +8791,7 @@ msgid "Media links were made relative"
 msgstr "Medya bağlantıları göreli hale getirildi"
 
 #: packages/admin/src/components/MediaLibrary.tsx:1262
-#: packages/admin/src/components/MediaPickerModal.tsx:1590
+#: packages/admin/src/components/MediaPickerModal.tsx:1596
 msgid "Media pagination"
 msgstr "Medya sayfalandırması"
 
@@ -8799,7 +8799,7 @@ msgstr "Medya sayfalandırması"
 msgid "Media Read"
 msgstr "Medya Okuma"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1421
+#: packages/admin/src/components/MediaPickerModal.tsx:1427
 msgid "Media results"
 msgstr "Medya sonuçları"
 
@@ -9002,7 +9002,7 @@ msgstr "{0} için diğer işlemler"
 msgid "More formatting"
 msgstr "Diğer biçimlendirme seçenekleri"
 
-#: packages/admin/src/components/ImageFieldRenderer.tsx:528
+#: packages/admin/src/components/ImageFieldRenderer.tsx:532
 msgid "More information about {label}"
 msgstr "{label} hakkında daha fazla bilgi"
 
@@ -9047,7 +9047,7 @@ msgstr "\"{title}\" çöp kutusuna taşınsın mı? Daha sonra geri yükleyebili
 #. placeholder {0}: blockType.label
 #. placeholder {0}: referenceRowLabel(row)
 #. placeholder {0}: term.label
-#: packages/admin/src/components/ContentEditor.tsx:3077
+#: packages/admin/src/components/ContentEditor.tsx:3084
 #: packages/admin/src/components/FieldEditor.tsx:1163
 #: packages/admin/src/components/TaxonomyManager.tsx:463
 msgid "Move {0} down"
@@ -9071,7 +9071,7 @@ msgstr "{0} dosyasını geriye taşı"
 #. placeholder {0}: blockType.label
 #. placeholder {0}: referenceRowLabel(row)
 #. placeholder {0}: term.label
-#: packages/admin/src/components/ContentEditor.tsx:3066
+#: packages/admin/src/components/ContentEditor.tsx:3073
 #: packages/admin/src/components/FieldEditor.tsx:1146
 #: packages/admin/src/components/TaxonomyManager.tsx:450
 msgid "Move {0} up"
@@ -9139,7 +9139,7 @@ msgid "Moved “{snippet}”"
 msgstr "“{snippet}” taşındı"
 
 #. placeholder {0}: to + 1
-#: packages/admin/src/components/MediaPickerModal.tsx:716
+#: packages/admin/src/components/MediaPickerModal.tsx:722
 msgid "Moved {filename} to position {0}."
 msgstr "{filename}, {0}. sıraya taşındı."
 
@@ -9303,7 +9303,7 @@ msgstr "yeni"
 msgid "NEW"
 msgstr "YENİ"
 
-#: packages/admin/src/components/ContentEditor.tsx:1503
+#: packages/admin/src/components/ContentEditor.tsx:1505
 msgid "New {itemLabel}"
 msgstr "Yeni {itemLabel}"
 
@@ -9413,7 +9413,7 @@ msgstr "Sonraki ay"
 #: packages/admin/src/components/comments/CommentInbox.tsx:396
 #: packages/admin/src/components/ContentList.tsx:856
 #: packages/admin/src/components/ListPaginationFooter.tsx:111
-#: packages/admin/src/components/MediaPickerModal.tsx:1593
+#: packages/admin/src/components/MediaPickerModal.tsx:1599
 msgid "Next page"
 msgstr "Sonraki sayfa"
 
@@ -9477,7 +9477,7 @@ msgstr "Henüz onaylanmış yorum yok."
 msgid "No block types defined"
 msgstr "Tanımlanmış blok türü yok"
 
-#: packages/admin/src/components/BlocksField.tsx:229
+#: packages/admin/src/components/BlocksField.tsx:237
 msgid "No blocks yet"
 msgstr "Henüz blok yok"
 
@@ -9667,7 +9667,7 @@ msgstr "Eşleşme yok"
 msgid "No matches. Press Enter to use “{freeFormLanguage}”."
 msgstr "Eşleşme yok. “{freeFormLanguage}” kullanmak için Enter'a basın."
 
-#: packages/admin/src/components/BlocksField.tsx:220
+#: packages/admin/src/components/BlocksField.tsx:228
 msgid "No matching block types"
 msgstr "Eşleşen blok türü yok"
 
@@ -9710,7 +9710,7 @@ msgid "No media available from this provider."
 msgstr "Bu sağlayıcıda kullanılabilir medya yok."
 
 #: packages/admin/src/components/MediaLibrary.tsx:1094
-#: packages/admin/src/components/MediaPickerModal.tsx:1451
+#: packages/admin/src/components/MediaPickerModal.tsx:1457
 msgid "No media found"
 msgstr "Medya bulunamadı"
 
@@ -9775,7 +9775,7 @@ msgstr "Yakın zamanda etkinlik yok"
 msgid "No redirects yet"
 msgstr "Henüz yönlendirme yok"
 
-#: packages/admin/src/components/ContentEditor.tsx:3020
+#: packages/admin/src/components/ContentEditor.tsx:3027
 msgid "No references selected."
 msgstr "Referans seçilmedi."
 
@@ -9988,7 +9988,7 @@ msgid "Only image and file fields, images in rich text, and site settings are tr
 msgstr "Yalnızca görsel ve dosya alanları, zengin metindeki görseller ve site ayarları takip edilir. Özel zengin metin blokları ve şablon kodu denetlenmez."
 
 #: packages/admin/src/components/editor/ImageUploadExtension.ts:245
-#: packages/admin/src/components/media/ImageDropTarget.tsx:53
+#: packages/admin/src/components/media/ImageDropTarget.tsx:57
 msgid "Only image files can be uploaded here."
 msgstr "Buraya yalnızca görsel dosyaları yüklenebilir."
 
@@ -10013,7 +10013,7 @@ msgid "Open"
 msgstr "Aç"
 
 #. placeholder {0}: referenceRowLabel(row)
-#: packages/admin/src/components/ContentEditor.tsx:3055
+#: packages/admin/src/components/ContentEditor.tsx:3062
 msgid "Open {0} in a new tab"
 msgstr "{0} öğesini yeni sekmede aç"
 
@@ -10158,7 +10158,7 @@ msgstr "Orijinal görsel kırpıldı."
 msgid "Original:"
 msgstr "Orijinal:"
 
-#: packages/admin/src/components/BlocksField.tsx:149
+#: packages/admin/src/components/BlocksField.tsx:157
 msgid "Other"
 msgstr "Diğer"
 
@@ -10207,12 +10207,12 @@ msgid "Page Not Found"
 msgstr "Sayfa Bulunamadı"
 
 #: packages/admin/src/components/ListPaginationFooter.tsx:113
-#: packages/admin/src/components/MediaPickerModal.tsx:1595
+#: packages/admin/src/components/MediaPickerModal.tsx:1601
 msgid "Page number"
 msgstr "Sayfa numarası"
 
 #: packages/admin/src/components/ListPaginationFooter.tsx:114
-#: packages/admin/src/components/MediaPickerModal.tsx:1596
+#: packages/admin/src/components/MediaPickerModal.tsx:1602
 msgid "Page size"
 msgstr "Sayfa boyutu"
 
@@ -10451,7 +10451,7 @@ msgstr "Lütfen geçerli bir e-posta girin"
 msgid "Please enter a valid email address"
 msgstr "Lütfen geçerli bir e-posta adresi girin"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:653
+#: packages/admin/src/components/MediaPickerModal.tsx:659
 msgid "Please enter a valid URL"
 msgstr "Lütfen geçerli bir URL girin"
 
@@ -10476,7 +10476,7 @@ msgstr "Eklenti işlemi başarısız oldu"
 msgid "Plugin actions"
 msgstr "Eklenti işlemleri"
 
-#: packages/admin/src/components/ContentEditor.tsx:1836
+#: packages/admin/src/components/ContentEditor.tsx:1838
 msgid "Plugin changes were not applied"
 msgstr "Eklenti değişiklikleri uygulanmadı"
 
@@ -10708,7 +10708,7 @@ msgstr "Önceki ay"
 #: packages/admin/src/components/comments/CommentInbox.tsx:377
 #: packages/admin/src/components/ContentList.tsx:844
 #: packages/admin/src/components/ListPaginationFooter.tsx:110
-#: packages/admin/src/components/MediaPickerModal.tsx:1592
+#: packages/admin/src/components/MediaPickerModal.tsx:1598
 msgid "Previous page"
 msgstr "Önceki sayfa"
 
@@ -11192,13 +11192,13 @@ msgstr "Kaldır"
 
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:87
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:118
-#: packages/admin/src/components/ContentEditor.tsx:3516
+#: packages/admin/src/components/ContentEditor.tsx:3527
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:473
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:358
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:822
-#: packages/admin/src/components/ImageFieldRenderer.tsx:329
-#: packages/admin/src/components/ImageFieldRenderer.tsx:383
-#: packages/admin/src/components/ImageFieldRenderer.tsx:454
+#: packages/admin/src/components/ImageFieldRenderer.tsx:333
+#: packages/admin/src/components/ImageFieldRenderer.tsx:387
+#: packages/admin/src/components/ImageFieldRenderer.tsx:458
 #: packages/admin/src/components/media/MediaBrowserItems.tsx:220
 #: packages/admin/src/components/PortableTextEditor.tsx:6559
 #: packages/admin/src/components/settings/GeneralSettings.tsx:400
@@ -11212,7 +11212,7 @@ msgstr "Kaldır"
 #. placeholder {0}: job.file.name
 #. placeholder {0}: option.term.label
 #. placeholder {0}: passkey.name
-#: packages/admin/src/components/ContentEditor.tsx:3090
+#: packages/admin/src/components/ContentEditor.tsx:3097
 #: packages/admin/src/components/media/MediaBrowserItems.tsx:219
 #: packages/admin/src/components/MediaUploadDialog.tsx:144
 #: packages/admin/src/components/settings/PasskeyItem.tsx:161
@@ -11229,7 +11229,7 @@ msgstr "{0} dosyasını seçimden kaldır"
 msgid "Remove {entry}"
 msgstr "{entry} öğesini kaldır"
 
-#: packages/admin/src/components/ContentEditor.tsx:3514
+#: packages/admin/src/components/ContentEditor.tsx:3525
 #: packages/admin/src/components/SeoImageField.tsx:206
 #: packages/admin/src/components/SeoImageField.tsx:207
 msgid "Remove {label}"
@@ -11239,7 +11239,7 @@ msgstr "{label}'i kaldırın"
 msgid "Remove assignment"
 msgstr "Atamayı kaldır"
 
-#: packages/admin/src/components/ImageFieldRenderer.tsx:452
+#: packages/admin/src/components/ImageFieldRenderer.tsx:456
 msgid "Remove dark mode variant"
 msgstr "Koyu mod varyantını kaldır"
 
@@ -11256,7 +11256,7 @@ msgid "Remove from post"
 msgstr "Gönderiden kaldır"
 
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:596
-#: packages/admin/src/components/ImageFieldRenderer.tsx:327
+#: packages/admin/src/components/ImageFieldRenderer.tsx:331
 msgid "Remove image"
 msgstr "Resmi kaldır"
 
@@ -11307,7 +11307,7 @@ msgid "Removed “{snippet}”"
 msgstr "“{snippet}” kaldırıldı"
 
 #. placeholder {0}: selected.item.filename
-#: packages/admin/src/components/MediaPickerModal.tsx:721
+#: packages/admin/src/components/MediaPickerModal.tsx:727
 msgid "Removed {0} from selection."
 msgstr "{0} seçimden kaldırıldı."
 
@@ -11412,7 +11412,7 @@ msgstr "Yeniden sırala"
 #. placeholder {0}: blockType?.label ?? block._type
 #. placeholder {0}: byline.displayName
 #. placeholder {0}: collection.label
-#: packages/admin/src/components/BlocksField.tsx:340
+#: packages/admin/src/components/BlocksField.tsx:348
 #: packages/admin/src/components/BylineCreditsEditor.tsx:690
 #: packages/admin/src/components/ContentTypeList.tsx:312
 msgid "Reorder {0}"
@@ -11431,18 +11431,18 @@ msgstr "Tekrarlanan alan grubu"
 msgid "visualEditing.replaceImage"
 msgstr "Değiştir"
 
-#: packages/admin/src/components/ContentEditor.tsx:3506
-#: packages/admin/src/components/ContentEditor.tsx:3543
+#: packages/admin/src/components/ContentEditor.tsx:3517
+#: packages/admin/src/components/ContentEditor.tsx:3556
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:449
 #: packages/admin/src/components/editor/GalleryDetailPanel.tsx:506
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:299
 #: packages/admin/src/components/editor/ImageDetailPanel.tsx:373
 #: packages/admin/src/components/editor/VideoNode.tsx:427
-#: packages/admin/src/components/ImageFieldRenderer.tsx:303
-#: packages/admin/src/components/ImageFieldRenderer.tsx:364
-#: packages/admin/src/components/ImageFieldRenderer.tsx:427
-#: packages/admin/src/components/ImageFieldRenderer.tsx:601
-#: packages/admin/src/components/ImageFieldRenderer.tsx:604
+#: packages/admin/src/components/ImageFieldRenderer.tsx:307
+#: packages/admin/src/components/ImageFieldRenderer.tsx:368
+#: packages/admin/src/components/ImageFieldRenderer.tsx:431
+#: packages/admin/src/components/ImageFieldRenderer.tsx:609
+#: packages/admin/src/components/ImageFieldRenderer.tsx:612
 #: packages/admin/src/components/PortableTextEditor.tsx:5817
 #: packages/admin/src/components/PortableTextEditor.tsx:5899
 #: packages/admin/src/components/SeoImageField.tsx:194
@@ -11450,18 +11450,18 @@ msgstr "Değiştir"
 msgid "Replace"
 msgstr "Değiştir"
 
-#: packages/admin/src/components/ContentEditor.tsx:3542
-#: packages/admin/src/components/ImageFieldRenderer.tsx:595
+#: packages/admin/src/components/ContentEditor.tsx:3555
+#: packages/admin/src/components/ImageFieldRenderer.tsx:603
 #: packages/admin/src/components/SeoImageField.tsx:191
 #: packages/admin/src/components/SeoImageField.tsx:252
 msgid "Replace {label}"
 msgstr "{label} öğesini değiştir"
 
-#: packages/admin/src/components/ImageFieldRenderer.tsx:425
+#: packages/admin/src/components/ImageFieldRenderer.tsx:429
 msgid "Replace dark mode image"
 msgstr "Koyu mod görselini değiştir"
 
-#: packages/admin/src/components/ImageFieldRenderer.tsx:592
+#: packages/admin/src/components/ImageFieldRenderer.tsx:600
 msgid "Replace dark mode variant for {label}"
 msgstr "{label} için koyu mod varyantını değiştir"
 
@@ -11487,7 +11487,7 @@ msgstr "Orijinal görsel değiştirilsin mi?"
 msgid "Replace original is available with the Original aspect ratio."
 msgstr "“Orijinali değiştir” seçeneği “Orijinal” en boy oranıyla kullanılabilir."
 
-#: packages/admin/src/components/ContentEditor.tsx:3123
+#: packages/admin/src/components/ContentEditor.tsx:3130
 msgid "Replace reference"
 msgstr "Referansı değiştir"
 
@@ -11627,7 +11627,7 @@ msgstr "Kırpma alanını sol üst köşeden yeniden boyutlandır. Yeniden boyut
 msgid "Resize crop from top-right corner. Use the Arrow keys to resize."
 msgstr "Kırpma alanını sağ üst köşeden yeniden boyutlandır. Yeniden boyutlandırmak için ok tuşlarını kullanın."
 
-#: packages/admin/src/components/ContentEditor.tsx:2115
+#: packages/admin/src/components/ContentEditor.tsx:2117
 msgid "Resize settings panel"
 msgstr "Ayarlar panelini yeniden boyutlandır"
 
@@ -11678,23 +11678,23 @@ msgstr "Geri yükleniyor…"
 msgid "Results"
 msgstr "Sonuçlar"
 
-#: packages/admin/src/components/BlocksField.tsx:365
+#: packages/admin/src/components/BlocksField.tsx:373
 #: packages/admin/src/components/FieldEditor.tsx:1130
 msgid "Retired"
 msgstr "Kullanımdan kaldırıldı"
 
 #: packages/admin/src/components/BylineCreditsEditor.tsx:371
-#: packages/admin/src/components/ContentEditor.tsx:3104
+#: packages/admin/src/components/ContentEditor.tsx:3111
 #: packages/admin/src/components/ContentPickerModal.tsx:278
 #: packages/admin/src/components/MarketplaceBrowse.tsx:143
 #: packages/admin/src/components/media/MediaBrowserItems.tsx:217
 #: packages/admin/src/components/MediaDetailPanel.tsx:1553
 #: packages/admin/src/components/MediaLibrary.tsx:973
 #: packages/admin/src/components/MediaLibrary.tsx:1491
-#: packages/admin/src/components/MediaPickerModal.tsx:1253
-#: packages/admin/src/components/MediaPickerModal.tsx:1349
-#: packages/admin/src/components/MediaPickerModal.tsx:1371
-#: packages/admin/src/components/MediaPickerModal.tsx:1444
+#: packages/admin/src/components/MediaPickerModal.tsx:1259
+#: packages/admin/src/components/MediaPickerModal.tsx:1355
+#: packages/admin/src/components/MediaPickerModal.tsx:1377
+#: packages/admin/src/components/MediaPickerModal.tsx:1450
 #: packages/admin/src/components/PluginFieldErrorBoundary.tsx:44
 #: packages/admin/src/components/SandboxedContentEditorPanel.tsx:272
 #: packages/admin/src/components/Sections.tsx:281
@@ -11958,7 +11958,7 @@ msgstr "Kaydet (Giriş)"
 msgid "Save alt text"
 msgstr "Alt metni kaydet"
 
-#: packages/admin/src/components/ContentEditor.tsx:1864
+#: packages/admin/src/components/ContentEditor.tsx:1866
 msgid "Save anyway"
 msgstr "Yine de kaydet"
 
@@ -12209,16 +12209,16 @@ msgstr "{label} ara"
 msgid "Search {label}…"
 msgstr "{label} ara…"
 
-#: packages/admin/src/components/BlocksField.tsx:184
+#: packages/admin/src/components/BlocksField.tsx:192
 msgid "Search block types"
 msgstr "Blok türlerini ara"
 
-#: packages/admin/src/components/BlocksField.tsx:187
+#: packages/admin/src/components/BlocksField.tsx:195
 msgid "Search blocks"
 msgstr "Blokları ara"
 
 #: packages/admin/src/components/MediaLibrary.tsx:918
-#: packages/admin/src/components/MediaPickerModal.tsx:1300
+#: packages/admin/src/components/MediaPickerModal.tsx:1306
 msgid "Search by filename..."
 msgstr "Dosya adına göre ara..."
 
@@ -12292,7 +12292,7 @@ msgid "Search form"
 msgstr "Arama formu"
 
 #: packages/admin/src/components/MediaLibrary.tsx:919
-#: packages/admin/src/components/MediaPickerModal.tsx:1302
+#: packages/admin/src/components/MediaPickerModal.tsx:1308
 msgid "Search media"
 msgstr "Medya ara"
 
@@ -12361,7 +12361,7 @@ msgid "Search will be turned off for some collections"
 msgstr "Bazı koleksiyonlar için arama devre dışı bırakılacak"
 
 #: packages/admin/src/components/MediaLibrary.tsx:918
-#: packages/admin/src/components/MediaPickerModal.tsx:1300
+#: packages/admin/src/components/MediaPickerModal.tsx:1306
 msgid "Search..."
 msgstr "Ara..."
 
@@ -12472,15 +12472,15 @@ msgstr "Bu dosyanın nerede kullanıldığını görün."
 #: packages/admin/src/components/BylineFieldEditor.tsx:51
 #: packages/admin/src/components/FieldEditor.tsx:426
 #: packages/admin/src/components/FieldEditor.tsx:1302
-#: packages/admin/src/components/MediaPickerModal.tsx:885
+#: packages/admin/src/components/MediaPickerModal.tsx:891
 #: packages/admin/src/components/Settings.tsx:159
 msgid "Select"
 msgstr "Seç"
 
 #: packages/admin/src/components/BlockKitMediaPickerField.tsx:143
-#: packages/admin/src/components/ContentEditor.tsx:3526
-#: packages/admin/src/components/ContentEditor.tsx:3542
-#: packages/admin/src/components/ImageFieldRenderer.tsx:596
+#: packages/admin/src/components/ContentEditor.tsx:3537
+#: packages/admin/src/components/ContentEditor.tsx:3555
+#: packages/admin/src/components/ImageFieldRenderer.tsx:604
 #: packages/admin/src/components/SeoImageField.tsx:252
 msgid "Select {label}"
 msgstr "{label}'i seçin"
@@ -12526,7 +12526,7 @@ msgstr "Tümünü seç"
 msgid "Select all on this page"
 msgstr "Bu sayfadakilerin tümünü seç"
 
-#: packages/admin/src/components/ContentEditor.tsx:3016
+#: packages/admin/src/components/ContentEditor.tsx:3023
 msgid "Select at least one entry."
 msgstr "En az bir içerik kaydı seçin."
 
@@ -12543,7 +12543,7 @@ msgstr "{0}'in yorumunu seçin"
 msgid "Select content"
 msgstr "İçerik seç"
 
-#: packages/admin/src/components/ImageFieldRenderer.tsx:593
+#: packages/admin/src/components/ImageFieldRenderer.tsx:601
 msgid "Select dark mode variant for {label}"
 msgstr "{label} için koyu mod varyantını seç"
 
@@ -12559,8 +12559,8 @@ msgstr "Site simgesini seç"
 msgid "Select Favicon"
 msgstr "Favicon Seç"
 
-#: packages/admin/src/components/ContentEditor.tsx:3530
-#: packages/admin/src/components/MediaPickerModal.tsx:233
+#: packages/admin/src/components/ContentEditor.tsx:3541
+#: packages/admin/src/components/MediaPickerModal.tsx:237
 msgid "Select file"
 msgstr "Dosya seç"
 
@@ -12568,8 +12568,8 @@ msgstr "Dosya seç"
 msgid "Select gallery images"
 msgstr "Galeri görsellerini seçin"
 
-#: packages/admin/src/components/ImageFieldRenderer.tsx:576
-#: packages/admin/src/components/MediaPickerModal.tsx:233
+#: packages/admin/src/components/ImageFieldRenderer.tsx:582
+#: packages/admin/src/components/MediaPickerModal.tsx:237
 #: packages/admin/src/components/PortableTextEditor.tsx:4700
 msgid "Select image"
 msgstr "Resim seç"
@@ -12602,7 +12602,7 @@ msgstr "Tabloyu seç"
 msgid "Select up to 50 posts at a time."
 msgstr "Tek seferde en fazla 50 gönderi seçin."
 
-#: packages/admin/src/components/MediaPickerModal.tsx:233
+#: packages/admin/src/components/MediaPickerModal.tsx:237
 #: packages/admin/src/components/PortableTextEditor.tsx:4714
 msgid "Select video"
 msgstr "Video seç"
@@ -12625,13 +12625,13 @@ msgstr "Seçilen {label}"
 msgid "Selected {selectedItemTitle}"
 msgstr "Seçilen: {selectedItemTitle}"
 
-#: packages/admin/src/components/ImageFieldRenderer.tsx:265
-#: packages/admin/src/components/ImageFieldRenderer.tsx:280
+#: packages/admin/src/components/ImageFieldRenderer.tsx:269
+#: packages/admin/src/components/ImageFieldRenderer.tsx:284
 #: packages/admin/src/components/revisions/RevisionFieldValue.tsx:336
 msgid "Selected image"
 msgstr "Seçili görsel"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:982
+#: packages/admin/src/components/MediaPickerModal.tsx:988
 msgid "Selected media"
 msgstr "Seçilen medya"
 
@@ -12784,8 +12784,8 @@ msgid "Setting up..."
 msgstr "Kurulum..."
 
 #: packages/admin/src/components/AdminCommandPalette.tsx:252
-#: packages/admin/src/components/ContentEditor.tsx:1979
-#: packages/admin/src/components/ContentEditor.tsx:2306
+#: packages/admin/src/components/ContentEditor.tsx:1981
+#: packages/admin/src/components/ContentEditor.tsx:2308
 #: packages/admin/src/components/ContentTypeEditor.tsx:467
 #: packages/admin/src/components/Header.tsx:104
 #: packages/admin/src/components/PluginManager.tsx:545
@@ -12874,7 +12874,7 @@ msgstr "Belirteci göster"
 #. placeholder {0}: count ?? 0
 #. placeholder {0}: totalCount ?? 0
 #: packages/admin/src/components/ListPaginationFooter.tsx:119
-#: packages/admin/src/components/MediaPickerModal.tsx:1601
+#: packages/admin/src/components/MediaPickerModal.tsx:1607
 msgid "Showing {pageShowingRange} of {0}"
 msgstr "{pageShowingRange} / {0} gösteriliyor"
 
@@ -13258,7 +13258,7 @@ msgstr "Şablonun örnek yazıları ve sayfalarıyla başlayın. Yeni siteler i�
 msgid "Start writing with plain text"
 msgstr "Düz metinle yazmaya başlayın"
 
-#: packages/admin/src/components/ContentEditor.tsx:2579
+#: packages/admin/src/components/ContentEditor.tsx:2581
 #: packages/admin/src/components/PortableTextEditor.tsx:3495
 msgid "Start writing, or type '/' for commands"
 msgstr "Yazmaya başlayın veya komutlar için '/' yazın"
@@ -13741,7 +13741,7 @@ msgstr "Davet edilen kullanıcı, kaydı tamamladıktan sonra bu role sahip olac
 msgid "The last export failed"
 msgstr "Son dışa aktarma başarısız oldu"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1343
+#: packages/admin/src/components/MediaPickerModal.tsx:1349
 msgid "The latest media request failed. Showing the previous page."
 msgstr "Son medya isteği başarısız oldu. Önceki sayfa gösteriliyor."
 
@@ -13871,8 +13871,8 @@ msgstr "Eklenti alanı widget'ı oluşturulamadı."
 msgid "The plugin has not saved these changes. Review them before updating the editor."
 msgstr "Eklenti bu değişiklikleri kaydetmedi. Düzenleyiciyi güncellemeden önce inceleyin."
 
-#: packages/admin/src/components/ContentEditor.tsx:1089
-#: packages/admin/src/components/ContentEditor.tsx:1105
+#: packages/admin/src/components/ContentEditor.tsx:1091
+#: packages/admin/src/components/ContentEditor.tsx:1107
 msgid "The plugin result is stale because the editor changed while it was working."
 msgstr "Eklenti çalışırken düzenleyicide değişiklik yapıldığı için eklenti sonucu güncelliğini yitirdi."
 
@@ -14023,7 +14023,7 @@ msgstr "Bu araçlar, ajan erişimini açıkça etkinleştirene kadar yüklemeden
 msgid "This also removes:"
 msgstr "Bu işlem şunları da kaldırır:"
 
-#: packages/admin/src/components/BlocksField.tsx:403
+#: packages/admin/src/components/BlocksField.tsx:411
 msgid "This block cannot be edited because its stored definition is unavailable."
 msgstr "Saklanan tanımı mevcut olmadığı için bu blok düzenlenemiyor."
 
@@ -14078,11 +14078,11 @@ msgstr "Bu cihaz aşağıdakileri kullanmak için izin istiyor:"
 msgid "This doesn't look like a valid migration key. Generate a new one in the plugin and paste the full string starting with \"em1.\"."
 msgstr "Bu geçerli bir taşıma anahtarına benzemiyor. Eklentide yeni bir anahtar oluşturun ve \"em1.\" ile başlayan dizenin tamamını yapıştırın."
 
-#: packages/admin/src/components/ContentEditor.tsx:1860
+#: packages/admin/src/components/ContentEditor.tsx:1862
 msgid "This entry changed somewhere else after you opened it."
 msgstr "Bu kayıt siz açtıktan sonra başka bir yerde değiştirildi."
 
-#: packages/admin/src/components/ContentEditor.tsx:1421
+#: packages/admin/src/components/ContentEditor.tsx:1423
 #: packages/admin/src/router.tsx:1138
 msgid "This entry changed somewhere else. Save anyway, or reload to get the newer version."
 msgstr "Bu kayıt başka bir yerde değiştirildi. Yine de kaydedin veya yeni sürümü almak için yeniden yükleyin."
@@ -14103,7 +14103,7 @@ msgstr "Bu kayıt yayınlanana kadar URL'si yok. Bunun yerine bir URL yapıştı
 msgid "This entry is open somewhere else"
 msgstr "Bu kayıt başka bir yerde açık"
 
-#: packages/admin/src/components/ContentEditor.tsx:1847
+#: packages/admin/src/components/ContentEditor.tsx:1849
 msgid "This entry is read-only because its schema uses field types this version of EmDash does not support."
 msgstr "Bu kaydın şeması EmDash'in bu sürümünün desteklemediği alan türlerini kullandığı için kayıt salt okunurdur."
 
@@ -14115,7 +14115,7 @@ msgstr "Bu kaydın {lateness} yayınlanması gerekiyordu, ancak hâlâ yayınlan
 msgid "This export is large"
 msgstr "Bu dışa aktarma büyük"
 
-#: packages/admin/src/components/ContentEditor.tsx:2407
+#: packages/admin/src/components/ContentEditor.tsx:2409
 #: packages/admin/src/components/revisions/RevisionFieldValue.tsx:478
 msgid "This field cannot be edited by this version of EmDash."
 msgstr "Bu alan EmDash'in bu sürümüyle düzenlenemez."
@@ -14129,11 +14129,11 @@ msgid "This field contains unsupported Portable Text marks: <0>{markList}</0>. R
 msgstr "Bu alan desteklenmeyen Portable Text işaretleri içeriyor: <0>{markList}</0>. Bu içeriği düzenlemeden veya kaydetmeden önce bunları API üzerinden kaldırın."
 
 #. placeholder {0}: file.type
-#: packages/admin/src/components/media/ImageDropTarget.tsx:57
+#: packages/admin/src/components/media/ImageDropTarget.tsx:61
 msgid "This field does not accept {0} files."
 msgstr "Bu alan {0} dosyalarını kabul etmiyor."
 
-#: packages/admin/src/components/MediaPickerModal.tsx:666
+#: packages/admin/src/components/MediaPickerModal.tsx:672
 msgid "This field does not accept {mimeType} files."
 msgstr "Bu alan {mimeType} dosyalarını kabul etmiyor."
 
@@ -14141,8 +14141,8 @@ msgstr "Bu alan {mimeType} dosyalarını kabul etmiyor."
 msgid "This field expects a list. The stored value stays unchanged until you replace it with an empty list, which deletes it. Copy anything you need from it first."
 msgstr "Bu alan bir liste bekliyor. Saklanan değer, silinmesine neden olacak boş bir listeyle değiştirene kadar olduğu gibi kalır. Önce ihtiyacınız olanları kopyalayın."
 
-#: packages/admin/src/components/ContentEditor.tsx:3546
-#: packages/admin/src/components/ImageFieldRenderer.tsx:615
+#: packages/admin/src/components/ContentEditor.tsx:3559
+#: packages/admin/src/components/ImageFieldRenderer.tsx:623
 msgid "This field is required"
 msgstr "Bu alan zorunludur"
 
@@ -14180,7 +14180,7 @@ msgstr "Bu dosya bir EmDash site paketi değil: manifest.json ile başlamalıdı
 msgid "This folder is empty"
 msgstr "Bu klasör boş"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1456
+#: packages/admin/src/components/MediaPickerModal.tsx:1462
 msgid "This folder is empty."
 msgstr "Bu klasör boş."
 
@@ -14680,7 +14680,7 @@ msgid "Try another code"
 msgstr "Başka bir kod deneyin"
 
 #: packages/admin/src/components/MediaLibrary.tsx:1073
-#: packages/admin/src/components/MediaPickerModal.tsx:1454
+#: packages/admin/src/components/MediaPickerModal.tsx:1460
 msgid "Try another filename or clear your search."
 msgstr "Başka bir dosya adı deneyin veya aramanızı temizleyin."
 
@@ -14893,7 +14893,7 @@ msgstr "Kaydedilmemiş içerik sitenizin dışına çıkabilir"
 msgid "Unscheduled"
 msgstr "Zamanlanmamış"
 
-#: packages/admin/src/components/BlocksField.tsx:366
+#: packages/admin/src/components/BlocksField.tsx:374
 #: packages/admin/src/components/ContentTypeEditor.tsx:953
 msgid "Unsupported"
 msgstr "Desteklenmiyor"
@@ -14913,7 +14913,7 @@ msgstr "{0} tarihine kadar"
 msgid "Untitled"
 msgstr "İsimsiz"
 
-#: packages/admin/src/components/ContentEditor.tsx:3448
+#: packages/admin/src/components/ContentEditor.tsx:3459
 #: packages/admin/src/components/revisions/RevisionFieldValue.tsx:389
 msgid "Untitled file"
 msgstr "Başlıksız dosya"
@@ -15021,11 +15021,11 @@ msgstr "Yükle"
 msgid "Upload"
 msgstr "Yükle"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1458
+#: packages/admin/src/components/MediaPickerModal.tsx:1464
 msgid "Upload a file to get started"
 msgstr "Başlamak için bir dosya yükleyin"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1460
+#: packages/admin/src/components/MediaPickerModal.tsx:1466
 msgid "Upload a video to get started"
 msgstr "Başlamak için video yükleyin"
 
@@ -15033,7 +15033,7 @@ msgstr "Başlamak için video yükleyin"
 msgid "Upload an export file"
 msgstr "Bir dışa aktarma dosyası yükleyin"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1461
+#: packages/admin/src/components/MediaPickerModal.tsx:1467
 msgid "Upload an image to get started"
 msgstr "Başlamak için bir resim yükleyin"
 
@@ -15056,7 +15056,7 @@ msgstr "Dışa Aktarma Dosyasını Yükle"
 msgid "Upload failed"
 msgstr "Yükleme başarısız oldu"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1120
+#: packages/admin/src/components/MediaPickerModal.tsx:1126
 msgid "Upload files"
 msgstr "Dosyaları yükle"
 
@@ -15128,8 +15128,8 @@ msgid "visualEditing.uploadingFile"
 msgstr "{filename} yükleniyor…"
 
 #: packages/admin/src/components/editor/ImageUploadExtension.ts:125
-#: packages/admin/src/components/media/ImageDropTarget.tsx:134
-#: packages/admin/src/components/media/ImageDropTarget.tsx:147
+#: packages/admin/src/components/media/ImageDropTarget.tsx:143
+#: packages/admin/src/components/media/ImageDropTarget.tsx:156
 msgid "Uploading image…"
 msgstr "Görsel yükleniyor…"
 
@@ -15215,7 +15215,7 @@ msgstr "Yine de {fallbackUrl} adresini kullan"
 msgid "Use a security key"
 msgstr "Güvenlik anahtarı kullan"
 
-#: packages/admin/src/components/MediaPickerModal.tsx:662
+#: packages/admin/src/components/MediaPickerModal.tsx:668
 msgid "Use a URL ending in a recognized image extension, such as .jpg or .png."
 msgstr "Tanınan bir görsel uzantısıyla biten bir URL kullanın (ör. .jpg veya .png)."
 
@@ -15235,7 +15235,7 @@ msgstr "Küçük harf, sayı ve kısa çizgi kullanın; ilk karakter harf olmal�
 msgid "Use lowercase letters, numbers, and hyphens."
 msgstr "Küçük harf, rakam ve kısa çizgi kullanın."
 
-#: packages/admin/src/components/MediaPickerModal.tsx:1185
+#: packages/admin/src/components/MediaPickerModal.tsx:1191
 msgid "Use URL"
 msgstr "URL'yi kullan"
 
@@ -15255,7 +15255,7 @@ msgstr "Sayfada görsel olmadığında yedek Open Graph görseli olarak kullanı
 msgid "Used as the identifier. Lowercase letters, numbers, and underscores only."
 msgstr "Tanımlayıcı olarak kullanılır. Yalnızca küçük harfler, sayılar ve alt çizgiler."
 
-#: packages/admin/src/components/ContentEditor.tsx:2702
+#: packages/admin/src/components/ContentEditor.tsx:2704
 msgid "Used as the main visual for this post on listing pages and at the top of the post"
 msgstr "Listeleme sayfalarında ve gönderinin üst kısmında bu yazının ana görseli olarak kullanıldı"
 
@@ -15382,7 +15382,7 @@ msgstr "Sürüm"
 #. placeholder {0}: block._version
 #. placeholder {0}: release.version
 #. placeholder {0}: version.version
-#: packages/admin/src/components/BlocksField.tsx:363
+#: packages/admin/src/components/BlocksField.tsx:371
 #: packages/admin/src/components/BlockTypeList.tsx:44
 #: packages/admin/src/components/RegistryPluginDetail.tsx:557
 msgid "Version {0}"
@@ -15404,7 +15404,7 @@ msgstr "Sürüm geri yüklendi"
 #: packages/admin/src/components/AllowedTypesEditor.tsx:70
 #: packages/admin/src/components/editor/BlockMenu.tsx:43
 #: packages/admin/src/components/MediaLibrary.tsx:938
-#: packages/admin/src/components/MediaPickerModal.tsx:401
+#: packages/admin/src/components/MediaPickerModal.tsx:407
 #: packages/admin/src/components/PortableTextEditor.tsx:3715
 #: packages/admin/src/components/revisions/RevisionDocument.tsx:485
 msgid "Video"
@@ -15428,7 +15428,7 @@ msgid "View live"
 msgstr "Yayındaki içeriği görüntüle"
 
 #: packages/admin/src/components/MediaLibrary.tsx:884
-#: packages/admin/src/components/MediaPickerModal.tsx:1260
+#: packages/admin/src/components/MediaPickerModal.tsx:1266
 msgid "View mode"
 msgstr "Görünüm modu"
 
@@ -15595,7 +15595,7 @@ msgstr "İçe aktarılacaklar"
 msgid "What will happen when you import"
 msgstr "İçe aktardığınızda ne olacak?"
 
-#: packages/admin/src/components/ContentEditor.tsx:1861
+#: packages/admin/src/components/ContentEditor.tsx:1863
 msgid "What you typed is still here. Saving replaces the newer version."
 msgstr "Yazdıklarınız hâlâ burada. Kaydederseniz daha yeni sürümün üzerine yazılır."
 
