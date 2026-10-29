@@ -199,6 +199,8 @@ export interface MediaPickerModalProps {
 	mediaKind?: "image" | "file" | "video";
 	mimeTypeFilters?: string[];
 	fieldId?: string;
+	blockType?: string;
+	blockVersion?: number;
 	localOnly?: boolean;
 }
 
@@ -211,6 +213,8 @@ export function MediaPickerModal({
 	mimeTypeFilter = "image/",
 	mimeTypeFilters,
 	fieldId,
+	blockType,
+	blockVersion,
 	title: providedTitle,
 	confirmLabel,
 	hideUrlInput = false,
@@ -288,6 +292,8 @@ export function MediaPickerModal({
 					item: withLocalMediaUrl(
 						await uploadMedia(file, {
 							fieldId,
+							blockType,
+							blockVersion,
 							folderId: destinationFolderId,
 							...(destinationFolderId ? { deduplicate: false } : {}),
 							signal,
@@ -300,7 +306,7 @@ export function MediaPickerModal({
 				item: await uploadToProvider(providerId, file, undefined, { signal }),
 			};
 		},
-		[fieldId],
+		[fieldId, blockType, blockVersion],
 	);
 	const uploadQueue = useMediaUploadQueue<UploadedMedia>({ upload: uploadFile });
 
