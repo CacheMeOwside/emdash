@@ -8420,7 +8420,7 @@ msgstr "მენიუ იტვირთება..."
 msgid "Loading menus..."
 msgstr "მენიუები იტვირთება..."
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:258
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:383
 msgid "Loading plugin panel"
 msgstr "პლაგინის პანელი იტვირთება"
 
@@ -10534,7 +10534,8 @@ msgstr "პლაგინი ვერ მოიძებნა. გამო�
 msgid "Plugin pages"
 msgstr "პლაგინის გვერდები"
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:264
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:259
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:396
 #: packages/admin/src/lib/content-editor-panels.tsx:192
 msgid "Plugin panel unavailable."
 msgstr "პლაგინის პანელი მიუწვდომელია."
@@ -11696,7 +11697,7 @@ msgstr ""
 #: packages/admin/src/components/MediaPickerModal.tsx:1377
 #: packages/admin/src/components/MediaPickerModal.tsx:1450
 #: packages/admin/src/components/PluginFieldErrorBoundary.tsx:44
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:272
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:404
 #: packages/admin/src/components/Sections.tsx:281
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:122
 #: packages/admin/src/lib/content-editor-panels.tsx:201

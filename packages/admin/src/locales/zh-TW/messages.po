@@ -8420,7 +8420,7 @@ msgstr "正在載入選單…"
 msgid "Loading menus..."
 msgstr "正在載入選單..."
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:258
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:383
 msgid "Loading plugin panel"
 msgstr "正在載入外掛面板"
 
@@ -10534,7 +10534,8 @@ msgstr "找不到外掛。發行者或代稱可能不正確。"
 msgid "Plugin pages"
 msgstr "外掛頁面"
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:264
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:259
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:396
 #: packages/admin/src/lib/content-editor-panels.tsx:192
 msgid "Plugin panel unavailable."
 msgstr "無法使用外掛面板。"
@@ -11696,7 +11697,7 @@ msgstr "已淘汰"
 #: packages/admin/src/components/MediaPickerModal.tsx:1377
 #: packages/admin/src/components/MediaPickerModal.tsx:1450
 #: packages/admin/src/components/PluginFieldErrorBoundary.tsx:44
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:272
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:404
 #: packages/admin/src/components/Sections.tsx:281
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:122
 #: packages/admin/src/lib/content-editor-panels.tsx:201

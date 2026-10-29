@@ -8421,7 +8421,7 @@ msgstr "מתבצעת טעינת תפריט..."
 msgid "Loading menus..."
 msgstr "מתבצעת טעינת תפריטים..."
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:258
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:383
 msgid "Loading plugin panel"
 msgstr "מתבצעת טעינת חלונית תוסף"
 
@@ -10535,7 +10535,8 @@ msgstr "התוסף לא נמצא. ייתכן שהמפרסם או ה-slug אינ�
 msgid "Plugin pages"
 msgstr "עמודי תוסף"
 
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:264
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:259
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:396
 #: packages/admin/src/lib/content-editor-panels.tsx:192
 msgid "Plugin panel unavailable."
 msgstr "חלונית התוסף אינה זמינה."
@@ -11697,7 +11698,7 @@ msgstr "הוצא משימוש"
 #: packages/admin/src/components/MediaPickerModal.tsx:1377
 #: packages/admin/src/components/MediaPickerModal.tsx:1450
 #: packages/admin/src/components/PluginFieldErrorBoundary.tsx:44
-#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:272
+#: packages/admin/src/components/SandboxedContentEditorPanel.tsx:404
 #: packages/admin/src/components/Sections.tsx:281
 #: packages/admin/src/components/ThemeMarketplaceBrowse.tsx:122
 #: packages/admin/src/lib/content-editor-panels.tsx:201
