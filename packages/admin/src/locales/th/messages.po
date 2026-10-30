@@ -123,7 +123,7 @@ msgstr ""
 msgid " (default)"
 msgstr " (ค่าเริ่มต้น)"
 
-#: packages/admin/src/components/MenuEditor.tsx:631
+#: packages/admin/src/components/MenuEditor.tsx:637
 msgid " (opens in new window)"
 msgstr " (เปิดในหน้าต่างใหม่)"
 
@@ -134,6 +134,11 @@ msgstr "-- เลือก --"
 #: packages/admin/src/components/revisions/RevisionViewBar.tsx:156
 msgctxt "Read aloud between a version's author and status"
 msgid ", "
+msgstr ""
+
+#. placeholder {0}: item.label
+#: packages/admin/src/components/MenuEditor.tsx:689
+msgid "\"{0}\" and its nested items will be removed from this menu. This action cannot be undone."
 msgstr ""
 
 #. placeholder {0}: item.filename
@@ -152,7 +157,7 @@ msgid "\"{0}\" will be permanently deleted."
 msgstr "\"{0}\" จะถูกลบอย่างถาวร"
 
 #. placeholder {0}: item.label
-#: packages/admin/src/components/MenuEditor.tsx:681
+#: packages/admin/src/components/MenuEditor.tsx:690
 msgid "\"{0}\" will be removed from this menu. This action cannot be undone."
 msgstr ""
 
@@ -1351,7 +1356,7 @@ msgstr "ใช้งานอยู่ v{0}"
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:175
 #: packages/admin/src/components/BylineCreditsEditor.tsx:402
-#: packages/admin/src/components/MenuEditor.tsx:547
+#: packages/admin/src/components/MenuEditor.tsx:553
 msgid "Add"
 msgstr "เพิ่ม"
 
@@ -1426,14 +1431,14 @@ msgstr "เพิ่มคอลัมน์ถัดไป"
 msgid "Add column before"
 msgstr "เพิ่มคอลัมน์ก่อนหน้า"
 
-#: packages/admin/src/components/MenuEditor.tsx:477
-#: packages/admin/src/components/MenuEditor.tsx:603
+#: packages/admin/src/components/MenuEditor.tsx:483
+#: packages/admin/src/components/MenuEditor.tsx:609
 msgid "Add Content"
 msgstr "เพิ่มเนื้อหา"
 
-#: packages/admin/src/components/MenuEditor.tsx:489
-#: packages/admin/src/components/MenuEditor.tsx:496
-#: packages/admin/src/components/MenuEditor.tsx:606
+#: packages/admin/src/components/MenuEditor.tsx:495
+#: packages/admin/src/components/MenuEditor.tsx:502
+#: packages/admin/src/components/MenuEditor.tsx:612
 msgid "Add Custom Link"
 msgstr "เพิ่มลิงก์ที่กำหนดเอง"
 
@@ -1494,7 +1499,7 @@ msgstr "เพิ่มรายการ"
 msgid "Add link"
 msgstr "เพิ่มลิงก์"
 
-#: packages/admin/src/components/MenuEditor.tsx:596
+#: packages/admin/src/components/MenuEditor.tsx:602
 msgid "Add links to build your navigation menu"
 msgstr "เพิ่มลิงก์เพื่อสร้างเมนูนำทางของคุณ"
 
@@ -1646,7 +1651,7 @@ msgstr ""
 msgid "Added:"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:547
+#: packages/admin/src/components/MenuEditor.tsx:553
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:316
 msgid "Adding..."
 msgstr "กำลังเพิ่ม..."
@@ -2294,7 +2299,7 @@ msgstr ""
 #: packages/admin/src/components/FieldEditor.tsx:673
 #: packages/admin/src/components/MediaDetailPanel.tsx:1817
 #: packages/admin/src/components/MediaLibrary.tsx:763
-#: packages/admin/src/components/MenuEditor.tsx:400
+#: packages/admin/src/components/MenuEditor.tsx:406
 #: packages/admin/src/components/WordPressImport.tsx:1565
 #: packages/admin/src/components/WordPressImport.tsx:2586
 msgid "Back"
@@ -2339,7 +2344,7 @@ msgstr "กลับไปที่คลังหลัก"
 msgid "Back to marketplace"
 msgstr "กลับไปยังมาร์เก็ตเพลส"
 
-#: packages/admin/src/components/MenuEditor.tsx:398
+#: packages/admin/src/components/MenuEditor.tsx:404
 msgid "Back to menus"
 msgstr "กลับไปที่เมนู"
 
@@ -2646,9 +2651,9 @@ msgstr "สามารถดูเนื้อหาได้"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1859
 #: packages/admin/src/components/MediaFolderDialog.tsx:152
 #: packages/admin/src/components/MediaPickerModal.tsx:1641
-#: packages/admin/src/components/MenuEditor.tsx:459
-#: packages/admin/src/components/MenuEditor.tsx:544
-#: packages/admin/src/components/MenuEditor.tsx:764
+#: packages/admin/src/components/MenuEditor.tsx:465
+#: packages/admin/src/components/MenuEditor.tsx:550
+#: packages/admin/src/components/MenuEditor.tsx:774
 #: packages/admin/src/components/MenuList.tsx:184
 #: packages/admin/src/components/PluginManager.tsx:819
 #: packages/admin/src/components/PortableTextEditor.tsx:5773
@@ -3181,15 +3186,15 @@ msgstr "คลิกลิงก์นี้เพื่อเข้าสู่
 #: packages/admin/src/components/MediaPickerModal.tsx:1052
 #: packages/admin/src/components/MediaPickerModal.tsx:1059
 #: packages/admin/src/components/MediaUploadDialog.tsx:237
-#: packages/admin/src/components/MenuEditor.tsx:428
 #: packages/admin/src/components/MenuEditor.tsx:434
-#: packages/admin/src/components/MenuEditor.tsx:438
-#: packages/admin/src/components/MenuEditor.tsx:499
+#: packages/admin/src/components/MenuEditor.tsx:440
+#: packages/admin/src/components/MenuEditor.tsx:444
 #: packages/admin/src/components/MenuEditor.tsx:505
-#: packages/admin/src/components/MenuEditor.tsx:509
-#: packages/admin/src/components/MenuEditor.tsx:709
-#: packages/admin/src/components/MenuEditor.tsx:715
+#: packages/admin/src/components/MenuEditor.tsx:511
+#: packages/admin/src/components/MenuEditor.tsx:515
 #: packages/admin/src/components/MenuEditor.tsx:719
+#: packages/admin/src/components/MenuEditor.tsx:725
+#: packages/admin/src/components/MenuEditor.tsx:729
 #: packages/admin/src/components/MenuList.tsx:145
 #: packages/admin/src/components/PortableTextEditor.tsx:2697
 #: packages/admin/src/components/PortableTextEditor.tsx:2703
@@ -4116,12 +4121,12 @@ msgstr "สร้างสำเนาที่ครอบตัดแล้ว
 msgid "CSS"
 msgstr "CSS"
 
-#: packages/admin/src/components/MenuEditor.tsx:536
-#: packages/admin/src/components/MenuEditor.tsx:749
+#: packages/admin/src/components/MenuEditor.tsx:542
+#: packages/admin/src/components/MenuEditor.tsx:759
 msgid "CSS classes"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:635
+#: packages/admin/src/components/MenuEditor.tsx:641
 msgid "CSS classes:"
 msgstr ""
 
@@ -4272,8 +4277,8 @@ msgstr "กำหนดไว้ในโค้ด"
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:392
 #: packages/admin/src/components/MediaDetailPanel.tsx:1828
 #: packages/admin/src/components/MediaDetailPanel.tsx:1932
-#: packages/admin/src/components/MenuEditor.tsx:668
-#: packages/admin/src/components/MenuEditor.tsx:682
+#: packages/admin/src/components/MenuEditor.tsx:674
+#: packages/admin/src/components/MenuEditor.tsx:692
 #: packages/admin/src/components/MenuList.tsx:235
 #: packages/admin/src/components/Redirects.tsx:620
 #: packages/admin/src/components/RelationDeleteDialog.tsx:40
@@ -4404,7 +4409,7 @@ msgstr "ลบมีเดียหรือไม่?"
 msgid "Delete menu"
 msgstr "ลบเมนู"
 
-#: packages/admin/src/components/MenuEditor.tsx:680
+#: packages/admin/src/components/MenuEditor.tsx:686
 msgid "Delete menu item?"
 msgstr ""
 
@@ -4506,7 +4511,7 @@ msgstr "การลบ \"{0}\" จะลบ{1, plural, one {ค่าที่�
 #: packages/admin/src/components/MediaDetailPanel.tsx:1828
 #: packages/admin/src/components/MediaDetailPanel.tsx:1933
 #: packages/admin/src/components/MediaFolderDialog.tsx:185
-#: packages/admin/src/components/MenuEditor.tsx:683
+#: packages/admin/src/components/MenuEditor.tsx:693
 #: packages/admin/src/components/MenuList.tsx:236
 #: packages/admin/src/components/Redirects.tsx:621
 #: packages/admin/src/components/RelationDeleteDialog.tsx:41
@@ -5036,7 +5041,7 @@ msgstr ""
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:380
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:381
 #: packages/admin/src/components/MenuCard.tsx:59
-#: packages/admin/src/components/MenuEditor.tsx:663
+#: packages/admin/src/components/MenuEditor.tsx:669
 #: packages/admin/src/components/Sections.tsx:439
 #: packages/admin/src/components/Shell.tsx:87
 #: packages/admin/src/components/TranslationsPanel.tsx:95
@@ -5146,11 +5151,11 @@ msgstr "การล็อกการแก้ไข"
 msgid "Edit media alt text, captions, and focal points"
 msgstr "แก้ไขข้อความ Alt คำบรรยาย และจุดโฟกัสของมีเดีย"
 
-#: packages/admin/src/components/MenuEditor.tsx:706
+#: packages/admin/src/components/MenuEditor.tsx:716
 msgid "Edit Menu Item"
 msgstr "แก้ไขรายการเมนู"
 
-#: packages/admin/src/components/MenuEditor.tsx:469
+#: packages/admin/src/components/MenuEditor.tsx:475
 msgid "Edit menu items"
 msgstr "แก้ไขรายการเมนู"
 
@@ -5466,8 +5471,8 @@ msgstr ""
 msgid "Enter a time"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:523
-#: packages/admin/src/components/MenuEditor.tsx:735
+#: packages/admin/src/components/MenuEditor.tsx:529
+#: packages/admin/src/components/MenuEditor.tsx:745
 msgid "Enter a URL (https://…) or a relative path (/…)"
 msgstr "ป้อน URL (https://…) หรือพาธสัมพัทธ์ (/…)"
 
@@ -5548,7 +5553,7 @@ msgid "entry on the linking side"
 msgstr "รายการฝั่งที่ลิงก์"
 
 #: packages/admin/src/components/MenuEditor.tsx:160
-#: packages/admin/src/components/MenuEditor.tsx:262
+#: packages/admin/src/components/MenuEditor.tsx:268
 #: packages/admin/src/components/SetupWizard.tsx:603
 #: packages/admin/src/components/TaxonomyManager.tsx:1213
 #: packages/admin/src/router.tsx:3381
@@ -7337,7 +7342,7 @@ msgstr "กันรายการไว้ขณะมีผู้แก้ไ
 msgid "Holds an entry ID. Set a target collection under Content Types to pick entries instead."
 msgstr "เก็บ ID ของรายการ ตั้งค่าคอลเลกชันเป้าหมายในประเภทเนื้อหาเพื่อเลือกรายการแทน"
 
-#: packages/admin/src/components/MenuEditor.tsx:515
+#: packages/admin/src/components/MenuEditor.tsx:521
 msgid "Home"
 msgstr "หน้าแรก"
 
@@ -7403,7 +7408,7 @@ msgstr "HTML เท่านั้น ผ่านการทำความส
 msgid "https://example.com"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:524
+#: packages/admin/src/components/MenuEditor.tsx:530
 msgid "https://example.com or /about"
 msgstr "https://example.com หรือ /about"
 
@@ -7966,15 +7971,15 @@ msgstr "ตัวเอียง"
 msgid "Item {0}"
 msgstr "รายการ {0}"
 
-#: packages/admin/src/components/MenuEditor.tsx:210
+#: packages/admin/src/components/MenuEditor.tsx:216
 msgid "Item added"
 msgstr "เพิ่มรายการแล้ว"
 
-#: packages/admin/src/components/MenuEditor.tsx:223
+#: packages/admin/src/components/MenuEditor.tsx:229
 msgid "Item deleted"
 msgstr "ลบรายการแล้ว"
 
-#: packages/admin/src/components/MenuEditor.tsx:241
+#: packages/admin/src/components/MenuEditor.tsx:247
 msgid "Item updated"
 msgstr "อัปเดตรายการแล้ว"
 
@@ -8079,9 +8084,9 @@ msgstr "Kotlin"
 #: packages/admin/src/components/BylineFieldEditor.tsx:226
 #: packages/admin/src/components/FieldEditor.tsx:837
 #: packages/admin/src/components/FieldEditor.tsx:1253
-#: packages/admin/src/components/MenuEditor.tsx:445
-#: packages/admin/src/components/MenuEditor.tsx:515
-#: packages/admin/src/components/MenuEditor.tsx:726
+#: packages/admin/src/components/MenuEditor.tsx:451
+#: packages/admin/src/components/MenuEditor.tsx:521
+#: packages/admin/src/components/MenuEditor.tsx:736
 #: packages/admin/src/components/MenuList.tsx:153
 #: packages/admin/src/components/TaxonomyManager.tsx:1040
 #: packages/admin/src/components/Widgets.tsx:446
@@ -8412,7 +8417,7 @@ msgstr "กำลังโหลดมีเดีย"
 msgid "Loading media usage tracking settings…"
 msgstr "กำลังโหลดการตั้งค่าการติดตามการใช้งานมีเดีย…"
 
-#: packages/admin/src/components/MenuEditor.tsx:376
+#: packages/admin/src/components/MenuEditor.tsx:382
 msgid "Loading menu..."
 msgstr "กำลังโหลดเมนู..."
 
@@ -8860,15 +8865,15 @@ msgstr "สร้างเมนูแล้ว"
 msgid "Menu deleted"
 msgstr "ลบเมนูแล้ว"
 
-#: packages/admin/src/components/MenuEditor.tsx:210
+#: packages/admin/src/components/MenuEditor.tsx:216
 msgid "Menu item has been added."
 msgstr "เพิ่มรายการเมนูแล้ว"
 
-#: packages/admin/src/components/MenuEditor.tsx:224
+#: packages/admin/src/components/MenuEditor.tsx:230
 msgid "Menu item has been deleted."
 msgstr "ลบรายการเมนูแล้ว"
 
-#: packages/admin/src/components/MenuEditor.tsx:242
+#: packages/admin/src/components/MenuEditor.tsx:248
 msgid "Menu item has been updated."
 msgstr "อัปเดตรายการเมนูแล้ว"
 
@@ -8877,11 +8882,11 @@ msgstr "อัปเดตรายการเมนูแล้ว"
 msgid "Menu items"
 msgstr "รายการเมนู"
 
-#: packages/admin/src/components/MenuEditor.tsx:384
+#: packages/admin/src/components/MenuEditor.tsx:390
 msgid "Menu not found"
 msgstr "ไม่พบเมนู"
 
-#: packages/admin/src/components/MenuEditor.tsx:257
+#: packages/admin/src/components/MenuEditor.tsx:263
 msgid "Menu order has been updated."
 msgstr "อัปเดตลำดับเมนูแล้ว"
 
@@ -9083,7 +9088,7 @@ msgid "Move {0} up — unavailable, its parent has no translation in this locale
 msgstr "ย้าย {0} ขึ้น — ทำไม่ได้ เพราะรายการแม่ไม่มีคำแปลในภาษานี้"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:212
-#: packages/admin/src/components/MenuEditor.tsx:656
+#: packages/admin/src/components/MenuEditor.tsx:662
 #: packages/admin/src/components/TaxonomyManager.tsx:345
 msgid "Move down"
 msgstr "เลื่อนลง"
@@ -9124,7 +9129,7 @@ msgid "Move to Trash?"
 msgstr "ย้ายไปยังถังขยะ?"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:206
-#: packages/admin/src/components/MenuEditor.tsx:647
+#: packages/admin/src/components/MenuEditor.tsx:653
 #: packages/admin/src/components/TaxonomyManager.tsx:337
 msgid "Move up"
 msgstr "เลื่อนขึ้น"
@@ -9381,10 +9386,10 @@ msgstr "อนุกรมวิธานใหม่"
 msgid "New Taxonomy"
 msgstr "อนุกรมวิธานใหม่"
 
-#: packages/admin/src/components/MenuEditor.tsx:530
-#: packages/admin/src/components/MenuEditor.tsx:533
-#: packages/admin/src/components/MenuEditor.tsx:743
-#: packages/admin/src/components/MenuEditor.tsx:746
+#: packages/admin/src/components/MenuEditor.tsx:536
+#: packages/admin/src/components/MenuEditor.tsx:539
+#: packages/admin/src/components/MenuEditor.tsx:753
+#: packages/admin/src/components/MenuEditor.tsx:756
 msgid "New window"
 msgstr "หน้าต่างใหม่"
 
@@ -9714,7 +9719,7 @@ msgstr "ไม่มีมีเดียจากผู้ให้บริก
 msgid "No media found"
 msgstr "ไม่พบมีเดีย"
 
-#: packages/admin/src/components/MenuEditor.tsx:595
+#: packages/admin/src/components/MenuEditor.tsx:601
 msgid "No menu items yet"
 msgstr "ยังไม่มีรายการเมนู"
 
@@ -9731,7 +9736,7 @@ msgstr "ไม่มีค่าต่ำสุด"
 msgid "No moderation (auto-approve all)"
 msgstr "ไม่มีการกลั่นกรอง (อนุมัติทั้งหมดอัตโนมัติ)"
 
-#: packages/admin/src/components/MenuEditor.tsx:363
+#: packages/admin/src/components/MenuEditor.tsx:369
 msgid "No parent (top level)"
 msgstr "ไม่มีรายการแม่ (ระดับบนสุด)"
 
@@ -10136,7 +10141,7 @@ msgstr "หรืออัปโหลดไฟล์ส่งออก"
 msgid "or upload directly"
 msgstr "หรืออัปโหลดโดยตรง"
 
-#: packages/admin/src/components/MenuEditor.tsx:256
+#: packages/admin/src/components/MenuEditor.tsx:262
 msgid "Order saved"
 msgstr "บันทึกลำดับแล้ว"
 
@@ -10234,7 +10239,7 @@ msgstr "แทรกย่อหน้าหลังตารางแล้ว
 msgid "Paragraph inserted before table"
 msgstr "แทรกย่อหน้าก่อนตารางแล้ว"
 
-#: packages/admin/src/components/MenuEditor.tsx:756
+#: packages/admin/src/components/MenuEditor.tsx:766
 #: packages/admin/src/components/TaxonomyManager.tsx:821
 msgid "Parent"
 msgstr "รายการแม่"
@@ -10811,11 +10816,6 @@ msgstr "เผยแพร่ทันทีหรือไม่?"
 msgid "Publish, unpublish, schedule, and unschedule content"
 msgstr "เผยแพร่ ยกเลิกการเผยแพร่ กำหนดเวลา และยกเลิกการกำหนดเวลาเนื้อหา"
 
-#. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:54
-msgid "visualEditing.published"
-msgstr ""
-
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:43
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:180
 #: packages/admin/src/components/ContentList.tsx:984
@@ -10827,6 +10827,11 @@ msgstr ""
 #: packages/admin/src/router.tsx:1504
 msgid "Published"
 msgstr "เผยแพร่แล้ว"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:54
+msgid "visualEditing.published"
+msgstr ""
 
 #. placeholder {0}: isolate(formatDate(latest.publishedAt, i18n.locale))
 #: packages/admin/src/components/MarketplacePluginDetail.tsx:348
@@ -11397,8 +11402,8 @@ msgstr "เปลี่ยนชื่อ"
 msgid "Rename {0}"
 msgstr "เปลี่ยนชื่อ {0}"
 
-#: packages/admin/src/components/MenuEditor.tsx:418
-#: packages/admin/src/components/MenuEditor.tsx:425
+#: packages/admin/src/components/MenuEditor.tsx:424
+#: packages/admin/src/components/MenuEditor.tsx:431
 msgid "Rename menu"
 msgstr ""
 
@@ -11926,10 +11931,10 @@ msgstr "Rust"
 msgid "Same as current version"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:530
-#: packages/admin/src/components/MenuEditor.tsx:532
-#: packages/admin/src/components/MenuEditor.tsx:743
-#: packages/admin/src/components/MenuEditor.tsx:745
+#: packages/admin/src/components/MenuEditor.tsx:536
+#: packages/admin/src/components/MenuEditor.tsx:538
+#: packages/admin/src/components/MenuEditor.tsx:753
+#: packages/admin/src/components/MenuEditor.tsx:755
 msgid "Same window"
 msgstr "หน้าต่างเดียวกัน"
 
@@ -11943,8 +11948,8 @@ msgstr "เนื้อหาตัวอย่าง"
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:432
 #: packages/admin/src/components/MediaDetailPanel.tsx:1890
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
-#: packages/admin/src/components/MenuEditor.tsx:462
-#: packages/admin/src/components/MenuEditor.tsx:767
+#: packages/admin/src/components/MenuEditor.tsx:468
+#: packages/admin/src/components/MenuEditor.tsx:777
 #: packages/admin/src/components/Redirects.tsx:195
 #: packages/admin/src/components/SaveButton.tsx:35
 #: packages/admin/src/components/Widgets.tsx:1005
@@ -12040,8 +12045,8 @@ msgstr "การบันทึกคอลเลกชันที่นี่
 #: packages/admin/src/components/FieldEditor.tsx:1401
 #: packages/admin/src/components/MediaDetailPanel.tsx:1890
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
-#: packages/admin/src/components/MenuEditor.tsx:462
-#: packages/admin/src/components/MenuEditor.tsx:767
+#: packages/admin/src/components/MenuEditor.tsx:468
+#: packages/admin/src/components/MenuEditor.tsx:777
 #: packages/admin/src/components/PluginSettings.tsx:166
 #: packages/admin/src/components/PluginSettings.tsx:209
 #: packages/admin/src/components/Redirects.tsx:192
@@ -12725,8 +12730,8 @@ msgstr "บันทึกการตั้งค่า SEO แล้ว"
 msgid "SEO Title"
 msgstr "ชื่อ SEO"
 
-#: packages/admin/src/components/MenuEditor.tsx:539
-#: packages/admin/src/components/MenuEditor.tsx:753
+#: packages/admin/src/components/MenuEditor.tsx:545
+#: packages/admin/src/components/MenuEditor.tsx:763
 msgid "Separate class names with spaces. Themes can use them to style the link."
 msgstr ""
 
@@ -12879,7 +12884,7 @@ msgstr "แสดงโทเค็น"
 msgid "Showing {pageShowingRange} of {0}"
 msgstr "แสดง {pageShowingRange} จาก {0}"
 
-#: packages/admin/src/components/MenuEditor.tsx:450
+#: packages/admin/src/components/MenuEditor.tsx:456
 #: packages/admin/src/components/MenuList.tsx:159
 msgid "Shown in the admin. Some themes also show it on the site."
 msgstr ""
@@ -13463,8 +13468,8 @@ msgstr "เข้าควบคุมแทน"
 msgid "Taking over..."
 msgstr "กำลังเข้าควบคุมแทน..."
 
-#: packages/admin/src/components/MenuEditor.tsx:527
-#: packages/admin/src/components/MenuEditor.tsx:740
+#: packages/admin/src/components/MenuEditor.tsx:533
+#: packages/admin/src/components/MenuEditor.tsx:750
 msgid "Target"
 msgstr "เป้าหมาย"
 
@@ -15145,8 +15150,8 @@ msgstr ""
 #: packages/admin/src/components/BylineFieldEditor.tsx:49
 #: packages/admin/src/components/FieldEditor.tsx:474
 #: packages/admin/src/components/FieldEditor.tsx:1303
-#: packages/admin/src/components/MenuEditor.tsx:518
-#: packages/admin/src/components/MenuEditor.tsx:730
+#: packages/admin/src/components/MenuEditor.tsx:524
+#: packages/admin/src/components/MenuEditor.tsx:740
 msgid "URL"
 msgstr "URL"
 

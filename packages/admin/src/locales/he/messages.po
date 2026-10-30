@@ -124,7 +124,7 @@ msgstr ""
 msgid " (default)"
 msgstr " (ברירת מחדל)"
 
-#: packages/admin/src/components/MenuEditor.tsx:631
+#: packages/admin/src/components/MenuEditor.tsx:637
 msgid " (opens in new window)"
 msgstr " (נפתח בחלון חדש)"
 
@@ -135,6 +135,11 @@ msgstr "-- בחירה --"
 #: packages/admin/src/components/revisions/RevisionViewBar.tsx:156
 msgctxt "Read aloud between a version's author and status"
 msgid ", "
+msgstr ""
+
+#. placeholder {0}: item.label
+#: packages/admin/src/components/MenuEditor.tsx:689
+msgid "\"{0}\" and its nested items will be removed from this menu. This action cannot be undone."
 msgstr ""
 
 #. placeholder {0}: item.filename
@@ -153,7 +158,7 @@ msgid "\"{0}\" will be permanently deleted."
 msgstr "\"{0}\" יימחק לצמיתות."
 
 #. placeholder {0}: item.label
-#: packages/admin/src/components/MenuEditor.tsx:681
+#: packages/admin/src/components/MenuEditor.tsx:690
 msgid "\"{0}\" will be removed from this menu. This action cannot be undone."
 msgstr ""
 
@@ -1352,7 +1357,7 @@ msgstr "פעילה v{0}"
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:175
 #: packages/admin/src/components/BylineCreditsEditor.tsx:402
-#: packages/admin/src/components/MenuEditor.tsx:547
+#: packages/admin/src/components/MenuEditor.tsx:553
 msgid "Add"
 msgstr "הוספה"
 
@@ -1427,14 +1432,14 @@ msgstr "הוספת עמודה אחרי"
 msgid "Add column before"
 msgstr "הוספת עמודה לפני"
 
-#: packages/admin/src/components/MenuEditor.tsx:477
-#: packages/admin/src/components/MenuEditor.tsx:603
+#: packages/admin/src/components/MenuEditor.tsx:483
+#: packages/admin/src/components/MenuEditor.tsx:609
 msgid "Add Content"
 msgstr "הוספת תוכן"
 
-#: packages/admin/src/components/MenuEditor.tsx:489
-#: packages/admin/src/components/MenuEditor.tsx:496
-#: packages/admin/src/components/MenuEditor.tsx:606
+#: packages/admin/src/components/MenuEditor.tsx:495
+#: packages/admin/src/components/MenuEditor.tsx:502
+#: packages/admin/src/components/MenuEditor.tsx:612
 msgid "Add Custom Link"
 msgstr "הוספת קישור מותאם אישית"
 
@@ -1495,7 +1500,7 @@ msgstr "הוספת פריט"
 msgid "Add link"
 msgstr "הוספת קישור"
 
-#: packages/admin/src/components/MenuEditor.tsx:596
+#: packages/admin/src/components/MenuEditor.tsx:602
 msgid "Add links to build your navigation menu"
 msgstr "הוסיפו קישורים לבניית תפריט הניווט שלכם"
 
@@ -1647,7 +1652,7 @@ msgstr ""
 msgid "Added:"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:547
+#: packages/admin/src/components/MenuEditor.tsx:553
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:316
 msgid "Adding..."
 msgstr "בהוספה..."
@@ -2295,7 +2300,7 @@ msgstr "חזרה"
 #: packages/admin/src/components/FieldEditor.tsx:673
 #: packages/admin/src/components/MediaDetailPanel.tsx:1817
 #: packages/admin/src/components/MediaLibrary.tsx:763
-#: packages/admin/src/components/MenuEditor.tsx:400
+#: packages/admin/src/components/MenuEditor.tsx:406
 #: packages/admin/src/components/WordPressImport.tsx:1565
 #: packages/admin/src/components/WordPressImport.tsx:2586
 msgid "Back"
@@ -2340,7 +2345,7 @@ msgstr "חזרה לספרייה הראשית"
 msgid "Back to marketplace"
 msgstr "חזרה לחנות התוספים"
 
-#: packages/admin/src/components/MenuEditor.tsx:398
+#: packages/admin/src/components/MenuEditor.tsx:404
 msgid "Back to menus"
 msgstr "חזרה לתפריטים"
 
@@ -2647,9 +2652,9 @@ msgstr "יכול/ה להציג תוכן"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1859
 #: packages/admin/src/components/MediaFolderDialog.tsx:152
 #: packages/admin/src/components/MediaPickerModal.tsx:1641
-#: packages/admin/src/components/MenuEditor.tsx:459
-#: packages/admin/src/components/MenuEditor.tsx:544
-#: packages/admin/src/components/MenuEditor.tsx:764
+#: packages/admin/src/components/MenuEditor.tsx:465
+#: packages/admin/src/components/MenuEditor.tsx:550
+#: packages/admin/src/components/MenuEditor.tsx:774
 #: packages/admin/src/components/MenuList.tsx:184
 #: packages/admin/src/components/PluginManager.tsx:819
 #: packages/admin/src/components/PortableTextEditor.tsx:5773
@@ -3182,15 +3187,15 @@ msgstr "לחצו על הקישור הזה כדי להתחבר אל {siteName}:"
 #: packages/admin/src/components/MediaPickerModal.tsx:1052
 #: packages/admin/src/components/MediaPickerModal.tsx:1059
 #: packages/admin/src/components/MediaUploadDialog.tsx:237
-#: packages/admin/src/components/MenuEditor.tsx:428
 #: packages/admin/src/components/MenuEditor.tsx:434
-#: packages/admin/src/components/MenuEditor.tsx:438
-#: packages/admin/src/components/MenuEditor.tsx:499
+#: packages/admin/src/components/MenuEditor.tsx:440
+#: packages/admin/src/components/MenuEditor.tsx:444
 #: packages/admin/src/components/MenuEditor.tsx:505
-#: packages/admin/src/components/MenuEditor.tsx:509
-#: packages/admin/src/components/MenuEditor.tsx:709
-#: packages/admin/src/components/MenuEditor.tsx:715
+#: packages/admin/src/components/MenuEditor.tsx:511
+#: packages/admin/src/components/MenuEditor.tsx:515
 #: packages/admin/src/components/MenuEditor.tsx:719
+#: packages/admin/src/components/MenuEditor.tsx:725
+#: packages/admin/src/components/MenuEditor.tsx:729
 #: packages/admin/src/components/MenuList.tsx:145
 #: packages/admin/src/components/PortableTextEditor.tsx:2697
 #: packages/admin/src/components/PortableTextEditor.tsx:2703
@@ -4117,12 +4122,12 @@ msgstr "העותק החתוך נוצר."
 msgid "CSS"
 msgstr "סגנונות CSS"
 
-#: packages/admin/src/components/MenuEditor.tsx:536
-#: packages/admin/src/components/MenuEditor.tsx:749
+#: packages/admin/src/components/MenuEditor.tsx:542
+#: packages/admin/src/components/MenuEditor.tsx:759
 msgid "CSS classes"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:635
+#: packages/admin/src/components/MenuEditor.tsx:641
 msgid "CSS classes:"
 msgstr ""
 
@@ -4273,8 +4278,8 @@ msgstr "מוגדר בקוד"
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:392
 #: packages/admin/src/components/MediaDetailPanel.tsx:1828
 #: packages/admin/src/components/MediaDetailPanel.tsx:1932
-#: packages/admin/src/components/MenuEditor.tsx:668
-#: packages/admin/src/components/MenuEditor.tsx:682
+#: packages/admin/src/components/MenuEditor.tsx:674
+#: packages/admin/src/components/MenuEditor.tsx:692
 #: packages/admin/src/components/MenuList.tsx:235
 #: packages/admin/src/components/Redirects.tsx:620
 #: packages/admin/src/components/RelationDeleteDialog.tsx:40
@@ -4405,7 +4410,7 @@ msgstr "למחוק מדיה?"
 msgid "Delete menu"
 msgstr "מחיקת תפריט"
 
-#: packages/admin/src/components/MenuEditor.tsx:680
+#: packages/admin/src/components/MenuEditor.tsx:686
 msgid "Delete menu item?"
 msgstr ""
 
@@ -4507,7 +4512,7 @@ msgstr "מחיקת \"{0}\" תסיר גם {1, plural, one {ערך שמור אחד
 #: packages/admin/src/components/MediaDetailPanel.tsx:1828
 #: packages/admin/src/components/MediaDetailPanel.tsx:1933
 #: packages/admin/src/components/MediaFolderDialog.tsx:185
-#: packages/admin/src/components/MenuEditor.tsx:683
+#: packages/admin/src/components/MenuEditor.tsx:693
 #: packages/admin/src/components/MenuList.tsx:236
 #: packages/admin/src/components/Redirects.tsx:621
 #: packages/admin/src/components/RelationDeleteDialog.tsx:41
@@ -5037,7 +5042,7 @@ msgstr ""
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:380
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:381
 #: packages/admin/src/components/MenuCard.tsx:59
-#: packages/admin/src/components/MenuEditor.tsx:663
+#: packages/admin/src/components/MenuEditor.tsx:669
 #: packages/admin/src/components/Sections.tsx:439
 #: packages/admin/src/components/Shell.tsx:87
 #: packages/admin/src/components/TranslationsPanel.tsx:95
@@ -5147,11 +5152,11 @@ msgstr "נעילת עריכה"
 msgid "Edit media alt text, captions, and focal points"
 msgstr "עריכת טקסט חלופי, כיתובים ונקודות מוקד של מדיה"
 
-#: packages/admin/src/components/MenuEditor.tsx:706
+#: packages/admin/src/components/MenuEditor.tsx:716
 msgid "Edit Menu Item"
 msgstr "עריכת פריט תפריט"
 
-#: packages/admin/src/components/MenuEditor.tsx:469
+#: packages/admin/src/components/MenuEditor.tsx:475
 msgid "Edit menu items"
 msgstr "עריכת פריטי תפריט"
 
@@ -5467,8 +5472,8 @@ msgstr ""
 msgid "Enter a time"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:523
-#: packages/admin/src/components/MenuEditor.tsx:735
+#: packages/admin/src/components/MenuEditor.tsx:529
+#: packages/admin/src/components/MenuEditor.tsx:745
 msgid "Enter a URL (https://…) or a relative path (/…)"
 msgstr "הזינו URL ‏(https://…) או נתיב יחסי (/…)"
 
@@ -5549,7 +5554,7 @@ msgid "entry on the linking side"
 msgstr "פריט בצד המקשר"
 
 #: packages/admin/src/components/MenuEditor.tsx:160
-#: packages/admin/src/components/MenuEditor.tsx:262
+#: packages/admin/src/components/MenuEditor.tsx:268
 #: packages/admin/src/components/SetupWizard.tsx:603
 #: packages/admin/src/components/TaxonomyManager.tsx:1213
 #: packages/admin/src/router.tsx:3381
@@ -7338,7 +7343,7 @@ msgstr "החזיקו פריט בזמן שמישהו עורך אותו ודחו �
 msgid "Holds an entry ID. Set a target collection under Content Types to pick entries instead."
 msgstr "מכיל מזהה פריט. הגדירו אוסף יעד תחת סוגי תוכן כדי לבחור פריטים במקום זאת."
 
-#: packages/admin/src/components/MenuEditor.tsx:515
+#: packages/admin/src/components/MenuEditor.tsx:521
 msgid "Home"
 msgstr "בית"
 
@@ -7404,7 +7409,7 @@ msgstr "HTML בלבד, מנוקה, בעיצוב של האתר."
 msgid "https://example.com"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:524
+#: packages/admin/src/components/MenuEditor.tsx:530
 msgid "https://example.com or /about"
 msgstr "https://example.com או /about"
 
@@ -7967,15 +7972,15 @@ msgstr "נטוי"
 msgid "Item {0}"
 msgstr "פריט {0}"
 
-#: packages/admin/src/components/MenuEditor.tsx:210
+#: packages/admin/src/components/MenuEditor.tsx:216
 msgid "Item added"
 msgstr "הפריט נוסף"
 
-#: packages/admin/src/components/MenuEditor.tsx:223
+#: packages/admin/src/components/MenuEditor.tsx:229
 msgid "Item deleted"
 msgstr "הפריט נמחק"
 
-#: packages/admin/src/components/MenuEditor.tsx:241
+#: packages/admin/src/components/MenuEditor.tsx:247
 msgid "Item updated"
 msgstr "הפריט עודכן"
 
@@ -8080,9 +8085,9 @@ msgstr "שפת Kotlin"
 #: packages/admin/src/components/BylineFieldEditor.tsx:226
 #: packages/admin/src/components/FieldEditor.tsx:837
 #: packages/admin/src/components/FieldEditor.tsx:1253
-#: packages/admin/src/components/MenuEditor.tsx:445
-#: packages/admin/src/components/MenuEditor.tsx:515
-#: packages/admin/src/components/MenuEditor.tsx:726
+#: packages/admin/src/components/MenuEditor.tsx:451
+#: packages/admin/src/components/MenuEditor.tsx:521
+#: packages/admin/src/components/MenuEditor.tsx:736
 #: packages/admin/src/components/MenuList.tsx:153
 #: packages/admin/src/components/TaxonomyManager.tsx:1040
 #: packages/admin/src/components/Widgets.tsx:446
@@ -8413,7 +8418,7 @@ msgstr "מתבצעת טעינת מדיה"
 msgid "Loading media usage tracking settings…"
 msgstr "מתבצעת טעינת הגדרות מעקב שימוש במדיה…"
 
-#: packages/admin/src/components/MenuEditor.tsx:376
+#: packages/admin/src/components/MenuEditor.tsx:382
 msgid "Loading menu..."
 msgstr "מתבצעת טעינת תפריט..."
 
@@ -8861,15 +8866,15 @@ msgstr "התפריט נוצר"
 msgid "Menu deleted"
 msgstr "התפריט נמחק"
 
-#: packages/admin/src/components/MenuEditor.tsx:210
+#: packages/admin/src/components/MenuEditor.tsx:216
 msgid "Menu item has been added."
 msgstr "פריט התפריט נוסף."
 
-#: packages/admin/src/components/MenuEditor.tsx:224
+#: packages/admin/src/components/MenuEditor.tsx:230
 msgid "Menu item has been deleted."
 msgstr "פריט התפריט נמחק."
 
-#: packages/admin/src/components/MenuEditor.tsx:242
+#: packages/admin/src/components/MenuEditor.tsx:248
 msgid "Menu item has been updated."
 msgstr "פריט התפריט עודכן."
 
@@ -8878,11 +8883,11 @@ msgstr "פריט התפריט עודכן."
 msgid "Menu items"
 msgstr "פריטי תפריט"
 
-#: packages/admin/src/components/MenuEditor.tsx:384
+#: packages/admin/src/components/MenuEditor.tsx:390
 msgid "Menu not found"
 msgstr "התפריט לא נמצא"
 
-#: packages/admin/src/components/MenuEditor.tsx:257
+#: packages/admin/src/components/MenuEditor.tsx:263
 msgid "Menu order has been updated."
 msgstr "סדר התפריט עודכן."
 
@@ -9084,7 +9089,7 @@ msgid "Move {0} up — unavailable, its parent has no translation in this locale
 msgstr "העברת {0} למעלה — אינה זמינה, לפריט האב שלו אין תרגום בשפה זו"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:212
-#: packages/admin/src/components/MenuEditor.tsx:656
+#: packages/admin/src/components/MenuEditor.tsx:662
 #: packages/admin/src/components/TaxonomyManager.tsx:345
 msgid "Move down"
 msgstr "העברה למטה"
@@ -9125,7 +9130,7 @@ msgid "Move to Trash?"
 msgstr "להעביר לפח?"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:206
-#: packages/admin/src/components/MenuEditor.tsx:647
+#: packages/admin/src/components/MenuEditor.tsx:653
 #: packages/admin/src/components/TaxonomyManager.tsx:337
 msgid "Move up"
 msgstr "העברה למעלה"
@@ -9382,10 +9387,10 @@ msgstr "טקסונומיה חדשה"
 msgid "New Taxonomy"
 msgstr "טקסונומיה חדשה"
 
-#: packages/admin/src/components/MenuEditor.tsx:530
-#: packages/admin/src/components/MenuEditor.tsx:533
-#: packages/admin/src/components/MenuEditor.tsx:743
-#: packages/admin/src/components/MenuEditor.tsx:746
+#: packages/admin/src/components/MenuEditor.tsx:536
+#: packages/admin/src/components/MenuEditor.tsx:539
+#: packages/admin/src/components/MenuEditor.tsx:753
+#: packages/admin/src/components/MenuEditor.tsx:756
 msgid "New window"
 msgstr "חלון חדש"
 
@@ -9715,7 +9720,7 @@ msgstr "אין מדיה זמינה מספק זה."
 msgid "No media found"
 msgstr "לא נמצאה מדיה"
 
-#: packages/admin/src/components/MenuEditor.tsx:595
+#: packages/admin/src/components/MenuEditor.tsx:601
 msgid "No menu items yet"
 msgstr "עדיין אין פריטי תפריט"
 
@@ -9732,7 +9737,7 @@ msgstr "ללא מינימום"
 msgid "No moderation (auto-approve all)"
 msgstr "ללא ניהול תגובות (אישור אוטומטי של הכול)"
 
-#: packages/admin/src/components/MenuEditor.tsx:363
+#: packages/admin/src/components/MenuEditor.tsx:369
 msgid "No parent (top level)"
 msgstr "ללא הורה (רמה עליונה)"
 
@@ -10137,7 +10142,7 @@ msgstr "או העלו קובץ ייצוא"
 msgid "or upload directly"
 msgstr "או העלו ישירות"
 
-#: packages/admin/src/components/MenuEditor.tsx:256
+#: packages/admin/src/components/MenuEditor.tsx:262
 msgid "Order saved"
 msgstr "הסדר נשמר"
 
@@ -10235,7 +10240,7 @@ msgstr "פסקה נוספה אחרי הטבלה"
 msgid "Paragraph inserted before table"
 msgstr "פסקה נוספה לפני הטבלה"
 
-#: packages/admin/src/components/MenuEditor.tsx:756
+#: packages/admin/src/components/MenuEditor.tsx:766
 #: packages/admin/src/components/TaxonomyManager.tsx:821
 msgid "Parent"
 msgstr "הורה"
@@ -10812,11 +10817,6 @@ msgstr "לפרסם כעת?"
 msgid "Publish, unpublish, schedule, and unschedule content"
 msgstr "פרסום, ביטול פרסום, תזמון וביטול תזמון של תוכן"
 
-#. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:54
-msgid "visualEditing.published"
-msgstr "פורסם"
-
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:43
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:180
 #: packages/admin/src/components/ContentList.tsx:984
@@ -10827,6 +10827,11 @@ msgstr "פורסם"
 #: packages/admin/src/components/revisions/RevisionViewBar.tsx:161
 #: packages/admin/src/router.tsx:1504
 msgid "Published"
+msgstr "פורסם"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:54
+msgid "visualEditing.published"
 msgstr "פורסם"
 
 #. placeholder {0}: isolate(formatDate(latest.publishedAt, i18n.locale))
@@ -11398,8 +11403,8 @@ msgstr "שינוי שם"
 msgid "Rename {0}"
 msgstr "שינוי שם {0}"
 
-#: packages/admin/src/components/MenuEditor.tsx:418
-#: packages/admin/src/components/MenuEditor.tsx:425
+#: packages/admin/src/components/MenuEditor.tsx:424
+#: packages/admin/src/components/MenuEditor.tsx:431
 msgid "Rename menu"
 msgstr ""
 
@@ -11927,10 +11932,10 @@ msgstr "שפת Rust"
 msgid "Same as current version"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:530
-#: packages/admin/src/components/MenuEditor.tsx:532
-#: packages/admin/src/components/MenuEditor.tsx:743
-#: packages/admin/src/components/MenuEditor.tsx:745
+#: packages/admin/src/components/MenuEditor.tsx:536
+#: packages/admin/src/components/MenuEditor.tsx:538
+#: packages/admin/src/components/MenuEditor.tsx:753
+#: packages/admin/src/components/MenuEditor.tsx:755
 msgid "Same window"
 msgstr "אותו חלון"
 
@@ -11944,8 +11949,8 @@ msgstr "תוכן לדוגמה"
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:432
 #: packages/admin/src/components/MediaDetailPanel.tsx:1890
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
-#: packages/admin/src/components/MenuEditor.tsx:462
-#: packages/admin/src/components/MenuEditor.tsx:767
+#: packages/admin/src/components/MenuEditor.tsx:468
+#: packages/admin/src/components/MenuEditor.tsx:777
 #: packages/admin/src/components/Redirects.tsx:195
 #: packages/admin/src/components/SaveButton.tsx:35
 #: packages/admin/src/components/Widgets.tsx:1005
@@ -12041,8 +12046,8 @@ msgstr "שמירת אוסף כאן הופכת את השדה הזה לבורר פ
 #: packages/admin/src/components/FieldEditor.tsx:1401
 #: packages/admin/src/components/MediaDetailPanel.tsx:1890
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
-#: packages/admin/src/components/MenuEditor.tsx:462
-#: packages/admin/src/components/MenuEditor.tsx:767
+#: packages/admin/src/components/MenuEditor.tsx:468
+#: packages/admin/src/components/MenuEditor.tsx:777
 #: packages/admin/src/components/PluginSettings.tsx:166
 #: packages/admin/src/components/PluginSettings.tsx:209
 #: packages/admin/src/components/Redirects.tsx:192
@@ -12726,8 +12731,8 @@ msgstr "הגדרות SEO נשמרו"
 msgid "SEO Title"
 msgstr "כותרת SEO"
 
-#: packages/admin/src/components/MenuEditor.tsx:539
-#: packages/admin/src/components/MenuEditor.tsx:753
+#: packages/admin/src/components/MenuEditor.tsx:545
+#: packages/admin/src/components/MenuEditor.tsx:763
 msgid "Separate class names with spaces. Themes can use them to style the link."
 msgstr ""
 
@@ -12880,7 +12885,7 @@ msgstr "הצגת אסימון"
 msgid "Showing {pageShowingRange} of {0}"
 msgstr "מוצגים {pageShowingRange} מתוך {0}"
 
-#: packages/admin/src/components/MenuEditor.tsx:450
+#: packages/admin/src/components/MenuEditor.tsx:456
 #: packages/admin/src/components/MenuList.tsx:159
 msgid "Shown in the admin. Some themes also show it on the site."
 msgstr ""
@@ -13464,8 +13469,8 @@ msgstr "לקיחת שליטה"
 msgid "Taking over..."
 msgstr "נלקחת שליטה..."
 
-#: packages/admin/src/components/MenuEditor.tsx:527
-#: packages/admin/src/components/MenuEditor.tsx:740
+#: packages/admin/src/components/MenuEditor.tsx:533
+#: packages/admin/src/components/MenuEditor.tsx:750
 msgid "Target"
 msgstr "יעד"
 
@@ -15146,8 +15151,8 @@ msgstr ""
 #: packages/admin/src/components/BylineFieldEditor.tsx:49
 #: packages/admin/src/components/FieldEditor.tsx:474
 #: packages/admin/src/components/FieldEditor.tsx:1303
-#: packages/admin/src/components/MenuEditor.tsx:518
-#: packages/admin/src/components/MenuEditor.tsx:730
+#: packages/admin/src/components/MenuEditor.tsx:524
+#: packages/admin/src/components/MenuEditor.tsx:740
 msgid "URL"
 msgstr "URL"
 

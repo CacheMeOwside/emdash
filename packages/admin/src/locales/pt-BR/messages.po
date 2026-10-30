@@ -123,7 +123,7 @@ msgstr ""
 msgid " (default)"
 msgstr " (padrão)"
 
-#: packages/admin/src/components/MenuEditor.tsx:631
+#: packages/admin/src/components/MenuEditor.tsx:637
 msgid " (opens in new window)"
 msgstr " (abre em nova janela)"
 
@@ -135,6 +135,11 @@ msgstr "-- Selecionar --"
 msgctxt "Read aloud between a version's author and status"
 msgid ", "
 msgstr ", "
+
+#. placeholder {0}: item.label
+#: packages/admin/src/components/MenuEditor.tsx:689
+msgid "\"{0}\" and its nested items will be removed from this menu. This action cannot be undone."
+msgstr ""
 
 #. placeholder {0}: item.filename
 #: packages/admin/src/components/MediaDetailPanel.tsx:1926
@@ -152,7 +157,7 @@ msgid "\"{0}\" will be permanently deleted."
 msgstr "\"{0}\" será excluído permanentemente."
 
 #. placeholder {0}: item.label
-#: packages/admin/src/components/MenuEditor.tsx:681
+#: packages/admin/src/components/MenuEditor.tsx:690
 msgid "\"{0}\" will be removed from this menu. This action cannot be undone."
 msgstr ""
 
@@ -1351,7 +1356,7 @@ msgstr "v{0} ativa"
 
 #: packages/admin/src/components/AllowedTypesEditor.tsx:175
 #: packages/admin/src/components/BylineCreditsEditor.tsx:402
-#: packages/admin/src/components/MenuEditor.tsx:547
+#: packages/admin/src/components/MenuEditor.tsx:553
 msgid "Add"
 msgstr "Adicionar"
 
@@ -1426,14 +1431,14 @@ msgstr "Adicionar coluna depois"
 msgid "Add column before"
 msgstr "Adicionar coluna antes"
 
-#: packages/admin/src/components/MenuEditor.tsx:477
-#: packages/admin/src/components/MenuEditor.tsx:603
+#: packages/admin/src/components/MenuEditor.tsx:483
+#: packages/admin/src/components/MenuEditor.tsx:609
 msgid "Add Content"
 msgstr "Adicionar conteúdo"
 
-#: packages/admin/src/components/MenuEditor.tsx:489
-#: packages/admin/src/components/MenuEditor.tsx:496
-#: packages/admin/src/components/MenuEditor.tsx:606
+#: packages/admin/src/components/MenuEditor.tsx:495
+#: packages/admin/src/components/MenuEditor.tsx:502
+#: packages/admin/src/components/MenuEditor.tsx:612
 msgid "Add Custom Link"
 msgstr "Adicionar link personalizado"
 
@@ -1494,7 +1499,7 @@ msgstr "Adicionar item"
 msgid "Add link"
 msgstr "Adicionar link"
 
-#: packages/admin/src/components/MenuEditor.tsx:596
+#: packages/admin/src/components/MenuEditor.tsx:602
 msgid "Add links to build your navigation menu"
 msgstr "Adicione links para construir seu menu de navegação"
 
@@ -1646,7 +1651,7 @@ msgstr "Imagem adicionada"
 msgid "Added:"
 msgstr "Adicionado:"
 
-#: packages/admin/src/components/MenuEditor.tsx:547
+#: packages/admin/src/components/MenuEditor.tsx:553
 #: packages/admin/src/components/settings/AllowedDomainsSettings.tsx:316
 msgid "Adding..."
 msgstr "Adicionando..."
@@ -2294,7 +2299,7 @@ msgstr "Voltar"
 #: packages/admin/src/components/FieldEditor.tsx:673
 #: packages/admin/src/components/MediaDetailPanel.tsx:1817
 #: packages/admin/src/components/MediaLibrary.tsx:763
-#: packages/admin/src/components/MenuEditor.tsx:400
+#: packages/admin/src/components/MenuEditor.tsx:406
 #: packages/admin/src/components/WordPressImport.tsx:1565
 #: packages/admin/src/components/WordPressImport.tsx:2586
 msgid "Back"
@@ -2339,7 +2344,7 @@ msgstr "Voltar à biblioteca principal"
 msgid "Back to marketplace"
 msgstr "Voltar ao marketplace"
 
-#: packages/admin/src/components/MenuEditor.tsx:398
+#: packages/admin/src/components/MenuEditor.tsx:404
 msgid "Back to menus"
 msgstr "Voltar aos menus"
 
@@ -2646,9 +2651,9 @@ msgstr "Pode visualizar conteúdo"
 #: packages/admin/src/components/MediaDetailPanel.tsx:1859
 #: packages/admin/src/components/MediaFolderDialog.tsx:152
 #: packages/admin/src/components/MediaPickerModal.tsx:1641
-#: packages/admin/src/components/MenuEditor.tsx:459
-#: packages/admin/src/components/MenuEditor.tsx:544
-#: packages/admin/src/components/MenuEditor.tsx:764
+#: packages/admin/src/components/MenuEditor.tsx:465
+#: packages/admin/src/components/MenuEditor.tsx:550
+#: packages/admin/src/components/MenuEditor.tsx:774
 #: packages/admin/src/components/MenuList.tsx:184
 #: packages/admin/src/components/PluginManager.tsx:819
 #: packages/admin/src/components/PortableTextEditor.tsx:5773
@@ -3181,15 +3186,15 @@ msgstr "Clique neste link para entrar em {siteName}:"
 #: packages/admin/src/components/MediaPickerModal.tsx:1052
 #: packages/admin/src/components/MediaPickerModal.tsx:1059
 #: packages/admin/src/components/MediaUploadDialog.tsx:237
-#: packages/admin/src/components/MenuEditor.tsx:428
 #: packages/admin/src/components/MenuEditor.tsx:434
-#: packages/admin/src/components/MenuEditor.tsx:438
-#: packages/admin/src/components/MenuEditor.tsx:499
+#: packages/admin/src/components/MenuEditor.tsx:440
+#: packages/admin/src/components/MenuEditor.tsx:444
 #: packages/admin/src/components/MenuEditor.tsx:505
-#: packages/admin/src/components/MenuEditor.tsx:509
-#: packages/admin/src/components/MenuEditor.tsx:709
-#: packages/admin/src/components/MenuEditor.tsx:715
+#: packages/admin/src/components/MenuEditor.tsx:511
+#: packages/admin/src/components/MenuEditor.tsx:515
 #: packages/admin/src/components/MenuEditor.tsx:719
+#: packages/admin/src/components/MenuEditor.tsx:725
+#: packages/admin/src/components/MenuEditor.tsx:729
 #: packages/admin/src/components/MenuList.tsx:145
 #: packages/admin/src/components/PortableTextEditor.tsx:2697
 #: packages/admin/src/components/PortableTextEditor.tsx:2703
@@ -4116,12 +4121,12 @@ msgstr "Cópia recortada criada."
 msgid "CSS"
 msgstr "CSS"
 
-#: packages/admin/src/components/MenuEditor.tsx:536
-#: packages/admin/src/components/MenuEditor.tsx:749
+#: packages/admin/src/components/MenuEditor.tsx:542
+#: packages/admin/src/components/MenuEditor.tsx:759
 msgid "CSS classes"
 msgstr "Classes CSS"
 
-#: packages/admin/src/components/MenuEditor.tsx:635
+#: packages/admin/src/components/MenuEditor.tsx:641
 msgid "CSS classes:"
 msgstr "Classes CSS:"
 
@@ -4272,8 +4277,8 @@ msgstr "Definido no código"
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:392
 #: packages/admin/src/components/MediaDetailPanel.tsx:1828
 #: packages/admin/src/components/MediaDetailPanel.tsx:1932
-#: packages/admin/src/components/MenuEditor.tsx:668
-#: packages/admin/src/components/MenuEditor.tsx:682
+#: packages/admin/src/components/MenuEditor.tsx:674
+#: packages/admin/src/components/MenuEditor.tsx:692
 #: packages/admin/src/components/MenuList.tsx:235
 #: packages/admin/src/components/Redirects.tsx:620
 #: packages/admin/src/components/RelationDeleteDialog.tsx:40
@@ -4404,7 +4409,7 @@ msgstr "Excluir mídia?"
 msgid "Delete menu"
 msgstr "Excluir menu"
 
-#: packages/admin/src/components/MenuEditor.tsx:680
+#: packages/admin/src/components/MenuEditor.tsx:686
 msgid "Delete menu item?"
 msgstr ""
 
@@ -4506,7 +4511,7 @@ msgstr "Excluir \"{0}\" também remove {1, plural, one {# valor armazenado} othe
 #: packages/admin/src/components/MediaDetailPanel.tsx:1828
 #: packages/admin/src/components/MediaDetailPanel.tsx:1933
 #: packages/admin/src/components/MediaFolderDialog.tsx:185
-#: packages/admin/src/components/MenuEditor.tsx:683
+#: packages/admin/src/components/MenuEditor.tsx:693
 #: packages/admin/src/components/MenuList.tsx:236
 #: packages/admin/src/components/Redirects.tsx:621
 #: packages/admin/src/components/RelationDeleteDialog.tsx:41
@@ -5036,7 +5041,7 @@ msgstr "Versão salva mais antiga"
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:380
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:381
 #: packages/admin/src/components/MenuCard.tsx:59
-#: packages/admin/src/components/MenuEditor.tsx:663
+#: packages/admin/src/components/MenuEditor.tsx:669
 #: packages/admin/src/components/Sections.tsx:439
 #: packages/admin/src/components/Shell.tsx:87
 #: packages/admin/src/components/TranslationsPanel.tsx:95
@@ -5146,11 +5151,11 @@ msgstr "Bloqueio de edição"
 msgid "Edit media alt text, captions, and focal points"
 msgstr "Editar textos alternativos, legendas e pontos focais da mídia"
 
-#: packages/admin/src/components/MenuEditor.tsx:706
+#: packages/admin/src/components/MenuEditor.tsx:716
 msgid "Edit Menu Item"
 msgstr "Editar item do menu"
 
-#: packages/admin/src/components/MenuEditor.tsx:469
+#: packages/admin/src/components/MenuEditor.tsx:475
 msgid "Edit menu items"
 msgstr "Editar itens do menu"
 
@@ -5466,8 +5471,8 @@ msgstr "Digite um slug."
 msgid "Enter a time"
 msgstr ""
 
-#: packages/admin/src/components/MenuEditor.tsx:523
-#: packages/admin/src/components/MenuEditor.tsx:735
+#: packages/admin/src/components/MenuEditor.tsx:529
+#: packages/admin/src/components/MenuEditor.tsx:745
 msgid "Enter a URL (https://…) or a relative path (/…)"
 msgstr "Digite uma URL (https://…) ou um caminho relativo (/…)"
 
@@ -5548,7 +5553,7 @@ msgid "entry on the linking side"
 msgstr "entrada do lado que referencia"
 
 #: packages/admin/src/components/MenuEditor.tsx:160
-#: packages/admin/src/components/MenuEditor.tsx:262
+#: packages/admin/src/components/MenuEditor.tsx:268
 #: packages/admin/src/components/SetupWizard.tsx:603
 #: packages/admin/src/components/TaxonomyManager.tsx:1213
 #: packages/admin/src/router.tsx:3381
@@ -7337,7 +7342,7 @@ msgstr "Reservar a entrada enquanto alguém a edita e recusar edições de outra
 msgid "Holds an entry ID. Set a target collection under Content Types to pick entries instead."
 msgstr "Armazena o ID de uma entrada. Defina uma coleção de destino em Tipos de conteúdo para selecionar entradas."
 
-#: packages/admin/src/components/MenuEditor.tsx:515
+#: packages/admin/src/components/MenuEditor.tsx:521
 msgid "Home"
 msgstr "Início"
 
@@ -7403,7 +7408,7 @@ msgstr "Apenas HTML, limpo, usando os estilos do seu site."
 msgid "https://example.com"
 msgstr "https://example.com"
 
-#: packages/admin/src/components/MenuEditor.tsx:524
+#: packages/admin/src/components/MenuEditor.tsx:530
 msgid "https://example.com or /about"
 msgstr "https://example.com ou /about"
 
@@ -7966,15 +7971,15 @@ msgstr "Itálico"
 msgid "Item {0}"
 msgstr "Item {0}"
 
-#: packages/admin/src/components/MenuEditor.tsx:210
+#: packages/admin/src/components/MenuEditor.tsx:216
 msgid "Item added"
 msgstr "Item adicionado"
 
-#: packages/admin/src/components/MenuEditor.tsx:223
+#: packages/admin/src/components/MenuEditor.tsx:229
 msgid "Item deleted"
 msgstr "Item excluído"
 
-#: packages/admin/src/components/MenuEditor.tsx:241
+#: packages/admin/src/components/MenuEditor.tsx:247
 msgid "Item updated"
 msgstr "Item atualizado"
 
@@ -8079,9 +8084,9 @@ msgstr "Kotlin"
 #: packages/admin/src/components/BylineFieldEditor.tsx:226
 #: packages/admin/src/components/FieldEditor.tsx:837
 #: packages/admin/src/components/FieldEditor.tsx:1253
-#: packages/admin/src/components/MenuEditor.tsx:445
-#: packages/admin/src/components/MenuEditor.tsx:515
-#: packages/admin/src/components/MenuEditor.tsx:726
+#: packages/admin/src/components/MenuEditor.tsx:451
+#: packages/admin/src/components/MenuEditor.tsx:521
+#: packages/admin/src/components/MenuEditor.tsx:736
 #: packages/admin/src/components/MenuList.tsx:153
 #: packages/admin/src/components/TaxonomyManager.tsx:1040
 #: packages/admin/src/components/Widgets.tsx:446
@@ -8412,7 +8417,7 @@ msgstr "Carregando mídia"
 msgid "Loading media usage tracking settings…"
 msgstr "Carregando configurações do índice de uso da mídia…"
 
-#: packages/admin/src/components/MenuEditor.tsx:376
+#: packages/admin/src/components/MenuEditor.tsx:382
 msgid "Loading menu..."
 msgstr "Carregando menu..."
 
@@ -8860,15 +8865,15 @@ msgstr "Menu criado"
 msgid "Menu deleted"
 msgstr "Menu excluído"
 
-#: packages/admin/src/components/MenuEditor.tsx:210
+#: packages/admin/src/components/MenuEditor.tsx:216
 msgid "Menu item has been added."
 msgstr "O item do menu foi adicionado."
 
-#: packages/admin/src/components/MenuEditor.tsx:224
+#: packages/admin/src/components/MenuEditor.tsx:230
 msgid "Menu item has been deleted."
 msgstr "O item do menu foi excluído."
 
-#: packages/admin/src/components/MenuEditor.tsx:242
+#: packages/admin/src/components/MenuEditor.tsx:248
 msgid "Menu item has been updated."
 msgstr "O item do menu foi atualizado."
 
@@ -8877,11 +8882,11 @@ msgstr "O item do menu foi atualizado."
 msgid "Menu items"
 msgstr "Itens de menu"
 
-#: packages/admin/src/components/MenuEditor.tsx:384
+#: packages/admin/src/components/MenuEditor.tsx:390
 msgid "Menu not found"
 msgstr "Menu não encontrado"
 
-#: packages/admin/src/components/MenuEditor.tsx:257
+#: packages/admin/src/components/MenuEditor.tsx:263
 msgid "Menu order has been updated."
 msgstr "A ordem do menu foi atualizada."
 
@@ -9083,7 +9088,7 @@ msgid "Move {0} up — unavailable, its parent has no translation in this locale
 msgstr "Mover {0} para cima: indisponível, o ascendente não tem tradução neste idioma do conteúdo"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:212
-#: packages/admin/src/components/MenuEditor.tsx:656
+#: packages/admin/src/components/MenuEditor.tsx:662
 #: packages/admin/src/components/TaxonomyManager.tsx:345
 msgid "Move down"
 msgstr "Mover para baixo"
@@ -9124,7 +9129,7 @@ msgid "Move to Trash?"
 msgstr "Mover para a lixeira?"
 
 #: packages/admin/src/components/editor/BlockMenu.tsx:206
-#: packages/admin/src/components/MenuEditor.tsx:647
+#: packages/admin/src/components/MenuEditor.tsx:653
 #: packages/admin/src/components/TaxonomyManager.tsx:337
 msgid "Move up"
 msgstr "Mover para cima"
@@ -9381,10 +9386,10 @@ msgstr "Nova taxonomia"
 msgid "New Taxonomy"
 msgstr "Nova taxonomia"
 
-#: packages/admin/src/components/MenuEditor.tsx:530
-#: packages/admin/src/components/MenuEditor.tsx:533
-#: packages/admin/src/components/MenuEditor.tsx:743
-#: packages/admin/src/components/MenuEditor.tsx:746
+#: packages/admin/src/components/MenuEditor.tsx:536
+#: packages/admin/src/components/MenuEditor.tsx:539
+#: packages/admin/src/components/MenuEditor.tsx:753
+#: packages/admin/src/components/MenuEditor.tsx:756
 msgid "New window"
 msgstr "Nova janela"
 
@@ -9714,7 +9719,7 @@ msgstr "Nenhuma mídia disponível deste provedor."
 msgid "No media found"
 msgstr "Nenhuma mídia encontrada"
 
-#: packages/admin/src/components/MenuEditor.tsx:595
+#: packages/admin/src/components/MenuEditor.tsx:601
 msgid "No menu items yet"
 msgstr "Nenhum item de menu ainda"
 
@@ -9731,7 +9736,7 @@ msgstr "Sem mínimo"
 msgid "No moderation (auto-approve all)"
 msgstr "Sem moderação (aprovar tudo automaticamente)"
 
-#: packages/admin/src/components/MenuEditor.tsx:363
+#: packages/admin/src/components/MenuEditor.tsx:369
 msgid "No parent (top level)"
 msgstr "Sem ascendente (nível superior)"
 
@@ -10136,7 +10141,7 @@ msgstr "Ou envie um arquivo de exportação"
 msgid "or upload directly"
 msgstr "ou envie diretamente"
 
-#: packages/admin/src/components/MenuEditor.tsx:256
+#: packages/admin/src/components/MenuEditor.tsx:262
 msgid "Order saved"
 msgstr "Ordem salva"
 
@@ -10234,7 +10239,7 @@ msgstr "Parágrafo inserido depois da tabela"
 msgid "Paragraph inserted before table"
 msgstr "Parágrafo inserido antes da tabela"
 
-#: packages/admin/src/components/MenuEditor.tsx:756
+#: packages/admin/src/components/MenuEditor.tsx:766
 #: packages/admin/src/components/TaxonomyManager.tsx:821
 msgid "Parent"
 msgstr "Ascendente"
@@ -10811,11 +10816,6 @@ msgstr "Publicar agora?"
 msgid "Publish, unpublish, schedule, and unschedule content"
 msgstr "Publicar, despublicar, agendar e cancelar o agendamento de conteúdo"
 
-#. js-lingui-explicit-id
-#: packages/admin/src/locales/server.ts:54
-msgid "visualEditing.published"
-msgstr "Publicado"
-
 #: packages/admin/src/components/calendar/CalendarEntry.tsx:43
 #: packages/admin/src/components/calendar/CalendarEntryPanel.tsx:180
 #: packages/admin/src/components/ContentList.tsx:984
@@ -10826,6 +10826,11 @@ msgstr "Publicado"
 #: packages/admin/src/components/revisions/RevisionViewBar.tsx:161
 #: packages/admin/src/router.tsx:1504
 msgid "Published"
+msgstr "Publicado"
+
+#. js-lingui-explicit-id
+#: packages/admin/src/locales/server.ts:54
+msgid "visualEditing.published"
 msgstr "Publicado"
 
 #. placeholder {0}: isolate(formatDate(latest.publishedAt, i18n.locale))
@@ -11397,8 +11402,8 @@ msgstr "Renomear"
 msgid "Rename {0}"
 msgstr "Renomear {0}"
 
-#: packages/admin/src/components/MenuEditor.tsx:418
-#: packages/admin/src/components/MenuEditor.tsx:425
+#: packages/admin/src/components/MenuEditor.tsx:424
+#: packages/admin/src/components/MenuEditor.tsx:431
 msgid "Rename menu"
 msgstr "Renomear menu"
 
@@ -11926,10 +11931,10 @@ msgstr "Rust"
 msgid "Same as current version"
 msgstr "Igual à versão atual"
 
-#: packages/admin/src/components/MenuEditor.tsx:530
-#: packages/admin/src/components/MenuEditor.tsx:532
-#: packages/admin/src/components/MenuEditor.tsx:743
-#: packages/admin/src/components/MenuEditor.tsx:745
+#: packages/admin/src/components/MenuEditor.tsx:536
+#: packages/admin/src/components/MenuEditor.tsx:538
+#: packages/admin/src/components/MenuEditor.tsx:753
+#: packages/admin/src/components/MenuEditor.tsx:755
 msgid "Same window"
 msgstr "Mesma janela"
 
@@ -11943,8 +11948,8 @@ msgstr "Conteúdo de exemplo"
 #: packages/admin/src/components/editor/PluginBlockNode.tsx:432
 #: packages/admin/src/components/MediaDetailPanel.tsx:1890
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
-#: packages/admin/src/components/MenuEditor.tsx:462
-#: packages/admin/src/components/MenuEditor.tsx:767
+#: packages/admin/src/components/MenuEditor.tsx:468
+#: packages/admin/src/components/MenuEditor.tsx:777
 #: packages/admin/src/components/Redirects.tsx:195
 #: packages/admin/src/components/SaveButton.tsx:35
 #: packages/admin/src/components/Widgets.tsx:1005
@@ -12040,8 +12045,8 @@ msgstr "Salvar uma coleção aqui transforma este campo em um seletor de entrada
 #: packages/admin/src/components/FieldEditor.tsx:1401
 #: packages/admin/src/components/MediaDetailPanel.tsx:1890
 #: packages/admin/src/components/MediaFolderDialog.tsx:171
-#: packages/admin/src/components/MenuEditor.tsx:462
-#: packages/admin/src/components/MenuEditor.tsx:767
+#: packages/admin/src/components/MenuEditor.tsx:468
+#: packages/admin/src/components/MenuEditor.tsx:777
 #: packages/admin/src/components/PluginSettings.tsx:166
 #: packages/admin/src/components/PluginSettings.tsx:209
 #: packages/admin/src/components/Redirects.tsx:192
@@ -12725,8 +12730,8 @@ msgstr "Configurações de SEO salvas"
 msgid "SEO Title"
 msgstr "Título SEO"
 
-#: packages/admin/src/components/MenuEditor.tsx:539
-#: packages/admin/src/components/MenuEditor.tsx:753
+#: packages/admin/src/components/MenuEditor.tsx:545
+#: packages/admin/src/components/MenuEditor.tsx:763
 msgid "Separate class names with spaces. Themes can use them to style the link."
 msgstr "Separe os nomes das classes com espaços. Os temas podem usá-las para estilizar o link."
 
@@ -12879,7 +12884,7 @@ msgstr "Exibir token"
 msgid "Showing {pageShowingRange} of {0}"
 msgstr "Exibindo {pageShowingRange} de {0}"
 
-#: packages/admin/src/components/MenuEditor.tsx:450
+#: packages/admin/src/components/MenuEditor.tsx:456
 #: packages/admin/src/components/MenuList.tsx:159
 msgid "Shown in the admin. Some themes also show it on the site."
 msgstr "Exibido no painel. Alguns temas também o exibem no site."
@@ -13463,8 +13468,8 @@ msgstr "Assumir a edição"
 msgid "Taking over..."
 msgstr "Assumindo a edição..."
 
-#: packages/admin/src/components/MenuEditor.tsx:527
-#: packages/admin/src/components/MenuEditor.tsx:740
+#: packages/admin/src/components/MenuEditor.tsx:533
+#: packages/admin/src/components/MenuEditor.tsx:750
 msgid "Target"
 msgstr "Destino"
 
@@ -15145,8 +15150,8 @@ msgstr "Enviando vídeo…"
 #: packages/admin/src/components/BylineFieldEditor.tsx:49
 #: packages/admin/src/components/FieldEditor.tsx:474
 #: packages/admin/src/components/FieldEditor.tsx:1303
-#: packages/admin/src/components/MenuEditor.tsx:518
-#: packages/admin/src/components/MenuEditor.tsx:730
+#: packages/admin/src/components/MenuEditor.tsx:524
+#: packages/admin/src/components/MenuEditor.tsx:740
 msgid "URL"
 msgstr "URL"
 
