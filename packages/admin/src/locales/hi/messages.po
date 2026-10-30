@@ -852,7 +852,7 @@ msgstr "{pluginName} सेटिंग्स"
 
 #: packages/admin/src/components/BulkTagDialog.tsx:489
 msgid "{plural} go live now; draft edits stay unpublished."
-msgstr "{plural} अभी लाइव हों; ड्राफ़्ट में किए गए बदलाव पब्लिश नहीं होंगे।"
+msgstr "{plural} अभी लाइव हों; ड्राफ़्ट में किए गए बदलाव प्रकाशित नहीं होंगे।"
 
 #: packages/admin/src/components/Dashboard.tsx:172
 msgid "{policyRejected, plural, one {Open the affected entry, resolve the policy reason, and schedule it again. A successful schedule or publish clears this notice.} other {Open the affected entries, resolve the policy reasons, and schedule them again. A successful schedule or publish clears each notice.}}"
@@ -970,11 +970,11 @@ msgstr "{when}, मौजूदा वर्शन, {author}"
 
 #: packages/admin/src/components/revisions/RevisionList.tsx:234
 msgid "{when}, Current version, Published, {author}"
-msgstr "{when}, मौजूदा वर्शन, पब्लिश किया गया, {author}"
+msgstr "{when}, मौजूदा वर्शन, प्रकाशित किया गया, {author}"
 
 #: packages/admin/src/components/revisions/RevisionList.tsx:238
 msgid "{when}, Published, {author}"
-msgstr "{when}, पब्लिश किया गया, {author}"
+msgstr "{when}, प्रकाशित किया गया, {author}"
 
 #: packages/admin/src/components/settings/transfer/labels.ts:268
 msgid "{widgetType} in {areaName}"
@@ -2811,7 +2811,7 @@ msgstr "प्रकाशन तिथि बदलें"
 #. placeholder {0}: isolate(formattedValue)
 #: packages/admin/src/components/PublishingDateTimeEditor.tsx:649
 msgid "Change publication date: {0}"
-msgstr "पब्लिश करने की तारीख बदलें: {0}"
+msgstr "प्रकाशित करने की तारीख बदलें: {0}"
 
 #: packages/admin/src/components/ContentSettingsPanel.tsx:624
 #: packages/admin/src/components/PublishingDateTimeEditor.tsx:518
@@ -6304,7 +6304,7 @@ msgstr "उपयोगकर्ता लाने में असफल"
 
 #: packages/admin/src/lib/api/users.ts:77
 msgid "Failed to fetch users"
-msgstr "यूज़र प्राप्त करने में असफल"
+msgstr "उपयोगकर्ता प्राप्त करने में असफल"
 
 #: packages/admin/src/lib/api/widgets.ts:86
 msgid "Failed to fetch widget area"
@@ -6361,7 +6361,7 @@ msgstr "प्लगइन स्थापित करने में अस�
 
 #: packages/admin/src/lib/api/users.ts:168
 msgid "Failed to invite user"
-msgstr "यूज़र को आमंत्रित करने में असफल"
+msgstr "उपयोगकर्ता को आमंत्रित करने में असफल"
 
 #: packages/admin/src/lib/api/byline-fields.ts:98
 msgid "Failed to list byline fields"
@@ -6511,7 +6511,7 @@ msgstr "प्रकाशित करने में असफल"
 
 #: packages/admin/src/lib/api/content.ts:529
 msgid "Failed to publish content"
-msgstr "कंटेंट पब्लिश करने में असफल"
+msgstr "कंटेंट प्रकाशित करने में असफल"
 
 #: packages/admin/src/lib/api/byline-fields.ts:106
 msgid "Failed to read byline field usage"
@@ -6780,7 +6780,7 @@ msgstr "टर्म अपडेट करने में असफल"
 
 #: packages/admin/src/lib/api/users.ts:112
 msgid "Failed to update user"
-msgstr "यूज़र अपडेट करने में असफल"
+msgstr "उपयोगकर्ता अपडेट करने में असफल"
 
 #: packages/admin/src/lib/api/widgets.ts:136
 msgid "Failed to update widget"
